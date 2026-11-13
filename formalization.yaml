@@ -1,0 +1,550 @@
+# PDEAtlas release metadata; version denotes the project release, not an external schema.
+version: 1.0.0
+project:
+  name: PDEAtlas
+  description: >-
+    PDEAtlas is a substantial formalization and exposition of Lawrence C. Evans’s Partial
+    Differential Equations, second edition, in Lean 4 and Mathlib. It develops classical,
+    weak, distributional, and variational PDE theory: fundamental solutions and representation
+    formulas; distributions and Fourier analysis; Sobolev calculus, approximation, extension,
+    traces, embeddings, and compactness; elliptic existence, maximum principles, spectra,
+    and regularity; heat and wave evolution; analytic Cauchy problems; Hamilton–Jacobi
+    equations and conservation laws; and the calculus of variations. The accompanying
+    Blueprint gives mathematical explanations, worked examples, and diagrams for graduate
+    students and undergraduates with a background in analysis. The library is intended as
+    reusable infrastructure for further work on Navier–Stokes, Euler, and singularity formation.
+    Its proof-producing computer algebra system, SymLean, is implemented in Lean and connects symbolic
+    normalization, differentiation, gradients, Laplacians, and supported integration to
+    Mathlib’s real functions and analytic operators. CEGA adds certified interval and Taylor
+    bounds, validated quadrature, matrix and root certificates, and ODE trajectory certificates,
+    using FloatLib’s numerical backends. Accepted calculations produce proofs of their stated
+    mathematical guarantees, with domain and regularity conditions preserved. The fluid
+    development includes Stokes minimizers, Euler potential-flow constructions, vorticity,
+    energy identities, exact flows, half-plane Biot–Savart estimates, axisymmetric Euler in a
+    cylinder, and well-posedness of the half-plane Boussinesq system. The De Gregorio blowup of Chen, Hou, and Huang and the
+    Navier–Stokes nonuniqueness of Hou, Wang, and Yang are formalized on top of PDEAtlas in the
+    companion repository BlowupZoo (https://github.com/Robertboy18/BlowupZoo). The theorem statements and
+    module docs record the precise coverage.
+  authors:
+    - Robert Joseph George
+    - Anima Anandkumar
+  contributors:
+    - name: PDE group of Thomas Y. Hou, Caltech
+      role: collaborator
+    - name: Peicong Song
+      role: contributor
+  license: Apache-2.0
+  responsible_maintainers:
+    - Robert Joseph George
+classification:
+  arxiv:
+    - math.AP
+    - cs.LO
+  msc2020:
+    - 35A08
+    - 35J05
+    - 35K05
+    - 35L05
+    - 35Q30
+    - 46E35
+    - 03B35
+    - 68V20
+sources:
+  - title: Partial Differential Equations, Second Edition
+    authors:
+      - Lawrence C. Evans
+    id: ISBN 978-0-8218-4974-3
+    type: book
+    location: >-
+      Graduate Studies in Mathematics 19, American Mathematical Society, Providence, RI, 2010; https://www.ams.org/bookpages/gsm-19-r
+    relationship: formalizes
+    note: >-
+      Principal reference. We contacted Evans about following his book, and he was excited about the
+      project. The Blueprint records the hypotheses and conclusions of each
+      cited formal statement. Selected results are formalized. In Chapter 12, energy is conserved for
+      waves with separately compact spatial slices: for a normalized C2 potential and a C2 wave in every
+      positive dimension, and for a normalized C1 potential for C3 waves in one dimension, C4 waves in
+      two dimensions, and C2 waves in every positive dimension under a quadratic lower bound near zero.
+      At a finite maximal lifespan the displacement is unbounded on every terminal strip.
+    license: Copyright 2010 American Mathematical Society; all rights reserved
+    author_endorsement: contacted
+    license_reference: https://www.ams.org/bookpages/gsm-19-r
+    license_note: >-
+      Systematic copying or republication of the book requires AMS permission.
+  - title: On the Finite Time Blowup of the De Gregorio Model for the 3D Euler Equations
+    authors:
+      - Jiajie Chen
+      - Thomas Y. Hou
+      - De Huang
+    id: https://arxiv.org/abs/1905.06387v3
+    type: article
+    location: Communications on Pure and Applied Mathematics 74 (2021), 1282-1350
+    relationship: adapts
+    note: >-
+      The library formalizes the generalized De Gregorio equation on the real line: the model with its
+      Hilbert-transform velocity, characteristics, local existence by Picard iteration, uniqueness of
+      classical solutions, persistence of smoothness under H² bounds, reflection, energy identities,
+      dynamic rescaling and self-similar dilations. Theorem 1 for a=1, with asymptotic
+      self-similarity as in Definition 1.1, is formalized on this theory in the companion repository
+      BlowupZoo (https://github.com/Robertboy18/BlowupZoo).
+    license: arXiv non-exclusive distribution license
+    author_endorsement: not-contacted
+    license_reference: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+    license_note: >-
+      Verified through the cited arXiv record’s license link. This records the preprint distribution terms,
+      not the journal edition’s license or an Apache/Creative Commons license.
+  - title: Functional Analysis, Sobolev Spaces and Partial Differential Equations
+    authors:
+      - Haim Brezis
+    type: book
+    location: Universitext, Springer, 2011
+    relationship: adapts
+    note: >-
+      Chapter 8 (Sobolev spaces in one dimension) is the reference for the one-dimensional critical embedding
+      W^{1,1}(R) into bounded continuous functions.
+    license: Copyright 2011 Springer Science+Business Media, LLC; all rights reserved
+    author_endorsement: not-contacted
+    license_reference: https://link.springer.com/content/pdf/bfm:978-0-387-70914-7/1
+    license_note: Publisher copyright and reproduction terms verified in the official front matter.
+  - title: Compact Sets in the Space Lp(0,T;B)
+    authors:
+      - Jacques Simon
+    id: https://doi.org/10.1007/BF01762360
+    type: article
+    location: Annali di Matematica Pura ed Applicata 146 (1986), 65-96
+    relationship: adapts
+    note: Source of the evolution-space compactness criteria used in the Galerkin limits.
+    license: unknown
+    author_endorsement: not-contacted
+    license_reference: https://link.springer.com/article/10.1007/BF01762360
+    license_note: >-
+      The publisher article page provides a permissions service but no explicit article reuse license;
+      no open license was verified.
+  - title: Absolute Continuity on Tracks and Mappings of Sobolev Spaces
+    authors:
+      - Moshe Marcus
+      - Victor J. Mizel
+    id: https://doi.org/10.1007/BF00251378
+    type: article
+    location: Archive for Rational Mechanics and Analysis 45 (1972), 294-320
+    relationship: adapts
+    note: Source of the absolutely continuous representatives on lines used in the Sobolev calculus.
+    license: unknown
+    author_endorsement: not-contacted
+    license_reference: https://link.springer.com/article/10.1007/BF00251378
+    license_note: >-
+      The publisher article page provides a permissions service but no explicit article reuse license;
+      no open license was verified.
+  - title: Vorticity and Incompressible Flow
+    authors:
+      - Andrew J. Majda
+      - Andrea L. Bertozzi
+    type: book
+    location: Cambridge Texts in Applied Mathematics, Cambridge University Press, 2001
+    relationship: adapts
+    note: >-
+      Chapter 1 is the source of the continuum equations, material derivative, incompressibility, Euler
+      and Navier-Stokes equations, and vorticity formulation.
+    license: Copyright 2002 Cambridge University Press; restricted reproduction
+    author_endorsement: not-contacted
+    license_reference: https://assets.cambridge.org/97805216/30573/copyright/9780521630573_copyright.pdf
+    license_note: >-
+      The copyright page requires written permission subject to statutory exceptions and collective licensing.
+      Its copyright year is 2002; the cited publisher catalogue publication year is 2001.
+  - title: 'Navier-Stokes Equations: Theory and Numerical Analysis'
+    authors:
+      - Roger Temam
+    id: ISBN 978-0-8218-2737-6
+    type: book
+    location: AMS Chelsea Publishing, 2001 reprint
+    relationship: adapts
+    note: >-
+      Chapters 1 to 3 are the source of the solenoidal function spaces, the Stokes pressure framework,
+      the nonlinear convection form, and evolution compactness.
+    license: Copyright 1984, held by the American Mathematical Society; restricted reproduction
+    author_endorsement: not-contacted
+    license_reference: https://www.ams.org/books/chel/343/chel343-endmatter.pdf
+    license_note: >-
+      The official front matter identifies the 2001 reprint and requires an AMS license for
+      systematic copying or republication.
+  - title: Existence of Weak Solutions for the Incompressible Euler Equations
+    authors:
+      - Emil Wiedemann
+    id: https://arxiv.org/abs/1102.3614
+    type: article
+    location: Annales de l'Institut Henri Poincaré C, Analyse non linéaire 28 (2011), 727-730
+    relationship: adapts
+    note: >-
+      Equation (3) is the source of the weak Euler formulation on a finite whole-space slab, with its
+      sign convention and distributional incompressibility as a separate condition.
+    license: arXiv non-exclusive distribution license
+    author_endorsement: not-contacted
+    license_reference: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+    license_note: >-
+      Verified through the cited arXiv record’s license link. This records the preprint distribution terms,
+      not the journal edition’s license or an Apache/Creative Commons license.
+  - title: 'Stable Nearly Self-Similar Blowup of the 2D Boussinesq and 3D Euler Equations with Smooth
+      Data I: Analysis'
+    authors:
+      - Jiajie Chen
+      - Thomas Y. Hou
+    id: https://arxiv.org/abs/2210.07191v4
+    type: article
+    relationship: adapts
+    note: >-
+      The library formalizes the vorticity-streamfunction equations, dynamic rescaling, and origin-trace
+      identities of Section 2. It also constructs the angular Dirichlet inverse used by the semi-analytic
+      far field in Section 7.2.1, proves its homogeneous polar and local Cartesian Laplacian identities,
+      proves interior planar Green inversion for continuous compact sources with no condition on their
+      boundary values, and develops general response and finite-rank trace corrections
+      corresponding to Section 2.8.
+    license: arXiv non-exclusive distribution license
+    author_endorsement: not-contacted
+    license_reference: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+    license_note: >-
+      Verified through the cited arXiv record’s license link. This records the preprint distribution terms,
+      not the journal edition’s license or an Apache/Creative Commons license.
+  - title: Nonuniqueness of Leray-Hopf solutions to the unforced incompressible 3D Navier-Stokes Equation
+    authors:
+      - Thomas Hou
+      - Yixuan Wang
+      - Changhe Yang
+    id: https://arxiv.org/abs/2509.25116v2
+    type: article
+    relationship: adapts
+    note: >-
+      The library adapts the residual-correction argument of Sections 3.1-3.2 to validated quadratic
+      Dirichlet problems, with explicit interval and cube examples. It constructs the compensated
+      principal variational form on bounded domains and proves its coercivity and unique linear solve
+      under a supplied compensation inequality. Solenoidal transport coefficients can have nonzero
+      boundary values, and a compact L4 fixed-point argument constructs bounded-domain corrections
+      with separate L2 and gradient radii under explicit residual and nonlinear budgets.
+      PDEAtlas constructs distinct suitable Leray-Hopf solutions from any unstable profile
+      (NavierStokes.Nonuniqueness.of_unstableProfile). The certificates for the paper's numerical
+      profile and unstable eigenpair, and with them the nonuniqueness theorem
+      NavierStokes.nonuniqueness, are formalized in the companion repository BlowupZoo
+      (https://github.com/Robertboy18/BlowupZoo), at its level 8.
+    license: CC-BY-4.0
+    author_endorsement: not-contacted
+    license_reference: https://creativecommons.org/licenses/by/4.0/
+    license_note: >-
+      Verified through the license link on the cited arXiv version. This records the preprint license;
+      it does not establish a license for the accompanying numerical code or data.
+  - title: Existence and Smoothness of the Navier-Stokes Equation
+    authors:
+      - Charles L. Fefferman
+    id: https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf
+    type: other
+    location: Clay Mathematics Institute Millennium Prize Problem description
+    relationship: background
+    note: >-
+      Alternatives (A) and (C) are formalized as definitions (MillenniumNSRDomain.FeffermanA, FeffermanC),
+      stated but not resolved. Nothing in the repository claims a solution.
+    license: unknown
+    author_endorsement: not-contacted
+    license_reference: https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf
+    license_note: >-
+      The cited standalone Clay PDF contains no explicit reuse license. The corresponding book chapter
+      does not establish a verified license for this file.
+  - title: Sur le mouvement d'un liquide visqueux emplissant l'espace
+    authors:
+      - Jean Leray
+    id: https://doi.org/10.1007/BF02547354
+    type: article
+    location: Acta Mathematica 63 (1934), 193-248
+    relationship: background
+    note: Cited for the global finite-energy weak-solution construction and the energy inequality.
+    license: unknown
+    author_endorsement: not-contacted
+    license_reference: https://link.springer.com/article/10.1007/BF02547354
+    license_note: >-
+      The publisher article page provides a permissions service but no explicit article reuse license;
+      no open license was verified.
+  - title: Reynolds Number
+    authors:
+      - NASA Glenn Research Center
+    id: https://www.grc.nasa.gov/www/k-12/airplane/reynolds.html
+    type: web post
+    relationship: background
+    note: Source of the kinematic-viscosity form of the Reynolds number used in the fluid layer.
+    license: unknown
+    author_endorsement: not-contacted
+    license_reference: https://nodis3.gsfc.nasa.gov/OPD_Docs/NAII_2800_2_.pdf
+    license_note: >-
+      No source-specific license notice was found on the cited page. NASA’s web intellectual-property
+      policy cautions that website material is not automatically free of copyright.
+related_formalizations:
+  - id: https://github.com/leanprover-community/mathlib4
+    relationship: builds-on
+    note: >-
+      PDEAtlas builds on Mathlib's analysis. David Ledvinka's inclusion engine in the pinned Mathlib
+      and Michail Karatarakis's proposed SparsePoly, MvSparsePoly and poly_dvd_cert
+      (https://github.com/leanprover-community/mathlib4/pull/41339, /pull/41350, /pull/41347) are
+      compared with CEGA and with PDEAtlas's polynomial lists.
+  - id: https://github.com/Robertboy18/SymLean
+    relationship: builds-on
+    note: Our computer algebra system, which supplies the cas and cega tactics and the certificate engines.
+  - id: https://github.com/lean-dojo/FloatLib
+    relationship: builds-on
+    note: Our floating-point and interval library, used through SymLean for interval arithmetic.
+  - id: https://github.com/teorth/analysis
+    relationship: related
+    note: Terence Tao's Lean companion to Analysis I, compared for its correspondence with Mathlib.
+  - id: https://github.com/TauCetiProject/TauCeti
+    relationship: related
+    note: >-
+      Tau Ceti and its PDE roadmap
+      (https://github.com/TauCetiProject/TauCetiRoadmap/blob/main/TauCetiRoadmap/PDE/README.md),
+      compared lane by lane with PDEAtlas's coverage.
+  - id: https://github.com/alejandro-soto-franco/EllipticPDE
+    relationship: related
+    note: Soto Franco and Marshall-Stevens's linear divergence-form Dirichlet theory.
+  - id: https://github.com/frenzymath/PoincareConjecture
+    relationship: related
+    note: Qin, Liao, Khaitan and Chow's formalization of Ricci flow with surgery and the Poincaré conjecture.
+  - id: https://arxiv.org/abs/2604.05984
+    relationship: related
+    note: Armstrong and Kempe's formalization of De Giorgi-Nash-Moser theory.
+  - id: https://github.com/scottnarmstrong/CoarseGraining
+    relationship: related
+    note: Armstrong and Kuusi's coarse-graining theory for quantitative stochastic homogenization.
+  - id: https://github.com/scottnarmstrong/Superdiffusion
+    relationship: related
+    note: Armstrong and Kuusi's formalization of superdiffusion in random incompressible flows.
+  - id: https://github.com/uda-lab/leray-hopf
+    relationship: related
+    note: >-
+      Tomoki Uda's global weak solutions of the unforced Navier-Stokes equations on the torus and on R^3.
+  - id: https://arxiv.org/abs/2101.07758
+    relationship: related
+    note: Lewis and Wu's interface between Lean and Mathematica.
+  - id: https://github.com/leanprover/hex
+    relationship: related
+    note: Verified computational algebra in Lean.
+  - id: https://doi.org/10.1007/s10817-012-9255-4
+    relationship: related
+    note: >-
+      Boldo, Clément, Filliâtre, Mayero, Melquiond and Weis's mechanized proof of a C program for the
+      one-dimensional wave equation.
+  - id: https://coqinterval.gitlabpages.inria.fr/
+    relationship: related
+    note: The Rocq Interval library for bounds on real expressions and integrals.
+  - id: https://github.com/alerad/leancert
+    relationship: related
+    note: Interval, root and integral certificates in Lean.
+  - id: https://github.com/lean-dojo/TorchLean
+    relationship: related
+    note: Another development that uses FloatLib.
+status:
+  scope: >-
+    Selected classical, weak, distributional, and variational results for elliptic, parabolic, and hyperbolic
+    PDEs; analytic Cauchy problems; Sobolev calculus, extension, traces, embeddings, and compactness;
+    fluid formulations and exact constructions; and verified symbolic and numerical computation. Each declaration
+    and Blueprint card states its hypotheses; the module docs record the precise coverage. The Clay Navier–Stokes alternatives are definitions, not resolved results.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+    - >-
+      _native.cegaFast.ax_* (generated native closed finite certificate and polynomial interval checks,
+      only in the fast build profile)
+automation:
+  methods:
+    - method: manual
+      models: []
+      framework: n/a
+      tool_setup: VS Code with the Lean 4 extension, Lake, and the Blueprint build script
+      cost:
+        wall_time: not tracked
+        spend_usd: n/a
+        hardware: developer workstations and a cloud Linux build server
+      prompting_notes: n/a
+    - method: agent
+      models:
+        - not tracked in full; commercial language models used through terminal coding agents
+      framework: terminal coding agents driven by the authors
+      tool_setup: >-
+        Agents wrote and repaired proofs and documentation under author-chosen specifications, using the
+        pinned Lean environment and the repository conventions. Lake compiles the library under strict
+        Lake options.
+      cost:
+        wall_time: not tracked
+        spend_usd: not tracked
+        hardware: API-backed agents on a cloud Linux build server
+      prompting_notes: >-
+        The authors supplied mathematical statements, the pinned Lean and Mathlib APIs, and the repository
+        conventions. Agents assisted with proof search, repair, API discovery, and documentation. Selected
+        finite certificates use the shared cega [fast] frontend.
+        The default kernel build profile checks them in the kernel; the fast profile evaluates them natively,
+        which additionally trusts Lean’s compiler and runtime.
+  spend_usd: not tracked
+  notes: >-
+    We used AI coding agents to write and repair proofs and documentation. We chose the statements,
+    definitions and sources, and checked the claims.
+fidelity:
+  divergences: >-
+    Differential operators are total Lean terms built on Mathlib's fderiv and are read classically only
+    under stated differentiability; the heat kernel is zero-extended to t <= 0 and its equation is stated
+    for t > 0 only; sphere and ball averages use the center value at radius zero and zero at negative
+    radius; the half-space uses the last coordinate as the normal direction and a coordinate parametrization
+    of its boundary; d'Alembert's formula is formalized at unit speed with Evans's C^2 and C^1 data hypotheses;
+    the one-dimensional Morrey and critical Sobolev inequalities are proved for C^1 and smooth compactly
+    supported functions (the representative and operator forms are separate declarations). Boundary geometry
+    is expressed through local graph predicates and operational atlases. Applying an atlas-based theorem
+    to graph data requires the corresponding proved graph-to-atlas construction at the stated regularity.
+    The CAS soundness theorems are SymLean and PDEAtlas results without an external source. Statement-level qualifications
+    of every Blueprint card are recorded on the card.
+review:
+  status: self-assessed
+  reviewers:
+    - Robert Joseph George
+    - Peicong Song
+  notes: >-
+    Lake builds with automatic implicit arguments disabled, Mathlib’s standard linters, and warnings as
+    errors. The default lake build checks every proof in the kernel, the finite certificates included,
+    and that build is up to date at this release. The fast profile uses compiled evaluation for the
+    certificates, and downstream theorems then inherit that dependency. No independent Comparator check
+    is claimed.
+alignment:
+  namespace: PDE (with the equation-family namespaces HeatEquation, WaveEquation, LaplacianEquation, GreenFunction,
+    SobolevSpace)
+  statements:
+    - source: Evans, Section 8.1.2 (fundamental lemma used in the Euler-Lagrange derivation)
+      lean: IsOpen.ae_eq_zero_of_integral_contDiff_smul_eq_zero
+      module: Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff
+      status: proved
+      note: >-
+        Reused directly from Mathlib: locally integrable functions paired against smooth compactly supported
+        tests, with almost-everywhere vanishing on an open set.
+    - source: Evans, Section 2.3.1 (fundamental solution of the heat equation)
+      lean: HeatEquation.fundamentalSolutionHeat_deriv_t
+      module: PDE.Parabolic.Heat.Kernel.TimeDerivative
+      status: proved
+      note: Closed form of the time derivative for t > 0 for the library's heat kernel.
+    - source: Evans, Section 2.3.1 (the fundamental solution solves the heat equation)
+      lean: HeatEquation.fundamentalSolutionHeat_satisfies_equation
+      module: PDE.Parabolic.Heat.Kernel.Equation
+      status: proved
+      note: >-
+        The spacetime time derivative minus the spatial Laplacian vanishes for t > 0, with the library's
+        total partialDeriv and laplacian.
+    - source: Evans, Section 2.4.1, Theorem 1 (solution of the wave equation, n = 1)
+      lean: WaveEquation.waveOperator_dAlembertFormula
+      module: PDE.Hyperbolic.Models.Wave.DAlembert.ClassicalSolution
+      status: proved
+      note: >-
+        The wave residual of d'Alembert's field vanishes for g in C^2 and h in C^1. The initial identities
+        are separate library theorems.
+    - source: Evans, Chapter 4 (Fourier construction of wave solutions; Schwartz-data formulation)
+      lean: WaveEquation.Fourier.realSolution_satisfiesResidualAssignedCauchyData
+      module: PDE.Hyperbolic.Models.Wave.Fourier.Schwartz.Cauchy
+      status: proved
+      note: >-
+        Real Schwartz displacement and velocity give a homogeneous wave solution in every finite dimension,
+        including zero. Companion theorems prove joint C^2 regularity and joint initial traces of the
+        field and its actual time derivative.
+    - source: PDEAtlas (global classical real-line nonlinear wave Cauchy construction)
+      lean: WaveEquation.exists_global_classical_solution_of_bounded_data
+      module: PDE.Hyperbolic.NonlinearWave.RealLine.Cauchy
+      status: proved
+      note: >-
+        A C^1 globally Lipschitz reaction and bounded C^2/C^1 displacement/velocity give a global forward
+        classical solution, both Cauchy traces, and boundedness on each finite strip. No bounds on data
+        derivatives or vanishing reaction at zero are required.
+    - source: Evans, Section 2.4 (domain of dependence for the one-dimensional wave equation)
+      lean: WaveEquation.dAlembertFormula_eq_of_eqOn_domainOfDependence
+      module: PDE.Hyperbolic.Models.Wave.DAlembert.Formula
+      status: proved
+      note: No regularity is needed for this equality-on-the-domain-of-dependence statement.
+    - source: Evans, Section 2.2.2, Theorem 2 (mean-value formulas for harmonic functions)
+      lean: LaplacianEquation.IsHarmonicPDE.hasSphereMeanValueProperty
+      module: PDE.Elliptic.Classical.MeanValue.PDEToMeanValue
+      status: proved
+      note: >-
+        The spherical mean-value property for C^2 functions with vanishing coordinate Laplacian, in positive
+        dimension. The ball-average form is a separate library theorem.
+    - source: Evans, Section 2.2.4 (Poisson's formula for the half-space)
+      lean: GreenFunction.poissonHalfSpaceExtension_one_eq_one
+      module: PDE.Elliptic.PotentialTheory.GreenFunction.HalfSpace.PoissonKernel.Normalization
+      status: proved
+      note: The Poisson extension of the constant boundary datum 1 equals 1 on the upper half-space, in
+        every positive dimension.
+    - source: Evans, Section 5.6.2, Theorems 4 and 5 (Morrey's inequality), n = 1
+      lean: SobolevSpace.holderWith_morreyExponent_one
+      module: PDE.Spaces.Sobolev.Inequalities.Morrey.FiniteExponent.OneDimensional.Estimate
+      status: adapted
+      note: >-
+        The Hölder-continuity form for a C^1 function on the line whose derivative has finite L^p seminorm,
+        1 < p <= infinity. The multidimensional and W^{1,p} representative versions are separate library
+        theorems.
+    - source: Brezis, Chapter 8 (Sobolev spaces in one dimension), the embedding of W^{1,1} into L^infinity
+      lean: SobolevSpace.CriticalOneDimensional.norm_apply_le_eLpNorm_partialDeriv_one_toReal
+      module: PDE.Spaces.Sobolev.Inequalities.Morrey.Endpoint.OneDimensionalCritical
+      status: adapted
+      note: >-
+        The smooth compactly supported core estimate. The bounded continuous representative and the operator
+        W^{1,1} -> C_b are separate library declarations.
+    - source: Evans, Chapter 4 (Laplace's method; multidimensional compact formulation)
+      lean: PDE.Analysis.Asymptotics.tendsto_normalized_laplace_integral_compact
+      module: PDE.Analysis.Asymptotics.LaplaceMethod.Euclidean
+      status: proved
+      note: >-
+        A continuous phase on a compact set, C^2 near its unique interior minimum, with positive definite
+        actual Hessian H gives the normalized t-to-infinity limit (2*pi)^(n/2)/sqrt(det H) times the continuous
+        Banach-valued amplitude at the minimum. Dimension zero is included; stationarity and coercive
+        bounds are derived.
+    - source: Evans, Section 4.5.1 (boundary layers; variable-coefficient scalar extension)
+      lean: PDE.Elliptic.BoundaryLayer.Variable.exists_expansion
+      module: PDE.Elliptic.OneDimensional.BoundaryLayer.Variable.Expansion
+      status: proved
+      note: >-
+        C^1 drift and forcing near [0,L], with L > 0 and drift bounded below by a positive constant, produce
+        classical Dirichlet solutions of epsilon*u'' + a*u' = f. The family has uniform O(epsilon) composite
+        error, inner convergence, and matching.
+    - source: Evans, Section 4.5.3, Example 3 (geometric optics)
+      lean: WaveEquation.GeometricOptics.squared_eikonal_of_wavePacket_family
+      module: PDE.Hyperbolic.GeometricOptics.Limit
+      status: proved
+      note: >-
+        Eventually C^2 exact complex wave packets imply the squared eikonal equation when amplitudes tend
+        to a nonzero value, first phase derivatives converge to those of the limiting phase, and the epsilon^2-scaled
+        amplitude wave residual tends to zero at the chosen point.
+    - source: Evans, Section 4.4.3 (local Legendre transformation)
+      lean: PDE.Analysis.exists_localLegendre_inverse_hessian
+      module: PDE.Analysis.Calculus.Legendre.Local
+      status: proved
+      note: >-
+        A C^2 function with nonsingular actual Hessian at one point has a constructed local inverse gradient
+        and C^2 dual with inverse Hessian, in every finite dimension. Convexity is not assumed.
+    - source: Evans, Section 4.4.3(a) (hodograph transformation)
+      lean: PDE.Fluid.Hodograph.exists_hodograph_potential
+      module: PDE.Fluid.Compressible.Hodograph
+      status: proved
+      note: >-
+        A C^1 planar mass-and-curl solution with nonzero velocity Jacobian at one point gives a local
+        inverse and a C^2 potential solving the scalar linear hodograph equation.
+    - source: Evans, second edition (2010), Section 4.4.3(b), p. 210, equations (24)-(30) (minimal surface)
+      lean: PDE.Elliptic.MinimalSurface.exists_localLegendre_solution_of_divergence_eq_zero
+      module: PDE.Elliptic.MinimalSurface.Legendre
+      status: proved
+      note: >-
+        A C^2 planar solution of the divergence minimal-surface equation with nonsingular Hessian at one
+        point has a local C^2 Legendre dual solving the linear equation with principal matrix I + p*p^T.
+        This is a local classical transformation.
+    - source: SymLean (soundness of the checked symbolic derivative; no external source)
+      lean: CAS.Verified.Expr.hasFDerivAt_eval
+      module: CAS.Calculus.Euclidean
+      status: proved
+      note: The formal Fréchet derivative of a valid expression is the Fréchet derivative of its evaluation.
+    - source: SymLean (soundness of rational interval multiplication; no external source)
+      lean: CAS.Continuum.RationalInterval.mul_sound
+      module: CAS.Continuum.Interval.Rational.Arithmetic
+      status: proved
+      note: >-
+        The product interval contains the product of any two contained reals. The module wraps
+        FloatLib's rational interval operations and uses FloatLib's inclusion theorem.
+acknowledgements: >-
+  Mathlib and its community; the Lean, Lake, Verso, and Verso Blueprint authors; FloatLib; the Lean Zulip
+  community; and Caltech.

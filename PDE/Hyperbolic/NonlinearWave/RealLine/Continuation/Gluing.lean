@@ -1,0 +1,113 @@
+/-
+Copyright (c) 2026 LeanPDE Team. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LeanPDE Team
+-/
+module
+
+public import PDE.Hyperbolic.NonlinearWave.RealLine.Continuation.Maximal
+import PDE.FDeriv.Calculus
+
+/-!
+# Gluing all bounded classical wave intervals
+
+PDE uniqueness makes the values on overlapping forward intervals
+independent of the chosen solution. A fixed initial solution is retained on an
+open neighborhood of the initial slice, including negative times. This makes
+the glued field C² across zero without imposing a backward PDE or comparing
+arbitrary negative-time extensions.
+-/
+
+@[expose] public noncomputable section
+
+open PDE.Common PDE.Analysis Set Filter
+open scoped Topology BoundedContinuousFunction
+
+namespace WaveEquation
+
+/-- Glue all admissible forward waves, using a fixed initial solution below
+half its positive horizon. Outside the union of the forward intervals, the
+value is arbitrary. The regularity and agreement theorems require the initial
+field to belong to the classical solution class. -/
+def classicalWaveUnion (f : ℝ → ℝ) (g h : ℝ →ᵇ ℝ)
+    (a : ℝ) (u₀ : ℝ^2 → ℝ) (p : ℝ^2) : ℝ := by
+  classical
+  exact if p 0 < a / 2 then u₀ p else
+    if hp : ∃ T : ℝ, p 0 < T ∧ ∃ u : ℝ^2 → ℝ,
+        IsBoundedClassicalWaveBefore f g h T u then
+      hp.choose_spec.2.choose p
+    else 0
+
+/-- The union agrees with every admissible wave on its forward interval. -/
+theorem classicalWaveUnion_eq {f : ℝ → ℝ} (hf : LocallyLipschitz f) {g h : ℝ →ᵇ ℝ} {a T : ℝ}
+    {u₀ u : ℝ^2 → ℝ} (h₀ : IsBoundedClassicalWaveBefore f g h a u₀)
+    (hu : IsBoundedClassicalWaveBefore f g h T u) {p : ℝ^2} (hp : p 0 ∈ Ico 0 T) :
+    classicalWaveUnion f g h a u₀ p = u p := by
+  classical
+  unfold classicalWaveUnion
+  split_ifs with ha ht
+  · exact h₀.eq_on_overlap hf hu p ⟨hp.1, lt_min (ha.trans (half_lt_self h₀.time_pos)) hp.2⟩
+  · exact ht.choose_spec.2.choose_spec.eq_on_overlap hf hu p ⟨hp.1, lt_min ht.choose_spec.1 hp.2⟩
+  · exact (ht ⟨T, hp.2, u, hu⟩).elim
+
+/-- The fixed initial wave supplies the entire germ below half its horizon,
+so the union has two-sided regularity at the initial slice. -/
+theorem classicalWaveUnion_eventuallyEq_initial {f : ℝ → ℝ} {g h : ℝ →ᵇ ℝ} {a : ℝ} {u₀ : ℝ^2 → ℝ}
+    {p : ℝ^2} (hp : p 0 < a / 2) :
+    classicalWaveUnion f g h a u₀ =ᶠ[𝓝 p] u₀ := by
+  filter_upwards
+    [(isOpen_lt (EuclideanSpace.proj 0).continuous continuous_const).mem_nhds hp] with q hq
+  simp [classicalWaveUnion, show q 0 < a / 2 from hq]
+
+/-- At a strictly positive time, overlap uniqueness identifies the union with
+an admissible field on an open spacetime neighborhood. -/
+theorem classicalWaveUnion_eventuallyEq {f : ℝ → ℝ} (hf : LocallyLipschitz f) {g h : ℝ →ᵇ ℝ}
+    {a T : ℝ} {u₀ u : ℝ^2 → ℝ} (h₀ : IsBoundedClassicalWaveBefore f g h a u₀)
+    (hu : IsBoundedClassicalWaveBefore f g h T u) {p : ℝ^2} (hp : p 0 ∈ Ioo 0 T) :
+    classicalWaveUnion f g h a u₀ =ᶠ[𝓝 p] u := by
+  filter_upwards [(isOpen_lt continuous_const (EuclideanSpace.proj 0).continuous).mem_nhds hp.1,
+      (isOpen_lt (EuclideanSpace.proj 0).continuous continuous_const).mem_nhds hp.2] with q hq₀ hqT
+  exact classicalWaveUnion_eq hf h₀ hu ⟨hq₀.le, hqT⟩
+
+/-- The glued field is a bounded classical wave on every admissible
+interval. Neither a fixed-point identity nor derivative bounds enter the gluing. -/
+theorem isBoundedClassicalWaveBefore_classicalWaveUnion {f : ℝ → ℝ} (hf : LocallyLipschitz f)
+    {g h : ℝ →ᵇ ℝ} {a T : ℝ} {u₀ u : ℝ^2 → ℝ} (h₀ : IsBoundedClassicalWaveBefore f g h a u₀)
+    (hu : IsBoundedClassicalWaveBefore f g h T u) :
+    IsBoundedClassicalWaveBefore f g h T (classicalWaveUnion f g h a u₀) := by
+  have hzero (x : ℝ^1) : classicalWaveUnion f g h a u₀ =ᶠ[𝓝 (timeSpaceCons 0 x)] u₀ :=
+    classicalWaveUnion_eventuallyEq_initial (by simpa using half_pos h₀.time_pos)
+  refine ⟨hu.time_pos, ?_, ?_, ?_, ?_, ?_⟩
+  · intro p hp
+    by_cases hp₀ : 0 < p 0
+    · have hr := hu.regular.contDiffAt
+        ((isOpen_lt (EuclideanSpace.proj 0).continuous continuous_const).mem_nhds hp)
+      exact (hr.congr_of_eventuallyEq
+        (classicalWaveUnion_eventuallyEq hf h₀ hu ⟨hp₀, hp⟩)).contDiffWithinAt
+    · have hpa : p 0 < a / 2 := (le_of_not_gt hp₀).trans_lt (half_pos h₀.time_pos)
+      have hr := h₀.regular.contDiffAt
+        ((isOpen_lt (EuclideanSpace.proj 0).continuous continuous_const).mem_nhds
+          (hpa.trans (half_lt_self h₀.time_pos)))
+      exact (hr.congr_of_eventuallyEq
+        (classicalWaveUnion_eventuallyEq_initial hpa)).contDiffWithinAt
+  · intro p hp
+    by_cases hp₀ : 0 < p 0
+    · have he := classicalWaveUnion_eventuallyEq hf h₀ hu ⟨hp₀, hp.2⟩
+      rw [waveOperator_congr_nhds he, he.eq_of_nhds]
+      exact hu.equation p hp
+    · have hpz : p 0 = 0 := le_antisymm (le_of_not_gt hp₀) hp.1
+      have he := classicalWaveUnion_eventuallyEq_initial (f := f) (g := g) (h := h) (u₀ := u₀)
+        (show p 0 < a / 2 by rw [hpz]; exact half_pos h₀.time_pos)
+      rw [waveOperator_congr_nhds he, he.eq_of_nhds]
+      exact h₀.equation p ⟨hp.1, by rw [hpz]; exact h₀.time_pos⟩
+  · intro x
+    rw [(hzero x).eq_of_nhds, h₀.position]
+  · intro x
+    rw [PDE.partialDeriv_congr_nhds 0 (hzero x), h₀.velocity]
+  · intro S hS
+    obtain ⟨R, hR⟩ := hu.bounded S hS
+    refine ⟨R, fun p hp ↦ ?_⟩
+    rw [classicalWaveUnion_eq hf h₀ hu ⟨hp.1, hp.2.trans_lt hS.2⟩]
+    exact hR p hp
+
+end WaveEquation
