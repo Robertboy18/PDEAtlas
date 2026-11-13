@@ -1,0 +1,181 @@
+<svg data-node-count="11" data-edge-count="10" data-cluster-count="1" data-variant-key="parent:«methods.second_variation»" width="1462pt" height="389pt"
+ viewBox="0.00 0.00 1462.00 388.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 384.99)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-384.99 1458,-384.99 1458,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1434,-8 1434,-8 1440,-8 1446,-14 1446,-20 1446,-20 1446,-360.99 1446,-360.99 1446,-366.99 1440,-372.99 1434,-372.99 1434,-372.99 20,-372.99 20,-372.99 14,-372.99 8,-366.99 8,-360.99 8,-360.99 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="727" y="-357.79" font-family="Helvetica" font-size="14.00">Second variations and necessary positivity</text>
+</g>
+<!-- «methods.second_variation.quadratic_energy_exact_expansion» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Fexact&#45;005Fexpansion&#45;00BB" class="node">
+<title>«methods.second_variation.quadratic_energy_exact_expansion»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Fexact&#45;005Fexpansion&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___quadratic_energy_exact_expansion_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1112" cy="-322.19" rx="116.85" ry="19.6"/>
+<text text-anchor="middle" x="1112" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="1112" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">quadratic_energy_exact_expansion</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.quadratic_energy_first_variation» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Ffirst&#45;005Fvariation&#45;00BB" class="node">
+<title>«methods.second_variation.quadratic_energy_first_variation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Ffirst&#45;005Fvariation&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___quadratic_energy_first_variation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1112" cy="-250.59" rx="106.55" ry="19.6"/>
+<text text-anchor="middle" x="1112" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="1112" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">quadratic_energy_first_variation</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.quadratic_energy_exact_expansion»&#45;&gt;«methods.second_variation.quadratic_energy_first_variation» -->
+<g id="edge10" class="edge">
+<title>«methods.second_variation.quadratic_energy_exact_expansion»&#45;&gt;«methods.second_variation.quadratic_energy_first_variation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1112,-302.17C1112,-294.35 1112,-285.17 1112,-276.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1112,-270.59 1114.7,-276.59 1112.1,-273.59 1112.1,-276.59 1112,-276.59 1111.9,-276.59 1111.9,-273.59 1109.3,-276.59 1112,-270.59 1112,-270.59"/>
+</g>
+<!-- «methods.second_variation.dirichlet_energy_second_variation_self» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Edirichlet&#45;005Fenergy&#45;005Fsecond&#45;005Fvariation&#45;005Fself&#45;00BB" class="node">
+<title>«methods.second_variation.dirichlet_energy_second_variation_self»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Edirichlet&#45;005Fenergy&#45;005Fsecond&#45;005Fvariation&#45;005Fself&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___dirichlet_energy_second_variation_self_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="974" cy="-35.8" rx="127.06" ry="19.6"/>
+<text text-anchor="middle" x="974" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="974" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet_energy_second_variation_self</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.hessian_positive_semidefinite_at_local_minimum» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Ehessian&#45;005Fpositive&#45;005Fsemidefinite&#45;005Fat&#45;005Flocal&#45;005Fminimum&#45;00BB" class="node">
+<title>«methods.second_variation.hessian_positive_semidefinite_at_local_minimum»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Ehessian&#45;005Fpositive&#45;005Fsemidefinite&#45;005Fat&#45;005Flocal&#45;005Fminimum&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___hessian_positive_semidefinite_at_local_minimum_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="338" cy="-107.4" rx="159.61" ry="19.6"/>
+<text text-anchor="middle" x="338" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="338" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">hessian_positive_semidefinite_at_local_minimum</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.legendre_hadamard» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Elegendre&#45;005Fhadamard&#45;00BB" class="node">
+<title>«methods.second_variation.legendre_hadamard»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Elegendre&#45;005Fhadamard&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___legendre_hadamard_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="85" cy="-107.4" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="85" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="85" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">legendre_hadamard</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.hessian_nonnegative_at_local_minimum» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Ehessian&#45;005Fnonnegative&#45;005Fat&#45;005Flocal&#45;005Fminimum&#45;00BB" class="node">
+<title>«methods.second_variation.hessian_nonnegative_at_local_minimum»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Ehessian&#45;005Fnonnegative&#45;005Fat&#45;005Flocal&#45;005Fminimum&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___hessian_nonnegative_at_local_minimum_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="338" cy="-178.99" rx="132.46" ry="19.6"/>
+<text text-anchor="middle" x="338" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="338" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">hessian_nonnegative_at_local_minimum</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.hessian_nonnegative_at_local_minimum»&#45;&gt;«methods.second_variation.hessian_positive_semidefinite_at_local_minimum» -->
+<g id="edge2" class="edge">
+<title>«methods.second_variation.hessian_nonnegative_at_local_minimum»&#45;&gt;«methods.second_variation.hessian_positive_semidefinite_at_local_minimum»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M338,-158.98C338,-151.15 338,-141.97 338,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="338,-127.39 340.7,-133.39 338.35,-130.39 338.35,-133.39 338,-133.39 337.65,-133.39 337.65,-130.39 335.3,-133.39 338,-127.39 338,-127.39"/>
+</g>
+<!-- «methods.second_variation.hessian_nonnegative_at_local_minimum»&#45;&gt;«methods.second_variation.legendre_hadamard» -->
+<g id="edge3" class="edge">
+<title>«methods.second_variation.hessian_nonnegative_at_local_minimum»&#45;&gt;«methods.second_variation.legendre_hadamard»</title>
+<path fill="none" stroke="#6b7280" d="M277.4,-161.32C235.32,-149.75 179.74,-134.46 139.15,-123.29"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="133.27,-121.68 139.77,-120.66 136.16,-122.47 139.05,-123.27 139.05,-123.27 139.05,-123.27 136.16,-122.47 138.34,-125.87 133.27,-121.68 133.27,-121.68"/>
+</g>
+<!-- «methods.second_variation.quadratic_energy_second_variation_nonnegative» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Fsecond&#45;005Fvariation&#45;005Fnonnegative&#45;00BB" class="node">
+<title>«methods.second_variation.quadratic_energy_second_variation_nonnegative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Fsecond&#45;005Fvariation&#45;005Fnonnegative&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___quadratic_energy_second_variation_nonnegative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="680" cy="-107.4" rx="156.96" ry="19.6"/>
+<text text-anchor="middle" x="680" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="680" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">quadratic_energy_second_variation_nonnegative</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.hessian_nonnegative_at_local_minimum»&#45;&gt;«methods.second_variation.quadratic_energy_second_variation_nonnegative» -->
+<g id="edge6" class="edge">
+<title>«methods.second_variation.hessian_nonnegative_at_local_minimum»&#45;&gt;«methods.second_variation.quadratic_energy_second_variation_nonnegative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M413.48,-162.64C467.09,-151.72 539.16,-137.06 594.83,-125.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="600.85,-124.5 595.51,-128.35 597.98,-125.45 595.04,-126.04 594.97,-125.7 594.9,-125.36 597.84,-124.76 594.43,-123.05 600.85,-124.5 600.85,-124.5"/>
+</g>
+<!-- «methods.second_variation.dirichlet_energy_second_variation» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Edirichlet&#45;005Fenergy&#45;005Fsecond&#45;005Fvariation&#45;00BB" class="node">
+<title>«methods.second_variation.dirichlet_energy_second_variation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Edirichlet&#45;005Fenergy&#45;005Fsecond&#45;005Fvariation&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___dirichlet_energy_second_variation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="974" cy="-107.4" rx="112.36" ry="19.6"/>
+<text text-anchor="middle" x="974" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="974" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet_energy_second_variation</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.dirichlet_energy_second_variation»&#45;&gt;«methods.second_variation.dirichlet_energy_second_variation_self» -->
+<g id="edge1" class="edge">
+<title>«methods.second_variation.dirichlet_energy_second_variation»&#45;&gt;«methods.second_variation.dirichlet_energy_second_variation_self»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M974,-87.38C974,-79.55 974,-70.38 974,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="974,-55.79 976.7,-61.79 974.1,-58.79 974.1,-61.79 974,-61.79 973.9,-61.79 973.9,-58.79 971.3,-61.79 974,-55.79 974,-55.79"/>
+</g>
+<!-- «methods.second_variation.dirichlet_energy_local_minimum_iff_weak_poisson» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Edirichlet&#45;005Fenergy&#45;005Flocal&#45;005Fminimum&#45;005Fiff&#45;005Fweak&#45;005Fpoisson&#45;00BB" class="node">
+<title>«methods.second_variation.dirichlet_energy_local_minimum_iff_weak_poisson»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Edirichlet&#45;005Fenergy&#45;005Flocal&#45;005Fminimum&#45;005Fiff&#45;005Fweak&#45;005Fpoisson&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___dirichlet_energy_local_minimum_iff_weak_poisson_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1275" cy="-107.4" rx="163.18" ry="19.6"/>
+<text text-anchor="middle" x="1275" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="1275" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet_energy_local_minimum_iff_weak_poisson</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.quadratic_energy_euler_equation» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Feuler&#45;005Fequation&#45;00BB" class="node">
+<title>«methods.second_variation.quadratic_energy_euler_equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Feuler&#45;005Fequation&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___quadratic_energy_euler_equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1250" cy="-178.99" rx="109.7" ry="19.6"/>
+<text text-anchor="middle" x="1250" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="1250" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">quadratic_energy_euler_equation</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.quadratic_energy_euler_equation»&#45;&gt;«methods.second_variation.dirichlet_energy_local_minimum_iff_weak_poisson» -->
+<g id="edge5" class="edge">
+<title>«methods.second_variation.quadratic_energy_euler_equation»&#45;&gt;«methods.second_variation.dirichlet_energy_local_minimum_iff_weak_poisson»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1256.83,-158.98C1259.7,-151 1263.07,-141.61 1266.12,-133.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1268.18,-127.39 1268.69,-133.95 1267.26,-130.25 1266.24,-133.07 1266.15,-133.04 1266.05,-133 1267.07,-130.18 1263.61,-132.13 1268.18,-127.39 1268.18,-127.39"/>
+</g>
+<!-- «methods.second_variation.quadratic_energy_second_variation» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Fsecond&#45;005Fvariation&#45;00BB" class="node">
+<title>«methods.second_variation.quadratic_energy_second_variation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;002Equadratic&#45;005Fenergy&#45;005Fsecond&#45;005Fvariation&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___second_variation___quadratic_energy_second_variation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="974" cy="-178.99" rx="116.85" ry="19.6"/>
+<text text-anchor="middle" x="974" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">second_variation</text>
+<text text-anchor="middle" x="974" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">quadratic_energy_second_variation</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation.quadratic_energy_second_variation»&#45;&gt;«methods.second_variation.dirichlet_energy_second_variation» -->
+<g id="edge4" class="edge">
+<title>«methods.second_variation.quadratic_energy_second_variation»&#45;&gt;«methods.second_variation.dirichlet_energy_second_variation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M974,-158.98C974,-151.15 974,-141.97 974,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="974,-127.39 976.7,-133.39 974.1,-130.39 974.1,-133.39 974,-133.39 973.9,-133.39 973.9,-130.39 971.3,-133.39 974,-127.39 974,-127.39"/>
+</g>
+<!-- «methods.second_variation.quadratic_energy_second_variation»&#45;&gt;«methods.second_variation.quadratic_energy_second_variation_nonnegative» -->
+<g id="edge7" class="edge">
+<title>«methods.second_variation.quadratic_energy_second_variation»&#45;&gt;«methods.second_variation.quadratic_energy_second_variation_nonnegative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M908.75,-162.55C863.81,-151.91 803.93,-137.73 756.71,-126.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="750.72,-125.14 757.18,-123.89 753.72,-125.49 756.64,-126.18 756.56,-126.52 756.48,-126.86 753.56,-126.17 755.94,-129.15 750.72,-125.14 750.72,-125.14"/>
+</g>
+<!-- «methods.second_variation.quadratic_energy_first_variation»&#45;&gt;«methods.second_variation.quadratic_energy_euler_equation» -->
+<g id="edge8" class="edge">
+<title>«methods.second_variation.quadratic_energy_first_variation»&#45;&gt;«methods.second_variation.quadratic_energy_euler_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1147.18,-231.85C1166.01,-222.35 1189.31,-210.6 1208.96,-200.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1214.4,-197.95 1210.26,-203.06 1211.77,-199.39 1209.09,-200.74 1209.05,-200.65 1209,-200.56 1211.68,-199.21 1207.83,-198.24 1214.4,-197.95 1214.4,-197.95"/>
+</g>
+<!-- «methods.second_variation.quadratic_energy_first_variation»&#45;&gt;«methods.second_variation.quadratic_energy_second_variation» -->
+<g id="edge9" class="edge">
+<title>«methods.second_variation.quadratic_energy_first_variation»&#45;&gt;«methods.second_variation.quadratic_energy_second_variation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1076.82,-231.85C1057.99,-222.35 1034.69,-210.6 1015.04,-200.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1009.6,-197.95 1016.17,-198.24 1012.32,-199.21 1015,-200.56 1014.95,-200.65 1014.91,-200.74 1012.23,-199.39 1013.74,-203.06 1009.6,-197.95 1009.6,-197.95"/>
+</g>
+</g>
+</svg>

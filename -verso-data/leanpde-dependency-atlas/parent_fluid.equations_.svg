@@ -1,0 +1,244 @@
+<svg data-node-count="14" data-edge-count="17" data-cluster-count="1" data-variant-key="parent:«fluid.equations»" width="405pt" height="797pt"
+ viewBox="0.00 0.00 405.00 796.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 792.99)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-792.99 401,-792.99 401,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 377,-8 377,-8 383,-8 389,-14 389,-20 389,-20 389,-768.99 389,-768.99 389,-774.99 383,-780.99 377,-780.99 377,-780.99 20,-780.99 20,-780.99 14,-780.99 8,-774.99 8,-768.99 8,-768.99 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="198.5" y="-765.79" font-family="Helvetica" font-size="14.00">Incompressible fluid equations</text>
+</g>
+<!-- «fluid.equations.continuity_decomposition» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Econtinuity&#45;005Fdecomposition&#45;00BB" class="node">
+<title>«fluid.equations.continuity_decomposition»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Econtinuity&#45;005Fdecomposition&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___continuity_decomposition_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="294" cy="-522.59" rx="86.95" ry="19.6"/>
+<text text-anchor="middle" x="294" y="-525.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations</text>
+<text text-anchor="middle" x="294" y="-514.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">continuity_decomposition</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.constant_density» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Econstant&#45;005Fdensity&#45;00BB" class="node">
+<title>«fluid.equations.constant_density»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Econstant&#45;005Fdensity&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___constant_density_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="294" cy="-452.79" rx="74.75" ry="18"/>
+<text text-anchor="middle" x="294" y="-450.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations.constant_density</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.continuity_decomposition»&#45;&gt;«fluid.equations.constant_density» -->
+<g id="edge7" class="edge">
+<title>«fluid.equations.continuity_decomposition»&#45;&gt;«fluid.equations.constant_density»</title>
+<path fill="none" stroke="#6b7280" d="M294,-502.71C294,-494.84 294,-485.62 294,-477.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="294,-471.19 296.7,-477.19 294,-474.19 294,-477.19 294,-477.19 294,-477.19 294,-474.19 291.3,-477.19 294,-471.19 294,-471.19"/>
+</g>
+<!-- «fluid.equations.weak_test_data» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Eweak&#45;005Ftest&#45;005Fdata&#45;00BB" class="node">
+<title>«fluid.equations.weak_test_data»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Eweak&#45;005Ftest&#45;005Fdata&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___weak_test_data_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="323,-334.79 197,-334.79 197,-298.79 323,-298.79 323,-334.79"/>
+<text text-anchor="middle" x="260" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations.weak_test_data</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.material_decomposition» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Ematerial&#45;005Fdecomposition&#45;00BB" class="node">
+<title>«fluid.equations.material_decomposition»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Ematerial&#45;005Fdecomposition&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___material_decomposition_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="288" cy="-35.8" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="288" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations</text>
+<text text-anchor="middle" x="288" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">material_decomposition</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.particle_paths» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Eparticle&#45;005Fpaths&#45;00BB" class="node">
+<title>«fluid.equations.particle_paths»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Eparticle&#45;005Fpaths&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___particle_paths_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="287.5,-749.99 168.5,-749.99 168.5,-713.99 287.5,-713.99 287.5,-749.99"/>
+<text text-anchor="middle" x="228" y="-729.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations.particle_paths</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.particle_chain_rule» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Eparticle&#45;005Fchain&#45;005Frule&#45;00BB" class="node">
+<title>«fluid.equations.particle_chain_rule»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Eparticle&#45;005Fchain&#45;005Frule&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___particle_chain_rule_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="228" cy="-662.19" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="228" y="-665.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations</text>
+<text text-anchor="middle" x="228" y="-654.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">particle_chain_rule</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.particle_paths»&#45;&gt;«fluid.equations.particle_chain_rule» -->
+<g id="edge14" class="edge">
+<title>«fluid.equations.particle_paths»&#45;&gt;«fluid.equations.particle_chain_rule»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M228,-713.88C228,-706.25 228,-697.11 228,-688.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="228,-682.45 230.7,-688.45 228.1,-685.45 228.1,-688.45 228,-688.45 227.9,-688.45 227.9,-685.45 225.3,-688.45 228,-682.45 228,-682.45"/>
+</g>
+<!-- «fluid.equations.kinematics» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Ekinematics&#45;00BB" class="node">
+<title>«fluid.equations.kinematics»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Ekinematics&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___kinematics_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="274.5,-402.79 169.5,-402.79 169.5,-366.79 274.5,-366.79 274.5,-402.79"/>
+<text text-anchor="middle" x="222" y="-382.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations.kinematics</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.kinematics»&#45;&gt;«fluid.equations.weak_test_data» -->
+<g id="edge2" class="edge">
+<title>«fluid.equations.kinematics»&#45;&gt;«fluid.equations.weak_test_data»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M231.98,-366.45C236.49,-358.63 241.87,-349.29 246.71,-340.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="249.95,-335.25 249.3,-341.79 248.54,-337.9 247.04,-340.5 246.96,-340.45 246.87,-340.4 248.37,-337.8 244.62,-339.1 249.95,-335.25 249.95,-335.25"/>
+</g>
+<!-- «fluid.equations.stress» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Estress&#45;00BB" class="node">
+<title>«fluid.equations.stress»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Estress&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___stress_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="171.5,-334.79 86.5,-334.79 86.5,-298.79 171.5,-298.79 171.5,-334.79"/>
+<text text-anchor="middle" x="129" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations.stress</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.kinematics»&#45;&gt;«fluid.equations.stress» -->
+<g id="edge6" class="edge">
+<title>«fluid.equations.kinematics»&#45;&gt;«fluid.equations.stress»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M197.57,-366.45C185.5,-357.89 170.85,-347.49 158.19,-338.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="153.27,-335.02 159.73,-336.29 155.78,-336.67 158.22,-338.41 158.16,-338.49 158.11,-338.57 155.66,-336.84 156.6,-340.69 153.27,-335.02 153.27,-335.02"/>
+</g>
+<!-- «fluid.equations.cauchy_to_navier_stokes» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Ecauchy&#45;005Fto&#45;005Fnavier&#45;005Fstokes&#45;00BB" class="node">
+<title>«fluid.equations.cauchy_to_navier_stokes»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Ecauchy&#45;005Fto&#45;005Fnavier&#45;005Fstokes&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___cauchy_to_navier_stokes_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="121" cy="-107.4" rx="86.95" ry="19.6"/>
+<text text-anchor="middle" x="121" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations</text>
+<text text-anchor="middle" x="121" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy_to_navier_stokes</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.kinematics»&#45;&gt;«fluid.equations.cauchy_to_navier_stokes» -->
+<g id="edge13" class="edge">
+<title>«fluid.equations.kinematics»&#45;&gt;«fluid.equations.cauchy_to_navier_stokes»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M169.26,-375.35C138.99,-368.42 101.62,-356.15 74,-334.79 45.52,-312.78 40.2,-301.32 30,-266.79 14.42,-214.03 61.74,-160.04 93.87,-130.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="98.49,-126.57 95.82,-132.59 96.32,-128.65 94.09,-130.66 94.02,-130.58 93.95,-130.51 96.19,-128.5 92.22,-128.57 98.49,-126.57 98.49,-126.57"/>
+</g>
+<!-- «fluid.equations.operators» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Eoperators&#45;00BB" class="node">
+<title>«fluid.equations.operators»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Eoperators&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___operators_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="337.5,-125.4 238.5,-125.4 238.5,-89.4 337.5,-89.4 337.5,-125.4"/>
+<text text-anchor="middle" x="288" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations.operators</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.kinematics»&#45;&gt;«fluid.equations.operators» -->
+<g id="edge15" class="edge">
+<title>«fluid.equations.kinematics»&#45;&gt;«fluid.equations.operators»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M274.52,-370.43C295.75,-362.86 319.16,-351.47 336,-334.79 359.47,-311.55 358.96,-299.07 366,-266.79 376.19,-220.07 389.91,-201.17 367,-159.2 360.03,-146.42 348.31,-136.38 336.01,-128.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="330.72,-125.58 337.26,-126.32 333.35,-127.02 335.93,-128.55 335.88,-128.64 335.83,-128.73 333.25,-127.2 334.5,-130.96 330.72,-125.58 330.72,-125.58"/>
+</g>
+<!-- «fluid.equations.gradient_decomposition» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Egradient&#45;005Fdecomposition&#45;00BB" class="node">
+<title>«fluid.equations.gradient_decomposition»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Egradient&#45;005Fdecomposition&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___gradient_decomposition_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="124" cy="-246.99" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="124" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations</text>
+<text text-anchor="middle" x="124" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">gradient_decomposition</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.stress»&#45;&gt;«fluid.equations.gradient_decomposition» -->
+<g id="edge8" class="edge">
+<title>«fluid.equations.stress»&#45;&gt;«fluid.equations.gradient_decomposition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M127.74,-298.69C127.18,-291.06 126.5,-281.91 125.88,-273.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="125.42,-267.25 128.55,-273.04 125.74,-270.24 125.96,-273.23 125.86,-273.24 125.76,-273.24 125.54,-270.25 123.17,-273.44 125.42,-267.25 125.42,-267.25"/>
+</g>
+<!-- «fluid.equations.strain_trace» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Estrain&#45;005Ftrace&#45;00BB" class="node">
+<title>«fluid.equations.strain_trace»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Estrain&#45;005Ftrace&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___strain_trace_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="292" cy="-246.99" rx="61.66" ry="18"/>
+<text text-anchor="middle" x="292" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations.strain_trace</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.stress»&#45;&gt;«fluid.equations.strain_trace» -->
+<g id="edge10" class="edge">
+<title>«fluid.equations.stress»&#45;&gt;«fluid.equations.strain_trace»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M170.13,-298.69C195.28,-288.23 227.28,-274.91 252.18,-264.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="258.03,-262.13 253.53,-266.92 255.3,-263.37 252.53,-264.52 252.49,-264.43 252.45,-264.34 255.22,-263.19 251.45,-261.94 258.03,-262.13 258.03,-262.13"/>
+</g>
+<!-- «fluid.equations.constant_density»&#45;&gt;«fluid.equations.kinematics» -->
+<g id="edge5" class="edge">
+<title>«fluid.equations.constant_density»&#45;&gt;«fluid.equations.kinematics»</title>
+<path fill="none" stroke="#6b7280" d="M275.83,-435.14C266.58,-426.66 255.23,-416.26 245.35,-407.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="240.92,-403.13 247.16,-405.2 243.13,-405.16 245.34,-407.19 245.34,-407.19 245.34,-407.19 243.13,-405.16 243.52,-409.18 240.92,-403.13 240.92,-403.13"/>
+</g>
+<!-- «fluid.equations.constant_density»&#45;&gt;«fluid.equations.strain_trace» -->
+<g id="edge11" class="edge">
+<title>«fluid.equations.constant_density»&#45;&gt;«fluid.equations.strain_trace»</title>
+<path fill="none" stroke="#6b7280" d="M305.43,-434.96C323.29,-406.45 354,-347.06 336,-298.79 331.8,-287.54 323.87,-277.12 315.88,-268.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="311.46,-264.22 317.6,-266.59 313.57,-266.35 315.68,-268.48 315.68,-268.48 315.68,-268.48 313.57,-266.35 313.75,-270.38 311.46,-264.22 311.46,-264.22"/>
+</g>
+<!-- «fluid.equations.continuity» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Econtinuity&#45;00BB" class="node">
+<title>«fluid.equations.continuity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Econtinuity&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___continuity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="325,-610.39 225,-610.39 225,-574.39 325,-574.39 325,-610.39"/>
+<text text-anchor="middle" x="275" y="-589.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations.continuity</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.continuity»&#45;&gt;«fluid.equations.continuity_decomposition» -->
+<g id="edge1" class="edge">
+<title>«fluid.equations.continuity»&#45;&gt;«fluid.equations.continuity_decomposition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M279.79,-574.28C282.01,-566.38 284.68,-556.84 287.11,-548.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="288.74,-542.37 289.72,-548.87 288.03,-545.28 287.22,-548.17 287.12,-548.14 287.02,-548.12 287.83,-545.23 284.52,-547.42 288.74,-542.37 288.74,-542.37"/>
+</g>
+<!-- «fluid.equations.stress_divergence» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Estress&#45;005Fdivergence&#45;00BB" class="node">
+<title>«fluid.equations.stress_divergence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;002Estress&#45;005Fdivergence&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___equations___stress_divergence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="277" cy="-177.2" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="277" y="-174.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">equations.stress_divergence</text>
+</a>
+</g>
+</g>
+<!-- «fluid.equations.strain_trace»&#45;&gt;«fluid.equations.stress_divergence» -->
+<g id="edge17" class="edge">
+<title>«fluid.equations.strain_trace»&#45;&gt;«fluid.equations.stress_divergence»</title>
+<path fill="none" stroke="#6b7280" d="M288.21,-228.89C286.38,-220.6 284.15,-210.52 282.16,-201.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="280.84,-195.53 284.77,-200.81 281.48,-198.46 282.13,-201.39 282.13,-201.39 282.13,-201.39 281.48,-198.46 279.5,-201.98 280.84,-195.53 280.84,-195.53"/>
+</g>
+<!-- «fluid.equations.particle_chain_rule»&#45;&gt;«fluid.equations.kinematics» -->
+<g id="edge4" class="edge">
+<title>«fluid.equations.particle_chain_rule»&#45;&gt;«fluid.equations.kinematics»</title>
+<path fill="none" stroke="#6b7280" d="M220.92,-642.2C212.71,-619.02 199.7,-578.48 195,-542.39 188.79,-494.69 203.57,-439.31 213.62,-408.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="215.56,-403.1 216.2,-409.65 214.6,-405.95 213.64,-408.79 213.64,-408.79 213.64,-408.79 214.6,-405.95 211.09,-407.92 215.56,-403.1 215.56,-403.1"/>
+</g>
+<!-- «fluid.equations.particle_chain_rule»&#45;&gt;«fluid.equations.continuity» -->
+<g id="edge9" class="edge">
+<title>«fluid.equations.particle_chain_rule»&#45;&gt;«fluid.equations.continuity»</title>
+<path fill="none" stroke="#6b7280" d="M240.84,-642.66C246.6,-634.35 253.45,-624.48 259.5,-615.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="263.14,-610.5 261.94,-616.97 261.43,-612.97 259.72,-615.43 259.72,-615.43 259.72,-615.43 261.43,-612.97 257.5,-613.89 263.14,-610.5 263.14,-610.5"/>
+</g>
+<!-- «fluid.equations.operators»&#45;&gt;«fluid.equations.material_decomposition» -->
+<g id="edge3" class="edge">
+<title>«fluid.equations.operators»&#45;&gt;«fluid.equations.material_decomposition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M288,-89.19C288,-80.95 288,-70.92 288,-61.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="288,-55.76 290.7,-61.76 288.1,-58.76 288.1,-61.76 288,-61.76 287.9,-61.76 287.9,-58.76 285.3,-61.76 288,-55.76 288,-55.76"/>
+</g>
+<!-- «fluid.equations.stress_divergence»&#45;&gt;«fluid.equations.cauchy_to_navier_stokes» -->
+<g id="edge12" class="edge">
+<title>«fluid.equations.stress_divergence»&#45;&gt;«fluid.equations.cauchy_to_navier_stokes»</title>
+<path fill="none" stroke="#6b7280" d="M241.99,-160.98C219.37,-151.15 189.73,-138.27 165.45,-127.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="159.72,-125.23 166.3,-125.14 162.48,-126.42 165.23,-127.62 165.23,-127.62 165.23,-127.62 162.48,-126.42 164.15,-130.09 159.72,-125.23 159.72,-125.23"/>
+</g>
+<!-- «fluid.equations.stress_divergence»&#45;&gt;«fluid.equations.operators» -->
+<g id="edge16" class="edge">
+<title>«fluid.equations.stress_divergence»&#45;&gt;«fluid.equations.operators»</title>
+<path fill="none" stroke="#6b7280" d="M279.78,-159.09C281.12,-150.8 282.76,-140.72 284.21,-131.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="285.19,-125.74 286.89,-132.09 284.71,-128.7 284.23,-131.66 284.23,-131.66 284.23,-131.66 284.71,-128.7 281.56,-131.23 285.19,-125.74 285.19,-125.74"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,425 @@
+<svg data-node-count="26" data-edge-count="27" data-cluster-count="1" data-variant-key="parent:«fluid.boussinesq»" width="1089pt" height="600pt"
+ viewBox="0.00 0.00 1089.00 600.19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 596.19)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-596.19 1085,-596.19 1085,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1061,-8 1061,-8 1067,-8 1073,-14 1073,-20 1073,-20 1073,-572.19 1073,-572.19 1073,-578.19 1067,-584.19 1061,-584.19 1061,-584.19 20,-584.19 20,-584.19 14,-584.19 8,-578.19 8,-572.19 8,-572.19 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="540.5" y="-568.99" font-family="Helvetica" font-size="14.00">Two&#45;dimensional inviscid Boussinesq flow</text>
+</g>
+<!-- «fluid.boussinesq.exact_reduction» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eexact&#45;005Freduction&#45;00BB" class="node">
+<title>«fluid.boussinesq.exact_reduction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eexact&#45;005Freduction&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___exact_reduction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="91" cy="-107.4" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="91" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq.exact_reduction</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.zero_profile» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Ezero&#45;005Fprofile&#45;00BB" class="node">
+<title>«fluid.boussinesq.zero_profile»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Ezero&#45;005Fprofile&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___zero_profile_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="91" cy="-35.8" rx="65.46" ry="18"/>
+<text text-anchor="middle" x="91" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq.zero_profile</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.exact_reduction»&#45;&gt;«fluid.boussinesq.zero_profile» -->
+<g id="edge23" class="edge">
+<title>«fluid.boussinesq.exact_reduction»&#45;&gt;«fluid.boussinesq.zero_profile»</title>
+<path fill="none" stroke="#6b7280" d="M91,-89.19C91,-80.34 91,-69.43 91,-59.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="91,-53.81 93.7,-59.81 91,-56.81 91,-59.81 91,-59.81 91,-59.81 91,-56.81 88.3,-59.81 91,-53.81 91,-53.81"/>
+</g>
+<!-- «fluid.boussinesq.rescaled_residuals» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Erescaled&#45;005Fresiduals&#45;00BB" class="node">
+<title>«fluid.boussinesq.rescaled_residuals»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Erescaled&#45;005Fresiduals&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___rescaled_residuals_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="999" cy="-250.59" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="999" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="999" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">rescaled_residuals</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.primitive_vorticity_bridge» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eprimitive&#45;005Fvorticity&#45;005Fbridge&#45;00BB" class="node">
+<title>«fluid.boussinesq.primitive_vorticity_bridge»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eprimitive&#45;005Fvorticity&#45;005Fbridge&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___primitive_vorticity_bridge_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="265" cy="-250.59" rx="84.71" ry="19.6"/>
+<text text-anchor="middle" x="265" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="265" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">primitive_vorticity_bridge</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.derivative_trace_map» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Ederivative&#45;005Ftrace&#45;005Fmap&#45;00BB" class="node">
+<title>«fluid.boussinesq.derivative_trace_map»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Ederivative&#45;005Ftrace&#45;005Fmap&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___derivative_trace_map_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="975" cy="-533.39" rx="73.58" ry="19.6"/>
+<text text-anchor="middle" x="975" y="-536.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="975" y="-525.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivative_trace_map</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.cubic_weight_from_jets» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Ecubic&#45;005Fweight&#45;005Ffrom&#45;005Fjets&#45;00BB" class="node">
+<title>«fluid.boussinesq.cubic_weight_from_jets»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Ecubic&#45;005Fweight&#45;005Ffrom&#45;005Fjets&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___cubic_weight_from_jets_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="984" cy="-461.79" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="984" y="-464.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="984" y="-453.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">cubic_weight_from_jets</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.derivative_trace_map»&#45;&gt;«fluid.boussinesq.cubic_weight_from_jets» -->
+<g id="edge12" class="edge">
+<title>«fluid.boussinesq.derivative_trace_map»&#45;&gt;«fluid.boussinesq.cubic_weight_from_jets»</title>
+<path fill="none" stroke="#6b7280" d="M977.46,-513.37C978.47,-505.54 979.66,-496.37 980.74,-487.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="981.54,-481.78 983.45,-488.08 981.16,-484.76 980.77,-487.73 980.77,-487.73 980.77,-487.73 981.16,-484.76 978.1,-487.39 981.54,-481.78 981.54,-481.78"/>
+</g>
+<!-- «fluid.boussinesq.exact_response_jets» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eexact&#45;005Fresponse&#45;005Fjets&#45;00BB" class="node">
+<title>«fluid.boussinesq.exact_response_jets»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eexact&#45;005Fresponse&#45;005Fjets&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___exact_response_jets_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="806" cy="-461.79" rx="72.25" ry="19.6"/>
+<text text-anchor="middle" x="806" y="-464.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="806" y="-453.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">exact_response_jets</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.derivative_trace_map»&#45;&gt;«fluid.boussinesq.exact_response_jets» -->
+<g id="edge19" class="edge">
+<title>«fluid.boussinesq.derivative_trace_map»&#45;&gt;«fluid.boussinesq.exact_response_jets»</title>
+<path fill="none" stroke="#6b7280" d="M936.23,-516.42C910.57,-505.85 876.87,-491.97 850.18,-480.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="844.59,-478.68 851.17,-478.47 847.37,-479.82 850.14,-480.97 850.14,-480.97 850.14,-480.97 847.37,-479.82 849.11,-483.46 844.59,-478.68 844.59,-478.68"/>
+</g>
+<!-- «fluid.boussinesq.rescaled_boundary_continuation» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Erescaled&#45;005Fboundary&#45;005Fcontinuation&#45;00BB" class="node">
+<title>«fluid.boussinesq.rescaled_boundary_continuation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Erescaled&#45;005Fboundary&#45;005Fcontinuation&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___rescaled_boundary_continuation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="907" cy="-178.99" rx="108.38" ry="19.6"/>
+<text text-anchor="middle" x="907" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="907" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">rescaled_boundary_continuation</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.normalization_trace_odes» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Enormalization&#45;005Ftrace&#45;005Fodes&#45;00BB" class="node">
+<title>«fluid.boussinesq.normalization_trace_odes»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Enormalization&#45;005Ftrace&#45;005Fodes&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___normalization_trace_odes_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="809" cy="-107.4" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="809" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="809" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">normalization_trace_odes</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.rescaled_boundary_continuation»&#45;&gt;«fluid.boussinesq.normalization_trace_odes» -->
+<g id="edge27" class="edge">
+<title>«fluid.boussinesq.rescaled_boundary_continuation»&#45;&gt;«fluid.boussinesq.normalization_trace_odes»</title>
+<path fill="none" stroke="#6b7280" d="M881.25,-159.71C868.54,-150.68 853.1,-139.72 839.76,-130.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="834.58,-126.56 841.03,-127.83 837.02,-128.3 839.47,-130.04 839.47,-130.04 839.47,-130.04 837.02,-128.3 837.9,-132.24 834.58,-126.56 834.58,-126.56"/>
+</g>
+<!-- «fluid.boussinesq.stream_symmetry_bridge» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Estream&#45;005Fsymmetry&#45;005Fbridge&#45;00BB" class="node">
+<title>«fluid.boussinesq.stream_symmetry_bridge»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Estream&#45;005Fsymmetry&#45;005Fbridge&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___stream_symmetry_bridge_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="502" cy="-250.59" rx="86.95" ry="19.6"/>
+<text text-anchor="middle" x="502" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="502" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">stream_symmetry_bridge</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.normalization» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Enormalization&#45;00BB" class="node">
+<title>«fluid.boussinesq.normalization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Enormalization&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___normalization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="773.5,-196.99 650.5,-196.99 650.5,-160.99 773.5,-160.99 773.5,-196.99"/>
+<text text-anchor="middle" x="712" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq.normalization</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.stream_symmetry_bridge»&#45;&gt;«fluid.boussinesq.normalization» -->
+<g id="edge17" class="edge">
+<title>«fluid.boussinesq.stream_symmetry_bridge»&#45;&gt;«fluid.boussinesq.normalization»</title>
+<path fill="none" stroke="#6b7280" d="M549.39,-233.89C580.48,-223.58 621.33,-210.04 654.31,-199.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="660.37,-197.11 655.52,-201.56 657.52,-198.05 654.67,-198.99 654.67,-198.99 654.67,-198.99 657.52,-198.05 653.83,-196.43 660.37,-197.11 660.37,-197.11"/>
+</g>
+<!-- «fluid.boussinesq.angular_dirichlet_inverse» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eangular&#45;005Fdirichlet&#45;005Finverse&#45;00BB" class="node">
+<title>«fluid.boussinesq.angular_dirichlet_inverse»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eangular&#45;005Fdirichlet&#45;005Finverse&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___angular_dirichlet_inverse_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="774" cy="-533.39" rx="84.71" ry="19.6"/>
+<text text-anchor="middle" x="774" y="-536.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="774" y="-525.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">angular_dirichlet_inverse</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.dynamic_rescaling_equations» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Edynamic&#45;005Frescaling&#45;005Fequations&#45;00BB" class="node">
+<title>«fluid.boussinesq.dynamic_rescaling_equations»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Edynamic&#45;005Frescaling&#45;005Fequations&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___dynamic_rescaling_equations_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="754" cy="-250.59" rx="99.9" ry="19.6"/>
+<text text-anchor="middle" x="754" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="754" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">dynamic_rescaling_equations</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.green_potential_symmetry» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Egreen&#45;005Fpotential&#45;005Fsymmetry&#45;00BB" class="node">
+<title>«fluid.boussinesq.green_potential_symmetry»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Egreen&#45;005Fpotential&#45;005Fsymmetry&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___green_potential_symmetry_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="641" cy="-322.19" rx="89.61" ry="19.6"/>
+<text text-anchor="middle" x="641" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="641" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">green_potential_symmetry</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.green_potential_symmetry»&#45;&gt;«fluid.boussinesq.stream_symmetry_bridge» -->
+<g id="edge8" class="edge">
+<title>«fluid.boussinesq.green_potential_symmetry»&#45;&gt;«fluid.boussinesq.stream_symmetry_bridge»</title>
+<path fill="none" stroke="#6b7280" d="M606.28,-303.81C586.88,-294.09 562.6,-281.94 542.35,-271.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="536.76,-269 543.33,-269.27 539.44,-270.34 542.12,-271.68 542.12,-271.68 542.12,-271.68 539.44,-270.34 540.91,-274.1 536.76,-269 536.76,-269"/>
+</g>
+<!-- «fluid.boussinesq.poisson_symmetry_transfer» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Epoisson&#45;005Fsymmetry&#45;005Ftransfer&#45;00BB" class="node">
+<title>«fluid.boussinesq.poisson_symmetry_transfer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Epoisson&#45;005Fsymmetry&#45;005Ftransfer&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___poisson_symmetry_transfer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="432" cy="-322.19" rx="94.09" ry="19.6"/>
+<text text-anchor="middle" x="432" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="432" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">poisson_symmetry_transfer</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.poisson_symmetry_transfer»&#45;&gt;«fluid.boussinesq.stream_symmetry_bridge» -->
+<g id="edge7" class="edge">
+<title>«fluid.boussinesq.poisson_symmetry_transfer»&#45;&gt;«fluid.boussinesq.stream_symmetry_bridge»</title>
+<path fill="none" stroke="#6b7280" d="M450.76,-302.54C459.39,-293.96 469.71,-283.69 478.83,-274.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="483.19,-270.3 480.84,-276.44 481.06,-272.41 478.93,-274.53 478.93,-274.53 478.93,-274.53 481.06,-272.41 477.03,-272.61 483.19,-270.3 483.19,-270.3"/>
+</g>
+<!-- «fluid.boussinesq.dynamic_rescaling» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Edynamic&#45;005Frescaling&#45;00BB" class="node">
+<title>«fluid.boussinesq.dynamic_rescaling»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Edynamic&#45;005Frescaling&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___dynamic_rescaling_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="902,-340.19 756,-340.19 756,-304.19 902,-304.19 902,-340.19"/>
+<text text-anchor="middle" x="829" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq.dynamic_rescaling</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.dynamic_rescaling»&#45;&gt;«fluid.boussinesq.dynamic_rescaling_equations» -->
+<g id="edge9" class="edge">
+<title>«fluid.boussinesq.dynamic_rescaling»&#45;&gt;«fluid.boussinesq.dynamic_rescaling_equations»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M810.46,-303.99C800.83,-295.05 788.94,-284.01 778.55,-274.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="773.9,-270.06 780.14,-272.16 776.17,-272.03 778.37,-274.07 778.3,-274.14 778.23,-274.22 776.03,-272.18 776.46,-276.12 773.9,-270.06 773.9,-270.06"/>
+</g>
+<!-- «fluid.boussinesq.vorticity_stream_bridges» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Evorticity&#45;005Fstream&#45;005Fbridges&#45;00BB" class="node">
+<title>«fluid.boussinesq.vorticity_stream_bridges»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Evorticity&#45;005Fstream&#45;005Fbridges&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___vorticity_stream_bridges_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="229" cy="-322.19" rx="84.29" ry="19.6"/>
+<text text-anchor="middle" x="229" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="229" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">vorticity_stream_bridges</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.vorticity_stream_bridges»&#45;&gt;«fluid.boussinesq.primitive_vorticity_bridge» -->
+<g id="edge4" class="edge">
+<title>«fluid.boussinesq.vorticity_stream_bridges»&#45;&gt;«fluid.boussinesq.primitive_vorticity_bridge»</title>
+<path fill="none" stroke="#6b7280" d="M238.84,-302.17C242.96,-294.19 247.82,-284.81 252.22,-276.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="255.17,-270.59 254.82,-277.16 253.8,-273.25 252.42,-275.92 252.42,-275.92 252.42,-275.92 253.8,-273.25 250.02,-274.68 255.17,-270.59 255.17,-270.59"/>
+</g>
+<!-- «fluid.boussinesq.vorticity_stream_bridges»&#45;&gt;«fluid.boussinesq.stream_symmetry_bridge» -->
+<g id="edge6" class="edge">
+<title>«fluid.boussinesq.vorticity_stream_bridges»&#45;&gt;«fluid.boussinesq.stream_symmetry_bridge»</title>
+<path fill="none" stroke="#6b7280" d="M284.25,-307.11C329.37,-295.6 393.12,-279.35 439.98,-267.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="445.9,-265.9 440.75,-269.99 442.99,-266.64 440.09,-267.38 440.09,-267.38 440.09,-267.38 442.99,-266.64 439.42,-264.76 445.9,-265.9 445.9,-265.9"/>
+</g>
+<!-- «fluid.boussinesq.normalization»&#45;&gt;«fluid.boussinesq.normalization_trace_odes» -->
+<g id="edge26" class="edge">
+<title>«fluid.boussinesq.normalization»&#45;&gt;«fluid.boussinesq.normalization_trace_odes»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M735.98,-160.79C748.97,-151.47 765.15,-139.86 778.97,-129.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="783.95,-126.37 780.64,-132.07 781.57,-128.2 779.13,-129.95 779.07,-129.87 779.01,-129.79 781.45,-128.04 777.5,-127.68 783.95,-126.37 783.95,-126.37"/>
+</g>
+<!-- «fluid.boussinesq.vorticity_stream_model» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Evorticity&#45;005Fstream&#45;005Fmodel&#45;00BB" class="node">
+<title>«fluid.boussinesq.vorticity_stream_model»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Evorticity&#45;005Fstream&#45;005Fmodel&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___vorticity_stream_model_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="678,-409.99 564,-409.99 564,-373.99 678,-373.99 678,-409.99"/>
+<text text-anchor="middle" x="621" y="-394.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="621" y="-383.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">vorticity_stream_model</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.green_potential_symmetry» -->
+<g id="edge11" class="edge">
+<title>«fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.green_potential_symmetry»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M626.05,-373.88C628.38,-365.98 631.19,-356.44 633.74,-347.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="635.46,-341.96 636.35,-348.48 634.71,-344.87 633.86,-347.75 633.76,-347.72 633.67,-347.69 634.52,-344.81 631.17,-346.96 635.46,-341.96 635.46,-341.96"/>
+</g>
+<!-- «fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.poisson_symmetry_transfer» -->
+<g id="edge13" class="edge">
+<title>«fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.poisson_symmetry_transfer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M573.31,-373.88C545.95,-364.07 511.58,-351.74 483.59,-341.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="477.72,-339.59 484.28,-339.08 480.58,-340.51 483.4,-341.52 483.37,-341.62 483.34,-341.71 480.51,-340.7 482.46,-344.16 477.72,-339.59 477.72,-339.59"/>
+</g>
+<!-- «fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.dynamic_rescaling» -->
+<g id="edge14" class="edge">
+<title>«fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.dynamic_rescaling»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M673.22,-373.97C702.89,-364.3 740.11,-352.17 770.73,-342.18"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="776.76,-340.22 771.89,-344.65 773.94,-341.24 771.09,-342.17 771.06,-342.08 771.02,-341.98 773.88,-341.05 770.22,-339.51 776.76,-340.22 776.76,-340.22"/>
+</g>
+<!-- «fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.vorticity_stream_bridges» -->
+<g id="edge15" class="edge">
+<title>«fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.vorticity_stream_bridges»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M563.89,-382.05C504.22,-372.58 407.91,-356.97 325,-341.99 316.02,-340.37 306.58,-338.6 297.27,-336.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="291.18,-335.64 297.58,-334.13 294.14,-336.11 297.09,-336.68 297.07,-336.78 297.05,-336.87 294.1,-336.31 296.56,-339.43 291.18,-335.64 291.18,-335.64"/>
+</g>
+<!-- «fluid.boussinesq.rescaled_system» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Erescaled&#45;005Fsystem&#45;00BB" class="node">
+<title>«fluid.boussinesq.rescaled_system»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Erescaled&#45;005Fsystem&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___rescaled_system_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1065,-340.19 927,-340.19 927,-304.19 1065,-304.19 1065,-340.19"/>
+<text text-anchor="middle" x="996" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq.rescaled_system</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.rescaled_system» -->
+<g id="edge21" class="edge">
+<title>«fluid.boussinesq.vorticity_stream_model»&#45;&gt;«fluid.boussinesq.rescaled_system»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M678.1,-382.56C737.48,-373.54 833.04,-358.31 915,-341.99 916.91,-341.61 918.85,-341.22 920.8,-340.81"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="926.69,-339.58 921.37,-343.45 923.77,-340.29 920.84,-340.91 920.82,-340.81 920.8,-340.71 923.73,-340.1 920.26,-338.17 926.69,-339.58 926.69,-339.58"/>
+</g>
+<!-- «fluid.boussinesq.planar_streamfunction» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eplanar&#45;005Fstreamfunction&#45;00BB" class="node">
+<title>«fluid.boussinesq.planar_streamfunction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eplanar&#45;005Fstreamfunction&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___planar_streamfunction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="655.5,-551.39 546.5,-551.39 546.5,-515.39 655.5,-515.39 655.5,-551.39"/>
+<text text-anchor="middle" x="601" y="-536.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="601" y="-525.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">planar_streamfunction</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.planar_streamfunction_identities» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eplanar&#45;005Fstreamfunction&#45;005Fidentities&#45;00BB" class="node">
+<title>«fluid.boussinesq.planar_streamfunction_identities»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eplanar&#45;005Fstreamfunction&#45;005Fidentities&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___planar_streamfunction_identities_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="601" cy="-461.79" rx="108.38" ry="19.6"/>
+<text text-anchor="middle" x="601" y="-464.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="601" y="-453.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">planar_streamfunction_identities</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.planar_streamfunction»&#45;&gt;«fluid.boussinesq.planar_streamfunction_identities» -->
+<g id="edge25" class="edge">
+<title>«fluid.boussinesq.planar_streamfunction»&#45;&gt;«fluid.boussinesq.planar_streamfunction_identities»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M601,-515.18C601,-506.94 601,-496.91 601,-487.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="601,-481.75 603.7,-487.75 601.1,-484.75 601.1,-487.75 601,-487.75 600.9,-487.75 600.9,-484.75 598.3,-487.75 601,-481.75 601,-481.75"/>
+</g>
+<!-- «fluid.boussinesq.classical» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eclassical&#45;00BB" class="node">
+<title>«fluid.boussinesq.classical»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eclassical&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___classical_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="119.5,-340.19 16.5,-340.19 16.5,-304.19 119.5,-304.19 119.5,-340.19"/>
+<text text-anchor="middle" x="68" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq.classical</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.classical»&#45;&gt;«fluid.boussinesq.primitive_vorticity_bridge» -->
+<g id="edge3" class="edge">
+<title>«fluid.boussinesq.classical»&#45;&gt;«fluid.boussinesq.primitive_vorticity_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M116.19,-304.17C145.88,-293.68 183.9,-280.24 214.08,-269.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="220.01,-267.49 215.25,-272.03 217.21,-268.58 214.38,-269.58 214.35,-269.49 214.32,-269.39 217.14,-268.39 213.45,-266.94 220.01,-267.49 220.01,-267.49"/>
+</g>
+<!-- «fluid.boussinesq.similarity_ansatz» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Esimilarity&#45;005Fansatz&#45;00BB" class="node">
+<title>«fluid.boussinesq.similarity_ansatz»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Esimilarity&#45;005Fansatz&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___similarity_ansatz_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="155.5,-268.59 16.5,-268.59 16.5,-232.59 155.5,-232.59 155.5,-268.59"/>
+<text text-anchor="middle" x="86" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq.similarity_ansatz</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.classical»&#45;&gt;«fluid.boussinesq.similarity_ansatz» -->
+<g id="edge24" class="edge">
+<title>«fluid.boussinesq.classical»&#45;&gt;«fluid.boussinesq.similarity_ansatz»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M72.45,-303.99C74.74,-295.14 77.56,-284.23 80.03,-274.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="81.6,-268.6 82.71,-275.08 80.95,-271.53 80.2,-274.43 80.1,-274.41 80,-274.38 80.75,-271.48 77.49,-273.73 81.6,-268.6 81.6,-268.6"/>
+</g>
+<!-- «fluid.boussinesq.profile_equations» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eprofile&#45;005Fequations&#45;00BB" class="node">
+<title>«fluid.boussinesq.profile_equations»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eprofile&#45;005Fequations&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___profile_equations_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="158.5,-196.99 19.5,-196.99 19.5,-160.99 158.5,-160.99 158.5,-196.99"/>
+<text text-anchor="middle" x="89" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq.profile_equations</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.profile_equations»&#45;&gt;«fluid.boussinesq.exact_reduction» -->
+<g id="edge1" class="edge">
+<title>«fluid.boussinesq.profile_equations»&#45;&gt;«fluid.boussinesq.exact_reduction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M89.49,-160.79C89.75,-151.94 90.06,-141.03 90.34,-131.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="90.51,-125.4 93.04,-131.48 90.53,-128.4 90.44,-131.4 90.34,-131.4 90.24,-131.4 90.33,-128.4 87.64,-131.32 90.51,-125.4 90.51,-125.4"/>
+</g>
+<!-- «fluid.boussinesq.approximate_response» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eapproximate&#45;005Fresponse&#45;00BB" class="node">
+<title>«fluid.boussinesq.approximate_response»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Eapproximate&#45;005Fresponse&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___approximate_response_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="269" cy="-533.39" rx="78.48" ry="19.6"/>
+<text text-anchor="middle" x="269" y="-536.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="269" y="-525.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">approximate_response</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.rescaled_system»&#45;&gt;«fluid.boussinesq.rescaled_residuals» -->
+<g id="edge2" class="edge">
+<title>«fluid.boussinesq.rescaled_system»&#45;&gt;«fluid.boussinesq.rescaled_residuals»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M996.74,-303.99C997.1,-295.74 997.53,-285.72 997.92,-276.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="998.18,-270.56 1000.62,-276.67 998.15,-273.56 998.02,-276.56 997.92,-276.55 997.82,-276.55 997.95,-273.55 995.23,-276.43 998.18,-270.56 998.18,-270.56"/>
+</g>
+<!-- «fluid.boussinesq.rescaled_system»&#45;&gt;«fluid.boussinesq.rescaled_boundary_continuation» -->
+<g id="edge5" class="edge">
+<title>«fluid.boussinesq.rescaled_system»&#45;&gt;«fluid.boussinesq.rescaled_boundary_continuation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M957.54,-303.97C943.54,-295.78 928.97,-284.63 920,-270.39 907.7,-250.87 905.18,-224.32 905.3,-205.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="905.43,-198.82 908.01,-204.87 905.47,-201.82 905.41,-204.82 905.31,-204.82 905.21,-204.81 905.27,-201.82 902.61,-204.76 905.43,-198.82 905.43,-198.82"/>
+</g>
+<!-- «fluid.boussinesq.rescaled_system»&#45;&gt;«fluid.boussinesq.dynamic_rescaling_equations» -->
+<g id="edge10" class="edge">
+<title>«fluid.boussinesq.rescaled_system»&#45;&gt;«fluid.boussinesq.dynamic_rescaling_equations»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M936.8,-304.17C899.61,-293.47 851.77,-279.71 814.36,-268.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="808.45,-267.25 814.96,-266.32 811.36,-267.99 814.24,-268.82 814.22,-268.91 814.19,-269.01 811.31,-268.18 813.47,-271.51 808.45,-267.25 808.45,-267.25"/>
+</g>
+<!-- «fluid.boussinesq.rescaled_system»&#45;&gt;«fluid.boussinesq.normalization» -->
+<g id="edge16" class="edge">
+<title>«fluid.boussinesq.rescaled_system»&#45;&gt;«fluid.boussinesq.normalization»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M955.66,-304.02C937.67,-295.35 916.8,-283.81 900,-270.39 881.88,-255.91 885.28,-243.7 866,-230.79 851.29,-220.95 813.89,-208.52 779.63,-198.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="773.72,-196.69 780.23,-195.79 776.62,-197.44 779.5,-198.28 779.48,-198.38 779.45,-198.47 776.57,-197.63 778.72,-200.97 773.72,-196.69 773.72,-196.69"/>
+</g>
+<!-- «fluid.boussinesq.normalization_preservation» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Enormalization&#45;005Fpreservation&#45;00BB" class="node">
+<title>«fluid.boussinesq.normalization_preservation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;002Enormalization&#45;005Fpreservation&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___boussinesq___normalization_preservation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="809" cy="-35.8" rx="91.43" ry="19.6"/>
+<text text-anchor="middle" x="809" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">boussinesq</text>
+<text text-anchor="middle" x="809" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">normalization_preservation</text>
+</a>
+</g>
+</g>
+<!-- «fluid.boussinesq.similarity_ansatz»&#45;&gt;«fluid.boussinesq.profile_equations» -->
+<g id="edge20" class="edge">
+<title>«fluid.boussinesq.similarity_ansatz»&#45;&gt;«fluid.boussinesq.profile_equations»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M86.74,-232.39C87.12,-223.54 87.59,-212.63 88.01,-203.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="88.27,-197 90.71,-203.11 88.24,-200 88.11,-203 88.01,-203 87.91,-202.99 88.04,-199.99 85.31,-202.88 88.27,-197 88.27,-197"/>
+</g>
+<!-- «fluid.boussinesq.planar_streamfunction_identities»&#45;&gt;«fluid.boussinesq.vorticity_stream_model» -->
+<g id="edge18" class="edge">
+<title>«fluid.boussinesq.planar_streamfunction_identities»&#45;&gt;«fluid.boussinesq.vorticity_stream_model»</title>
+<path fill="none" stroke="#6b7280" d="M606.57,-441.9C608.89,-434.03 611.61,-424.81 614.06,-416.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="615.87,-410.38 616.76,-416.9 615.02,-413.26 614.17,-416.14 614.17,-416.14 614.17,-416.14 615.02,-413.26 611.58,-415.37 615.87,-410.38 615.87,-410.38"/>
+</g>
+<!-- «fluid.boussinesq.normalization_trace_odes»&#45;&gt;«fluid.boussinesq.normalization_preservation» -->
+<g id="edge22" class="edge">
+<title>«fluid.boussinesq.normalization_trace_odes»&#45;&gt;«fluid.boussinesq.normalization_preservation»</title>
+<path fill="none" stroke="#6b7280" d="M809,-87.38C809,-79.55 809,-70.38 809,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="809,-55.79 811.7,-61.79 809,-58.79 809,-61.79 809,-61.79 809,-61.79 809,-58.79 806.3,-61.79 809,-55.79 809,-55.79"/>
+</g>
+</g>
+</svg>

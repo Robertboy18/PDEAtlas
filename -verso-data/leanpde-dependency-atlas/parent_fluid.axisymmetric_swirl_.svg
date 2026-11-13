@@ -1,0 +1,138 @@
+<svg data-node-count="8" data-edge-count="8" data-cluster-count="1" data-variant-key="parent:«fluid.axisymmetric_swirl»" width="564pt" height="450pt"
+ viewBox="0.00 0.00 564.00 449.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 445.79)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-445.79 560,-445.79 560,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 536,-8 536,-8 542,-8 548,-14 548,-20 548,-20 548,-421.79 548,-421.79 548,-427.79 542,-433.79 536,-433.79 536,-433.79 20,-433.79 20,-433.79 14,-433.79 8,-427.79 8,-421.79 8,-421.79 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="278" y="-418.59" font-family="Helvetica" font-size="14.00">Axisymmetric flow with swirl</text>
+</g>
+<!-- «fluid.axisymmetric_swirl.vorticity_transport» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Evorticity&#45;005Ftransport&#45;00BB" class="node">
+<title>«fluid.axisymmetric_swirl.vorticity_transport»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Evorticity&#45;005Ftransport&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric_swirl___vorticity_transport_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="459" cy="-107.4" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="459" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric_swirl</text>
+<text text-anchor="middle" x="459" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">vorticity_transport</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric_swirl.local_pressure» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Elocal&#45;005Fpressure&#45;00BB" class="node">
+<title>«fluid.axisymmetric_swirl.local_pressure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Elocal&#45;005Fpressure&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric_swirl___local_pressure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="459" cy="-35.8" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="459" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric_swirl</text>
+<text text-anchor="middle" x="459" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_pressure</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric_swirl.vorticity_transport»&#45;&gt;«fluid.axisymmetric_swirl.local_pressure» -->
+<g id="edge8" class="edge">
+<title>«fluid.axisymmetric_swirl.vorticity_transport»&#45;&gt;«fluid.axisymmetric_swirl.local_pressure»</title>
+<path fill="none" stroke="#6b7280" d="M459,-87.38C459,-79.55 459,-70.38 459,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="459,-55.79 461.7,-61.79 459,-58.79 459,-61.79 459,-61.79 459,-61.79 459,-58.79 456.3,-61.79 459,-55.79 459,-55.79"/>
+</g>
+<!-- «fluid.axisymmetric_swirl.cartesian_divergence_free» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Ecartesian&#45;005Fdivergence&#45;005Ffree&#45;00BB" class="node">
+<title>«fluid.axisymmetric_swirl.cartesian_divergence_free»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Ecartesian&#45;005Fdivergence&#45;005Ffree&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric_swirl___cartesian_divergence_free_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="106" cy="-246.99" rx="89.61" ry="19.6"/>
+<text text-anchor="middle" x="106" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric_swirl</text>
+<text text-anchor="middle" x="106" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">cartesian_divergence_free</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric_swirl.cartesian_velocity» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Ecartesian&#45;005Fvelocity&#45;00BB" class="node">
+<title>«fluid.axisymmetric_swirl.cartesian_velocity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Ecartesian&#45;005Fvelocity&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric_swirl___cartesian_velocity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="387.5,-334.79 290.5,-334.79 290.5,-298.79 387.5,-298.79 387.5,-334.79"/>
+<text text-anchor="middle" x="339" y="-319.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric_swirl</text>
+<text text-anchor="middle" x="339" y="-308.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">cartesian_velocity</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric_swirl.cartesian_velocity»&#45;&gt;«fluid.axisymmetric_swirl.cartesian_divergence_free» -->
+<g id="edge2" class="edge">
+<title>«fluid.axisymmetric_swirl.cartesian_velocity»&#45;&gt;«fluid.axisymmetric_swirl.cartesian_divergence_free»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M290.44,-301.66C253.73,-290.98 203.18,-276.27 164.28,-264.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="158.14,-263.17 164.66,-262.25 161.05,-263.91 163.93,-264.75 163.9,-264.84 163.87,-264.94 160.99,-264.1 163.15,-267.44 158.14,-263.17 158.14,-263.17"/>
+</g>
+<!-- «fluid.axisymmetric_swirl.finite_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Efinite&#45;005Fenergy&#45;00BB" class="node">
+<title>«fluid.axisymmetric_swirl.finite_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Efinite&#45;005Fenergy&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric_swirl___finite_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="289" cy="-246.99" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="289" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric_swirl</text>
+<text text-anchor="middle" x="289" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">finite_energy</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric_swirl.cartesian_velocity»&#45;&gt;«fluid.axisymmetric_swirl.finite_energy» -->
+<g id="edge4" class="edge">
+<title>«fluid.axisymmetric_swirl.cartesian_velocity»&#45;&gt;«fluid.axisymmetric_swirl.finite_energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M326.38,-298.69C320.44,-290.63 313.25,-280.88 306.77,-272.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="302.84,-266.77 308.58,-269.99 304.71,-269.12 306.49,-271.54 306.41,-271.6 306.33,-271.66 304.54,-269.24 304.23,-273.2 302.84,-266.77 302.84,-266.77"/>
+</g>
+<!-- «fluid.axisymmetric_swirl.curl» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Ecurl&#45;00BB" class="node">
+<title>«fluid.axisymmetric_swirl.curl»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Ecurl&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric_swirl___curl_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="448" cy="-246.99" rx="65.46" ry="18"/>
+<text text-anchor="middle" x="448" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric_swirl.curl</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric_swirl.cartesian_velocity»&#45;&gt;«fluid.axisymmetric_swirl.curl» -->
+<g id="edge7" class="edge">
+<title>«fluid.axisymmetric_swirl.cartesian_velocity»&#45;&gt;«fluid.axisymmetric_swirl.curl»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M366.51,-298.69C382.03,-289.03 401.47,-276.94 417.46,-266.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="422.74,-263.7 419.08,-269.17 420.25,-265.37 417.7,-266.96 417.65,-266.87 417.6,-266.79 420.14,-265.2 416.22,-264.58 422.74,-263.7 422.74,-263.7"/>
+</g>
+<!-- «fluid.axisymmetric_swirl.reduced_system» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Ereduced&#45;005Fsystem&#45;00BB" class="node">
+<title>«fluid.axisymmetric_swirl.reduced_system»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Ereduced&#45;005Fsystem&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric_swirl___reduced_system_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="488.5,-402.79 391.5,-402.79 391.5,-366.79 488.5,-366.79 488.5,-402.79"/>
+<text text-anchor="middle" x="440" y="-387.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric_swirl</text>
+<text text-anchor="middle" x="440" y="-376.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">reduced_system</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric_swirl.reduced_system»&#45;&gt;«fluid.axisymmetric_swirl.cartesian_velocity» -->
+<g id="edge3" class="edge">
+<title>«fluid.axisymmetric_swirl.reduced_system»&#45;&gt;«fluid.axisymmetric_swirl.cartesian_velocity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M413.73,-366.63C400.4,-357.92 384.12,-347.28 370.17,-338.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="365.14,-334.88 371.64,-335.9 367.71,-336.43 370.22,-338.07 370.16,-338.16 370.11,-338.24 367.6,-336.6 368.69,-340.42 365.14,-334.88 365.14,-334.88"/>
+</g>
+<!-- «fluid.axisymmetric_swirl.squared_radius_residuals» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Esquared&#45;005Fradius&#45;005Fresiduals&#45;00BB" class="node">
+<title>«fluid.axisymmetric_swirl.squared_radius_residuals»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;002Esquared&#45;005Fradius&#45;005Fresiduals&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric_swirl___squared_radius_residuals_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="520.5,-195.2 397.5,-195.2 397.5,-159.2 520.5,-159.2 520.5,-195.2"/>
+<text text-anchor="middle" x="459" y="-180.2" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric_swirl</text>
+<text text-anchor="middle" x="459" y="-169.2" font-family="Helvetica" font-size="10.00" fill="#ffffff">squared_radius_residuals</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric_swirl.reduced_system»&#45;&gt;«fluid.axisymmetric_swirl.squared_radius_residuals» -->
+<g id="edge5" class="edge">
+<title>«fluid.axisymmetric_swirl.reduced_system»&#45;&gt;«fluid.axisymmetric_swirl.squared_radius_residuals»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M458.45,-366.47C479.5,-345.3 512.72,-307.28 526,-266.79 531.48,-250.07 533.97,-242.89 526,-227.2 520.17,-215.71 510.25,-206.27 499.79,-198.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="494.64,-195.37 501.12,-196.49 497.18,-196.97 499.67,-198.65 499.61,-198.73 499.55,-198.81 497.07,-197.13 498.1,-200.97 494.64,-195.37 494.64,-195.37"/>
+</g>
+<!-- «fluid.axisymmetric_swirl.squared_radius_residuals»&#45;&gt;«fluid.axisymmetric_swirl.vorticity_transport» -->
+<g id="edge1" class="edge">
+<title>«fluid.axisymmetric_swirl.squared_radius_residuals»&#45;&gt;«fluid.axisymmetric_swirl.vorticity_transport»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M459,-159.09C459,-151.46 459,-142.32 459,-133.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="459,-127.66 461.7,-133.66 459.1,-130.66 459.1,-133.66 459,-133.66 458.9,-133.66 458.9,-130.66 456.3,-133.66 459,-127.66 459,-127.66"/>
+</g>
+<!-- «fluid.axisymmetric_swirl.curl»&#45;&gt;«fluid.axisymmetric_swirl.squared_radius_residuals» -->
+<g id="edge6" class="edge">
+<title>«fluid.axisymmetric_swirl.curl»&#45;&gt;«fluid.axisymmetric_swirl.squared_radius_residuals»</title>
+<path fill="none" stroke="#6b7280" d="M450.78,-228.89C452.12,-220.6 453.76,-210.52 455.21,-201.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="456.19,-195.53 457.89,-201.89 455.71,-198.5 455.23,-201.46 455.23,-201.46 455.23,-201.46 455.71,-198.5 452.56,-201.02 456.19,-195.53 456.19,-195.53"/>
+</g>
+</g>
+</svg>

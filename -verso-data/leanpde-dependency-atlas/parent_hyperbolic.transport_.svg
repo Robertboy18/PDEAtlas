@@ -1,0 +1,212 @@
+<svg data-node-count="12" data-edge-count="15" data-cluster-count="1" data-variant-key="parent:«hyperbolic.transport»" width="717pt" height="378pt"
+ viewBox="0.00 0.00 717.00 378.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 374.2)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-374.2 713,-374.2 713,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 689,-8 689,-8 695,-8 701,-14 701,-20 701,-20 701,-350.2 701,-350.2 701,-356.2 695,-362.2 689,-362.2 689,-362.2 20,-362.2 20,-362.2 14,-362.2 8,-356.2 8,-350.2 8,-350.2 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="354.5" y="-347" font-family="Helvetica" font-size="14.00">Transport and characteristics</text>
+</g>
+<!-- «hyperbolic.transport.operator_coordinates» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eoperator&#45;005Fcoordinates&#45;00BB" class="node">
+<title>«hyperbolic.transport.operator_coordinates»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eoperator&#45;005Fcoordinates&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___operator_coordinates_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="428" cy="-243.4" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="428" y="-246.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport</text>
+<text text-anchor="middle" x="428" y="-235.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">operator_coordinates</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.characteristic_chain_rule» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Echaracteristic&#45;005Fchain&#45;005Frule&#45;00BB" class="node">
+<title>«hyperbolic.transport.characteristic_chain_rule»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Echaracteristic&#45;005Fchain&#45;005Frule&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___characteristic_chain_rule_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="457" cy="-171.8" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="457" y="-174.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport</text>
+<text text-anchor="middle" x="457" y="-163.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">characteristic_chain_rule</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.operator_coordinates»&#45;&gt;«hyperbolic.transport.characteristic_chain_rule» -->
+<g id="edge11" class="edge">
+<title>«hyperbolic.transport.operator_coordinates»&#45;&gt;«hyperbolic.transport.characteristic_chain_rule»</title>
+<path fill="none" stroke="#6b7280" d="M435.92,-223.38C439.25,-215.4 443.16,-206.02 446.7,-197.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="449.09,-191.79 449.27,-198.37 447.93,-194.56 446.78,-197.33 446.78,-197.33 446.78,-197.33 447.93,-194.56 444.29,-196.29 449.09,-191.79 449.09,-191.79"/>
+</g>
+<!-- «hyperbolic.transport.formula_solves» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eformula&#45;005Fsolves&#45;00BB" class="node">
+<title>«hyperbolic.transport.formula_solves»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eformula&#45;005Fsolves&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___formula_solves_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="536" cy="-102" rx="67.5" ry="18"/>
+<text text-anchor="middle" x="536" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport.formula_solves</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.ivp» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eivp&#45;00BB" class="node">
+<title>«hyperbolic.transport.ivp»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eivp&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___ivp_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="302.5,-261.4 235.5,-261.4 235.5,-225.4 302.5,-225.4 302.5,-261.4"/>
+<text text-anchor="middle" x="269" y="-240.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport.ivp</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.problem_interface» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eproblem&#45;005Finterface&#45;00BB" class="node">
+<title>«hyperbolic.transport.problem_interface»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eproblem&#45;005Finterface&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___problem_interface_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="91" cy="-171.8" rx="74.75" ry="18"/>
+<text text-anchor="middle" x="91" y="-169.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport.problem_interface</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.ivp»&#45;&gt;«hyperbolic.transport.problem_interface» -->
+<g id="edge5" class="edge">
+<title>«hyperbolic.transport.ivp»&#45;&gt;«hyperbolic.transport.problem_interface»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M235.1,-229.14C206.42,-217.93 165.16,-201.8 134.13,-189.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="128.47,-187.45 135.04,-187.12 131.3,-188.45 134.09,-189.54 134.05,-189.63 134.02,-189.73 131.22,-188.63 133.07,-192.15 128.47,-187.45 128.47,-187.45"/>
+</g>
+<!-- «hyperbolic.transport.characteristic_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Echaracteristic&#45;005Fsolution&#45;00BB" class="node">
+<title>«hyperbolic.transport.characteristic_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Echaracteristic&#45;005Fsolution&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___characteristic_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="269" cy="-171.8" rx="77.56" ry="19.6"/>
+<text text-anchor="middle" x="269" y="-174.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport</text>
+<text text-anchor="middle" x="269" y="-163.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">characteristic_solution</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.ivp»&#45;&gt;«hyperbolic.transport.characteristic_solution» -->
+<g id="edge13" class="edge">
+<title>«hyperbolic.transport.ivp»&#45;&gt;«hyperbolic.transport.characteristic_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M269,-225.19C269,-216.95 269,-206.92 269,-197.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="269,-191.76 271.7,-197.76 269.1,-194.76 269.1,-197.76 269,-197.76 268.9,-197.76 268.9,-194.76 266.3,-197.76 269,-191.76 269,-191.76"/>
+</g>
+<!-- «hyperbolic.transport.problem_interface»&#45;&gt;«hyperbolic.transport.formula_solves» -->
+<g id="edge3" class="edge">
+<title>«hyperbolic.transport.problem_interface»&#45;&gt;«hyperbolic.transport.formula_solves»</title>
+<path fill="none" stroke="#6b7280" d="M143.43,-158.74C155.1,-156.3 167.44,-153.9 179,-152 301.29,-131.92 333.7,-140.01 456,-120 463.82,-118.72 472.02,-117.19 480.08,-115.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="486.21,-114.34 480.86,-118.18 483.27,-114.94 480.33,-115.53 480.33,-115.53 480.33,-115.53 483.27,-114.94 479.79,-112.89 486.21,-114.34 486.21,-114.34"/>
+</g>
+<!-- «hyperbolic.transport.representation» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Erepresentation&#45;00BB" class="node">
+<title>«hyperbolic.transport.representation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Erepresentation&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___representation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="378" cy="-102" rx="65.46" ry="18"/>
+<text text-anchor="middle" x="378" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport.representation</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.problem_interface»&#45;&gt;«hyperbolic.transport.representation» -->
+<g id="edge8" class="edge">
+<title>«hyperbolic.transport.problem_interface»&#45;&gt;«hyperbolic.transport.representation»</title>
+<path fill="none" stroke="#6b7280" d="M142.31,-158.68C193.54,-146.58 271.96,-128.05 324.09,-115.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="330,-114.34 324.78,-118.35 327.08,-115.03 324.16,-115.72 324.16,-115.72 324.16,-115.72 327.08,-115.03 323.54,-113.09 330,-114.34 330,-114.34"/>
+</g>
+<!-- «hyperbolic.transport.superposition» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Esuperposition&#45;00BB" class="node">
+<title>«hyperbolic.transport.superposition»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Esuperposition&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___superposition_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="91" cy="-102" rx="63.56" ry="18"/>
+<text text-anchor="middle" x="91" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport.superposition</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.problem_interface»&#45;&gt;«hyperbolic.transport.superposition» -->
+<g id="edge15" class="edge">
+<title>«hyperbolic.transport.problem_interface»&#45;&gt;«hyperbolic.transport.superposition»</title>
+<path fill="none" stroke="#6b7280" d="M91,-153.69C91,-145.4 91,-135.33 91,-126.35"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="91,-120.34 93.7,-126.34 91,-123.34 91,-126.34 91,-126.34 91,-126.34 91,-123.34 88.3,-126.34 91,-120.34 91,-120.34"/>
+</g>
+<!-- «hyperbolic.transport.uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Euniqueness&#45;00BB" class="node">
+<title>«hyperbolic.transport.uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Euniqueness&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="504" cy="-34" rx="58.35" ry="18"/>
+<text text-anchor="middle" x="504" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport.uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.representation»&#45;&gt;«hyperbolic.transport.uniqueness» -->
+<g id="edge6" class="edge">
+<title>«hyperbolic.transport.representation»&#45;&gt;«hyperbolic.transport.uniqueness»</title>
+<path fill="none" stroke="#6b7280" d="M406.91,-85.86C425.77,-75.98 450.46,-63.04 470.23,-52.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="475.66,-49.84 471.6,-55.02 473,-51.24 470.35,-52.63 470.35,-52.63 470.35,-52.63 473,-51.24 469.09,-50.24 475.66,-49.84 475.66,-49.84"/>
+</g>
+<!-- «hyperbolic.transport.characteristic_chain_rule»&#45;&gt;«hyperbolic.transport.representation» -->
+<g id="edge9" class="edge">
+<title>«hyperbolic.transport.characteristic_chain_rule»&#45;&gt;«hyperbolic.transport.representation»</title>
+<path fill="none" stroke="#6b7280" d="M435.41,-152.27C425.03,-143.36 412.56,-132.66 401.9,-123.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="397.14,-119.42 403.45,-121.28 399.41,-121.38 401.69,-123.33 401.69,-123.33 401.69,-123.33 399.41,-121.38 399.93,-125.38 397.14,-119.42 397.14,-119.42"/>
+</g>
+<!-- «hyperbolic.transport.characteristic» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Echaracteristic&#45;00BB" class="node">
+<title>«hyperbolic.transport.characteristic»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Echaracteristic&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___characteristic_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="638,-261.4 526,-261.4 526,-225.4 638,-225.4 638,-261.4"/>
+<text text-anchor="middle" x="582" y="-240.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport.characteristic</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.characteristic»&#45;&gt;«hyperbolic.transport.characteristic_chain_rule» -->
+<g id="edge10" class="edge">
+<title>«hyperbolic.transport.characteristic»&#45;&gt;«hyperbolic.transport.characteristic_chain_rule»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M551.42,-225.37C534.13,-215.74 512.38,-203.63 494.12,-193.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="488.57,-190.38 495.12,-190.94 491.24,-191.75 493.86,-193.21 493.81,-193.29 493.76,-193.38 491.14,-191.92 492.5,-195.65 488.57,-190.38 488.57,-190.38"/>
+</g>
+<!-- «hyperbolic.transport.solution_formula» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Esolution&#45;005Fformula&#45;00BB" class="node">
+<title>«hyperbolic.transport.solution_formula»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Esolution&#45;005Fformula&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___solution_formula_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="692.5,-189.8 567.5,-189.8 567.5,-153.8 692.5,-153.8 692.5,-189.8"/>
+<text text-anchor="middle" x="630" y="-169.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport.solution_formula</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.characteristic»&#45;&gt;«hyperbolic.transport.solution_formula» -->
+<g id="edge14" class="edge">
+<title>«hyperbolic.transport.characteristic»&#45;&gt;«hyperbolic.transport.solution_formula»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M593.87,-225.19C600.2,-216.01 608.07,-204.6 614.84,-194.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="618.27,-189.81 617.09,-196.28 616.65,-192.33 614.95,-194.8 614.86,-194.74 614.78,-194.69 616.49,-192.22 612.64,-193.21 618.27,-189.81 618.27,-189.81"/>
+</g>
+<!-- «hyperbolic.transport.operator» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eoperator&#45;00BB" class="node">
+<title>«hyperbolic.transport.operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;002Eoperator&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___transport___operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="472.5,-331.2 383.5,-331.2 383.5,-295.2 472.5,-295.2 472.5,-331.2"/>
+<text text-anchor="middle" x="428" y="-310.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport.operator</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport.operator»&#45;&gt;«hyperbolic.transport.operator_coordinates» -->
+<g id="edge1" class="edge">
+<title>«hyperbolic.transport.operator»&#45;&gt;«hyperbolic.transport.operator_coordinates»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M428,-295.09C428,-287.46 428,-278.32 428,-269.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="428,-263.66 430.7,-269.66 428.1,-266.66 428.1,-269.66 428,-269.66 427.9,-269.66 427.9,-266.66 425.3,-269.66 428,-263.66 428,-263.66"/>
+</g>
+<!-- «hyperbolic.transport.operator»&#45;&gt;«hyperbolic.transport.ivp» -->
+<g id="edge4" class="edge">
+<title>«hyperbolic.transport.operator»&#45;&gt;«hyperbolic.transport.ivp»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M387.88,-295.09C363.52,-284.7 332.56,-271.5 308.35,-261.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="302.66,-258.75 309.24,-258.62 305.46,-259.83 308.22,-261.01 308.18,-261.1 308.14,-261.19 305.38,-260.02 307.12,-263.59 302.66,-258.75 302.66,-258.75"/>
+</g>
+<!-- «hyperbolic.transport.operator»&#45;&gt;«hyperbolic.transport.characteristic» -->
+<g id="edge12" class="edge">
+<title>«hyperbolic.transport.operator»&#45;&gt;«hyperbolic.transport.characteristic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M466.86,-295.09C488.38,-285.61 515.22,-273.8 537.57,-263.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="543.15,-261.5 538.75,-266.39 540.45,-262.8 537.7,-264.01 537.66,-263.92 537.62,-263.83 540.37,-262.62 536.57,-261.45 543.15,-261.5 543.15,-261.5"/>
+</g>
+<!-- «hyperbolic.transport.solution_formula»&#45;&gt;«hyperbolic.transport.formula_solves» -->
+<g id="edge2" class="edge">
+<title>«hyperbolic.transport.solution_formula»&#45;&gt;«hyperbolic.transport.formula_solves»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M606.28,-153.69C593.2,-144.26 576.9,-132.5 563.3,-122.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="558.42,-119.17 564.86,-120.49 560.91,-120.84 563.34,-122.6 563.28,-122.68 563.23,-122.76 560.79,-121.01 561.71,-124.87 558.42,-119.17 558.42,-119.17"/>
+</g>
+<!-- «hyperbolic.transport.solution_formula»&#45;&gt;«hyperbolic.transport.uniqueness» -->
+<g id="edge7" class="edge">
+<title>«hyperbolic.transport.solution_formula»&#45;&gt;«hyperbolic.transport.uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M631.78,-153.59C632.8,-134.58 631.52,-104.03 616,-84 601.62,-65.44 578.76,-53.78 557.43,-46.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="551.47,-44.57 558.01,-43.85 554.35,-45.4 557.21,-46.33 557.17,-46.42 557.14,-46.52 554.29,-45.59 556.34,-48.99 551.47,-44.57 551.47,-44.57"/>
+</g>
+</g>
+</svg>

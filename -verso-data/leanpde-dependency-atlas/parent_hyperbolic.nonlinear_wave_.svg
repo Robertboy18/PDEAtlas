@@ -1,0 +1,357 @@
+<svg data-node-count="22" data-edge-count="23" data-cluster-count="1" data-variant-key="parent:«hyperbolic.nonlinear_wave»" width="1679pt" height="382pt"
+ viewBox="0.00 0.00 1679.00 381.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 377.79)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-377.79 1675,-377.79 1675,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1651,-8 1651,-8 1657,-8 1663,-14 1663,-20 1663,-20 1663,-353.79 1663,-353.79 1663,-359.79 1657,-365.79 1651,-365.79 1651,-365.79 20,-365.79 20,-365.79 14,-365.79 8,-359.79 8,-353.79 8,-353.79 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="835.5" y="-350.59" font-family="Helvetica" font-size="14.00">Semilinear wave equations</text>
+</g>
+<!-- «hyperbolic.semiwave.operator» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eoperator&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eoperator&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="679,-334.79 585,-334.79 585,-298.79 679,-298.79 679,-334.79"/>
+<text text-anchor="middle" x="632" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.operator</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.negative_energy_riccati_horizon» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Enegative&#45;005Fenergy&#45;005Friccati&#45;005Fhorizon&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.negative_energy_riccati_horizon»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Enegative&#45;005Fenergy&#45;005Friccati&#45;005Fhorizon&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___negative_energy_riccati_horizon_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="123" cy="-178.99" rx="106.55" ry="19.6"/>
+<text text-anchor="middle" x="123" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="123" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">negative_energy_riccati_horizon</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.operator»&#45;&gt;«hyperbolic.semiwave.negative_energy_riccati_horizon» -->
+<g id="edge5" class="edge">
+<title>«hyperbolic.semiwave.operator»&#45;&gt;«hyperbolic.semiwave.negative_energy_riccati_horizon»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M584.69,-302.06C580.74,-300.94 576.8,-299.84 573,-298.79 436.9,-261.23 276.94,-219.6 189.1,-196.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="183.17,-195.42 189.65,-194.3 186.1,-196.07 189,-196.82 188.98,-196.92 188.95,-197.02 186.05,-196.27 188.3,-199.53 183.17,-195.42 183.17,-195.42"/>
+</g>
+<!-- «hyperbolic.semiwave.global_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eglobal&#45;005Fenergy&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.global_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eglobal&#45;005Fenergy&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___global_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="667,-266.79 549,-266.79 549,-230.79 667,-230.79 667,-266.79"/>
+<text text-anchor="middle" x="608" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.global_energy</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.operator»&#45;&gt;«hyperbolic.semiwave.global_energy» -->
+<g id="edge7" class="edge">
+<title>«hyperbolic.semiwave.operator»&#45;&gt;«hyperbolic.semiwave.global_energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M625.69,-298.45C622.91,-290.78 619.58,-281.65 616.57,-273.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="614.35,-267.25 618.93,-271.96 615.47,-270.03 616.49,-272.85 616.4,-272.89 616.3,-272.92 615.28,-270.1 613.86,-273.81 614.35,-267.25 614.35,-267.25"/>
+</g>
+<!-- «hyperbolic.semiwave.local_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Elocal&#45;005Fenergy&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.local_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Elocal&#45;005Fenergy&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___local_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="838" cy="-248.79" rx="64.19" ry="18"/>
+<text text-anchor="middle" x="838" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.local_energy</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.operator»&#45;&gt;«hyperbolic.semiwave.local_energy» -->
+<g id="edge21" class="edge">
+<title>«hyperbolic.semiwave.operator»&#45;&gt;«hyperbolic.semiwave.local_energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M679,-300.73C712.65,-289.95 757.76,-275.5 791.33,-264.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="797.46,-262.78 792.57,-267.19 794.63,-263.79 791.77,-264.71 791.74,-264.61 791.71,-264.52 794.57,-263.6 790.92,-262.04 797.46,-262.78 797.46,-262.78"/>
+</g>
+<!-- «hyperbolic.semiwave.uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Euniqueness&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Euniqueness&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1062" cy="-107.4" rx="61.02" ry="18"/>
+<text text-anchor="middle" x="1062" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.quadratic_lower_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Equadratic&#45;005Flower&#45;005Fenergy&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.quadratic_lower_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Equadratic&#45;005Flower&#45;005Fenergy&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___quadratic_lower_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="838" cy="-178.99" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="838" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="838" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">quadratic_lower_energy</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.transport» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Etransport&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.transport»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Etransport&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___transport_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1600" cy="-178.99" rx="55.04" ry="18"/>
+<text text-anchor="middle" x="1600" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.transport</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.cone_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Econe&#45;005Funiqueness&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.cone_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Econe&#45;005Funiqueness&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___cone_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1400" cy="-107.4" rx="76.02" ry="18"/>
+<text text-anchor="middle" x="1400" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.cone_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.transport»&#45;&gt;«hyperbolic.semiwave.cone_uniqueness» -->
+<g id="edge15" class="edge">
+<title>«hyperbolic.semiwave.transport»&#45;&gt;«hyperbolic.semiwave.cone_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1563.78,-165.39C1531.11,-154.02 1482.86,-137.23 1447.18,-124.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1441.12,-122.71 1447.68,-122.13 1443.99,-123.6 1446.82,-124.58 1446.79,-124.68 1446.76,-124.77 1443.92,-123.79 1445.9,-127.23 1441.12,-122.71 1441.12,-122.71"/>
+</g>
+<!-- «hyperbolic.semiwave.finite_propagation» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Efinite&#45;005Fpropagation&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.finite_propagation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Efinite&#45;005Fpropagation&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___finite_propagation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1578" cy="-107.4" rx="76.65" ry="18"/>
+<text text-anchor="middle" x="1578" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.finite_propagation</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.transport»&#45;&gt;«hyperbolic.semiwave.finite_propagation» -->
+<g id="edge16" class="edge">
+<title>«hyperbolic.semiwave.transport»&#45;&gt;«hyperbolic.semiwave.finite_propagation»</title>
+<path fill="none" stroke="#6b7280" d="M1594.56,-160.79C1591.74,-151.86 1588.25,-140.82 1585.2,-131.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1583.38,-125.4 1587.76,-130.31 1584.28,-128.26 1585.18,-131.12 1585.18,-131.12 1585.18,-131.12 1584.28,-128.26 1582.61,-131.94 1583.38,-125.4 1583.38,-125.4"/>
+</g>
+<!-- «hyperbolic.semiwave.negative_energy_lifespan» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Enegative&#45;005Fenergy&#45;005Flifespan&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.negative_energy_lifespan»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Enegative&#45;005Fenergy&#45;005Flifespan&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___negative_energy_lifespan_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="422" cy="-107.4" rx="86.03" ry="19.6"/>
+<text text-anchor="middle" x="422" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="422" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">negative_energy_lifespan</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.negative_energy_riccati_horizon»&#45;&gt;«hyperbolic.semiwave.negative_energy_lifespan» -->
+<g id="edge12" class="edge">
+<title>«hyperbolic.semiwave.negative_energy_riccati_horizon»&#45;&gt;«hyperbolic.semiwave.negative_energy_lifespan»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M187.14,-163.06C237.43,-151.36 307.11,-135.14 357.49,-123.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="363.54,-122 358.31,-126 360.64,-122.78 357.72,-123.46 357.69,-123.37 357.67,-123.27 360.59,-122.59 357.08,-120.74 363.54,-122 363.54,-122"/>
+</g>
+<!-- «hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.quadratic_lower_energy» -->
+<g id="edge2" class="edge">
+<title>«hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.quadratic_lower_energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M665.74,-230.77C701.34,-220.28 746.77,-206.89 782.03,-196.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="788.05,-194.72 783.05,-199.01 785.2,-195.66 782.32,-196.51 782.29,-196.42 782.26,-196.32 785.14,-195.47 781.53,-193.83 788.05,-194.72 788.05,-194.72"/>
+</g>
+<!-- «hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.negative_energy_riccati_horizon» -->
+<g id="edge6" class="edge">
+<title>«hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.negative_energy_riccati_horizon»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M548.84,-240.26C476.59,-230.96 350.72,-214.46 243,-198.79 231.54,-197.13 219.47,-195.31 207.59,-193.48"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="201.39,-192.53 207.73,-190.77 204.37,-192.89 207.34,-193.34 207.32,-193.44 207.31,-193.54 204.34,-193.08 206.91,-196.11 201.39,-192.53 201.39,-192.53"/>
+</g>
+<!-- «hyperbolic.semiwave.compact_slice_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Ecompact&#45;005Fslice&#45;005Fenergy&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.compact_slice_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Ecompact&#45;005Fslice&#45;005Fenergy&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___compact_slice_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="333" cy="-178.99" rx="77.56" ry="19.6"/>
+<text text-anchor="middle" x="333" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="333" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">compact_slice_energy</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.compact_slice_energy» -->
+<g id="edge13" class="edge">
+<title>«hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.compact_slice_energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M548.67,-233.17C502.64,-221.82 439.1,-206.15 392.92,-194.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="387.1,-193.33 393.57,-192.15 390.03,-193.95 392.94,-194.67 392.92,-194.77 392.9,-194.87 389.98,-194.15 392.27,-197.39 387.1,-193.33 387.1,-193.33"/>
+</g>
+<!-- «hyperbolic.semiwave.global_energy_conservation» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eglobal&#45;005Fenergy&#45;005Fconservation&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.global_energy_conservation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eglobal&#45;005Fenergy&#45;005Fconservation&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___global_energy_conservation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1259" cy="-178.99" rx="94.09" ry="19.6"/>
+<text text-anchor="middle" x="1259" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="1259" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">global_energy_conservation</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.global_energy_conservation» -->
+<g id="edge19" class="edge">
+<title>«hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.global_energy_conservation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M667.17,-240.81C695.54,-237.57 730.01,-233.78 761,-230.79 934.55,-214.05 979.06,-221.01 1152,-198.79 1162.81,-197.4 1174.2,-195.68 1185.34,-193.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1191.51,-192.83 1186.03,-196.48 1188.56,-193.42 1185.6,-193.91 1185.59,-193.81 1185.57,-193.71 1188.53,-193.22 1185.14,-191.15 1191.51,-192.83 1191.51,-192.83"/>
+</g>
+<!-- «hyperbolic.semiwave.continuous_reaction_energy_low_dimensions» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Econtinuous&#45;005Freaction&#45;005Fenergy&#45;005Flow&#45;005Fdimensions&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.continuous_reaction_energy_low_dimensions»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Econtinuous&#45;005Freaction&#45;005Fenergy&#45;005Flow&#45;005Fdimensions&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___continuous_reaction_energy_low_dimensions_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="584" cy="-178.99" rx="147.57" ry="19.6"/>
+<text text-anchor="middle" x="584" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="584" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">continuous_reaction_energy_low_dimensions</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.continuous_reaction_energy_low_dimensions» -->
+<g id="edge22" class="edge">
+<title>«hyperbolic.semiwave.global_energy»&#45;&gt;«hyperbolic.semiwave.continuous_reaction_energy_low_dimensions»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M601.94,-230.69C599.19,-222.91 595.88,-213.55 592.85,-205.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="590.82,-199.25 595.36,-204.01 591.91,-202.05 592.91,-204.88 592.82,-204.91 592.73,-204.94 591.72,-202.11 590.27,-205.81 590.82,-199.25 590.82,-199.25"/>
+</g>
+<!-- «hyperbolic.semiwave.classical_cauchy» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eclassical&#45;005Fcauchy&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.classical_cauchy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eclassical&#45;005Fcauchy&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___classical_cauchy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="91" cy="-248.79" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="91" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.classical_cauchy</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.exponential_stability» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eexponential&#45;005Fstability&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.exponential_stability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eexponential&#45;005Fstability&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___exponential_stability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1449" cy="-178.99" rx="71.34" ry="19.6"/>
+<text text-anchor="middle" x="1449" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="1449" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">exponential_stability</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.exponential_stability»&#45;&gt;«hyperbolic.semiwave.uniqueness» -->
+<g id="edge1" class="edge">
+<title>«hyperbolic.semiwave.exponential_stability»&#45;&gt;«hyperbolic.semiwave.uniqueness»</title>
+<path fill="none" stroke="#6b7280" d="M1396.45,-165.39C1386.37,-163.17 1375.88,-161 1366,-159.2 1264.47,-140.67 1237.28,-147.04 1136,-127.2 1128.02,-125.63 1119.61,-123.74 1111.44,-121.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1105.25,-120.24 1111.72,-119.05 1108.17,-120.95 1111.08,-121.67 1111.08,-121.67 1111.08,-121.67 1108.17,-120.95 1110.43,-124.29 1105.25,-120.24 1105.25,-120.24"/>
+</g>
+<!-- «hyperbolic.semiwave.coercive_stability» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Ecoercive&#45;005Fstability&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.coercive_stability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Ecoercive&#45;005Fstability&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___coercive_stability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1224" cy="-107.4" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="1224" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.coercive_stability</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.exponential_stability»&#45;&gt;«hyperbolic.semiwave.coercive_stability» -->
+<g id="edge17" class="edge">
+<title>«hyperbolic.semiwave.exponential_stability»&#45;&gt;«hyperbolic.semiwave.coercive_stability»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1402.92,-163.74C1365.46,-152.15 1312.68,-135.83 1274.16,-123.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1268.1,-122.04 1274.63,-121.23 1271.07,-122.59 1273.93,-123.48 1273.83,-123.81 1273.73,-124.15 1270.86,-123.26 1273.03,-126.39 1268.1,-122.04 1268.1,-122.04"/>
+</g>
+<!-- «hyperbolic.semiwave.negative_energy_is_focusing» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Enegative&#45;005Fenergy&#45;005Fis&#45;005Ffocusing&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.negative_energy_is_focusing»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Enegative&#45;005Fenergy&#45;005Fis&#45;005Ffocusing&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___negative_energy_is_focusing_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1042" cy="-178.99" rx="97.66" ry="19.6"/>
+<text text-anchor="middle" x="1042" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="1042" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">negative_energy_is_focusing</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.negative_energy_is_focusing»&#45;&gt;«hyperbolic.semiwave.negative_energy_lifespan» -->
+<g id="edge11" class="edge">
+<title>«hyperbolic.semiwave.negative_energy_is_focusing»&#45;&gt;«hyperbolic.semiwave.negative_energy_lifespan»</title>
+<path fill="none" stroke="#6b7280" d="M971.69,-165.23C958.53,-163.05 944.86,-160.93 932,-159.2 783.73,-139.17 610.2,-123.53 508.57,-115.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="502.58,-114.67 508.79,-112.47 505.57,-114.92 508.56,-115.16 508.56,-115.16 508.56,-115.16 505.57,-114.92 508.34,-117.85 502.58,-114.67 502.58,-114.67"/>
+</g>
+<!-- «hyperbolic.semiwave.negative_energy_global_obstruction» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Enegative&#45;005Fenergy&#45;005Fglobal&#45;005Fobstruction&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.negative_energy_global_obstruction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Enegative&#45;005Fenergy&#45;005Fglobal&#45;005Fobstruction&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___negative_energy_global_obstruction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="422" cy="-35.8" rx="118.17" ry="19.6"/>
+<text text-anchor="middle" x="422" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="422" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">negative_energy_global_obstruction</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.negative_energy_lifespan»&#45;&gt;«hyperbolic.semiwave.negative_energy_global_obstruction» -->
+<g id="edge10" class="edge">
+<title>«hyperbolic.semiwave.negative_energy_lifespan»&#45;&gt;«hyperbolic.semiwave.negative_energy_global_obstruction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M422,-87.38C422,-79.55 422,-70.38 422,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="422,-55.79 424.7,-61.79 422.35,-58.79 422.35,-61.79 422,-61.79 421.65,-61.79 421.65,-58.79 419.3,-61.79 422,-55.79 422,-55.79"/>
+</g>
+<!-- «hyperbolic.semiwave.whole_space_cauchy» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Ewhole&#45;005Fspace&#45;005Fcauchy&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.whole_space_cauchy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Ewhole&#45;005Fspace&#45;005Fcauchy&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___whole_space_cauchy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="474" cy="-316.79" rx="86.44" ry="18"/>
+<text text-anchor="middle" x="474" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.whole_space_cauchy</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.global_energy_bounds» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eglobal&#45;005Fenergy&#45;005Fbounds&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.global_energy_bounds»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eglobal&#45;005Fenergy&#45;005Fbounds&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___global_energy_bounds_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="899" cy="-107.4" rx="77.15" ry="19.6"/>
+<text text-anchor="middle" x="899" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave</text>
+<text text-anchor="middle" x="899" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">global_energy_bounds</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.global_energy_conservation»&#45;&gt;«hyperbolic.semiwave.global_energy_bounds» -->
+<g id="edge20" class="edge">
+<title>«hyperbolic.semiwave.global_energy_conservation»&#45;&gt;«hyperbolic.semiwave.global_energy_bounds»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1189.86,-165.48C1135.05,-155.46 1056.54,-140.86 988,-127.2 979.69,-125.54 970.96,-123.75 962.35,-121.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="956.41,-120.72 962.84,-119.31 959.42,-120.99 962.36,-121.61 962.29,-121.95 962.21,-122.29 959.28,-121.68 961.73,-124.59 956.41,-120.72 956.41,-120.72"/>
+</g>
+<!-- «hyperbolic.semiwave.maximal_smooth_wave» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Emaximal&#45;005Fsmooth&#45;005Fwave&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.maximal_smooth_wave»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Emaximal&#45;005Fsmooth&#45;005Fwave&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___maximal_smooth_wave_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="272" cy="-316.79" rx="90.51" ry="18"/>
+<text text-anchor="middle" x="272" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.maximal_smooth_wave</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.quadratic_lower_energy» -->
+<g id="edge3" class="edge">
+<title>«hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.quadratic_lower_energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M838,-230.69C838,-223.06 838,-213.91 838,-205.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="838,-199.25 840.7,-205.25 838.1,-202.25 838.1,-205.25 838,-205.25 837.9,-205.25 837.9,-202.25 835.3,-205.25 838,-199.25 838,-199.25"/>
+</g>
+<!-- «hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.transport» -->
+<g id="edge4" class="edge">
+<title>«hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.transport»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M902.25,-247.6C1025.49,-246.29 1303.29,-238.69 1533,-198.79 1540.59,-197.48 1548.55,-195.65 1556.23,-193.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1562.04,-192.09 1556.95,-196.25 1559.24,-193.2 1556.34,-193.98 1556.25,-193.64 1556.16,-193.31 1559.05,-192.53 1555.55,-191.04 1562.04,-192.09 1562.04,-192.09"/>
+</g>
+<!-- «hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.exponential_stability» -->
+<g id="edge9" class="edge">
+<title>«hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.exponential_stability»</title>
+<path fill="none" stroke="#6b7280" d="M900.51,-244.63C999.68,-239.03 1198.94,-225.35 1366,-198.79 1374.14,-197.5 1382.67,-195.88 1391.04,-194.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1397.4,-192.77 1392.09,-196.67 1394.47,-193.4 1391.53,-194.03 1391.53,-194.03 1391.53,-194.03 1394.47,-193.4 1390.97,-191.39 1397.4,-192.77 1397.4,-192.77"/>
+</g>
+<!-- «hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.compact_slice_energy» -->
+<g id="edge14" class="edge">
+<title>«hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.compact_slice_energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M779.32,-241.48C681.93,-230.89 490.98,-209.66 424,-198.79 414.99,-197.33 405.51,-195.6 396.22,-193.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="390.14,-192.58 396.55,-191.1 393.1,-193.07 396.05,-193.65 396.03,-193.75 396.01,-193.84 393.07,-193.26 395.5,-196.39 390.14,-192.58 390.14,-192.58"/>
+</g>
+<!-- «hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.global_energy_conservation» -->
+<g id="edge18" class="edge">
+<title>«hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.global_energy_conservation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M893.07,-239.53C955.81,-230.03 1061.37,-213.82 1152,-198.79 1162.11,-197.12 1172.75,-195.31 1183.24,-193.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1189.39,-192.42 1183.94,-196.11 1186.49,-193.28 1183.54,-193.79 1183.48,-193.45 1183.42,-193.1 1186.37,-192.59 1183.02,-190.79 1189.39,-192.42 1189.39,-192.42"/>
+</g>
+<!-- «hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.continuous_reaction_energy_low_dimensions» -->
+<g id="edge23" class="edge">
+<title>«hyperbolic.semiwave.local_energy»&#45;&gt;«hyperbolic.semiwave.continuous_reaction_energy_low_dimensions»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M793.17,-235.83C754.47,-225.5 697.91,-210.4 653.36,-198.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="647.43,-196.93 653.93,-195.87 650.36,-197.6 653.26,-198.38 653.23,-198.47 653.21,-198.57 650.31,-197.8 652.54,-201.08 647.43,-196.93 647.43,-196.93"/>
+</g>
+<!-- «hyperbolic.semiwave.classical_strip» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eclassical&#45;005Fstrip&#45;00BB" class="node">
+<title>«hyperbolic.semiwave.classical_strip»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esemiwave&#45;002Eclassical&#45;005Fstrip&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___semiwave___classical_strip_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="88" cy="-316.79" rx="68.77" ry="18"/>
+<text text-anchor="middle" x="88" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">semiwave.classical_strip</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.semiwave.classical_strip»&#45;&gt;«hyperbolic.semiwave.classical_cauchy» -->
+<g id="edge8" class="edge">
+<title>«hyperbolic.semiwave.classical_strip»&#45;&gt;«hyperbolic.semiwave.classical_cauchy»</title>
+<path fill="none" stroke="#6b7280" d="M88.79,-298.45C89.14,-290.78 89.55,-281.65 89.93,-273.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="90.21,-267.25 92.63,-273.36 90.07,-270.24 89.93,-273.24 89.93,-273.24 89.93,-273.24 90.07,-270.24 87.24,-273.12 90.21,-267.25 90.21,-267.25"/>
+</g>
+</g>
+</svg>

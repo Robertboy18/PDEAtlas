@@ -1,0 +1,65 @@
+<svg data-node-count="4" data-edge-count="3" data-cluster-count="1" data-variant-key="parent:«fluid.steady_stokes»" width="206pt" height="303pt"
+ viewBox="0.00 0.00 206.00 303.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 299)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-299 202,-299 202,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 178,-8 178,-8 184,-8 190,-14 190,-20 190,-20 190,-275 190,-275 190,-281 184,-287 178,-287 178,-287 20,-287 20,-287 14,-287 8,-281 8,-275 8,-275 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="99" y="-271.8" font-family="Helvetica" font-size="14.00">The steady Stokes problem</text>
+</g>
+<!-- «fluid.steady_stokes.energy» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;002Eenergy&#45;00BB" class="node">
+<title>«fluid.steady_stokes.energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;002Eenergy&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___steady_stokes___energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="153,-256 45,-256 45,-220 153,-220 153,-256"/>
+<text text-anchor="middle" x="99" y="-235.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">steady_stokes.energy</text>
+</a>
+</g>
+</g>
+<!-- «fluid.steady_stokes.minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;002Eminimizer&#45;00BB" class="node">
+<title>«fluid.steady_stokes.minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;002Eminimizer&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___steady_stokes___minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="99" cy="-170" rx="68.13" ry="18"/>
+<text text-anchor="middle" x="99" y="-167.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">steady_stokes.minimizer</text>
+</a>
+</g>
+</g>
+<!-- «fluid.steady_stokes.energy»&#45;&gt;«fluid.steady_stokes.minimizer» -->
+<g id="edge2" class="edge">
+<title>«fluid.steady_stokes.energy»&#45;&gt;«fluid.steady_stokes.minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M99,-219.66C99,-211.99 99,-202.85 99,-194.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="99,-188.45 101.7,-194.45 99.1,-191.45 99.1,-194.45 99,-194.45 98.9,-194.45 98.9,-191.45 96.3,-194.45 99,-188.45 99,-188.45"/>
+</g>
+<!-- «fluid.steady_stokes.regularity» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;002Eregularity&#45;00BB" class="node">
+<title>«fluid.steady_stokes.regularity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;002Eregularity&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___steady_stokes___regularity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="99" cy="-102" rx="66.87" ry="18"/>
+<text text-anchor="middle" x="99" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">steady_stokes.regularity</text>
+</a>
+</g>
+</g>
+<!-- «fluid.steady_stokes.pressure» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;002Epressure&#45;00BB" class="node">
+<title>«fluid.steady_stokes.pressure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;002Epressure&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___steady_stokes___pressure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="99" cy="-34" rx="65.6" ry="18"/>
+<text text-anchor="middle" x="99" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">steady_stokes.pressure</text>
+</a>
+</g>
+</g>
+<!-- «fluid.steady_stokes.regularity»&#45;&gt;«fluid.steady_stokes.pressure» -->
+<g id="edge3" class="edge">
+<title>«fluid.steady_stokes.regularity»&#45;&gt;«fluid.steady_stokes.pressure»</title>
+<path fill="none" stroke="#6b7280" d="M99,-83.66C99,-75.99 99,-66.85 99,-58.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="99,-52.45 101.7,-58.45 99,-55.45 99,-58.45 99,-58.45 99,-58.45 99,-55.45 96.3,-58.45 99,-52.45 99,-52.45"/>
+</g>
+<!-- «fluid.steady_stokes.minimizer»&#45;&gt;«fluid.steady_stokes.regularity» -->
+<g id="edge1" class="edge">
+<title>«fluid.steady_stokes.minimizer»&#45;&gt;«fluid.steady_stokes.regularity»</title>
+<path fill="none" stroke="#6b7280" d="M99,-151.66C99,-143.99 99,-134.85 99,-126.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="99,-120.45 101.7,-126.45 99,-123.45 99,-126.45 99,-126.45 99,-126.45 99,-123.45 96.3,-126.45 99,-120.45 99,-120.45"/>
+</g>
+</g>
+</svg>

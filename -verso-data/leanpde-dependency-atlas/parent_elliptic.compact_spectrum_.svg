@@ -1,0 +1,52 @@
+<svg data-node-count="3" data-edge-count="2" data-cluster-count="1" data-variant-key="parent:«elliptic.compact_spectrum»" width="235pt" height="242pt"
+ viewBox="0.00 0.00 235.00 242.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 238.2)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-238.2 231,-238.2 231,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 207,-8 207,-8 213,-8 219,-14 219,-20 219,-20 219,-214.2 219,-214.2 219,-220.2 213,-226.2 207,-226.2 207,-226.2 20,-226.2 20,-226.2 14,-226.2 8,-220.2 8,-214.2 8,-214.2 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="113.5" y="-211" font-family="Helvetica" font-size="14.00">Spectrum of a compact operator</text>
+</g>
+<!-- «analysis.compact_spectrum.countable» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Ecompact&#45;005Fspectrum&#45;002Ecountable&#45;00BB" class="node">
+<title>«analysis.compact_spectrum.countable»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Ecompact&#45;005Fspectrum&#45;002Ecountable&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_analysis___compact_spectrum___countable_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="113" cy="-34" rx="79.96" ry="18"/>
+<text text-anchor="middle" x="113" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">compact_spectrum.countable</text>
+</a>
+</g>
+</g>
+<!-- «analysis.compact_spectrum.accumulation» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Ecompact&#45;005Fspectrum&#45;002Eaccumulation&#45;00BB" class="node">
+<title>«analysis.compact_spectrum.accumulation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Ecompact&#45;005Fspectrum&#45;002Eaccumulation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_analysis___compact_spectrum___accumulation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="113" cy="-175.4" rx="67.76" ry="19.6"/>
+<text text-anchor="middle" x="113" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">compact_spectrum</text>
+<text text-anchor="middle" x="113" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">accumulation</text>
+</a>
+</g>
+</g>
+<!-- «analysis.compact_spectrum.finite_away_zero» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Ecompact&#45;005Fspectrum&#45;002Efinite&#45;005Faway&#45;005Fzero&#45;00BB" class="node">
+<title>«analysis.compact_spectrum.finite_away_zero»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Ecompact&#45;005Fspectrum&#45;002Efinite&#45;005Faway&#45;005Fzero&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_analysis___compact_spectrum___finite_away_zero_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="113" cy="-103.8" rx="67.76" ry="19.6"/>
+<text text-anchor="middle" x="113" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">compact_spectrum</text>
+<text text-anchor="middle" x="113" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">finite_away_zero</text>
+</a>
+</g>
+</g>
+<!-- «analysis.compact_spectrum.accumulation»&#45;&gt;«analysis.compact_spectrum.finite_away_zero» -->
+<g id="edge2" class="edge">
+<title>«analysis.compact_spectrum.accumulation»&#45;&gt;«analysis.compact_spectrum.finite_away_zero»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M113,-155.38C113,-147.55 113,-138.38 113,-130"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="113,-123.79 115.7,-129.79 113.35,-126.79 113.35,-129.79 113,-129.79 112.65,-129.79 112.65,-126.79 110.3,-129.79 113,-123.79 113,-123.79"/>
+</g>
+<!-- «analysis.compact_spectrum.finite_away_zero»&#45;&gt;«analysis.compact_spectrum.countable» -->
+<g id="edge1" class="edge">
+<title>«analysis.compact_spectrum.finite_away_zero»&#45;&gt;«analysis.compact_spectrum.countable»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M113,-83.91C113,-76.04 113,-66.82 113,-58.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="113,-52.39 115.7,-58.39 113.35,-55.39 113.35,-58.39 113,-58.39 112.65,-58.39 112.65,-55.39 110.3,-58.39 113,-52.39 113,-52.39"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,464 @@
+<svg data-node-count="26" data-edge-count="35" data-cluster-count="1" data-variant-key="parent:«foundations.derivatives»" width="2012pt" height="382pt"
+ viewBox="0.00 0.00 2012.00 381.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 377.79)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-377.79 2008,-377.79 2008,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1984,-8 1984,-8 1990,-8 1996,-14 1996,-20 1996,-20 1996,-353.79 1996,-353.79 1996,-359.79 1990,-365.79 1984,-365.79 1984,-365.79 20,-365.79 20,-365.79 14,-365.79 8,-359.79 8,-353.79 8,-353.79 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="1002" y="-350.59" font-family="Helvetica" font-size="14.00">Differential operators</text>
+</g>
+<!-- «foundations.operators.fderiv_gradient_pairing» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Efderiv&#45;005Fgradient&#45;005Fpairing&#45;00BB" class="node">
+<title>«foundations.operators.fderiv_gradient_pairing»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Efderiv&#45;005Fgradient&#45;005Fpairing&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___fderiv_gradient_pairing_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1907" cy="-107.4" rx="77.56" ry="19.6"/>
+<text text-anchor="middle" x="1907" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators</text>
+<text text-anchor="middle" x="1907" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">fderiv_gradient_pairing</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.germ_locality» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Egerm&#45;005Flocality&#45;00BB" class="node">
+<title>«foundations.derivatives.germ_locality»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Egerm&#45;005Flocality&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___germ_locality_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="933" cy="-248.79" rx="67.5" ry="18"/>
+<text text-anchor="middle" x="933" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives.germ_locality</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.laplacian_locality» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Flocality&#45;00BB" class="node">
+<title>«foundations.operators.laplacian_locality»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Flocality&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___laplacian_locality_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="933" cy="-178.99" rx="74.11" ry="18"/>
+<text text-anchor="middle" x="933" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.laplacian_locality</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.germ_locality»&#45;&gt;«foundations.operators.laplacian_locality» -->
+<g id="edge32" class="edge">
+<title>«foundations.derivatives.germ_locality»&#45;&gt;«foundations.operators.laplacian_locality»</title>
+<path fill="none" stroke="#6b7280" d="M933,-230.69C933,-222.4 933,-212.32 933,-203.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="933,-197.33 935.7,-203.33 933,-200.33 933,-203.33 933,-203.33 933,-203.33 933,-200.33 930.3,-203.33 933,-197.33 933,-197.33"/>
+</g>
+<!-- «foundations.operators.gradient_agreement» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Egradient&#45;005Fagreement&#45;00BB" class="node">
+<title>«foundations.operators.gradient_agreement»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Egradient&#45;005Fagreement&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___gradient_agreement_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1907" cy="-178.99" rx="80.59" ry="18"/>
+<text text-anchor="middle" x="1907" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.gradient_agreement</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.gradient_agreement»&#45;&gt;«foundations.operators.fderiv_gradient_pairing» -->
+<g id="edge1" class="edge">
+<title>«foundations.operators.gradient_agreement»&#45;&gt;«foundations.operators.fderiv_gradient_pairing»</title>
+<path fill="none" stroke="#6b7280" d="M1907,-160.79C1907,-152.55 1907,-142.52 1907,-133.45"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1907,-127.36 1909.7,-133.36 1907,-130.36 1907,-133.36 1907,-133.36 1907,-133.36 1907,-130.36 1904.3,-133.36 1907,-127.36 1907,-127.36"/>
+</g>
+<!-- «foundations.operators.divergence» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Edivergence&#45;00BB" class="node">
+<title>«foundations.operators.divergence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Edivergence&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___divergence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1561.5,-266.79 1458.5,-266.79 1458.5,-230.79 1561.5,-230.79 1561.5,-266.79"/>
+<text text-anchor="middle" x="1510" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.divergence</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.laplacian_as_div_gradient» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fas&#45;005Fdiv&#45;005Fgradient&#45;00BB" class="node">
+<title>«foundations.operators.laplacian_as_div_gradient»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fas&#45;005Fdiv&#45;005Fgradient&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___laplacian_as_div_gradient_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1714" cy="-178.99" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="1714" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators</text>
+<text text-anchor="middle" x="1714" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">laplacian_as_div_gradient</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.divergence»&#45;&gt;«foundations.operators.laplacian_as_div_gradient» -->
+<g id="edge10" class="edge">
+<title>«foundations.operators.divergence»&#45;&gt;«foundations.operators.laplacian_as_div_gradient»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1561.21,-230.77C1591.53,-220.7 1629.89,-207.95 1660.58,-197.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1666.61,-195.74 1661.77,-200.2 1663.8,-196.78 1660.95,-197.73 1660.92,-197.64 1660.89,-197.54 1663.74,-196.59 1660.07,-195.07 1666.61,-195.74 1666.61,-195.74"/>
+</g>
+<!-- «foundations.derivatives.linearity» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Elinearity&#45;00BB" class="node">
+<title>«foundations.derivatives.linearity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Elinearity&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___linearity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="361" cy="-248.79" rx="53.77" ry="18"/>
+<text text-anchor="middle" x="361" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives.linearity</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.iterated_linearity» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Eiterated&#45;005Flinearity&#45;00BB" class="node">
+<title>«foundations.derivatives.iterated_linearity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Eiterated&#45;005Flinearity&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___iterated_linearity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="225" cy="-178.99" rx="59.29" ry="19.6"/>
+<text text-anchor="middle" x="225" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives</text>
+<text text-anchor="middle" x="225" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">iterated_linearity</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.linearity»&#45;&gt;«foundations.derivatives.iterated_linearity» -->
+<g id="edge28" class="edge">
+<title>«foundations.derivatives.linearity»&#45;&gt;«foundations.derivatives.iterated_linearity»</title>
+<path fill="none" stroke="#6b7280" d="M332.16,-233.42C311.74,-223.24 284.19,-209.5 262.13,-198.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="256.65,-195.77 263.22,-196.03 259.33,-197.11 262.02,-198.45 262.02,-198.45 262.02,-198.45 259.33,-197.11 260.82,-200.87 256.65,-195.77 256.65,-195.77"/>
+</g>
+<!-- «foundations.operators.laplacian_inverse_distance» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Finverse&#45;005Fdistance&#45;00BB" class="node">
+<title>«foundations.operators.laplacian_inverse_distance»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Finverse&#45;005Fdistance&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___laplacian_inverse_distance_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1307" cy="-178.99" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="1307" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators</text>
+<text text-anchor="middle" x="1307" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">laplacian_inverse_distance</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.laplacian_radial» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fradial&#45;00BB" class="node">
+<title>«foundations.operators.laplacian_radial»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fradial&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___laplacian_radial_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1228" cy="-107.4" rx="70.17" ry="18"/>
+<text text-anchor="middle" x="1228" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.laplacian_radial</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.coordinate_line» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Ecoordinate&#45;005Fline&#45;00BB" class="node">
+<title>«foundations.derivatives.coordinate_line»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Ecoordinate&#45;005Fline&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___coordinate_line_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="741" cy="-248.79" rx="72.08" ry="18"/>
+<text text-anchor="middle" x="741" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives.coordinate_line</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.repeated_as_frechet» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Erepeated&#45;005Fas&#45;005Ffrechet&#45;00BB" class="node">
+<title>«foundations.derivatives.repeated_as_frechet»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Erepeated&#45;005Fas&#45;005Ffrechet&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___repeated_as_frechet_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="381" cy="-178.99" rx="71.34" ry="19.6"/>
+<text text-anchor="middle" x="381" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives</text>
+<text text-anchor="middle" x="381" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">repeated_as_frechet</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.regularity_budget» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Eregularity&#45;005Fbudget&#45;00BB" class="node">
+<title>«foundations.derivatives.regularity_budget»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Eregularity&#45;005Fbudget&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___regularity_budget_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="448" cy="-107.4" rx="61.54" ry="19.6"/>
+<text text-anchor="middle" x="448" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives</text>
+<text text-anchor="middle" x="448" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity_budget</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.repeated_as_frechet»&#45;&gt;«foundations.derivatives.regularity_budget» -->
+<g id="edge14" class="edge">
+<title>«foundations.derivatives.repeated_as_frechet»&#45;&gt;«foundations.derivatives.regularity_budget»</title>
+<path fill="none" stroke="#6b7280" d="M398.6,-159.71C407,-150.99 417.13,-140.46 426.03,-131.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="430.28,-126.8 428.07,-133 428.2,-128.96 426.12,-131.13 426.12,-131.13 426.12,-131.13 428.2,-128.96 424.18,-129.25 430.28,-126.8 430.28,-126.8"/>
+</g>
+<!-- «foundations.derivatives.mixed_commutation» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Emixed&#45;005Fcommutation&#45;00BB" class="node">
+<title>«foundations.derivatives.mixed_commutation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Emixed&#45;005Fcommutation&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___mixed_commutation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="583" cy="-35.8" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="583" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives</text>
+<text text-anchor="middle" x="583" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">mixed_commutation</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.regularity_budget»&#45;&gt;«foundations.derivatives.mixed_commutation» -->
+<g id="edge20" class="edge">
+<title>«foundations.derivatives.regularity_budget»&#45;&gt;«foundations.derivatives.mixed_commutation»</title>
+<path fill="none" stroke="#6b7280" d="M479.31,-90.25C498.9,-80.15 524.27,-67.08 545.01,-56.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="550.45,-53.58 546.35,-58.73 547.78,-54.95 545.12,-56.33 545.12,-56.33 545.12,-56.33 547.78,-54.95 543.88,-53.93 550.45,-53.58 550.45,-53.58"/>
+</g>
+<!-- «foundations.operators.fderiv_coordinates» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Efderiv&#45;005Fcoordinates&#45;00BB" class="node">
+<title>«foundations.operators.fderiv_coordinates»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Efderiv&#45;005Fcoordinates&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___fderiv_coordinates_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="140" cy="-248.79" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="140" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.fderiv_coordinates</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.advection» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Eadvection&#45;00BB" class="node">
+<title>«foundations.operators.advection»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Eadvection&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___advection_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="114,-196.99 16,-196.99 16,-160.99 114,-160.99 114,-196.99"/>
+<text text-anchor="middle" x="65" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.advection</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.fderiv_coordinates»&#45;&gt;«foundations.operators.advection» -->
+<g id="edge18" class="edge">
+<title>«foundations.operators.fderiv_coordinates»&#45;&gt;«foundations.operators.advection»</title>
+<path fill="none" stroke="#6b7280" d="M121.46,-231.03C111.53,-222.06 99.19,-210.9 88.58,-201.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="83.85,-197.03 90.11,-199.05 86.07,-199.04 88.3,-201.06 88.3,-201.06 88.3,-201.06 86.07,-199.04 86.49,-203.06 83.85,-197.03 83.85,-197.03"/>
+</g>
+<!-- «foundations.operators.scalar_advection_coordinates» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Escalar&#45;005Fadvection&#45;005Fcoordinates&#45;00BB" class="node">
+<title>«foundations.operators.scalar_advection_coordinates»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Escalar&#45;005Fadvection&#45;005Fcoordinates&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___scalar_advection_coordinates_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="128" cy="-107.4" rx="99.9" ry="19.6"/>
+<text text-anchor="middle" x="128" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators</text>
+<text text-anchor="middle" x="128" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">scalar_advection_coordinates</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.fderiv_coordinates»&#45;&gt;«foundations.operators.scalar_advection_coordinates» -->
+<g id="edge30" class="edge">
+<title>«foundations.operators.fderiv_coordinates»&#45;&gt;«foundations.operators.scalar_advection_coordinates»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M138.53,-230.7C136.43,-206.37 132.58,-161.59 130.16,-133.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="129.64,-127.41 132.84,-133.16 130.24,-130.37 130.5,-133.36 130.15,-133.39 129.8,-133.42 129.55,-130.43 127.46,-133.62 129.64,-127.41 129.64,-127.41"/>
+</g>
+<!-- «foundations.derivatives.iterated» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Eiterated&#45;00BB" class="node">
+<title>«foundations.derivatives.iterated»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Eiterated&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___iterated_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="598,-266.79 504,-266.79 504,-230.79 598,-230.79 598,-266.79"/>
+<text text-anchor="middle" x="551" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives.iterated</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.iterated»&#45;&gt;«foundations.derivatives.repeated_as_frechet» -->
+<g id="edge13" class="edge">
+<title>«foundations.derivatives.iterated»&#45;&gt;«foundations.derivatives.repeated_as_frechet»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M508.1,-230.69C482.95,-220.66 451.23,-208 425.77,-197.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="420.1,-195.59 426.67,-195.3 422.93,-196.61 425.71,-197.72 425.67,-197.81 425.64,-197.9 422.85,-196.79 424.67,-200.32 420.1,-195.59 420.1,-195.59"/>
+</g>
+<!-- «foundations.derivatives.iterated»&#45;&gt;«foundations.derivatives.mixed_commutation» -->
+<g id="edge19" class="edge">
+<title>«foundations.derivatives.iterated»&#45;&gt;«foundations.derivatives.mixed_commutation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M598.27,-231.93C613.35,-224.38 628.37,-213.65 637,-198.79 663.44,-153.3 627.25,-93.01 602.58,-60.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="598.72,-55.31 604.52,-58.42 600.63,-57.63 602.46,-60.01 602.38,-60.07 602.3,-60.13 600.48,-57.75 600.24,-61.72 598.72,-55.31 598.72,-55.31"/>
+</g>
+<!-- «foundations.derivatives.iterated_append» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Eiterated&#45;005Fappend&#45;00BB" class="node">
+<title>«foundations.derivatives.iterated_append»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Eiterated&#45;005Fappend&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___iterated_append_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="551" cy="-178.99" rx="73.98" ry="18"/>
+<text text-anchor="middle" x="551" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives.iterated_append</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.iterated»&#45;&gt;«foundations.derivatives.iterated_append» -->
+<g id="edge22" class="edge">
+<title>«foundations.derivatives.iterated»&#45;&gt;«foundations.derivatives.iterated_append»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M551,-230.69C551,-222.4 551,-212.32 551,-203.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="551,-197.33 553.7,-203.33 551.1,-200.33 551.1,-203.33 551,-203.33 550.9,-203.33 550.9,-200.33 548.3,-203.33 551,-197.33 551,-197.33"/>
+</g>
+<!-- «foundations.derivatives.iterated»&#45;&gt;«foundations.derivatives.iterated_linearity» -->
+<g id="edge27" class="edge">
+<title>«foundations.derivatives.iterated»&#45;&gt;«foundations.derivatives.iterated_linearity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M504,-239.67C452.87,-230.61 368.83,-215.08 297,-198.79 290.11,-197.23 282.88,-195.48 275.76,-193.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="269.83,-192.18 276.31,-191.04 272.76,-192.82 275.67,-193.56 275.64,-193.66 275.62,-193.75 272.71,-193.01 274.98,-196.27 269.83,-192.18 269.83,-192.18"/>
+</g>
+<!-- «foundations.derivatives.partial» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Epartial&#45;00BB" class="node">
+<title>«foundations.derivatives.partial»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;002Epartial&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___derivatives___partial_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="930,-334.79 842,-334.79 842,-298.79 930,-298.79 930,-334.79"/>
+<text text-anchor="middle" x="886" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivatives.partial</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.derivatives.germ_locality» -->
+<g id="edge2" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.derivatives.germ_locality»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M898.35,-298.45C904.11,-290.36 911.05,-280.62 917.19,-271.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="920.9,-266.79 919.62,-273.24 919.24,-269.29 917.5,-271.74 917.42,-271.68 917.33,-271.62 919.07,-269.18 915.22,-270.11 920.9,-266.79 920.9,-266.79"/>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.operators.divergence» -->
+<g id="edge4" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.operators.divergence»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M930.38,-311.1C1040.86,-299.41 1328.23,-269.02 1451.95,-255.93"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1458.08,-255.29 1452.4,-258.6 1455.11,-255.7 1452.12,-256.02 1452.11,-255.92 1452.1,-255.82 1455.09,-255.5 1451.83,-253.23 1458.08,-255.29 1458.08,-255.29"/>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.derivatives.linearity» -->
+<g id="edge5" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.derivatives.linearity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M841.97,-310.4C769.14,-301.45 619.02,-282.93 492,-266.79 467.15,-263.64 439.65,-260.08 416.29,-257.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="410.14,-256.23 416.43,-254.33 413.12,-256.52 416.1,-256.91 416.09,-257.01 416.07,-257.11 413.1,-256.72 415.74,-259.69 410.14,-256.23 410.14,-256.23"/>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.derivatives.coordinate_line» -->
+<g id="edge12" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.derivatives.coordinate_line»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M848.28,-298.63C827.18,-289.02 800.92,-277.07 779.66,-267.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="774.09,-264.85 780.67,-264.88 776.86,-266.01 779.59,-267.25 779.55,-267.34 779.51,-267.43 776.78,-266.19 778.43,-269.8 774.09,-264.85 774.09,-264.85"/>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.operators.fderiv_coordinates» -->
+<g id="edge15" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.operators.fderiv_coordinates»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M841.85,-312.54C743.55,-305.19 499.2,-286.45 295,-266.79 268.43,-264.24 239.34,-261.13 213.6,-258.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="207.48,-257.59 213.74,-255.57 210.47,-257.82 213.46,-258.15 213.44,-258.25 213.43,-258.35 210.45,-258.02 213.15,-260.94 207.48,-257.59 207.48,-257.59"/>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.derivatives.iterated» -->
+<g id="edge16" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.derivatives.iterated»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M841.86,-307.1C780.67,-295.04 670.2,-273.28 604.43,-260.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="598.21,-259.09 604.62,-257.61 601.17,-259.58 604.12,-260.16 604.1,-260.25 604.08,-260.35 601.13,-259.77 603.57,-262.9 598.21,-259.09 598.21,-259.09"/>
+</g>
+<!-- «foundations.operators.gradient» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Egradient&#45;00BB" class="node">
+<title>«foundations.operators.gradient»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Egradient&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___gradient_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1759.5,-266.79 1668.5,-266.79 1668.5,-230.79 1759.5,-230.79 1759.5,-266.79"/>
+<text text-anchor="middle" x="1714" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.gradient</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.operators.gradient» -->
+<g id="edge17" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.operators.gradient»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M930.33,-313.4C1039.76,-307.33 1331.44,-290.14 1574,-266.79 1603.22,-263.98 1635.77,-260.07 1662.13,-256.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1668.35,-255.92 1662.74,-259.36 1665.39,-256.4 1662.41,-256.78 1662.4,-256.68 1662.39,-256.58 1665.36,-256.2 1662.06,-254 1668.35,-255.92 1668.35,-255.92"/>
+</g>
+<!-- «foundations.operators.laplacian_product» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fproduct&#45;00BB" class="node">
+<title>«foundations.operators.laplacian_product»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fproduct&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___laplacian_product_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1526" cy="-178.99" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="1526" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.laplacian_product</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.operators.laplacian_product» -->
+<g id="edge26" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.operators.laplacian_product»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M930.07,-310.88C993,-303.48 1112.07,-288.03 1212,-266.79 1306.86,-246.63 1415.52,-214.54 1476.93,-195.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1482.72,-193.74 1477.79,-198.1 1479.89,-194.73 1477.02,-195.62 1476.99,-195.52 1476.96,-195.43 1479.83,-194.54 1476.19,-192.94 1482.72,-193.74 1482.72,-193.74"/>
+</g>
+<!-- «foundations.operators.laplacian_norm_sq» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fnorm&#45;005Fsq&#45;00BB" class="node">
+<title>«foundations.operators.laplacian_norm_sq»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fnorm&#45;005Fsq&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___laplacian_norm_sq_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="755" cy="-178.99" rx="78.06" ry="18"/>
+<text text-anchor="middle" x="755" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.laplacian_norm_sq</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.operators.laplacian_norm_sq» -->
+<g id="edge33" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.operators.laplacian_norm_sq»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M874.26,-298.52C858.46,-275.36 831.67,-236.5 826,-230.79 814.31,-219.02 799.63,-208.03 786.66,-199.3"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="781.6,-195.95 788.09,-197.01 784.15,-197.52 786.66,-199.18 786.6,-199.26 786.55,-199.35 784.04,-197.69 785.11,-201.51 781.6,-195.95 781.6,-195.95"/>
+</g>
+<!-- «foundations.operators.laplacian» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;00BB" class="node">
+<title>«foundations.operators.laplacian»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___laplacian_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1199.5,-266.79 1104.5,-266.79 1104.5,-230.79 1199.5,-230.79 1199.5,-266.79"/>
+<text text-anchor="middle" x="1152" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.laplacian</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives.partial»&#45;&gt;«foundations.operators.laplacian» -->
+<g id="edge35" class="edge">
+<title>«foundations.derivatives.partial»&#45;&gt;«foundations.operators.laplacian»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M930.22,-304.82C976.36,-293.37 1048.73,-275.42 1098.16,-263.15"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1104.07,-261.69 1098.9,-265.75 1101.18,-262.51 1098.27,-263.23 1098.25,-263.13 1098.22,-263.03 1101.14,-262.31 1097.6,-260.51 1104.07,-261.69 1104.07,-261.69"/>
+</g>
+<!-- «foundations.operators.gradient»&#45;&gt;«foundations.operators.gradient_agreement» -->
+<g id="edge3" class="edge">
+<title>«foundations.operators.gradient»&#45;&gt;«foundations.operators.gradient_agreement»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1759.74,-231.73C1789.84,-221.15 1829.14,-207.35 1859.57,-196.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1865.54,-194.56 1860.77,-199.1 1862.74,-195.65 1859.91,-196.64 1859.88,-196.55 1859.84,-196.45 1862.67,-195.46 1858.98,-194 1865.54,-194.56 1865.54,-194.56"/>
+</g>
+<!-- «foundations.operators.gradient»&#45;&gt;«foundations.operators.laplacian_as_div_gradient» -->
+<g id="edge9" class="edge">
+<title>«foundations.operators.gradient»&#45;&gt;«foundations.operators.laplacian_as_div_gradient»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1714,-230.69C1714,-223.06 1714,-213.91 1714,-205.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1714,-199.25 1716.7,-205.25 1714.1,-202.25 1714.1,-205.25 1714,-205.25 1713.9,-205.25 1713.9,-202.25 1711.3,-205.25 1714,-199.25 1714,-199.25"/>
+</g>
+<!-- «foundations.operators.advection»&#45;&gt;«foundations.operators.scalar_advection_coordinates» -->
+<g id="edge29" class="edge">
+<title>«foundations.operators.advection»&#45;&gt;«foundations.operators.scalar_advection_coordinates»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M80.57,-160.79C88.46,-152.07 98.16,-141.36 106.73,-131.89"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="110.83,-127.36 108.81,-133.62 108.9,-129.65 106.88,-131.88 106.81,-131.81 106.73,-131.74 108.75,-129.52 104.81,-130 110.83,-127.36 110.83,-127.36"/>
+</g>
+<!-- «foundations.operators.laplacian_isometry» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fisometry&#45;00BB" class="node">
+<title>«foundations.operators.laplacian_isometry»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fisometry&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___laplacian_isometry_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1111" cy="-178.99" rx="78.69" ry="18"/>
+<text text-anchor="middle" x="1111" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators.laplacian_isometry</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.laplacian_comp_norm_sq» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fcomp&#45;005Fnorm&#45;005Fsq&#45;00BB" class="node">
+<title>«foundations.operators.laplacian_comp_norm_sq»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eoperators&#45;002Elaplacian&#45;005Fcomp&#45;005Fnorm&#45;005Fsq&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___operators___laplacian_comp_norm_sq_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="849" cy="-107.4" rx="86.95" ry="19.6"/>
+<text text-anchor="middle" x="849" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">operators</text>
+<text text-anchor="middle" x="849" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">laplacian_comp_norm_sq</text>
+</a>
+</g>
+</g>
+<!-- «foundations.operators.laplacian_locality»&#45;&gt;«foundations.operators.laplacian_radial» -->
+<g id="edge8" class="edge">
+<title>«foundations.operators.laplacian_locality»&#45;&gt;«foundations.operators.laplacian_radial»</title>
+<path fill="none" stroke="#6b7280" d="M984.39,-165.87C1036.84,-153.5 1118.02,-134.34 1172.06,-121.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1178.19,-120.15 1172.97,-124.15 1175.27,-120.84 1172.35,-121.53 1172.35,-121.53 1172.35,-121.53 1175.27,-120.84 1171.73,-118.9 1178.19,-120.15 1178.19,-120.15"/>
+</g>
+<!-- «foundations.operators.laplacian_locality»&#45;&gt;«foundations.operators.laplacian_comp_norm_sq» -->
+<g id="edge24" class="edge">
+<title>«foundations.operators.laplacian_locality»&#45;&gt;«foundations.operators.laplacian_comp_norm_sq»</title>
+<path fill="none" stroke="#6b7280" d="M913.09,-161.5C901.96,-152.27 887.92,-140.65 875.83,-130.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="871.13,-126.73 877.47,-128.48 873.44,-128.65 875.75,-130.56 875.75,-130.56 875.75,-130.56 873.44,-128.65 874.03,-132.64 871.13,-126.73 871.13,-126.73"/>
+</g>
+<!-- «foundations.operators.laplacian_norm_sq»&#45;&gt;«foundations.operators.laplacian_comp_norm_sq» -->
+<g id="edge23" class="edge">
+<title>«foundations.operators.laplacian_norm_sq»&#45;&gt;«foundations.operators.laplacian_comp_norm_sq»</title>
+<path fill="none" stroke="#6b7280" d="M777.28,-161.5C789.95,-152.12 805.96,-140.26 819.65,-130.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="824.57,-126.48 821.36,-132.22 822.16,-128.27 819.75,-130.05 819.75,-130.05 819.75,-130.05 822.16,-128.27 818.14,-127.88 824.57,-126.48 824.57,-126.48"/>
+</g>
+<!-- «foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_inverse_distance» -->
+<g id="edge6" class="edge">
+<title>«foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_inverse_distance»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1191.11,-230.69C1212.86,-221.17 1239.99,-209.3 1262.54,-199.44"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1268.17,-196.98 1263.75,-201.86 1265.46,-198.27 1262.71,-199.48 1262.67,-199.39 1262.63,-199.29 1265.38,-198.09 1261.59,-196.91 1268.17,-196.98 1268.17,-196.98"/>
+</g>
+<!-- «foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_radial» -->
+<g id="edge7" class="edge">
+<title>«foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_radial»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1199.75,-240.36C1272.71,-228.78 1404.27,-206.92 1411,-198.79 1448.31,-153.77 1361.48,-129.23 1295.05,-117.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1289.09,-116.44 1295.47,-114.8 1292.07,-116.86 1295.02,-117.37 1295.01,-117.47 1294.99,-117.56 1292.03,-117.05 1294.55,-120.13 1289.09,-116.44 1289.09,-116.44"/>
+</g>
+<!-- «foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_as_div_gradient» -->
+<g id="edge11" class="edge">
+<title>«foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_as_div_gradient»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1199.71,-244C1283.71,-237.05 1463.37,-220.9 1614,-198.79 1623.94,-197.34 1634.39,-195.6 1644.64,-193.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1650.65,-192.7 1645.22,-196.42 1647.71,-193.33 1644.76,-193.86 1644.74,-193.76 1644.72,-193.66 1647.68,-193.13 1644.26,-191.1 1650.65,-192.7 1650.65,-192.7"/>
+</g>
+<!-- «foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_isometry» -->
+<g id="edge21" class="edge">
+<title>«foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_isometry»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1141.65,-230.69C1136.42,-222.03 1130,-211.42 1124.39,-202.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1121.2,-196.86 1126.62,-200.6 1122.84,-199.38 1124.39,-201.95 1124.31,-202 1124.22,-202.05 1122.67,-199.48 1122,-203.39 1121.2,-196.86 1121.2,-196.86"/>
+</g>
+<!-- «foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_product» -->
+<g id="edge25" class="edge">
+<title>«foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_product»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1199.62,-239.82C1255.39,-230.4 1350.51,-214.07 1432,-198.79 1442.49,-196.83 1453.62,-194.67 1464.42,-192.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1470.37,-191.35 1465.01,-195.17 1467.45,-192.03 1464.51,-192.62 1464.49,-192.52 1464.47,-192.42 1467.41,-191.84 1463.96,-189.87 1470.37,-191.35 1470.37,-191.35"/>
+</g>
+<!-- «foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_locality» -->
+<g id="edge31" class="edge">
+<title>«foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_locality»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1104.48,-233.08C1068.54,-221.96 1019.31,-206.72 982.82,-195.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="977.07,-193.64 983.6,-192.83 979.97,-194.43 982.83,-195.32 982.8,-195.41 982.78,-195.51 979.91,-194.62 982.01,-197.99 977.07,-193.64 977.07,-193.64"/>
+</g>
+<!-- «foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_norm_sq» -->
+<g id="edge34" class="edge">
+<title>«foundations.operators.laplacian»&#45;&gt;«foundations.operators.laplacian_norm_sq»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1104.45,-240.86C1044.18,-231.91 937.16,-215.5 846,-198.79 836.41,-197.04 826.27,-195.06 816.38,-193.07"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="810.26,-191.83 816.68,-190.37 813.22,-192.32 816.16,-192.92 816.14,-193.02 816.12,-193.12 813.18,-192.52 815.61,-195.66 810.26,-191.83 810.26,-191.83"/>
+</g>
+</g>
+</svg>

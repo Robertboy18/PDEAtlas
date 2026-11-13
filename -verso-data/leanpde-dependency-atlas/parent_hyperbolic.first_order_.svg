@@ -1,0 +1,434 @@
+<svg data-node-count="23" data-edge-count="33" data-cluster-count="1" data-variant-key="parent:«hyperbolic.first_order»" width="1278pt" height="529pt"
+ viewBox="0.00 0.00 1278.00 528.59" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 524.59)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-524.59 1274,-524.59 1274,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1250,-8 1250,-8 1256,-8 1262,-14 1262,-20 1262,-20 1262,-500.59 1262,-500.59 1262,-506.59 1256,-512.59 1250,-512.59 1250,-512.59 20,-512.59 20,-512.59 14,-512.59 8,-506.59 8,-500.59 8,-500.59 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="635" y="-497.39" font-family="Helvetica" font-size="14.00">Nonlinear first&#45;order equations</text>
+</g>
+<!-- «hyperbolic.first_order.flow_smooth_dependence» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eflow&#45;005Fsmooth&#45;005Fdependence&#45;00BB" class="node">
+<title>«hyperbolic.first_order.flow_smooth_dependence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eflow&#45;005Fsmooth&#45;005Fdependence&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___flow_smooth_dependence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="972" cy="-390.19" rx="89.19" ry="19.6"/>
+<text text-anchor="middle" x="972" y="-393.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="972" y="-382.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">flow_smooth_dependence</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.general_first_variation» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Egeneral&#45;005Ffirst&#45;005Fvariation&#45;00BB" class="node">
+<title>«hyperbolic.first_order.general_first_variation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Egeneral&#45;005Ffirst&#45;005Fvariation&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___general_first_variation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1071" cy="-461.79" rx="76.24" ry="19.6"/>
+<text text-anchor="middle" x="1071" y="-464.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="1071" y="-453.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">general_first_variation</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.general_first_variation»&#45;&gt;«hyperbolic.first_order.flow_smooth_dependence» -->
+<g id="edge1" class="edge">
+<title>«hyperbolic.first_order.general_first_variation»&#45;&gt;«hyperbolic.first_order.flow_smooth_dependence»</title>
+<path fill="none" stroke="#6b7280" d="M1045.76,-443.05C1032.7,-433.86 1016.64,-422.58 1002.85,-412.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="997.88,-409.39 1004.34,-410.63 1000.34,-411.11 1002.79,-412.84 1002.79,-412.84 1002.79,-412.84 1000.34,-411.11 1001.24,-415.05 997.88,-409.39 997.88,-409.39"/>
+</g>
+<!-- «hyperbolic.first_order.automatic_first_variation» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Ffirst&#45;005Fvariation&#45;00BB" class="node">
+<title>«hyperbolic.first_order.automatic_first_variation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Ffirst&#45;005Fvariation&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___automatic_first_variation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1170" cy="-390.19" rx="84.29" ry="19.6"/>
+<text text-anchor="middle" x="1170" y="-393.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="1170" y="-382.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">automatic_first_variation</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.general_first_variation»&#45;&gt;«hyperbolic.first_order.automatic_first_variation» -->
+<g id="edge4" class="edge">
+<title>«hyperbolic.first_order.general_first_variation»&#45;&gt;«hyperbolic.first_order.automatic_first_variation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1096.24,-443.05C1109.4,-433.79 1125.61,-422.4 1139.47,-412.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1144.46,-409.14 1141.11,-414.8 1142.21,-411.15 1139.76,-412.88 1139.56,-412.59 1139.35,-412.31 1141.81,-410.58 1138,-410.39 1144.46,-409.14 1144.46,-409.14"/>
+</g>
+<!-- «hyperbolic.first_order.constraint_preserved» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Econstraint&#45;005Fpreserved&#45;00BB" class="node">
+<title>«hyperbolic.first_order.constraint_preserved»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Econstraint&#45;005Fpreserved&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___constraint_preserved_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="519" cy="-318.59" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="519" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="519" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">constraint_preserved</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.local_flow_box_from_c2_family» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fflow&#45;005Fbox&#45;005Ffrom&#45;005Fc2&#45;005Ffamily&#45;00BB" class="node">
+<title>«hyperbolic.first_order.local_flow_box_from_c2_family»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fflow&#45;005Fbox&#45;005Ffrom&#45;005Fc2&#45;005Ffamily&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___local_flow_box_from_c2_family_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="335.5,-264.99 186.5,-264.99 186.5,-228.99 335.5,-228.99 335.5,-264.99"/>
+<text text-anchor="middle" x="261" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="261" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_flow_box_from_c2_family</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.constraint_preserved»&#45;&gt;«hyperbolic.first_order.local_flow_box_from_c2_family» -->
+<g id="edge13" class="edge">
+<title>«hyperbolic.first_order.constraint_preserved»&#45;&gt;«hyperbolic.first_order.local_flow_box_from_c2_family»</title>
+<path fill="none" stroke="#6b7280" d="M468.95,-304.09C429.4,-293.42 373.77,-278.41 329.99,-266.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="324.17,-265.04 330.67,-263.99 327.07,-265.82 329.96,-266.6 329.96,-266.6 329.96,-266.6 327.07,-265.82 329.26,-269.21 324.17,-265.04 324.17,-265.04"/>
+</g>
+<!-- «hyperbolic.first_order.automatic_constraint_family» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Fconstraint&#45;005Ffamily&#45;00BB" class="node">
+<title>«hyperbolic.first_order.automatic_constraint_family»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Fconstraint&#45;005Ffamily&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___automatic_constraint_family_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="638" cy="-246.99" rx="95.42" ry="19.6"/>
+<text text-anchor="middle" x="638" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="638" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">automatic_constraint_family</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.constraint_preserved»&#45;&gt;«hyperbolic.first_order.automatic_constraint_family» -->
+<g id="edge19" class="edge">
+<title>«hyperbolic.first_order.constraint_preserved»&#45;&gt;«hyperbolic.first_order.automatic_constraint_family»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M548.42,-300.39C564.63,-290.9 584.9,-279.05 602.05,-269.02"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="607.26,-265.97 603.45,-271.33 604.85,-267.79 602.26,-269.3 602.08,-269 601.91,-268.7 604.5,-267.18 600.72,-266.67 607.26,-265.97 607.26,-265.97"/>
+</g>
+<!-- «hyperbolic.first_order.local_existence» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fexistence&#45;00BB" class="node">
+<title>«hyperbolic.first_order.local_existence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fexistence&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___local_existence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="739" cy="-105.6" rx="72.08" ry="18"/>
+<text text-anchor="middle" x="739" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order.local_existence</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.constraint_preserved»&#45;&gt;«hyperbolic.first_order.local_existence» -->
+<g id="edge28" class="edge">
+<title>«hyperbolic.first_order.constraint_preserved»&#45;&gt;«hyperbolic.first_order.local_existence»</title>
+<path fill="none" stroke="#6b7280" d="M516.65,-298.62C515.22,-279.08 515.87,-248.56 530,-227.2 566.64,-171.79 638.06,-138.76 687.13,-121.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="693,-119.62 688.2,-124.12 690.16,-120.6 687.32,-121.57 687.32,-121.57 687.32,-121.57 690.16,-120.6 686.45,-119.01 693,-119.62 693,-119.62"/>
+</g>
+<!-- «hyperbolic.first_order.local_flow_box» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fflow&#45;005Fbox&#45;00BB" class="node">
+<title>«hyperbolic.first_order.local_flow_box»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fflow&#45;005Fbox&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___local_flow_box_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="296,-336.59 172,-336.59 172,-300.59 296,-300.59 296,-336.59"/>
+<text text-anchor="middle" x="234" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order.local_flow_box</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.local_flow_box»&#45;&gt;«hyperbolic.first_order.local_flow_box_from_c2_family» -->
+<g id="edge11" class="edge">
+<title>«hyperbolic.first_order.local_flow_box»&#45;&gt;«hyperbolic.first_order.local_flow_box_from_c2_family»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M240.67,-300.39C244.14,-291.46 248.42,-280.42 252.16,-270.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="254.4,-265 254.75,-271.57 253.41,-267.83 252.33,-270.63 252.23,-270.59 252.14,-270.56 253.22,-267.76 249.72,-269.62 254.4,-265 254.4,-265"/>
+</g>
+<!-- «hyperbolic.first_order.contact_preservation» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Econtact&#45;005Fpreservation&#45;00BB" class="node">
+<title>«hyperbolic.first_order.contact_preservation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Econtact&#45;005Fpreservation&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___contact_preservation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="89" cy="-246.99" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="89" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="89" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">contact_preservation</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.local_flow_box»&#45;&gt;«hyperbolic.first_order.contact_preservation» -->
+<g id="edge15" class="edge">
+<title>«hyperbolic.first_order.local_flow_box»&#45;&gt;«hyperbolic.first_order.contact_preservation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M198.53,-300.57C177.51,-290.48 150.8,-277.66 129.03,-267.21"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="123.6,-264.6 130.18,-264.77 126.35,-265.81 129.06,-267.11 129.01,-267.2 128.97,-267.29 126.27,-265.99 127.85,-269.64 123.6,-264.6 123.6,-264.6"/>
+</g>
+<!-- «hyperbolic.first_order.compatibility» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Ecompatibility&#45;00BB" class="node">
+<title>«hyperbolic.first_order.compatibility»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Ecompatibility&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___compatibility_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="426" cy="-246.99" rx="65.46" ry="18"/>
+<text text-anchor="middle" x="426" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order.compatibility</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.characteristics_local» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Echaracteristics&#45;005Flocal&#45;00BB" class="node">
+<title>«hyperbolic.first_order.characteristics_local»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Echaracteristics&#45;005Flocal&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___characteristics_local_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="732" cy="-390.19" rx="72.25" ry="19.6"/>
+<text text-anchor="middle" x="732" y="-393.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="732" y="-382.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">characteristics_local</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.automatic_family» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Ffamily&#45;00BB" class="node">
+<title>«hyperbolic.first_order.automatic_family»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Ffamily&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___automatic_family_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="693" cy="-318.59" rx="76.02" ry="18"/>
+<text text-anchor="middle" x="693" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order.automatic_family</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.automatic_family»&#45;&gt;«hyperbolic.first_order.automatic_constraint_family» -->
+<g id="edge17" class="edge">
+<title>«hyperbolic.first_order.automatic_family»&#45;&gt;«hyperbolic.first_order.automatic_constraint_family»</title>
+<path fill="none" stroke="#6b7280" d="M679.69,-300.75C672.76,-291.98 664.17,-281.11 656.59,-271.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="652.74,-266.65 658.58,-269.68 654.6,-269 656.46,-271.35 656.46,-271.35 656.46,-271.35 654.6,-269 654.34,-273.03 652.74,-266.65 652.74,-266.65"/>
+</g>
+<!-- «hyperbolic.first_order.automatic_initial_jacobian» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Finitial&#45;005Fjacobian&#45;00BB" class="node">
+<title>«hyperbolic.first_order.automatic_initial_jacobian»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Finitial&#45;005Fjacobian&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___automatic_initial_jacobian_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="846" cy="-246.99" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="846" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="846" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">automatic_initial_jacobian</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.automatic_family»&#45;&gt;«hyperbolic.first_order.automatic_initial_jacobian» -->
+<g id="edge21" class="edge">
+<title>«hyperbolic.first_order.automatic_family»&#45;&gt;«hyperbolic.first_order.automatic_initial_jacobian»</title>
+<path fill="none" stroke="#6b7280" d="M726.58,-302.32C749.05,-292.1 778.84,-278.55 803.04,-267.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="808.75,-264.94 804.4,-269.88 806.02,-266.18 803.28,-267.43 803.28,-267.43 803.28,-267.43 806.02,-266.18 802.17,-264.97 808.75,-264.94 808.75,-264.94"/>
+</g>
+<!-- «hyperbolic.first_order.automatic_flow» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Fflow&#45;00BB" class="node">
+<title>«hyperbolic.first_order.automatic_flow»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Fflow&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___automatic_flow_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="563" cy="-390.19" rx="71.44" ry="18"/>
+<text text-anchor="middle" x="563" y="-387.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order.automatic_flow</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.automatic_flow»&#45;&gt;«hyperbolic.first_order.automatic_family» -->
+<g id="edge7" class="edge">
+<title>«hyperbolic.first_order.automatic_flow»&#45;&gt;«hyperbolic.first_order.automatic_family»</title>
+<path fill="none" stroke="#6b7280" d="M592.17,-373.57C611.69,-363.12 637.47,-349.32 658.08,-338.29"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="663.47,-335.4 659.46,-340.61 660.83,-336.82 658.18,-338.23 658.18,-338.23 658.18,-338.23 660.83,-336.82 656.91,-335.85 663.47,-335.4 663.47,-335.4"/>
+</g>
+<!-- «hyperbolic.first_order.noncharacteristic» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Enoncharacteristic&#45;00BB" class="node">
+<title>«hyperbolic.first_order.noncharacteristic»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Enoncharacteristic&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___noncharacteristic_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1136.5,-336.59 1049.5,-336.59 1049.5,-300.59 1136.5,-300.59 1136.5,-336.59"/>
+<text text-anchor="middle" x="1093" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="1093" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">noncharacteristic</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.automatic_local_coordinates» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Flocal&#45;005Fcoordinates&#45;00BB" class="node">
+<title>«hyperbolic.first_order.automatic_local_coordinates»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eautomatic&#45;005Flocal&#45;005Fcoordinates&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___automatic_local_coordinates_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1088" cy="-175.4" rx="96.33" ry="19.6"/>
+<text text-anchor="middle" x="1088" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="1088" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">automatic_local_coordinates</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.noncharacteristic»&#45;&gt;«hyperbolic.first_order.automatic_local_coordinates» -->
+<g id="edge22" class="edge">
+<title>«hyperbolic.first_order.noncharacteristic»&#45;&gt;«hyperbolic.first_order.automatic_local_coordinates»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1136.78,-311.34C1163.68,-304.99 1196.13,-292.25 1213,-266.79 1222.72,-252.12 1222.83,-241.8 1213,-227.2 1201.5,-210.11 1183.16,-198.77 1164.03,-191.24"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1158.08,-189.03 1164.64,-188.59 1160.93,-189.98 1163.74,-191.03 1163.7,-191.12 1163.67,-191.21 1160.86,-190.17 1162.76,-193.65 1158.08,-189.03 1158.08,-189.03"/>
+</g>
+<!-- «hyperbolic.first_order.local_existence_from_c2_family» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fexistence&#45;005Ffrom&#45;005Fc2&#45;005Ffamily&#45;00BB" class="node">
+<title>«hyperbolic.first_order.local_existence_from_c2_family»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fexistence&#45;005Ffrom&#45;005Fc2&#45;005Ffamily&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___local_existence_from_c2_family_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="739" cy="-35.8" rx="107.46" ry="19.6"/>
+<text text-anchor="middle" x="739" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="739" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_existence_from_c2_family</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.noncharacteristic»&#45;&gt;«hyperbolic.first_order.local_existence_from_c2_family» -->
+<g id="edge25" class="edge">
+<title>«hyperbolic.first_order.noncharacteristic»&#45;&gt;«hyperbolic.first_order.local_existence_from_c2_family»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1136.78,-313.07C1166.52,-307.46 1203.8,-294.91 1223,-266.79 1251.62,-224.88 1234.54,-189.75 1197,-155.6 1143.12,-106.59 944.13,-68.47 826.91,-49.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="820.7,-48.69 827.05,-46.96 823.68,-49.06 826.64,-49.53 826.63,-49.63 826.61,-49.73 823.65,-49.26 826.2,-52.3 820.7,-48.69 820.7,-48.69"/>
+</g>
+<!-- «hyperbolic.first_order.noncharacteristic»&#45;&gt;«hyperbolic.first_order.local_existence» -->
+<g id="edge29" class="edge">
+<title>«hyperbolic.first_order.noncharacteristic»&#45;&gt;«hyperbolic.first_order.local_existence»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1049.23,-305.77C1024.93,-297.65 995.22,-285 973,-266.79 956.52,-253.29 961.59,-241.71 946,-227.2 895.95,-180.57 824.77,-144.08 780.27,-123.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="774.71,-121.45 781.29,-121.44 777.49,-122.59 780.23,-123.81 780.19,-123.91 780.14,-124 777.41,-122.77 779.08,-126.37 774.71,-121.45 774.71,-121.45"/>
+</g>
+<!-- «hyperbolic.first_order.local_characteristic_coordinates» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fcharacteristic&#45;005Fcoordinates&#45;00BB" class="node">
+<title>«hyperbolic.first_order.local_characteristic_coordinates»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Elocal&#45;005Fcharacteristic&#45;005Fcoordinates&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___local_characteristic_coordinates_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1093" cy="-246.99" rx="107.46" ry="19.6"/>
+<text text-anchor="middle" x="1093" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="1093" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_characteristic_coordinates</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.noncharacteristic»&#45;&gt;«hyperbolic.first_order.local_characteristic_coordinates» -->
+<g id="edge32" class="edge">
+<title>«hyperbolic.first_order.noncharacteristic»&#45;&gt;«hyperbolic.first_order.local_characteristic_coordinates»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1093,-300.39C1093,-292.15 1093,-282.12 1093,-273.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1093,-266.96 1095.7,-272.96 1093.1,-269.96 1093.1,-272.96 1093,-272.96 1092.9,-272.96 1092.9,-269.96 1090.3,-272.96 1093,-266.96 1093,-266.96"/>
+</g>
+<!-- «hyperbolic.first_order.compatible_gradient» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Ecompatible&#45;005Fgradient&#45;00BB" class="node">
+<title>«hyperbolic.first_order.compatible_gradient»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Ecompatible&#45;005Fgradient&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___compatible_gradient_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="421,-336.59 321,-336.59 321,-300.59 421,-300.59 421,-336.59"/>
+<text text-anchor="middle" x="371" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="371" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">compatible_gradient</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.compatible_gradient»&#45;&gt;«hyperbolic.first_order.compatibility» -->
+<g id="edge5" class="edge">
+<title>«hyperbolic.first_order.compatible_gradient»&#45;&gt;«hyperbolic.first_order.compatibility»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M384.6,-300.39C391.86,-291.2 400.87,-279.8 408.63,-269.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="412.56,-265 410.96,-271.38 410.78,-267.42 408.92,-269.77 408.84,-269.71 408.76,-269.65 410.62,-267.29 406.72,-268.03 412.56,-265 412.56,-265"/>
+</g>
+<!-- «hyperbolic.first_order.compatible_gradient»&#45;&gt;«hyperbolic.first_order.local_flow_box_from_c2_family» -->
+<g id="edge12" class="edge">
+<title>«hyperbolic.first_order.compatible_gradient»&#45;&gt;«hyperbolic.first_order.local_flow_box_from_c2_family»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M344.09,-300.57C328.78,-290.88 309.49,-278.67 293.35,-268.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="288.01,-265.09 294.53,-266.01 290.6,-266.61 293.14,-268.21 293.08,-268.29 293.03,-268.38 290.49,-266.77 291.64,-270.58 288.01,-265.09 288.01,-265.09"/>
+</g>
+<!-- «hyperbolic.first_order.compatible_gradient»&#45;&gt;«hyperbolic.first_order.contact_preservation» -->
+<g id="edge14" class="edge">
+<title>«hyperbolic.first_order.compatible_gradient»&#45;&gt;«hyperbolic.first_order.contact_preservation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M320.66,-302.02C316.73,-300.9 312.8,-299.81 309,-298.79 279.41,-290.9 204,-273.72 149.72,-261.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="143.54,-260.15 149.99,-258.83 146.49,-260.71 149.42,-261.36 149.4,-261.46 149.37,-261.56 146.45,-260.9 148.8,-264.09 143.54,-260.15 143.54,-260.15"/>
+</g>
+<!-- «hyperbolic.first_order.compatible_gradient»&#45;&gt;«hyperbolic.first_order.automatic_constraint_family» -->
+<g id="edge18" class="edge">
+<title>«hyperbolic.first_order.compatible_gradient»&#45;&gt;«hyperbolic.first_order.automatic_constraint_family»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M421.15,-302.4C425.49,-301.16 429.82,-299.94 434,-298.79 479.45,-286.36 530.93,-273.55 570.81,-263.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="577.11,-262.38 571.91,-266.42 574.22,-263.18 571.3,-263.89 571.28,-263.79 571.25,-263.69 574.17,-262.99 570.64,-261.17 577.11,-262.38 577.11,-262.38"/>
+</g>
+<!-- «hyperbolic.first_order.local_flow_box_from_c2_family»&#45;&gt;«hyperbolic.first_order.local_existence_from_c2_family» -->
+<g id="edge26" class="edge">
+<title>«hyperbolic.first_order.local_flow_box_from_c2_family»&#45;&gt;«hyperbolic.first_order.local_existence_from_c2_family»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M300.12,-228.88C387.8,-190.5 599.72,-97.76 693.29,-56.81"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="699.01,-54.3 694.59,-59.18 696.3,-55.6 693.55,-56.8 693.51,-56.71 693.47,-56.62 696.22,-55.41 692.43,-54.23 699.01,-54.3 699.01,-54.3"/>
+</g>
+<!-- «hyperbolic.first_order.contact_preservation»&#45;&gt;«hyperbolic.first_order.local_existence» -->
+<g id="edge31" class="edge">
+<title>«hyperbolic.first_order.contact_preservation»&#45;&gt;«hyperbolic.first_order.local_existence»</title>
+<path fill="none" stroke="#6b7280" d="M143.86,-233.8C153.88,-231.59 164.25,-229.31 174,-227.2 358.27,-187.15 576.61,-140.88 679.6,-119.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="685.61,-117.86 680.3,-121.74 682.68,-118.48 679.74,-119.1 679.74,-119.1 679.74,-119.1 682.68,-118.48 679.18,-116.45 685.61,-117.86 685.61,-117.86"/>
+</g>
+<!-- «hyperbolic.first_order.clairaut_envelope» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eclairaut&#45;005Fenvelope&#45;00BB" class="node">
+<title>«hyperbolic.first_order.clairaut_envelope»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Eclairaut&#45;005Fenvelope&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___clairaut_envelope_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="85" cy="-318.59" rx="62.45" ry="19.6"/>
+<text text-anchor="middle" x="85" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="85" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">clairaut_envelope</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.automatic_initial_jacobian»&#45;&gt;«hyperbolic.first_order.automatic_local_coordinates» -->
+<g id="edge24" class="edge">
+<title>«hyperbolic.first_order.automatic_initial_jacobian»&#45;&gt;«hyperbolic.first_order.automatic_local_coordinates»</title>
+<path fill="none" stroke="#6b7280" d="M898.21,-230.98C936.49,-219.97 988.51,-205.01 1028.41,-193.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1034.21,-191.87 1029.19,-196.12 1031.32,-192.7 1028.44,-193.53 1028.44,-193.53 1028.44,-193.53 1031.32,-192.7 1027.69,-190.93 1034.21,-191.87 1034.21,-191.87"/>
+</g>
+<!-- «hyperbolic.first_order.characteristic_system» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Echaracteristic&#45;005Fsystem&#45;00BB" class="node">
+<title>«hyperbolic.first_order.characteristic_system»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Echaracteristic&#45;005Fsystem&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___characteristic_system_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="616.5,-479.79 509.5,-479.79 509.5,-443.79 616.5,-443.79 616.5,-479.79"/>
+<text text-anchor="middle" x="563" y="-464.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="563" y="-453.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">characteristic_system</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.constraint_preserved» -->
+<g id="edge2" class="edge">
+<title>«hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.constraint_preserved»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M516.76,-443.73C502.02,-435.83 487.37,-424.84 479,-409.99 470.36,-394.66 473.24,-387.02 479,-370.39 482.47,-360.38 488.82,-350.84 495.45,-342.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="499.6,-337.98 497.73,-344.29 497.72,-340.32 495.76,-342.59 495.68,-342.53 495.61,-342.46 497.56,-340.19 493.64,-340.77 499.6,-337.98 499.6,-337.98"/>
+</g>
+<!-- «hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.local_flow_box» -->
+<g id="edge3" class="edge">
+<title>«hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.local_flow_box»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M509.24,-444.43C480.61,-435.22 445,-422.99 414,-409.99 363.03,-388.62 306.39,-359.18 270.51,-339.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="264.93,-336.76 271.49,-337.25 267.61,-338.1 270.25,-339.53 270.2,-339.62 270.16,-339.71 267.52,-338.28 268.92,-341.99 264.93,-336.76 264.93,-336.76"/>
+</g>
+<!-- «hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.characteristics_local» -->
+<g id="edge6" class="edge">
+<title>«hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.characteristics_local»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M604.34,-443.76C629.69,-433.32 662.12,-419.97 687.95,-409.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="693.69,-406.97 689.17,-411.75 690.95,-408.2 688.18,-409.35 688.14,-409.25 688.1,-409.16 690.88,-408.02 687.11,-406.76 693.69,-406.97 693.69,-406.97"/>
+</g>
+<!-- «hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.automatic_flow» -->
+<g id="edge8" class="edge">
+<title>«hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.automatic_flow»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M563,-443.58C563,-434.74 563,-423.83 563,-414.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="563,-408.2 565.7,-414.2 563.1,-411.2 563.1,-414.2 563,-414.2 562.9,-414.2 562.9,-411.2 560.3,-414.2 563,-408.2 563,-408.2"/>
+</g>
+<!-- «hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.noncharacteristic» -->
+<g id="edge9" class="edge">
+<title>«hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.noncharacteristic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M616.67,-461.37C674.77,-459.71 768.32,-450.2 837,-409.99 856.77,-398.41 850.47,-382.37 870,-370.39 923.29,-337.72 995.37,-326.02 1042.98,-321.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1049.24,-321.34 1043.48,-324.52 1046.26,-321.68 1043.27,-321.93 1043.26,-321.83 1043.25,-321.73 1046.24,-321.49 1043.04,-319.14 1049.24,-321.34 1049.24,-321.34"/>
+</g>
+<!-- «hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.compatible_gradient» -->
+<g id="edge10" class="edge">
+<title>«hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.compatible_gradient»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M525.16,-443.71C506.91,-434.74 485.1,-422.94 467,-409.99 438.34,-389.48 409.43,-360.95 390.94,-341.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="386.47,-336.71 392.55,-339.23 388.6,-338.82 390.65,-341.01 390.58,-341.08 390.51,-341.15 388.45,-338.96 388.61,-342.93 386.47,-336.71 386.47,-336.71"/>
+</g>
+<!-- «hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.automatic_initial_jacobian» -->
+<g id="edge20" class="edge">
+<title>«hyperbolic.first_order.characteristic_system»&#45;&gt;«hyperbolic.first_order.automatic_initial_jacobian»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M616.63,-457.04C682.73,-451.28 789.7,-437.85 817,-409.99 835.65,-390.96 842.52,-313.66 844.87,-273.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="845.21,-266.93 847.58,-273.07 845.15,-269.93 844.98,-272.93 844.88,-272.92 844.78,-272.92 844.95,-269.92 842.19,-272.77 845.21,-266.93 845.21,-266.93"/>
+</g>
+<!-- «hyperbolic.first_order.automatic_local_coordinates»&#45;&gt;«hyperbolic.first_order.local_existence» -->
+<g id="edge30" class="edge">
+<title>«hyperbolic.first_order.automatic_local_coordinates»&#45;&gt;«hyperbolic.first_order.local_existence»</title>
+<path fill="none" stroke="#6b7280" d="M1020.3,-161.24C956.48,-148.85 861.7,-130.43 800.12,-118.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="793.9,-117.26 800.31,-115.76 796.85,-117.84 799.79,-118.41 799.79,-118.41 799.79,-118.41 796.85,-117.84 799.28,-121.06 793.9,-117.26 793.9,-117.26"/>
+</g>
+<!-- «hyperbolic.first_order.local_existence»&#45;&gt;«hyperbolic.first_order.local_existence_from_c2_family» -->
+<g id="edge27" class="edge">
+<title>«hyperbolic.first_order.local_existence»&#45;&gt;«hyperbolic.first_order.local_existence_from_c2_family»</title>
+<path fill="none" stroke="#6b7280" d="M739,-87.49C739,-79.86 739,-70.72 739,-62.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="739,-56.06 741.7,-62.06 739,-59.06 739,-62.06 739,-62.06 739,-62.06 739,-59.06 736.3,-62.06 739,-56.06 739,-56.06"/>
+</g>
+<!-- «hyperbolic.first_order.local_characteristic_coordinates»&#45;&gt;«hyperbolic.first_order.automatic_local_coordinates» -->
+<g id="edge23" class="edge">
+<title>«hyperbolic.first_order.local_characteristic_coordinates»&#45;&gt;«hyperbolic.first_order.automatic_local_coordinates»</title>
+<path fill="none" stroke="#6b7280" d="M1091.63,-226.98C1091.07,-219.15 1090.41,-209.97 1089.81,-201.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1089.36,-195.39 1092.49,-201.18 1089.58,-198.38 1089.79,-201.38 1089.79,-201.38 1089.79,-201.38 1089.58,-198.38 1087.1,-201.57 1089.36,-195.39 1089.36,-195.39"/>
+</g>
+<!-- «hyperbolic.first_order.stationary_envelope» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Estationary&#45;005Fenvelope&#45;00BB" class="node">
+<title>«hyperbolic.first_order.stationary_envelope»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Estationary&#45;005Fenvelope&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___stationary_envelope_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="87" cy="-390.19" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="87" y="-393.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="87" y="-382.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">stationary_envelope</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.stationary_envelope»&#45;&gt;«hyperbolic.first_order.clairaut_envelope» -->
+<g id="edge16" class="edge">
+<title>«hyperbolic.first_order.stationary_envelope»&#45;&gt;«hyperbolic.first_order.clairaut_envelope»</title>
+<path fill="none" stroke="#6b7280" d="M86.45,-370.17C86.23,-362.35 85.96,-353.17 85.72,-344.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="85.55,-338.59 88.42,-344.51 85.63,-341.59 85.72,-344.59 85.72,-344.59 85.72,-344.59 85.63,-341.59 83.02,-344.66 85.55,-338.59 85.55,-338.59"/>
+</g>
+<!-- «hyperbolic.first_order.complete_integral» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Ecomplete&#45;005Fintegral&#45;00BB" class="node">
+<title>«hyperbolic.first_order.complete_integral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;002Ecomplete&#45;005Fintegral&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___first_order___complete_integral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="131.5,-479.79 42.5,-479.79 42.5,-443.79 131.5,-443.79 131.5,-479.79"/>
+<text text-anchor="middle" x="87" y="-464.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order</text>
+<text text-anchor="middle" x="87" y="-453.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">complete_integral</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order.complete_integral»&#45;&gt;«hyperbolic.first_order.stationary_envelope» -->
+<g id="edge33" class="edge">
+<title>«hyperbolic.first_order.complete_integral»&#45;&gt;«hyperbolic.first_order.stationary_envelope»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M87,-443.58C87,-435.34 87,-425.31 87,-416.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="87,-410.15 89.7,-416.15 87.1,-413.15 87.1,-416.15 87,-416.15 86.9,-416.15 86.9,-413.15 84.3,-416.15 87,-410.15 87,-410.15"/>
+</g>
+</g>
+</svg>

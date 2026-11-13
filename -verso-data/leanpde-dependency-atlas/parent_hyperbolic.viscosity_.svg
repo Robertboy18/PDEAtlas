@@ -1,0 +1,122 @@
+<svg data-node-count="8" data-edge-count="6" data-cluster-count="1" data-variant-key="parent:«hyperbolic.viscosity»" width="625pt" height="242pt"
+ viewBox="0.00 0.00 625.00 242.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 238.2)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-238.2 621,-238.2 621,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 597,-8 597,-8 603,-8 609,-14 609,-20 609,-20 609,-214.2 609,-214.2 609,-220.2 603,-226.2 597,-226.2 597,-226.2 20,-226.2 20,-226.2 14,-226.2 8,-220.2 8,-214.2 8,-214.2 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="308.5" y="-211" font-family="Helvetica" font-size="14.00">Viscosity solutions</text>
+</g>
+<!-- «hyperbolic.hj.hopf_lax_viscosity_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Ehopf&#45;005Flax&#45;005Fviscosity&#45;005Fsolution&#45;00BB" class="node">
+<title>«hyperbolic.hj.hopf_lax_viscosity_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Ehopf&#45;005Flax&#45;005Fviscosity&#45;005Fsolution&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___hj___hopf_lax_viscosity_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="140" cy="-107.4" rx="94.09" ry="19.6"/>
+<text text-anchor="middle" x="140" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">hj</text>
+<text text-anchor="middle" x="140" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">hopf_lax_viscosity_solution</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.hj.control_value_viscosity_ivp» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Econtrol&#45;005Fvalue&#45;005Fviscosity&#45;005Fivp&#45;00BB" class="node">
+<title>«hyperbolic.hj.control_value_viscosity_ivp»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Econtrol&#45;005Fvalue&#45;005Fviscosity&#45;005Fivp&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___hj___control_value_viscosity_ivp_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="109" cy="-35.8" rx="93.18" ry="19.6"/>
+<text text-anchor="middle" x="109" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">hj</text>
+<text text-anchor="middle" x="109" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">control_value_viscosity_ivp</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.hj.hopf_lax_viscosity_solution»&#45;&gt;«hyperbolic.hj.control_value_viscosity_ivp» -->
+<g id="edge4" class="edge">
+<title>«hyperbolic.hj.hopf_lax_viscosity_solution»&#45;&gt;«hyperbolic.hj.control_value_viscosity_ivp»</title>
+<path fill="none" stroke="#6b7280" d="M131.53,-87.38C127.98,-79.4 123.8,-70.02 120.01,-61.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="117.46,-55.79 122.37,-60.18 118.68,-58.53 119.9,-61.27 119.9,-61.27 119.9,-61.27 118.68,-58.53 117.44,-62.37 117.46,-55.79 117.46,-55.79"/>
+</g>
+<!-- «hyperbolic.hj.viscosity_ivp» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eviscosity&#45;005Fivp&#45;00BB" class="node">
+<title>«hyperbolic.hj.viscosity_ivp»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eviscosity&#45;005Fivp&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___hj___viscosity_ivp_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="368,-125.4 288,-125.4 288,-89.4 368,-89.4 368,-125.4"/>
+<text text-anchor="middle" x="328" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">hj.viscosity_ivp</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.hj.classical_to_spatial_viscosity» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eclassical&#45;005Fto&#45;005Fspatial&#45;005Fviscosity&#45;00BB" class="node">
+<title>«hyperbolic.hj.classical_to_spatial_viscosity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eclassical&#45;005Fto&#45;005Fspatial&#45;005Fviscosity&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___hj___classical_to_spatial_viscosity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="328" cy="-35.8" rx="100.32" ry="19.6"/>
+<text text-anchor="middle" x="328" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">hj</text>
+<text text-anchor="middle" x="328" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">classical_to_spatial_viscosity</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.hj.viscosity_ivp»&#45;&gt;«hyperbolic.hj.classical_to_spatial_viscosity» -->
+<g id="edge5" class="edge">
+<title>«hyperbolic.hj.viscosity_ivp»&#45;&gt;«hyperbolic.hj.classical_to_spatial_viscosity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M328,-89.19C328,-80.95 328,-70.92 328,-61.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="328,-55.76 330.7,-61.76 328.1,-58.76 328.1,-61.76 328,-61.76 327.9,-61.76 327.9,-58.76 325.3,-61.76 328,-55.76 328,-55.76"/>
+</g>
+<!-- «hyperbolic.hj.viscosity_ivp_sub_super» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eviscosity&#45;005Fivp&#45;005Fsub&#45;005Fsuper&#45;00BB" class="node">
+<title>«hyperbolic.hj.viscosity_ivp_sub_super»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eviscosity&#45;005Fivp&#45;005Fsub&#45;005Fsuper&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___hj___viscosity_ivp_sub_super_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="527" cy="-35.8" rx="73.98" ry="18"/>
+<text text-anchor="middle" x="527" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">hj.viscosity_ivp_sub_super</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.hj.viscosity_ivp»&#45;&gt;«hyperbolic.hj.viscosity_ivp_sub_super» -->
+<g id="edge6" class="edge">
+<title>«hyperbolic.hj.viscosity_ivp»&#45;&gt;«hyperbolic.hj.viscosity_ivp_sub_super»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M368.22,-92.1C372.53,-90.58 376.85,-89.05 381,-87.6 414.21,-75.93 451.72,-62.88 480.4,-52.93"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="486.38,-50.86 481.6,-55.37 483.58,-51.94 480.75,-52.92 480.72,-52.82 480.68,-52.73 483.52,-51.75 479.83,-50.27 486.38,-50.86 486.38,-50.86"/>
+</g>
+<!-- «hyperbolic.hj.viscosity_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eviscosity&#45;005Fsolution&#45;00BB" class="node">
+<title>«hyperbolic.hj.viscosity_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eviscosity&#45;005Fsolution&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___hj___viscosity_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="378.5,-195.2 277.5,-195.2 277.5,-159.2 378.5,-159.2 378.5,-195.2"/>
+<text text-anchor="middle" x="328" y="-174.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">hj.viscosity_solution</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.hj.viscosity_solution»&#45;&gt;«hyperbolic.hj.hopf_lax_viscosity_solution» -->
+<g id="edge1" class="edge">
+<title>«hyperbolic.hj.viscosity_solution»&#45;&gt;«hyperbolic.hj.hopf_lax_viscosity_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M280.56,-159.09C253.34,-149.27 219.16,-136.94 191.32,-126.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="185.48,-124.8 192.04,-124.29 188.34,-125.72 191.16,-126.74 191.12,-126.83 191.09,-126.93 188.27,-125.91 190.21,-129.37 185.48,-124.8 185.48,-124.8"/>
+</g>
+<!-- «hyperbolic.hj.viscosity_solution»&#45;&gt;«hyperbolic.hj.viscosity_ivp» -->
+<g id="edge2" class="edge">
+<title>«hyperbolic.hj.viscosity_solution»&#45;&gt;«hyperbolic.hj.viscosity_ivp»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M328,-159.09C328,-150.8 328,-140.72 328,-131.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="328,-125.74 330.7,-131.74 328.1,-128.74 328.1,-131.74 328,-131.74 327.9,-131.74 327.9,-128.74 325.3,-131.74 328,-125.74 328,-125.74"/>
+</g>
+<!-- «hyperbolic.hj.classical_to_viscosity» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eclassical&#45;005Fto&#45;005Fviscosity&#45;00BB" class="node">
+<title>«hyperbolic.hj.classical_to_viscosity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Eclassical&#45;005Fto&#45;005Fviscosity&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___hj___classical_to_viscosity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="461" cy="-107.4" rx="67.5" ry="18"/>
+<text text-anchor="middle" x="461" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">hj.classical_to_viscosity</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.hj.viscosity_solution»&#45;&gt;«hyperbolic.hj.classical_to_viscosity» -->
+<g id="edge3" class="edge">
+<title>«hyperbolic.hj.viscosity_solution»&#45;&gt;«hyperbolic.hj.classical_to_viscosity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M361.56,-159.09C381.12,-149.12 405.75,-136.56 425.61,-126.44"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="431.08,-123.65 426.96,-128.78 428.45,-125.1 425.78,-126.46 425.73,-126.37 425.69,-126.29 428.36,-124.92 424.51,-123.97 431.08,-123.65 431.08,-123.65"/>
+</g>
+<!-- «hyperbolic.hj.control_terminal_value» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Econtrol&#45;005Fterminal&#45;005Fvalue&#45;00BB" class="node">
+<title>«hyperbolic.hj.control_terminal_value»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehj&#45;002Econtrol&#45;005Fterminal&#45;005Fvalue&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___hj___control_terminal_value_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="134" cy="-177.2" rx="68.13" ry="18"/>
+<text text-anchor="middle" x="134" y="-174.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">hj.control_terminal_value</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

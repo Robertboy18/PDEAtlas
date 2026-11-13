@@ -1,0 +1,250 @@
+<svg data-node-count="17" data-edge-count="13" data-cluster-count="1" data-variant-key="parent:«foundations.coordinates»" width="860pt" height="385pt"
+ viewBox="0.00 0.00 860.00 385.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 381.39)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-381.39 856,-381.39 856,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 832,-8 832,-8 838,-8 844,-14 844,-20 844,-20 844,-357.39 844,-357.39 844,-363.39 838,-369.39 832,-369.39 832,-369.39 20,-369.39 20,-369.39 14,-369.39 8,-363.39 8,-357.39 8,-357.39 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="426" y="-354.19" font-family="Helvetica" font-size="14.00">Coordinate systems</text>
+</g>
+<!-- «foundations.coordinates.radial_laplacian» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eradial&#45;005Flaplacian&#45;00BB" class="node">
+<title>«foundations.coordinates.radial_laplacian»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eradial&#45;005Flaplacian&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___radial_laplacian_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="835.5,-336.59 702.5,-336.59 702.5,-300.59 835.5,-300.59 835.5,-336.59"/>
+<text text-anchor="middle" x="769" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates.radial_laplacian</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.polar_log» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Epolar&#45;005Flog&#45;00BB" class="node">
+<title>«foundations.coordinates.polar_log»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Epolar&#45;005Flog&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___polar_log_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="615" cy="-246.99" rx="59.62" ry="18"/>
+<text text-anchor="middle" x="615" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates.polar_log</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.radial_laplacian»&#45;&gt;«foundations.coordinates.polar_log» -->
+<g id="edge2" class="edge">
+<title>«foundations.coordinates.radial_laplacian»&#45;&gt;«foundations.coordinates.polar_log»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M731.33,-300.57C707.26,-289.69 676.17,-275.64 652.2,-264.81"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="646.57,-262.26 653.15,-262.27 649.35,-263.41 652.08,-264.64 652.04,-264.74 652,-264.83 649.27,-263.59 650.93,-267.2 646.57,-262.26 646.57,-262.26"/>
+</g>
+<!-- «foundations.coordinates.radial_power» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eradial&#45;005Fpower&#45;00BB" class="node">
+<title>«foundations.coordinates.radial_power»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eradial&#45;005Fpower&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___radial_power_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="768" cy="-246.99" rx="68.13" ry="18"/>
+<text text-anchor="middle" x="768" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates.radial_power</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.radial_laplacian»&#45;&gt;«foundations.coordinates.radial_power» -->
+<g id="edge6" class="edge">
+<title>«foundations.coordinates.radial_laplacian»&#45;&gt;«foundations.coordinates.radial_power»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M768.75,-300.39C768.63,-291.54 768.47,-280.63 768.33,-271.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="768.24,-265 771.03,-270.96 768.39,-268 768.43,-271 768.33,-271 768.23,-271 768.19,-268 765.63,-271.04 768.24,-265 768.24,-265"/>
+</g>
+<!-- «foundations.coordinates.spatial_gradient» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Espatial&#45;005Fgradient&#45;00BB" class="node">
+<title>«foundations.coordinates.spatial_gradient»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Espatial&#45;005Fgradient&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___spatial_gradient_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="384,-264.99 250,-264.99 250,-228.99 384,-228.99 384,-264.99"/>
+<text text-anchor="middle" x="317" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates.spatial_gradient</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.mixed_time_space» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Emixed&#45;005Ftime&#45;005Fspace&#45;00BB" class="node">
+<title>«foundations.coordinates.mixed_time_space»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Emixed&#45;005Ftime&#45;005Fspace&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___mixed_time_space_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="560" cy="-34" rx="83.27" ry="18"/>
+<text text-anchor="middle" x="560" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates.mixed_time_space</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.euclidean_sum_volume» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eeuclidean&#45;005Fsum&#45;005Fvolume&#45;00BB" class="node">
+<title>«foundations.coordinates.euclidean_sum_volume»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eeuclidean&#45;005Fsum&#45;005Fvolume&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___euclidean_sum_volume_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="597" cy="-318.59" rx="80.72" ry="19.6"/>
+<text text-anchor="middle" x="597" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates</text>
+<text text-anchor="middle" x="597" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">euclidean_sum_volume</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.polar_integral_iterated» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Epolar&#45;005Fintegral&#45;005Fiterated&#45;00BB" class="node">
+<title>«foundations.coordinates.polar_integral_iterated»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Epolar&#45;005Fintegral&#45;005Fiterated&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___polar_integral_iterated_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="149" cy="-246.99" rx="76.24" ry="19.6"/>
+<text text-anchor="middle" x="149" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates</text>
+<text text-anchor="middle" x="149" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">polar_integral_iterated</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.curry_uncurry» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Ecurry&#45;005Funcurry&#45;00BB" class="node">
+<title>«foundations.coordinates.curry_uncurry»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Ecurry&#45;005Funcurry&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___curry_uncurry_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="252.5,-193.4 125.5,-193.4 125.5,-157.4 252.5,-157.4 252.5,-193.4"/>
+<text text-anchor="middle" x="189" y="-172.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates.curry_uncurry</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.smoothness_transport» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Esmoothness&#45;005Ftransport&#45;00BB" class="node">
+<title>«foundations.coordinates.smoothness_transport»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Esmoothness&#45;005Ftransport&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___smoothness_transport_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="286" cy="-103.8" rx="77.56" ry="19.6"/>
+<text text-anchor="middle" x="286" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates</text>
+<text text-anchor="middle" x="286" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">smoothness_transport</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.curry_uncurry»&#45;&gt;«foundations.coordinates.smoothness_transport» -->
+<g id="edge12" class="edge">
+<title>«foundations.coordinates.curry_uncurry»&#45;&gt;«foundations.coordinates.smoothness_transport»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M212.98,-157.19C225.97,-147.87 242.15,-136.26 255.97,-126.35"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="260.95,-122.78 257.64,-128.47 258.57,-124.61 256.13,-126.36 256.07,-126.27 256.01,-126.19 258.45,-124.44 254.5,-124.08 260.95,-122.78 260.95,-122.78"/>
+</g>
+<!-- «foundations.coordinates.planar_polar_homogeneous» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eplanar&#45;005Fpolar&#45;005Fhomogeneous&#45;00BB" class="node">
+<title>«foundations.coordinates.planar_polar_homogeneous»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eplanar&#45;005Fpolar&#45;005Fhomogeneous&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___planar_polar_homogeneous_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="743" cy="-175.4" rx="92.76" ry="19.6"/>
+<text text-anchor="middle" x="743" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates</text>
+<text text-anchor="middle" x="743" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">planar_polar_homogeneous</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.radial_power»&#45;&gt;«foundations.coordinates.planar_polar_homogeneous» -->
+<g id="edge8" class="edge">
+<title>«foundations.coordinates.radial_power»&#45;&gt;«foundations.coordinates.planar_polar_homogeneous»</title>
+<path fill="none" stroke="#6b7280" d="M761.82,-228.79C758.83,-220.47 755.19,-210.33 751.91,-201.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="749.81,-195.36 754.38,-200.09 750.83,-198.18 751.84,-201.01 751.84,-201.01 751.84,-201.01 750.83,-198.18 749.3,-201.92 749.81,-195.36 749.81,-195.36"/>
+</g>
+<!-- «foundations.coordinates.bundled_projections» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Ebundled&#45;005Fprojections&#45;00BB" class="node">
+<title>«foundations.coordinates.bundled_projections»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Ebundled&#45;005Fprojections&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___bundled_projections_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="491.5,-336.59 392.5,-336.59 392.5,-300.59 491.5,-300.59 491.5,-336.59"/>
+<text text-anchor="middle" x="442" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates</text>
+<text text-anchor="middle" x="442" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">bundled_projections</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.bundled_projections»&#45;&gt;«foundations.coordinates.spatial_gradient» -->
+<g id="edge1" class="edge">
+<title>«foundations.coordinates.bundled_projections»&#45;&gt;«foundations.coordinates.spatial_gradient»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M411.42,-300.57C393.87,-290.79 371.72,-278.46 353.29,-268.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="347.7,-265.09 354.25,-265.65 350.37,-266.46 352.99,-267.92 352.94,-268 352.89,-268.09 350.27,-266.63 351.62,-270.36 347.7,-265.09 347.7,-265.09"/>
+</g>
+<!-- «foundations.coordinates.product_split» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eproduct&#45;005Fsplit&#45;00BB" class="node">
+<title>«foundations.coordinates.product_split»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eproduct&#45;005Fsplit&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___product_split_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="530.5,-264.99 409.5,-264.99 409.5,-228.99 530.5,-228.99 530.5,-264.99"/>
+<text text-anchor="middle" x="470" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates.product_split</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.bundled_projections»&#45;&gt;«foundations.coordinates.product_split» -->
+<g id="edge9" class="edge">
+<title>«foundations.coordinates.bundled_projections»&#45;&gt;«foundations.coordinates.product_split»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M448.92,-300.39C452.52,-291.46 456.95,-280.42 460.83,-270.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="463.16,-265 463.42,-271.58 462.13,-267.82 461.01,-270.6 460.92,-270.57 460.83,-270.53 461.95,-267.75 458.41,-269.56 463.16,-265 463.16,-265"/>
+</g>
+<!-- «foundations.coordinates.compact_cylinder_bound» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Ecompact&#45;005Fcylinder&#45;005Fbound&#45;00BB" class="node">
+<title>«foundations.coordinates.compact_cylinder_bound»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Ecompact&#45;005Fcylinder&#45;005Fbound&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___compact_cylinder_bound_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="363" cy="-175.4" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="363" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates</text>
+<text text-anchor="middle" x="363" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">compact_cylinder_bound</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.polar_integral» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Epolar&#45;005Fintegral&#45;00BB" class="node">
+<title>«foundations.coordinates.polar_integral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Epolar&#45;005Fintegral&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___polar_integral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="297" cy="-318.59" rx="70.17" ry="18"/>
+<text text-anchor="middle" x="297" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates.polar_integral</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.polar_integral»&#45;&gt;«foundations.coordinates.polar_integral_iterated» -->
+<g id="edge4" class="edge">
+<title>«foundations.coordinates.polar_integral»&#45;&gt;«foundations.coordinates.polar_integral_iterated»</title>
+<path fill="none" stroke="#6b7280" d="M264.89,-302.49C242.93,-292.16 213.63,-278.39 189.99,-267.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="184.42,-264.65 191,-264.76 187.13,-265.93 189.85,-267.2 189.85,-267.2 189.85,-267.2 187.13,-265.93 188.7,-269.65 184.42,-264.65 184.42,-264.65"/>
+</g>
+<!-- «foundations.coordinates.product_split»&#45;&gt;«foundations.coordinates.curry_uncurry» -->
+<g id="edge5" class="edge">
+<title>«foundations.coordinates.product_split»&#45;&gt;«foundations.coordinates.curry_uncurry»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M409.47,-230.34C405.25,-229.27 401.06,-228.21 397,-227.2 338.44,-212.56 323.63,-209.55 265,-195.2 263.02,-194.71 261.01,-194.22 258.98,-193.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="252.85,-192.21 259.32,-191.02 255.79,-192.83 258.7,-193.55 258.68,-193.65 258.66,-193.74 255.74,-193.03 258.04,-196.27 252.85,-192.21 252.85,-192.21"/>
+</g>
+<!-- «foundations.coordinates.product_split»&#45;&gt;«foundations.coordinates.compact_cylinder_bound» -->
+<g id="edge7" class="edge">
+<title>«foundations.coordinates.product_split»&#45;&gt;«foundations.coordinates.compact_cylinder_bound»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M443.82,-228.97C429.26,-219.5 411.01,-207.62 395.53,-197.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="390.4,-194.22 396.9,-195.23 392.97,-195.77 395.48,-197.41 395.43,-197.49 395.37,-197.57 392.86,-195.94 393.96,-199.75 390.4,-194.22 390.4,-194.22"/>
+</g>
+<!-- «foundations.coordinates.product_split»&#45;&gt;«foundations.coordinates.smoothness_transport» -->
+<g id="edge11" class="edge">
+<title>«foundations.coordinates.product_split»&#45;&gt;«foundations.coordinates.smoothness_transport»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M473.49,-228.87C476.51,-208.92 478.04,-176.09 461,-155.6 438.34,-128.35 402,-115.22 368.29,-109.07"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="362.03,-108 368.4,-106.35 365,-108.41 367.96,-108.92 367.95,-109.01 367.93,-109.11 364.97,-108.61 367.49,-111.68 362.03,-108 362.03,-108"/>
+</g>
+<!-- «foundations.coordinates.slice_derivatives» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eslice&#45;005Fderivatives&#45;00BB" class="node">
+<title>«foundations.coordinates.slice_derivatives»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eslice&#45;005Fderivatives&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___slice_derivatives_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="560" cy="-175.4" rx="59.29" ry="19.6"/>
+<text text-anchor="middle" x="560" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates</text>
+<text text-anchor="middle" x="560" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">slice_derivatives</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.product_split»&#45;&gt;«foundations.coordinates.slice_derivatives» -->
+<g id="edge13" class="edge">
+<title>«foundations.coordinates.product_split»&#45;&gt;«foundations.coordinates.slice_derivatives»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M492.25,-228.79C504.38,-219.41 519.5,-207.71 532.39,-197.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="537.38,-193.89 534.29,-199.69 535.07,-195.8 532.7,-197.64 532.64,-197.56 532.58,-197.48 534.95,-195.64 530.99,-195.42 537.38,-193.89 537.38,-193.89"/>
+</g>
+<!-- «foundations.coordinates.compactified_radial_modes» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Ecompactified&#45;005Fradial&#45;005Fmodes&#45;00BB" class="node">
+<title>«foundations.coordinates.compactified_radial_modes»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Ecompactified&#45;005Fradial&#45;005Fmodes&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___compactified_radial_modes_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="109" cy="-318.59" rx="92.76" ry="19.6"/>
+<text text-anchor="middle" x="109" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates</text>
+<text text-anchor="middle" x="109" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">compactified_radial_modes</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.slice_regularity» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eslice&#45;005Fregularity&#45;00BB" class="node">
+<title>«foundations.coordinates.slice_regularity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;002Eslice&#45;005Fregularity&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___coordinates___slice_regularity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="560" cy="-103.8" rx="74.11" ry="18"/>
+<text text-anchor="middle" x="560" y="-101.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">coordinates.slice_regularity</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates.slice_regularity»&#45;&gt;«foundations.coordinates.mixed_time_space» -->
+<g id="edge3" class="edge">
+<title>«foundations.coordinates.slice_regularity»&#45;&gt;«foundations.coordinates.mixed_time_space»</title>
+<path fill="none" stroke="#6b7280" d="M560,-85.69C560,-77.4 560,-67.33 560,-58.35"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="560,-52.34 562.7,-58.34 560,-55.34 560,-58.34 560,-58.34 560,-58.34 560,-55.34 557.3,-58.34 560,-52.34 560,-52.34"/>
+</g>
+<!-- «foundations.coordinates.slice_derivatives»&#45;&gt;«foundations.coordinates.slice_regularity» -->
+<g id="edge10" class="edge">
+<title>«foundations.coordinates.slice_derivatives»&#45;&gt;«foundations.coordinates.slice_regularity»</title>
+<path fill="none" stroke="#6b7280" d="M560,-155.38C560,-146.96 560,-136.97 560,-128.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="560,-121.89 562.7,-127.89 560,-124.89 560,-127.89 560,-127.89 560,-127.89 560,-124.89 557.3,-127.89 560,-121.89 560,-121.89"/>
+</g>
+</g>
+</svg>

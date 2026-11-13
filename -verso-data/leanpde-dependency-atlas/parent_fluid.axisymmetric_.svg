@@ -1,0 +1,67 @@
+<svg data-node-count="4" data-edge-count="3" data-cluster-count="1" data-variant-key="parent:«fluid.axisymmetric»" width="333pt" height="242pt"
+ viewBox="0.00 0.00 333.00 242.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 238.2)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-238.2 329,-238.2 329,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 305,-8 305,-8 311,-8 317,-14 317,-20 317,-20 317,-214.2 317,-214.2 317,-220.2 311,-226.2 305,-226.2 305,-226.2 20,-226.2 20,-226.2 14,-226.2 8,-220.2 8,-214.2 8,-214.2 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="162.5" y="-211" font-family="Helvetica" font-size="14.00">Axisymmetric coordinates and streamfunctions</text>
+</g>
+<!-- «fluid.axisymmetric.rotation_geometry» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;002Erotation&#45;005Fgeometry&#45;00BB" class="node">
+<title>«fluid.axisymmetric.rotation_geometry»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;002Erotation&#45;005Fgeometry&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric___rotation_geometry_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="80" cy="-107.4" rx="64.19" ry="19.6"/>
+<text text-anchor="middle" x="80" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric</text>
+<text text-anchor="middle" x="80" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">rotation_geometry</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric.streamfunction» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;002Estreamfunction&#45;00BB" class="node">
+<title>«fluid.axisymmetric.streamfunction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;002Estreamfunction&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric___streamfunction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="308.5,-125.4 169.5,-125.4 169.5,-89.4 308.5,-89.4 308.5,-125.4"/>
+<text text-anchor="middle" x="239" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric.streamfunction</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric.streamfunction_identities» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;002Estreamfunction&#45;005Fidentities&#45;00BB" class="node">
+<title>«fluid.axisymmetric.streamfunction_identities»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;002Estreamfunction&#45;005Fidentities&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric___streamfunction_identities_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="223" cy="-35.8" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="223" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric</text>
+<text text-anchor="middle" x="223" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">streamfunction_identities</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric.streamfunction»&#45;&gt;«fluid.axisymmetric.streamfunction_identities» -->
+<g id="edge3" class="edge">
+<title>«fluid.axisymmetric.streamfunction»&#45;&gt;«fluid.axisymmetric.streamfunction_identities»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M235.04,-89.19C233.15,-80.95 230.84,-70.92 228.76,-61.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="227.36,-55.76 231.34,-61 228.13,-58.66 228.8,-61.59 228.7,-61.61 228.61,-61.63 227.93,-58.71 226.07,-62.21 227.36,-55.76 227.36,-55.76"/>
+</g>
+<!-- «fluid.axisymmetric.coordinates» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;002Ecoordinates&#45;00BB" class="node">
+<title>«fluid.axisymmetric.coordinates»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;002Ecoordinates&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___axisymmetric___coordinates_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="221,-195.2 97,-195.2 97,-159.2 221,-159.2 221,-195.2"/>
+<text text-anchor="middle" x="159" y="-174.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">axisymmetric.coordinates</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric.coordinates»&#45;&gt;«fluid.axisymmetric.rotation_geometry» -->
+<g id="edge1" class="edge">
+<title>«fluid.axisymmetric.coordinates»&#45;&gt;«fluid.axisymmetric.rotation_geometry»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M139.06,-159.09C128.83,-150.3 116.24,-139.5 105.32,-130.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="100.76,-126.21 107.07,-128.07 103.1,-128.09 105.37,-130.04 105.31,-130.12 105.24,-130.19 102.97,-128.24 103.55,-132.17 100.76,-126.21 100.76,-126.21"/>
+</g>
+<!-- «fluid.axisymmetric.coordinates»&#45;&gt;«fluid.axisymmetric.streamfunction» -->
+<g id="edge2" class="edge">
+<title>«fluid.axisymmetric.coordinates»&#45;&gt;«fluid.axisymmetric.streamfunction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M179.19,-159.09C189.8,-150.09 202.9,-138.99 214.13,-129.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="218.82,-125.5 215.99,-131.44 216.6,-127.52 214.31,-129.46 214.24,-129.38 214.18,-129.3 216.47,-127.36 212.5,-127.32 218.82,-125.5 218.82,-125.5"/>
+</g>
+</g>
+</svg>

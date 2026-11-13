@@ -1,0 +1,1 @@
+window.docContents[12].resolve({"/Parabolic-Equations/#PDEAtlas--Parabolic-Equations--Classical-Heat-Flow--The-Gaussian-Heat-Kernel":{"contents":"\n\n\n\n","context":"PDEAtlas\u0009Parabolic Equations\u0009Classical Heat Flow","header":"6.2.2. The Gaussian Heat Kernel","id":"/Parabolic-Equations/#PDEAtlas--Parabolic-Equations--Classical-Heat-Flow--The-Gaussian-Heat-Kernel"}});

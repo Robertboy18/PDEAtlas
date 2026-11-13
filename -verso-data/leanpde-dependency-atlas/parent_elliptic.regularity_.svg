@@ -1,0 +1,344 @@
+<svg data-node-count="22" data-edge-count="21" data-cluster-count="1" data-variant-key="parent:«elliptic.regularity»" width="904pt" height="450pt"
+ viewBox="0.00 0.00 904.00 449.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 445.79)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-445.79 900,-445.79 900,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 876,-8 876,-8 882,-8 888,-14 888,-20 888,-20 888,-421.79 888,-421.79 888,-427.79 882,-433.79 876,-433.79 876,-433.79 20,-433.79 20,-433.79 14,-433.79 8,-427.79 8,-421.79 8,-421.79 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="448" y="-418.59" font-family="Helvetica" font-size="14.00">Elliptic regularity</text>
+</g>
+<!-- «elliptic.regularity.h2.principal» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Eprincipal&#45;00BB" class="node">
+<title>«elliptic.regularity.h2.principal»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Eprincipal&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___h2___principal_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="639" cy="-241.6" rx="35.34" ry="18"/>
+<text text-anchor="middle" x="639" y="-239.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">h2.principal</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.all_orders» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eall&#45;005Forders&#45;00BB" class="node">
+<title>«elliptic.regularity.all_orders»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eall&#45;005Forders&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___all_orders_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="639" cy="-173.6" rx="55.04" ry="18"/>
+<text text-anchor="middle" x="639" y="-171.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.all_orders</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.h2.principal»&#45;&gt;«elliptic.regularity.all_orders» -->
+<g id="edge9" class="edge">
+<title>«elliptic.regularity.h2.principal»&#45;&gt;«elliptic.regularity.all_orders»</title>
+<path fill="none" stroke="#6b7280" d="M639,-223.26C639,-215.59 639,-206.45 639,-198.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="639,-192.05 641.7,-198.05 639,-195.05 639,-198.05 639,-198.05 639,-198.05 639,-195.05 636.3,-198.05 639,-192.05 639,-192.05"/>
+</g>
+<!-- «elliptic.regularity.h2.global» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Eglobal&#45;00BB" class="node">
+<title>«elliptic.regularity.h2.global»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Eglobal&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___h2___global_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="460" cy="-173.6" rx="29.49" ry="18"/>
+<text text-anchor="middle" x="460" y="-171.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">h2.global</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.h2.principal»&#45;&gt;«elliptic.regularity.h2.global» -->
+<g id="edge17" class="edge">
+<title>«elliptic.regularity.h2.principal»&#45;&gt;«elliptic.regularity.h2.global»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M611.03,-230.29C578.22,-218.19 524.02,-198.2 490.25,-185.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="484.61,-183.67 491.17,-183.21 487.54,-184.38 490.36,-185.42 490.24,-185.75 490.12,-186.08 487.3,-185.04 489.3,-188.28 484.61,-183.67 484.61,-183.67"/>
+</g>
+<!-- «elliptic.regularity.unit_ball_boundary_cover» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eunit&#45;005Fball&#45;005Fboundary&#45;005Fcover&#45;00BB" class="node">
+<title>«elliptic.regularity.unit_ball_boundary_cover»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eunit&#45;005Fball&#45;005Fboundary&#45;005Fcover&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___unit_ball_boundary_cover_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="234.5,-329.4 111.5,-329.4 111.5,-293.4 234.5,-293.4 234.5,-329.4"/>
+<text text-anchor="middle" x="173" y="-314.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="173" y="-303.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">unit_ball_boundary_cover</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.concrete_unit_ball_atlas» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Econcrete&#45;005Funit&#45;005Fball&#45;005Fatlas&#45;00BB" class="node">
+<title>«elliptic.regularity.concrete_unit_ball_atlas»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Econcrete&#45;005Funit&#45;005Fball&#45;005Fatlas&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___concrete_unit_ball_atlas_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="389,-259.6 271,-259.6 271,-223.6 389,-223.6 389,-259.6"/>
+<text text-anchor="middle" x="330" y="-244.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="330" y="-233.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">concrete_unit_ball_atlas</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.unit_ball_boundary_cover»&#45;&gt;«elliptic.regularity.concrete_unit_ball_atlas» -->
+<g id="edge11" class="edge">
+<title>«elliptic.regularity.unit_ball_boundary_cover»&#45;&gt;«elliptic.regularity.concrete_unit_ball_atlas»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M212.62,-293.29C234.56,-283.81 261.92,-272 284.71,-262.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="290.39,-259.7 285.96,-264.56 287.68,-260.98 284.93,-262.17 284.89,-262.08 284.85,-261.99 287.6,-260.8 283.82,-259.6 290.39,-259.7 290.39,-259.7"/>
+</g>
+<!-- «elliptic.regularity.h2.boundary_piece» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Eboundary&#45;005Fpiece&#45;00BB" class="node">
+<title>«elliptic.regularity.h2.boundary_piece»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Eboundary&#45;005Fpiece&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___h2___boundary_piece_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="639" cy="-311.4" rx="53.77" ry="18"/>
+<text text-anchor="middle" x="639" y="-308.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">h2.boundary_piece</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.h2.boundary_piece»&#45;&gt;«elliptic.regularity.h2.principal» -->
+<g id="edge2" class="edge">
+<title>«elliptic.regularity.h2.boundary_piece»&#45;&gt;«elliptic.regularity.h2.principal»</title>
+<path fill="none" stroke="#6b7280" d="M639,-293.29C639,-285 639,-274.92 639,-265.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="639,-259.94 641.7,-265.94 639,-262.94 639,-265.94 639,-265.94 639,-265.94 639,-262.94 636.3,-265.94 639,-259.94 639,-259.94"/>
+</g>
+<!-- «elliptic.regularity.higher.local» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Ehigher&#45;002Elocal&#45;00BB" class="node">
+<title>«elliptic.regularity.higher.local»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Ehigher&#45;002Elocal&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___higher___local_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="51" cy="-311.4" rx="35.34" ry="18"/>
+<text text-anchor="middle" x="51" y="-308.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">higher.local</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.c2_boundary_atlas» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Ec2&#45;005Fboundary&#45;005Fatlas&#45;00BB" class="node">
+<title>«elliptic.regularity.c2_boundary_atlas»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Ec2&#45;005Fboundary&#45;005Fatlas&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___c2_boundary_atlas_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="707.5,-400.99 570.5,-400.99 570.5,-364.99 707.5,-364.99 707.5,-400.99"/>
+<text text-anchor="middle" x="639" y="-380.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.c2_boundary_atlas</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.c2_boundary_atlas»&#45;&gt;«elliptic.regularity.h2.boundary_piece» -->
+<g id="edge4" class="edge">
+<title>«elliptic.regularity.c2_boundary_atlas»&#45;&gt;«elliptic.regularity.h2.boundary_piece»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M639,-364.79C639,-355.94 639,-345.03 639,-335.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="639,-329.4 641.7,-335.4 639.1,-332.4 639.1,-335.4 639,-335.4 638.9,-335.4 638.9,-332.4 636.3,-335.4 639,-329.4 639,-329.4"/>
+</g>
+<!-- «elliptic.regularity.flattening_chart_constructor» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eflattening&#45;005Fchart&#45;005Fconstructor&#45;00BB" class="node">
+<title>«elliptic.regularity.flattening_chart_constructor»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eflattening&#45;005Fchart&#45;005Fconstructor&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___flattening_chart_constructor_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="560,-329.4 426,-329.4 426,-293.4 560,-293.4 560,-329.4"/>
+<text text-anchor="middle" x="493" y="-314.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="493" y="-303.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">flattening_chart_constructor</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.c2_boundary_atlas»&#45;&gt;«elliptic.regularity.flattening_chart_constructor» -->
+<g id="edge20" class="edge">
+<title>«elliptic.regularity.c2_boundary_atlas»&#45;&gt;«elliptic.regularity.flattening_chart_constructor»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M603.28,-364.97C582.43,-355.03 556.02,-342.44 534.27,-332.07"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="528.85,-329.49 535.43,-329.63 531.6,-330.69 534.31,-331.98 534.27,-332.07 534.23,-332.16 531.52,-330.87 533.11,-334.51 528.85,-329.49 528.85,-329.49"/>
+</g>
+<!-- «elliptic.regularity.h2.interior_piece» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Einterior&#45;005Fpiece&#45;00BB" class="node">
+<title>«elliptic.regularity.h2.interior_piece»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Einterior&#45;005Fpiece&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___h2___interior_piece_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="786" cy="-311.4" rx="47.79" ry="18"/>
+<text text-anchor="middle" x="786" y="-308.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">h2.interior_piece</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.h2.interior_piece»&#45;&gt;«elliptic.regularity.h2.principal» -->
+<g id="edge1" class="edge">
+<title>«elliptic.regularity.h2.interior_piece»&#45;&gt;«elliptic.regularity.h2.principal»</title>
+<path fill="none" stroke="#6b7280" d="M756.96,-297C731.91,-285.45 695.83,-268.81 670.18,-256.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="664.55,-254.38 671.12,-254.44 667.27,-255.64 669.99,-256.89 669.99,-256.89 669.99,-256.89 667.27,-255.64 668.86,-259.34 664.55,-254.38 664.55,-254.38"/>
+</g>
+<!-- «elliptic.regularity.classical_on_closure_embedding» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eclassical&#45;005Fon&#45;005Fclosure&#45;005Fembedding&#45;00BB" class="node">
+<title>«elliptic.regularity.classical_on_closure_embedding»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eclassical&#45;005Fon&#45;005Fclosure&#45;005Fembedding&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___classical_on_closure_embedding_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="607" cy="-103.8" rx="110.12" ry="19.6"/>
+<text text-anchor="middle" x="607" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="607" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">classical_on_closure_embedding</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.smooth_boundary» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Esmooth&#45;005Fboundary&#45;00BB" class="node">
+<title>«elliptic.regularity.smooth_boundary»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Esmooth&#45;005Fboundary&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___smooth_boundary_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="706" cy="-34" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="706" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.smooth_boundary</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.classical_on_closure_embedding»&#45;&gt;«elliptic.regularity.smooth_boundary» -->
+<g id="edge14" class="edge">
+<title>«elliptic.regularity.classical_on_closure_embedding»&#45;&gt;«elliptic.regularity.smooth_boundary»</title>
+<path fill="none" stroke="#6b7280" d="M633.79,-84.45C647.14,-75.31 663.3,-64.25 676.94,-54.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="682.23,-51.28 678.8,-56.9 679.75,-52.98 677.28,-54.67 677.28,-54.67 677.28,-54.67 679.75,-52.98 675.75,-52.44 682.23,-51.28 682.23,-51.28"/>
+</g>
+<!-- «elliptic.regularity.all_order_data» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eall&#45;005Forder&#45;005Fdata&#45;00BB" class="node">
+<title>«elliptic.regularity.all_order_data»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eall&#45;005Forder&#45;005Fdata&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___all_order_data_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="868.5,-191.6 753.5,-191.6 753.5,-155.6 868.5,-155.6 868.5,-191.6"/>
+<text text-anchor="middle" x="811" y="-171.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.all_order_data</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.interior_smooth» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Einterior&#45;005Fsmooth&#45;00BB" class="node">
+<title>«elliptic.regularity.interior_smooth»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Einterior&#45;005Fsmooth&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___interior_smooth_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="811" cy="-103.8" rx="68.77" ry="18"/>
+<text text-anchor="middle" x="811" y="-101.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.interior_smooth</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.all_order_data»&#45;&gt;«elliptic.regularity.interior_smooth» -->
+<g id="edge19" class="edge">
+<title>«elliptic.regularity.all_order_data»&#45;&gt;«elliptic.regularity.interior_smooth»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M811,-155.49C811,-147.2 811,-137.12 811,-128.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="811,-122.14 813.7,-128.14 811.1,-125.14 811.1,-128.14 811,-128.14 810.9,-128.14 810.9,-125.14 808.3,-128.14 811,-122.14 811,-122.14"/>
+</g>
+<!-- «elliptic.regularity.global_graph_charts» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eglobal&#45;005Fgraph&#45;005Fcharts&#45;00BB" class="node">
+<title>«elliptic.regularity.global_graph_charts»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eglobal&#45;005Fgraph&#45;005Fcharts&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___global_graph_charts_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="330" cy="-311.4" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="330" y="-314.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="330" y="-303.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">global_graph_charts</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.global_graph_charts»&#45;&gt;«elliptic.regularity.concrete_unit_ball_atlas» -->
+<g id="edge12" class="edge">
+<title>«elliptic.regularity.global_graph_charts»&#45;&gt;«elliptic.regularity.concrete_unit_ball_atlas»</title>
+<path fill="none" stroke="#6b7280" d="M330,-291.51C330,-283.64 330,-274.42 330,-266.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="330,-259.99 332.7,-265.99 330,-262.99 330,-265.99 330,-265.99 330,-265.99 330,-262.99 327.3,-265.99 330,-259.99 330,-259.99"/>
+</g>
+<!-- «elliptic.regularity.concrete_interval_atlas» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Econcrete&#45;005Finterval&#45;005Fatlas&#45;00BB" class="node">
+<title>«elliptic.regularity.concrete_interval_atlas»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Econcrete&#45;005Finterval&#45;005Fatlas&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___concrete_interval_atlas_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="549.5,-259.6 436.5,-259.6 436.5,-223.6 549.5,-223.6 549.5,-259.6"/>
+<text text-anchor="middle" x="493" y="-244.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="493" y="-233.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">concrete_interval_atlas</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.higher.cutoff_localization» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Ehigher&#45;002Ecutoff&#45;005Flocalization&#45;00BB" class="node">
+<title>«elliptic.regularity.higher.cutoff_localization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Ehigher&#45;002Ecutoff&#45;005Flocalization&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___higher___cutoff_localization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="477" cy="-382.99" rx="68.13" ry="18"/>
+<text text-anchor="middle" x="477" y="-380.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">higher.cutoff_localization</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.higher.cutoff_localization»&#45;&gt;«elliptic.regularity.higher.local» -->
+<g id="edge6" class="edge">
+<title>«elliptic.regularity.higher.cutoff_localization»&#45;&gt;«elliptic.regularity.higher.local»</title>
+<path fill="none" stroke="#6b7280" d="M429.82,-369.89C419.08,-367.42 407.69,-365.02 397,-363.2 265.69,-340.81 228.38,-362.88 99,-331.2 93.51,-329.85 87.81,-328.03 82.33,-326.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="76.5,-323.84 83.07,-323.43 79.3,-324.9 82.11,-325.96 82.11,-325.96 82.11,-325.96 79.3,-324.9 81.16,-328.48 76.5,-323.84 76.5,-323.84"/>
+</g>
+<!-- «elliptic.regularity.coefficient_extension» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Ecoefficient&#45;005Fextension&#45;00BB" class="node">
+<title>«elliptic.regularity.coefficient_extension»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Ecoefficient&#45;005Fextension&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___coefficient_extension_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="806" cy="-382.99" rx="73.58" ry="19.6"/>
+<text text-anchor="middle" x="806" y="-385.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="806" y="-374.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">coefficient_extension</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.coefficient_extension»&#45;&gt;«elliptic.regularity.h2.interior_piece» -->
+<g id="edge7" class="edge">
+<title>«elliptic.regularity.coefficient_extension»&#45;&gt;«elliptic.regularity.h2.interior_piece»</title>
+<path fill="none" stroke="#6b7280" d="M800.53,-362.98C798.09,-354.47 795.19,-344.38 792.62,-335.45"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="790.91,-329.49 795.16,-334.51 791.74,-332.37 792.57,-335.26 792.57,-335.26 792.57,-335.26 791.74,-332.37 789.97,-336 790.91,-329.49 790.91,-329.49"/>
+</g>
+<!-- «elliptic.regularity.h2.one_dimensional_poisson» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Eone&#45;005Fdimensional&#45;005Fpoisson&#45;00BB" class="node">
+<title>«elliptic.regularity.h2.one_dimensional_poisson»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Eone&#45;005Fdimensional&#45;005Fpoisson&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___h2___one_dimensional_poisson_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="306" cy="-382.99" rx="78.06" ry="18"/>
+<text text-anchor="middle" x="306" y="-380.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">h2.one_dimensional_poisson</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.full_operator_bootstrap» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Efull&#45;005Foperator&#45;005Fbootstrap&#45;00BB" class="node">
+<title>«elliptic.regularity.full_operator_bootstrap»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Efull&#45;005Foperator&#45;005Fbootstrap&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___full_operator_bootstrap_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="392" cy="-103.8" rx="79.39" ry="19.6"/>
+<text text-anchor="middle" x="392" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="392" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">full_operator_bootstrap</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.all_orders»&#45;&gt;«elliptic.regularity.full_operator_bootstrap» -->
+<g id="edge15" class="edge">
+<title>«elliptic.regularity.all_orders»&#45;&gt;«elliptic.regularity.full_operator_bootstrap»</title>
+<path fill="none" stroke="#6b7280" d="M598.21,-161.4C557.69,-150.28 495.19,-133.12 449.61,-120.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="443.58,-118.96 450.08,-117.94 446.47,-119.75 449.36,-120.54 449.36,-120.54 449.36,-120.54 446.47,-119.75 448.65,-123.15 443.58,-118.96 443.58,-118.96"/>
+</g>
+<!-- «elliptic.regularity.all_orders»&#45;&gt;«elliptic.regularity.interior_smooth» -->
+<g id="edge18" class="edge">
+<title>«elliptic.regularity.all_orders»&#45;&gt;«elliptic.regularity.interior_smooth»</title>
+<path fill="none" stroke="#6b7280" d="M672.98,-159.2C700.52,-148.35 739.45,-133 768.95,-121.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="774.71,-119.1 770.12,-123.81 771.92,-120.2 769.13,-121.3 769.13,-121.3 769.13,-121.3 771.92,-120.2 768.14,-118.79 774.71,-119.1 774.71,-119.1"/>
+</g>
+<!-- «elliptic.regularity.h2.global»&#45;&gt;«elliptic.regularity.full_operator_bootstrap» -->
+<g id="edge16" class="edge">
+<title>«elliptic.regularity.h2.global»&#45;&gt;«elliptic.regularity.full_operator_bootstrap»</title>
+<path fill="none" stroke="#6b7280" d="M445.25,-157.89C436.37,-149.04 424.89,-137.59 414.86,-127.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="410.37,-123.11 416.52,-125.44 412.49,-125.23 414.62,-127.35 414.62,-127.35 414.62,-127.35 412.49,-125.23 412.71,-129.26 410.37,-123.11 410.37,-123.11"/>
+</g>
+<!-- «elliptic.regularity.interior_smooth»&#45;&gt;«elliptic.regularity.smooth_boundary» -->
+<g id="edge13" class="edge">
+<title>«elliptic.regularity.interior_smooth»&#45;&gt;«elliptic.regularity.smooth_boundary»</title>
+<path fill="none" stroke="#6b7280" d="M786.38,-86.9C771.35,-77.2 752.03,-64.72 736.09,-54.43"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="730.83,-51.03 737.33,-52.02 733.35,-52.66 735.87,-54.29 735.87,-54.29 735.87,-54.29 733.35,-52.66 734.4,-56.55 730.83,-51.03 730.83,-51.03"/>
+</g>
+<!-- «elliptic.regularity.h2.local» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Elocal&#45;00BB" class="node">
+<title>«elliptic.regularity.h2.local»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Eh2&#45;002Elocal&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___h2___local_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="43" cy="-382.99" rx="27" ry="18"/>
+<text text-anchor="middle" x="43" y="-380.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">h2.local</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.h2.local»&#45;&gt;«elliptic.regularity.higher.local» -->
+<g id="edge5" class="edge">
+<title>«elliptic.regularity.h2.local»&#45;&gt;«elliptic.regularity.higher.local»</title>
+<path fill="none" stroke="#6b7280" d="M44.98,-364.79C45.99,-355.94 47.25,-345.03 48.35,-335.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="49.05,-329.4 51.04,-335.67 48.7,-332.38 48.36,-335.36 48.36,-335.36 48.36,-335.36 48.7,-332.38 45.68,-335.06 49.05,-329.4 49.05,-329.4"/>
+</g>
+<!-- «elliptic.regularity.finite_boundary_cover» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Efinite&#45;005Fboundary&#45;005Fcover&#45;00BB" class="node">
+<title>«elliptic.regularity.finite_boundary_cover»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;002Efinite&#45;005Fboundary&#45;005Fcover&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___regularity___finite_boundary_cover_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="203,-400.99 95,-400.99 95,-364.99 203,-364.99 203,-400.99"/>
+<text text-anchor="middle" x="149" y="-385.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="149" y="-374.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">finite_boundary_cover</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity.finite_boundary_cover»&#45;&gt;«elliptic.regularity.unit_ball_boundary_cover» -->
+<g id="edge3" class="edge">
+<title>«elliptic.regularity.finite_boundary_cover»&#45;&gt;«elliptic.regularity.unit_ball_boundary_cover»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M154.93,-364.79C158.01,-355.86 161.82,-344.82 165.14,-335.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="167.14,-329.4 167.73,-335.96 166.25,-332.27 165.27,-335.11 165.18,-335.08 165.09,-335.04 166.06,-332.21 162.63,-334.2 167.14,-329.4 167.14,-329.4"/>
+</g>
+<!-- «elliptic.regularity.finite_boundary_cover»&#45;&gt;«elliptic.regularity.flattening_chart_constructor» -->
+<g id="edge21" class="edge">
+<title>«elliptic.regularity.finite_boundary_cover»&#45;&gt;«elliptic.regularity.flattening_chart_constructor»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M203.26,-366C207.22,-365 211.16,-364.05 215,-363.2 302.02,-343.84 325.56,-348.51 413,-331.2 415.23,-330.75 417.49,-330.29 419.78,-329.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="425.86,-328.54 420.54,-332.42 422.94,-329.26 420.01,-329.87 419.98,-329.78 419.96,-329.68 422.9,-329.06 419.43,-327.14 425.86,-328.54 425.86,-328.54"/>
+</g>
+<!-- «elliptic.regularity.flattening_chart_constructor»&#45;&gt;«elliptic.regularity.concrete_interval_atlas» -->
+<g id="edge8" class="edge">
+<title>«elliptic.regularity.flattening_chart_constructor»&#45;&gt;«elliptic.regularity.concrete_interval_atlas»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M493,-293.29C493,-285 493,-274.92 493,-265.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="493,-259.94 495.7,-265.94 493.1,-262.94 493.1,-265.94 493,-265.94 492.9,-265.94 492.9,-262.94 490.3,-265.94 493,-259.94 493,-259.94"/>
+</g>
+<!-- «elliptic.regularity.flattening_chart_constructor»&#45;&gt;«elliptic.regularity.concrete_unit_ball_atlas» -->
+<g id="edge10" class="edge">
+<title>«elliptic.regularity.flattening_chart_constructor»&#45;&gt;«elliptic.regularity.concrete_unit_ball_atlas»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M451.87,-293.29C428.99,-283.77 400.44,-271.9 376.72,-262.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="371.12,-259.7 377.7,-259.51 373.93,-260.76 376.7,-261.91 376.66,-262.01 376.62,-262.1 373.85,-260.95 375.62,-264.5 371.12,-259.7 371.12,-259.7"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,647 @@
+<svg data-node-count="34" data-edge-count="51" data-cluster-count="1" data-variant-key="parent:«parabolic.classical»" width="1809pt" height="529pt"
+ viewBox="0.00 0.00 1809.00 528.59" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 524.59)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-524.59 1805,-524.59 1805,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1781,-8 1781,-8 1787,-8 1793,-14 1793,-20 1793,-20 1793,-500.59 1793,-500.59 1793,-506.59 1787,-512.59 1781,-512.59 1781,-512.59 20,-512.59 20,-512.59 14,-512.59 8,-506.59 8,-500.59 8,-500.59 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="900.5" y="-497.39" font-family="Helvetica" font-size="14.00">Classical heat equation</text>
+</g>
+<!-- «parabolic.energy_log_convexity» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eenergy&#45;005Flog&#45;005Fconvexity&#45;00BB" class="node">
+<title>«parabolic.energy_log_convexity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eenergy&#45;005Flog&#45;005Fconvexity&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___energy_log_convexity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="91" cy="-322.19" rx="74.91" ry="19.6"/>
+<text text-anchor="middle" x="91" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="91" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">energy_log_convexity</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.backward_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Ebackward&#45;005Funiqueness&#45;00BB" class="node">
+<title>«parabolic.backward_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Ebackward&#45;005Funiqueness&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___backward_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="93" cy="-250.59" rx="77.15" ry="19.6"/>
+<text text-anchor="middle" x="93" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="93" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">backward_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.energy_log_convexity»&#45;&gt;«parabolic.backward_uniqueness» -->
+<g id="edge18" class="edge">
+<title>«parabolic.energy_log_convexity»&#45;&gt;«parabolic.backward_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M91.55,-302.17C91.77,-294.35 92.04,-285.17 92.28,-276.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="92.45,-270.59 94.98,-276.66 92.72,-273.6 92.63,-276.6 92.28,-276.59 91.93,-276.58 92.02,-273.58 89.58,-276.51 92.45,-270.59 92.45,-270.59"/>
+</g>
+<!-- «parabolic.initial_convolution_residual» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Fresidual&#45;00BB" class="node">
+<title>«parabolic.initial_convolution_residual»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Fresidual&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___initial_convolution_residual_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1294" cy="-250.59" rx="90.52" ry="19.6"/>
+<text text-anchor="middle" x="1294" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1294" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">initial_convolution_residual</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.initial_convolution_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Fsolution&#45;00BB" class="node">
+<title>«parabolic.initial_convolution_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Fsolution&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___initial_convolution_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1012" cy="-178.99" rx="90.52" ry="19.6"/>
+<text text-anchor="middle" x="1012" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1012" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">initial_convolution_solution</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.initial_convolution_residual»&#45;&gt;«parabolic.initial_convolution_solution» -->
+<g id="edge6" class="edge">
+<title>«parabolic.initial_convolution_residual»&#45;&gt;«parabolic.initial_convolution_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1236.25,-235.34C1189.74,-223.86 1124.39,-207.73 1076.24,-195.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1070.15,-194.35 1076.63,-193.16 1073.09,-194.97 1076,-195.69 1075.98,-195.79 1075.96,-195.88 1073.04,-195.16 1075.33,-198.41 1070.15,-194.35 1070.15,-194.35"/>
+</g>
+<!-- «parabolic.duhamel_source_evolution» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fsource&#45;005Fevolution&#45;00BB" class="node">
+<title>«parabolic.duhamel_source_evolution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fsource&#45;005Fevolution&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___duhamel_source_evolution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1401" cy="-178.99" rx="89.61" ry="19.6"/>
+<text text-anchor="middle" x="1401" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1401" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">duhamel_source_evolution</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.initial_convolution_residual»&#45;&gt;«parabolic.duhamel_source_evolution» -->
+<g id="edge28" class="edge">
+<title>«parabolic.initial_convolution_residual»&#45;&gt;«parabolic.duhamel_source_evolution»</title>
+<path fill="none" stroke="#6b7280" d="M1321.56,-231.67C1335.78,-222.42 1353.24,-211.06 1368.17,-201.35"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1373.54,-197.86 1369.98,-203.39 1371.02,-199.49 1368.51,-201.13 1368.51,-201.13 1368.51,-201.13 1371.02,-199.49 1367.04,-198.87 1373.54,-197.86 1373.54,-197.86"/>
+</g>
+<!-- «parabolic.duhamel_analytic_core» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fanalytic&#45;005Fcore&#45;00BB" class="node">
+<title>«parabolic.duhamel_analytic_core»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fanalytic&#45;005Fcore&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___duhamel_analytic_core_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1207" cy="-178.99" rx="79.39" ry="19.6"/>
+<text text-anchor="middle" x="1207" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1207" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">duhamel_analytic_core</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.initial_convolution_residual»&#45;&gt;«parabolic.duhamel_analytic_core» -->
+<g id="edge34" class="edge">
+<title>«parabolic.initial_convolution_residual»&#45;&gt;«parabolic.duhamel_analytic_core»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1271.14,-231.31C1259.95,-222.36 1246.39,-211.51 1234.63,-202.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1229.71,-198.16 1236.08,-199.8 1232.27,-199.76 1234.61,-201.63 1234.39,-201.91 1234.17,-202.18 1231.83,-200.31 1232.7,-204.02 1229.71,-198.16 1229.71,-198.16"/>
+</g>
+<!-- «parabolic.heat_operator_linearity» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Foperator&#45;005Flinearity&#45;00BB" class="node">
+<title>«parabolic.heat_operator_linearity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Foperator&#45;005Flinearity&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_operator_linearity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="296" cy="-393.79" rx="78.48" ry="19.6"/>
+<text text-anchor="middle" x="296" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="296" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat_operator_linearity</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_ivp_superposition» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fivp&#45;005Fsuperposition&#45;00BB" class="node">
+<title>«parabolic.heat_ivp_superposition»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fivp&#45;005Fsuperposition&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_ivp_superposition_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="401" cy="-250.59" rx="79.81" ry="19.6"/>
+<text text-anchor="middle" x="401" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="401" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat_ivp_superposition</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_operator_linearity»&#45;&gt;«parabolic.heat_ivp_superposition» -->
+<g id="edge14" class="edge">
+<title>«parabolic.heat_operator_linearity»&#45;&gt;«parabolic.heat_ivp_superposition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M249.39,-377.82C232.67,-369.95 215.59,-358.41 206,-341.99 197.13,-326.79 195.24,-316.32 206,-302.39 220.9,-283.11 277.32,-269.77 325.66,-261.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="331.81,-260.6 326.33,-264.24 328.87,-261.19 325.91,-261.68 325.89,-261.58 325.88,-261.48 328.84,-260.99 325.45,-258.92 331.81,-260.6 331.81,-260.6"/>
+</g>
+<!-- «parabolic.heat_superposition» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fsuperposition&#45;00BB" class="node">
+<title>«parabolic.heat_superposition»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fsuperposition&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_superposition_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="296" cy="-322.19" rx="77.92" ry="18"/>
+<text text-anchor="middle" x="296" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.heat_superposition</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_operator_linearity»&#45;&gt;«parabolic.heat_superposition» -->
+<g id="edge48" class="edge">
+<title>«parabolic.heat_operator_linearity»&#45;&gt;«parabolic.heat_superposition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M296,-373.77C296,-365.35 296,-355.37 296,-346.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="296,-340.28 298.7,-346.28 296.1,-343.28 296.1,-346.28 296,-346.28 295.9,-346.28 295.9,-343.28 293.3,-346.28 296,-340.28 296,-340.28"/>
+</g>
+<!-- «parabolic.heat_kernel» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fkernel&#45;00BB" class="node">
+<title>«parabolic.heat_kernel»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fkernel&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_kernel_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1377,-481.59 1273,-481.59 1273,-445.59 1377,-445.59 1377,-481.59"/>
+<text text-anchor="middle" x="1325" y="-461.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.heat_kernel</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.infinite_propagation» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Einfinite&#45;005Fpropagation&#45;00BB" class="node">
+<title>«parabolic.infinite_propagation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Einfinite&#45;005Fpropagation&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___infinite_propagation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1396" cy="-322.19" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="1396" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1396" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">infinite_propagation</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_kernel»&#45;&gt;«parabolic.infinite_propagation» -->
+<g id="edge17" class="edge">
+<title>«parabolic.heat_kernel»&#45;&gt;«parabolic.infinite_propagation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1324.38,-445.51C1324.43,-426.83 1326.69,-396.54 1339,-373.99 1345.22,-362.59 1355.03,-352.48 1364.77,-344.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1369.53,-340.5 1366.55,-346.37 1367.25,-342.46 1364.92,-344.34 1364.86,-344.26 1364.79,-344.19 1367.13,-342.3 1363.16,-342.16 1369.53,-340.5 1369.53,-340.5"/>
+</g>
+<!-- «parabolic.heat_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fball&#45;00BB" class="node">
+<title>«parabolic.heat_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fball&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1120,-411.79 1026,-411.79 1026,-375.79 1120,-375.79 1120,-411.79"/>
+<text text-anchor="middle" x="1073" y="-391.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.heat_ball</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_kernel»&#45;&gt;«parabolic.heat_ball» -->
+<g id="edge21" class="edge">
+<title>«parabolic.heat_kernel»&#45;&gt;«parabolic.heat_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1272.64,-450.03C1233.93,-440.55 1179.99,-426.94 1133,-413.59 1130.77,-412.95 1128.49,-412.3 1126.2,-411.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1120.09,-409.81 1126.61,-408.93 1123,-410.57 1125.87,-411.42 1125.84,-411.52 1125.82,-411.61 1122.94,-410.76 1125.07,-414.1 1120.09,-409.81 1120.09,-409.81"/>
+</g>
+<!-- «parabolic.initial_convolution» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;00BB" class="node">
+<title>«parabolic.initial_convolution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___initial_convolution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1440.5,-411.79 1351.5,-411.79 1351.5,-375.79 1440.5,-375.79 1440.5,-411.79"/>
+<text text-anchor="middle" x="1396" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1396" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">initial_convolution</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_kernel»&#45;&gt;«parabolic.initial_convolution» -->
+<g id="edge22" class="edge">
+<title>«parabolic.heat_kernel»&#45;&gt;«parabolic.initial_convolution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1342.92,-445.48C1352.18,-436.63 1363.58,-425.75 1373.44,-416.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1377.84,-412.13 1375.37,-418.22 1375.74,-414.27 1373.57,-416.34 1373.5,-416.27 1373.43,-416.2 1375.6,-414.13 1371.64,-414.32 1377.84,-412.13 1377.84,-412.13"/>
+</g>
+<!-- «parabolic.heat_kernel_mass» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fkernel&#45;005Fmass&#45;00BB" class="node">
+<title>«parabolic.heat_kernel_mass»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fkernel&#45;005Fmass&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_kernel_mass_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1221" cy="-393.79" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="1221" y="-391.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.heat_kernel_mass</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_kernel»&#45;&gt;«parabolic.heat_kernel_mass» -->
+<g id="edge26" class="edge">
+<title>«parabolic.heat_kernel»&#45;&gt;«parabolic.heat_kernel_mass»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1298.76,-445.48C1284.29,-436.05 1266.26,-424.29 1251.2,-414.48"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1245.8,-410.96 1252.3,-411.97 1248.37,-412.51 1250.88,-414.15 1250.83,-414.24 1250.77,-414.32 1248.26,-412.68 1249.35,-416.5 1245.8,-410.96 1245.8,-410.96"/>
+</g>
+<!-- «parabolic.heat_kernel_convolution_time_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fkernel&#45;005Fconvolution&#45;005Ftime&#45;005Fderivative&#45;00BB" class="node">
+<title>«parabolic.heat_kernel_convolution_time_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fkernel&#45;005Fconvolution&#45;005Ftime&#45;005Fderivative&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_kernel_convolution_time_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1597" cy="-393.79" rx="131.54" ry="19.6"/>
+<text text-anchor="middle" x="1597" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1597" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat_kernel_convolution_time_derivative</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_kernel»&#45;&gt;«parabolic.heat_kernel_convolution_time_derivative» -->
+<g id="edge32" class="edge">
+<title>«parabolic.heat_kernel»&#45;&gt;«parabolic.heat_kernel_convolution_time_derivative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1377.12,-449.6C1419.28,-439.09 1479.09,-424.18 1525.68,-412.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1531.59,-411.09 1526.42,-415.16 1528.7,-411.92 1525.79,-412.64 1525.77,-412.54 1525.74,-412.45 1528.65,-411.72 1525.11,-409.93 1531.59,-411.09 1531.59,-411.09"/>
+</g>
+<!-- «parabolic.initial_convolution_differentiation» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Fdifferentiation&#45;00BB" class="node">
+<title>«parabolic.initial_convolution_differentiation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Fdifferentiation&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___initial_convolution_differentiation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1678" cy="-322.19" rx="107.46" ry="19.6"/>
+<text text-anchor="middle" x="1678" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1678" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">initial_convolution_differentiation</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_kernel»&#45;&gt;«parabolic.initial_convolution_differentiation» -->
+<g id="edge36" class="edge">
+<title>«parabolic.heat_kernel»&#45;&gt;«parabolic.initial_convolution_differentiation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1377.31,-460.24C1483.68,-454.94 1717.2,-440.35 1741,-413.59 1752.69,-400.44 1748.59,-389.87 1741,-373.99 1735.48,-362.44 1725.91,-352.68 1715.87,-344.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1710.92,-341.24 1717.35,-342.63 1713.39,-342.94 1715.81,-344.72 1715.75,-344.8 1715.69,-344.89 1713.27,-343.1 1714.14,-346.98 1710.92,-341.24 1710.92,-341.24"/>
+</g>
+<!-- «parabolic.heat_kernel_equation» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fkernel&#45;005Fequation&#45;00BB" class="node">
+<title>«parabolic.heat_kernel_equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fkernel&#45;005Fequation&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_kernel_equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="925" cy="-393.79" rx="73.58" ry="19.6"/>
+<text text-anchor="middle" x="925" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="925" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat_kernel_equation</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_kernel»&#45;&gt;«parabolic.heat_kernel_equation» -->
+<g id="edge38" class="edge">
+<title>«parabolic.heat_kernel»&#45;&gt;«parabolic.heat_kernel_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1272.86,-455.22C1210.97,-446.27 1104.71,-430.3 1014,-413.59 1005.08,-411.94 995.69,-410.09 986.48,-408.21"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="980.46,-406.97 986.88,-405.53 983.42,-407.48 986.36,-408.08 986.34,-408.18 986.32,-408.28 983.38,-407.67 985.79,-410.82 980.46,-406.97 980.46,-406.97"/>
+</g>
+<!-- «parabolic.local_derivative_estimate» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Elocal&#45;005Fderivative&#45;005Festimate&#45;00BB" class="node">
+<title>«parabolic.local_derivative_estimate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Elocal&#45;005Fderivative&#45;005Festimate&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___local_derivative_estimate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1618" cy="-107.4" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="1618" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1618" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_derivative_estimate</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_operator» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Foperator&#45;00BB" class="node">
+<title>«parabolic.heat_operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Foperator&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="558,-481.59 444,-481.59 444,-445.59 558,-445.59 558,-481.59"/>
+<text text-anchor="middle" x="501" y="-461.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.heat_operator</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_operator»&#45;&gt;«parabolic.heat_operator_linearity» -->
+<g id="edge8" class="edge">
+<title>«parabolic.heat_operator»&#45;&gt;«parabolic.heat_operator_linearity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M449.53,-445.57C418.38,-435.26 378.79,-422.17 347.61,-411.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="341.89,-409.97 348.44,-409.29 344.77,-410.81 347.62,-411.76 347.59,-411.85 347.56,-411.95 344.71,-411 346.74,-414.41 341.89,-409.97 341.89,-409.97"/>
+</g>
+<!-- «parabolic.heat_problem» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fproblem&#45;00BB" class="node">
+<title>«parabolic.heat_problem»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fproblem&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_problem_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="557.5,-411.79 444.5,-411.79 444.5,-375.79 557.5,-375.79 557.5,-411.79"/>
+<text text-anchor="middle" x="501" y="-391.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.heat_problem</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_operator»&#45;&gt;«parabolic.heat_problem» -->
+<g id="edge15" class="edge">
+<title>«parabolic.heat_operator»&#45;&gt;«parabolic.heat_problem»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M501,-445.48C501,-437.19 501,-427.11 501,-418.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="501,-412.13 503.7,-418.13 501.1,-415.13 501.1,-418.13 501,-418.13 500.9,-418.13 500.9,-415.13 498.3,-418.13 501,-412.13 501,-412.13"/>
+</g>
+<!-- «parabolic.heat_ball_mean_value» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fball&#45;005Fmean&#45;005Fvalue&#45;00BB" class="node">
+<title>«parabolic.heat_ball_mean_value»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fball&#45;005Fmean&#45;005Fvalue&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_ball_mean_value_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="822" cy="-322.19" rx="77.15" ry="19.6"/>
+<text text-anchor="middle" x="822" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="822" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat_ball_mean_value</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_operator»&#45;&gt;«parabolic.heat_ball_mean_value» -->
+<g id="edge20" class="edge">
+<title>«parabolic.heat_operator»&#45;&gt;«parabolic.heat_ball_mean_value»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M540.36,-445.5C600.81,-419.24 716.09,-369.18 778.78,-341.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="784.31,-339.56 779.88,-344.42 781.6,-340.84 778.85,-342.04 778.81,-341.95 778.77,-341.86 781.52,-340.66 777.73,-339.47 784.31,-339.56 784.31,-339.56"/>
+</g>
+<!-- «parabolic.heat_operator»&#45;&gt;«parabolic.heat_kernel_equation» -->
+<g id="edge39" class="edge">
+<title>«parabolic.heat_operator»&#45;&gt;«parabolic.heat_kernel_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M558.18,-453.44C635.73,-441.04 774.04,-418.93 856.87,-405.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="863.23,-404.67 857.73,-408.28 860.29,-405.24 857.32,-405.71 857.31,-405.61 857.29,-405.51 860.26,-405.04 856.88,-402.95 863.23,-404.67 863.23,-404.67"/>
+</g>
+<!-- «parabolic.energy_decay» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eenergy&#45;005Fdecay&#45;00BB" class="node">
+<title>«parabolic.energy_decay»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eenergy&#45;005Fdecay&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___energy_decay_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="109" cy="-393.79" rx="65.46" ry="18"/>
+<text text-anchor="middle" x="109" y="-391.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.energy_decay</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_operator»&#45;&gt;«parabolic.energy_decay» -->
+<g id="edge41" class="edge">
+<title>«parabolic.heat_operator»&#45;&gt;«parabolic.energy_decay»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" stroke-dasharray="5,2" d="M443.89,-453.64C384.22,-444.18 287.91,-428.57 205,-413.59 192.5,-411.33 179.12,-408.79 166.43,-406.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="160.26,-405.12 166.67,-403.62 163.28,-405.35 166.22,-405.92 166.15,-406.27 166.09,-406.61 163.14,-406.03 165.64,-408.92 160.26,-405.12 160.26,-405.12"/>
+</g>
+<!-- «parabolic.heat_ivp_characterization» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fivp&#45;005Fcharacterization&#45;00BB" class="node">
+<title>«parabolic.heat_ivp_characterization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fivp&#45;005Fcharacterization&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_ivp_characterization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="919" cy="-250.59" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="919" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="919" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat_ivp_characterization</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.initial_convolution_linfty» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Flinfty&#45;00BB" class="node">
+<title>«parabolic.initial_convolution_linfty»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Flinfty&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___initial_convolution_linfty_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1221" cy="-322.19" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="1221" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1221" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">initial_convolution_linfty</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_ivp» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fivp&#45;00BB" class="node">
+<title>«parabolic.heat_ivp»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fivp&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_ivp_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="719.5,-340.19 628.5,-340.19 628.5,-304.19 719.5,-304.19 719.5,-340.19"/>
+<text text-anchor="middle" x="674" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.heat_ivp</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_problem»&#45;&gt;«parabolic.heat_ivp» -->
+<g id="edge23" class="edge">
+<title>«parabolic.heat_problem»&#45;&gt;«parabolic.heat_ivp»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M543.32,-375.76C568.24,-365.74 599.86,-353.02 625.75,-342.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="631.52,-340.28 626.96,-345.03 628.77,-341.49 625.99,-342.61 625.95,-342.52 625.91,-342.43 628.7,-341.31 624.94,-340.02 631.52,-340.28 631.52,-340.28"/>
+</g>
+<!-- «parabolic.heat_problem»&#45;&gt;«parabolic.heat_superposition» -->
+<g id="edge47" class="edge">
+<title>«parabolic.heat_problem»&#45;&gt;«parabolic.heat_superposition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M450.85,-375.76C418.27,-364.7 376.03,-350.36 343.91,-339.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="338.03,-337.46 344.58,-336.83 340.9,-338.33 343.74,-339.29 343.71,-339.39 343.68,-339.48 340.84,-338.52 342.84,-341.95 338.03,-337.46 338.03,-337.46"/>
+</g>
+<!-- «parabolic.heat_problem_characterization» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fproblem&#45;005Fcharacterization&#45;00BB" class="node">
+<title>«parabolic.heat_problem_characterization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fproblem&#45;005Fcharacterization&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_problem_characterization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="501" cy="-322.19" rx="102.56" ry="19.6"/>
+<text text-anchor="middle" x="501" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="501" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat_problem_characterization</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_problem»&#45;&gt;«parabolic.heat_problem_characterization» -->
+<g id="edge49" class="edge">
+<title>«parabolic.heat_problem»&#45;&gt;«parabolic.heat_problem_characterization»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M501,-375.58C501,-367.34 501,-357.31 501,-348.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="501,-342.15 503.7,-348.15 501.1,-345.15 501.1,-348.15 501,-348.15 500.9,-348.15 500.9,-345.15 498.3,-348.15 501,-342.15 501,-342.15"/>
+</g>
+<!-- «parabolic.heat_ball»&#45;&gt;«parabolic.heat_ball_mean_value» -->
+<g id="edge19" class="edge">
+<title>«parabolic.heat_ball»&#45;&gt;«parabolic.heat_ball_mean_value»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1025.99,-378.36C1020.94,-376.86 1015.87,-375.38 1011,-373.99 967.28,-361.49 917.61,-348.17 880.17,-338.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="874.27,-336.76 880.76,-335.68 877.19,-337.43 880.1,-338.19 880.07,-338.29 880.04,-338.38 877.14,-337.62 879.38,-340.9 874.27,-336.76 874.27,-336.76"/>
+</g>
+<!-- «parabolic.initial_convolution»&#45;&gt;«parabolic.initial_convolution_solution» -->
+<g id="edge4" class="edge">
+<title>«parabolic.initial_convolution»&#45;&gt;«parabolic.initial_convolution_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1440.2,-375.61C1454.56,-367.66 1468.88,-356.66 1477,-341.99 1485.52,-326.59 1488.73,-315.51 1477,-302.39 1434.37,-254.72 1252.29,-288.65 1191,-270.39 1137.16,-254.35 1080.07,-222.62 1045.22,-201.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1039.83,-198.02 1046.35,-198.87 1042.43,-199.51 1044.99,-201.08 1044.94,-201.17 1044.88,-201.25 1042.33,-199.68 1043.52,-203.47 1039.83,-198.02 1039.83,-198.02"/>
+</g>
+<!-- «parabolic.initial_convolution»&#45;&gt;«parabolic.initial_convolution_linfty» -->
+<g id="edge11" class="edge">
+<title>«parabolic.initial_convolution»&#45;&gt;«parabolic.initial_convolution_linfty»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1353.19,-375.76C1327.32,-365.47 1294.33,-352.35 1267.77,-341.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1261.86,-339.44 1268.44,-339.15 1264.69,-340.46 1267.48,-341.57 1267.44,-341.66 1267.4,-341.75 1264.61,-340.64 1266.44,-344.17 1261.86,-339.44 1261.86,-339.44"/>
+</g>
+<!-- «parabolic.initial_convolution»&#45;&gt;«parabolic.infinite_propagation» -->
+<g id="edge16" class="edge">
+<title>«parabolic.initial_convolution»&#45;&gt;«parabolic.infinite_propagation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1396,-375.58C1396,-367.34 1396,-357.31 1396,-348.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1396,-342.15 1398.7,-348.15 1396.1,-345.15 1396.1,-348.15 1396,-348.15 1395.9,-348.15 1395.9,-345.15 1393.3,-348.15 1396,-342.15 1396,-342.15"/>
+</g>
+<!-- «parabolic.initial_convolution_trace» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Ftrace&#45;00BB" class="node">
+<title>«parabolic.initial_convolution_trace»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Einitial&#45;005Fconvolution&#45;005Ftrace&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___initial_convolution_trace_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1033" cy="-322.19" rx="82.05" ry="19.6"/>
+<text text-anchor="middle" x="1033" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1033" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">initial_convolution_trace</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.initial_convolution»&#45;&gt;«parabolic.initial_convolution_trace» -->
+<g id="edge24" class="edge">
+<title>«parabolic.initial_convolution»&#45;&gt;«parabolic.initial_convolution_trace»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1351.36,-382.8C1337.78,-379.85 1322.8,-376.69 1309,-373.99 1228.4,-358.2 1207.72,-357.16 1127,-341.99 1118.14,-340.33 1108.83,-338.53 1099.65,-336.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1093.64,-335.53 1100.05,-334.05 1096.6,-336.02 1099.54,-336.6 1099.52,-336.7 1099.51,-336.79 1096.56,-336.21 1099,-339.34 1093.64,-335.53 1093.64,-335.53"/>
+</g>
+<!-- «parabolic.interior_smoothness» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Einterior&#45;005Fsmoothness&#45;00BB" class="node">
+<title>«parabolic.interior_smoothness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Einterior&#45;005Fsmoothness&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___interior_smoothness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1614" cy="-178.99" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="1614" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1614" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">interior_smoothness</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.initial_convolution»&#45;&gt;«parabolic.interior_smoothness» -->
+<g id="edge30" class="edge">
+<title>«parabolic.initial_convolution»&#45;&gt;«parabolic.interior_smoothness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" stroke-dasharray="5,2" d="M1440.61,-378.91C1462.3,-370.63 1487.76,-358.46 1507,-341.99 1552.86,-302.72 1586.93,-239.09 1603.26,-204.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1605.91,-198.7 1605.83,-205.28 1604.97,-201.57 1603.7,-204.29 1603.39,-204.14 1603.07,-203.99 1604.33,-201.27 1600.94,-203 1605.91,-198.7 1605.91,-198.7"/>
+</g>
+<!-- «parabolic.initial_convolution»&#45;&gt;«parabolic.initial_convolution_differentiation» -->
+<g id="edge35" class="edge">
+<title>«parabolic.initial_convolution»&#45;&gt;«parabolic.initial_convolution_differentiation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1440.68,-377.6C1444.83,-376.33 1448.98,-375.1 1453,-373.99 1502.11,-360.38 1558,-347.75 1601.79,-338.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1607.89,-337.2 1602.57,-341.08 1604.97,-337.92 1602.04,-338.54 1602.01,-338.44 1601.99,-338.34 1604.93,-337.72 1601.46,-335.8 1607.89,-337.2 1607.89,-337.2"/>
+</g>
+<!-- «parabolic.duhamel_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fsolution&#45;00BB" class="node">
+<title>«parabolic.duhamel_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fsolution&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___duhamel_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1540,-268.59 1410,-268.59 1410,-232.59 1540,-232.59 1540,-268.59"/>
+<text text-anchor="middle" x="1475" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.duhamel_solution</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.initial_convolution»&#45;&gt;«parabolic.duhamel_solution» -->
+<g id="edge40" class="edge">
+<title>«parabolic.initial_convolution»&#45;&gt;«parabolic.duhamel_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1440.61,-376.05C1464.83,-365.95 1491.21,-352.97 1498,-341.99 1510.82,-321.28 1500.63,-293.69 1490.05,-274.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1486.78,-268.78 1492.11,-272.63 1488.36,-271.33 1489.86,-273.93 1489.77,-273.98 1489.68,-274.03 1488.19,-271.43 1487.43,-275.33 1486.78,-268.78 1486.78,-268.78"/>
+</g>
+<!-- «parabolic.heat_ivp»&#45;&gt;«parabolic.heat_ivp_characterization» -->
+<g id="edge10" class="edge">
+<title>«parabolic.heat_ivp»&#45;&gt;«parabolic.heat_ivp_characterization»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M719.53,-306.21C723.74,-304.89 727.94,-303.6 732,-302.39 773.45,-290.05 820.43,-277.29 856.93,-267.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="863.16,-266.01 858.05,-270.15 860.28,-266.87 857.38,-267.64 857.36,-267.54 857.33,-267.44 860.23,-266.68 856.67,-264.93 863.16,-266.01 863.16,-266.01"/>
+</g>
+<!-- «parabolic.heat_ivp»&#45;&gt;«parabolic.heat_ivp_superposition» -->
+<g id="edge13" class="edge">
+<title>«parabolic.heat_ivp»&#45;&gt;«parabolic.heat_ivp_superposition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M628.2,-305.96C624.09,-304.71 619.98,-303.5 616,-302.39 565.91,-288.38 508.55,-274.96 465.68,-265.43"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="459.73,-264.11 466.17,-262.78 462.68,-264.67 465.61,-265.31 465.59,-265.41 465.57,-265.51 462.64,-264.86 465,-268.05 459.73,-264.11 459.73,-264.11"/>
+</g>
+<!-- «parabolic.pointwise_initial_value_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Epointwise&#45;005Finitial&#45;005Fvalue&#45;005Fsolution&#45;00BB" class="node">
+<title>«parabolic.pointwise_initial_value_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Epointwise&#45;005Finitial&#45;005Fvalue&#45;005Fsolution&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___pointwise_initial_value_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="806,-268.59 658,-268.59 658,-232.59 806,-232.59 806,-268.59"/>
+<text text-anchor="middle" x="732" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="732" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">pointwise_initial_value_solution</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_ivp»&#45;&gt;«parabolic.pointwise_initial_value_solution» -->
+<g id="edge29" class="edge">
+<title>«parabolic.heat_ivp»&#45;&gt;«parabolic.pointwise_initial_value_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M688.34,-303.99C696.06,-294.72 705.67,-283.18 713.91,-273.3"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="717.83,-268.6 716.06,-274.94 715.98,-270.97 714.06,-273.27 713.99,-273.21 713.91,-273.14 715.83,-270.84 711.91,-271.48 717.83,-268.6 717.83,-268.6"/>
+</g>
+<!-- «parabolic.duhamel_classical_package» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fclassical&#45;005Fpackage&#45;00BB" class="node">
+<title>«parabolic.duhamel_classical_package»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fclassical&#45;005Fpackage&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___duhamel_classical_package_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1203" cy="-35.8" rx="95.42" ry="19.6"/>
+<text text-anchor="middle" x="1203" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1203" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">duhamel_classical_package</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_ivp»&#45;&gt;«parabolic.duhamel_classical_package» -->
+<g id="edge44" class="edge">
+<title>«parabolic.heat_ivp»&#45;&gt;«parabolic.duhamel_classical_package»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M660.44,-304.12C646.86,-284.81 630.11,-253.16 646,-230.79 749.79,-84.75 971.9,-47.72 1102.11,-38.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1108.24,-38.51 1102.43,-41.59 1105.26,-38.8 1102.26,-39 1102.26,-38.9 1102.25,-38.8 1105.24,-38.6 1102.08,-36.2 1108.24,-38.51 1108.24,-38.51"/>
+</g>
+<!-- «parabolic.initial_convolution_trace»&#45;&gt;«parabolic.initial_convolution_solution» -->
+<g id="edge7" class="edge">
+<title>«parabolic.initial_convolution_trace»&#45;&gt;«parabolic.initial_convolution_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1030.17,-302.15C1026.44,-277.1 1019.88,-233 1015.75,-205.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1014.85,-199.19 1018.41,-204.72 1015.39,-202.14 1015.84,-205.11 1015.74,-205.12 1015.64,-205.14 1015.2,-202.17 1013.07,-205.52 1014.85,-199.19 1014.85,-199.19"/>
+</g>
+<!-- «parabolic.turing_instability» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eturing&#45;005Finstability&#45;00BB" class="node">
+<title>«parabolic.turing_instability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eturing&#45;005Finstability&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___turing_instability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="218" cy="-463.59" rx="70.81" ry="18"/>
+<text text-anchor="middle" x="218" y="-461.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.turing_instability</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_kernel_mass»&#45;&gt;«parabolic.initial_convolution_linfty» -->
+<g id="edge12" class="edge">
+<title>«parabolic.heat_kernel_mass»&#45;&gt;«parabolic.initial_convolution_linfty»</title>
+<path fill="none" stroke="#6b7280" d="M1221,-375.58C1221,-367.34 1221,-357.31 1221,-348.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1221,-342.15 1223.7,-348.15 1221,-345.15 1221,-348.15 1221,-348.15 1221,-348.15 1221,-345.15 1218.3,-348.15 1221,-342.15 1221,-342.15"/>
+</g>
+<!-- «parabolic.heat_kernel_mass»&#45;&gt;«parabolic.initial_convolution_trace» -->
+<g id="edge25" class="edge">
+<title>«parabolic.heat_kernel_mass»&#45;&gt;«parabolic.initial_convolution_trace»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1182.05,-378.37C1152.99,-367.61 1113.09,-352.84 1081.89,-341.29"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1076.17,-339.17 1082.73,-338.72 1079.02,-340.12 1081.83,-341.16 1081.8,-341.26 1081.76,-341.35 1078.95,-340.31 1080.86,-343.79 1076.17,-339.17 1076.17,-339.17"/>
+</g>
+<!-- «parabolic.duhamel_residual_trace» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fresidual&#45;005Ftrace&#45;00BB" class="node">
+<title>«parabolic.duhamel_residual_trace»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fresidual&#45;005Ftrace&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___duhamel_residual_trace_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1203" cy="-107.4" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="1203" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1203" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">duhamel_residual_trace</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.duhamel_source_evolution»&#45;&gt;«parabolic.duhamel_residual_trace» -->
+<g id="edge46" class="edge">
+<title>«parabolic.duhamel_source_evolution»&#45;&gt;«parabolic.duhamel_residual_trace»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1355.08,-161.85C1324.64,-151.15 1284.7,-137.12 1253.39,-126.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1247.65,-124.09 1254.21,-123.53 1250.6,-124.76 1253.43,-125.75 1253.31,-126.08 1253.2,-126.41 1250.37,-125.42 1252.42,-128.63 1247.65,-124.09 1247.65,-124.09"/>
+</g>
+<!-- «parabolic.duhamel_joint_differentiability» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fjoint&#45;005Fdifferentiability&#45;00BB" class="node">
+<title>«parabolic.duhamel_joint_differentiability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eduhamel&#45;005Fjoint&#45;005Fdifferentiability&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___duhamel_joint_differentiability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1408" cy="-107.4" rx="98.99" ry="19.6"/>
+<text text-anchor="middle" x="1408" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1408" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">duhamel_joint_differentiability</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.duhamel_source_evolution»&#45;&gt;«parabolic.duhamel_joint_differentiability» -->
+<g id="edge51" class="edge">
+<title>«parabolic.duhamel_source_evolution»&#45;&gt;«parabolic.duhamel_joint_differentiability»</title>
+<path fill="none" stroke="#6b7280" d="M1402.91,-158.98C1403.7,-151.15 1404.62,-141.97 1405.46,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1406.09,-127.39 1408.18,-133.63 1405.79,-130.38 1405.49,-133.36 1405.49,-133.36 1405.49,-133.36 1405.79,-130.38 1402.8,-133.09 1406.09,-127.39 1406.09,-127.39"/>
+</g>
+<!-- «parabolic.pointwise_initial_value_solution»&#45;&gt;«parabolic.initial_convolution_solution» -->
+<g id="edge5" class="edge">
+<title>«parabolic.pointwise_initial_value_solution»&#45;&gt;«parabolic.initial_convolution_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M800.5,-232.57C845.58,-221.36 904.2,-206.79 948.29,-195.83"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="954.13,-194.38 948.96,-198.45 951.25,-195.2 948.34,-195.92 948.31,-195.83 948.29,-195.73 951.2,-195.01 947.66,-193.21 954.13,-194.38 954.13,-194.38"/>
+</g>
+<!-- «parabolic.interior_smoothness»&#45;&gt;«parabolic.local_derivative_estimate» -->
+<g id="edge9" class="edge">
+<title>«parabolic.interior_smoothness»&#45;&gt;«parabolic.local_derivative_estimate»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1615.09,-158.98C1615.54,-151.15 1616.07,-141.97 1616.55,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1616.91,-127.39 1619.26,-133.54 1617.09,-130.41 1616.91,-133.4 1616.56,-133.38 1616.21,-133.36 1616.39,-130.37 1613.87,-133.23 1616.91,-127.39 1616.91,-127.39"/>
+</g>
+<!-- «parabolic.heat_kernel_convolution_time_derivative»&#45;&gt;«parabolic.initial_convolution_differentiation» -->
+<g id="edge37" class="edge">
+<title>«parabolic.heat_kernel_convolution_time_derivative»&#45;&gt;«parabolic.initial_convolution_differentiation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1618.71,-374.14C1628.87,-365.41 1641.05,-354.94 1651.73,-345.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1656.51,-341.65 1653.72,-347.61 1654.3,-343.68 1652.03,-345.64 1651.96,-345.56 1651.9,-345.49 1654.17,-343.53 1650.2,-343.51 1656.51,-341.65 1656.51,-341.65"/>
+</g>
+<!-- «parabolic.duhamel_analytic_core»&#45;&gt;«parabolic.duhamel_residual_trace» -->
+<g id="edge45" class="edge">
+<title>«parabolic.duhamel_analytic_core»&#45;&gt;«parabolic.duhamel_residual_trace»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1205.91,-158.98C1205.46,-151.15 1204.93,-141.97 1204.45,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1204.09,-127.39 1207.13,-133.23 1204.61,-130.37 1204.79,-133.36 1204.44,-133.38 1204.09,-133.4 1203.91,-130.41 1201.74,-133.54 1204.09,-127.39 1204.09,-127.39"/>
+</g>
+<!-- «parabolic.initial_convolution_differentiation»&#45;&gt;«parabolic.initial_convolution_residual» -->
+<g id="edge2" class="edge">
+<title>«parabolic.initial_convolution_differentiation»&#45;&gt;«parabolic.initial_convolution_residual»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1603.96,-307.77C1535.95,-295.44 1435.69,-277.27 1367.76,-264.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1361.7,-263.86 1368.08,-262.28 1364.71,-264.05 1367.66,-264.59 1367.6,-264.93 1367.54,-265.28 1364.59,-264.74 1367.12,-267.59 1361.7,-263.86 1361.7,-263.86"/>
+</g>
+<!-- «parabolic.heat_kernel_equation»&#45;&gt;«parabolic.initial_convolution_residual» -->
+<g id="edge3" class="edge">
+<title>«parabolic.heat_kernel_equation»&#45;&gt;«parabolic.initial_convolution_residual»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M921.74,-373.65C919.44,-353.09 919.49,-320.88 938,-302.39 956.6,-283.81 1104.9,-267.68 1204.13,-258.83"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1210.3,-258.28 1204.56,-261.5 1207.34,-258.9 1204.36,-259.16 1204.32,-258.81 1204.29,-258.46 1207.28,-258.2 1204.09,-256.12 1210.3,-258.28 1210.3,-258.28"/>
+</g>
+<!-- «parabolic.duhamel_solution»&#45;&gt;«parabolic.duhamel_source_evolution» -->
+<g id="edge27" class="edge">
+<title>«parabolic.duhamel_solution»&#45;&gt;«parabolic.duhamel_source_evolution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1456.71,-232.39C1447.21,-223.45 1435.47,-212.42 1425.23,-202.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1420.64,-198.46 1426.86,-200.61 1422.89,-200.45 1425.08,-202.5 1425.01,-202.57 1424.94,-202.65 1422.75,-200.59 1423.16,-204.54 1420.64,-198.46 1420.64,-198.46"/>
+</g>
+<!-- «parabolic.duhamel_solution»&#45;&gt;«parabolic.interior_smoothness» -->
+<g id="edge31" class="edge">
+<title>«parabolic.duhamel_solution»&#45;&gt;«parabolic.interior_smoothness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" stroke-dasharray="5,2" d="M1509,-232.57C1529.07,-222.52 1554.54,-209.77 1575.36,-199.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1580.83,-196.6 1576.67,-201.71 1578.3,-198.26 1575.62,-199.6 1575.46,-199.29 1575.31,-198.98 1577.99,-197.63 1574.25,-196.88 1580.83,-196.6 1580.83,-196.6"/>
+</g>
+<!-- «parabolic.duhamel_solution»&#45;&gt;«parabolic.duhamel_analytic_core» -->
+<g id="edge33" class="edge">
+<title>«parabolic.duhamel_solution»&#45;&gt;«parabolic.duhamel_analytic_core»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1409.78,-232.66C1365.83,-221.24 1308.34,-206.31 1265.8,-195.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1259.9,-193.73 1266.38,-192.63 1262.83,-194.39 1265.73,-195.14 1265.71,-195.24 1265.68,-195.34 1262.78,-194.58 1265.03,-197.85 1259.9,-193.73 1259.9,-193.73"/>
+</g>
+<!-- «parabolic.duhamel_solution»&#45;&gt;«parabolic.duhamel_joint_differentiability» -->
+<g id="edge50" class="edge">
+<title>«parabolic.duhamel_solution»&#45;&gt;«parabolic.duhamel_joint_differentiability»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1488.38,-232.26C1501.27,-213.28 1516.93,-182.45 1503,-159.2 1494.52,-145.05 1480.62,-134.62 1466.02,-127.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1460.63,-124.36 1467.2,-124.6 1463.36,-125.6 1466.05,-126.93 1466,-127.02 1465.96,-127.11 1463.27,-125.78 1464.81,-129.44 1460.63,-124.36 1460.63,-124.36"/>
+</g>
+<!-- «parabolic.energy_decay»&#45;&gt;«parabolic.energy_log_convexity» -->
+<g id="edge1" class="edge">
+<title>«parabolic.energy_decay»&#45;&gt;«parabolic.energy_log_convexity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M104.55,-375.58C102.4,-367.26 99.78,-357.12 97.41,-347.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="95.9,-342.15 100.02,-347.29 96.99,-344.97 97.75,-347.88 97.41,-347.96 97.07,-348.05 96.32,-345.15 94.79,-348.64 95.9,-342.15 95.9,-342.15"/>
+</g>
+<!-- «parabolic.duhamel_residual_trace»&#45;&gt;«parabolic.duhamel_classical_package» -->
+<g id="edge42" class="edge">
+<title>«parabolic.duhamel_residual_trace»&#45;&gt;«parabolic.duhamel_classical_package»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1203,-87.38C1203,-79.55 1203,-70.38 1203,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1203,-55.79 1205.7,-61.79 1203.35,-58.79 1203.35,-61.79 1203,-61.79 1202.65,-61.79 1202.65,-58.79 1200.3,-61.79 1203,-55.79 1203,-55.79"/>
+</g>
+<!-- «parabolic.duhamel_joint_differentiability»&#45;&gt;«parabolic.duhamel_classical_package» -->
+<g id="edge43" class="edge">
+<title>«parabolic.duhamel_joint_differentiability»&#45;&gt;«parabolic.duhamel_classical_package»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1359.94,-90.08C1328.96,-79.56 1288.65,-65.88 1256.64,-55.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1250.76,-53.01 1257.31,-52.39 1253.72,-53.65 1256.56,-54.61 1256.44,-54.94 1256.33,-55.27 1253.49,-54.31 1255.58,-57.5 1250.76,-53.01 1250.76,-53.01"/>
+</g>
+</g>
+</svg>

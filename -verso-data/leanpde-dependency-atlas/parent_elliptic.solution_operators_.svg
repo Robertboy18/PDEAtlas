@@ -1,0 +1,131 @@
+<svg data-node-count="8" data-edge-count="7" data-cluster-count="1" data-variant-key="parent:«elliptic.solution_operators»" width="475pt" height="310pt"
+ viewBox="0.00 0.00 475.00 310.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.2)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-306.2 471,-306.2 471,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 447,-8 447,-8 453,-8 459,-14 459,-20 459,-20 459,-282.2 459,-282.2 459,-288.2 453,-294.2 447,-294.2 447,-294.2 20,-294.2 20,-294.2 14,-294.2 8,-288.2 8,-282.2 8,-282.2 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="233.5" y="-279" font-family="Helvetica" font-size="14.00">Elliptic solution operators</text>
+</g>
+<!-- «elliptic.solution_operator.all_orders» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eall&#45;005Forders&#45;00BB" class="node">
+<title>«elliptic.solution_operator.all_orders»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eall&#45;005Forders&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___solution_operator___all_orders_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="158.5,-125.4 25.5,-125.4 25.5,-89.4 158.5,-89.4 158.5,-125.4"/>
+<text text-anchor="middle" x="92" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">solution_operator.all_orders</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.solution_operator.all_orders_estimate» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eall&#45;005Forders&#45;005Festimate&#45;00BB" class="node">
+<title>«elliptic.solution_operator.all_orders_estimate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eall&#45;005Forders&#45;005Festimate&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___solution_operator___all_orders_estimate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="85" cy="-35.8" rx="69.09" ry="19.6"/>
+<text text-anchor="middle" x="85" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">solution_operator</text>
+<text text-anchor="middle" x="85" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">all_orders_estimate</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.solution_operator.all_orders»&#45;&gt;«elliptic.solution_operator.all_orders_estimate» -->
+<g id="edge4" class="edge">
+<title>«elliptic.solution_operator.all_orders»&#45;&gt;«elliptic.solution_operator.all_orders_estimate»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M90.27,-89.19C89.44,-80.95 88.43,-70.92 87.52,-61.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="86.91,-55.76 90.19,-61.46 87.31,-58.74 87.61,-61.72 87.51,-61.73 87.41,-61.74 87.11,-58.76 84.82,-62 86.91,-55.76 86.91,-55.76"/>
+</g>
+<!-- «elliptic.solution_operator.h2» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eh2&#45;00BB" class="node">
+<title>«elliptic.solution_operator.h2»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eh2&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___solution_operator___h2_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="291,-125.4 191,-125.4 191,-89.4 291,-89.4 291,-125.4"/>
+<text text-anchor="middle" x="241" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">solution_operator.h2</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.solution_operator.h2_estimate» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eh2&#45;005Festimate&#45;00BB" class="node">
+<title>«elliptic.solution_operator.h2_estimate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eh2&#45;005Festimate&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___solution_operator___h2_estimate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="241" cy="-35.8" rx="61.54" ry="19.6"/>
+<text text-anchor="middle" x="241" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">solution_operator</text>
+<text text-anchor="middle" x="241" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">h2_estimate</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.solution_operator.h2»&#45;&gt;«elliptic.solution_operator.h2_estimate» -->
+<g id="edge6" class="edge">
+<title>«elliptic.solution_operator.h2»&#45;&gt;«elliptic.solution_operator.h2_estimate»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M241,-89.19C241,-80.95 241,-70.92 241,-61.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="241,-55.76 243.7,-61.76 241.1,-58.76 241.1,-61.76 241,-61.76 240.9,-61.76 240.9,-58.76 238.3,-61.76 241,-55.76 241,-55.76"/>
+</g>
+<!-- «elliptic.solution_operator.closed_graph_lift» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eclosed&#45;005Fgraph&#45;005Flift&#45;00BB" class="node">
+<title>«elliptic.solution_operator.closed_graph_lift»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Eclosed&#45;005Fgraph&#45;005Flift&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___solution_operator___closed_graph_lift_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="284.5,-195.2 197.5,-195.2 197.5,-159.2 284.5,-159.2 284.5,-195.2"/>
+<text text-anchor="middle" x="241" y="-180.2" font-family="Helvetica" font-size="10.00" fill="#ffffff">solution_operator</text>
+<text text-anchor="middle" x="241" y="-169.2" font-family="Helvetica" font-size="10.00" fill="#ffffff">closed_graph_lift</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.solution_operator.closed_graph_lift»&#45;&gt;«elliptic.solution_operator.all_orders» -->
+<g id="edge1" class="edge">
+<title>«elliptic.solution_operator.closed_graph_lift»&#45;&gt;«elliptic.solution_operator.all_orders»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M203.4,-159.09C182.67,-149.65 156.83,-137.9 135.26,-128.08"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="129.59,-125.5 136.17,-125.53 132.36,-126.65 135.09,-127.89 135.05,-127.99 135.01,-128.08 132.28,-126.83 133.93,-130.44 129.59,-125.5 129.59,-125.5"/>
+</g>
+<!-- «elliptic.solution_operator.closed_graph_lift»&#45;&gt;«elliptic.solution_operator.h2» -->
+<g id="edge2" class="edge">
+<title>«elliptic.solution_operator.closed_graph_lift»&#45;&gt;«elliptic.solution_operator.h2»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M241,-159.09C241,-150.8 241,-140.72 241,-131.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="241,-125.74 243.7,-131.74 241.1,-128.74 241.1,-131.74 241,-131.74 240.9,-131.74 240.9,-128.74 238.3,-131.74 241,-125.74 241,-125.74"/>
+</g>
+<!-- «elliptic.solution_operator.trajectory_data» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Etrajectory&#45;005Fdata&#45;00BB" class="node">
+<title>«elliptic.solution_operator.trajectory_data»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Etrajectory&#45;005Fdata&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___solution_operator___trajectory_data_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="383" cy="-107.4" rx="61.54" ry="19.6"/>
+<text text-anchor="middle" x="383" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">solution_operator</text>
+<text text-anchor="middle" x="383" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">trajectory_data</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.solution_operator.closed_graph_lift»&#45;&gt;«elliptic.solution_operator.trajectory_data» -->
+<g id="edge7" class="edge">
+<title>«elliptic.solution_operator.closed_graph_lift»&#45;&gt;«elliptic.solution_operator.trajectory_data»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M276.83,-159.09C297.35,-149.29 323.1,-137 344.11,-126.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="349.62,-124.34 345.37,-129.36 346.95,-125.72 344.25,-127.01 344.2,-126.92 344.16,-126.83 346.87,-125.54 343.04,-124.48 349.62,-124.34 349.62,-124.34"/>
+</g>
+<!-- «elliptic.solution_operator.bochner_lift» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Ebochner&#45;005Flift&#45;00BB" class="node">
+<title>«elliptic.solution_operator.bochner_lift»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Ebochner&#45;005Flift&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___solution_operator___bochner_lift_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="389" cy="-35.8" rx="61.54" ry="19.6"/>
+<text text-anchor="middle" x="389" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">solution_operator</text>
+<text text-anchor="middle" x="389" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">bochner_lift</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.solution_operator.trajectory_data»&#45;&gt;«elliptic.solution_operator.bochner_lift» -->
+<g id="edge5" class="edge">
+<title>«elliptic.solution_operator.trajectory_data»&#45;&gt;«elliptic.solution_operator.bochner_lift»</title>
+<path fill="none" stroke="#6b7280" d="M384.64,-87.38C385.31,-79.55 386.11,-70.38 386.83,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="387.36,-55.79 389.54,-62 387.1,-58.78 386.85,-61.77 386.85,-61.77 386.85,-61.77 387.1,-58.78 384.16,-61.54 387.36,-55.79 387.36,-55.79"/>
+</g>
+<!-- «elliptic.solution_operator.qualitative_lift_data» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Equalitative&#45;005Flift&#45;005Fdata&#45;00BB" class="node">
+<title>«elliptic.solution_operator.qualitative_lift_data»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperator&#45;002Equalitative&#45;005Flift&#45;005Fdata&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___solution_operator___qualitative_lift_data_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="289,-263.2 193,-263.2 193,-227.2 289,-227.2 289,-263.2"/>
+<text text-anchor="middle" x="241" y="-248.2" font-family="Helvetica" font-size="10.00" fill="#ffffff">solution_operator</text>
+<text text-anchor="middle" x="241" y="-237.2" font-family="Helvetica" font-size="10.00" fill="#ffffff">qualitative_lift_data</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.solution_operator.qualitative_lift_data»&#45;&gt;«elliptic.solution_operator.closed_graph_lift» -->
+<g id="edge3" class="edge">
+<title>«elliptic.solution_operator.qualitative_lift_data»&#45;&gt;«elliptic.solution_operator.closed_graph_lift»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M241,-226.86C241,-219.19 241,-210.05 241,-201.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="241,-195.65 243.7,-201.65 241.1,-198.65 241.1,-201.65 241,-201.65 240.9,-201.65 240.9,-198.65 238.3,-201.65 241,-195.65 241,-195.65"/>
+</g>
+</g>
+</svg>

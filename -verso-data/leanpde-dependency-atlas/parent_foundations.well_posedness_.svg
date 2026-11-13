@@ -1,0 +1,50 @@
+<svg data-node-count="3" data-edge-count="2" data-cluster-count="1" data-variant-key="parent:«foundations.well_posedness»" width="390pt" height="167pt"
+ viewBox="0.00 0.00 390.00 167.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 163)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-163 386,-163 386,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 362,-8 362,-8 368,-8 374,-14 374,-20 374,-20 374,-139 374,-139 374,-145 368,-151 362,-151 362,-151 20,-151 20,-151 14,-151 8,-145 8,-139 8,-139 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="191" y="-135.8" font-family="Helvetica" font-size="14.00">Well&#45;posedness</text>
+</g>
+<!-- «foundations.well_posedness.global_exists» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ewell&#45;005Fposedness&#45;002Eglobal&#45;005Fexists&#45;00BB" class="node">
+<title>«foundations.well_posedness.global_exists»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ewell&#45;005Fposedness&#45;002Eglobal&#45;005Fexists&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___well_posedness___global_exists_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="97" cy="-34" rx="80.59" ry="18"/>
+<text text-anchor="middle" x="97" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">well_posedness.global_exists</text>
+</a>
+</g>
+</g>
+<!-- «foundations.well_posedness.global» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ewell&#45;005Fposedness&#45;002Eglobal&#45;00BB" class="node">
+<title>«foundations.well_posedness.global»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ewell&#45;005Fposedness&#45;002Eglobal&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___well_posedness___global_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="245,-120 135,-120 135,-84 245,-84 245,-120"/>
+<text text-anchor="middle" x="190" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">well_posedness.global</text>
+</a>
+</g>
+</g>
+<!-- «foundations.well_posedness.global»&#45;&gt;«foundations.well_posedness.global_exists» -->
+<g id="edge1" class="edge">
+<title>«foundations.well_posedness.global»&#45;&gt;«foundations.well_posedness.global_exists»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M165.57,-83.66C153.12,-74.83 137.92,-64.04 125.01,-54.87"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="119.99,-51.32 126.45,-52.59 122.5,-52.97 124.94,-54.71 124.89,-54.79 124.83,-54.87 122.38,-53.14 123.32,-56.99 119.99,-51.32 119.99,-51.32"/>
+</g>
+<!-- «foundations.well_posedness.global_unique» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ewell&#45;005Fposedness&#45;002Eglobal&#45;005Funique&#45;00BB" class="node">
+<title>«foundations.well_posedness.global_unique»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ewell&#45;005Fposedness&#45;002Eglobal&#45;005Funique&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___well_posedness___global_unique_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="284" cy="-34" rx="81.86" ry="18"/>
+<text text-anchor="middle" x="284" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">well_posedness.global_unique</text>
+</a>
+</g>
+</g>
+<!-- «foundations.well_posedness.global»&#45;&gt;«foundations.well_posedness.global_unique» -->
+<g id="edge2" class="edge">
+<title>«foundations.well_posedness.global»&#45;&gt;«foundations.well_posedness.global_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M214.7,-83.66C227.28,-74.83 242.64,-64.04 255.69,-54.87"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="260.76,-51.32 257.4,-56.97 258.36,-53.12 255.91,-54.85 255.85,-54.77 255.79,-54.68 258.25,-52.96 254.3,-52.56 260.76,-51.32 260.76,-51.32"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,289 @@
+<svg data-node-count="15" data-edge-count="23" data-cluster-count="1" data-variant-key="parent:«methods.semilinear_variational»" width="775pt" height="521pt"
+ viewBox="0.00 0.00 775.00 521.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 517.39)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-517.39 771,-517.39 771,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 747,-8 747,-8 753,-8 759,-14 759,-20 759,-20 759,-493.39 759,-493.39 759,-499.39 753,-505.39 747,-505.39 747,-505.39 20,-505.39 20,-505.39 14,-505.39 8,-499.39 8,-493.39 8,-493.39 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="383.5" y="-490.19" font-family="Helvetica" font-size="14.00">Semilinear variational methods</text>
+</g>
+<!-- «methods.dirichlet.semilinear_weak_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Esemilinear&#45;005Fweak&#45;005Fsolution&#45;00BB" class="node">
+<title>«methods.dirichlet.semilinear_weak_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Esemilinear&#45;005Fweak&#45;005Fsolution&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___dirichlet___semilinear_weak_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="197,-334.79 73,-334.79 73,-298.79 197,-298.79 197,-334.79"/>
+<text text-anchor="middle" x="135" y="-319.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet</text>
+<text text-anchor="middle" x="135" y="-308.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear_weak_solution</text>
+</a>
+</g>
+</g>
+<!-- «methods.dirichlet.nemytskii_bridge» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Enemytskii&#45;005Fbridge&#45;00BB" class="node">
+<title>«methods.dirichlet.nemytskii_bridge»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Enemytskii&#45;005Fbridge&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___dirichlet___nemytskii_bridge_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="139" cy="-246.99" rx="69.4" ry="18"/>
+<text text-anchor="middle" x="139" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.nemytskii_bridge</text>
+</a>
+</g>
+</g>
+<!-- «methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.nemytskii_bridge» -->
+<g id="edge1" class="edge">
+<title>«methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.nemytskii_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M136.01,-298.69C136.5,-290.4 137.09,-280.32 137.62,-271.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="137.98,-265.33 140.32,-271.48 137.9,-268.33 137.72,-271.33 137.62,-271.32 137.52,-271.32 137.7,-268.32 134.93,-271.16 137.98,-265.33 137.98,-265.33"/>
+</g>
+<!-- «methods.dirichlet.odd_power_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Eodd&#45;005Fpower&#45;005Fsolution&#45;00BB" class="node">
+<title>«methods.dirichlet.odd_power_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Eodd&#45;005Fpower&#45;005Fsolution&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___dirichlet___odd_power_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="119" cy="-105.6" rx="76.02" ry="18"/>
+<text text-anchor="middle" x="119" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.odd_power_solution</text>
+</a>
+</g>
+</g>
+<!-- «methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.odd_power_solution» -->
+<g id="edge3" class="edge">
+<title>«methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.odd_power_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M91.61,-298.74C78.06,-291.12 64.66,-280.65 57,-266.79 31.12,-219.97 71.96,-160.1 98.72,-128.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="102.88,-123.64 101.01,-129.94 101,-125.97 99.04,-128.25 98.96,-128.18 98.89,-128.12 100.85,-125.84 96.92,-126.42 102.88,-123.64 102.88,-123.64"/>
+</g>
+<!-- «methods.dirichlet.monotone_stability» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Emonotone&#45;005Fstability&#45;00BB" class="node">
+<title>«methods.dirichlet.monotone_stability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Emonotone&#45;005Fstability&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___dirichlet___monotone_stability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="334" cy="-246.99" rx="73.98" ry="18"/>
+<text text-anchor="middle" x="334" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.monotone_stability</text>
+</a>
+</g>
+</g>
+<!-- «methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.monotone_stability» -->
+<g id="edge9" class="edge">
+<title>«methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.monotone_stability»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M184.96,-298.77C216.15,-288.15 256.07,-274.55 286.74,-264.1"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="292.74,-262.05 287.94,-266.54 289.94,-263.11 287.1,-264.08 287.07,-263.99 287.03,-263.89 289.87,-262.92 286.19,-261.43 292.74,-262.05 292.74,-262.05"/>
+</g>
+<!-- «methods.dirichlet.variational_wellposedness» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Evariational&#45;005Fwellposedness&#45;00BB" class="node">
+<title>«methods.dirichlet.variational_wellposedness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Evariational&#45;005Fwellposedness&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___dirichlet___variational_wellposedness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="367" cy="-175.4" rx="88.28" ry="19.6"/>
+<text text-anchor="middle" x="367" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet</text>
+<text text-anchor="middle" x="367" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">variational_wellposedness</text>
+</a>
+</g>
+</g>
+<!-- «methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.variational_wellposedness» -->
+<g id="edge11" class="edge">
+<title>«methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.variational_wellposedness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M173.45,-298.67C189.27,-290.46 207.11,-279.61 221,-266.79 236.66,-252.35 231.54,-240.72 248,-227.2 265.69,-212.66 288.15,-201.65 308.79,-193.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="314.55,-191.48 309.89,-196.12 311.78,-192.63 308.98,-193.69 308.94,-193.6 308.91,-193.5 311.71,-192.45 307.99,-191.07 314.55,-191.48 314.55,-191.48"/>
+</g>
+<!-- «methods.dirichlet.odd_power_signed_linear» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Eodd&#45;005Fpower&#45;005Fsigned&#45;005Flinear&#45;00BB" class="node">
+<title>«methods.dirichlet.odd_power_signed_linear»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Eodd&#45;005Fpower&#45;005Fsigned&#45;005Flinear&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___dirichlet___odd_power_signed_linear_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="110" cy="-35.8" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="110" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet</text>
+<text text-anchor="middle" x="110" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">odd_power_signed_linear</text>
+</a>
+</g>
+</g>
+<!-- «methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.odd_power_signed_linear» -->
+<g id="edge16" class="edge">
+<title>«methods.dirichlet.semilinear_weak_solution»&#45;&gt;«methods.dirichlet.odd_power_signed_linear»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M82.4,-298.79C67.31,-291.34 52.41,-280.97 43,-266.79 7.66,-213.55 32.89,-187.44 30,-123.6 29.28,-107.61 22.29,-101.62 30,-87.6 37.28,-74.35 49.64,-64.07 62.49,-56.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="68.02,-53.17 64.15,-58.49 65.46,-54.75 62.86,-56.24 62.81,-56.15 62.76,-56.06 65.37,-54.57 61.47,-53.81 68.02,-53.17 68.02,-53.17"/>
+</g>
+<!-- «methods.dirichlet.integral_potential» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Eintegral&#45;005Fpotential&#45;00BB" class="node">
+<title>«methods.dirichlet.integral_potential»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Eintegral&#45;005Fpotential&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___dirichlet___integral_potential_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="750,-334.79 628,-334.79 628,-298.79 750,-298.79 750,-334.79"/>
+<text text-anchor="middle" x="689" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.integral_potential</text>
+</a>
+</g>
+</g>
+<!-- «methods.dirichlet.integral_potential»&#45;&gt;«methods.dirichlet.variational_wellposedness» -->
+<g id="edge10" class="edge">
+<title>«methods.dirichlet.integral_potential»&#45;&gt;«methods.dirichlet.variational_wellposedness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M712.21,-298.35C721.46,-289.95 731.08,-279.04 736,-266.79 742.57,-250.47 747.56,-240.46 736,-227.2 701.09,-187.15 558.98,-177.58 461.66,-175.87"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="455.61,-175.77 461.66,-173.17 458.61,-175.72 461.61,-175.77 461.61,-175.87 461.61,-175.97 458.61,-175.92 461.57,-178.57 455.61,-175.77 455.61,-175.77"/>
+</g>
+<!-- «methods.dirichlet.integral_convex» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Eintegral&#45;005Fconvex&#45;00BB" class="node">
+<title>«methods.dirichlet.integral_convex»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirichlet&#45;002Eintegral&#45;005Fconvex&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___dirichlet___integral_convex_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="658" cy="-246.99" rx="65.6" ry="18"/>
+<text text-anchor="middle" x="658" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.integral_convex</text>
+</a>
+</g>
+</g>
+<!-- «methods.dirichlet.integral_potential»&#45;&gt;«methods.dirichlet.integral_convex» -->
+<g id="edge20" class="edge">
+<title>«methods.dirichlet.integral_potential»&#45;&gt;«methods.dirichlet.integral_convex»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M681.18,-298.69C677.32,-290.24 672.6,-279.93 668.44,-270.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="665.93,-265.33 670.88,-269.67 667.27,-268.02 668.51,-270.75 668.42,-270.79 668.33,-270.83 667.08,-268.1 665.97,-271.91 665.93,-265.33 665.93,-265.33"/>
+</g>
+<!-- «methods.dirichlet.nemytskii_bridge»&#45;&gt;«methods.dirichlet.variational_wellposedness» -->
+<g id="edge14" class="edge">
+<title>«methods.dirichlet.nemytskii_bridge»&#45;&gt;«methods.dirichlet.variational_wellposedness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M182.15,-232.82C218.58,-221.7 270.98,-205.71 310.7,-193.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="316.47,-191.82 311.52,-196.16 313.63,-192.79 310.76,-193.67 310.73,-193.57 310.7,-193.48 313.57,-192.6 309.94,-190.99 316.47,-191.82 316.47,-191.82"/>
+</g>
+<!-- «methods.dirichlet.odd_power_solution»&#45;&gt;«methods.dirichlet.odd_power_signed_linear» -->
+<g id="edge15" class="edge">
+<title>«methods.dirichlet.odd_power_solution»&#45;&gt;«methods.dirichlet.odd_power_signed_linear»</title>
+<path fill="none" stroke="#6b7280" d="M116.73,-87.49C115.72,-79.86 114.5,-70.72 113.39,-62.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="112.56,-56.06 116.02,-61.65 112.95,-59.03 113.35,-62.01 113.35,-62.01 113.35,-62.01 112.95,-59.03 110.67,-62.36 112.56,-56.06 112.56,-56.06"/>
+</g>
+<!-- «methods.semilinear.variational_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Evariational&#45;005Fsolution&#45;00BB" class="node">
+<title>«methods.semilinear.variational_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Evariational&#45;005Fsolution&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___variational_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="500" cy="-246.99" rx="67.35" ry="19.6"/>
+<text text-anchor="middle" x="500" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="500" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">variational_solution</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.variational_solution»&#45;&gt;«methods.dirichlet.variational_wellposedness» -->
+<g id="edge13" class="edge">
+<title>«methods.semilinear.variational_solution»&#45;&gt;«methods.dirichlet.variational_wellposedness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M468.48,-229.5C449.8,-219.73 425.98,-207.26 406.11,-196.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="400.62,-193.99 407.19,-194.38 403.32,-195.29 405.98,-196.68 405.93,-196.77 405.89,-196.86 403.23,-195.47 404.68,-199.16 400.62,-193.99 400.62,-193.99"/>
+</g>
+<!-- «methods.dirichlet.variational_wellposedness»&#45;&gt;«methods.dirichlet.odd_power_solution» -->
+<g id="edge2" class="edge">
+<title>«methods.dirichlet.variational_wellposedness»&#45;&gt;«methods.dirichlet.odd_power_solution»</title>
+<path fill="none" stroke="#6b7280" d="M313.19,-159.69C271.64,-148.33 214.41,-132.68 172.85,-121.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="166.84,-119.68 173.34,-118.65 169.73,-120.47 172.63,-121.26 172.63,-121.26 172.63,-121.26 169.73,-120.47 171.92,-123.86 166.84,-119.68 166.84,-119.68"/>
+</g>
+<!-- «methods.semilinear.monotone_stability» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Emonotone&#45;005Fstability&#45;00BB" class="node">
+<title>«methods.semilinear.monotone_stability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Emonotone&#45;005Fstability&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___monotone_stability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="248" cy="-386.59" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="248" y="-389.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="248" y="-378.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">monotone_stability</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.monotone_stability»&#45;&gt;«methods.dirichlet.monotone_stability» -->
+<g id="edge8" class="edge">
+<title>«methods.semilinear.monotone_stability»&#45;&gt;«methods.dirichlet.monotone_stability»</title>
+<path fill="none" stroke="#6b7280" d="M238.87,-366.9C231.2,-348.3 223.35,-319.59 236,-298.79 245.97,-282.39 263.15,-271.05 280.36,-263.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="286.19,-260.83 281.73,-265.66 283.43,-262 280.67,-263.18 280.67,-263.18 280.67,-263.18 283.43,-262 279.61,-260.7 286.19,-260.83 286.19,-260.83"/>
+</g>
+<!-- «methods.semilinear.load_stability» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eload&#45;005Fstability&#45;00BB" class="node">
+<title>«methods.semilinear.load_stability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eload&#45;005Fstability&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___load_stability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="315" cy="-316.79" rx="66.23" ry="18"/>
+<text text-anchor="middle" x="315" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.load_stability</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.monotone_stability»&#45;&gt;«methods.semilinear.load_stability» -->
+<g id="edge21" class="edge">
+<title>«methods.semilinear.monotone_stability»&#45;&gt;«methods.semilinear.load_stability»</title>
+<path fill="none" stroke="#6b7280" d="M265.95,-367.42C274.62,-358.66 285.06,-348.09 294.08,-338.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="298.38,-334.62 296.08,-340.78 296.27,-336.75 294.16,-338.88 294.16,-338.88 294.16,-338.88 296.27,-336.75 292.24,-336.99 298.38,-334.62 298.38,-334.62"/>
+</g>
+<!-- «methods.semilinear.energy_minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eenergy&#45;005Fminimizer&#45;00BB" class="node">
+<title>«methods.semilinear.energy_minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eenergy&#45;005Fminimizer&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___energy_minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="674" cy="-386.59" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="674" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.energy_minimizer</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.energy_minimizer»&#45;&gt;«methods.semilinear.variational_solution» -->
+<g id="edge5" class="edge">
+<title>«methods.semilinear.energy_minimizer»&#45;&gt;«methods.semilinear.variational_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M654.71,-369.14C643.32,-359.31 628.69,-346.51 616,-334.79 599.14,-319.23 596.96,-313.07 579,-298.79 565.13,-287.77 548.8,-276.95 534.6,-268.15"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="529.47,-265 536,-265.84 532.08,-266.49 534.64,-268.06 534.59,-268.14 534.54,-268.23 531.98,-266.66 533.18,-270.44 529.47,-265 529.47,-265"/>
+</g>
+<!-- «methods.semilinear.euler_equation» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eeuler&#45;005Fequation&#45;00BB" class="node">
+<title>«methods.semilinear.euler_equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eeuler&#45;005Fequation&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___euler_equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="476" cy="-316.79" rx="69.54" ry="18"/>
+<text text-anchor="middle" x="476" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.euler_equation</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.euler_equation»&#45;&gt;«methods.semilinear.variational_solution» -->
+<g id="edge6" class="edge">
+<title>«methods.semilinear.euler_equation»&#45;&gt;«methods.semilinear.variational_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M482.06,-298.69C484.85,-290.78 488.23,-281.25 491.29,-272.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="493.35,-266.77 493.9,-273.33 492.45,-269.63 491.45,-272.46 491.35,-272.42 491.26,-272.39 492.26,-269.56 488.81,-271.52 493.35,-266.77 493.35,-266.77"/>
+</g>
+<!-- «methods.dirichlet.integral_convex»&#45;&gt;«methods.dirichlet.variational_wellposedness» -->
+<g id="edge12" class="edge">
+<title>«methods.dirichlet.integral_convex»&#45;&gt;«methods.dirichlet.variational_wellposedness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M610.15,-234.44C600.19,-232.04 589.75,-229.53 580,-227.2 530.22,-215.26 473.87,-201.82 431.64,-191.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="425.77,-190.37 432.24,-189.14 428.72,-190.97 431.63,-191.67 431.61,-191.76 431.59,-191.86 428.67,-191.17 430.99,-194.39 425.77,-190.37 425.77,-190.37"/>
+</g>
+<!-- «methods.semilinear.load_stability»&#45;&gt;«methods.semilinear.variational_solution» -->
+<g id="edge7" class="edge">
+<title>«methods.semilinear.load_stability»&#45;&gt;«methods.semilinear.variational_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M352.88,-301.91C382.04,-291.22 422.48,-276.4 453.58,-265.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="459.28,-262.92 454.57,-267.52 456.5,-264.04 453.68,-265.08 453.64,-264.98 453.61,-264.89 456.43,-263.86 452.72,-262.45 459.28,-262.92 459.28,-262.92"/>
+</g>
+<!-- «methods.semilinear.energy_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eenergy&#45;005Fderivative&#45;00BB" class="node">
+<title>«methods.semilinear.energy_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eenergy&#45;005Fderivative&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___energy_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="441" cy="-386.59" rx="76.65" ry="18"/>
+<text text-anchor="middle" x="441" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.energy_derivative</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.energy_derivative»&#45;&gt;«methods.semilinear.euler_equation» -->
+<g id="edge19" class="edge">
+<title>«methods.semilinear.energy_derivative»&#45;&gt;«methods.semilinear.euler_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M449.83,-368.48C454.26,-359.91 459.68,-349.41 464.43,-340.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="467.29,-334.66 466.94,-341.23 466,-337.37 464.63,-340.04 464.54,-339.99 464.45,-339.95 465.83,-337.28 462.14,-338.76 467.29,-334.66 467.29,-334.66"/>
+</g>
+<!-- «methods.semilinear.energy_derivative»&#45;&gt;«methods.semilinear.load_stability» -->
+<g id="edge22" class="edge">
+<title>«methods.semilinear.energy_derivative»&#45;&gt;«methods.semilinear.load_stability»</title>
+<path fill="none" stroke="#6b7280" d="M411.78,-369.87C393.04,-359.78 368.64,-346.66 349.03,-336.1"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="343.63,-333.2 350.19,-333.67 346.27,-334.62 348.91,-336.04 348.91,-336.04 348.91,-336.04 346.27,-334.62 347.64,-338.42 343.63,-333.2 343.63,-333.2"/>
+</g>
+<!-- «methods.semilinear.energy» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eenergy&#45;00BB" class="node">
+<title>«methods.semilinear.energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eenergy&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="601.5,-474.39 512.5,-474.39 512.5,-438.39 601.5,-438.39 601.5,-474.39"/>
+<text text-anchor="middle" x="557" y="-453.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.energy</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.energy»&#45;&gt;«methods.semilinear.variational_solution» -->
+<g id="edge4" class="edge">
+<title>«methods.semilinear.energy»&#45;&gt;«methods.semilinear.variational_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M561.64,-437.97C568.68,-407.98 579.11,-345.34 558,-298.79 552.68,-287.06 543.16,-276.97 533.35,-268.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="528.53,-265.17 534.92,-266.74 530.96,-266.94 533.32,-268.79 533.26,-268.87 533.2,-268.95 530.83,-267.1 531.59,-271 528.53,-265.17 528.53,-265.17"/>
+</g>
+<!-- «methods.semilinear.energy»&#45;&gt;«methods.semilinear.energy_minimizer» -->
+<g id="edge17" class="edge">
+<title>«methods.semilinear.energy»&#45;&gt;«methods.semilinear.energy_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M586.52,-438.28C603.21,-428.61 624.11,-416.51 641.29,-406.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="646.49,-403.53 642.66,-408.88 643.95,-405.12 641.35,-406.63 641.3,-406.54 641.25,-406.45 643.85,-404.95 639.95,-404.2 646.49,-403.53 646.49,-403.53"/>
+</g>
+<!-- «methods.semilinear.energy»&#45;&gt;«methods.semilinear.euler_equation» -->
+<g id="edge18" class="edge">
+<title>«methods.semilinear.energy»&#45;&gt;«methods.semilinear.euler_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M554.57,-438.26C551.31,-419.53 544.2,-389.2 530,-366.79 523.13,-355.96 513.24,-346.02 503.8,-337.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="498.91,-333.94 505.26,-335.68 501.29,-335.77 503.6,-337.69 503.54,-337.76 503.48,-337.84 501.16,-335.93 501.82,-339.84 498.91,-333.94 498.91,-333.94"/>
+</g>
+<!-- «methods.semilinear.energy»&#45;&gt;«methods.semilinear.energy_derivative» -->
+<g id="edge23" class="edge">
+<title>«methods.semilinear.energy»&#45;&gt;«methods.semilinear.energy_derivative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M527.73,-438.28C511.33,-428.7 490.82,-416.71 473.87,-406.81"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="468.27,-403.53 474.81,-404.23 470.91,-404.96 473.5,-406.47 473.45,-406.56 473.4,-406.65 470.81,-405.13 472.09,-408.89 468.27,-403.53 468.27,-403.53"/>
+</g>
+</g>
+</svg>

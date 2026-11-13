@@ -1,0 +1,146 @@
+<svg data-node-count="10" data-edge-count="7" data-cluster-count="1" data-variant-key="parent:«methods.constraints»" width="510pt" height="382pt"
+ viewBox="0.00 0.00 510.00 381.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 377.79)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-377.79 506,-377.79 506,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 482,-8 482,-8 488,-8 494,-14 494,-20 494,-20 494,-353.79 494,-353.79 494,-359.79 488,-365.79 482,-365.79 482,-365.79 20,-365.79 20,-365.79 14,-365.79 8,-359.79 8,-353.79 8,-353.79 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="251" y="-350.59" font-family="Helvetica" font-size="14.00">Null Lagrangians, polyconvexity, and constrained minimization</text>
+</g>
+<!-- «methods.constraints.multiplier» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Emultiplier&#45;00BB" class="node">
+<title>«methods.constraints.multiplier»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Emultiplier&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___constraints___multiplier_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="410" cy="-314.99" rx="58.35" ry="18"/>
+<text text-anchor="middle" x="410" y="-312.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">constraints.multiplier</text>
+</a>
+</g>
+</g>
+<!-- «methods.constraints.sphere_variation» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Esphere&#45;005Fvariation&#45;00BB" class="node">
+<title>«methods.constraints.sphere_variation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Esphere&#45;005Fvariation&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___constraints___sphere_variation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="410" cy="-243.4" rx="76.02" ry="18"/>
+<text text-anchor="middle" x="410" y="-240.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">constraints.sphere_variation</text>
+</a>
+</g>
+</g>
+<!-- «methods.constraints.multiplier»&#45;&gt;«methods.constraints.sphere_variation» -->
+<g id="edge7" class="edge">
+<title>«methods.constraints.multiplier»&#45;&gt;«methods.constraints.sphere_variation»</title>
+<path fill="none" stroke="#6b7280" d="M410,-296.79C410,-287.94 410,-277.03 410,-267.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="410,-261.4 412.7,-267.4 410,-264.4 410,-267.4 410,-267.4 410,-267.4 410,-264.4 407.3,-267.4 410,-261.4 410,-261.4"/>
+</g>
+<!-- «methods.null_lagrangian.boundary_action» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Enull&#45;005Flagrangian&#45;002Eboundary&#45;005Faction&#45;00BB" class="node">
+<title>«methods.null_lagrangian.boundary_action»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Enull&#45;005Flagrangian&#45;002Eboundary&#45;005Faction&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___null_lagrangian___boundary_action_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="76" cy="-243.4" rx="60.21" ry="19.6"/>
+<text text-anchor="middle" x="76" y="-246.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">null_lagrangian</text>
+<text text-anchor="middle" x="76" y="-235.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_action</text>
+</a>
+</g>
+</g>
+<!-- «methods.constraints.harmonic_map» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Eharmonic&#45;005Fmap&#45;00BB" class="node">
+<title>«methods.constraints.harmonic_map»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Eharmonic&#45;005Fmap&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___constraints___harmonic_map_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="410" cy="-171.8" rx="72.08" ry="18"/>
+<text text-anchor="middle" x="410" y="-169.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">constraints.harmonic_map</text>
+</a>
+</g>
+</g>
+<!-- «methods.null_lagrangian» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Enull&#45;005Flagrangian&#45;00BB" class="node">
+<title>«methods.null_lagrangian»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Enull&#45;005Flagrangian&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___null_lagrangian_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="293,-332.99 175,-332.99 175,-296.99 293,-296.99 293,-332.99"/>
+<text text-anchor="middle" x="234" y="-312.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">methods.null_lagrangian</text>
+</a>
+</g>
+</g>
+<!-- «methods.null_lagrangian»&#45;&gt;«methods.null_lagrangian.boundary_action» -->
+<g id="edge1" class="edge">
+<title>«methods.null_lagrangian»&#45;&gt;«methods.null_lagrangian.boundary_action»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M195.35,-296.97C171.41,-286.43 140.72,-272.91 116.46,-262.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="110.75,-259.71 117.33,-259.65 113.54,-260.82 116.28,-262.03 116.24,-262.12 116.2,-262.22 113.46,-261.01 115.15,-264.59 110.75,-259.71 110.75,-259.71"/>
+</g>
+<!-- «methods.null_lagrangian.determinant» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Enull&#45;005Flagrangian&#45;002Edeterminant&#45;00BB" class="node">
+<title>«methods.null_lagrangian.determinant»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Enull&#45;005Flagrangian&#45;002Edeterminant&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___null_lagrangian___determinant_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="235" cy="-243.4" rx="74.11" ry="18"/>
+<text text-anchor="middle" x="235" y="-240.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">null_lagrangian.determinant</text>
+</a>
+</g>
+</g>
+<!-- «methods.null_lagrangian»&#45;&gt;«methods.null_lagrangian.determinant» -->
+<g id="edge4" class="edge">
+<title>«methods.null_lagrangian»&#45;&gt;«methods.null_lagrangian.determinant»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M234.25,-296.79C234.37,-287.94 234.53,-277.03 234.67,-267.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="234.76,-261.4 237.37,-267.44 234.81,-264.4 234.77,-267.4 234.67,-267.4 234.57,-267.4 234.61,-264.4 231.97,-267.36 234.76,-261.4 234.76,-261.4"/>
+</g>
+<!-- «methods.constraints.obstacle_regularity» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Eobstacle&#45;005Fregularity&#45;00BB" class="node">
+<title>«methods.constraints.obstacle_regularity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Eobstacle&#45;005Fregularity&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___constraints___obstacle_regularity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="83" cy="-314.99" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="83" y="-317.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">constraints</text>
+<text text-anchor="middle" x="83" y="-306.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">obstacle_regularity</text>
+</a>
+</g>
+</g>
+<!-- «methods.polyconvex.lower_semicontinuity» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epolyconvex&#45;002Elower&#45;005Fsemicontinuity&#45;00BB" class="node">
+<title>«methods.polyconvex.lower_semicontinuity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epolyconvex&#45;002Elower&#45;005Fsemicontinuity&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___polyconvex___lower_semicontinuity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="235" cy="-171.8" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="235" y="-174.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">polyconvex</text>
+<text text-anchor="middle" x="235" y="-163.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">lower_semicontinuity</text>
+</a>
+</g>
+</g>
+<!-- «methods.polyconvex.minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epolyconvex&#45;002Eminimizer&#45;00BB" class="node">
+<title>«methods.polyconvex.minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epolyconvex&#45;002Eminimizer&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___polyconvex___minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="235" cy="-102" rx="58.98" ry="18"/>
+<text text-anchor="middle" x="235" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">polyconvex.minimizer</text>
+</a>
+</g>
+</g>
+<!-- «methods.polyconvex.lower_semicontinuity»&#45;&gt;«methods.polyconvex.minimizer» -->
+<g id="edge5" class="edge">
+<title>«methods.polyconvex.lower_semicontinuity»&#45;&gt;«methods.polyconvex.minimizer»</title>
+<path fill="none" stroke="#6b7280" d="M235,-151.91C235,-144.04 235,-134.82 235,-126.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="235,-120.39 237.7,-126.39 235,-123.39 235,-126.39 235,-126.39 235,-126.39 235,-123.39 232.3,-126.39 235,-120.39 235,-120.39"/>
+</g>
+<!-- «methods.null_lagrangian.determinant»&#45;&gt;«methods.polyconvex.lower_semicontinuity» -->
+<g id="edge3" class="edge">
+<title>«methods.null_lagrangian.determinant»&#45;&gt;«methods.polyconvex.lower_semicontinuity»</title>
+<path fill="none" stroke="#6b7280" d="M235,-225.19C235,-216.95 235,-206.92 235,-197.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="235,-191.76 237.7,-197.76 235,-194.76 235,-197.76 235,-197.76 235,-197.76 235,-194.76 232.3,-197.76 235,-191.76 235,-191.76"/>
+</g>
+<!-- «methods.constraints.det_one» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Edet&#45;005Fone&#45;00BB" class="node">
+<title>«methods.constraints.det_one»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;002Edet&#45;005Fone&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___constraints___det_one_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="235" cy="-34" rx="55.68" ry="18"/>
+<text text-anchor="middle" x="235" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">constraints.det_one</text>
+</a>
+</g>
+</g>
+<!-- «methods.polyconvex.minimizer»&#45;&gt;«methods.constraints.det_one» -->
+<g id="edge6" class="edge">
+<title>«methods.polyconvex.minimizer»&#45;&gt;«methods.constraints.det_one»</title>
+<path fill="none" stroke="#6b7280" d="M235,-83.66C235,-75.99 235,-66.85 235,-58.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="235,-52.45 237.7,-58.45 235,-55.45 235,-58.45 235,-58.45 235,-58.45 235,-55.45 232.3,-58.45 235,-52.45 235,-52.45"/>
+</g>
+<!-- «methods.constraints.sphere_variation»&#45;&gt;«methods.constraints.harmonic_map» -->
+<g id="edge2" class="edge">
+<title>«methods.constraints.sphere_variation»&#45;&gt;«methods.constraints.harmonic_map»</title>
+<path fill="none" stroke="#6b7280" d="M410,-225.19C410,-216.34 410,-205.43 410,-195.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="410,-189.81 412.7,-195.81 410,-192.81 410,-195.81 410,-195.81 410,-195.81 410,-192.81 407.3,-195.81 410,-189.81 410,-189.81"/>
+</g>
+</g>
+</svg>

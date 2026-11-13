@@ -1,0 +1,164 @@
+<svg data-node-count="10" data-edge-count="10" data-cluster-count="1" data-variant-key="parent:«foundations.pde_problems»" width="416pt" height="307pt"
+ viewBox="0.00 0.00 416.00 306.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 302.6)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-302.6 412,-302.6 412,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 388,-8 388,-8 394,-8 400,-14 400,-20 400,-20 400,-278.6 400,-278.6 400,-284.6 394,-290.6 388,-290.6 388,-290.6 20,-290.6 20,-290.6 14,-290.6 8,-284.6 8,-278.6 8,-278.6 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="204" y="-275.4" font-family="Helvetica" font-size="14.00">PDE problem interfaces</text>
+</g>
+<!-- «foundations.pde_problems.linear_class» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Elinear&#45;005Fclass&#45;00BB" class="node">
+<title>«foundations.pde_problems.linear_class»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Elinear&#45;005Fclass&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___linear_class_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="392,-123.6 264,-123.6 264,-87.6 392,-87.6 392,-123.6"/>
+<text text-anchor="middle" x="328" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems.linear_class</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.poisson_unit_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Epoisson&#45;005Funit&#45;005Fball&#45;00BB" class="node">
+<title>«foundations.pde_problems.poisson_unit_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Epoisson&#45;005Funit&#45;005Fball&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___poisson_unit_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="104,-123.6 16,-123.6 16,-87.6 104,-87.6 104,-123.6"/>
+<text text-anchor="middle" x="60" y="-108.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems</text>
+<text text-anchor="middle" x="60" y="-97.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">poisson_unit_ball</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.poisson_unit_ball_iff» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Epoisson&#45;005Funit&#45;005Fball&#45;005Fiff&#45;00BB" class="node">
+<title>«foundations.pde_problems.poisson_unit_ball_iff»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Epoisson&#45;005Funit&#45;005Fball&#45;005Fiff&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___poisson_unit_ball_iff_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="87" cy="-35.8" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="87" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems</text>
+<text text-anchor="middle" x="87" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">poisson_unit_ball_iff</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.poisson_unit_ball»&#45;&gt;«foundations.pde_problems.poisson_unit_ball_iff» -->
+<g id="edge3" class="edge">
+<title>«foundations.pde_problems.poisson_unit_ball»&#45;&gt;«foundations.pde_problems.poisson_unit_ball_iff»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M66.81,-87.49C69.96,-79.58 73.76,-70.05 77.21,-61.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="79.52,-55.57 79.81,-62.15 78.51,-58.4 77.4,-61.18 77.3,-61.15 77.21,-61.11 78.32,-58.32 74.8,-60.15 79.52,-55.57 79.52,-55.57"/>
+</g>
+<!-- «foundations.pde_problems.jet_locality» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Ejet&#45;005Flocality&#45;00BB" class="node">
+<title>«foundations.pde_problems.jet_locality»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Ejet&#45;005Flocality&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___jet_locality_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="389.5,-191.6 266.5,-191.6 266.5,-155.6 389.5,-155.6 389.5,-191.6"/>
+<text text-anchor="middle" x="328" y="-171.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems.jet_locality</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.jet_locality»&#45;&gt;«foundations.pde_problems.linear_class» -->
+<g id="edge1" class="edge">
+<title>«foundations.pde_problems.jet_locality»&#45;&gt;«foundations.pde_problems.linear_class»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M328,-155.26C328,-147.59 328,-138.45 328,-130.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="328,-124.05 330.7,-130.05 328.1,-127.05 328.1,-130.05 328,-130.05 327.9,-130.05 327.9,-127.05 325.3,-130.05 328,-124.05 328,-124.05"/>
+</g>
+<!-- «foundations.pde_problems.jet» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Ejet&#45;00BB" class="node">
+<title>«foundations.pde_problems.jet»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Ejet&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___jet_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="371.5,-259.6 284.5,-259.6 284.5,-223.6 371.5,-223.6 371.5,-259.6"/>
+<text text-anchor="middle" x="328" y="-239.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems.jet</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.jet»&#45;&gt;«foundations.pde_problems.jet_locality» -->
+<g id="edge5" class="edge">
+<title>«foundations.pde_problems.jet»&#45;&gt;«foundations.pde_problems.jet_locality»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M328,-223.26C328,-215.59 328,-206.45 328,-198.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="328,-192.05 330.7,-198.05 328.1,-195.05 328.1,-198.05 328,-198.05 327.9,-198.05 327.9,-195.05 325.3,-198.05 328,-192.05 328,-192.05"/>
+</g>
+<!-- «foundations.pde_problems.solution_iff» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Esolution&#45;005Fiff&#45;00BB" class="node">
+<title>«foundations.pde_problems.solution_iff»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Esolution&#45;005Fiff&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___solution_iff_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="252" cy="-35.8" rx="69.54" ry="18"/>
+<text text-anchor="middle" x="252" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems.solution_iff</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.equation_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Eequation&#45;005Fsolution&#45;00BB" class="node">
+<title>«foundations.pde_problems.equation_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Eequation&#45;005Fsolution&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___equation_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="241,-191.6 153,-191.6 153,-155.6 241,-155.6 241,-191.6"/>
+<text text-anchor="middle" x="197" y="-176.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems</text>
+<text text-anchor="middle" x="197" y="-165.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">equation_solution</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.solution» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Esolution&#45;00BB" class="node">
+<title>«foundations.pde_problems.solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Esolution&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="239,-123.6 129,-123.6 129,-87.6 239,-87.6 239,-123.6"/>
+<text text-anchor="middle" x="184" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems.solution</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.equation_solution»&#45;&gt;«foundations.pde_problems.solution» -->
+<g id="edge8" class="edge">
+<title>«foundations.pde_problems.equation_solution»&#45;&gt;«foundations.pde_problems.solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M193.58,-155.26C192.07,-147.59 190.27,-138.45 188.64,-130.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="187.44,-124.05 191.25,-129.42 188.12,-126.98 188.7,-129.92 188.6,-129.94 188.5,-129.96 187.92,-127.01 185.95,-130.46 187.44,-124.05 187.44,-124.05"/>
+</g>
+<!-- «foundations.pde_problems.solution»&#45;&gt;«foundations.pde_problems.poisson_unit_ball_iff» -->
+<g id="edge4" class="edge">
+<title>«foundations.pde_problems.solution»&#45;&gt;«foundations.pde_problems.poisson_unit_ball_iff»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M159.52,-87.49C146.74,-78.55 130.98,-67.54 117.42,-58.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="112.15,-54.37 118.61,-55.6 114.66,-56.01 117.12,-57.73 117.06,-57.81 117.01,-57.89 114.55,-56.18 115.52,-60.03 112.15,-54.37 112.15,-54.37"/>
+</g>
+<!-- «foundations.pde_problems.solution»&#45;&gt;«foundations.pde_problems.solution_iff» -->
+<g id="edge6" class="edge">
+<title>«foundations.pde_problems.solution»&#45;&gt;«foundations.pde_problems.solution_iff»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M201.16,-87.49C210.17,-78.51 221.28,-67.42 230.82,-57.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="235.08,-53.67 232.74,-59.82 233.03,-55.86 230.9,-57.97 230.83,-57.9 230.76,-57.83 232.89,-55.71 228.93,-55.99 235.08,-53.67 235.08,-53.67"/>
+</g>
+<!-- «foundations.pde_problems.problem» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Eproblem&#45;00BB" class="node">
+<title>«foundations.pde_problems.problem»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Eproblem&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___problem_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="127.5,-191.6 16.5,-191.6 16.5,-155.6 127.5,-155.6 127.5,-191.6"/>
+<text text-anchor="middle" x="72" y="-171.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems.problem</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.problem»&#45;&gt;«foundations.pde_problems.poisson_unit_ball» -->
+<g id="edge2" class="edge">
+<title>«foundations.pde_problems.problem»&#45;&gt;«foundations.pde_problems.poisson_unit_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M68.85,-155.26C67.45,-147.59 65.79,-138.45 64.29,-130.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="63.17,-124.05 66.9,-129.47 63.81,-126.99 64.35,-129.94 64.25,-129.96 64.15,-129.97 63.61,-127.02 61.59,-130.44 63.17,-124.05 63.17,-124.05"/>
+</g>
+<!-- «foundations.pde_problems.problem»&#45;&gt;«foundations.pde_problems.solution» -->
+<g id="edge9" class="edge">
+<title>«foundations.pde_problems.problem»&#45;&gt;«foundations.pde_problems.solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M101.13,-155.43C115.91,-146.72 133.96,-136.09 149.44,-126.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="155.01,-123.68 151.21,-129.05 152.48,-125.29 149.89,-126.81 149.84,-126.73 149.79,-126.64 152.38,-125.12 148.47,-124.4 155.01,-123.68 155.01,-123.68"/>
+</g>
+<!-- «foundations.pde_problems.equation» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Eequation&#45;00BB" class="node">
+<title>«foundations.pde_problems.equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;002Eequation&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___pde_problems___equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="191.5,-259.6 78.5,-259.6 78.5,-223.6 191.5,-223.6 191.5,-259.6"/>
+<text text-anchor="middle" x="135" y="-239.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">pde_problems.equation</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems.equation»&#45;&gt;«foundations.pde_problems.equation_solution» -->
+<g id="edge7" class="edge">
+<title>«foundations.pde_problems.equation»&#45;&gt;«foundations.pde_problems.equation_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M151.29,-223.26C158.92,-215.14 168.09,-205.37 176.22,-196.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="180.6,-192.05 178.46,-198.27 178.62,-194.31 176.57,-196.49 176.5,-196.43 176.42,-196.36 178.48,-194.17 174.53,-194.58 180.6,-192.05 180.6,-192.05"/>
+</g>
+<!-- «foundations.pde_problems.equation»&#45;&gt;«foundations.pde_problems.problem» -->
+<g id="edge10" class="edge">
+<title>«foundations.pde_problems.equation»&#45;&gt;«foundations.pde_problems.problem»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M118.45,-223.26C110.7,-215.14 101.37,-205.37 93.12,-196.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="88.66,-192.05 94.76,-194.53 90.8,-194.15 92.88,-196.32 92.8,-196.39 92.73,-196.46 90.66,-194.29 90.85,-198.26 88.66,-192.05 88.66,-192.05"/>
+</g>
+</g>
+</svg>

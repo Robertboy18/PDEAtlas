@@ -1,0 +1,61 @@
+<svg data-node-count="5" data-edge-count="0" data-cluster-count="1" data-variant-key="parent:«symbolic.theorem_api»" width="1054pt" height="103pt"
+ viewBox="0.00 0.00 1054.00 102.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 98.6)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-98.6 1050,-98.6 1050,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1026,-8 1026,-8 1032,-8 1038,-14 1038,-20 1038,-20 1038,-74.6 1038,-74.6 1038,-80.6 1032,-86.6 1026,-86.6 1026,-86.6 20,-86.6 20,-86.6 14,-86.6 8,-80.6 8,-74.6 8,-74.6 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="523" y="-71.4" font-family="Helvetica" font-size="14.00">Symbolic PDE proofs</text>
+</g>
+<!-- «symbolic.fundamental_solution_examples» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Efundamental&#45;005Fsolution&#45;005Fexamples&#45;00BB" class="node">
+<title>«symbolic.fundamental_solution_examples»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Efundamental&#45;005Fsolution&#45;005Fexamples&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___fundamental_solution_examples_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="923" cy="-35.8" rx="106.55" ry="19.6"/>
+<text text-anchor="middle" x="923" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="923" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution_examples</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.gaussian_heat_example» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Egaussian&#45;005Fheat&#45;005Fexample&#45;00BB" class="node">
+<title>«symbolic.gaussian_heat_example»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Egaussian&#45;005Fheat&#45;005Fexample&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___gaussian_heat_example_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="708" cy="-35.8" rx="82.96" ry="19.6"/>
+<text text-anchor="middle" x="708" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="708" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">gaussian_heat_example</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.polynomial_heat_example» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Epolynomial&#45;005Fheat&#45;005Fexample&#45;00BB" class="node">
+<title>«symbolic.polynomial_heat_example»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Epolynomial&#45;005Fheat&#45;005Fexample&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___polynomial_heat_example_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="513" cy="-35.8" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="513" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="513" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">polynomial_heat_example</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.gaussian_heat_symbolic_bridge» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Egaussian&#45;005Fheat&#45;005Fsymbolic&#45;005Fbridge&#45;00BB" class="node">
+<title>«symbolic.gaussian_heat_symbolic_bridge»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Egaussian&#45;005Fheat&#45;005Fsymbolic&#45;005Fbridge&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___gaussian_heat_symbolic_bridge_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="294" cy="-35.8" rx="106.55" ry="19.6"/>
+<text text-anchor="middle" x="294" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="294" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">gaussian_heat_symbolic_bridge</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.rigid_rotation_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Erigid&#45;005Frotation&#45;005Fenergy&#45;00BB" class="node">
+<title>«symbolic.rigid_rotation_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Erigid&#45;005Frotation&#45;005Fenergy&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___rigid_rotation_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="89" cy="-35.8" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="89" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="89" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">rigid_rotation_energy</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

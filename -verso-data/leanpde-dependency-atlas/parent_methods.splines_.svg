@@ -1,0 +1,145 @@
+<svg data-node-count="8" data-edge-count="10" data-cluster-count="1" data-variant-key="parent:«methods.splines»" width="577pt" height="303pt"
+ viewBox="0.00 0.00 577.00 303.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 299)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-299 573,-299 573,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 549,-8 549,-8 555,-8 561,-14 561,-20 561,-20 561,-275 561,-275 561,-281 555,-287 549,-287 549,-287 20,-287 20,-287 14,-287 8,-281 8,-275 8,-275 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="284.5" y="-271.8" font-family="Helvetica" font-size="14.00">Spline approximation</text>
+</g>
+<!-- «methods.splines.positive_ldu_det_pos» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Epositive&#45;005Fldu&#45;005Fdet&#45;005Fpos&#45;00BB" class="node">
+<title>«methods.splines.positive_ldu_det_pos»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Epositive&#45;005Fldu&#45;005Fdet&#45;005Fpos&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___splines___positive_ldu_det_pos_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="475" cy="-102" rx="77.92" ry="18"/>
+<text text-anchor="middle" x="475" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">splines.positive_ldu_det_pos</text>
+</a>
+</g>
+</g>
+<!-- «methods.splines.schoenberg_whitney» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Eschoenberg&#45;005Fwhitney&#45;00BB" class="node">
+<title>«methods.splines.schoenberg_whitney»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Eschoenberg&#45;005Fwhitney&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___splines___schoenberg_whitney_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="272" cy="-34" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="272" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">splines.schoenberg_whitney</text>
+</a>
+</g>
+</g>
+<!-- «methods.splines.cox_de_boor_basis» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Ecox&#45;005Fde&#45;005Fboor&#45;005Fbasis&#45;00BB" class="node">
+<title>«methods.splines.cox_de_boor_basis»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Ecox&#45;005Fde&#45;005Fboor&#45;005Fbasis&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___splines___cox_de_boor_basis_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="238,-188 108,-188 108,-152 238,-152 238,-188"/>
+<text text-anchor="middle" x="173" y="-167.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">splines.cox_de_boor_basis</text>
+</a>
+</g>
+</g>
+<!-- «methods.splines.cox_de_boor_support» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Ecox&#45;005Fde&#45;005Fboor&#45;005Fsupport&#45;00BB" class="node">
+<title>«methods.splines.cox_de_boor_support»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Ecox&#45;005Fde&#45;005Fboor&#45;005Fsupport&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___splines___cox_de_boor_support_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="95" cy="-102" rx="79.32" ry="18"/>
+<text text-anchor="middle" x="95" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">splines.cox_de_boor_support</text>
+</a>
+</g>
+</g>
+<!-- «methods.splines.cox_de_boor_basis»&#45;&gt;«methods.splines.cox_de_boor_support» -->
+<g id="edge7" class="edge">
+<title>«methods.splines.cox_de_boor_basis»&#45;&gt;«methods.splines.cox_de_boor_support»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M152.51,-151.66C142.33,-143.05 129.96,-132.58 119.31,-123.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="114.55,-119.54 120.87,-121.36 116.91,-121.4 119.2,-123.34 119.13,-123.42 119.07,-123.49 116.78,-121.56 117.39,-125.48 114.55,-119.54 114.55,-119.54"/>
+</g>
+<!-- «methods.splines.schoenberg_whitney_condition» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Eschoenberg&#45;005Fwhitney&#45;005Fcondition&#45;00BB" class="node">
+<title>«methods.splines.schoenberg_whitney_condition»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Eschoenberg&#45;005Fwhitney&#45;005Fcondition&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___splines___schoenberg_whitney_condition_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="345,-120 199,-120 199,-84 345,-84 345,-120"/>
+<text text-anchor="middle" x="272" y="-105" font-family="Helvetica" font-size="10.00" fill="#ffffff">splines</text>
+<text text-anchor="middle" x="272" y="-94" font-family="Helvetica" font-size="10.00" fill="#ffffff">schoenberg_whitney_condition</text>
+</a>
+</g>
+</g>
+<!-- «methods.splines.cox_de_boor_basis»&#45;&gt;«methods.splines.schoenberg_whitney_condition» -->
+<g id="edge9" class="edge">
+<title>«methods.splines.cox_de_boor_basis»&#45;&gt;«methods.splines.schoenberg_whitney_condition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M198.75,-151.83C211.7,-143.2 227.49,-132.67 241.09,-123.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="246.38,-120.08 242.88,-125.66 243.94,-121.83 241.44,-123.49 241.38,-123.41 241.33,-123.33 243.82,-121.66 239.89,-121.16 246.38,-120.08 246.38,-120.08"/>
+</g>
+<!-- «methods.splines.positive_ldu_certificate» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Epositive&#45;005Fldu&#45;005Fcertificate&#45;00BB" class="node">
+<title>«methods.splines.positive_ldu_certificate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Epositive&#45;005Fldu&#45;005Fcertificate&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___splines___positive_ldu_certificate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="553,-188 441,-188 441,-152 553,-152 553,-188"/>
+<text text-anchor="middle" x="497" y="-173" font-family="Helvetica" font-size="10.00" fill="#ffffff">splines</text>
+<text text-anchor="middle" x="497" y="-162" font-family="Helvetica" font-size="10.00" fill="#ffffff">positive_ldu_certificate</text>
+</a>
+</g>
+</g>
+<!-- «methods.splines.positive_ldu_certificate»&#45;&gt;«methods.splines.positive_ldu_det_pos» -->
+<g id="edge1" class="edge">
+<title>«methods.splines.positive_ldu_certificate»&#45;&gt;«methods.splines.positive_ldu_det_pos»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M491.22,-151.66C488.57,-143.72 485.4,-134.19 482.56,-125.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="480.67,-120 485.12,-124.83 481.71,-122.81 482.66,-125.66 482.56,-125.69 482.47,-125.72 481.52,-122.87 480,-126.54 480.67,-120 480.67,-120"/>
+</g>
+<!-- «methods.splines.cox_de_boor_support»&#45;&gt;«methods.splines.schoenberg_whitney» -->
+<g id="edge5" class="edge">
+<title>«methods.splines.cox_de_boor_support»&#45;&gt;«methods.splines.schoenberg_whitney»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M134.28,-86.35C161.67,-76.14 198.27,-62.49 226.86,-51.83"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="232.83,-49.61 228.15,-54.23 230.05,-50.75 227.24,-51.8 227.21,-51.7 227.17,-51.61 229.98,-50.56 226.26,-49.17 232.83,-49.61 232.83,-49.61"/>
+</g>
+<!-- «methods.splines.collocation_matrix» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Ecollocation&#45;005Fmatrix&#45;00BB" class="node">
+<title>«methods.splines.collocation_matrix»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Ecollocation&#45;005Fmatrix&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___splines___collocation_matrix_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="415.5,-188 290.5,-188 290.5,-152 415.5,-152 415.5,-188"/>
+<text text-anchor="middle" x="353" y="-167.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">splines.collocation_matrix</text>
+</a>
+</g>
+</g>
+<!-- «methods.splines.collocation_matrix»&#45;&gt;«methods.splines.positive_ldu_det_pos» -->
+<g id="edge2" class="edge">
+<title>«methods.splines.collocation_matrix»&#45;&gt;«methods.splines.positive_ldu_det_pos»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M384.74,-151.83C401.88,-142.56 423.07,-131.09 440.61,-121.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="445.93,-118.73 441.94,-123.96 443.34,-120.24 440.7,-121.67 440.65,-121.58 440.61,-121.49 443.24,-120.07 439.37,-119.21 445.93,-118.73 445.93,-118.73"/>
+</g>
+<!-- «methods.splines.collocation_matrix»&#45;&gt;«methods.splines.schoenberg_whitney» -->
+<g id="edge4" class="edge">
+<title>«methods.splines.collocation_matrix»&#45;&gt;«methods.splines.schoenberg_whitney»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M359.29,-151.75C364.77,-133.6 370.11,-104.83 358,-84 349.77,-69.83 335.74,-59.42 321.37,-51.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="315.65,-49.11 322.22,-49.34 318.38,-50.35 321.07,-51.67 321.03,-51.76 320.98,-51.85 318.29,-50.53 319.83,-54.19 315.65,-49.11 315.65,-49.11"/>
+</g>
+<!-- «methods.splines.collocation_matrix»&#45;&gt;«methods.splines.schoenberg_whitney_condition» -->
+<g id="edge10" class="edge">
+<title>«methods.splines.collocation_matrix»&#45;&gt;«methods.splines.schoenberg_whitney_condition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M331.72,-151.66C321.39,-143.25 308.9,-133.07 298.01,-124.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="293.14,-120.22 299.5,-121.92 295.53,-122.04 297.85,-123.94 297.79,-124.01 297.73,-124.09 295.4,-122.2 296.09,-126.11 293.14,-120.22 293.14,-120.22"/>
+</g>
+<!-- «methods.splines.knot_sequence» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Eknot&#45;005Fsequence&#45;00BB" class="node">
+<title>«methods.splines.knot_sequence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;002Eknot&#45;005Fsequence&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___splines___knot_sequence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="274,-256 162,-256 162,-220 274,-220 274,-256"/>
+<text text-anchor="middle" x="218" y="-235.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">splines.knot_sequence</text>
+</a>
+</g>
+</g>
+<!-- «methods.splines.knot_sequence»&#45;&gt;«methods.splines.cox_de_boor_basis» -->
+<g id="edge6" class="edge">
+<title>«methods.splines.knot_sequence»&#45;&gt;«methods.splines.cox_de_boor_basis»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M206.18,-219.66C200.74,-211.69 194.23,-202.13 188.41,-193.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="184.9,-188.45 190.51,-191.89 186.67,-190.88 188.36,-193.36 188.28,-193.41 188.2,-193.47 186.51,-190.99 186.05,-194.93 184.9,-188.45 184.9,-188.45"/>
+</g>
+<!-- «methods.splines.knot_sequence»&#45;&gt;«methods.splines.schoenberg_whitney_condition» -->
+<g id="edge8" class="edge">
+<title>«methods.splines.knot_sequence»&#45;&gt;«methods.splines.schoenberg_whitney_condition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M231.82,-219.73C238.45,-210.72 246.01,-199.25 251,-188 259.84,-168.08 265.36,-143.8 268.51,-126.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="269.57,-120.19 271.21,-126.56 269.16,-123.16 268.65,-126.12 268.55,-126.1 268.45,-126.08 268.96,-123.13 265.89,-125.64 269.57,-120.19 269.57,-120.19"/>
+</g>
+<!-- «methods.splines.schoenberg_whitney_condition»&#45;&gt;«methods.splines.schoenberg_whitney» -->
+<g id="edge3" class="edge">
+<title>«methods.splines.schoenberg_whitney_condition»&#45;&gt;«methods.splines.schoenberg_whitney»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M272,-83.66C272,-75.99 272,-66.85 272,-58.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="272,-52.45 274.7,-58.45 272.1,-55.45 272.1,-58.45 272,-58.45 271.9,-58.45 271.9,-55.45 269.3,-58.45 272,-52.45 272,-52.45"/>
+</g>
+</g>
+</svg>

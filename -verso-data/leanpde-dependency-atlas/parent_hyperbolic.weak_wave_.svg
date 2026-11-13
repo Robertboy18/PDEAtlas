@@ -1,0 +1,180 @@
+<svg data-node-count="10" data-edge-count="12" data-cluster-count="1" data-variant-key="parent:«hyperbolic.weak_wave»" width="771pt" height="385pt"
+ viewBox="0.00 0.00 771.00 385.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 381.39)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-381.39 767,-381.39 767,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 743,-8 743,-8 749,-8 755,-14 755,-20 755,-20 755,-357.39 755,-357.39 755,-363.39 749,-369.39 743,-369.39 743,-369.39 20,-369.39 20,-369.39 14,-369.39 8,-363.39 8,-357.39 8,-357.39 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="381.5" y="-354.19" font-family="Helvetica" font-size="14.00">Weak wave equations</text>
+</g>
+<!-- «hyperbolic.weak_wave.solution» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Esolution&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Esolution&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="501.5,-125.4 402.5,-125.4 402.5,-89.4 501.5,-89.4 501.5,-125.4"/>
+<text text-anchor="middle" x="452" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave.solution</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.compactness_existence» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Ecompactness&#45;005Fexistence&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.compactness_existence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Ecompactness&#45;005Fexistence&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___compactness_existence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="99" cy="-35.8" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="99" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave</text>
+<text text-anchor="middle" x="99" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">compactness_existence</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.solution»&#45;&gt;«hyperbolic.weak_wave.compactness_existence» -->
+<g id="edge2" class="edge">
+<title>«hyperbolic.weak_wave.solution»&#45;&gt;«hyperbolic.weak_wave.compactness_existence»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M402.37,-94.14C392.65,-91.87 382.52,-89.59 373,-87.6 294.32,-71.18 274,-70.43 195,-55.6 185.96,-53.9 176.45,-52.08 167.08,-50.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="160.94,-49.08 167.35,-47.57 163.91,-49.55 166.85,-50.12 166.83,-50.22 166.81,-50.32 163.87,-49.74 166.32,-52.87 160.94,-49.08 160.94,-49.08"/>
+</g>
+<!-- «hyperbolic.weak_wave.projected_initial_data» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Eprojected&#45;005Finitial&#45;005Fdata&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.projected_initial_data»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Eprojected&#45;005Finitial&#45;005Fdata&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___projected_initial_data_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="281" cy="-35.8" rx="73.58" ry="19.6"/>
+<text text-anchor="middle" x="281" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave</text>
+<text text-anchor="middle" x="281" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">projected_initial_data</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.solution»&#45;&gt;«hyperbolic.weak_wave.projected_initial_data» -->
+<g id="edge8" class="edge">
+<title>«hyperbolic.weak_wave.solution»&#45;&gt;«hyperbolic.weak_wave.projected_initial_data»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M410.17,-89.37C384.61,-78.97 351.94,-65.67 325.86,-55.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="320.06,-52.69 326.63,-52.46 322.87,-53.73 325.65,-54.86 325.61,-54.96 325.57,-55.05 322.8,-53.92 324.59,-57.46 320.06,-52.69 320.06,-52.69"/>
+</g>
+<!-- «hyperbolic.weak_wave.continuous_representative» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Econtinuous&#45;005Frepresentative&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.continuous_representative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Econtinuous&#45;005Frepresentative&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___continuous_representative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="469" cy="-35.8" rx="89.19" ry="19.6"/>
+<text text-anchor="middle" x="469" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave</text>
+<text text-anchor="middle" x="469" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">continuous_representative</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.solution»&#45;&gt;«hyperbolic.weak_wave.continuous_representative» -->
+<g id="edge11" class="edge">
+<title>«hyperbolic.weak_wave.solution»&#45;&gt;«hyperbolic.weak_wave.continuous_representative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M456.2,-89.19C458.23,-80.87 460.71,-70.73 462.94,-61.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="464.37,-55.76 465.57,-62.23 463.75,-58.7 463.04,-61.61 462.94,-61.59 462.85,-61.57 463.56,-58.65 460.32,-60.95 464.37,-55.76 464.37,-55.76"/>
+</g>
+<!-- «hyperbolic.weak_wave.weak_limit_closed» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Eweak&#45;005Flimit&#45;005Fclosed&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.weak_limit_closed»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Eweak&#45;005Flimit&#45;005Fclosed&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___weak_limit_closed_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="665" cy="-35.8" rx="82.5" ry="18"/>
+<text text-anchor="middle" x="665" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave.weak_limit_closed</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.solution»&#45;&gt;«hyperbolic.weak_wave.weak_limit_closed» -->
+<g id="edge12" class="edge">
+<title>«hyperbolic.weak_wave.solution»&#45;&gt;«hyperbolic.weak_wave.weak_limit_closed»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M501.67,-90.17C535.83,-79 581.03,-64.23 615.22,-53.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="621.04,-51.16 616.18,-55.59 618.22,-52.19 615.37,-53.12 615.34,-53.03 615.31,-52.93 618.16,-52 614.5,-50.46 621.04,-51.16 621.04,-51.16"/>
+</g>
+<!-- «hyperbolic.weak_wave.galerkin_acceleration_bound» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Egalerkin&#45;005Facceleration&#45;005Fbound&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.galerkin_acceleration_bound»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Egalerkin&#45;005Facceleration&#45;005Fbound&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___galerkin_acceleration_bound_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="124" cy="-178.99" rx="96.33" ry="19.6"/>
+<text text-anchor="middle" x="124" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave</text>
+<text text-anchor="middle" x="124" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">galerkin_acceleration_bound</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.projected_limit» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Eprojected&#45;005Flimit&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.projected_limit»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Eprojected&#45;005Flimit&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___projected_limit_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="100" cy="-107.4" rx="72.71" ry="18"/>
+<text text-anchor="middle" x="100" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave.projected_limit</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.galerkin_acceleration_bound»&#45;&gt;«hyperbolic.weak_wave.projected_limit» -->
+<g id="edge7" class="edge">
+<title>«hyperbolic.weak_wave.galerkin_acceleration_bound»&#45;&gt;«hyperbolic.weak_wave.projected_limit»</title>
+<path fill="none" stroke="#6b7280" d="M117.44,-158.98C114.48,-150.39 110.96,-140.18 107.86,-131.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="105.89,-125.49 110.4,-130.28 106.87,-128.33 107.85,-131.16 107.85,-131.16 107.85,-131.16 106.87,-128.33 105.3,-132.04 105.89,-125.49 105.89,-125.49"/>
+</g>
+<!-- «hyperbolic.weak_wave.finite_dimensional_existence» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Efinite&#45;005Fdimensional&#45;005Fexistence&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.finite_dimensional_existence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Efinite&#45;005Fdimensional&#45;005Fexistence&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___finite_dimensional_existence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="135" cy="-318.59" rx="97.66" ry="19.6"/>
+<text text-anchor="middle" x="135" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave</text>
+<text text-anchor="middle" x="135" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">finite_dimensional_existence</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.galerkin_realization» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Egalerkin&#45;005Frealization&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.galerkin_realization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Egalerkin&#45;005Frealization&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___galerkin_realization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="183.5,-266.79 86.5,-266.79 86.5,-230.79 183.5,-230.79 183.5,-266.79"/>
+<text text-anchor="middle" x="135" y="-251.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave</text>
+<text text-anchor="middle" x="135" y="-240.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">galerkin_realization</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.finite_dimensional_existence»&#45;&gt;«hyperbolic.weak_wave.galerkin_realization» -->
+<g id="edge6" class="edge">
+<title>«hyperbolic.weak_wave.finite_dimensional_existence»&#45;&gt;«hyperbolic.weak_wave.galerkin_realization»</title>
+<path fill="none" stroke="#6b7280" d="M135,-298.71C135,-290.84 135,-281.62 135,-273.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="135,-267.19 137.7,-273.19 135,-270.19 135,-273.19 135,-273.19 135,-273.19 135,-270.19 132.3,-273.19 135,-267.19 135,-267.19"/>
+</g>
+<!-- «hyperbolic.weak_wave.galerkin_time_identities» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Egalerkin&#45;005Ftime&#45;005Fidentities&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.galerkin_time_identities»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Egalerkin&#45;005Ftime&#45;005Fidentities&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___galerkin_time_identities_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="279" cy="-107.4" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="279" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave</text>
+<text text-anchor="middle" x="279" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">galerkin_time_identities</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.galerkin_time_identities»&#45;&gt;«hyperbolic.weak_wave.compactness_existence» -->
+<g id="edge3" class="edge">
+<title>«hyperbolic.weak_wave.galerkin_time_identities»&#45;&gt;«hyperbolic.weak_wave.compactness_existence»</title>
+<path fill="none" stroke="#6b7280" d="M237.25,-90.25C210.2,-79.8 174.89,-66.14 146.73,-55.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="140.83,-52.97 147.4,-52.62 143.63,-54.06 146.43,-55.14 146.43,-55.14 146.43,-55.14 143.63,-54.06 145.46,-57.66 140.83,-52.97 140.83,-52.97"/>
+</g>
+<!-- «hyperbolic.weak_wave.galerkin_time_identities»&#45;&gt;«hyperbolic.weak_wave.projected_initial_data» -->
+<g id="edge9" class="edge">
+<title>«hyperbolic.weak_wave.galerkin_time_identities»&#45;&gt;«hyperbolic.weak_wave.projected_initial_data»</title>
+<path fill="none" stroke="#6b7280" d="M279.55,-87.38C279.77,-79.55 280.04,-70.38 280.28,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="280.45,-55.79 282.98,-61.87 280.37,-58.79 280.28,-61.79 280.28,-61.79 280.28,-61.79 280.37,-58.79 277.58,-61.71 280.45,-55.79 280.45,-55.79"/>
+</g>
+<!-- «hyperbolic.weak_wave.galerkin_realization»&#45;&gt;«hyperbolic.weak_wave.galerkin_acceleration_bound» -->
+<g id="edge1" class="edge">
+<title>«hyperbolic.weak_wave.galerkin_realization»&#45;&gt;«hyperbolic.weak_wave.galerkin_acceleration_bound»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M132.22,-230.69C130.99,-223.06 129.5,-213.91 128.14,-205.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="127.12,-199.25 130.75,-204.74 127.7,-202.2 128.18,-205.16 128.09,-205.18 127.99,-205.19 127.51,-202.23 125.42,-205.61 127.12,-199.25 127.12,-199.25"/>
+</g>
+<!-- «hyperbolic.weak_wave.galerkin_realization»&#45;&gt;«hyperbolic.weak_wave.galerkin_time_identities» -->
+<g id="edge5" class="edge">
+<title>«hyperbolic.weak_wave.galerkin_realization»&#45;&gt;«hyperbolic.weak_wave.galerkin_time_identities»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M183.53,-230.89C200.7,-223.12 219.16,-212.53 233,-198.79 251.46,-180.47 263.93,-153.19 271.18,-133.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="273.26,-127.51 273.81,-134.07 272.36,-130.37 271.35,-133.2 271.26,-133.17 271.17,-133.13 272.17,-130.31 268.72,-132.27 273.26,-127.51 273.26,-127.51"/>
+</g>
+<!-- «hyperbolic.weak_wave.projected_limit»&#45;&gt;«hyperbolic.weak_wave.compactness_existence» -->
+<g id="edge4" class="edge">
+<title>«hyperbolic.weak_wave.projected_limit»&#45;&gt;«hyperbolic.weak_wave.compactness_existence»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M99.75,-89.19C99.63,-80.95 99.49,-70.92 99.36,-61.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="99.27,-55.76 102.06,-61.72 99.67,-58.76 99.71,-61.76 99.36,-61.76 99.01,-61.77 98.97,-58.77 96.66,-61.8 99.27,-55.76 99.27,-55.76"/>
+</g>
+<!-- «hyperbolic.weak_wave.projected_limit»&#45;&gt;«hyperbolic.weak_wave.projected_initial_data» -->
+<g id="edge10" class="edge">
+<title>«hyperbolic.weak_wave.projected_limit»&#45;&gt;«hyperbolic.weak_wave.projected_initial_data»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M137.5,-91.98C165.66,-81.15 204.37,-66.26 234.49,-54.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="240.4,-52.41 235.77,-57.08 237.72,-53.81 234.92,-54.89 234.8,-54.56 234.67,-54.24 237.47,-53.16 233.83,-52.04 240.4,-52.41 240.4,-52.41"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,45 @@
+<svg data-node-count="3" data-edge-count="1" data-cluster-count="1" data-variant-key="parent:«fluid.millennium»" width="331pt" height="171pt"
+ viewBox="0.00 0.00 331.00 170.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 166.6)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-166.6 327,-166.6 327,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 303,-8 303,-8 309,-8 315,-14 315,-20 315,-20 315,-142.6 315,-142.6 315,-148.6 309,-154.6 303,-154.6 303,-154.6 20,-154.6 20,-154.6 14,-154.6 8,-148.6 8,-142.6 8,-142.6 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="161.5" y="-139.4" font-family="Helvetica" font-size="14.00">Navier–Stokes global regularity</text>
+</g>
+<!-- «fluid.millennium.continuation_alternative» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Emillennium&#45;002Econtinuation&#45;005Falternative&#45;00BB" class="node">
+<title>«fluid.millennium.continuation_alternative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Emillennium&#45;002Econtinuation&#45;005Falternative&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___millennium___continuation_alternative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="226" cy="-103.8" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="226" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">millennium</text>
+<text text-anchor="middle" x="226" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">continuation_alternative</text>
+</a>
+</g>
+</g>
+<!-- «fluid.millennium.zero_datum» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Emillennium&#45;002Ezero&#45;005Fdatum&#45;00BB" class="node">
+<title>«fluid.millennium.zero_datum»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Emillennium&#45;002Ezero&#45;005Fdatum&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___millennium___zero_datum_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="80" cy="-34" rx="63.56" ry="18"/>
+<text text-anchor="middle" x="80" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">millennium.zero_datum</text>
+</a>
+</g>
+</g>
+<!-- «fluid.millennium.fefferman» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Emillennium&#45;002Efefferman&#45;00BB" class="node">
+<title>«fluid.millennium.fefferman»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Emillennium&#45;002Efefferman&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___millennium___fefferman_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="119.5,-121.8 16.5,-121.8 16.5,-85.8 119.5,-85.8 119.5,-121.8"/>
+<text text-anchor="middle" x="68" y="-101.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">millennium.fefferman</text>
+</a>
+</g>
+</g>
+<!-- «fluid.millennium.fefferman»&#45;&gt;«fluid.millennium.zero_datum» -->
+<g id="edge1" class="edge">
+<title>«fluid.millennium.fefferman»&#45;&gt;«fluid.millennium.zero_datum»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M71.03,-85.69C72.49,-77.4 74.28,-67.33 75.87,-58.35"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="76.93,-52.34 78.54,-58.72 76.51,-55.31 75.98,-58.26 75.89,-58.25 75.79,-58.23 76.31,-55.28 73.23,-57.78 76.93,-52.34 76.93,-52.34"/>
+</g>
+</g>
+</svg>

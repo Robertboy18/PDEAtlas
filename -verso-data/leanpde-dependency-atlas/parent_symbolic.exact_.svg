@@ -1,0 +1,293 @@
+<svg data-node-count="17" data-edge-count="20" data-cluster-count="1" data-variant-key="parent:«symbolic.exact»" width="1006pt" height="385pt"
+ viewBox="0.00 0.00 1006.00 385.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 381.39)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-381.39 1002,-381.39 1002,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 978,-8 978,-8 984,-8 990,-14 990,-20 990,-20 990,-357.39 990,-357.39 990,-363.39 984,-369.39 978,-369.39 978,-369.39 20,-369.39 20,-369.39 14,-369.39 8,-363.39 8,-357.39 8,-357.39 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="499" y="-354.19" font-family="Helvetica" font-size="14.00">Exact symbolic computation</text>
+</g>
+<!-- «symbolic.unique_root_bracket» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eunique&#45;005Froot&#45;005Fbracket&#45;00BB" class="node">
+<title>«symbolic.unique_root_bracket»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eunique&#45;005Froot&#45;005Fbracket&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___unique_root_bracket_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="348" cy="-246.99" rx="79.96" ry="18"/>
+<text text-anchor="middle" x="348" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.unique_root_bracket</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.root_atlas_cover» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eroot&#45;005Fatlas&#45;005Fcover&#45;00BB" class="node">
+<title>«symbolic.root_atlas_cover»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eroot&#45;005Fatlas&#45;005Fcover&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___root_atlas_cover_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="473" cy="-175.4" rx="70.81" ry="18"/>
+<text text-anchor="middle" x="473" y="-172.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.root_atlas_cover</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.unique_root_bracket»&#45;&gt;«symbolic.root_atlas_cover» -->
+<g id="edge15" class="edge">
+<title>«symbolic.unique_root_bracket»&#45;&gt;«symbolic.root_atlas_cover»</title>
+<path fill="none" stroke="#6b7280" d="M376.68,-230.03C395.39,-219.61 419.89,-205.97 439.49,-195.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="444.89,-192.05 440.96,-197.33 442.27,-193.51 439.64,-194.97 439.64,-194.97 439.64,-194.97 442.27,-193.51 438.33,-192.61 444.89,-192.05 444.89,-192.05"/>
+</g>
+<!-- «symbolic.sturm_root_count» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esturm&#45;005Froot&#45;005Fcount&#45;00BB" class="node">
+<title>«symbolic.sturm_root_count»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esturm&#45;005Froot&#45;005Fcount&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___sturm_root_count_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="162" cy="-175.4" rx="73.98" ry="18"/>
+<text text-anchor="middle" x="162" y="-172.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.sturm_root_count</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.sturm_interval_subdivision» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esturm&#45;005Finterval&#45;005Fsubdivision&#45;00BB" class="node">
+<title>«symbolic.sturm_interval_subdivision»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esturm&#45;005Finterval&#45;005Fsubdivision&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___sturm_interval_subdivision_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="338" cy="-103.8" rx="90.52" ry="19.6"/>
+<text text-anchor="middle" x="338" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="338" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">sturm_interval_subdivision</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.sturm_root_count»&#45;&gt;«symbolic.sturm_interval_subdivision» -->
+<g id="edge10" class="edge">
+<title>«symbolic.sturm_root_count»&#45;&gt;«symbolic.sturm_interval_subdivision»</title>
+<path fill="none" stroke="#6b7280" d="M198.9,-159.81C225.45,-149.31 261.5,-135.05 290.25,-123.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="295.9,-121.45 291.31,-126.16 293.11,-122.55 290.32,-123.65 290.32,-123.65 290.32,-123.65 293.11,-122.55 289.33,-121.14 295.9,-121.45 295.9,-121.45"/>
+</g>
+<!-- «symbolic.root_free_interval» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eroot&#45;005Ffree&#45;005Finterval&#45;00BB" class="node">
+<title>«symbolic.root_free_interval»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eroot&#45;005Ffree&#45;005Finterval&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___root_free_interval_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="526" cy="-246.99" rx="73.35" ry="18"/>
+<text text-anchor="middle" x="526" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.root_free_interval</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.root_free_interval»&#45;&gt;«symbolic.root_atlas_cover» -->
+<g id="edge14" class="edge">
+<title>«symbolic.root_free_interval»&#45;&gt;«symbolic.root_atlas_cover»</title>
+<path fill="none" stroke="#6b7280" d="M513.17,-229.15C506.18,-219.97 497.44,-208.49 489.9,-198.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="486.08,-193.57 491.86,-196.71 487.9,-195.96 489.71,-198.35 489.71,-198.35 489.71,-198.35 487.9,-195.96 487.57,-199.98 486.08,-193.57 486.08,-193.57"/>
+</g>
+<!-- «symbolic.real_power_normal_form» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Ereal&#45;005Fpower&#45;005Fnormal&#45;005Fform&#45;00BB" class="node">
+<title>«symbolic.real_power_normal_form»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Ereal&#45;005Fpower&#45;005Fnormal&#45;005Fform&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___real_power_normal_form_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="564" cy="-103.8" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="564" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="564" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">real_power_normal_form</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.cauchy_root_bound» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Ecauchy&#45;005Froot&#45;005Fbound&#45;00BB" class="node">
+<title>«symbolic.cauchy_root_bound»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Ecauchy&#45;005Froot&#45;005Fbound&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___cauchy_root_bound_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="903" cy="-103.8" rx="78.69" ry="18"/>
+<text text-anchor="middle" x="903" y="-101.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.cauchy_root_bound</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.global_polynomial_isolation» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eglobal&#45;005Fpolynomial&#45;005Fisolation&#45;00BB" class="node">
+<title>«symbolic.global_polynomial_isolation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eglobal&#45;005Fpolynomial&#45;005Fisolation&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___global_polynomial_isolation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="461.5,-52 330.5,-52 330.5,-16 461.5,-16 461.5,-52"/>
+<text text-anchor="middle" x="396" y="-37" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="396" y="-26" font-family="Helvetica" font-size="10.00" fill="#ffffff">global_polynomial_isolation</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.cauchy_root_bound»&#45;&gt;«symbolic.global_polynomial_isolation» -->
+<g id="edge18" class="edge">
+<title>«symbolic.cauchy_root_bound»&#45;&gt;«symbolic.global_polynomial_isolation»</title>
+<path fill="none" stroke="#6b7280" d="M848.28,-90.7C836.36,-88.28 823.78,-85.91 812,-84 691.89,-64.56 551.09,-49.6 467.94,-41.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="461.81,-40.98 468.04,-38.86 464.8,-41.26 467.78,-41.55 467.78,-41.55 467.78,-41.55 464.8,-41.26 467.52,-44.24 461.81,-40.98 461.81,-40.98"/>
+</g>
+<!-- «symbolic.normalization_sound» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Enormalization&#45;005Fsound&#45;00BB" class="node">
+<title>«symbolic.normalization_sound»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Enormalization&#45;005Fsound&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___normalization_sound_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="705" cy="-246.99" rx="81.23" ry="18"/>
+<text text-anchor="middle" x="705" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.normalization_sound</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.side_normalization_sound» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eside&#45;005Fnormalization&#45;005Fsound&#45;00BB" class="node">
+<title>«symbolic.side_normalization_sound»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eside&#45;005Fnormalization&#45;005Fsound&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___side_normalization_sound_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="698" cy="-175.4" rx="88.28" ry="19.6"/>
+<text text-anchor="middle" x="698" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="698" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">side_normalization_sound</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.normalization_sound»&#45;&gt;«symbolic.side_normalization_sound» -->
+<g id="edge6" class="edge">
+<title>«symbolic.normalization_sound»&#45;&gt;«symbolic.side_normalization_sound»</title>
+<path fill="none" stroke="#6b7280" d="M703.27,-228.79C702.44,-220.55 701.43,-210.52 700.52,-201.45"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="699.91,-195.36 703.19,-201.06 700.21,-198.35 700.51,-201.33 700.51,-201.33 700.51,-201.33 700.21,-198.35 697.82,-201.6 699.91,-195.36 699.91,-195.36"/>
+</g>
+<!-- «symbolic.side_normalization_sound»&#45;&gt;«symbolic.real_power_normal_form» -->
+<g id="edge4" class="edge">
+<title>«symbolic.side_normalization_sound»&#45;&gt;«symbolic.real_power_normal_form»</title>
+<path fill="none" stroke="#6b7280" d="M664.53,-157.01C645.83,-147.3 622.42,-135.14 602.9,-125"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="597.51,-122.2 604.08,-122.57 600.17,-123.58 602.83,-124.97 602.83,-124.97 602.83,-124.97 600.17,-123.58 601.59,-127.36 597.51,-122.2 597.51,-122.2"/>
+</g>
+<!-- «symbolic.side_claim_route» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eside&#45;005Fclaim&#45;005Froute&#45;00BB" class="node">
+<title>«symbolic.side_claim_route»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eside&#45;005Fclaim&#45;005Froute&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___side_claim_route_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="799.5,-121.8 672.5,-121.8 672.5,-85.8 799.5,-85.8 799.5,-121.8"/>
+<text text-anchor="middle" x="736" y="-101.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.side_claim_route</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.side_normalization_sound»&#45;&gt;«symbolic.side_claim_route» -->
+<g id="edge8" class="edge">
+<title>«symbolic.side_normalization_sound»&#45;&gt;«symbolic.side_claim_route»</title>
+<path fill="none" stroke="#6b7280" d="M708.38,-155.38C713.12,-146.71 718.75,-136.39 723.69,-127.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="726.67,-121.89 726.16,-128.45 725.23,-124.52 723.79,-127.16 723.79,-127.16 723.79,-127.16 725.23,-124.52 721.42,-125.86 726.67,-121.89 726.67,-121.89"/>
+</g>
+<!-- «symbolic.sturm_interval_subdivision»&#45;&gt;«symbolic.global_polynomial_isolation» -->
+<g id="edge20" class="edge">
+<title>«symbolic.sturm_interval_subdivision»&#45;&gt;«symbolic.global_polynomial_isolation»</title>
+<path fill="none" stroke="#6b7280" d="M353.85,-84.27C361.09,-75.8 369.73,-65.71 377.29,-56.87"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="381.36,-52.11 379.52,-58.42 379.41,-54.39 377.46,-56.67 377.46,-56.67 377.46,-56.67 379.41,-54.39 375.41,-54.91 381.36,-52.11 381.36,-52.11"/>
+</g>
+<!-- «symbolic.square_free_radical_certificate» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esquare&#45;005Ffree&#45;005Fradical&#45;005Fcertificate&#45;00BB" class="node">
+<title>«symbolic.square_free_radical_certificate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esquare&#45;005Ffree&#45;005Fradical&#45;005Fcertificate&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___square_free_radical_certificate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="119" cy="-103.8" rx="103.48" ry="19.6"/>
+<text text-anchor="middle" x="119" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="119" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">square_free_radical_certificate</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.square_free_radical_certificate»&#45;&gt;«symbolic.global_polynomial_isolation» -->
+<g id="edge19" class="edge">
+<title>«symbolic.square_free_radical_certificate»&#45;&gt;«symbolic.global_polynomial_isolation»</title>
+<path fill="none" stroke="#6b7280" d="M180.13,-87.84C222.67,-77.42 279.55,-63.5 324.25,-52.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="330.19,-51.11 325,-55.16 327.28,-51.82 324.36,-52.53 324.36,-52.53 324.36,-52.53 327.28,-51.82 323.72,-49.91 330.19,-51.11 330.19,-51.11"/>
+</g>
+<!-- «symbolic.expression» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eexpression&#45;00BB" class="node">
+<title>«symbolic.expression»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eexpression&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___expression_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="808.5,-336.59 707.5,-336.59 707.5,-300.59 808.5,-300.59 808.5,-336.59"/>
+<text text-anchor="middle" x="758" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.expression</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.expression»&#45;&gt;«symbolic.normalization_sound» -->
+<g id="edge5" class="edge">
+<title>«symbolic.expression»&#45;&gt;«symbolic.normalization_sound»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M744.9,-300.39C737.9,-291.2 729.22,-279.8 721.74,-269.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="717.95,-265 723.73,-268.14 719.85,-267.33 721.67,-269.71 721.59,-269.77 721.51,-269.84 719.69,-267.45 719.44,-271.41 717.95,-265 717.95,-265"/>
+</g>
+<!-- «symbolic.expression»&#45;&gt;«symbolic.side_claim_route» -->
+<g id="edge7" class="edge">
+<title>«symbolic.expression»&#45;&gt;«symbolic.side_claim_route»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M777.01,-300.22C785.49,-291.18 794.55,-279.4 799,-266.79 815.46,-220.19 820.32,-200.18 799,-155.6 793.27,-143.62 783.18,-133.56 772.73,-125.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="767.59,-121.92 774.04,-123.24 770.08,-123.59 772.51,-125.35 772.46,-125.43 772.4,-125.51 769.97,-123.76 770.87,-127.62 767.59,-121.92 767.59,-121.92"/>
+</g>
+<!-- «symbolic.sturm_chain_generation» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esturm&#45;005Fchain&#45;005Fgeneration&#45;00BB" class="node">
+<title>«symbolic.sturm_chain_generation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esturm&#45;005Fchain&#45;005Fgeneration&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___sturm_chain_generation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="377,-193.4 261,-193.4 261,-157.4 377,-157.4 377,-193.4"/>
+<text text-anchor="middle" x="319" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="319" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">sturm_chain_generation</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.sturm_chain_generation»&#45;&gt;«symbolic.sturm_interval_subdivision» -->
+<g id="edge11" class="edge">
+<title>«symbolic.sturm_chain_generation»&#45;&gt;«symbolic.sturm_interval_subdivision»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M323.7,-157.19C325.97,-148.87 328.74,-138.73 331.23,-129.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="332.82,-123.76 333.85,-130.26 332.13,-126.68 331.34,-129.58 331.24,-129.55 331.15,-129.52 331.94,-126.63 328.64,-128.84 332.82,-123.76 332.82,-123.76"/>
+</g>
+<!-- «symbolic.polynomial_interval_evaluation» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Epolynomial&#45;005Finterval&#45;005Fevaluation&#45;00BB" class="node">
+<title>«symbolic.polynomial_interval_evaluation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Epolynomial&#45;005Finterval&#45;005Fevaluation&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___polynomial_interval_evaluation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="443" cy="-318.59" rx="102.56" ry="19.6"/>
+<text text-anchor="middle" x="443" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="443" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">polynomial_interval_evaluation</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.polynomial_interval_evaluation»&#45;&gt;«symbolic.unique_root_bracket» -->
+<g id="edge1" class="edge">
+<title>«symbolic.polynomial_interval_evaluation»&#45;&gt;«symbolic.unique_root_bracket»</title>
+<path fill="none" stroke="#6b7280" d="M418.04,-299.31C405.03,-289.78 389.09,-278.1 375.7,-268.29"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="370.52,-264.49 376.96,-265.86 372.94,-266.27 375.36,-268.04 375.36,-268.04 375.36,-268.04 372.94,-266.27 373.77,-270.22 370.52,-264.49 370.52,-264.49"/>
+</g>
+<!-- «symbolic.polynomial_interval_evaluation»&#45;&gt;«symbolic.root_free_interval» -->
+<g id="edge3" class="edge">
+<title>«symbolic.polynomial_interval_evaluation»&#45;&gt;«symbolic.root_free_interval»</title>
+<path fill="none" stroke="#6b7280" d="M465.24,-298.94C476.42,-289.57 489.99,-278.19 501.47,-268.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="506.25,-264.56 503.38,-270.48 503.95,-266.49 501.65,-268.41 501.65,-268.41 501.65,-268.41 503.95,-266.49 499.91,-266.35 506.25,-264.56 506.25,-264.56"/>
+</g>
+<!-- «symbolic.root_atlas_cover»&#45;&gt;«symbolic.sturm_interval_subdivision» -->
+<g id="edge9" class="edge">
+<title>«symbolic.root_atlas_cover»&#45;&gt;«symbolic.sturm_interval_subdivision»</title>
+<path fill="none" stroke="#6b7280" d="M443.04,-158.95C423.79,-149.03 398.56,-136.02 377.65,-125.24"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="372.16,-122.41 378.73,-122.76 374.83,-123.78 377.49,-125.16 377.49,-125.16 377.49,-125.16 374.83,-123.78 376.25,-127.56 372.16,-122.41 372.16,-122.41"/>
+</g>
+<!-- «symbolic.root_atlas_cover»&#45;&gt;«symbolic.global_polynomial_isolation» -->
+<g id="edge17" class="edge">
+<title>«symbolic.root_atlas_cover»&#45;&gt;«symbolic.global_polynomial_isolation»</title>
+<path fill="none" stroke="#6b7280" d="M469.11,-157.17C464.36,-138.29 455.16,-107.54 441,-84 435.07,-74.15 426.95,-64.55 419.23,-56.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="415.01,-52.18 421.14,-54.57 417.11,-54.33 419.21,-56.47 419.21,-56.47 419.21,-56.47 417.11,-54.33 417.28,-58.36 415.01,-52.18 415.01,-52.18"/>
+</g>
+<!-- «symbolic.exact_division_certificate» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eexact&#45;005Fdivision&#45;005Fcertificate&#45;00BB" class="node">
+<title>«symbolic.exact_division_certificate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eexact&#45;005Fdivision&#45;005Fcertificate&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___exact_division_certificate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="144" cy="-318.59" rx="86.95" ry="19.6"/>
+<text text-anchor="middle" x="144" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="144" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">exact_division_certificate</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.exact_division_certificate»&#45;&gt;«symbolic.square_free_radical_certificate» -->
+<g id="edge12" class="edge">
+<title>«symbolic.exact_division_certificate»&#45;&gt;«symbolic.square_free_radical_certificate»</title>
+<path fill="none" stroke="#6b7280" d="M106.5,-300.54C93.09,-292.37 79.46,-281.19 72,-266.79 65.02,-253.32 69.67,-171.49 76,-155.6 79.97,-145.64 86.7,-136.23 93.68,-128.28"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="98.04,-123.52 95.98,-129.77 96.01,-125.74 93.98,-127.95 93.98,-127.95 93.98,-127.95 96.01,-125.74 91.99,-126.13 98.04,-123.52 98.04,-123.52"/>
+</g>
+<!-- «symbolic.sturm_chain_validation» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esturm&#45;005Fchain&#45;005Fvalidation&#45;00BB" class="node">
+<title>«symbolic.sturm_chain_validation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Esturm&#45;005Fchain&#45;005Fvalidation&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___sturm_chain_validation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="164" cy="-246.99" rx="79.39" ry="19.6"/>
+<text text-anchor="middle" x="164" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="164" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">sturm_chain_validation</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.exact_division_certificate»&#45;&gt;«symbolic.sturm_chain_validation» -->
+<g id="edge16" class="edge">
+<title>«symbolic.exact_division_certificate»&#45;&gt;«symbolic.sturm_chain_validation»</title>
+<path fill="none" stroke="#6b7280" d="M149.47,-298.57C151.71,-290.75 154.35,-281.57 156.76,-273.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="158.54,-266.99 159.48,-273.5 157.71,-269.87 156.88,-272.76 156.88,-272.76 156.88,-272.76 157.71,-269.87 154.29,-272.01 158.54,-266.99 158.54,-266.99"/>
+</g>
+<!-- «symbolic.sturm_chain_validation»&#45;&gt;«symbolic.sturm_root_count» -->
+<g id="edge2" class="edge">
+<title>«symbolic.sturm_chain_validation»&#45;&gt;«symbolic.sturm_root_count»</title>
+<path fill="none" stroke="#6b7280" d="M163.45,-226.98C163.21,-218.56 162.92,-208.57 162.67,-199.71"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="162.49,-193.49 165.36,-199.41 162.58,-196.49 162.66,-199.49 162.66,-199.49 162.66,-199.49 162.58,-196.49 159.96,-199.56 162.49,-193.49 162.49,-193.49"/>
+</g>
+<!-- «symbolic.sturm_chain_validation»&#45;&gt;«symbolic.sturm_chain_generation» -->
+<g id="edge13" class="edge">
+<title>«symbolic.sturm_chain_validation»&#45;&gt;«symbolic.sturm_chain_generation»</title>
+<path fill="none" stroke="#6b7280" d="M201.13,-229.32C223.51,-219.27 252.14,-206.42 275.57,-195.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="281.1,-193.41 276.73,-198.34 278.36,-194.64 275.63,-195.87 275.63,-195.87 275.63,-195.87 278.36,-194.64 274.52,-193.41 281.1,-193.41 281.1,-193.41"/>
+</g>
+</g>
+</svg>

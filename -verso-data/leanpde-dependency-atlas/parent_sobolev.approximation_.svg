@@ -1,0 +1,458 @@
+<svg data-node-count="26" data-edge-count="33" data-cluster-count="1" data-variant-key="parent:«sobolev.approximation»" width="1316pt" height="668pt"
+ viewBox="0.00 0.00 1316.00 668.19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 664.19)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-664.19 1312,-664.19 1312,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1288,-8 1288,-8 1294,-8 1300,-14 1300,-20 1300,-20 1300,-640.19 1300,-640.19 1300,-646.19 1294,-652.19 1288,-652.19 1288,-652.19 20,-652.19 20,-652.19 14,-652.19 8,-646.19 8,-640.19 8,-640.19 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="654" y="-636.99" font-family="Helvetica" font-size="14.00">Sobolev approximation</text>
+</g>
+<!-- «sobolev.weighted_interpolation_recursion» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Finterpolation&#45;005Frecursion&#45;00BB" class="node">
+<title>«sobolev.weighted_interpolation_recursion»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Finterpolation&#45;005Frecursion&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_interpolation_recursion_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="922" cy="-178.99" rx="109.7" ry="19.6"/>
+<text text-anchor="middle" x="922" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="922" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_interpolation_recursion</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_adjacent_interpolation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fadjacent&#45;005Finterpolation&#45;00BB" class="node">
+<title>«sobolev.weighted_adjacent_interpolation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fadjacent&#45;005Finterpolation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_adjacent_interpolation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1054" cy="-107.4" rx="106.55" ry="19.6"/>
+<text text-anchor="middle" x="1054" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="1054" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_adjacent_interpolation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_interpolation_recursion»&#45;&gt;«sobolev.weighted_adjacent_interpolation» -->
+<g id="edge15" class="edge">
+<title>«sobolev.weighted_interpolation_recursion»&#45;&gt;«sobolev.weighted_adjacent_interpolation»</title>
+<path fill="none" stroke="#6b7280" d="M955.99,-160.07C973.85,-150.65 995.84,-139.06 1014.46,-129.24"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1020.12,-126.26 1016.07,-131.45 1017.47,-127.66 1014.81,-129.06 1014.81,-129.06 1014.81,-129.06 1017.47,-127.66 1013.56,-126.67 1020.12,-126.26 1020.12,-126.26"/>
+</g>
+<!-- «sobolev.weighted_planar_reflection» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fplanar&#45;005Freflection&#45;00BB" class="node">
+<title>«sobolev.weighted_planar_reflection»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fplanar&#45;005Freflection&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_planar_reflection_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="634" cy="-178.99" rx="89.61" ry="19.6"/>
+<text text-anchor="middle" x="634" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="634" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_planar_reflection</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.mollification_lp» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Emollification&#45;005Flp&#45;00BB" class="node">
+<title>«sobolev.mollification_lp»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Emollification&#45;005Flp&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___mollification_lp_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="108" cy="-465.39" rx="64.19" ry="18"/>
+<text text-anchor="middle" x="108" y="-462.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.mollification_lp</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.interior_approximation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Einterior&#45;005Fapproximation&#45;00BB" class="node">
+<title>«sobolev.interior_approximation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Einterior&#45;005Fapproximation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___interior_approximation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="294" cy="-393.79" rx="76.24" ry="19.6"/>
+<text text-anchor="middle" x="294" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="294" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">interior_approximation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.mollification_lp»&#45;&gt;«sobolev.interior_approximation» -->
+<g id="edge6" class="edge">
+<title>«sobolev.mollification_lp»&#45;&gt;«sobolev.interior_approximation»</title>
+<path fill="none" stroke="#6b7280" d="M144.75,-450.64C173.85,-439.75 214.73,-424.45 246.34,-412.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="252.13,-410.45 247.46,-415.09 249.33,-411.51 246.52,-412.56 246.52,-412.56 246.52,-412.56 249.33,-411.51 245.57,-410.03 252.13,-410.45 252.13,-410.45"/>
+</g>
+<!-- «sobolev.global_approximation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eglobal&#45;005Fapproximation&#45;00BB" class="node">
+<title>«sobolev.global_approximation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eglobal&#45;005Fapproximation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___global_approximation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="111" cy="-393.79" rx="79.32" ry="18"/>
+<text text-anchor="middle" x="111" y="-391.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.global_approximation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.mollification_lp»&#45;&gt;«sobolev.global_approximation» -->
+<g id="edge20" class="edge">
+<title>«sobolev.mollification_lp»&#45;&gt;«sobolev.global_approximation»</title>
+<path fill="none" stroke="#6b7280" d="M108.74,-447.18C109.12,-438.33 109.59,-427.42 110.01,-417.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="110.27,-411.79 112.71,-417.91 110.14,-414.79 110.01,-417.79 110.01,-417.79 110.01,-417.79 110.14,-414.79 107.31,-417.67 110.27,-411.79 110.27,-411.79"/>
+</g>
+<!-- «sobolev.weighted_coordinate_classes» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fcoordinate&#45;005Fclasses&#45;00BB" class="node">
+<title>«sobolev.weighted_coordinate_classes»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fcoordinate&#45;005Fclasses&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_coordinate_classes_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="710,-340.19 570,-340.19 570,-304.19 710,-304.19 710,-340.19"/>
+<text text-anchor="middle" x="640" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="640" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_coordinate_classes</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_parity» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fparity&#45;00BB" class="node">
+<title>«sobolev.weighted_parity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fparity&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_parity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="709" cy="-250.59" rx="65.6" ry="18"/>
+<text text-anchor="middle" x="709" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.weighted_parity</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_coordinate_classes»&#45;&gt;«sobolev.weighted_parity» -->
+<g id="edge17" class="edge">
+<title>«sobolev.weighted_coordinate_classes»&#45;&gt;«sobolev.weighted_parity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M657.06,-303.99C666.47,-294.49 678.23,-282.63 688.19,-272.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="692.62,-268.12 690.31,-274.28 690.57,-270.32 688.46,-272.45 688.39,-272.38 688.32,-272.31 690.43,-270.18 686.47,-270.48 692.62,-268.12 692.62,-268.12"/>
+</g>
+<!-- «sobolev.weighted_gauge_certificates» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fgauge&#45;005Fcertificates&#45;00BB" class="node">
+<title>«sobolev.weighted_gauge_certificates»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fgauge&#45;005Fcertificates&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_gauge_certificates_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="896" cy="-250.59" rx="96.33" ry="19.6"/>
+<text text-anchor="middle" x="896" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="896" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_gauge_certificates</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_coordinate_classes»&#45;&gt;«sobolev.weighted_gauge_certificates» -->
+<g id="edge25" class="edge">
+<title>«sobolev.weighted_coordinate_classes»&#45;&gt;«sobolev.weighted_gauge_certificates»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M702.62,-304.17C742.69,-293.27 794.44,-279.2 834.33,-268.36"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="840.12,-266.78 835.04,-270.96 837.25,-267.67 834.36,-268.46 834.33,-268.36 834.31,-268.26 837.2,-267.48 833.62,-265.75 840.12,-266.78 840.12,-266.78"/>
+</g>
+<!-- «sobolev.weighted_square_ibp» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fsquare&#45;005Fibp&#45;00BB" class="node">
+<title>«sobolev.weighted_square_ibp»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fsquare&#45;005Fibp&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_square_ibp_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1187" cy="-178.99" rx="78.69" ry="18"/>
+<text text-anchor="middle" x="1187" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.weighted_square_ibp</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_square_ibp»&#45;&gt;«sobolev.weighted_adjacent_interpolation» -->
+<g id="edge14" class="edge">
+<title>«sobolev.weighted_square_ibp»&#45;&gt;«sobolev.weighted_adjacent_interpolation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1156.82,-162.2C1138.11,-152.41 1113.86,-139.72 1093.61,-129.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1088.28,-126.34 1094.85,-126.73 1091.1,-127.42 1093.76,-128.81 1093.6,-129.12 1093.43,-129.43 1090.78,-128.04 1092.34,-131.51 1088.28,-126.34 1088.28,-126.34"/>
+</g>
+<!-- «sobolev.weighted_singular_localization» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fsingular&#45;005Flocalization&#45;00BB" class="node">
+<title>«sobolev.weighted_singular_localization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fsingular&#45;005Flocalization&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_singular_localization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="118" cy="-178.99" rx="101.65" ry="19.6"/>
+<text text-anchor="middle" x="118" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="118" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_singular_localization</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_homogeneous_interpolation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fhomogeneous&#45;005Finterpolation&#45;00BB" class="node">
+<title>«sobolev.weighted_homogeneous_interpolation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fhomogeneous&#45;005Finterpolation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_homogeneous_interpolation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1141" cy="-250.59" rx="123.99" ry="19.6"/>
+<text text-anchor="middle" x="1141" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="1141" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_homogeneous_interpolation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_smooth_core» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fsmooth&#45;005Fcore&#45;00BB" class="node">
+<title>«sobolev.weighted_smooth_core»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fsmooth&#45;005Fcore&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_smooth_core_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="127" cy="-250.59" rx="83.9" ry="18"/>
+<text text-anchor="middle" x="127" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.weighted_smooth_core</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_smooth_core»&#45;&gt;«sobolev.weighted_singular_localization» -->
+<g id="edge9" class="edge">
+<title>«sobolev.weighted_smooth_core»&#45;&gt;«sobolev.weighted_singular_localization»</title>
+<path fill="none" stroke="#6b7280" d="M124.78,-232.39C123.71,-224.15 122.41,-214.12 121.24,-205.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="120.45,-198.96 123.9,-204.56 120.84,-201.93 121.22,-204.91 121.22,-204.91 121.22,-204.91 120.84,-201.93 118.54,-205.26 120.45,-198.96 120.45,-198.96"/>
+</g>
+<!-- «sobolev.weighted_completed_parity» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fcompleted&#45;005Fparity&#45;00BB" class="node">
+<title>«sobolev.weighted_completed_parity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fcompleted&#45;005Fparity&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_completed_parity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="337" cy="-178.99" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="337" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="337" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_completed_parity</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_smooth_core»&#45;&gt;«sobolev.weighted_completed_parity» -->
+<g id="edge30" class="edge">
+<title>«sobolev.weighted_smooth_core»&#45;&gt;«sobolev.weighted_completed_parity»</title>
+<path fill="none" stroke="#6b7280" d="M170.51,-235.17C203.11,-224.37 247.9,-209.52 282.82,-197.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="288.78,-195.98 283.93,-200.43 285.93,-196.92 283.08,-197.86 283.08,-197.86 283.08,-197.86 285.93,-196.92 282.23,-195.3 288.78,-195.98 288.78,-195.98"/>
+</g>
+<!-- «sobolev.weighted_planar_interpolation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fplanar&#45;005Finterpolation&#45;00BB" class="node">
+<title>«sobolev.weighted_planar_interpolation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fplanar&#45;005Finterpolation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_planar_interpolation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1054" cy="-35.8" rx="99.9" ry="19.6"/>
+<text text-anchor="middle" x="1054" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="1054" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_planar_interpolation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_adjacent_interpolation»&#45;&gt;«sobolev.weighted_planar_interpolation» -->
+<g id="edge31" class="edge">
+<title>«sobolev.weighted_adjacent_interpolation»&#45;&gt;«sobolev.weighted_planar_interpolation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1054,-87.38C1054,-79.55 1054,-70.38 1054,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1054,-55.79 1056.7,-61.79 1054.35,-58.79 1054.35,-61.79 1054,-61.79 1053.65,-61.79 1053.65,-58.79 1051.3,-61.79 1054,-55.79 1054,-55.79"/>
+</g>
+<!-- «sobolev.weighted_selected_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fselected&#45;005Fenergy&#45;00BB" class="node">
+<title>«sobolev.weighted_selected_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fselected&#45;005Fenergy&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_selected_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="353" cy="-250.59" rx="89.61" ry="19.6"/>
+<text text-anchor="middle" x="353" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="353" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_selected_energy</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_parity»&#45;&gt;«sobolev.weighted_planar_reflection» -->
+<g id="edge3" class="edge">
+<title>«sobolev.weighted_parity»&#45;&gt;«sobolev.weighted_planar_reflection»</title>
+<path fill="none" stroke="#6b7280" d="M691.23,-233.1C681.37,-223.95 668.98,-212.45 658.24,-202.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="653.76,-198.33 659.99,-200.43 655.96,-200.37 658.16,-202.41 658.16,-202.41 658.16,-202.41 655.96,-200.37 656.32,-204.39 653.76,-198.33 653.76,-198.33"/>
+</g>
+<!-- «sobolev.weighted_parity»&#45;&gt;«sobolev.weighted_completed_parity» -->
+<g id="edge28" class="edge">
+<title>«sobolev.weighted_parity»&#45;&gt;«sobolev.weighted_completed_parity»</title>
+<path fill="none" stroke="#6b7280" d="M661.9,-237.88C651.43,-235.42 640.36,-232.92 630,-230.79 557.64,-215.93 474.64,-201.81 415.49,-192.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="409.48,-191.28 415.83,-189.57 412.44,-191.76 415.4,-192.23 415.4,-192.23 415.4,-192.23 412.44,-191.76 414.98,-194.9 409.48,-191.28 409.48,-191.28"/>
+</g>
+<!-- «sobolev.weighted_interpolation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Finterpolation&#45;00BB" class="node">
+<title>«sobolev.weighted_interpolation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Finterpolation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_interpolation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="812" cy="-322.19" rx="77.15" ry="19.6"/>
+<text text-anchor="middle" x="812" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="812" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_interpolation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_interpolation»&#45;&gt;«sobolev.weighted_homogeneous_interpolation» -->
+<g id="edge11" class="edge">
+<title>«sobolev.weighted_interpolation»&#45;&gt;«sobolev.weighted_homogeneous_interpolation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M869.68,-308.99C923.4,-297.62 1003.89,-280.6 1063.26,-268.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1069.3,-266.76 1063.99,-270.64 1066.44,-267.72 1063.51,-268.34 1063.43,-268 1063.36,-267.66 1066.3,-267.04 1062.87,-265.36 1069.3,-266.76 1069.3,-266.76"/>
+</g>
+<!-- «sobolev.weighted_interpolation»&#45;&gt;«sobolev.weighted_gauge_certificates» -->
+<g id="edge24" class="edge">
+<title>«sobolev.weighted_interpolation»&#45;&gt;«sobolev.weighted_gauge_certificates»</title>
+<path fill="none" stroke="#6b7280" d="M834.07,-302.9C844.79,-294.02 857.76,-283.28 869.06,-273.92"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="873.79,-270 870.89,-275.91 871.48,-271.91 869.17,-273.83 869.17,-273.83 869.17,-273.83 871.48,-271.91 867.44,-271.75 873.79,-270 873.79,-270"/>
+</g>
+<!-- «sobolev.weighted_completion» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fcompletion&#45;00BB" class="node">
+<title>«sobolev.weighted_completion»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fcompletion&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_completion_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="970.5,-411.79 831.5,-411.79 831.5,-375.79 970.5,-375.79 970.5,-411.79"/>
+<text text-anchor="middle" x="901" y="-391.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.weighted_completion</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_square_ibp» -->
+<g id="edge8" class="edge">
+<title>«sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_square_ibp»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M970.89,-384.62C1006.46,-377.75 1048.84,-365.13 1081,-341.99 1098.29,-329.55 1090.18,-314.06 1108,-302.39 1171.95,-260.51 1228.23,-329.26 1277,-270.39 1288.23,-256.84 1285.87,-245.99 1277,-230.79 1268.14,-215.61 1252.88,-204.61 1237.41,-196.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1231.72,-194.09 1238.3,-194.24 1234.47,-195.29 1237.17,-196.59 1237.13,-196.68 1237.09,-196.77 1234.38,-195.47 1235.96,-199.11 1231.72,-194.09 1231.72,-194.09"/>
+</g>
+<!-- «sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_smooth_core» -->
+<g id="edge12" class="edge">
+<title>«sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_smooth_core»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M831.45,-391.05C691.42,-386.92 380.21,-374.3 279,-341.99 230.61,-326.54 181.29,-293.31 152.45,-271.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="147.65,-268.11 154.06,-269.57 150.1,-269.84 152.5,-271.64 152.44,-271.72 152.38,-271.8 149.98,-270 150.81,-273.88 147.65,-268.11 147.65,-268.11"/>
+</g>
+<!-- «sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_interpolation» -->
+<g id="edge18" class="edge">
+<title>«sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_interpolation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M879,-375.58C867.18,-366.35 852.5,-354.86 839.89,-345"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="834.99,-341.17 841.38,-342.74 837.41,-342.94 839.78,-344.79 839.71,-344.86 839.65,-344.94 837.29,-343.09 838.05,-346.99 834.99,-341.17 834.99,-341.17"/>
+</g>
+<!-- «sobolev.weighted_row_limits» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Frow&#45;005Flimits&#45;00BB" class="node">
+<title>«sobolev.weighted_row_limits»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Frow&#45;005Flimits&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_row_limits_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="991" cy="-322.19" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="991" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.weighted_row_limits</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_row_limits» -->
+<g id="edge19" class="edge">
+<title>«sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_row_limits»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M923.25,-375.58C935.75,-365.92 951.42,-353.8 964.55,-343.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="969.63,-339.72 966.53,-345.52 967.32,-341.63 964.94,-343.47 964.88,-343.39 964.82,-343.31 967.19,-341.47 963.23,-341.25 969.63,-339.72 969.63,-339.72"/>
+</g>
+<!-- «sobolev.weighted_completion_functions» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fcompletion&#45;005Ffunctions&#45;00BB" class="node">
+<title>«sobolev.weighted_completion_functions»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fcompletion&#45;005Ffunctions&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_completion_functions_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="396" cy="-322.19" rx="104.8" ry="19.6"/>
+<text text-anchor="middle" x="396" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="396" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_completion_functions</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_completion_functions» -->
+<g id="edge27" class="edge">
+<title>«sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_completion_functions»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M831.31,-383.18C740.94,-370.73 583.22,-348.99 484.48,-335.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="478.36,-334.54 484.67,-332.69 481.35,-334.85 484.32,-335.26 484.3,-335.36 484.29,-335.46 481.32,-335.05 483.94,-338.04 478.36,-334.54 478.36,-334.54"/>
+</g>
+<!-- «sobolev.weighted_work_envelope» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fwork&#45;005Fenvelope&#45;00BB" class="node">
+<title>«sobolev.weighted_work_envelope»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Fwork&#45;005Fenvelope&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_work_envelope_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1206" cy="-322.19" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="1206" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="1206" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">weighted_work_envelope</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_work_envelope» -->
+<g id="edge33" class="edge">
+<title>«sobolev.weighted_completion»&#45;&gt;«sobolev.weighted_work_envelope»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M970.59,-376.91C1021.87,-365.21 1091.11,-349.41 1141.21,-337.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1147.23,-336.6 1141.98,-340.57 1144.32,-337.37 1141.4,-338.04 1141.38,-337.94 1141.35,-337.84 1144.28,-337.17 1140.78,-335.31 1147.23,-336.6 1147.23,-336.6"/>
+</g>
+<!-- «sobolev.mollifier» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Emollifier&#45;00BB" class="node">
+<title>«sobolev.mollifier»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Emollifier&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___mollifier_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="241,-621.19 159,-621.19 159,-585.19 241,-585.19 241,-621.19"/>
+<text text-anchor="middle" x="200" y="-600.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.mollifier</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.mollifier»&#45;&gt;«sobolev.mollification_lp» -->
+<g id="edge4" class="edge">
+<title>«sobolev.mollifier»&#45;&gt;«sobolev.mollification_lp»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M201.33,-585.1C201.91,-566.83 200.33,-537.72 187,-517.19 177.67,-502.81 162.69,-491.68 148.27,-483.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="142.99,-480.69 149.55,-481.17 145.67,-482.03 148.31,-483.46 148.26,-483.54 148.22,-483.63 145.58,-482.2 146.98,-485.92 142.99,-480.69 142.99,-480.69"/>
+</g>
+<!-- «sobolev.mollification_weak_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Emollification&#45;005Fweak&#45;005Fderivative&#45;00BB" class="node">
+<title>«sobolev.mollification_weak_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Emollification&#45;005Fweak&#45;005Fderivative&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___mollification_weak_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="295" cy="-465.39" rx="97.66" ry="19.6"/>
+<text text-anchor="middle" x="295" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="295" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">mollification_weak_derivative</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.mollifier»&#45;&gt;«sobolev.mollification_weak_derivative» -->
+<g id="edge22" class="edge">
+<title>«sobolev.mollifier»&#45;&gt;«sobolev.mollification_weak_derivative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M212.03,-584.99C228.79,-561.03 259.23,-517.52 278.21,-490.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="281.85,-485.19 280.62,-491.65 280.21,-487.7 278.49,-490.16 278.41,-490.1 278.33,-490.05 280.05,-487.59 276.2,-488.56 281.85,-485.19 281.85,-485.19"/>
+</g>
+<!-- «sobolev.vector_mollification» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Evector&#45;005Fmollification&#45;00BB" class="node">
+<title>«sobolev.vector_mollification»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Evector&#45;005Fmollification&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___vector_mollification_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="174,-553.19 42,-553.19 42,-517.19 174,-517.19 174,-553.19"/>
+<text text-anchor="middle" x="108" y="-532.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.vector_mollification</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.mollifier»&#45;&gt;«sobolev.vector_mollification» -->
+<g id="edge32" class="edge">
+<title>«sobolev.mollifier»&#45;&gt;«sobolev.vector_mollification»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M175.83,-584.85C164,-576.36 149.66,-566.07 137.21,-557.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="132.01,-553.41 138.46,-554.71 134.51,-555.08 136.94,-556.83 136.89,-556.91 136.83,-556.99 134.39,-555.24 135.31,-559.1 132.01,-553.41 132.01,-553.41"/>
+</g>
+<!-- «sobolev.global_density» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eglobal&#45;005Fdensity&#45;00BB" class="node">
+<title>«sobolev.global_density»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eglobal&#45;005Fdensity&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___global_density_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="111" cy="-322.19" rx="62.92" ry="18"/>
+<text text-anchor="middle" x="111" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.global_density</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.global_approximation»&#45;&gt;«sobolev.global_density» -->
+<g id="edge26" class="edge">
+<title>«sobolev.global_approximation»&#45;&gt;«sobolev.global_density»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M111,-375.58C111,-366.74 111,-355.83 111,-346.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="111,-340.2 113.7,-346.2 111.35,-343.2 111.35,-346.2 111,-346.2 110.65,-346.2 110.65,-343.2 108.3,-346.2 111,-340.2 111,-340.2"/>
+</g>
+<!-- «sobolev.mollification_weak_derivative»&#45;&gt;«sobolev.interior_approximation» -->
+<g id="edge7" class="edge">
+<title>«sobolev.mollification_weak_derivative»&#45;&gt;«sobolev.interior_approximation»</title>
+<path fill="none" stroke="#6b7280" d="M294.73,-445.37C294.61,-437.54 294.48,-428.37 294.36,-419.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="294.27,-413.78 297.06,-419.74 294.32,-416.78 294.36,-419.78 294.36,-419.78 294.36,-419.78 294.32,-416.78 291.66,-419.82 294.27,-413.78 294.27,-413.78"/>
+</g>
+<!-- «sobolev.mollification_weak_derivative»&#45;&gt;«sobolev.global_approximation» -->
+<g id="edge21" class="edge">
+<title>«sobolev.mollification_weak_derivative»&#45;&gt;«sobolev.global_approximation»</title>
+<path fill="none" stroke="#6b7280" d="M250.93,-447.72C222.12,-436.82 184.62,-422.64 155.69,-411.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="150.02,-409.55 156.59,-409.15 152.83,-410.61 155.64,-411.67 155.64,-411.67 155.64,-411.67 152.83,-410.61 154.68,-414.2 150.02,-409.55 150.02,-409.55"/>
+</g>
+<!-- «sobolev.weighted_reflection» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Freflection&#45;00BB" class="node">
+<title>«sobolev.weighted_reflection»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweighted&#45;005Freflection&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weighted_reflection_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="543" cy="-250.59" rx="74.75" ry="18"/>
+<text text-anchor="middle" x="543" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.weighted_reflection</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weighted_reflection»&#45;&gt;«sobolev.weighted_planar_reflection» -->
+<g id="edge2" class="edge">
+<title>«sobolev.weighted_reflection»&#45;&gt;«sobolev.weighted_planar_reflection»</title>
+<path fill="none" stroke="#6b7280" d="M564.57,-233.1C576.63,-223.87 591.83,-212.25 604.93,-202.23"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="610.03,-198.33 606.9,-204.12 607.64,-200.15 605.26,-201.97 605.26,-201.97 605.26,-201.97 607.64,-200.15 603.62,-199.83 610.03,-198.33 610.03,-198.33"/>
+</g>
+<!-- «sobolev.weighted_gauge_certificates»&#45;&gt;«sobolev.weighted_interpolation_recursion» -->
+<g id="edge1" class="edge">
+<title>«sobolev.weighted_gauge_certificates»&#45;&gt;«sobolev.weighted_interpolation_recursion»</title>
+<path fill="none" stroke="#6b7280" d="M903.1,-230.57C906.09,-222.6 909.59,-213.21 912.77,-204.71"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="914.9,-198.99 915.33,-205.56 913.85,-201.8 912.8,-204.61 912.8,-204.61 912.8,-204.61 913.85,-201.8 910.27,-203.67 914.9,-198.99 914.9,-198.99"/>
+</g>
+<!-- «sobolev.global_density»&#45;&gt;«sobolev.weighted_singular_localization» -->
+<g id="edge10" class="edge">
+<title>«sobolev.global_density»&#45;&gt;«sobolev.weighted_singular_localization»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M74.06,-307.45C57.78,-299.32 40.27,-287.26 31,-270.39 22.52,-254.97 22.24,-246.06 31,-230.79 38.69,-217.4 51.42,-207.21 64.8,-199.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="70.16,-196.7 66.16,-201.93 67.68,-198.43 65.04,-199.86 64.88,-199.55 64.71,-199.25 67.35,-197.82 63.59,-197.18 70.16,-196.7 70.16,-196.7"/>
+</g>
+<!-- «sobolev.global_density»&#45;&gt;«sobolev.weighted_smooth_core» -->
+<g id="edge13" class="edge">
+<title>«sobolev.global_density»&#45;&gt;«sobolev.weighted_smooth_core»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M114.96,-303.99C116.99,-295.14 119.5,-284.23 121.7,-274.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="123.09,-268.6 124.38,-275.05 122.76,-271.6 122.09,-274.52 121.75,-274.45 121.4,-274.37 122.08,-271.44 119.11,-273.84 123.09,-268.6 123.09,-268.6"/>
+</g>
+<!-- «sobolev.weighted_completion_functions»&#45;&gt;«sobolev.weighted_selected_energy» -->
+<g id="edge16" class="edge">
+<title>«sobolev.weighted_completion_functions»&#45;&gt;«sobolev.weighted_selected_energy»</title>
+<path fill="none" stroke="#6b7280" d="M384.25,-302.17C379.23,-294.04 373.3,-284.45 367.97,-275.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="364.74,-270.59 370.19,-274.27 366.31,-273.14 367.89,-275.69 367.89,-275.69 367.89,-275.69 366.31,-273.14 365.59,-277.11 364.74,-270.59 364.74,-270.59"/>
+</g>
+<!-- «sobolev.weighted_completion_functions»&#45;&gt;«sobolev.weighted_reflection» -->
+<g id="edge23" class="edge">
+<title>«sobolev.weighted_completion_functions»&#45;&gt;«sobolev.weighted_reflection»</title>
+<path fill="none" stroke="#6b7280" d="M433.09,-303.63C455.05,-293.23 482.8,-280.09 504.93,-269.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="510.42,-267.02 506.15,-272.03 507.71,-268.3 505,-269.58 505,-269.58 505,-269.58 507.71,-268.3 503.84,-267.14 510.42,-267.02 510.42,-267.02"/>
+</g>
+<!-- «sobolev.weighted_completion_functions»&#45;&gt;«sobolev.weighted_completed_parity» -->
+<g id="edge29" class="edge">
+<title>«sobolev.weighted_completion_functions»&#45;&gt;«sobolev.weighted_completed_parity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M311.96,-310.24C288.41,-302.86 265.35,-290.63 251,-270.39 240.82,-256.04 242.28,-246.08 251,-230.79 258.74,-217.23 271.68,-206.93 285.19,-199.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="290.6,-196.35 286.6,-201.57 288.12,-198.08 285.48,-199.51 285.32,-199.2 285.15,-198.89 287.79,-197.47 284.03,-196.82 290.6,-196.35 290.6,-196.35"/>
+</g>
+<!-- «sobolev.vector_mollification»&#45;&gt;«sobolev.mollification_lp» -->
+<g id="edge5" class="edge">
+<title>«sobolev.vector_mollification»&#45;&gt;«sobolev.mollification_lp»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M108,-517.08C108,-508.79 108,-498.71 108,-489.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="108,-483.73 110.7,-489.73 108.1,-486.73 108.1,-489.73 108,-489.73 107.9,-489.73 107.9,-486.73 105.3,-489.73 108,-483.73 108,-483.73"/>
+</g>
+</g>
+</svg>

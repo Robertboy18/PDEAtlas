@@ -1,0 +1,129 @@
+<svg data-node-count="8" data-edge-count="7" data-cluster-count="1" data-variant-key="parent:«methods.semilinear_convex_regularization»" width="527pt" height="242pt"
+ viewBox="0.00 0.00 527.00 242.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 238.2)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-238.2 523,-238.2 523,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 499,-8 499,-8 505,-8 511,-14 511,-20 511,-20 511,-214.2 511,-214.2 511,-220.2 505,-226.2 499,-226.2 499,-226.2 20,-226.2 20,-226.2 14,-226.2 8,-220.2 8,-214.2 8,-214.2 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="259.5" y="-211" font-family="Helvetica" font-size="14.00">Semilinear convex regularization</text>
+</g>
+<!-- «methods.semilinear.resolvent_contraction» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eresolvent&#45;005Fcontraction&#45;00BB" class="node">
+<title>«methods.semilinear.resolvent_contraction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eresolvent&#45;005Fcontraction&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___resolvent_contraction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="90" cy="-107.4" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="90" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="90" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">resolvent_contraction</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.proximal_iteration» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eproximal&#45;005Fiteration&#45;00BB" class="node">
+<title>«methods.semilinear.proximal_iteration»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eproximal&#45;005Fiteration&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___proximal_iteration_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="90" cy="-35.8" rx="62.87" ry="19.6"/>
+<text text-anchor="middle" x="90" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="90" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">proximal_iteration</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.resolvent_contraction»&#45;&gt;«methods.semilinear.proximal_iteration» -->
+<g id="edge5" class="edge">
+<title>«methods.semilinear.resolvent_contraction»&#45;&gt;«methods.semilinear.proximal_iteration»</title>
+<path fill="none" stroke="#6b7280" d="M90,-87.38C90,-79.55 90,-70.38 90,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="90,-55.79 92.7,-61.79 90,-58.79 90,-61.79 90,-61.79 90,-61.79 90,-58.79 87.3,-61.79 90,-55.79 90,-55.79"/>
+</g>
+<!-- «methods.semilinear.yosida_cocoercive» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eyosida&#45;005Fcocoercive&#45;00BB" class="node">
+<title>«methods.semilinear.yosida_cocoercive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eyosida&#45;005Fcocoercive&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___yosida_cocoercive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="268" cy="-107.4" rx="78.69" ry="18"/>
+<text text-anchor="middle" x="268" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.yosida_cocoercive</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.moreau_envelope» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Emoreau&#45;005Fenvelope&#45;00BB" class="node">
+<title>«methods.semilinear.moreau_envelope»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Emoreau&#45;005Fenvelope&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___moreau_envelope_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="265" cy="-35.8" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="265" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.moreau_envelope</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.yosida_cocoercive»&#45;&gt;«methods.semilinear.moreau_envelope» -->
+<g id="edge4" class="edge">
+<title>«methods.semilinear.yosida_cocoercive»&#45;&gt;«methods.semilinear.moreau_envelope»</title>
+<path fill="none" stroke="#6b7280" d="M267.26,-89.19C266.88,-80.34 266.41,-69.43 265.99,-59.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="265.73,-53.81 268.69,-59.68 265.86,-56.8 265.99,-59.8 265.99,-59.8 265.99,-59.8 265.86,-56.8 263.29,-59.92 265.73,-53.81 265.73,-53.81"/>
+</g>
+<!-- «methods.semilinear.convex_gradient_resolvent» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Econvex&#45;005Fgradient&#45;005Fresolvent&#45;00BB" class="node">
+<title>«methods.semilinear.convex_gradient_resolvent»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Econvex&#45;005Fgradient&#45;005Fresolvent&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___convex_gradient_resolvent_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="415.5,-195.2 288.5,-195.2 288.5,-159.2 415.5,-159.2 415.5,-195.2"/>
+<text text-anchor="middle" x="352" y="-180.2" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="352" y="-169.2" font-family="Helvetica" font-size="10.00" fill="#ffffff">convex_gradient_resolvent</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.convex_gradient_resolvent»&#45;&gt;«methods.semilinear.yosida_cocoercive» -->
+<g id="edge2" class="edge">
+<title>«methods.semilinear.convex_gradient_resolvent»&#45;&gt;«methods.semilinear.yosida_cocoercive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M330.8,-159.09C319.41,-149.89 305.27,-138.48 293.3,-128.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="288.32,-124.8 294.69,-126.47 290.72,-126.6 293.05,-128.49 292.99,-128.57 292.93,-128.64 290.59,-126.76 291.29,-130.67 288.32,-124.8 288.32,-124.8"/>
+</g>
+<!-- «methods.semilinear.proximal_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eproximal&#45;005Fenergy&#45;00BB" class="node">
+<title>«methods.semilinear.proximal_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eproximal&#45;005Fenergy&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___proximal_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="502.5,-125.4 371.5,-125.4 371.5,-89.4 502.5,-89.4 502.5,-125.4"/>
+<text text-anchor="middle" x="437" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.proximal_energy</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.convex_gradient_resolvent»&#45;&gt;«methods.semilinear.proximal_energy» -->
+<g id="edge7" class="edge">
+<title>«methods.semilinear.convex_gradient_resolvent»&#45;&gt;«methods.semilinear.proximal_energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M373.45,-159.09C384.72,-150.09 398.64,-138.99 410.58,-129.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="415.56,-125.5 412.55,-131.35 413.27,-127.45 410.93,-129.32 410.87,-129.24 410.8,-129.16 413.15,-127.29 409.18,-127.13 415.56,-125.5 415.56,-125.5"/>
+</g>
+<!-- «methods.semilinear.energy_resolvent» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eenergy&#45;005Fresolvent&#45;00BB" class="node">
+<title>«methods.semilinear.energy_resolvent»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eenergy&#45;005Fresolvent&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___energy_resolvent_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="156.5,-195.2 23.5,-195.2 23.5,-159.2 156.5,-159.2 156.5,-195.2"/>
+<text text-anchor="middle" x="90" y="-174.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.energy_resolvent</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.energy_resolvent»&#45;&gt;«methods.semilinear.resolvent_contraction» -->
+<g id="edge1" class="edge">
+<title>«methods.semilinear.energy_resolvent»&#45;&gt;«methods.semilinear.resolvent_contraction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M90,-159.09C90,-151.46 90,-142.32 90,-133.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="90,-127.66 92.7,-133.66 90.1,-130.66 90.1,-133.66 90,-133.66 89.9,-133.66 89.9,-130.66 87.3,-133.66 90,-127.66 90,-127.66"/>
+</g>
+<!-- «methods.semilinear.proximal_minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eproximal&#45;005Fminimizer&#45;00BB" class="node">
+<title>«methods.semilinear.proximal_minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Eproximal&#45;005Fminimizer&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___proximal_minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="435" cy="-35.8" rx="67.76" ry="19.6"/>
+<text text-anchor="middle" x="435" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="435" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">proximal_minimizer</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.proximal_energy»&#45;&gt;«methods.semilinear.moreau_envelope» -->
+<g id="edge3" class="edge">
+<title>«methods.semilinear.proximal_energy»&#45;&gt;«methods.semilinear.moreau_envelope»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M394.92,-89.37C368.28,-78.59 333.94,-64.69 307.26,-53.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="301.68,-51.64 308.26,-51.39 304.5,-52.68 307.28,-53.8 307.25,-53.89 307.21,-53.99 304.43,-52.86 306.23,-56.4 301.68,-51.64 301.68,-51.64"/>
+</g>
+<!-- «methods.semilinear.proximal_energy»&#45;&gt;«methods.semilinear.proximal_minimizer» -->
+<g id="edge6" class="edge">
+<title>«methods.semilinear.proximal_energy»&#45;&gt;«methods.semilinear.proximal_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M436.51,-89.19C436.27,-80.95 435.98,-70.92 435.72,-61.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="435.54,-55.76 438.42,-61.68 435.73,-58.76 435.82,-61.76 435.72,-61.76 435.62,-61.76 435.53,-58.76 433.02,-61.84 435.54,-55.76 435.54,-55.76"/>
+</g>
+</g>
+</svg>

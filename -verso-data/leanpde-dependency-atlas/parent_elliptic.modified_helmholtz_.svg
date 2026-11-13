@@ -1,0 +1,234 @@
+<svg data-node-count="12" data-edge-count="18" data-cluster-count="1" data-variant-key="parent:«elliptic.modified_helmholtz»" width="599pt" height="457pt"
+ viewBox="0.00 0.00 599.00 456.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 452.99)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-452.99 595,-452.99 595,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 571,-8 571,-8 577,-8 583,-14 583,-20 583,-20 583,-428.99 583,-428.99 583,-434.99 577,-440.99 571,-440.99 571,-440.99 20,-440.99 20,-440.99 14,-440.99 8,-434.99 8,-428.99 8,-428.99 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="295.5" y="-425.79" font-family="Helvetica" font-size="14.00">Modified Helmholtz equation</text>
+</g>
+<!-- «elliptic.modified_helmholtz.stability» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Estability&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.stability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Estability&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___stability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="254" cy="-178.99" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="254" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz.stability</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.distributional_equivalence» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Edistributional&#45;005Fequivalence&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.distributional_equivalence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Edistributional&#45;005Fequivalence&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___distributional_equivalence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="433" cy="-250.59" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="433" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz</text>
+<text text-anchor="middle" x="433" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">distributional_equivalence</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.exists_unique» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Eexists&#45;005Funique&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.exists_unique»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Eexists&#45;005Funique&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___exists_unique_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="450" cy="-178.99" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="450" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz</text>
+<text text-anchor="middle" x="450" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">exists_unique</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.distributional_equivalence»&#45;&gt;«elliptic.modified_helmholtz.exists_unique» -->
+<g id="edge18" class="edge">
+<title>«elliptic.modified_helmholtz.distributional_equivalence»&#45;&gt;«elliptic.modified_helmholtz.exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M437.65,-230.57C439.56,-222.75 441.8,-213.57 443.84,-205.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="445.36,-198.99 446.56,-205.46 444.75,-201.93 444.03,-204.84 443.94,-204.82 443.84,-204.79 444.55,-201.88 441.31,-204.18 445.36,-198.99 445.36,-198.99"/>
+</g>
+<!-- «elliptic.modified_helmholtz.distributional_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Edistributional&#45;005Fsolution&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.distributional_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Edistributional&#45;005Fsolution&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___distributional_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="575,-340.19 469,-340.19 469,-304.19 575,-304.19 575,-340.19"/>
+<text text-anchor="middle" x="522" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz</text>
+<text text-anchor="middle" x="522" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">distributional_solution</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.distributional_solution»&#45;&gt;«elliptic.modified_helmholtz.distributional_equivalence» -->
+<g id="edge3" class="edge">
+<title>«elliptic.modified_helmholtz.distributional_solution»&#45;&gt;«elliptic.modified_helmholtz.distributional_equivalence»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M500,-303.99C488.28,-294.82 473.72,-283.44 461.18,-273.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="456.3,-269.82 462.69,-271.38 458.73,-271.58 461.09,-273.43 461.03,-273.51 460.97,-273.59 458.6,-271.74 459.37,-275.64 456.3,-269.82 456.3,-269.82"/>
+</g>
+<!-- «elliptic.modified_helmholtz.superposition» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Esuperposition&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.superposition»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Esuperposition&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___superposition_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="477" cy="-35.8" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="477" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz</text>
+<text text-anchor="middle" x="477" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">superposition</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.distributional_solution»&#45;&gt;«elliptic.modified_helmholtz.superposition» -->
+<g id="edge4" class="edge">
+<title>«elliptic.modified_helmholtz.distributional_solution»&#45;&gt;«elliptic.modified_helmholtz.superposition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M531.92,-304.05C553.93,-263.56 601.79,-159.94 561,-87.6 552.87,-73.18 538.82,-62.39 524.51,-54.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="518.82,-51.59 525.38,-51.96 521.52,-52.88 524.18,-54.27 524.14,-54.36 524.09,-54.45 521.43,-53.06 522.89,-56.75 518.82,-51.59 518.82,-51.59"/>
+</g>
+<!-- «elliptic.modified_helmholtz.distributional_solution»&#45;&gt;«elliptic.modified_helmholtz.exists_unique» -->
+<g id="edge15" class="edge">
+<title>«elliptic.modified_helmholtz.distributional_solution»&#45;&gt;«elliptic.modified_helmholtz.exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M529.88,-304.02C537.4,-284.9 545.83,-253.69 533,-230.79 524.98,-216.48 511.1,-205.72 496.96,-197.87"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="491.33,-194.9 497.9,-195.31 494.03,-196.21 496.68,-197.61 496.64,-197.7 496.59,-197.79 493.94,-196.39 495.38,-200.09 491.33,-194.9 491.33,-194.9"/>
+</g>
+<!-- «elliptic.modified_helmholtz.energy_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Eenergy&#45;005Fprinciple&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.energy_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Eenergy&#45;005Fprinciple&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___energy_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="85" cy="-178.99" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="85" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz</text>
+<text text-anchor="middle" x="85" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">energy_principle</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.form» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Eform&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.form»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Eform&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___form_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="275,-409.99 157,-409.99 157,-373.99 275,-373.99 275,-409.99"/>
+<text text-anchor="middle" x="216" y="-389.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz.form</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.distributional_equivalence» -->
+<g id="edge2" class="edge">
+<title>«elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.distributional_equivalence»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M275.11,-382.52C324.3,-374.32 389.21,-360.41 408,-341.99 425.39,-324.95 430.99,-296.97 432.65,-276.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="433.04,-270.61 435.34,-276.77 432.95,-273.61 432.75,-276.6 432.65,-276.6 432.55,-276.59 432.75,-273.6 429.96,-276.42 433.04,-270.61 433.04,-270.61"/>
+</g>
+<!-- «elliptic.modified_helmholtz.signed_coercive» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Esigned&#45;005Fcoercive&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.signed_coercive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Esigned&#45;005Fcoercive&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___signed_coercive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="94" cy="-322.19" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="94" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz</text>
+<text text-anchor="middle" x="94" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">signed_coercive</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.signed_coercive» -->
+<g id="edge10" class="edge">
+<title>«elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.signed_coercive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M185.21,-373.88C168.33,-364.5 147.3,-352.81 129.7,-343.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="124.35,-340.06 130.91,-340.61 127.02,-341.43 129.65,-342.89 129.6,-342.97 129.55,-343.06 126.93,-341.6 128.29,-345.33 124.35,-340.06 124.35,-340.06"/>
+</g>
+<!-- «elliptic.modified_helmholtz.energy» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Eenergy&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Eenergy&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="144,-268.59 16,-268.59 16,-232.59 144,-232.59 144,-268.59"/>
+<text text-anchor="middle" x="80" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz.energy</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.energy» -->
+<g id="edge11" class="edge">
+<title>«elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M211.62,-373.77C205.96,-354.41 194.43,-322.97 175,-302.39 162.88,-289.55 146.78,-279.27 131.28,-271.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="125.61,-268.63 132.18,-268.85 128.35,-269.86 131.04,-271.18 130.99,-271.27 130.95,-271.36 128.26,-270.04 129.8,-273.7 125.61,-268.63 125.61,-268.63"/>
+</g>
+<!-- «elliptic.modified_helmholtz.solver» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Esolver&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.solver»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Esolver&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___solver_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="293,-268.59 169,-268.59 169,-232.59 293,-232.59 293,-268.59"/>
+<text text-anchor="middle" x="231" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz.solver</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.solver» -->
+<g id="edge12" class="edge">
+<title>«elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.solver»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M217.84,-373.9C220.52,-349.02 225.49,-302.78 228.5,-274.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="229.15,-268.83 231.19,-275.08 228.92,-271.82 228.6,-274.8 228.5,-274.79 228.4,-274.78 228.73,-271.8 225.82,-274.5 229.15,-268.83 229.15,-268.83"/>
+</g>
+<!-- «elliptic.modified_helmholtz.coercive» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Ecoercive&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.coercive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Ecoercive&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___coercive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="319" cy="-322.19" rx="76.65" ry="18"/>
+<text text-anchor="middle" x="319" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz.coercive</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.coercive» -->
+<g id="edge14" class="edge">
+<title>«elliptic.modified_helmholtz.form»&#45;&gt;«elliptic.modified_helmholtz.coercive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M241.99,-373.88C256.32,-364.45 274.18,-352.69 289.09,-342.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="294.44,-339.36 290.91,-344.91 291.98,-341.09 289.48,-342.74 289.42,-342.66 289.37,-342.58 291.87,-340.93 287.94,-340.4 294.44,-339.36 294.44,-339.36"/>
+</g>
+<!-- «elliptic.modified_helmholtz.distributional_characterization» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Edistributional&#45;005Fcharacterization&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz.distributional_characterization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;002Edistributional&#45;005Fcharacterization&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___modified_helmholtz___distributional_characterization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="448" cy="-107.4" rx="100.32" ry="19.6"/>
+<text text-anchor="middle" x="448" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">modified_helmholtz</text>
+<text text-anchor="middle" x="448" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">distributional_characterization</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz.distributional_characterization»&#45;&gt;«elliptic.modified_helmholtz.superposition» -->
+<g id="edge5" class="edge">
+<title>«elliptic.modified_helmholtz.distributional_characterization»&#45;&gt;«elliptic.modified_helmholtz.superposition»</title>
+<path fill="none" stroke="#6b7280" d="M455.92,-87.38C459.25,-79.4 463.16,-70.02 466.7,-61.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="469.09,-55.79 469.27,-62.37 467.93,-58.56 466.78,-61.33 466.78,-61.33 466.78,-61.33 467.93,-58.56 464.29,-60.29 469.09,-55.79 469.09,-55.79"/>
+</g>
+<!-- «elliptic.modified_helmholtz.energy»&#45;&gt;«elliptic.modified_helmholtz.energy_principle» -->
+<g id="edge6" class="edge">
+<title>«elliptic.modified_helmholtz.energy»&#45;&gt;«elliptic.modified_helmholtz.energy_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M81.24,-232.39C81.83,-224.15 82.55,-214.12 83.2,-205.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="83.64,-198.96 85.9,-205.14 83.52,-201.96 83.31,-204.95 83.21,-204.94 83.11,-204.94 83.32,-201.94 80.51,-204.75 83.64,-198.96 83.64,-198.96"/>
+</g>
+<!-- «elliptic.modified_helmholtz.solver»&#45;&gt;«elliptic.modified_helmholtz.stability» -->
+<g id="edge1" class="edge">
+<title>«elliptic.modified_helmholtz.solver»&#45;&gt;«elliptic.modified_helmholtz.stability»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M236.69,-232.39C239.64,-223.46 243.28,-212.42 246.47,-202.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="248.38,-197 249.06,-203.55 247.53,-199.88 246.59,-202.73 246.5,-202.7 246.4,-202.67 247.34,-199.82 243.93,-201.85 248.38,-197 248.38,-197"/>
+</g>
+<!-- «elliptic.modified_helmholtz.solver»&#45;&gt;«elliptic.modified_helmholtz.energy_principle» -->
+<g id="edge7" class="edge">
+<title>«elliptic.modified_helmholtz.solver»&#45;&gt;«elliptic.modified_helmholtz.energy_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M195.28,-232.57C173.96,-222.4 146.83,-209.47 124.82,-198.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="119.34,-196.37 125.92,-196.51 122.09,-197.57 124.8,-198.86 124.76,-198.95 124.71,-199.04 122.01,-197.75 123.6,-201.38 119.34,-196.37 119.34,-196.37"/>
+</g>
+<!-- «elliptic.modified_helmholtz.solver»&#45;&gt;«elliptic.modified_helmholtz.distributional_characterization» -->
+<g id="edge9" class="edge">
+<title>«elliptic.modified_helmholtz.solver»&#45;&gt;«elliptic.modified_helmholtz.distributional_characterization»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M283.26,-232.51C303.05,-224.37 324.91,-213.21 342,-198.79 358.28,-185.06 353.74,-174.05 369,-159.2 380.66,-147.85 395.22,-137.63 408.66,-129.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="413.95,-126.21 410.2,-131.62 411.43,-127.84 408.86,-129.39 408.81,-129.3 408.75,-129.22 411.33,-127.67 407.41,-126.99 413.95,-126.21 413.95,-126.21"/>
+</g>
+<!-- «elliptic.modified_helmholtz.solver»&#45;&gt;«elliptic.modified_helmholtz.exists_unique» -->
+<g id="edge17" class="edge">
+<title>«elliptic.modified_helmholtz.solver»&#45;&gt;«elliptic.modified_helmholtz.exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M284.57,-232.57C319.65,-221.42 365.18,-206.95 399.6,-196.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="405.46,-194.15 400.56,-198.54 402.63,-195.15 399.77,-196.06 399.74,-195.97 399.71,-195.87 402.57,-194.96 398.92,-193.39 405.46,-194.15 405.46,-194.15"/>
+</g>
+<!-- «elliptic.modified_helmholtz.coercive»&#45;&gt;«elliptic.modified_helmholtz.solver» -->
+<g id="edge13" class="edge">
+<title>«elliptic.modified_helmholtz.coercive»&#45;&gt;«elliptic.modified_helmholtz.solver»</title>
+<path fill="none" stroke="#6b7280" d="M298.15,-304.7C286.03,-295.12 270.64,-282.95 257.66,-272.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="252.62,-268.7 259.01,-270.3 254.98,-270.56 257.33,-272.42 257.33,-272.42 257.33,-272.42 254.98,-270.56 255.66,-274.53 252.62,-268.7 252.62,-268.7"/>
+</g>
+<!-- «elliptic.modified_helmholtz.coercive»&#45;&gt;«elliptic.modified_helmholtz.exists_unique» -->
+<g id="edge16" class="edge">
+<title>«elliptic.modified_helmholtz.coercive»&#45;&gt;«elliptic.modified_helmholtz.exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M317.05,-303.98C315.76,-284.24 316.7,-251.91 333,-230.79 347.04,-212.61 368.91,-200.82 389.97,-193.23"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="395.88,-191.2 391.08,-195.7 393.07,-192.27 390.24,-193.24 390.2,-193.15 390.17,-193.05 393.01,-192.08 389.33,-190.6 395.88,-191.2 395.88,-191.2"/>
+</g>
+<!-- «elliptic.modified_helmholtz.exists_unique»&#45;&gt;«elliptic.modified_helmholtz.distributional_characterization» -->
+<g id="edge8" class="edge">
+<title>«elliptic.modified_helmholtz.exists_unique»&#45;&gt;«elliptic.modified_helmholtz.distributional_characterization»</title>
+<path fill="none" stroke="#6b7280" d="M449.45,-158.98C449.23,-151.15 448.96,-141.97 448.72,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="448.55,-127.39 451.42,-133.31 448.63,-130.39 448.72,-133.39 448.72,-133.39 448.72,-133.39 448.63,-130.39 446.02,-133.47 448.55,-127.39 448.55,-127.39"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,226 @@
+<svg data-node-count="13" data-edge-count="15" data-cluster-count="1" data-variant-key="parent:«hyperbolic.higher_regularity»" width="657pt" height="385pt"
+ viewBox="0.00 0.00 657.00 385.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 381.39)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-381.39 653,-381.39 653,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 629,-8 629,-8 635,-8 641,-14 641,-20 641,-20 641,-357.39 641,-357.39 641,-363.39 635,-369.39 629,-369.39 629,-369.39 20,-369.39 20,-369.39 14,-369.39 8,-363.39 8,-357.39 8,-357.39 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="324.5" y="-354.19" font-family="Helvetica" font-size="14.00">Higher wave regularity</text>
+</g>
+<!-- «hyperbolic.regularity.data» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Edata&#45;00BB" class="node">
+<title>«hyperbolic.regularity.data»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Edata&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___data_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="602.5,-336.59 529.5,-336.59 529.5,-300.59 602.5,-300.59 602.5,-336.59"/>
+<text text-anchor="middle" x="566" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.data</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.estimate64_assembly» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Eestimate64&#45;005Fassembly&#45;00BB" class="node">
+<title>«hyperbolic.regularity.estimate64_assembly»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Eestimate64&#45;005Fassembly&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___estimate64_assembly_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="532" cy="-246.99" rx="76.24" ry="19.6"/>
+<text text-anchor="middle" x="532" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="532" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">estimate64_assembly</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.data»&#45;&gt;«hyperbolic.regularity.estimate64_assembly» -->
+<g id="edge1" class="edge">
+<title>«hyperbolic.regularity.data»&#45;&gt;«hyperbolic.regularity.estimate64_assembly»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M557.6,-300.39C553.49,-291.99 548.48,-281.73 543.98,-272.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="541.26,-266.96 546.32,-271.16 542.67,-269.61 543.99,-272.31 543.9,-272.35 543.81,-272.39 542.49,-269.7 541.47,-273.53 541.26,-266.96 541.26,-266.96"/>
+</g>
+<!-- «hyperbolic.regularity.regular_weak_wave» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Eregular&#45;005Fweak&#45;005Fwave&#45;00BB" class="node">
+<title>«hyperbolic.regularity.regular_weak_wave»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Eregular&#45;005Fweak&#45;005Fwave&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___regular_weak_wave_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="468" cy="-34" rx="78.69" ry="18"/>
+<text text-anchor="middle" x="468" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.regular_weak_wave</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.data»&#45;&gt;«hyperbolic.regularity.regular_weak_wave» -->
+<g id="edge2" class="edge">
+<title>«hyperbolic.regularity.data»&#45;&gt;«hyperbolic.regularity.regular_weak_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M529.4,-303.28C495.98,-290.09 450.66,-271.81 443,-266.79 404.73,-241.7 386.86,-237.33 369,-195.2 362.13,-178.99 357.37,-168.81 369,-155.6 443.01,-71.51 544.99,-207.68 619,-123.6 630.63,-110.39 629.35,-98.24 619,-84 602.35,-61.1 574.75,-48.68 547.67,-42.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="541.53,-40.62 547.99,-39.34 544.48,-41.2 547.4,-41.87 547.38,-41.97 547.36,-42.06 544.44,-41.39 546.78,-44.6 541.53,-40.62 541.53,-40.62"/>
+</g>
+<!-- «hyperbolic.regularity.forcing_chain» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Eforcing&#45;005Fchain&#45;00BB" class="node">
+<title>«hyperbolic.regularity.forcing_chain»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Eforcing&#45;005Fchain&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___forcing_chain_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="253" cy="-246.99" rx="63.56" ry="18"/>
+<text text-anchor="middle" x="253" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.forcing_chain</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.data»&#45;&gt;«hyperbolic.regularity.forcing_chain» -->
+<g id="edge10" class="edge">
+<title>«hyperbolic.regularity.data»&#45;&gt;«hyperbolic.regularity.forcing_chain»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M529.33,-302.66C525.21,-301.24 521.04,-299.91 517,-298.79 438.28,-276.95 416.08,-282.93 336,-266.79 326.4,-264.86 316.22,-262.67 306.39,-260.48"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="300.32,-259.12 306.76,-257.8 303.27,-259.68 306.2,-260.34 306.17,-260.43 306.15,-260.53 303.23,-259.88 305.58,-263.07 300.32,-259.12 300.32,-259.12"/>
+</g>
+<!-- «hyperbolic.regularity.compatible_initial_chain» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Ecompatible&#45;005Finitial&#45;005Fchain&#45;00BB" class="node">
+<title>«hyperbolic.regularity.compatible_initial_chain»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Ecompatible&#45;005Finitial&#45;005Fchain&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___compatible_initial_chain_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="247" cy="-175.4" rx="82.05" ry="19.6"/>
+<text text-anchor="middle" x="247" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="247" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">compatible_initial_chain</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.data»&#45;&gt;«hyperbolic.regularity.compatible_initial_chain» -->
+<g id="edge14" class="edge">
+<title>«hyperbolic.regularity.data»&#45;&gt;«hyperbolic.regularity.compatible_initial_chain»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M529.3,-302.78C525.18,-301.34 521.02,-299.97 517,-298.79 449.93,-279.1 423.21,-302.32 363,-266.79 343.02,-255.01 346.62,-242.28 329,-227.2 315.63,-215.75 299.42,-205.14 284.95,-196.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="279.71,-193.56 286.25,-194.24 282.35,-194.99 284.95,-196.49 284.9,-196.58 284.85,-196.67 282.25,-195.16 283.54,-198.91 279.71,-193.56 279.71,-193.56"/>
+</g>
+<!-- «hyperbolic.regularity.spatial_h2» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Espatial&#45;005Fh2&#45;00BB" class="node">
+<title>«hyperbolic.regularity.spatial_h2»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Espatial&#45;005Fh2&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___spatial_h2_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="550" cy="-103.8" rx="56.31" ry="18"/>
+<text text-anchor="middle" x="550" y="-101.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.spatial_h2</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.spatial_h2»&#45;&gt;«hyperbolic.regularity.regular_weak_wave» -->
+<g id="edge6" class="edge">
+<title>«hyperbolic.regularity.spatial_h2»&#45;&gt;«hyperbolic.regularity.regular_weak_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M530.57,-86.73C519.19,-77.33 504.73,-65.37 492.57,-55.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="487.86,-51.42 494.21,-53.17 490.4,-53.06 492.71,-54.98 492.49,-55.25 492.26,-55.52 489.95,-53.6 490.77,-57.33 487.86,-51.42 487.86,-51.42"/>
+</g>
+<!-- «hyperbolic.regularity.estimate64_nonsymmetric_recurrence» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Eestimate64&#45;005Fnonsymmetric&#45;005Frecurrence&#45;00BB" class="node">
+<title>«hyperbolic.regularity.estimate64_nonsymmetric_recurrence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Eestimate64&#45;005Fnonsymmetric&#45;005Frecurrence&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___estimate64_nonsymmetric_recurrence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="507" cy="-175.4" rx="125.73" ry="19.6"/>
+<text text-anchor="middle" x="507" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="507" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">estimate64_nonsymmetric_recurrence</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.estimate64_assembly»&#45;&gt;«hyperbolic.regularity.estimate64_nonsymmetric_recurrence» -->
+<g id="edge13" class="edge">
+<title>«hyperbolic.regularity.estimate64_assembly»&#45;&gt;«hyperbolic.regularity.estimate64_nonsymmetric_recurrence»</title>
+<path fill="none" stroke="#6b7280" d="M525.17,-226.98C522.3,-219 518.93,-209.61 515.88,-201.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="513.82,-195.39 518.39,-200.13 514.84,-198.22 515.85,-201.04 515.85,-201.04 515.85,-201.04 514.84,-198.22 513.31,-201.95 513.82,-195.39 513.82,-195.39"/>
+</g>
+<!-- «hyperbolic.regularity.nonsymmetric_h2» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Enonsymmetric&#45;005Fh2&#45;00BB" class="node">
+<title>«hyperbolic.regularity.nonsymmetric_h2»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Enonsymmetric&#45;005Fh2&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___nonsymmetric_h2_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="430" cy="-318.59" rx="74.11" ry="18"/>
+<text text-anchor="middle" x="430" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity.nonsymmetric_h2</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.nonsymmetric_higher» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Enonsymmetric&#45;005Fhigher&#45;00BB" class="node">
+<title>«hyperbolic.regularity.nonsymmetric_higher»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Enonsymmetric&#45;005Fhigher&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___nonsymmetric_higher_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="90" cy="-246.99" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="90" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="90" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">nonsymmetric_higher</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.nonsymmetric_h2»&#45;&gt;«hyperbolic.regularity.nonsymmetric_higher» -->
+<g id="edge7" class="edge">
+<title>«hyperbolic.regularity.nonsymmetric_h2»&#45;&gt;«hyperbolic.regularity.nonsymmetric_higher»</title>
+<path fill="none" stroke="#6b7280" d="M377.29,-305.84C366.3,-303.46 354.78,-301 344,-298.79 269.97,-283.61 251.05,-281.89 177,-266.79 168.76,-265.11 160.09,-263.3 151.54,-261.48"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="145.65,-260.22 152.08,-258.84 148.59,-260.85 151.52,-261.48 151.52,-261.48 151.52,-261.48 148.59,-260.85 150.96,-264.12 145.65,-260.22 145.65,-260.22"/>
+</g>
+<!-- «hyperbolic.regularity.paired_weak_limits» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Epaired&#45;005Fweak&#45;005Flimits&#45;00BB" class="node">
+<title>«hyperbolic.regularity.paired_weak_limits»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Epaired&#45;005Fweak&#45;005Flimits&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___paired_weak_limits_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="264" cy="-318.59" rx="67.35" ry="19.6"/>
+<text text-anchor="middle" x="264" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="264" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">paired_weak_limits</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.galerkin_limit_chain_nonsymmetric» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Egalerkin&#45;005Flimit&#45;005Fchain&#45;005Fnonsymmetric&#45;00BB" class="node">
+<title>«hyperbolic.regularity.galerkin_limit_chain_nonsymmetric»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Egalerkin&#45;005Flimit&#45;005Fchain&#45;005Fnonsymmetric&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___galerkin_limit_chain_nonsymmetric_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="325" cy="-103.8" rx="116.85" ry="19.6"/>
+<text text-anchor="middle" x="325" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="325" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">galerkin_limit_chain_nonsymmetric</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.forcing_chain»&#45;&gt;«hyperbolic.regularity.regular_weak_wave» -->
+<g id="edge3" class="edge">
+<title>«hyperbolic.regularity.forcing_chain»&#45;&gt;«hyperbolic.regularity.regular_weak_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M208.58,-234.08C127.26,-210.25 -31.73,-153.02 30,-84 53.2,-58.06 264.63,-44.24 385.04,-38.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="391.06,-38.13 385.2,-41.11 388.08,-38.62 385.08,-38.77 385.07,-38.42 385.05,-38.07 388.05,-37.92 384.94,-35.72 391.06,-38.13 391.06,-38.13"/>
+</g>
+<!-- «hyperbolic.regularity.forcing_chain»&#45;&gt;«hyperbolic.regularity.galerkin_limit_chain_nonsymmetric» -->
+<g id="edge8" class="edge">
+<title>«hyperbolic.regularity.forcing_chain»&#45;&gt;«hyperbolic.regularity.galerkin_limit_chain_nonsymmetric»</title>
+<path fill="none" stroke="#6b7280" d="M206.66,-234.62C186.18,-227.04 164.05,-214.74 152,-195.2 142.77,-180.21 141.45,-169.69 152,-155.6 163.26,-140.55 202.02,-128.45 240,-119.83"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="246.09,-118.48 240.82,-122.41 243.16,-119.13 240.23,-119.78 240.23,-119.78 240.23,-119.78 243.16,-119.13 239.65,-117.14 246.09,-118.48 246.09,-118.48"/>
+</g>
+<!-- «hyperbolic.regularity.galerkin_limit_chain» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Egalerkin&#45;005Flimit&#45;005Fchain&#45;00BB" class="node">
+<title>«hyperbolic.regularity.galerkin_limit_chain»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Egalerkin&#45;005Flimit&#45;005Fchain&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___galerkin_limit_chain_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="113" cy="-103.8" rx="70.01" ry="19.6"/>
+<text text-anchor="middle" x="113" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="113" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">galerkin_limit_chain</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.regularity.forcing_chain»&#45;&gt;«hyperbolic.regularity.galerkin_limit_chain» -->
+<g id="edge11" class="edge">
+<title>«hyperbolic.regularity.forcing_chain»&#45;&gt;«hyperbolic.regularity.galerkin_limit_chain»</title>
+<path fill="none" stroke="#6b7280" d="M204.9,-235.1C181.68,-227.52 155.19,-215.1 138,-195.2 122.25,-176.96 116.36,-149.6 114.18,-129.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="113.6,-123.6 116.86,-129.32 113.89,-126.59 114.17,-129.57 114.17,-129.57 114.17,-129.57 113.89,-126.59 111.48,-129.83 113.6,-123.6 113.6,-123.6"/>
+</g>
+<!-- «hyperbolic.regularity.forcing_chain»&#45;&gt;«hyperbolic.regularity.compatible_initial_chain» -->
+<g id="edge15" class="edge">
+<title>«hyperbolic.regularity.forcing_chain»&#45;&gt;«hyperbolic.regularity.compatible_initial_chain»</title>
+<path fill="none" stroke="#6b7280" d="M251.52,-228.79C250.81,-220.55 249.94,-210.52 249.16,-201.45"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="248.63,-195.36 251.84,-201.11 248.89,-198.35 249.15,-201.34 249.15,-201.34 249.15,-201.34 248.89,-198.35 246.46,-201.57 248.63,-195.36 248.63,-195.36"/>
+</g>
+<!-- «hyperbolic.regularity.galerkin_limit_chain»&#45;&gt;«hyperbolic.regularity.regular_weak_wave» -->
+<g id="edge5" class="edge">
+<title>«hyperbolic.regularity.galerkin_limit_chain»&#45;&gt;«hyperbolic.regularity.regular_weak_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M165.61,-90.51C175.68,-88.27 186.15,-86 196,-84 265.41,-69.89 345.22,-55.76 400.35,-46.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="406.28,-45.31 400.82,-48.99 403.38,-46.16 400.42,-46.67 400.36,-46.32 400.3,-45.98 403.26,-45.47 399.91,-43.66 406.28,-45.31 406.28,-45.31"/>
+</g>
+<!-- «hyperbolic.regularity.compatible_initial_chain»&#45;&gt;«hyperbolic.regularity.regular_weak_wave» -->
+<g id="edge4" class="edge">
+<title>«hyperbolic.regularity.compatible_initial_chain»&#45;&gt;«hyperbolic.regularity.regular_weak_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M309.89,-162.6C367.09,-151.29 444.08,-134.39 454,-123.6 470.07,-106.12 471.96,-78.02 470.87,-58.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="470.42,-52.03 473.55,-57.82 470.99,-55 471.21,-57.99 470.86,-58.01 470.51,-58.04 470.29,-55.05 468.16,-58.21 470.42,-52.03 470.42,-52.03"/>
+</g>
+<!-- «hyperbolic.regularity.compatible_initial_chain»&#45;&gt;«hyperbolic.regularity.galerkin_limit_chain_nonsymmetric» -->
+<g id="edge9" class="edge">
+<title>«hyperbolic.regularity.compatible_initial_chain»&#45;&gt;«hyperbolic.regularity.galerkin_limit_chain_nonsymmetric»</title>
+<path fill="none" stroke="#6b7280" d="M267.49,-156.11C277.28,-147.38 289.09,-136.84 299.45,-127.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="304.1,-123.45 301.42,-129.46 301.86,-125.44 299.62,-127.44 299.62,-127.44 299.62,-127.44 301.86,-125.44 297.83,-125.43 304.1,-123.45 304.1,-123.45"/>
+</g>
+<!-- «hyperbolic.regularity.compatible_initial_chain»&#45;&gt;«hyperbolic.regularity.galerkin_limit_chain» -->
+<g id="edge12" class="edge">
+<title>«hyperbolic.regularity.compatible_initial_chain»&#45;&gt;«hyperbolic.regularity.galerkin_limit_chain»</title>
+<path fill="none" stroke="#6b7280" d="M213.88,-157.19C194.75,-147.26 170.62,-134.73 150.76,-124.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="145.28,-121.56 151.85,-121.93 147.94,-122.95 150.6,-124.33 150.6,-124.33 150.6,-124.33 147.94,-122.95 149.36,-126.73 145.28,-121.56 145.28,-121.56"/>
+</g>
+<!-- «hyperbolic.regularity.nonsymmetric_garding» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Enonsymmetric&#45;005Fgarding&#45;00BB" class="node">
+<title>«hyperbolic.regularity.nonsymmetric_garding»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eregularity&#45;002Enonsymmetric&#45;005Fgarding&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___regularity___nonsymmetric_garding_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="94" cy="-318.59" rx="77.56" ry="19.6"/>
+<text text-anchor="middle" x="94" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">regularity</text>
+<text text-anchor="middle" x="94" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">nonsymmetric_garding</text>
+</a>
+</g>
+</g>
+</g>
+</svg>

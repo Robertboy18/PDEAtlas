@@ -1,0 +1,1185 @@
+<svg data-node-count="79" data-edge-count="72" data-cluster-count="1" data-variant-key="parent:«methods.representations»" width="5796pt" height="317pt"
+ viewBox="0.00 0.00 5796.00 317.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 313.39)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-313.39 5792,-313.39 5792,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 5768,-8 5768,-8 5774,-8 5780,-14 5780,-20 5780,-20 5780,-289.39 5780,-289.39 5780,-295.39 5774,-301.39 5768,-301.39 5768,-301.39 20,-301.39 20,-301.39 14,-301.39 8,-295.39 8,-289.39 8,-289.39 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="2894" y="-286.19" font-family="Helvetica" font-size="14.00">Representation methods</text>
+</g>
+<!-- «methods.similarity.dynamic_chain_rule» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Edynamic&#45;005Fchain&#45;005Frule&#45;00BB" class="node">
+<title>«methods.similarity.dynamic_chain_rule»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Edynamic&#45;005Fchain&#45;005Frule&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___dynamic_chain_rule_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="5265" cy="-107.4" rx="70.01" ry="19.6"/>
+<text text-anchor="middle" x="5265" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity</text>
+<text text-anchor="middle" x="5265" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">dynamic_chain_rule</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.kdv_soliton» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Ekdv&#45;005Fsoliton&#45;00BB" class="node">
+<title>«methods.similarity.kdv_soliton»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Ekdv&#45;005Fsoliton&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___kdv_soliton_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2842" cy="-178.99" rx="58.35" ry="18"/>
+<text text-anchor="middle" x="2842" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity.kdv_soliton</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.hilbert_poisson_pair» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ehilbert&#45;005Fpoisson&#45;005Fpair&#45;00BB" class="node">
+<title>«methods.fourier.hilbert_poisson_pair»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ehilbert&#45;005Fpoisson&#45;005Fpair&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___hilbert_poisson_pair_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="636" cy="-107.4" rx="73.98" ry="18"/>
+<text text-anchor="middle" x="636" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.hilbert_poisson_pair</text>
+</a>
+</g>
+</g>
+<!-- «methods.cole_hopf.jet» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Ejet&#45;00BB" class="node">
+<title>«methods.cole_hopf.jet»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Ejet&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___cole_hopf___jet_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4535" cy="-250.59" rx="38.01" ry="18"/>
+<text text-anchor="middle" x="4535" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">cole_hopf.jet</text>
+</a>
+</g>
+</g>
+<!-- «methods.cole_hopf.domain» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Edomain&#45;00BB" class="node">
+<title>«methods.cole_hopf.domain»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Edomain&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___cole_hopf___domain_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4517" cy="-178.99" rx="49.83" ry="18"/>
+<text text-anchor="middle" x="4517" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">cole_hopf.domain</text>
+</a>
+</g>
+</g>
+<!-- «methods.cole_hopf.jet»&#45;&gt;«methods.cole_hopf.domain» -->
+<g id="edge70" class="edge">
+<title>«methods.cole_hopf.jet»&#45;&gt;«methods.cole_hopf.domain»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M4530.55,-232.39C4528.26,-223.54 4525.44,-212.63 4522.97,-203.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="4521.4,-197 4525.51,-202.13 4522.25,-199.88 4523,-202.78 4522.9,-202.81 4522.8,-202.83 4522.05,-199.93 4520.29,-203.49 4521.4,-197 4521.4,-197"/>
+</g>
+<!-- «elliptic.minimal_surface.dual_principal_form» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimal&#45;005Fsurface&#45;002Edual&#45;005Fprincipal&#45;005Fform&#45;00BB" class="node">
+<title>«elliptic.minimal_surface.dual_principal_form»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimal&#45;005Fsurface&#45;002Edual&#45;005Fprincipal&#45;005Fform&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_elliptic___minimal_surface___dual_principal_form_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4614" cy="-107.4" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="4614" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimal_surface</text>
+<text text-anchor="middle" x="4614" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">dual_principal_form</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.minimal_surface.legendre» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimal&#45;005Fsurface&#45;002Elegendre&#45;00BB" class="node">
+<title>«elliptic.minimal_surface.legendre»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimal&#45;005Fsurface&#45;002Elegendre&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_elliptic___minimal_surface___legendre_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4767" cy="-35.8" rx="70.17" ry="18"/>
+<text text-anchor="middle" x="4767" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimal_surface.legendre</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.minimal_surface.dual_principal_form»&#45;&gt;«elliptic.minimal_surface.legendre» -->
+<g id="edge13" class="edge">
+<title>«elliptic.minimal_surface.dual_principal_form»&#45;&gt;«elliptic.minimal_surface.legendre»</title>
+<path fill="none" stroke="#6b7280" d="M4649.49,-90.25C4673.1,-79.51 4704.13,-65.4 4728.37,-54.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="4734.06,-51.78 4729.72,-56.73 4731.33,-53.03 4728.6,-54.27 4728.6,-54.27 4728.6,-54.27 4731.33,-53.03 4727.48,-51.81 4734.06,-51.78 4734.06,-51.78"/>
+</g>
+<!-- «methods.spectral.parseval» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Eparseval&#45;00BB" class="node">
+<title>«methods.spectral.parseval»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Eparseval&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___spectral___parseval_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1169" cy="-178.99" rx="49.2" ry="18"/>
+<text text-anchor="middle" x="1169" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectral.parseval</text>
+</a>
+</g>
+</g>
+<!-- «methods.spectral.tail_identity» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Etail&#45;005Fidentity&#45;00BB" class="node">
+<title>«methods.spectral.tail_identity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Etail&#45;005Fidentity&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___spectral___tail_identity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1228" cy="-107.4" rx="56.95" ry="18"/>
+<text text-anchor="middle" x="1228" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectral.tail_identity</text>
+</a>
+</g>
+</g>
+<!-- «methods.spectral.parseval»&#45;&gt;«methods.spectral.tail_identity» -->
+<g id="edge44" class="edge">
+<title>«methods.spectral.parseval»&#45;&gt;«methods.spectral.tail_identity»</title>
+<path fill="none" stroke="#6b7280" d="M1182.98,-161.5C1190.95,-152.11 1201.02,-140.22 1209.62,-130.08"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1213.71,-125.26 1211.89,-131.58 1211.77,-127.54 1209.83,-129.83 1209.83,-129.83 1209.83,-129.83 1211.77,-127.54 1207.77,-128.09 1213.71,-125.26 1213.71,-125.26"/>
+</g>
+<!-- «methods.power_series.transport_model» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Etransport&#45;005Fmodel&#45;00BB" class="node">
+<title>«methods.power_series.transport_model»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Etransport&#45;005Fmodel&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___power_series___transport_model_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2388" cy="-178.99" rx="81.23" ry="18"/>
+<text text-anchor="middle" x="2388" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">power_series.transport_model</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.minimal_surface.divergence» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimal&#45;005Fsurface&#45;002Edivergence&#45;00BB" class="node">
+<title>«elliptic.minimal_surface.divergence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimal&#45;005Fsurface&#45;002Edivergence&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_elliptic___minimal_surface___divergence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4927" cy="-107.4" rx="76.02" ry="18"/>
+<text text-anchor="middle" x="4927" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimal_surface.divergence</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.minimal_surface.divergence»&#45;&gt;«elliptic.minimal_surface.legendre» -->
+<g id="edge12" class="edge">
+<title>«elliptic.minimal_surface.divergence»&#45;&gt;«elliptic.minimal_surface.legendre»</title>
+<path fill="none" stroke="#6b7280" d="M4892.28,-91.3C4867.16,-80.37 4833.16,-65.58 4806.91,-54.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="4801.1,-51.63 4807.68,-51.55 4803.85,-52.83 4806.6,-54.03 4806.6,-54.03 4806.6,-54.03 4803.85,-52.83 4805.53,-56.5 4801.1,-51.63 4801.1,-51.63"/>
+</g>
+<!-- «methods.asymptotics.laplace_limit» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Elaplace&#45;005Flimit&#45;00BB" class="node">
+<title>«methods.asymptotics.laplace_limit»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Elaplace&#45;005Flimit&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___laplace_limit_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="857" cy="-178.99" rx="69.4" ry="18"/>
+<text text-anchor="middle" x="857" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics.laplace_limit</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.laplace_euclidean» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Elaplace&#45;005Feuclidean&#45;00BB" class="node">
+<title>«methods.asymptotics.laplace_euclidean»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Elaplace&#45;005Feuclidean&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___laplace_euclidean_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="827" cy="-107.4" rx="63.78" ry="19.6"/>
+<text text-anchor="middle" x="827" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics</text>
+<text text-anchor="middle" x="827" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">laplace_euclidean</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.laplace_limit»&#45;&gt;«methods.asymptotics.laplace_euclidean» -->
+<g id="edge17" class="edge">
+<title>«methods.asymptotics.laplace_limit»&#45;&gt;«methods.asymptotics.laplace_euclidean»</title>
+<path fill="none" stroke="#6b7280" d="M849.58,-160.79C845.96,-152.39 841.54,-142.13 837.57,-132.93"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="835.17,-127.36 840.03,-131.8 836.36,-130.12 837.55,-132.87 837.55,-132.87 837.55,-132.87 836.36,-130.12 835.07,-133.94 835.17,-127.36 835.17,-127.36"/>
+</g>
+<!-- «methods.similarity.scaling» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Escaling&#45;00BB" class="node">
+<title>«methods.similarity.scaling»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Escaling&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___scaling_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="5360.5,-268.59 5275.5,-268.59 5275.5,-232.59 5360.5,-232.59 5360.5,-268.59"/>
+<text text-anchor="middle" x="5318" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity.scaling</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.spatial_chain_rules» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Espatial&#45;005Fchain&#45;005Frules&#45;00BB" class="node">
+<title>«methods.similarity.spatial_chain_rules»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Espatial&#45;005Fchain&#45;005Frules&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___spatial_chain_rules_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="5086" cy="-178.99" rx="67.76" ry="19.6"/>
+<text text-anchor="middle" x="5086" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity</text>
+<text text-anchor="middle" x="5086" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">spatial_chain_rules</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.scaling»&#45;&gt;«methods.similarity.spatial_chain_rules» -->
+<g id="edge27" class="edge">
+<title>«methods.similarity.scaling»&#45;&gt;«methods.similarity.spatial_chain_rules»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M5275.45,-236.83C5236.67,-225.2 5179.29,-207.98 5137.85,-195.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="5131.86,-193.75 5138.38,-192.89 5134.76,-194.52 5137.63,-195.38 5137.6,-195.48 5137.58,-195.57 5134.7,-194.71 5136.83,-198.06 5131.86,-193.75 5131.86,-193.75"/>
+</g>
+<!-- «methods.similarity.dynamic_pullback» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Edynamic&#45;005Fpullback&#45;00BB" class="node">
+<title>«methods.similarity.dynamic_pullback»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Edynamic&#45;005Fpullback&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___dynamic_pullback_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="5311,-196.99 5179,-196.99 5179,-160.99 5311,-160.99 5311,-196.99"/>
+<text text-anchor="middle" x="5245" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity.dynamic_pullback</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.scaling»&#45;&gt;«methods.similarity.dynamic_pullback» -->
+<g id="edge31" class="edge">
+<title>«methods.similarity.scaling»&#45;&gt;«methods.similarity.dynamic_pullback»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M5299.96,-232.39C5290.05,-222.95 5277.69,-211.17 5267.21,-201.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="5262.84,-197 5269.04,-199.19 5265.08,-199 5267.25,-201.07 5267.18,-201.14 5267.11,-201.21 5264.94,-199.14 5265.32,-203.1 5262.84,-197 5262.84,-197"/>
+</g>
+<!-- «methods.similarity.barenblatt» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Ebarenblatt&#45;00BB" class="node">
+<title>«methods.similarity.barenblatt»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Ebarenblatt&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___barenblatt_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="5391" cy="-178.99" rx="55.04" ry="18"/>
+<text text-anchor="middle" x="5391" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity.barenblatt</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.scaling»&#45;&gt;«methods.similarity.barenblatt» -->
+<g id="edge37" class="edge">
+<title>«methods.similarity.scaling»&#45;&gt;«methods.similarity.barenblatt»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M5336.04,-232.39C5346.09,-222.81 5358.67,-210.81 5369.26,-200.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="5373.67,-196.52 5371.19,-202.62 5371.56,-198.66 5369.39,-200.73 5369.32,-200.66 5369.25,-200.59 5371.42,-198.52 5367.46,-198.71 5373.67,-196.52 5373.67,-196.52"/>
+</g>
+<!-- «methods.similarity.forward_chain_rule» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Eforward&#45;005Fchain&#45;005Frule&#45;00BB" class="node">
+<title>«methods.similarity.forward_chain_rule»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Eforward&#45;005Fchain&#45;005Frule&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___forward_chain_rule_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4927" cy="-178.99" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="4927" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity</text>
+<text text-anchor="middle" x="4927" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">forward_chain_rule</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.scaling»&#45;&gt;«methods.similarity.forward_chain_rule» -->
+<g id="edge40" class="edge">
+<title>«methods.similarity.scaling»&#45;&gt;«methods.similarity.forward_chain_rule»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M5275.43,-243.66C5215.21,-235.03 5101.79,-217.96 5006,-198.79 4998.4,-197.27 4990.42,-195.54 4982.57,-193.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="4976.61,-192.38 4983.06,-191.09 4979.55,-192.95 4982.48,-193.63 4982.45,-193.72 4982.43,-193.82 4979.51,-193.15 4981.85,-196.36 4976.61,-192.38 4976.61,-192.38"/>
+</g>
+<!-- «methods.similarity.burgers_rarefaction» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Eburgers&#45;005Frarefaction&#45;00BB" class="node">
+<title>«methods.similarity.burgers_rarefaction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Eburgers&#45;005Frarefaction&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___burgers_rarefaction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="5540" cy="-178.99" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="5540" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity</text>
+<text text-anchor="middle" x="5540" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">burgers_rarefaction</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.scaling»&#45;&gt;«methods.similarity.burgers_rarefaction» -->
+<g id="edge51" class="edge">
+<title>«methods.similarity.scaling»&#45;&gt;«methods.similarity.burgers_rarefaction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M5360.54,-236.26C5397.11,-224.79 5449.94,-208.23 5488.82,-196.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="5494.93,-194.12 5490.02,-198.49 5492.1,-195.12 5489.24,-196.01 5489.21,-195.92 5489.18,-195.82 5492.04,-194.93 5488.4,-193.34 5494.93,-194.12 5494.93,-194.12"/>
+</g>
+<!-- «methods.similarity.heat_kernel_scaling» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Eheat&#45;005Fkernel&#45;005Fscaling&#45;00BB" class="node">
+<title>«methods.similarity.heat_kernel_scaling»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Eheat&#45;005Fkernel&#45;005Fscaling&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___heat_kernel_scaling_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="5703" cy="-178.99" rx="69.09" ry="19.6"/>
+<text text-anchor="middle" x="5703" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity</text>
+<text text-anchor="middle" x="5703" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat_kernel_scaling</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.scaling»&#45;&gt;«methods.similarity.heat_kernel_scaling» -->
+<g id="edge58" class="edge">
+<title>«methods.similarity.scaling»&#45;&gt;«methods.similarity.heat_kernel_scaling»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M5360.8,-243.24C5419.62,-234.31 5528.66,-217.1 5621,-198.79 5628.88,-197.23 5637.15,-195.47 5645.29,-193.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="5651.48,-192.3 5646.22,-196.24 5648.58,-193.05 5645.65,-193.7 5645.63,-193.6 5645.61,-193.5 5648.53,-192.85 5645.04,-190.97 5651.48,-192.3 5651.48,-192.3"/>
+</g>
+<!-- «methods.asymptotics.variable_boundary_layer» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Evariable&#45;005Fboundary&#45;005Flayer&#45;00BB" class="node">
+<title>«methods.asymptotics.variable_boundary_layer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Evariable&#45;005Fboundary&#45;005Flayer&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___variable_boundary_layer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="3336" cy="-178.99" rx="82.96" ry="19.6"/>
+<text text-anchor="middle" x="3336" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics</text>
+<text text-anchor="middle" x="3336" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">variable_boundary_layer</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.variable_boundary_matching» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Evariable&#45;005Fboundary&#45;005Fmatching&#45;00BB" class="node">
+<title>«methods.asymptotics.variable_boundary_matching»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Evariable&#45;005Fboundary&#45;005Fmatching&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___variable_boundary_matching_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="3336" cy="-107.4" rx="96.33" ry="19.6"/>
+<text text-anchor="middle" x="3336" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics</text>
+<text text-anchor="middle" x="3336" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">variable_boundary_matching</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.variable_boundary_layer»&#45;&gt;«methods.asymptotics.variable_boundary_matching» -->
+<g id="edge15" class="edge">
+<title>«methods.asymptotics.variable_boundary_layer»&#45;&gt;«methods.asymptotics.variable_boundary_matching»</title>
+<path fill="none" stroke="#6b7280" d="M3336,-158.98C3336,-151.15 3336,-141.97 3336,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="3336,-127.39 3338.7,-133.39 3336,-130.39 3336,-133.39 3336,-133.39 3336,-133.39 3336,-130.39 3333.3,-133.39 3336,-127.39 3336,-127.39"/>
+</g>
+<!-- «methods.power_series.implicit_surface» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Eimplicit&#45;005Fsurface&#45;00BB" class="node">
+<title>«methods.power_series.implicit_surface»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Eimplicit&#45;005Fsurface&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___power_series___implicit_surface_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2073" cy="-178.99" rx="57.97" ry="19.6"/>
+<text text-anchor="middle" x="2073" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">power_series</text>
+<text text-anchor="middle" x="2073" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">implicit_surface</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.shifted_resolvent_bound» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eshifted&#45;005Fresolvent&#45;005Fbound&#45;00BB" class="node">
+<title>«methods.fourier.shifted_resolvent_bound»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eshifted&#45;005Fresolvent&#45;005Fbound&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___shifted_resolvent_bound_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="276" cy="-35.8" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="276" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier</text>
+<text text-anchor="middle" x="276" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">shifted_resolvent_bound</text>
+</a>
+</g>
+</g>
+<!-- «methods.power_series.transport_multidimensional» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Etransport&#45;005Fmultidimensional&#45;00BB" class="node">
+<title>«methods.power_series.transport_multidimensional»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Etransport&#45;005Fmultidimensional&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___power_series___transport_multidimensional_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2388" cy="-250.59" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="2388" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">power_series</text>
+<text text-anchor="middle" x="2388" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport_multidimensional</text>
+</a>
+</g>
+</g>
+<!-- «methods.power_series.transport_multidimensional»&#45;&gt;«methods.power_series.transport_model» -->
+<g id="edge8" class="edge">
+<title>«methods.power_series.transport_multidimensional»&#45;&gt;«methods.power_series.transport_model»</title>
+<path fill="none" stroke="#6b7280" d="M2388,-230.57C2388,-222.15 2388,-212.17 2388,-203.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2388,-197.09 2390.7,-203.09 2388,-200.09 2388,-203.09 2388,-203.09 2388,-203.09 2388,-200.09 2385.3,-203.09 2388,-197.09 2388,-197.09"/>
+</g>
+<!-- «fluid.hodograph.potential» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Ehodograph&#45;002Epotential&#45;00BB" class="node">
+<title>«fluid.hodograph.potential»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Ehodograph&#45;002Epotential&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_fluid___hodograph___potential_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4647" cy="-178.99" rx="55.04" ry="18"/>
+<text text-anchor="middle" x="4647" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">hodograph.potential</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.backward_generator» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Ebackward&#45;005Fgenerator&#45;00BB" class="node">
+<title>«methods.similarity.backward_generator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Ebackward&#45;005Fgenerator&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___backward_generator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="5099" cy="-107.4" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="5099" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity</text>
+<text text-anchor="middle" x="5099" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">backward_generator</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.backward_blowup» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Ebackward&#45;005Fblowup&#45;00BB" class="node">
+<title>«methods.similarity.backward_blowup»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Ebackward&#45;005Fblowup&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___backward_blowup_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="5099" cy="-35.8" rx="74.11" ry="18"/>
+<text text-anchor="middle" x="5099" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity.backward_blowup</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.backward_generator»&#45;&gt;«methods.similarity.backward_blowup» -->
+<g id="edge72" class="edge">
+<title>«methods.similarity.backward_generator»&#45;&gt;«methods.similarity.backward_blowup»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M5099,-87.38C5099,-78.96 5099,-68.97 5099,-60.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="5099,-53.89 5101.7,-59.89 5099.1,-56.89 5099.1,-59.89 5099,-59.89 5098.9,-59.89 5098.9,-56.89 5096.3,-59.89 5099,-53.89 5099,-53.89"/>
+</g>
+<!-- «analysis.legendre.local_dual» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Elegendre&#45;002Elocal&#45;005Fdual&#45;00BB" class="node">
+<title>«analysis.legendre.local_dual»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Elegendre&#45;002Elocal&#45;005Fdual&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_analysis___legendre___local_dual_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4781" cy="-178.99" rx="54.41" ry="18"/>
+<text text-anchor="middle" x="4781" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">legendre.local_dual</text>
+</a>
+</g>
+</g>
+<!-- «analysis.legendre.linearization» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Elegendre&#45;002Elinearization&#45;00BB" class="node">
+<title>«analysis.legendre.linearization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Elegendre&#45;002Elinearization&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_analysis___legendre___linearization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4767" cy="-107.4" rx="58.98" ry="18"/>
+<text text-anchor="middle" x="4767" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">legendre.linearization</text>
+</a>
+</g>
+</g>
+<!-- «analysis.legendre.local_dual»&#45;&gt;«analysis.legendre.linearization» -->
+<g id="edge50" class="edge">
+<title>«analysis.legendre.local_dual»&#45;&gt;«analysis.legendre.linearization»</title>
+<path fill="none" stroke="#6b7280" d="M4777.54,-160.79C4775.76,-151.94 4773.56,-141.03 4771.64,-131.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="4770.42,-125.4 4774.25,-130.75 4771.01,-128.34 4771.6,-131.29 4771.6,-131.29 4771.6,-131.29 4771.01,-128.34 4768.96,-131.82 4770.42,-125.4 4770.42,-125.4"/>
+</g>
+<!-- «methods.fourier.derivative_symbol» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ederivative&#45;005Fsymbol&#45;00BB" class="node">
+<title>«methods.fourier.derivative_symbol»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ederivative&#45;005Fsymbol&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___derivative_symbol_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="3946.5,-268.59 3827.5,-268.59 3827.5,-232.59 3946.5,-232.59 3946.5,-268.59"/>
+<text text-anchor="middle" x="3887" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.derivative_symbol</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.heat_cauchy» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eheat&#45;005Fcauchy&#45;00BB" class="node">
+<title>«methods.fourier.heat_cauchy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eheat&#45;005Fcauchy&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___heat_cauchy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="3887" cy="-178.99" rx="55.68" ry="18"/>
+<text text-anchor="middle" x="3887" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.heat_cauchy</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.heat_cauchy» -->
+<g id="edge28" class="edge">
+<title>«methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.heat_cauchy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M3887,-232.39C3887,-223.54 3887,-212.63 3887,-203.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="3887,-197 3889.7,-203 3887.1,-200 3887.1,-203 3887,-203 3886.9,-203 3886.9,-200 3884.3,-203 3887,-197 3887,-197"/>
+</g>
+<!-- «methods.fourier.hilbert_derivative_commutes» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ehilbert&#45;005Fderivative&#45;005Fcommutes&#45;00BB" class="node">
+<title>«methods.fourier.hilbert_derivative_commutes»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ehilbert&#45;005Fderivative&#45;005Fcommutes&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___hilbert_derivative_commutes_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1585" cy="-178.99" rx="96.33" ry="19.6"/>
+<text text-anchor="middle" x="1585" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier</text>
+<text text-anchor="middle" x="1585" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert_derivative_commutes</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.hilbert_derivative_commutes» -->
+<g id="edge35" class="edge">
+<title>«methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.hilbert_derivative_commutes»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M3827.41,-244.04C3777.63,-239.64 3704.75,-233.76 3641,-230.79 2788.47,-191.15 2571.92,-264.45 1721,-198.79 1702.74,-197.39 1683.2,-195.13 1664.78,-192.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1658.58,-191.82 1664.89,-189.95 1661.57,-192.12 1664.54,-192.53 1664.53,-192.63 1664.52,-192.73 1661.54,-192.32 1664.16,-195.3 1658.58,-191.82 1658.58,-191.82"/>
+</g>
+<!-- «methods.fourier.wave_cauchy» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ewave&#45;005Fcauchy&#45;00BB" class="node">
+<title>«methods.fourier.wave_cauchy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ewave&#45;005Fcauchy&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___wave_cauchy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4187" cy="-178.99" rx="57.08" ry="18"/>
+<text text-anchor="middle" x="4187" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.wave_cauchy</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.wave_cauchy» -->
+<g id="edge41" class="edge">
+<title>«methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.wave_cauchy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M3946.74,-237.17C3993.26,-227.31 4059.4,-212.88 4117,-198.79 4124.16,-197.04 4131.71,-195.11 4139.1,-193.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="4145.25,-191.54 4140.14,-195.68 4142.38,-192.4 4139.48,-193.17 4139.45,-193.07 4139.43,-192.98 4142.33,-192.21 4138.76,-190.46 4145.25,-191.54 4145.25,-191.54"/>
+</g>
+<!-- «methods.fourier.iterated_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eiterated&#45;005Fderivative&#45;00BB" class="node">
+<title>«methods.fourier.iterated_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eiterated&#45;005Fderivative&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___iterated_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4036" cy="-178.99" rx="68.77" ry="18"/>
+<text text-anchor="middle" x="4036" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.iterated_derivative</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.iterated_derivative» -->
+<g id="edge52" class="edge">
+<title>«methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.iterated_derivative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" stroke-dasharray="5,2" d="M3923.45,-232.57C3946.16,-221.96 3975.33,-208.33 3998.28,-197.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="4003.97,-194.95 3999.68,-199.94 4001.4,-196.54 3998.69,-197.81 3998.54,-197.49 3998.39,-197.18 4001.11,-195.91 3997.4,-195.05 4003.97,-194.95 4003.97,-194.95"/>
+</g>
+<!-- «methods.fourier.wave_schwartz» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ewave&#45;005Fschwartz&#45;00BB" class="node">
+<title>«methods.fourier.wave_schwartz»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ewave&#45;005Fschwartz&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___wave_schwartz_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="3745" cy="-178.99" rx="61.66" ry="18"/>
+<text text-anchor="middle" x="3745" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.wave_schwartz</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.wave_schwartz» -->
+<g id="edge56" class="edge">
+<title>«methods.fourier.derivative_symbol»&#45;&gt;«methods.fourier.wave_schwartz»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M3852.26,-232.57C3830.61,-221.96 3802.82,-208.33 3780.95,-197.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="3775.52,-194.95 3782.1,-195.17 3778.26,-196.18 3780.95,-197.51 3780.91,-197.59 3780.86,-197.68 3778.17,-196.36 3779.72,-200.02 3775.52,-194.95 3775.52,-194.95"/>
+</g>
+<!-- «methods.spectral.partial_sums» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Epartial&#45;005Fsums&#45;00BB" class="node">
+<title>«methods.spectral.partial_sums»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Epartial&#45;005Fsums&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___spectral___partial_sums_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1303" cy="-178.99" rx="60.25" ry="18"/>
+<text text-anchor="middle" x="1303" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectral.partial_sums</text>
+</a>
+</g>
+</g>
+<!-- «methods.spectral.partial_sums»&#45;&gt;«methods.spectral.tail_identity» -->
+<g id="edge43" class="edge">
+<title>«methods.spectral.partial_sums»&#45;&gt;«methods.spectral.tail_identity»</title>
+<path fill="none" stroke="#6b7280" d="M1285.23,-161.5C1274.69,-151.72 1261.25,-139.25 1250.04,-128.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1245.39,-124.53 1251.62,-126.63 1247.59,-126.57 1249.79,-128.61 1249.79,-128.61 1249.79,-128.61 1247.59,-126.57 1247.95,-130.59 1245.39,-124.53 1245.39,-124.53"/>
+</g>
+<!-- «methods.cole_hopf.transform» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Etransform&#45;00BB" class="node">
+<title>«methods.cole_hopf.transform»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Etransform&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___cole_hopf___transform_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="4472,-268.59 4374,-268.59 4374,-232.59 4472,-232.59 4472,-268.59"/>
+<text text-anchor="middle" x="4423" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">cole_hopf.transform</text>
+</a>
+</g>
+</g>
+<!-- «methods.cole_hopf.exponential_example» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Eexponential&#45;005Fexample&#45;00BB" class="node">
+<title>«methods.cole_hopf.exponential_example»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Eexponential&#45;005Fexample&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___cole_hopf___exponential_example_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4342" cy="-178.99" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="4342" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">cole_hopf</text>
+<text text-anchor="middle" x="4342" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">exponential_example</text>
+</a>
+</g>
+</g>
+<!-- «methods.cole_hopf.transform»&#45;&gt;«methods.cole_hopf.exponential_example» -->
+<g id="edge48" class="edge">
+<title>«methods.cole_hopf.transform»&#45;&gt;«methods.cole_hopf.exponential_example»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M4402.98,-232.39C4392.32,-223.23 4379.09,-211.87 4367.69,-202.07"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="4362.92,-197.97 4369.23,-199.83 4365.26,-199.85 4367.54,-201.81 4367.47,-201.88 4367.41,-201.96 4365.13,-200 4365.71,-203.93 4362.92,-197.97 4362.92,-197.97"/>
+</g>
+<!-- «methods.cole_hopf.nonconstant_examples» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Enonconstant&#45;005Fexamples&#45;00BB" class="node">
+<title>«methods.cole_hopf.nonconstant_examples»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Enonconstant&#45;005Fexamples&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___cole_hopf___nonconstant_examples_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4316" cy="-107.4" rx="79.39" ry="19.6"/>
+<text text-anchor="middle" x="4316" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">cole_hopf</text>
+<text text-anchor="middle" x="4316" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">nonconstant_examples</text>
+</a>
+</g>
+</g>
+<!-- «methods.cole_hopf.transform»&#45;&gt;«methods.cole_hopf.nonconstant_examples» -->
+<g id="edge60" class="edge">
+<title>«methods.cole_hopf.transform»&#45;&gt;«methods.cole_hopf.nonconstant_examples»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M4429.25,-232.42C4435.15,-213.01 4441.17,-181.27 4427,-159.2 4416.1,-142.23 4397.97,-130.85 4379.49,-123.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="4373.75,-121.02 4380.32,-120.69 4376.58,-122.02 4379.38,-123.11 4379.34,-123.2 4379.3,-123.3 4376.51,-122.21 4378.36,-125.72 4373.75,-121.02 4373.75,-121.02"/>
+</g>
+<!-- «methods.cole_hopf.transform»&#45;&gt;«methods.cole_hopf.domain» -->
+<g id="edge69" class="edge">
+<title>«methods.cole_hopf.transform»&#45;&gt;«methods.cole_hopf.domain»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M4446.24,-232.39C4459.79,-222.35 4476.93,-209.66 4490.95,-199.29"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="4495.96,-195.58 4492.74,-201.32 4493.6,-197.44 4491.19,-199.23 4491.13,-199.15 4491.07,-199.07 4493.49,-197.28 4489.53,-196.98 4495.96,-195.58 4495.96,-195.58"/>
+</g>
+<!-- «methods.asymptotics.pure_oscillation» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Epure&#45;005Foscillation&#45;00BB" class="node">
+<title>«methods.asymptotics.pure_oscillation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Epure&#45;005Foscillation&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___pure_oscillation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="3551" cy="-250.59" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="3551" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics.pure_oscillation</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.oscillatory_integration_by_parts» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eoscillatory&#45;005Fintegration&#45;005Fby&#45;005Fparts&#45;00BB" class="node">
+<title>«methods.asymptotics.oscillatory_integration_by_parts»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eoscillatory&#45;005Fintegration&#45;005Fby&#45;005Fparts&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___oscillatory_integration_by_parts_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="3551" cy="-178.99" rx="106.55" ry="19.6"/>
+<text text-anchor="middle" x="3551" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics</text>
+<text text-anchor="middle" x="3551" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">oscillatory_integration_by_parts</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.pure_oscillation»&#45;&gt;«methods.asymptotics.oscillatory_integration_by_parts» -->
+<g id="edge32" class="edge">
+<title>«methods.asymptotics.pure_oscillation»&#45;&gt;«methods.asymptotics.oscillatory_integration_by_parts»</title>
+<path fill="none" stroke="#6b7280" d="M3551,-232.39C3551,-224.15 3551,-214.12 3551,-205.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="3551,-198.96 3553.7,-204.96 3551,-201.96 3551,-204.96 3551,-204.96 3551,-204.96 3551,-201.96 3548.3,-204.96 3551,-198.96 3551,-198.96"/>
+</g>
+<!-- «methods.spectral.expansion» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Eexpansion&#45;00BB" class="node">
+<title>«methods.spectral.expansion»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Eexpansion&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___spectral___expansion_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1236" cy="-250.59" rx="53.14" ry="18"/>
+<text text-anchor="middle" x="1236" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectral.expansion</text>
+</a>
+</g>
+</g>
+<!-- «methods.spectral.expansion»&#45;&gt;«methods.spectral.parseval» -->
+<g id="edge6" class="edge">
+<title>«methods.spectral.expansion»&#45;&gt;«methods.spectral.parseval»</title>
+<path fill="none" stroke="#6b7280" d="M1220.12,-233.1C1210.86,-223.48 1199.09,-211.25 1189.17,-200.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1184.76,-196.37 1190.87,-198.82 1186.84,-198.53 1188.93,-200.69 1188.93,-200.69 1188.93,-200.69 1186.84,-198.53 1186.98,-202.57 1184.76,-196.37 1184.76,-196.37"/>
+</g>
+<!-- «methods.spectral.expansion»&#45;&gt;«methods.spectral.partial_sums» -->
+<g id="edge23" class="edge">
+<title>«methods.spectral.expansion»&#45;&gt;«methods.spectral.partial_sums»</title>
+<path fill="none" stroke="#6b7280" d="M1251.88,-233.1C1261.14,-223.48 1272.91,-211.25 1282.83,-200.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1287.24,-196.37 1285.02,-202.57 1285.16,-198.53 1283.07,-200.69 1283.07,-200.69 1283.07,-200.69 1285.16,-198.53 1281.13,-198.82 1287.24,-196.37 1287.24,-196.37"/>
+</g>
+<!-- «methods.asymptotics.boundary_layer» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eboundary&#45;005Flayer&#45;00BB" class="node">
+<title>«methods.asymptotics.boundary_layer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eboundary&#45;005Flayer&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___boundary_layer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="3239" cy="-250.59" rx="76.02" ry="18"/>
+<text text-anchor="middle" x="3239" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics.boundary_layer</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.boundary_layer»&#45;&gt;«methods.asymptotics.variable_boundary_layer» -->
+<g id="edge10" class="edge">
+<title>«methods.asymptotics.boundary_layer»&#45;&gt;«methods.asymptotics.variable_boundary_layer»</title>
+<path fill="none" stroke="#6b7280" d="M3261.99,-233.1C3275.06,-223.72 3291.59,-211.86 3305.71,-201.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="3310.79,-198.08 3307.49,-203.77 3308.36,-199.83 3305.92,-201.58 3305.92,-201.58 3305.92,-201.58 3308.36,-199.83 3304.34,-199.39 3310.79,-198.08 3310.79,-198.08"/>
+</g>
+<!-- «methods.asymptotics.boundary_layer_matching» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eboundary&#45;005Flayer&#45;005Fmatching&#45;00BB" class="node">
+<title>«methods.asymptotics.boundary_layer_matching»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eboundary&#45;005Flayer&#45;005Fmatching&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___boundary_layer_matching_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="3141" cy="-178.99" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="3141" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics</text>
+<text text-anchor="middle" x="3141" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_layer_matching</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.boundary_layer»&#45;&gt;«methods.asymptotics.boundary_layer_matching» -->
+<g id="edge67" class="edge">
+<title>«methods.asymptotics.boundary_layer»&#45;&gt;«methods.asymptotics.boundary_layer_matching»</title>
+<path fill="none" stroke="#6b7280" d="M3215.78,-233.1C3202.57,-223.72 3185.87,-211.86 3171.6,-201.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="3166.47,-198.08 3172.92,-199.35 3168.91,-199.82 3171.36,-201.56 3171.36,-201.56 3171.36,-201.56 3168.91,-199.82 3169.8,-203.76 3166.47,-198.08 3166.47,-198.08"/>
+</g>
+<!-- «methods.fourier.shifted_resolvent» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eshifted&#45;005Fresolvent&#45;00BB" class="node">
+<title>«methods.fourier.shifted_resolvent»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eshifted&#45;005Fresolvent&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___shifted_resolvent_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="276" cy="-107.4" rx="65.6" ry="18"/>
+<text text-anchor="middle" x="276" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.shifted_resolvent</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.shifted_resolvent»&#45;&gt;«methods.fourier.shifted_resolvent_bound» -->
+<g id="edge18" class="edge">
+<title>«methods.fourier.shifted_resolvent»&#45;&gt;«methods.fourier.shifted_resolvent_bound»</title>
+<path fill="none" stroke="#6b7280" d="M276,-89.19C276,-80.95 276,-70.92 276,-61.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="276,-55.76 278.7,-61.76 276,-58.76 276,-61.76 276,-61.76 276,-61.76 276,-58.76 273.3,-61.76 276,-55.76 276,-55.76"/>
+</g>
+<!-- «methods.similarity.traveling» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Etraveling&#45;00BB" class="node">
+<title>«methods.similarity.traveling»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Etraveling&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___traveling_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2954,-268.59 2864,-268.59 2864,-232.59 2954,-232.59 2954,-268.59"/>
+<text text-anchor="middle" x="2909" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity.traveling</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.traveling»&#45;&gt;«methods.similarity.kdv_soliton» -->
+<g id="edge3" class="edge">
+<title>«methods.similarity.traveling»&#45;&gt;«methods.similarity.kdv_soliton»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2892.44,-232.39C2883.3,-222.89 2871.87,-211.03 2862.21,-200.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2857.91,-196.52 2864.02,-198.97 2860.06,-198.61 2862.14,-200.78 2862.07,-200.84 2862,-200.91 2859.92,-198.75 2860.13,-202.72 2857.91,-196.52 2857.91,-196.52"/>
+</g>
+<!-- «methods.similarity.traveling.transport» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Etraveling&#45;002Etransport&#45;00BB" class="node">
+<title>«methods.similarity.traveling.transport»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Etraveling&#45;002Etransport&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___traveling___transport_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2977" cy="-178.99" rx="51.74" ry="18"/>
+<text text-anchor="middle" x="2977" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">traveling.transport</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.traveling»&#45;&gt;«methods.similarity.traveling.transport» -->
+<g id="edge65" class="edge">
+<title>«methods.similarity.traveling»&#45;&gt;«methods.similarity.traveling.transport»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2925.81,-232.39C2935.09,-222.89 2946.68,-211.03 2956.49,-200.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2960.85,-196.52 2958.59,-202.7 2958.83,-198.74 2956.73,-200.88 2956.66,-200.81 2956.59,-200.74 2958.68,-198.6 2954.73,-198.93 2960.85,-196.52 2960.85,-196.52"/>
+</g>
+<!-- «methods.laplace.boundary_transport» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Elaplace&#45;002Eboundary&#45;005Ftransport&#45;00BB" class="node">
+<title>«methods.laplace.boundary_transport»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Elaplace&#45;002Eboundary&#45;005Ftransport&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___laplace___boundary_transport_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="456" cy="-107.4" rx="74.11" ry="18"/>
+<text text-anchor="middle" x="456" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">laplace.boundary_transport</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.spatial_chain_rules»&#45;&gt;«methods.similarity.dynamic_chain_rule» -->
+<g id="edge2" class="edge">
+<title>«methods.similarity.spatial_chain_rules»&#45;&gt;«methods.similarity.dynamic_chain_rule»</title>
+<path fill="none" stroke="#6b7280" d="M5125.28,-162.72C5153.17,-151.88 5190.66,-137.3 5219.79,-125.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="5225.5,-123.76 5220.89,-128.45 5222.7,-124.84 5219.91,-125.93 5219.91,-125.93 5219.91,-125.93 5222.7,-124.84 5218.93,-123.41 5225.5,-123.76 5225.5,-123.76"/>
+</g>
+<!-- «methods.similarity.spatial_chain_rules»&#45;&gt;«methods.similarity.backward_generator» -->
+<g id="edge21" class="edge">
+<title>«methods.similarity.spatial_chain_rules»&#45;&gt;«methods.similarity.backward_generator»</title>
+<path fill="none" stroke="#6b7280" d="M5089.55,-158.98C5091.01,-151.15 5092.73,-141.97 5094.29,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="5095.45,-127.39 5097,-133.79 5094.9,-130.34 5094.35,-133.29 5094.35,-133.29 5094.35,-133.29 5094.9,-130.34 5091.7,-132.79 5095.45,-127.39 5095.45,-127.39"/>
+</g>
+<!-- «methods.asymptotics.periodic_cell_integral» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eperiodic&#45;005Fcell&#45;005Fintegral&#45;00BB" class="node">
+<title>«methods.asymptotics.periodic_cell_integral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eperiodic&#45;005Fcell&#45;005Fintegral&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___periodic_cell_integral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2693" cy="-250.59" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="2693" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics</text>
+<text text-anchor="middle" x="2693" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">periodic_cell_integral</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.periodic_average» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eperiodic&#45;005Faverage&#45;00BB" class="node">
+<title>«methods.asymptotics.periodic_average»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Eperiodic&#45;005Faverage&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___periodic_average_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2679" cy="-178.99" rx="79.96" ry="18"/>
+<text text-anchor="middle" x="2679" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics.periodic_average</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.periodic_cell_integral»&#45;&gt;«methods.asymptotics.periodic_average» -->
+<g id="edge42" class="edge">
+<title>«methods.asymptotics.periodic_cell_integral»&#45;&gt;«methods.asymptotics.periodic_average»</title>
+<path fill="none" stroke="#6b7280" d="M2689.17,-230.57C2687.46,-222.07 2685.43,-211.98 2683.64,-203.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2682.44,-197.09 2686.27,-202.44 2683.03,-200.03 2683.62,-202.97 2683.62,-202.97 2683.62,-202.97 2683.03,-200.03 2680.97,-203.5 2682.44,-197.09 2682.44,-197.09"/>
+</g>
+<!-- «methods.separation.wave.product» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Ewave&#45;002Eproduct&#45;00BB" class="node">
+<title>«methods.separation.wave.product»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Ewave&#45;002Eproduct&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___separation___wave___product_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2534" cy="-178.99" rx="39.91" ry="18"/>
+<text text-anchor="middle" x="2534" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">wave.product</text>
+</a>
+</g>
+</g>
+<!-- «methods.separation.wave.interval» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Ewave&#45;002Einterval&#45;00BB" class="node">
+<title>«methods.separation.wave.interval»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Ewave&#45;002Einterval&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___separation___wave___interval_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1989" cy="-107.4" rx="39.28" ry="18"/>
+<text text-anchor="middle" x="1989" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">wave.interval</text>
+</a>
+</g>
+</g>
+<!-- «methods.separation.wave.product»&#45;&gt;«methods.separation.wave.interval» -->
+<g id="edge46" class="edge">
+<title>«methods.separation.wave.product»&#45;&gt;«methods.separation.wave.interval»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M2505.5,-166.28C2497.96,-163.57 2489.77,-160.97 2482,-159.2 2320.02,-122.16 2121.88,-112.09 2034.31,-109.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2028.19,-109.2 2034.27,-106.68 2031.2,-109.19 2034.2,-109.28 2034.19,-109.38 2034.19,-109.48 2031.19,-109.39 2034.11,-112.08 2028.19,-109.2 2028.19,-109.2"/>
+</g>
+<!-- «methods.asymptotics.laplace_exact» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Elaplace&#45;005Fexact&#45;00BB" class="node">
+<title>«methods.asymptotics.laplace_exact»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Elaplace&#45;005Fexact&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___laplace_exact_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1023" cy="-178.99" rx="72.08" ry="18"/>
+<text text-anchor="middle" x="1023" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics.laplace_exact</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.constant_coefficient_operator» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Econstant&#45;005Fcoefficient&#45;005Foperator&#45;00BB" class="node">
+<title>«methods.fourier.constant_coefficient_operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Econstant&#45;005Fcoefficient&#45;005Foperator&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___constant_coefficient_operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4036" cy="-107.4" rx="98.99" ry="19.6"/>
+<text text-anchor="middle" x="4036" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier</text>
+<text text-anchor="middle" x="4036" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">constant_coefficient_operator</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.laplacian_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Elaplacian&#45;005Fenergy&#45;00BB" class="node">
+<title>«methods.fourier.laplacian_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Elaplacian&#45;005Fenergy&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___laplacian_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4036" cy="-35.8" rx="65.46" ry="18"/>
+<text text-anchor="middle" x="4036" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.laplacian_energy</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.constant_coefficient_operator»&#45;&gt;«methods.fourier.laplacian_energy» -->
+<g id="edge38" class="edge">
+<title>«methods.fourier.constant_coefficient_operator»&#45;&gt;«methods.fourier.laplacian_energy»</title>
+<path fill="none" stroke="#6b7280" d="M4036,-87.38C4036,-78.96 4036,-68.97 4036,-60.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="4036,-53.89 4038.7,-59.89 4036,-56.89 4036,-59.89 4036,-59.89 4036,-59.89 4036,-56.89 4033.3,-59.89 4036,-53.89 4036,-53.89"/>
+</g>
+<!-- «methods.similarity.dynamic_pullback»&#45;&gt;«methods.similarity.dynamic_chain_rule» -->
+<g id="edge1" class="edge">
+<title>«methods.similarity.dynamic_pullback»&#45;&gt;«methods.similarity.dynamic_chain_rule»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M5249.94,-160.79C5252.34,-152.47 5255.25,-142.33 5257.88,-133.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="5259.55,-127.36 5260.49,-133.87 5258.82,-130.27 5257.99,-133.15 5257.89,-133.13 5257.8,-133.1 5258.63,-130.22 5255.3,-132.38 5259.55,-127.36 5259.55,-127.36"/>
+</g>
+<!-- «methods.power_series.analytic_hypersurface» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Eanalytic&#45;005Fhypersurface&#45;00BB" class="node">
+<title>«methods.power_series.analytic_hypersurface»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Eanalytic&#45;005Fhypersurface&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___power_series___analytic_hypersurface_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="101" cy="-107.4" rx="77.15" ry="19.6"/>
+<text text-anchor="middle" x="101" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">power_series</text>
+<text text-anchor="middle" x="101" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">analytic_hypersurface</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.wkb_residual» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Ewkb&#45;005Fresidual&#45;00BB" class="node">
+<title>«methods.asymptotics.wkb_residual»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Ewkb&#45;005Fresidual&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___wkb_residual_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2200" cy="-250.59" rx="70.81" ry="18"/>
+<text text-anchor="middle" x="2200" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics.wkb_residual</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.wkb_eikonal_limit» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Ewkb&#45;005Feikonal&#45;005Flimit&#45;00BB" class="node">
+<title>«methods.asymptotics.wkb_eikonal_limit»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Ewkb&#45;005Feikonal&#45;005Flimit&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___wkb_eikonal_limit_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2219" cy="-178.99" rx="62.87" ry="19.6"/>
+<text text-anchor="middle" x="2219" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics</text>
+<text text-anchor="middle" x="2219" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">wkb_eikonal_limit</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.wkb_residual»&#45;&gt;«methods.asymptotics.wkb_eikonal_limit» -->
+<g id="edge68" class="edge">
+<title>«methods.asymptotics.wkb_residual»&#45;&gt;«methods.asymptotics.wkb_eikonal_limit»</title>
+<path fill="none" stroke="#6b7280" d="M2204.7,-232.39C2206.97,-224.07 2209.74,-213.92 2212.23,-204.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2213.82,-198.96 2214.85,-205.46 2213.03,-201.85 2212.24,-204.75 2212.24,-204.75 2212.24,-204.75 2213.03,-201.85 2209.64,-204.04 2213.82,-198.96 2213.82,-198.96"/>
+</g>
+<!-- «methods.laplace.initial_term» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Elaplace&#45;002Einitial&#45;005Fterm&#45;00BB" class="node">
+<title>«methods.laplace.initial_term»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Elaplace&#45;002Einitial&#45;005Fterm&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___laplace___initial_term_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="420" cy="-178.99" rx="53.14" ry="18"/>
+<text text-anchor="middle" x="420" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">laplace.initial_term</text>
+</a>
+</g>
+</g>
+<!-- «methods.laplace.initial_term»&#45;&gt;«methods.laplace.boundary_transport» -->
+<g id="edge26" class="edge">
+<title>«methods.laplace.initial_term»&#45;&gt;«methods.laplace.boundary_transport»</title>
+<path fill="none" stroke="#6b7280" d="M428.71,-161.15C433.38,-152.13 439.18,-140.91 444.24,-131.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="447.12,-125.57 446.76,-132.14 445.74,-128.24 444.36,-130.9 444.36,-130.9 444.36,-130.9 445.74,-128.24 441.96,-129.66 447.12,-125.57 447.12,-125.57"/>
+</g>
+<!-- «methods.power_series.noncharacteristic» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Enoncharacteristic&#45;00BB" class="node">
+<title>«methods.power_series.noncharacteristic»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Enoncharacteristic&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___power_series___noncharacteristic_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2104.5,-268.59 2017.5,-268.59 2017.5,-232.59 2104.5,-232.59 2104.5,-268.59"/>
+<text text-anchor="middle" x="2061" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">power_series</text>
+<text text-anchor="middle" x="2061" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">noncharacteristic</text>
+</a>
+</g>
+</g>
+<!-- «methods.power_series.noncharacteristic»&#45;&gt;«methods.power_series.implicit_surface» -->
+<g id="edge14" class="edge">
+<title>«methods.power_series.noncharacteristic»&#45;&gt;«methods.power_series.implicit_surface»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2063.97,-232.39C2065.39,-224.15 2067.12,-214.12 2068.68,-205.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2069.73,-198.96 2071.37,-205.33 2069.32,-201.93 2068.81,-204.89 2068.71,-204.87 2068.61,-204.85 2069.12,-201.9 2066.05,-204.41 2069.73,-198.96 2069.73,-198.96"/>
+</g>
+<!-- «methods.separation.dirichlet_sine_mode» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Edirichlet&#45;005Fsine&#45;005Fmode&#45;00BB" class="node">
+<title>«methods.separation.dirichlet_sine_mode»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Edirichlet&#45;005Fsine&#45;005Fmode&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___separation___dirichlet_sine_mode_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1897.5,-268.59 1798.5,-268.59 1798.5,-232.59 1897.5,-232.59 1897.5,-268.59"/>
+<text text-anchor="middle" x="1848" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">separation</text>
+<text text-anchor="middle" x="1848" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet_sine_mode</text>
+</a>
+</g>
+</g>
+<!-- «methods.separation.dirichlet_sine_mode»&#45;&gt;«methods.separation.wave.interval» -->
+<g id="edge45" class="edge">
+<title>«methods.separation.dirichlet_sine_mode»&#45;&gt;«methods.separation.wave.interval»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1897.62,-241.95C1924.58,-235.18 1956.15,-222.49 1975,-198.79 1989.99,-179.95 1992.13,-151.73 1991.39,-131.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1991.06,-125.7 1994.08,-131.54 1991.32,-128.69 1991.48,-131.68 1991.38,-131.69 1991.28,-131.69 1991.12,-128.7 1988.69,-131.83 1991.06,-125.7 1991.06,-125.7"/>
+</g>
+<!-- «methods.separation.heat.interval» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Eheat&#45;002Einterval&#45;00BB" class="node">
+<title>«methods.separation.heat.interval»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Eheat&#45;002Einterval&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___separation___heat___interval_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1707" cy="-107.4" rx="36.74" ry="18"/>
+<text text-anchor="middle" x="1707" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat.interval</text>
+</a>
+</g>
+</g>
+<!-- «methods.separation.dirichlet_sine_mode»&#45;&gt;«methods.separation.heat.interval» -->
+<g id="edge53" class="edge">
+<title>«methods.separation.dirichlet_sine_mode»&#45;&gt;«methods.separation.heat.interval»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1798.38,-241.95C1771.42,-235.18 1739.85,-222.49 1721,-198.79 1706.01,-179.95 1703.87,-151.73 1704.61,-131.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1704.94,-125.7 1707.31,-131.83 1704.88,-128.7 1704.72,-131.69 1704.62,-131.69 1704.52,-131.68 1704.68,-128.69 1701.92,-131.54 1704.94,-125.7 1704.94,-125.7"/>
+</g>
+<!-- «methods.separation.dirichlet_sine_mode_eigenfunction» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Edirichlet&#45;005Fsine&#45;005Fmode&#45;005Feigenfunction&#45;00BB" class="node">
+<title>«methods.separation.dirichlet_sine_mode_eigenfunction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Edirichlet&#45;005Fsine&#45;005Fmode&#45;005Feigenfunction&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___separation___dirichlet_sine_mode_eigenfunction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1848" cy="-178.99" rx="114.6" ry="19.6"/>
+<text text-anchor="middle" x="1848" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">separation</text>
+<text text-anchor="middle" x="1848" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet_sine_mode_eigenfunction</text>
+</a>
+</g>
+</g>
+<!-- «methods.separation.dirichlet_sine_mode»&#45;&gt;«methods.separation.dirichlet_sine_mode_eigenfunction» -->
+<g id="edge66" class="edge">
+<title>«methods.separation.dirichlet_sine_mode»&#45;&gt;«methods.separation.dirichlet_sine_mode_eigenfunction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1848,-232.39C1848,-224.15 1848,-214.12 1848,-205.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1848,-198.96 1850.7,-204.96 1848.1,-201.96 1848.1,-204.96 1848,-204.96 1847.9,-204.96 1847.9,-201.96 1845.3,-204.96 1848,-198.96 1848,-198.96"/>
+</g>
+<!-- «methods.similarity.forward_chain_rule»&#45;&gt;«methods.similarity.backward_generator» -->
+<g id="edge20" class="edge">
+<title>«methods.similarity.forward_chain_rule»&#45;&gt;«methods.similarity.backward_generator»</title>
+<path fill="none" stroke="#6b7280" d="M4965.17,-162.55C4991.6,-151.86 5026.86,-137.59 5054.55,-126.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="5060.34,-124.04 5055.79,-128.79 5057.56,-125.17 5054.78,-126.29 5054.78,-126.29 5054.78,-126.29 5057.56,-125.17 5053.76,-123.79 5060.34,-124.04 5060.34,-124.04"/>
+</g>
+<!-- «analysis.inverse_function.local_chart» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Einverse&#45;005Ffunction&#45;002Elocal&#45;005Fchart&#45;00BB" class="node">
+<title>«analysis.inverse_function.local_chart»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Einverse&#45;005Ffunction&#45;002Elocal&#45;005Fchart&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_analysis___inverse_function___local_chart_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4719" cy="-250.59" rx="76.65" ry="18"/>
+<text text-anchor="middle" x="4719" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">inverse_function.local_chart</text>
+</a>
+</g>
+</g>
+<!-- «analysis.inverse_function.local_chart»&#45;&gt;«fluid.hodograph.potential» -->
+<g id="edge19" class="edge">
+<title>«analysis.inverse_function.local_chart»&#45;&gt;«fluid.hodograph.potential»</title>
+<path fill="none" stroke="#6b7280" d="M4701.57,-232.75C4691.52,-223.03 4678.81,-210.74 4668.18,-200.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="4663.77,-196.21 4669.96,-198.44 4665.93,-198.29 4668.09,-200.38 4668.09,-200.38 4668.09,-200.38 4665.93,-198.29 4666.21,-202.32 4663.77,-196.21 4663.77,-196.21"/>
+</g>
+<!-- «analysis.inverse_function.local_chart»&#45;&gt;«analysis.legendre.local_dual» -->
+<g id="edge22" class="edge">
+<title>«analysis.inverse_function.local_chart»&#45;&gt;«analysis.legendre.local_dual»</title>
+<path fill="none" stroke="#6b7280" d="M4734.01,-232.75C4742.46,-223.26 4753.1,-211.31 4762.12,-201.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="4766.13,-196.69 4764.15,-202.96 4764.13,-198.93 4762.14,-201.17 4762.14,-201.17 4762.14,-201.17 4764.13,-198.93 4760.12,-199.37 4766.13,-196.69 4766.13,-196.69"/>
+</g>
+<!-- «methods.asymptotics.gaussian_integrals» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Egaussian&#45;005Fintegrals&#45;00BB" class="node">
+<title>«methods.asymptotics.gaussian_integrals»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Easymptotics&#45;002Egaussian&#45;005Fintegrals&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___asymptotics___gaussian_integrals_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="857" cy="-250.59" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="857" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">asymptotics</text>
+<text text-anchor="middle" x="857" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">gaussian_integrals</text>
+</a>
+</g>
+</g>
+<!-- «methods.asymptotics.gaussian_integrals»&#45;&gt;«methods.asymptotics.laplace_limit» -->
+<g id="edge9" class="edge">
+<title>«methods.asymptotics.gaussian_integrals»&#45;&gt;«methods.asymptotics.laplace_limit»</title>
+<path fill="none" stroke="#6b7280" d="M857,-230.57C857,-222.15 857,-212.17 857,-203.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="857,-197.09 859.7,-203.09 857,-200.09 857,-203.09 857,-203.09 857,-203.09 857,-200.09 854.3,-203.09 857,-197.09 857,-197.09"/>
+</g>
+<!-- «methods.asymptotics.gaussian_integrals»&#45;&gt;«methods.asymptotics.laplace_euclidean» -->
+<g id="edge16" class="edge">
+<title>«methods.asymptotics.gaussian_integrals»&#45;&gt;«methods.asymptotics.laplace_euclidean»</title>
+<path fill="none" stroke="#6b7280" d="M816.58,-234.79C800.66,-226.74 784.04,-215.03 775,-198.79 766.44,-183.42 768.17,-175.42 775,-159.2 779.71,-148.01 788.22,-138.06 797.01,-129.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="801.91,-125.71 799.17,-131.69 799.65,-127.68 797.39,-129.66 797.39,-129.66 797.39,-129.66 799.65,-127.68 795.61,-127.63 801.91,-125.71 801.91,-125.71"/>
+</g>
+<!-- «methods.asymptotics.gaussian_integrals»&#45;&gt;«methods.asymptotics.laplace_exact» -->
+<g id="edge29" class="edge">
+<title>«methods.asymptotics.gaussian_integrals»&#45;&gt;«methods.asymptotics.laplace_exact»</title>
+<path fill="none" stroke="#6b7280" d="M894.25,-233.97C920.4,-223.01 955.36,-208.35 982.25,-197.08"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="987.86,-194.73 983.37,-199.54 985.09,-195.89 982.32,-197.05 982.32,-197.05 982.32,-197.05 985.09,-195.89 981.28,-194.56 987.86,-194.73 987.86,-194.73"/>
+</g>
+<!-- «methods.spectral.polynomial_rate» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Epolynomial&#45;005Frate&#45;00BB" class="node">
+<title>«methods.spectral.polynomial_rate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Espectral&#45;002Epolynomial&#45;005Frate&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___spectral___polynomial_rate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1228" cy="-35.8" rx="66.87" ry="18"/>
+<text text-anchor="middle" x="1228" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectral.polynomial_rate</text>
+</a>
+</g>
+</g>
+<!-- «methods.spectral.tail_identity»&#45;&gt;«methods.spectral.polynomial_rate» -->
+<g id="edge49" class="edge">
+<title>«methods.spectral.tail_identity»&#45;&gt;«methods.spectral.polynomial_rate»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1228,-89.19C1228,-80.34 1228,-69.43 1228,-59.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1228,-53.81 1230.7,-59.81 1228.35,-56.81 1228.35,-59.81 1228,-59.81 1227.65,-59.81 1227.65,-56.81 1225.3,-59.81 1228,-53.81 1228,-53.81"/>
+</g>
+<!-- «analysis.legendre.linearization»&#45;&gt;«elliptic.minimal_surface.legendre» -->
+<g id="edge11" class="edge">
+<title>«analysis.legendre.linearization»&#45;&gt;«elliptic.minimal_surface.legendre»</title>
+<path fill="none" stroke="#6b7280" d="M4767,-89.19C4767,-80.34 4767,-69.43 4767,-59.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="4767,-53.81 4769.7,-59.81 4767,-56.81 4767,-59.81 4767,-59.81 4767,-59.81 4767,-56.81 4764.3,-59.81 4767,-53.81 4767,-53.81"/>
+</g>
+<!-- «methods.similarity.burgers_flux_integral» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Eburgers&#45;005Fflux&#45;005Fintegral&#45;00BB" class="node">
+<title>«methods.similarity.burgers_flux_integral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esimilarity&#45;002Eburgers&#45;005Fflux&#45;005Fintegral&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___similarity___burgers_flux_integral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="5540" cy="-107.4" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="5540" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">similarity</text>
+<text text-anchor="middle" x="5540" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">burgers_flux_integral</text>
+</a>
+</g>
+</g>
+<!-- «methods.similarity.burgers_rarefaction»&#45;&gt;«methods.similarity.burgers_flux_integral» -->
+<g id="edge62" class="edge">
+<title>«methods.similarity.burgers_rarefaction»&#45;&gt;«methods.similarity.burgers_flux_integral»</title>
+<path fill="none" stroke="#6b7280" d="M5540,-158.98C5540,-151.15 5540,-141.97 5540,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="5540,-127.39 5542.7,-133.39 5540,-130.39 5540,-133.39 5540,-133.39 5540,-133.39 5540,-130.39 5537.3,-133.39 5540,-127.39 5540,-127.39"/>
+</g>
+<!-- «methods.fourier.iterated_derivative»&#45;&gt;«methods.fourier.constant_coefficient_operator» -->
+<g id="edge30" class="edge">
+<title>«methods.fourier.iterated_derivative»&#45;&gt;«methods.fourier.constant_coefficient_operator»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M4036,-160.79C4036,-152.55 4036,-142.52 4036,-133.45"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="4036,-127.36 4038.7,-133.36 4036.35,-130.36 4036.35,-133.36 4036,-133.36 4035.65,-133.36 4035.65,-130.36 4033.3,-133.36 4036,-127.36 4036,-127.36"/>
+</g>
+<!-- «methods.cole_hopf.cauchy» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Ecauchy&#45;00BB" class="node">
+<title>«methods.cole_hopf.cauchy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ecole&#45;005Fhopf&#45;002Ecauchy&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___cole_hopf___cauchy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="4470" cy="-107.4" rx="49.83" ry="18"/>
+<text text-anchor="middle" x="4470" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">cole_hopf.cauchy</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.hilbert_transform» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ehilbert&#45;005Ftransform&#45;00BB" class="node">
+<title>«methods.fourier.hilbert_transform»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ehilbert&#45;005Ftransform&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___hilbert_transform_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="702,-268.59 586,-268.59 586,-232.59 702,-232.59 702,-268.59"/>
+<text text-anchor="middle" x="644" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.hilbert_transform</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.hilbert_transform»&#45;&gt;«methods.fourier.hilbert_poisson_pair» -->
+<g id="edge4" class="edge">
+<title>«methods.fourier.hilbert_transform»&#45;&gt;«methods.fourier.hilbert_poisson_pair»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M585.97,-234.52C568.12,-226.86 550.43,-215.5 540,-198.79 530.68,-183.87 530.92,-174.27 540,-159.2 549.79,-142.94 566.71,-131.62 583.65,-123.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="589.39,-121.36 584.97,-126.23 586.68,-122.65 583.93,-123.85 583.89,-123.76 583.85,-123.66 586.6,-122.47 582.81,-121.28 589.39,-121.36 589.39,-121.36"/>
+</g>
+<!-- «methods.fourier.hilbert_transform»&#45;&gt;«methods.fourier.hilbert_derivative_commutes» -->
+<g id="edge36" class="edge">
+<title>«methods.fourier.hilbert_transform»&#45;&gt;«methods.fourier.hilbert_derivative_commutes»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M702.23,-240.21C725.71,-236.75 753.09,-233.11 778,-230.79 1087.22,-202.08 1167.27,-232.36 1476,-198.79 1487.38,-197.56 1499.37,-195.88 1511.07,-194.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1517.16,-193.04 1511.66,-196.67 1514.21,-193.62 1511.25,-194.1 1511.23,-194 1511.22,-193.9 1514.18,-193.42 1510.8,-191.33 1517.16,-193.04 1517.16,-193.04"/>
+</g>
+<!-- «methods.fourier.hilbert_transform_structure» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ehilbert&#45;005Ftransform&#45;005Fstructure&#45;00BB" class="node">
+<title>«methods.fourier.hilbert_transform_structure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Ehilbert&#45;005Ftransform&#45;005Fstructure&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___hilbert_transform_structure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="644" cy="-178.99" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="644" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier</text>
+<text text-anchor="middle" x="644" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert_transform_structure</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.hilbert_transform»&#45;&gt;«methods.fourier.hilbert_transform_structure» -->
+<g id="edge63" class="edge">
+<title>«methods.fourier.hilbert_transform»&#45;&gt;«methods.fourier.hilbert_transform_structure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M644,-232.39C644,-224.15 644,-214.12 644,-205.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="644,-198.96 646.7,-204.96 644.1,-201.96 644.1,-204.96 644,-204.96 643.9,-204.96 643.9,-201.96 641.3,-204.96 644,-198.96 644,-198.96"/>
+</g>
+<!-- «methods.separation.heat.symbolic_mode» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Eheat&#45;002Esymbolic&#45;005Fmode&#45;00BB" class="node">
+<title>«methods.separation.heat.symbolic_mode»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Eheat&#45;002Esymbolic&#45;005Fmode&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___separation___heat___symbolic_mode_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1426" cy="-107.4" rx="57.08" ry="18"/>
+<text text-anchor="middle" x="1426" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat.symbolic_mode</text>
+</a>
+</g>
+</g>
+<!-- «methods.power_series.transport_problem» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Etransport&#45;005Fproblem&#45;00BB" class="node">
+<title>«methods.power_series.transport_problem»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Etransport&#45;005Fproblem&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___power_series___transport_problem_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2595.5,-268.59 2504.5,-268.59 2504.5,-232.59 2595.5,-232.59 2595.5,-268.59"/>
+<text text-anchor="middle" x="2550" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">power_series</text>
+<text text-anchor="middle" x="2550" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">transport_problem</text>
+</a>
+</g>
+</g>
+<!-- «methods.power_series.transport_problem»&#45;&gt;«methods.power_series.transport_model» -->
+<g id="edge7" class="edge">
+<title>«methods.power_series.transport_problem»&#45;&gt;«methods.power_series.transport_model»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2510.37,-232.57C2485.73,-221.98 2454.1,-208.39 2429.17,-197.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2423.63,-195.3 2430.21,-195.19 2426.43,-196.4 2429.18,-197.58 2429.15,-197.67 2429.11,-197.76 2426.35,-196.58 2428.08,-200.15 2423.63,-195.3 2423.63,-195.3"/>
+</g>
+<!-- «methods.laplace.vertical_inversion» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Elaplace&#45;002Evertical&#45;005Finversion&#45;00BB" class="node">
+<title>«methods.laplace.vertical_inversion»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Elaplace&#45;002Evertical&#45;005Finversion&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___laplace___vertical_inversion_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="458" cy="-250.59" rx="69.4" ry="18"/>
+<text text-anchor="middle" x="458" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">laplace.vertical_inversion</text>
+</a>
+</g>
+</g>
+<!-- «methods.laplace.vertical_inversion»&#45;&gt;«methods.laplace.boundary_transport» -->
+<g id="edge25" class="edge">
+<title>«methods.laplace.vertical_inversion»&#45;&gt;«methods.laplace.boundary_transport»</title>
+<path fill="none" stroke="#6b7280" d="M470.17,-232.65C476.22,-223.18 482.89,-210.89 486,-198.79 490.39,-181.75 490.64,-176.17 486,-159.2 483.23,-149.05 477.85,-138.87 472.41,-130.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="469.03,-125.21 474.6,-128.73 470.69,-127.72 472.34,-130.22 472.34,-130.22 472.34,-130.22 470.69,-127.72 470.09,-131.71 469.03,-125.21 469.03,-125.21"/>
+</g>
+<!-- «methods.laplace.vertical_inversion»&#45;&gt;«methods.laplace.initial_term» -->
+<g id="edge39" class="edge">
+<title>«methods.laplace.vertical_inversion»&#45;&gt;«methods.laplace.initial_term»</title>
+<path fill="none" stroke="#6b7280" d="M448.8,-232.75C443.83,-223.65 437.64,-212.3 432.26,-202.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="429.38,-197.17 434.62,-201.14 430.82,-199.8 432.25,-202.44 432.25,-202.44 432.25,-202.44 430.82,-199.8 429.88,-203.73 429.38,-197.17 429.38,-197.17"/>
+</g>
+<!-- «methods.fourier.hilbert_transform_structure»&#45;&gt;«methods.fourier.hilbert_poisson_pair» -->
+<g id="edge5" class="edge">
+<title>«methods.fourier.hilbert_transform_structure»&#45;&gt;«methods.fourier.hilbert_poisson_pair»</title>
+<path fill="none" stroke="#6b7280" d="M641.81,-158.98C640.85,-150.56 639.7,-140.57 638.68,-131.71"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="637.96,-125.49 641.33,-131.14 638.31,-128.47 638.65,-131.45 638.65,-131.45 638.65,-131.45 638.31,-128.47 635.97,-131.76 637.96,-125.49 637.96,-125.49"/>
+</g>
+<!-- «methods.power_series.analytic_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Eanalytic&#45;005Funiqueness&#45;00BB" class="node">
+<title>«methods.power_series.analytic_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Eanalytic&#45;005Funiqueness&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___power_series___analytic_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="114" cy="-178.99" rx="71.34" ry="19.6"/>
+<text text-anchor="middle" x="114" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">power_series</text>
+<text text-anchor="middle" x="114" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">analytic_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «methods.power_series.analytic_uniqueness»&#45;&gt;«methods.power_series.analytic_hypersurface» -->
+<g id="edge34" class="edge">
+<title>«methods.power_series.analytic_uniqueness»&#45;&gt;«methods.power_series.analytic_hypersurface»</title>
+<path fill="none" stroke="#6b7280" d="M110.45,-158.98C108.99,-151.15 107.27,-141.97 105.71,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="104.55,-127.39 108.3,-132.79 105.1,-130.34 105.65,-133.29 105.65,-133.29 105.65,-133.29 105.1,-130.34 103,-133.79 104.55,-127.39 104.55,-127.39"/>
+</g>
+<!-- «methods.fourier.shifted_symbol» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eshifted&#45;005Fsymbol&#45;00BB" class="node">
+<title>«methods.fourier.shifted_symbol»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eshifted&#45;005Fsymbol&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___shifted_symbol_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="330,-268.59 222,-268.59 222,-232.59 330,-232.59 330,-268.59"/>
+<text text-anchor="middle" x="276" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.shifted_symbol</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.shifted_multiplier» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eshifted&#45;005Fmultiplier&#45;00BB" class="node">
+<title>«methods.fourier.shifted_multiplier»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Efourier&#45;002Eshifted&#45;005Fmultiplier&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___fourier___shifted_multiplier_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="276" cy="-178.99" rx="65.6" ry="18"/>
+<text text-anchor="middle" x="276" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">fourier.shifted_multiplier</text>
+</a>
+</g>
+</g>
+<!-- «methods.fourier.shifted_symbol»&#45;&gt;«methods.fourier.shifted_multiplier» -->
+<g id="edge71" class="edge">
+<title>«methods.fourier.shifted_symbol»&#45;&gt;«methods.fourier.shifted_multiplier»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M276,-232.39C276,-223.54 276,-212.63 276,-203.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="276,-197 278.7,-203 276.1,-200 276.1,-203 276,-203 275.9,-203 275.9,-200 273.3,-203 276,-197 276,-197"/>
+</g>
+<!-- «methods.separation.heat.product» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Eheat&#45;002Eproduct&#45;00BB" class="node">
+<title>«methods.separation.heat.product»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eseparation&#45;002Eheat&#45;002Eproduct&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___separation___heat___product_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1426" cy="-178.99" rx="37.37" ry="18"/>
+<text text-anchor="middle" x="1426" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat.product</text>
+</a>
+</g>
+</g>
+<!-- «methods.separation.heat.product»&#45;&gt;«methods.separation.heat.interval» -->
+<g id="edge54" class="edge">
+<title>«methods.separation.heat.product»&#45;&gt;«methods.separation.heat.interval»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1453.79,-166.74C1460.96,-164.06 1468.71,-161.36 1476,-159.2 1541.94,-139.66 1620.47,-123.94 1666.89,-115.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1672.95,-114.3 1667.53,-118.04 1670.02,-114.94 1667.06,-115.48 1667.05,-115.38 1667.03,-115.28 1669.98,-114.75 1666.56,-112.73 1672.95,-114.3 1672.95,-114.3"/>
+</g>
+<!-- «methods.separation.heat.product»&#45;&gt;«methods.separation.heat.symbolic_mode» -->
+<g id="edge59" class="edge">
+<title>«methods.separation.heat.product»&#45;&gt;«methods.separation.heat.symbolic_mode»</title>
+<path fill="none" stroke="#6b7280" d="M1426,-160.79C1426,-151.94 1426,-141.03 1426,-131.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1426,-125.4 1428.7,-131.4 1426,-128.4 1426,-131.4 1426,-131.4 1426,-131.4 1426,-128.4 1423.3,-131.4 1426,-125.4 1426,-125.4"/>
+</g>
+<!-- «methods.power_series.analytic_evolution» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Eanalytic&#45;005Fevolution&#45;00BB" class="node">
+<title>«methods.power_series.analytic_evolution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Epower&#45;005Fseries&#45;002Eanalytic&#45;005Fevolution&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___power_series___analytic_evolution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="97" cy="-250.59" rx="63.78" ry="19.6"/>
+<text text-anchor="middle" x="97" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">power_series</text>
+<text text-anchor="middle" x="97" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">analytic_evolution</text>
+</a>
+</g>
+</g>
+<!-- «methods.power_series.analytic_evolution»&#45;&gt;«methods.power_series.analytic_hypersurface» -->
+<g id="edge33" class="edge">
+<title>«methods.power_series.analytic_evolution»&#45;&gt;«methods.power_series.analytic_hypersurface»</title>
+<path fill="none" stroke="#6b7280" d="M64.16,-233.35C51.01,-224.99 37.27,-213.44 30,-198.79 22.17,-183.03 21.95,-174.85 30,-159.2 36.49,-146.57 47.73,-136.39 59.39,-128.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="64.75,-125.1 61.16,-130.61 62.23,-126.72 59.7,-128.34 59.7,-128.34 59.7,-128.34 62.23,-126.72 58.24,-126.07 64.75,-125.1 64.75,-125.1"/>
+</g>
+<!-- «methods.power_series.analytic_evolution»&#45;&gt;«methods.power_series.analytic_uniqueness» -->
+<g id="edge64" class="edge">
+<title>«methods.power_series.analytic_evolution»&#45;&gt;«methods.power_series.analytic_uniqueness»</title>
+<path fill="none" stroke="#6b7280" d="M101.65,-230.57C103.56,-222.75 105.8,-213.57 107.84,-205.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="109.36,-198.99 110.56,-205.46 108.65,-201.9 107.94,-204.82 107.94,-204.82 107.94,-204.82 108.65,-201.9 105.31,-204.18 109.36,-198.99 109.36,-198.99"/>
+</g>
+<!-- «methods.separation.dirichlet_sine_mode_eigenfunction»&#45;&gt;«methods.separation.wave.interval» -->
+<g id="edge47" class="edge">
+<title>«methods.separation.dirichlet_sine_mode_eigenfunction»&#45;&gt;«methods.separation.wave.interval»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1884.31,-160.07C1906.93,-148.91 1935.75,-134.68 1957.42,-123.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1963.05,-121.21 1958.86,-126.28 1960.4,-122.62 1957.71,-123.95 1957.67,-123.86 1957.62,-123.77 1960.31,-122.44 1956.47,-121.44 1963.05,-121.21 1963.05,-121.21"/>
+</g>
+<!-- «methods.separation.dirichlet_sine_mode_eigenfunction»&#45;&gt;«methods.separation.heat.interval» -->
+<g id="edge55" class="edge">
+<title>«methods.separation.dirichlet_sine_mode_eigenfunction»&#45;&gt;«methods.separation.heat.interval»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1811.69,-160.07C1788.77,-148.76 1759.49,-134.3 1737.72,-123.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1732.08,-120.78 1738.65,-121.01 1734.81,-122.01 1737.5,-123.34 1737.46,-123.43 1737.41,-123.52 1734.72,-122.19 1736.26,-125.85 1732.08,-120.78 1732.08,-120.78"/>
+</g>
+<!-- «methods.cole_hopf.domain»&#45;&gt;«methods.cole_hopf.cauchy» -->
+<g id="edge57" class="edge">
+<title>«methods.cole_hopf.domain»&#45;&gt;«methods.cole_hopf.cauchy»</title>
+<path fill="none" stroke="#6b7280" d="M4505.62,-161.15C4499.33,-151.83 4491.44,-140.15 4484.69,-130.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="4481.27,-125.09 4486.87,-128.55 4482.95,-127.58 4484.63,-130.06 4484.63,-130.06 4484.63,-130.06 4482.95,-127.58 4482.39,-131.57 4481.27,-125.09 4481.27,-125.09"/>
+</g>
+<!-- «methods.cole_hopf.domain»&#45;&gt;«methods.cole_hopf.nonconstant_examples» -->
+<g id="edge61" class="edge">
+<title>«methods.cole_hopf.domain»&#45;&gt;«methods.cole_hopf.nonconstant_examples»</title>
+<path fill="none" stroke="#6b7280" d="M4481.99,-165.87C4449.96,-154.78 4402.21,-138.25 4366.14,-125.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="4360.45,-123.79 4367.01,-123.2 4363.29,-124.77 4366.12,-125.75 4366.12,-125.75 4366.12,-125.75 4363.29,-124.77 4365.24,-128.3 4360.45,-123.79 4360.45,-123.79"/>
+</g>
+<!-- «methods.fourier.shifted_multiplier»&#45;&gt;«methods.fourier.shifted_resolvent» -->
+<g id="edge24" class="edge">
+<title>«methods.fourier.shifted_multiplier»&#45;&gt;«methods.fourier.shifted_resolvent»</title>
+<path fill="none" stroke="#6b7280" d="M276,-160.79C276,-151.94 276,-141.03 276,-131.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="276,-125.4 278.7,-131.4 276,-128.4 276,-131.4 276,-131.4 276,-131.4 276,-128.4 273.3,-131.4 276,-125.4 276,-125.4"/>
+</g>
+</g>
+</svg>

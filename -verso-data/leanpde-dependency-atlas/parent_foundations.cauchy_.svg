@@ -1,0 +1,214 @@
+<svg data-node-count="12" data-edge-count="15" data-cluster-count="1" data-variant-key="parent:«foundations.cauchy»" width="402pt" height="661pt"
+ viewBox="0.00 0.00 402.00 660.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 656.99)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-656.99 398,-656.99 398,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 374,-8 374,-8 380,-8 386,-14 386,-20 386,-20 386,-632.99 386,-632.99 386,-638.99 380,-644.99 374,-644.99 374,-644.99 20,-644.99 20,-644.99 14,-644.99 8,-638.99 8,-632.99 8,-632.99 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="197" y="-629.79" font-family="Helvetica" font-size="14.00">Cauchy problems and the Cauchy–Kovalevskaya theorem</text>
+</g>
+<!-- «foundations.cauchy.formal_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Eformal&#45;005Fsolution&#45;00BB" class="node">
+<title>«foundations.cauchy.formal_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Eformal&#45;005Fsolution&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___formal_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="216" cy="-595.99" rx="63.56" ry="18"/>
+<text text-anchor="middle" x="216" y="-593.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy.formal_solution</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.majorant_comparison» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Emajorant&#45;005Fcomparison&#45;00BB" class="node">
+<title>«foundations.cauchy.majorant_comparison»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Emajorant&#45;005Fcomparison&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___majorant_comparison_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="216" cy="-527.99" rx="78.69" ry="18"/>
+<text text-anchor="middle" x="216" y="-525.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy.majorant_comparison</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.formal_solution»&#45;&gt;«foundations.cauchy.majorant_comparison» -->
+<g id="edge2" class="edge">
+<title>«foundations.cauchy.formal_solution»&#45;&gt;«foundations.cauchy.majorant_comparison»</title>
+<path fill="none" stroke="#6b7280" d="M216,-577.65C216,-569.98 216,-560.84 216,-552.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="216,-546.44 218.7,-552.44 216,-549.44 216,-552.44 216,-552.44 216,-552.44 216,-549.44 213.3,-552.44 216,-546.44 216,-546.44"/>
+</g>
+<!-- «foundations.cauchy.scalar_formal_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fformal&#45;005Fsolution&#45;00BB" class="node">
+<title>«foundations.cauchy.scalar_formal_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fformal&#45;005Fsolution&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___scalar_formal_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="131" cy="-246.99" rx="77.56" ry="19.6"/>
+<text text-anchor="middle" x="131" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy</text>
+<text text-anchor="middle" x="131" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">scalar_formal_solution</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.formal_solution»&#45;&gt;«foundations.cauchy.scalar_formal_solution» -->
+<g id="edge11" class="edge">
+<title>«foundations.cauchy.formal_solution»&#45;&gt;«foundations.cauchy.scalar_formal_solution»</title>
+<path fill="none" stroke="#6b7280" d="M177.11,-581.71C159.09,-573.82 138.69,-562.15 125,-545.99 99.2,-515.53 96,-500.91 96,-460.99 96,-460.99 96,-460.99 96,-389.19 96,-347.22 110.75,-300.24 121.1,-272.44"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="123.23,-266.81 123.63,-273.38 122.17,-269.62 121.11,-272.42 121.11,-272.42 121.11,-272.42 122.17,-269.62 118.58,-271.46 123.23,-266.81 123.23,-266.81"/>
+</g>
+<!-- «foundations.cauchy.analytic_zero_data» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Eanalytic&#45;005Fzero&#45;005Fdata&#45;00BB" class="node">
+<title>«foundations.cauchy.analytic_zero_data»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Eanalytic&#45;005Fzero&#45;005Fdata&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___analytic_zero_data_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="306" cy="-246.99" rx="72.08" ry="18"/>
+<text text-anchor="middle" x="306" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy.analytic_zero_data</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.formal_solution»&#45;&gt;«foundations.cauchy.analytic_zero_data» -->
+<g id="edge15" class="edge">
+<title>«foundations.cauchy.formal_solution»&#45;&gt;«foundations.cauchy.analytic_zero_data»</title>
+<path fill="none" stroke="#6b7280" d="M254.53,-581.4C272.47,-573.43 292.9,-561.79 307,-545.99 334.09,-515.63 341,-501.68 341,-460.99 341,-460.99 341,-460.99 341,-389.19 341,-346.46 325.71,-298.53 315.34,-270.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="313.08,-265.05 317.75,-269.68 314.16,-267.85 315.23,-270.65 315.23,-270.65 315.23,-270.65 314.16,-267.85 312.71,-271.61 313.08,-265.05 313.08,-265.05"/>
+</g>
+<!-- «foundations.cauchy.scalar_majorant_system» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fmajorant&#45;005Fsystem&#45;00BB" class="node">
+<title>«foundations.cauchy.scalar_majorant_system»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fmajorant&#45;005Fsystem&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___scalar_majorant_system_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="232" cy="-390.19" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="232" y="-393.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy</text>
+<text text-anchor="middle" x="232" y="-382.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">scalar_majorant_system</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.convergent_formal_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Econvergent&#45;005Fformal&#45;005Fsolution&#45;00BB" class="node">
+<title>«foundations.cauchy.convergent_formal_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Econvergent&#45;005Fformal&#45;005Fsolution&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___convergent_formal_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="219" cy="-318.59" rx="92.76" ry="19.6"/>
+<text text-anchor="middle" x="219" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy</text>
+<text text-anchor="middle" x="219" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">convergent_formal_solution</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.scalar_majorant_system»&#45;&gt;«foundations.cauchy.convergent_formal_solution» -->
+<g id="edge8" class="edge">
+<title>«foundations.cauchy.scalar_majorant_system»&#45;&gt;«foundations.cauchy.convergent_formal_solution»</title>
+<path fill="none" stroke="#6b7280" d="M228.45,-370.17C226.99,-362.35 225.27,-353.17 223.71,-344.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="222.55,-338.59 226.3,-343.99 223.1,-341.54 223.65,-344.49 223.65,-344.49 223.65,-344.49 223.1,-341.54 221,-344.98 222.55,-338.59 222.55,-338.59"/>
+</g>
+<!-- «foundations.cauchy.noncharacteristic_jets» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Enoncharacteristic&#45;005Fjets&#45;00BB" class="node">
+<title>«foundations.cauchy.noncharacteristic_jets»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Enoncharacteristic&#45;005Fjets&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___noncharacteristic_jets_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="109" cy="-175.4" rx="76.24" ry="19.6"/>
+<text text-anchor="middle" x="109" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy</text>
+<text text-anchor="middle" x="109" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">noncharacteristic_jets</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.level_chart_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Elevel&#45;005Fchart&#45;005Funiqueness&#45;00BB" class="node">
+<title>«foundations.cauchy.level_chart_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Elevel&#45;005Fchart&#45;005Funiqueness&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___level_chart_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="188" cy="-35.8" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="188" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy</text>
+<text text-anchor="middle" x="188" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">level_chart_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.noncharacteristic_jets»&#45;&gt;«foundations.cauchy.level_chart_uniqueness» -->
+<g id="edge5" class="edge">
+<title>«foundations.cauchy.noncharacteristic_jets»&#45;&gt;«foundations.cauchy.level_chart_uniqueness»</title>
+<path fill="none" stroke="#6b7280" d="M140.15,-157.14C152.62,-148.65 165.91,-137.28 174,-123.6 185,-104.99 188.11,-80.41 188.7,-62.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="188.81,-55.74 191.41,-61.79 188.76,-58.74 188.71,-61.74 188.71,-61.74 188.71,-61.74 188.76,-58.74 186.01,-61.69 188.81,-55.74 188.81,-55.74"/>
+</g>
+<!-- «foundations.cauchy.coordinate_change» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Ecoordinate&#45;005Fchange&#45;00BB" class="node">
+<title>«foundations.cauchy.coordinate_change»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Ecoordinate&#45;005Fchange&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___coordinate_change_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="89" cy="-105.6" rx="72.71" ry="18"/>
+<text text-anchor="middle" x="89" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy.coordinate_change</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.noncharacteristic_jets»&#45;&gt;«foundations.cauchy.coordinate_change» -->
+<g id="edge10" class="edge">
+<title>«foundations.cauchy.noncharacteristic_jets»&#45;&gt;«foundations.cauchy.coordinate_change»</title>
+<path fill="none" stroke="#6b7280" d="M103.43,-155.51C101.11,-147.64 98.39,-138.42 95.94,-130.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="94.13,-123.99 98.42,-128.98 94.98,-126.87 95.83,-129.74 95.83,-129.74 95.83,-129.74 94.98,-126.87 93.24,-130.51 94.13,-123.99 94.13,-123.99"/>
+</g>
+<!-- «foundations.cauchy.majorant_comparison»&#45;&gt;«foundations.cauchy.convergent_formal_solution» -->
+<g id="edge7" class="edge">
+<title>«foundations.cauchy.majorant_comparison»&#45;&gt;«foundations.cauchy.convergent_formal_solution»</title>
+<path fill="none" stroke="#6b7280" d="M188.48,-511C176.27,-502.61 162.73,-491.3 154,-477.99 127.41,-437.44 112.3,-412.69 136,-370.39 143.51,-356.99 156.16,-346.7 169.34,-339"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="174.61,-336.07 170.68,-341.35 171.99,-337.53 169.37,-338.99 169.37,-338.99 169.37,-338.99 171.99,-337.53 168.06,-336.63 174.61,-336.07 174.61,-336.07"/>
+</g>
+<!-- «foundations.cauchy.scalar_majorant» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fmajorant&#45;00BB" class="node">
+<title>«foundations.cauchy.scalar_majorant»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fmajorant&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___scalar_majorant_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="281.5,-477.99 166.5,-477.99 166.5,-441.99 281.5,-441.99 281.5,-477.99"/>
+<text text-anchor="middle" x="224" y="-457.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy.scalar_majorant</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.majorant_comparison»&#45;&gt;«foundations.cauchy.scalar_majorant» -->
+<g id="edge9" class="edge">
+<title>«foundations.cauchy.majorant_comparison»&#45;&gt;«foundations.cauchy.scalar_majorant»</title>
+<path fill="none" stroke="#6b7280" d="M218.06,-509.99C219,-502.2 220.14,-492.84 221.16,-484.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="221.92,-478.16 223.88,-484.44 221.56,-481.14 221.2,-484.11 221.2,-484.11 221.2,-484.11 221.56,-481.14 218.52,-483.79 221.92,-478.16 221.92,-478.16"/>
+</g>
+<!-- «foundations.cauchy.scalar_zero_data» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fzero&#45;005Fdata&#45;00BB" class="node">
+<title>«foundations.cauchy.scalar_zero_data»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fzero&#45;005Fdata&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___scalar_zero_data_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="287" cy="-175.4" rx="68.13" ry="18"/>
+<text text-anchor="middle" x="287" y="-172.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy.scalar_zero_data</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.scalar_data_extension» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fdata&#45;005Fextension&#45;00BB" class="node">
+<title>«foundations.cauchy.scalar_data_extension»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;002Escalar&#45;005Fdata&#45;005Fextension&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___cauchy___scalar_data_extension_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="296" cy="-105.6" rx="81.86" ry="18"/>
+<text text-anchor="middle" x="296" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">cauchy.scalar_data_extension</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy.scalar_zero_data»&#45;&gt;«foundations.cauchy.scalar_data_extension» -->
+<g id="edge13" class="edge">
+<title>«foundations.cauchy.scalar_zero_data»&#45;&gt;«foundations.cauchy.scalar_data_extension»</title>
+<path fill="none" stroke="#6b7280" d="M289.27,-157.29C290.37,-149 291.71,-138.92 292.9,-129.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="293.7,-123.94 295.59,-130.24 293.3,-126.91 292.91,-129.88 292.91,-129.88 292.91,-129.88 293.3,-126.91 290.23,-129.53 293.7,-123.94 293.7,-123.94"/>
+</g>
+<!-- «foundations.cauchy.convergent_formal_solution»&#45;&gt;«foundations.cauchy.scalar_formal_solution» -->
+<g id="edge12" class="edge">
+<title>«foundations.cauchy.convergent_formal_solution»&#45;&gt;«foundations.cauchy.scalar_formal_solution»</title>
+<path fill="none" stroke="#6b7280" d="M195.88,-299.31C184.56,-290.36 170.84,-279.51 158.94,-270.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="153.97,-266.16 160.35,-267.76 156.32,-268.02 158.67,-269.88 158.67,-269.88 158.67,-269.88 156.32,-268.02 157,-272 153.97,-266.16 153.97,-266.16"/>
+</g>
+<!-- «foundations.cauchy.convergent_formal_solution»&#45;&gt;«foundations.cauchy.analytic_zero_data» -->
+<g id="edge14" class="edge">
+<title>«foundations.cauchy.convergent_formal_solution»&#45;&gt;«foundations.cauchy.analytic_zero_data»</title>
+<path fill="none" stroke="#6b7280" d="M241.86,-299.31C253.77,-289.78 268.37,-278.1 280.63,-268.29"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="285.38,-264.49 282.38,-270.35 283.03,-266.37 280.69,-268.24 280.69,-268.24 280.69,-268.24 283.03,-266.37 279,-266.13 285.38,-264.49 285.38,-264.49"/>
+</g>
+<!-- «foundations.cauchy.scalar_majorant»&#45;&gt;«foundations.cauchy.scalar_majorant_system» -->
+<g id="edge1" class="edge">
+<title>«foundations.cauchy.scalar_majorant»&#45;&gt;«foundations.cauchy.scalar_majorant_system»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M226.02,-441.88C226.92,-434.25 228,-425.11 228.99,-416.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="229.73,-410.45 231.71,-416.72 229.48,-413.44 229.12,-416.42 229.02,-416.41 228.93,-416.4 229.28,-413.42 226.34,-416.09 229.73,-410.45 229.73,-410.45"/>
+</g>
+<!-- «foundations.cauchy.coordinate_change»&#45;&gt;«foundations.cauchy.level_chart_uniqueness» -->
+<g id="edge3" class="edge">
+<title>«foundations.cauchy.coordinate_change»&#45;&gt;«foundations.cauchy.level_chart_uniqueness»</title>
+<path fill="none" stroke="#6b7280" d="M112.46,-88.53C125.7,-79.46 142.42,-68.02 156.76,-58.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="161.92,-54.66 158.5,-60.28 159.44,-56.35 156.97,-58.05 156.97,-58.05 156.97,-58.05 159.44,-56.35 155.44,-55.82 161.92,-54.66 161.92,-54.66"/>
+</g>
+<!-- «foundations.cauchy.scalar_formal_solution»&#45;&gt;«foundations.cauchy.scalar_zero_data» -->
+<g id="edge6" class="edge">
+<title>«foundations.cauchy.scalar_formal_solution»&#45;&gt;«foundations.cauchy.scalar_zero_data»</title>
+<path fill="none" stroke="#6b7280" d="M167.97,-229.5C192.08,-218.75 223.49,-204.73 248,-193.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="253.75,-191.23 249.37,-196.14 251.01,-192.45 248.27,-193.68 248.27,-193.68 248.27,-193.68 251.01,-192.45 247.17,-191.21 253.75,-191.23 253.75,-191.23"/>
+</g>
+<!-- «foundations.cauchy.scalar_data_extension»&#45;&gt;«foundations.cauchy.level_chart_uniqueness» -->
+<g id="edge4" class="edge">
+<title>«foundations.cauchy.scalar_data_extension»&#45;&gt;«foundations.cauchy.level_chart_uniqueness»</title>
+<path fill="none" stroke="#6b7280" d="M270.13,-88.36C255.55,-79.21 237.18,-67.67 221.51,-57.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="216.31,-54.57 222.83,-55.48 218.85,-56.17 221.39,-57.76 221.39,-57.76 221.39,-57.76 218.85,-56.17 219.96,-60.05 216.31,-54.57 216.31,-54.57"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,83 @@
+<svg data-node-count="5" data-edge-count="4" data-cluster-count="1" data-variant-key="parent:«fluid.solenoidal»" width="796pt" height="171pt"
+ viewBox="0.00 0.00 796.00 170.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 166.6)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-166.6 792,-166.6 792,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 768,-8 768,-8 774,-8 780,-14 780,-20 780,-20 780,-142.6 780,-142.6 780,-148.6 774,-154.6 768,-154.6 768,-154.6 20,-154.6 20,-154.6 14,-154.6 8,-148.6 8,-142.6 8,-142.6 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="394" y="-139.4" font-family="Helvetica" font-size="14.00">Solenoidal spaces and weak pressure</text>
+</g>
+<!-- «fluid.solenoidal_convection» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;005Fconvection&#45;00BB" class="node">
+<title>«fluid.solenoidal_convection»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;005Fconvection&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___solenoidal_convection_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="89" cy="-35.8" rx="73.35" ry="18"/>
+<text text-anchor="middle" x="89" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">fluid.solenoidal_convection</text>
+</a>
+</g>
+</g>
+<!-- «fluid.abstract_pressure_recovery» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eabstract&#45;005Fpressure&#45;005Frecovery&#45;00BB" class="node">
+<title>«fluid.abstract_pressure_recovery»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eabstract&#45;005Fpressure&#45;005Frecovery&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___abstract_pressure_recovery_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="281" cy="-35.8" rx="94.09" ry="19.6"/>
+<text text-anchor="middle" x="281" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">fluid</text>
+<text text-anchor="middle" x="281" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">abstract_pressure_recovery</text>
+</a>
+</g>
+</g>
+<!-- «fluid.solenoidal_space» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;005Fspace&#45;00BB" class="node">
+<title>«fluid.solenoidal_space»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;005Fspace&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___solenoidal_space_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="438.5,-123.6 329.5,-123.6 329.5,-87.6 438.5,-87.6 438.5,-123.6"/>
+<text text-anchor="middle" x="384" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">fluid.solenoidal_space</text>
+</a>
+</g>
+</g>
+<!-- «fluid.solenoidal_space»&#45;&gt;«fluid.solenoidal_convection» -->
+<g id="edge1" class="edge">
+<title>«fluid.solenoidal_space»&#45;&gt;«fluid.solenoidal_convection»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M329.2,-92C277.22,-80.06 199.4,-62.17 146.54,-50.02"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="140.54,-48.64 146.99,-47.36 143.48,-49.22 146.41,-49.89 146.39,-49.99 146.36,-50.09 143.44,-49.41 145.78,-52.62 140.54,-48.64 140.54,-48.64"/>
+</g>
+<!-- «fluid.solenoidal_space»&#45;&gt;«fluid.abstract_pressure_recovery» -->
+<g id="edge2" class="edge">
+<title>«fluid.solenoidal_space»&#45;&gt;«fluid.abstract_pressure_recovery»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M358.01,-87.49C344.53,-78.62 327.93,-67.69 313.59,-58.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="308.42,-54.85 314.92,-55.89 310.99,-56.42 313.49,-58.07 313.44,-58.15 313.38,-58.23 310.88,-56.58 311.95,-60.41 308.42,-54.85 308.42,-54.85"/>
+</g>
+<!-- «fluid.solenoidal_bochner_limits» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;005Fbochner&#45;005Flimits&#45;00BB" class="node">
+<title>«fluid.solenoidal_bochner_limits»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;005Fbochner&#45;005Flimits&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___solenoidal_bochner_limits_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="488" cy="-35.8" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="488" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">fluid</text>
+<text text-anchor="middle" x="488" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">solenoidal_bochner_limits</text>
+</a>
+</g>
+</g>
+<!-- «fluid.solenoidal_space»&#45;&gt;«fluid.solenoidal_bochner_limits» -->
+<g id="edge3" class="edge">
+<title>«fluid.solenoidal_space»&#45;&gt;«fluid.solenoidal_bochner_limits»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M410.24,-87.49C423.96,-78.55 440.88,-67.52 455.43,-58.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="460.68,-54.61 457.12,-60.15 458.22,-56.33 455.7,-57.97 455.65,-57.89 455.59,-57.81 458.11,-56.17 454.17,-55.63 460.68,-54.61 460.68,-54.61"/>
+</g>
+<!-- «fluid.solenoidal_weak_closure» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;005Fweak&#45;005Fclosure&#45;00BB" class="node">
+<title>«fluid.solenoidal_weak_closure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;005Fweak&#45;005Fclosure&#45;00BB"><a xlink:href="Incompressible-Fluid-Mechanics/#--informal-preview-_FLQQ_fluid___solenoidal_weak_closure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="686" cy="-35.8" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="686" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">fluid</text>
+<text text-anchor="middle" x="686" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">solenoidal_weak_closure</text>
+</a>
+</g>
+</g>
+<!-- «fluid.solenoidal_space»&#45;&gt;«fluid.solenoidal_weak_closure» -->
+<g id="edge4" class="edge">
+<title>«fluid.solenoidal_space»&#45;&gt;«fluid.solenoidal_weak_closure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M438.69,-92.32C489.75,-80.86 566.04,-63.73 620.37,-51.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="626.55,-50.15 621.29,-54.09 623.64,-50.9 620.72,-51.56 620.69,-51.46 620.67,-51.36 623.6,-50.71 620.1,-48.83 626.55,-50.15 626.55,-50.15"/>
+</g>
+</g>
+</svg>

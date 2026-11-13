@@ -1,0 +1,667 @@
+<svg data-node-count="34" data-edge-count="56" data-cluster-count="1" data-variant-key="parent:«elliptic.weak_theory»" width="1378pt" height="668pt"
+ viewBox="0.00 0.00 1378.00 668.19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 664.19)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-664.19 1374,-664.19 1374,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1350,-8 1350,-8 1356,-8 1362,-14 1362,-20 1362,-20 1362,-640.19 1362,-640.19 1362,-646.19 1356,-652.19 1350,-652.19 1350,-652.19 20,-652.19 20,-652.19 14,-652.19 8,-646.19 8,-640.19 8,-640.19 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="685" y="-636.99" font-family="Helvetica" font-size="14.00">Weak elliptic problems</text>
+</g>
+<!-- «elliptic.dirichlet.apriori_estimate» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eapriori&#45;005Festimate&#45;00BB" class="node">
+<title>«elliptic.dirichlet.apriori_estimate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eapriori&#45;005Festimate&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___apriori_estimate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="873" cy="-390.19" rx="66.87" ry="18"/>
+<text text-anchor="middle" x="873" y="-387.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.apriori_estimate</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.continuous_dependence» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Econtinuous&#45;005Fdependence&#45;00BB" class="node">
+<title>«elliptic.dirichlet.continuous_dependence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Econtinuous&#45;005Fdependence&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___continuous_dependence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="911" cy="-318.59" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="911" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet</text>
+<text text-anchor="middle" x="911" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">continuous_dependence</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.apriori_estimate»&#45;&gt;«elliptic.dirichlet.continuous_dependence» -->
+<g id="edge20" class="edge">
+<title>«elliptic.dirichlet.apriori_estimate»&#45;&gt;«elliptic.dirichlet.continuous_dependence»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M882.2,-372.34C886.86,-363.8 892.61,-353.27 897.74,-343.87"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="900.68,-338.49 900.18,-345.05 899.55,-341.29 898.11,-343.93 897.81,-343.76 897.5,-343.59 898.94,-340.96 895.44,-342.47 900.68,-338.49 900.68,-338.49"/>
+</g>
+<!-- «elliptic.poisson.distributional_iff_variational» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;002Edistributional&#45;005Fiff&#45;005Fvariational&#45;00BB" class="node">
+<title>«elliptic.poisson.distributional_iff_variational»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;002Edistributional&#45;005Fiff&#45;005Fvariational&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___poisson___distributional_iff_variational_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="737" cy="-533.39" rx="91.43" ry="19.6"/>
+<text text-anchor="middle" x="737" y="-536.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">poisson</text>
+<text text-anchor="middle" x="737" y="-525.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">distributional_iff_variational</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.poisson.distributional_exists_unique» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;002Edistributional&#45;005Fexists&#45;005Funique&#45;00BB" class="node">
+<title>«elliptic.poisson.distributional_exists_unique»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;002Edistributional&#45;005Fexists&#45;005Funique&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___poisson___distributional_exists_unique_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="528" cy="-390.19" rx="94.09" ry="19.6"/>
+<text text-anchor="middle" x="528" y="-393.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">poisson</text>
+<text text-anchor="middle" x="528" y="-382.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">distributional_exists_unique</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.poisson.distributional_iff_variational»&#45;&gt;«elliptic.poisson.distributional_exists_unique» -->
+<g id="edge50" class="edge">
+<title>«elliptic.poisson.distributional_iff_variational»&#45;&gt;«elliptic.poisson.distributional_exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M789.16,-517.01C806.16,-509.25 823.17,-497.9 833,-481.59 842.08,-466.51 844.41,-455.39 833,-441.99 804.11,-408.05 678.95,-417.4 635,-409.99 624.89,-408.29 614.26,-406.46 603.77,-404.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="597.62,-403.56 603.99,-401.93 600.64,-403.73 603.59,-404.25 603.53,-404.59 603.47,-404.94 600.52,-404.42 603.07,-407.25 597.62,-403.56 597.62,-403.56"/>
+</g>
+<!-- «elliptic.divergence.generalized_load» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Egeneralized&#45;005Fload&#45;00BB" class="node">
+<title>«elliptic.divergence.generalized_load»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Egeneralized&#45;005Fload&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___generalized_load_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="781,-408.19 647,-408.19 647,-372.19 781,-372.19 781,-408.19"/>
+<text text-anchor="middle" x="714" y="-387.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.generalized_load</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.shifted_weak_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fweak&#45;005Fsolution&#45;00BB" class="node">
+<title>«elliptic.divergence.shifted_weak_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fweak&#45;005Fsolution&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___shifted_weak_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="364.5,-336.59 255.5,-336.59 255.5,-300.59 364.5,-300.59 364.5,-336.59"/>
+<text text-anchor="middle" x="310" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence</text>
+<text text-anchor="middle" x="310" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">shifted_weak_solution</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.generalized_load»&#45;&gt;«elliptic.divergence.shifted_weak_solution» -->
+<g id="edge40" class="edge">
+<title>«elliptic.divergence.generalized_load»&#45;&gt;«elliptic.divergence.shifted_weak_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M646.85,-372.83C642.84,-371.97 638.87,-371.15 635,-370.39 543.4,-352.36 436.26,-336.64 370.78,-327.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="364.57,-326.79 370.88,-324.93 367.56,-327.1 370.53,-327.5 370.52,-327.6 370.5,-327.7 367.53,-327.29 370.15,-330.28 364.57,-326.79 364.57,-326.79"/>
+</g>
+<!-- «elliptic.divergence.generalized_load_representation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Egeneralized&#45;005Fload&#45;005Frepresentation&#45;00BB" class="node">
+<title>«elliptic.divergence.generalized_load_representation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Egeneralized&#45;005Fload&#45;005Frepresentation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___generalized_load_representation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="696" cy="-318.59" rx="106.55" ry="19.6"/>
+<text text-anchor="middle" x="696" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence</text>
+<text text-anchor="middle" x="696" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">generalized_load_representation</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.generalized_load»&#45;&gt;«elliptic.divergence.generalized_load_representation» -->
+<g id="edge43" class="edge">
+<title>«elliptic.divergence.generalized_load»&#45;&gt;«elliptic.divergence.generalized_load_representation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M709.55,-371.99C707.4,-363.67 704.78,-353.52 702.41,-344.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="700.9,-338.56 705.02,-343.69 701.75,-341.44 702.5,-344.34 702.41,-344.37 702.31,-344.39 701.56,-341.49 699.79,-345.04 700.9,-338.56 700.9,-338.56"/>
+</g>
+<!-- «elliptic.dirichlet.solver_weak_equation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Esolver&#45;005Fweak&#45;005Fequation&#45;00BB" class="node">
+<title>«elliptic.dirichlet.solver_weak_equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Esolver&#45;005Fweak&#45;005Fequation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___solver_weak_equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1278" cy="-390.19" rx="76.24" ry="19.6"/>
+<text text-anchor="middle" x="1278" y="-393.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet</text>
+<text text-anchor="middle" x="1278" y="-382.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">solver_weak_equation</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.energy_minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eenergy&#45;005Fminimizer&#45;00BB" class="node">
+<title>«elliptic.dirichlet.energy_minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eenergy&#45;005Fminimizer&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___energy_minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1162" cy="-318.59" rx="70.17" ry="18"/>
+<text text-anchor="middle" x="1162" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.energy_minimizer</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.solver_weak_equation»&#45;&gt;«elliptic.dirichlet.energy_minimizer» -->
+<g id="edge17" class="edge">
+<title>«elliptic.dirichlet.solver_weak_equation»&#45;&gt;«elliptic.dirichlet.energy_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1249.03,-371.81C1232.12,-361.66 1210.78,-348.86 1193.46,-338.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1188.23,-335.33 1194.76,-336.1 1190.85,-336.79 1193.42,-338.33 1193.37,-338.42 1193.32,-338.5 1190.75,-336.96 1191.98,-340.73 1188.23,-335.33 1188.23,-335.33"/>
+</g>
+<!-- «elliptic.dirichlet.unique_energy_minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eunique&#45;005Fenergy&#45;005Fminimizer&#45;00BB" class="node">
+<title>«elliptic.dirichlet.unique_energy_minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eunique&#45;005Fenergy&#45;005Fminimizer&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___unique_energy_minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1114" cy="-246.99" rx="86.03" ry="19.6"/>
+<text text-anchor="middle" x="1114" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet</text>
+<text text-anchor="middle" x="1114" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">unique_energy_minimizer</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.solver_weak_equation»&#45;&gt;«elliptic.dirichlet.unique_energy_minimizer» -->
+<g id="edge33" class="edge">
+<title>«elliptic.dirichlet.solver_weak_equation»&#45;&gt;«elliptic.dirichlet.unique_energy_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1275.71,-370.14C1272.33,-349.96 1264.18,-318.36 1245,-298.79 1228.23,-281.68 1205.04,-270.23 1182.83,-262.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1176.91,-260.65 1183.45,-259.96 1179.79,-261.49 1182.64,-262.43 1182.6,-262.53 1182.57,-262.62 1179.72,-261.68 1181.76,-265.09 1176.91,-260.65 1176.91,-260.65"/>
+</g>
+<!-- «elliptic.dirichlet.coercive» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Ecoercive&#45;00BB" class="node">
+<title>«elliptic.dirichlet.coercive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Ecoercive&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___coercive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="901" cy="-533.39" rx="48.43" ry="18"/>
+<text text-anchor="middle" x="901" y="-530.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.coercive</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.coercive»&#45;&gt;«elliptic.dirichlet.apriori_estimate» -->
+<g id="edge2" class="edge">
+<title>«elliptic.dirichlet.coercive»&#45;&gt;«elliptic.dirichlet.apriori_estimate»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M906.03,-515.3C910.64,-496.81 915.67,-466.64 908,-441.99 904.79,-431.66 898.66,-421.57 892.41,-413.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="888.54,-408.12 894.34,-411.22 890.45,-410.43 892.28,-412.81 892.21,-412.87 892.13,-412.93 890.29,-410.56 890.07,-414.52 888.54,-408.12 888.54,-408.12"/>
+</g>
+<!-- «elliptic.dirichlet.coercive»&#45;&gt;«elliptic.dirichlet.unique_energy_minimizer» -->
+<g id="edge31" class="edge">
+<title>«elliptic.dirichlet.coercive»&#45;&gt;«elliptic.dirichlet.unique_energy_minimizer»</title>
+<path fill="none" stroke="#6b7280" d="M883.21,-516.65C873.2,-507.17 860.95,-494.47 852,-481.59 840.86,-465.56 849.11,-453.02 833,-441.99 757.23,-390.1 483.37,-477.39 421,-409.99 409.05,-397.07 411.5,-385.21 421,-370.39 484.8,-270.91 847.92,-251.89 1021.54,-248.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1027.64,-248.42 1021.69,-251.23 1024.64,-248.47 1021.64,-248.53 1021.64,-248.53 1021.64,-248.53 1024.64,-248.47 1021.59,-245.83 1027.64,-248.42 1027.64,-248.42"/>
+</g>
+<!-- «elliptic.divergence.coercive» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Ecoercive&#45;00BB" class="node">
+<title>«elliptic.divergence.coercive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Ecoercive&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___coercive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="765" cy="-461.79" rx="55.68" ry="18"/>
+<text text-anchor="middle" x="765" y="-459.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.coercive</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.coercive»&#45;&gt;«elliptic.divergence.coercive» -->
+<g id="edge37" class="edge">
+<title>«elliptic.dirichlet.coercive»&#45;&gt;«elliptic.divergence.coercive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M873.81,-518.47C852.28,-507.45 822.09,-492 798.97,-480.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="793.55,-477.4 800.13,-477.73 796.38,-478.46 799.05,-479.82 798.9,-480.13 798.74,-480.45 796.07,-479.08 797.67,-482.54 793.55,-477.4 793.55,-477.4"/>
+</g>
+<!-- «elliptic.dirichlet.solver» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Esolver&#45;00BB" class="node">
+<title>«elliptic.dirichlet.solver»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Esolver&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___solver_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1082,-479.79 1008,-479.79 1008,-443.79 1082,-443.79 1082,-479.79"/>
+<text text-anchor="middle" x="1045" y="-459.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.solver</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.coercive»&#45;&gt;«elliptic.dirichlet.solver» -->
+<g id="edge45" class="edge">
+<title>«elliptic.dirichlet.coercive»&#45;&gt;«elliptic.dirichlet.solver»</title>
+<path fill="none" stroke="#6b7280" d="M929.45,-518.64C950.77,-508.33 980.26,-494.08 1004.11,-482.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1009.73,-479.84 1005.5,-484.88 1007.03,-481.14 1004.32,-482.45 1004.32,-482.45 1004.32,-482.45 1007.03,-481.14 1003.15,-480.02 1009.73,-479.84 1009.73,-479.84"/>
+</g>
+<!-- «elliptic.dirichlet.coercive»&#45;&gt;«elliptic.poisson.distributional_exists_unique» -->
+<g id="edge53" class="edge">
+<title>«elliptic.dirichlet.coercive»&#45;&gt;«elliptic.poisson.distributional_exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M895.05,-515.22C886.83,-494.27 869.89,-459.47 843,-441.99 764.58,-391.01 727.29,-425.19 635,-409.99 624.81,-408.31 614.08,-406.49 603.52,-404.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="597.32,-403.59 603.69,-401.96 600.29,-404.01 603.25,-404.52 603.23,-404.62 603.22,-404.71 600.26,-404.2 602.77,-407.28 597.32,-403.59 597.32,-403.59"/>
+</g>
+<!-- «elliptic.weak_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eweak&#45;005Fsolution&#45;00BB" class="node">
+<title>«elliptic.weak_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eweak&#45;005Fsolution&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___weak_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1173.5,-621.19 1068.5,-621.19 1068.5,-585.19 1173.5,-585.19 1173.5,-621.19"/>
+<text text-anchor="middle" x="1121" y="-600.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">elliptic.weak_solution</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.weak_solution»&#45;&gt;«elliptic.poisson.distributional_iff_variational» -->
+<g id="edge4" class="edge">
+<title>«elliptic.weak_solution»&#45;&gt;«elliptic.poisson.distributional_iff_variational»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1068.41,-593.14C1011.94,-583.4 919.59,-567.39 840,-553.19 830.52,-551.49 820.54,-549.7 810.69,-547.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="804.58,-546.8 810.97,-545.22 807.55,-547.24 810.5,-547.77 810.48,-547.87 810.47,-547.97 807.51,-547.43 810,-550.53 804.58,-546.8 804.58,-546.8"/>
+</g>
+<!-- «elliptic.weak_solution»&#45;&gt;«elliptic.dirichlet.solver_weak_equation» -->
+<g id="edge7" class="edge">
+<title>«elliptic.weak_solution»&#45;&gt;«elliptic.dirichlet.solver_weak_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1164.36,-585.17C1180.03,-577.33 1196.84,-566.7 1209,-553.19 1245.28,-512.86 1264.42,-450.6 1272.75,-416.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1274.18,-410.1 1275.43,-416.56 1273.59,-413.05 1272.9,-415.97 1272.8,-415.95 1272.71,-415.92 1273.39,-413 1270.18,-415.33 1274.18,-410.1 1274.18,-410.1"/>
+</g>
+<!-- «elliptic.dirichlet.energy_identity» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eenergy&#45;005Fidentity&#45;00BB" class="node">
+<title>«elliptic.dirichlet.energy_identity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eenergy&#45;005Fidentity&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___energy_identity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1111" cy="-390.19" rx="65.46" ry="18"/>
+<text text-anchor="middle" x="1111" y="-387.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.energy_identity</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.weak_solution»&#45;&gt;«elliptic.dirichlet.energy_identity» -->
+<g id="edge13" class="edge">
+<title>«elliptic.weak_solution»&#45;&gt;«elliptic.dirichlet.energy_identity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1165.34,-585.02C1178.93,-577.43 1192.31,-567.01 1200,-553.19 1208.56,-537.81 1205.44,-530.32 1200,-513.59 1186.82,-473.06 1154.62,-434.76 1132.79,-412.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1128.57,-407.82 1134.69,-410.22 1130.74,-409.89 1132.84,-412.03 1132.76,-412.1 1132.69,-412.17 1130.59,-410.03 1130.83,-413.99 1128.57,-407.82 1128.57,-407.82"/>
+</g>
+<!-- «elliptic.lax_milgram» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Elax&#45;005Fmilgram&#45;00BB" class="node">
+<title>«elliptic.lax_milgram»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Elax&#45;005Fmilgram&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___lax_milgram_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1029" cy="-533.39" rx="55.04" ry="18"/>
+<text text-anchor="middle" x="1029" y="-530.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">elliptic.lax_milgram</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.weak_solution»&#45;&gt;«elliptic.lax_milgram» -->
+<g id="edge38" class="edge">
+<title>«elliptic.weak_solution»&#45;&gt;«elliptic.lax_milgram»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1097.78,-585.08C1084.91,-575.59 1068.85,-563.75 1055.48,-553.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1050.32,-550.1 1056.75,-551.48 1052.79,-551.8 1055.21,-553.57 1055.15,-553.66 1055.09,-553.74 1052.67,-551.96 1053.54,-555.83 1050.32,-550.1 1050.32,-550.1"/>
+</g>
+<!-- «elliptic.poisson.distributional_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;002Edistributional&#45;005Fsolution&#45;00BB" class="node">
+<title>«elliptic.poisson.distributional_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;002Edistributional&#45;005Fsolution&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___poisson___distributional_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="790,-621.19 684,-621.19 684,-585.19 790,-585.19 790,-621.19"/>
+<text text-anchor="middle" x="737" y="-606.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">poisson</text>
+<text text-anchor="middle" x="737" y="-595.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">distributional_solution</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.poisson.distributional_solution»&#45;&gt;«elliptic.poisson.distributional_iff_variational» -->
+<g id="edge3" class="edge">
+<title>«elliptic.poisson.distributional_solution»&#45;&gt;«elliptic.poisson.distributional_iff_variational»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M737,-585.08C737,-577.45 737,-568.31 737,-559.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="737,-553.65 739.7,-559.65 737.1,-556.65 737.1,-559.65 737,-559.65 736.9,-559.65 736.9,-556.65 734.3,-559.65 737,-553.65 737,-553.65"/>
+</g>
+<!-- «elliptic.divergence.garding» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Egarding&#45;00BB" class="node">
+<title>«elliptic.divergence.garding»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Egarding&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___garding_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="278" cy="-461.79" rx="53.14" ry="18"/>
+<text text-anchor="middle" x="278" y="-459.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.garding</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.coercive_shift» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Ecoercive&#45;005Fshift&#45;00BB" class="node">
+<title>«elliptic.divergence.coercive_shift»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Ecoercive&#45;005Fshift&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___coercive_shift_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="165,-408.19 43,-408.19 43,-372.19 165,-372.19 165,-408.19"/>
+<text text-anchor="middle" x="104" y="-387.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.coercive_shift</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.garding»&#45;&gt;«elliptic.divergence.coercive_shift» -->
+<g id="edge21" class="edge">
+<title>«elliptic.divergence.garding»&#45;&gt;«elliptic.divergence.coercive_shift»</title>
+<path fill="none" stroke="#6b7280" d="M244.86,-447.53C218.7,-437.07 181.83,-422.32 152.37,-410.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="146.58,-408.22 153.16,-407.95 149.37,-409.34 152.15,-410.45 152.15,-410.45 152.15,-410.45 149.37,-409.34 151.15,-412.96 146.58,-408.22 146.58,-408.22"/>
+</g>
+<!-- «elliptic.divergence.shifted_coercive» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fcoercive&#45;00BB" class="node">
+<title>«elliptic.divergence.shifted_coercive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fcoercive&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___shifted_coercive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="104" cy="-318.59" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="104" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.shifted_coercive</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.garding»&#45;&gt;«elliptic.divergence.shifted_coercive» -->
+<g id="edge54" class="edge">
+<title>«elliptic.divergence.garding»&#45;&gt;«elliptic.divergence.shifted_coercive»</title>
+<path fill="none" stroke="#6b7280" d="M239.78,-449.18C230.72,-446.63 221.06,-444.07 212,-441.99 171.98,-432.8 56.4,-441.44 30,-409.99 18.68,-396.51 21.8,-385.96 30,-370.39 37.31,-356.51 50.3,-345.7 63.39,-337.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="68.59,-334.63 64.78,-339.99 66,-336.15 63.41,-337.66 63.41,-337.66 63.41,-337.66 66,-336.15 62.05,-335.33 68.59,-334.63 68.59,-334.63"/>
+</g>
+<!-- «elliptic.divergence.full_form» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Efull&#45;005Fform&#45;00BB" class="node">
+<title>«elliptic.divergence.full_form»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Efull&#45;005Fform&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___full_form_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="328,-551.39 228,-551.39 228,-515.39 328,-515.39 328,-551.39"/>
+<text text-anchor="middle" x="278" y="-530.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.full_form</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.full_form»&#45;&gt;«elliptic.divergence.garding» -->
+<g id="edge9" class="edge">
+<title>«elliptic.divergence.full_form»&#45;&gt;«elliptic.divergence.garding»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M278,-515.18C278,-506.33 278,-495.42 278,-485.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="278,-479.79 280.7,-485.79 278.1,-482.79 278.1,-485.79 278,-485.79 277.9,-485.79 277.9,-482.79 275.3,-485.8 278,-479.79 278,-479.79"/>
+</g>
+<!-- «elliptic.divergence.classical_between_barriers» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eclassical&#45;005Fbetween&#45;005Fbarriers&#45;00BB" class="node">
+<title>«elliptic.divergence.classical_between_barriers»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eclassical&#45;005Fbetween&#45;005Fbarriers&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___classical_between_barriers_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="108" cy="-461.79" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="108" y="-464.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence</text>
+<text text-anchor="middle" x="108" y="-453.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">classical_between_barriers</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.full_form»&#45;&gt;«elliptic.divergence.classical_between_barriers» -->
+<g id="edge29" class="edge">
+<title>«elliptic.divergence.full_form»&#45;&gt;«elliptic.divergence.classical_between_barriers»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M236.41,-515.36C211.74,-505.26 180.39,-492.43 154.85,-481.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="149.16,-479.64 155.73,-479.41 151.97,-480.68 154.75,-481.82 154.71,-481.91 154.67,-482 151.9,-480.87 153.69,-484.41 149.16,-479.64 149.16,-479.64"/>
+</g>
+<!-- «elliptic.divergence.full_form»&#45;&gt;«elliptic.divergence.shifted_weak_solution» -->
+<g id="edge39" class="edge">
+<title>«elliptic.divergence.full_form»&#45;&gt;«elliptic.divergence.shifted_weak_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M311.41,-515.36C324.04,-507.04 337.04,-495.73 344,-481.59 351.77,-465.8 354.61,-456.03 344,-441.99 312.52,-400.36 262.48,-451.62 231,-409.99 220.39,-395.95 222.57,-385.84 231,-370.39 237.97,-357.62 249.69,-347.58 261.99,-339.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="267.28,-336.78 263.5,-342.16 264.75,-338.39 262.17,-339.92 262.12,-339.84 262.07,-339.75 264.65,-338.22 260.74,-337.51 267.28,-336.78 267.28,-336.78"/>
+</g>
+<!-- «elliptic.dirichlet.energy_identity»&#45;&gt;«elliptic.dirichlet.energy_minimizer» -->
+<g id="edge16" class="edge">
+<title>«elliptic.dirichlet.energy_identity»&#45;&gt;«elliptic.dirichlet.energy_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1123.35,-372.34C1130.07,-363.16 1138.48,-351.68 1145.74,-341.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1149.41,-336.77 1148.05,-343.2 1147.92,-339.4 1146.15,-341.82 1145.87,-341.61 1145.58,-341.4 1147.36,-338.98 1143.69,-340.01 1149.41,-336.77 1149.41,-336.77"/>
+</g>
+<!-- «elliptic.dirichlet.energy_identity»&#45;&gt;«elliptic.dirichlet.unique_energy_minimizer» -->
+<g id="edge32" class="edge">
+<title>«elliptic.dirichlet.energy_identity»&#45;&gt;«elliptic.dirichlet.unique_energy_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1097.11,-372.51C1090.2,-363.12 1082.59,-350.81 1079,-338.39 1074.12,-321.48 1073.77,-315.6 1079,-298.79 1082,-289.14 1087.55,-279.7 1093.36,-271.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1096.99,-266.78 1095.55,-273.2 1095.27,-269.24 1093.47,-271.64 1093.39,-271.58 1093.31,-271.52 1095.11,-269.12 1091.23,-269.96 1096.99,-266.78 1096.99,-266.78"/>
+</g>
+<!-- «elliptic.divergence.weak_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eweak&#45;005Fsolution&#45;00BB" class="node">
+<title>«elliptic.divergence.weak_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eweak&#45;005Fsolution&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___weak_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="684,-479.79 560,-479.79 560,-443.79 684,-443.79 684,-479.79"/>
+<text text-anchor="middle" x="622" y="-459.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.weak_solution</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.exists_unique» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eexists&#45;005Funique&#45;00BB" class="node">
+<title>«elliptic.divergence.exists_unique»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eexists&#45;005Funique&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___exists_unique_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="313" cy="-390.19" rx="69.4" ry="18"/>
+<text text-anchor="middle" x="313" y="-387.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.exists_unique</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.weak_solution»&#45;&gt;«elliptic.divergence.exists_unique» -->
+<g id="edge46" class="edge">
+<title>«elliptic.divergence.weak_solution»&#45;&gt;«elliptic.divergence.exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M559.83,-445.04C555.49,-444 551.18,-442.97 547,-441.99 514.08,-434.29 428.52,-415.87 370.51,-403.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="364.63,-402.2 371.06,-400.81 367.58,-402.73 370.52,-403.36 370.5,-403.45 370.48,-403.55 367.54,-402.92 369.93,-406.09 364.63,-402.2 364.63,-402.2"/>
+</g>
+<!-- «elliptic.dirichlet.form» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eform&#45;00BB" class="node">
+<title>«elliptic.dirichlet.form»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eform&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___form_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="909,-621.19 841,-621.19 841,-585.19 909,-585.19 909,-621.19"/>
+<text text-anchor="middle" x="875" y="-600.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.form</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.form»&#45;&gt;«elliptic.poisson.distributional_iff_variational» -->
+<g id="edge5" class="edge">
+<title>«elliptic.dirichlet.form»&#45;&gt;«elliptic.poisson.distributional_iff_variational»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M840.89,-585.43C821.77,-576.04 797.81,-564.26 777.72,-554.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="772.16,-551.66 778.74,-551.88 774.9,-552.89 777.59,-554.22 777.55,-554.31 777.5,-554.4 774.81,-553.07 776.36,-556.73 772.16,-551.66 772.16,-551.66"/>
+</g>
+<!-- «elliptic.dirichlet.form»&#45;&gt;«elliptic.dirichlet.coercive» -->
+<g id="edge8" class="edge">
+<title>«elliptic.dirichlet.form»&#45;&gt;«elliptic.dirichlet.coercive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M881.56,-585.08C884.82,-576.58 888.8,-566.2 892.31,-557.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="894.53,-551.26 894.9,-557.82 893.55,-554.09 892.48,-556.89 892.38,-556.86 892.29,-556.82 893.36,-554.02 889.86,-555.89 894.53,-551.26 894.53,-551.26"/>
+</g>
+<!-- «elliptic.divergence.integrated_ellipticity» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eintegrated&#45;005Fellipticity&#45;00BB" class="node">
+<title>«elliptic.divergence.integrated_ellipticity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eintegrated&#45;005Fellipticity&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___integrated_ellipticity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="593.5,-551.39 494.5,-551.39 494.5,-515.39 593.5,-515.39 593.5,-551.39"/>
+<text text-anchor="middle" x="544" y="-536.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence</text>
+<text text-anchor="middle" x="544" y="-525.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">integrated_ellipticity</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.form»&#45;&gt;«elliptic.divergence.integrated_ellipticity» -->
+<g id="edge28" class="edge">
+<title>«elliptic.dirichlet.form»&#45;&gt;«elliptic.divergence.integrated_ellipticity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M840.65,-593.74C828.75,-590.9 815.31,-587.8 803,-585.19 727.79,-569.24 708.39,-568.24 633,-553.19 622.29,-551.05 610.86,-548.69 599.89,-546.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="593.86,-545.12 600.28,-543.71 596.81,-545.64 599.75,-546.26 599.73,-546.36 599.71,-546.45 596.77,-545.84 599.17,-549 593.86,-545.12 593.86,-545.12"/>
+</g>
+<!-- «elliptic.dirichlet.energy» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eenergy&#45;00BB" class="node">
+<title>«elliptic.dirichlet.energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edirichlet&#45;002Eenergy&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___dirichlet___energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1187,-551.39 1109,-551.39 1109,-515.39 1187,-515.39 1187,-551.39"/>
+<text text-anchor="middle" x="1148" y="-530.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet.energy</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.dirichlet.form»&#45;&gt;«elliptic.dirichlet.energy» -->
+<g id="edge56" class="edge">
+<title>«elliptic.dirichlet.form»&#45;&gt;«elliptic.dirichlet.energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M909.21,-596.13C953.13,-588.02 1031.48,-572.4 1097,-553.19 1098.95,-552.62 1100.93,-552.01 1102.92,-551.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1108.92,-549.4 1104.06,-553.84 1106.1,-550.43 1103.25,-551.37 1103.22,-551.27 1103.19,-551.18 1106.04,-550.24 1102.38,-548.71 1108.92,-549.4 1108.92,-549.4"/>
+</g>
+<!-- «elliptic.dirichlet.energy_minimizer»&#45;&gt;«elliptic.dirichlet.unique_energy_minimizer» -->
+<g id="edge30" class="edge">
+<title>«elliptic.dirichlet.energy_minimizer»&#45;&gt;«elliptic.dirichlet.unique_energy_minimizer»</title>
+<path fill="none" stroke="#6b7280" d="M1150.38,-300.75C1144.39,-292.06 1136.98,-281.31 1130.41,-271.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1126.86,-266.65 1132.49,-270.05 1128.57,-269.12 1130.27,-271.59 1130.27,-271.59 1130.27,-271.59 1128.57,-269.12 1128.05,-273.12 1126.86,-266.65 1126.86,-266.65"/>
+</g>
+<!-- «elliptic.divergence.shifted_solver_estimate» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fsolver&#45;005Festimate&#45;00BB" class="node">
+<title>«elliptic.divergence.shifted_solver_estimate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fsolver&#45;005Festimate&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___shifted_solver_estimate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="276" cy="-35.8" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="276" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence</text>
+<text text-anchor="middle" x="276" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">shifted_solver_estimate</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.coercive_shift»&#45;&gt;«elliptic.divergence.shifted_coercive» -->
+<g id="edge55" class="edge">
+<title>«elliptic.divergence.coercive_shift»&#45;&gt;«elliptic.divergence.shifted_coercive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M104,-371.99C104,-363.14 104,-352.23 104,-342.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="104,-336.6 106.7,-342.6 104.1,-339.6 104.1,-342.6 104,-342.6 103.9,-342.6 103.9,-339.6 101.3,-342.6 104,-336.6 104,-336.6"/>
+</g>
+<!-- «elliptic.divergence.shifted_solver» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fsolver&#45;00BB" class="node">
+<title>«elliptic.divergence.shifted_solver»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fsolver&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___shifted_solver_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="286,-195.2 164,-195.2 164,-159.2 286,-159.2 286,-195.2"/>
+<text text-anchor="middle" x="225" y="-174.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.shifted_solver</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.shifted_solver_equation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fsolver&#45;005Fequation&#45;00BB" class="node">
+<title>«elliptic.divergence.shifted_solver_equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fsolver&#45;005Fequation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___shifted_solver_equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="276" cy="-107.4" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="276" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence</text>
+<text text-anchor="middle" x="276" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">shifted_solver_equation</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.shifted_solver»&#45;&gt;«elliptic.divergence.shifted_solver_equation» -->
+<g id="edge34" class="edge">
+<title>«elliptic.divergence.shifted_solver»&#45;&gt;«elliptic.divergence.shifted_solver_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M237.87,-159.09C244.04,-150.88 251.54,-140.91 258.25,-132"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="261.88,-127.17 260.43,-133.59 260.15,-129.63 258.35,-132.03 258.27,-131.97 258.19,-131.91 259.99,-129.51 256.11,-130.34 261.88,-127.17 261.88,-127.17"/>
+</g>
+<!-- «elliptic.divergence.shifted_exists_unique» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fexists&#45;005Funique&#45;00BB" class="node">
+<title>«elliptic.divergence.shifted_exists_unique»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eshifted&#45;005Fexists&#45;005Funique&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___shifted_exists_unique_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="218" cy="-246.99" rx="75.82" ry="19.6"/>
+<text text-anchor="middle" x="218" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence</text>
+<text text-anchor="middle" x="218" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">shifted_exists_unique</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.shifted_exists_unique»&#45;&gt;«elliptic.divergence.shifted_solver» -->
+<g id="edge22" class="edge">
+<title>«elliptic.divergence.shifted_exists_unique»&#45;&gt;«elliptic.divergence.shifted_solver»</title>
+<path fill="none" stroke="#6b7280" d="M219.95,-227.11C220.76,-219.24 221.71,-210.02 222.57,-201.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="223.2,-195.59 225.27,-201.83 222.9,-198.57 222.59,-201.56 222.59,-201.56 222.59,-201.56 222.9,-198.57 219.9,-201.28 223.2,-195.59 223.2,-195.59"/>
+</g>
+<!-- «elliptic.divergence.integrated_ellipticity»&#45;&gt;«elliptic.divergence.garding» -->
+<g id="edge10" class="edge">
+<title>«elliptic.divergence.integrated_ellipticity»&#45;&gt;«elliptic.divergence.garding»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M494.32,-517.08C490.16,-515.87 486.01,-514.69 482,-513.59 429.18,-499.01 368.16,-484.06 326.72,-474.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="320.75,-472.77 327.21,-471.53 323.69,-473.37 326.61,-474.06 326.59,-474.16 326.57,-474.26 323.65,-473.56 325.96,-476.79 320.75,-472.77 320.75,-472.77"/>
+</g>
+<!-- «elliptic.divergence.integrated_ellipticity»&#45;&gt;«elliptic.divergence.coercive» -->
+<g id="edge36" class="edge">
+<title>«elliptic.divergence.integrated_ellipticity»&#45;&gt;«elliptic.divergence.coercive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M593.6,-516.77C631.77,-504.75 684.04,-488.28 720.8,-476.71"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="726.56,-474.9 721.64,-479.27 723.72,-475.89 720.86,-476.79 720.83,-476.7 720.8,-476.6 723.66,-475.7 720.02,-474.12 726.56,-474.9 726.56,-474.9"/>
+</g>
+<!-- «elliptic.divergence.ae_implies_integrated» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eae&#45;005Fimplies&#45;005Fintegrated&#45;00BB" class="node">
+<title>«elliptic.divergence.ae_implies_integrated»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eae&#45;005Fimplies&#45;005Fintegrated&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___ae_implies_integrated_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="459" cy="-461.79" rx="75.82" ry="19.6"/>
+<text text-anchor="middle" x="459" y="-464.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence</text>
+<text text-anchor="middle" x="459" y="-453.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">ae_implies_integrated</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.integrated_ellipticity»&#45;&gt;«elliptic.divergence.ae_implies_integrated» -->
+<g id="edge42" class="edge">
+<title>«elliptic.divergence.integrated_ellipticity»&#45;&gt;«elliptic.divergence.ae_implies_integrated»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M522.99,-515.18C511.7,-505.94 497.68,-494.46 485.64,-484.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="480.96,-480.77 487.31,-482.48 483.34,-482.59 485.66,-484.49 485.6,-484.57 485.53,-484.64 483.21,-482.74 483.89,-486.66 480.96,-480.77 480.96,-480.77"/>
+</g>
+<!-- «elliptic.divergence.shifted_solver_equation»&#45;&gt;«elliptic.divergence.shifted_solver_estimate» -->
+<g id="edge18" class="edge">
+<title>«elliptic.divergence.shifted_solver_equation»&#45;&gt;«elliptic.divergence.shifted_solver_estimate»</title>
+<path fill="none" stroke="#6b7280" d="M276,-87.38C276,-79.55 276,-70.38 276,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="276,-55.79 278.7,-61.79 276,-58.79 276,-61.79 276,-61.79 276,-61.79 276,-58.79 273.3,-61.79 276,-55.79 276,-55.79"/>
+</g>
+<!-- «elliptic.divergence.coercive»&#45;&gt;«elliptic.divergence.exists_unique» -->
+<g id="edge48" class="edge">
+<title>«elliptic.divergence.coercive»&#45;&gt;«elliptic.divergence.exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M726.06,-448.86C716.62,-446.29 706.5,-443.81 697,-441.99 567.03,-417.17 531.65,-430.95 401,-409.99 390.68,-408.33 379.75,-406.26 369.23,-404.1"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="363.09,-402.82 369.52,-401.4 366.1,-403.09 369.04,-403.7 368.97,-404.05 368.89,-404.39 365.96,-403.78 368.41,-406.69 363.09,-402.82 363.09,-402.82"/>
+</g>
+<!-- «elliptic.lax_milgram»&#45;&gt;«elliptic.divergence.shifted_exists_unique» -->
+<g id="edge23" class="edge">
+<title>«elliptic.lax_milgram»&#45;&gt;«elliptic.divergence.shifted_exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1058.26,-518C1072.11,-509.49 1087.27,-497.29 1095,-481.59 1102.77,-465.8 1104.16,-457.02 1095,-441.99 1078.87,-415.51 1052.06,-434.45 1033,-409.99 1001.8,-369.96 1045.73,-331.59 1007,-298.79 953.96,-253.87 490.92,-248.24 299.88,-247.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="293.76,-247.83 299.76,-245.14 296.76,-247.48 299.76,-247.49 299.76,-247.84 299.76,-248.19 296.76,-248.18 299.75,-250.54 293.76,-247.83 293.76,-247.83"/>
+</g>
+<!-- «elliptic.lax_milgram»&#45;&gt;«elliptic.dirichlet.solver» -->
+<g id="edge44" class="edge">
+<title>«elliptic.lax_milgram»&#45;&gt;«elliptic.dirichlet.solver»</title>
+<path fill="none" stroke="#6b7280" d="M1032.96,-515.18C1034.99,-506.33 1037.5,-495.42 1039.7,-485.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1041.09,-479.79 1042.38,-486.25 1040.42,-482.72 1039.75,-485.64 1039.75,-485.64 1039.75,-485.64 1040.42,-482.72 1037.11,-485.04 1041.09,-479.79 1041.09,-479.79"/>
+</g>
+<!-- «elliptic.lax_milgram»&#45;&gt;«elliptic.divergence.exists_unique» -->
+<g id="edge49" class="edge">
+<title>«elliptic.lax_milgram»&#45;&gt;«elliptic.divergence.exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1000.62,-517.78C954.91,-494.51 866.72,-450.77 833,-441.99 655.27,-395.69 603.23,-432.87 421,-409.99 405.33,-408.02 388.47,-405.35 372.84,-402.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="366.68,-401.57 373.06,-399.95 369.7,-401.74 372.66,-402.26 372.59,-402.61 372.53,-402.95 369.58,-402.43 372.13,-405.26 366.68,-401.57 366.68,-401.57"/>
+</g>
+<!-- «elliptic.lax_milgram»&#45;&gt;«elliptic.poisson.distributional_exists_unique» -->
+<g id="edge52" class="edge">
+<title>«elliptic.lax_milgram»&#45;&gt;«elliptic.poisson.distributional_exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1017.24,-515.63C1001.3,-494.41 970.71,-458.63 935,-441.99 813.46,-385.35 767.78,-428.71 635,-409.99 624.36,-408.49 613.16,-406.73 602.18,-404.89"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="596.1,-403.87 602.47,-402.2 599.08,-404.27 602.03,-404.77 602.02,-404.87 602,-404.96 599.04,-404.46 601.57,-407.53 596.1,-403.87 596.1,-403.87"/>
+</g>
+<!-- «elliptic.divergence.form» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eform&#45;00BB" class="node">
+<title>«elliptic.divergence.form»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eform&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___form_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="585,-621.19 503,-621.19 503,-585.19 585,-585.19 585,-621.19"/>
+<text text-anchor="middle" x="544" y="-600.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.form</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.form»&#45;&gt;«elliptic.divergence.full_form» -->
+<g id="edge11" class="edge">
+<title>«elliptic.divergence.form»&#45;&gt;«elliptic.divergence.full_form»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M502.62,-592.88C461.49,-583.46 396.66,-568.2 341,-553.19 338.78,-552.59 336.51,-551.96 334.22,-551.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="328.14,-549.61 334.65,-548.64 331.05,-550.33 333.94,-551.14 333.91,-551.24 333.88,-551.33 331,-550.52 333.18,-553.84 328.14,-549.61 328.14,-549.61"/>
+</g>
+<!-- «elliptic.divergence.form»&#45;&gt;«elliptic.divergence.weak_solution» -->
+<g id="edge14" class="edge">
+<title>«elliptic.divergence.form»&#45;&gt;«elliptic.divergence.weak_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M574.26,-584.97C585.95,-576.81 598.33,-566.02 606,-553.19 618.19,-532.78 621.61,-505.47 622.34,-486.23"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="622.49,-480.03 625.04,-486.09 622.52,-483.03 622.44,-486.03 622.34,-486.03 622.24,-486.03 622.32,-483.03 619.64,-485.96 622.49,-480.03 622.49,-480.03"/>
+</g>
+<!-- «elliptic.divergence.form»&#45;&gt;«elliptic.divergence.integrated_ellipticity» -->
+<g id="edge27" class="edge">
+<title>«elliptic.divergence.form»&#45;&gt;«elliptic.divergence.integrated_ellipticity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M544,-585.08C544,-576.79 544,-566.71 544,-557.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="544,-551.73 546.7,-557.73 544.1,-554.73 544.1,-557.73 544,-557.73 543.9,-557.73 543.9,-554.73 541.3,-557.73 544,-551.73 544,-551.73"/>
+</g>
+<!-- «elliptic.divergence.shifted_weak_solution»&#45;&gt;«elliptic.divergence.shifted_exists_unique» -->
+<g id="edge24" class="edge">
+<title>«elliptic.divergence.shifted_weak_solution»&#45;&gt;«elliptic.divergence.shifted_exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" stroke-dasharray="5,2" d="M287.26,-300.39C275.04,-291.15 259.86,-279.66 246.83,-269.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="241.76,-265.97 248.18,-267.44 244.37,-267.5 246.76,-269.31 246.55,-269.59 246.34,-269.87 243.94,-268.06 244.92,-271.75 241.76,-265.97 241.76,-265.97"/>
+</g>
+<!-- «elliptic.divergence.shifted_weak_solution»&#45;&gt;«elliptic.divergence.shifted_solver_equation» -->
+<g id="edge35" class="edge">
+<title>«elliptic.divergence.shifted_weak_solution»&#45;&gt;«elliptic.divergence.shifted_solver_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M310.94,-300.59C312.11,-271.2 312.52,-209.23 299,-159.2 296.58,-150.24 292.75,-140.86 288.9,-132.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="286.25,-127.15 291.29,-131.38 287.64,-129.81 288.95,-132.51 288.86,-132.56 288.77,-132.6 287.46,-129.9 286.42,-133.73 286.25,-127.15 286.25,-127.15"/>
+</g>
+<!-- «elliptic.divergence.ae_implies_integrated»&#45;&gt;«elliptic.divergence.shifted_exists_unique» -->
+<g id="edge25" class="edge">
+<title>«elliptic.divergence.ae_implies_integrated»&#45;&gt;«elliptic.divergence.shifted_exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M396.05,-450.68C332.41,-439.86 241.91,-422.54 231,-409.99 197.97,-372.01 204.66,-308.3 211.75,-273.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="213.07,-266.94 214.47,-273.37 212.79,-269.95 212.17,-272.88 211.83,-272.81 211.48,-272.74 212.11,-269.8 209.19,-272.25 213.07,-266.94 213.07,-266.94"/>
+</g>
+<!-- «elliptic.divergence.ae_implies_integrated»&#45;&gt;«elliptic.divergence.exists_unique» -->
+<g id="edge47" class="edge">
+<title>«elliptic.divergence.ae_implies_integrated»&#45;&gt;«elliptic.divergence.exists_unique»</title>
+<path fill="none" stroke="#6b7280" d="M424.03,-444.12C401.79,-433.52 373.01,-419.8 350.33,-408.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="344.7,-406.3 351.28,-406.45 347.41,-407.59 350.11,-408.88 350.11,-408.88 350.11,-408.88 347.41,-407.59 348.95,-411.32 344.7,-406.3 344.7,-406.3"/>
+</g>
+<!-- «elliptic.dirichlet.solver»&#45;&gt;«elliptic.dirichlet.apriori_estimate» -->
+<g id="edge1" class="edge">
+<title>«elliptic.dirichlet.solver»&#45;&gt;«elliptic.dirichlet.apriori_estimate»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1007.68,-445.69C980.08,-434.52 942.5,-419.31 914.05,-407.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="908.49,-405.55 915.06,-405.3 911.3,-406.58 914.08,-407.71 914.05,-407.8 914.01,-407.89 911.23,-406.77 913.03,-410.3 908.49,-405.55 908.49,-405.55"/>
+</g>
+<!-- «elliptic.dirichlet.solver»&#45;&gt;«elliptic.dirichlet.solver_weak_equation» -->
+<g id="edge6" class="edge">
+<title>«elliptic.dirichlet.solver»&#45;&gt;«elliptic.dirichlet.solver_weak_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1082.18,-449.68C1120.42,-438.26 1180.37,-420.35 1223.87,-407.36"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1229.63,-405.64 1224.65,-409.94 1226.79,-406.59 1223.91,-407.45 1223.88,-407.36 1223.85,-407.26 1226.73,-406.4 1223.11,-404.77 1229.63,-405.64 1229.63,-405.64"/>
+</g>
+<!-- «elliptic.dirichlet.solver»&#45;&gt;«elliptic.dirichlet.energy_minimizer» -->
+<g id="edge15" class="edge">
+<title>«elliptic.dirichlet.solver»&#45;&gt;«elliptic.dirichlet.energy_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1036.26,-443.53C1027.76,-424.06 1018.12,-392.25 1033,-370.39 1047.36,-349.3 1071.95,-336.97 1095.84,-329.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1101.89,-328.03 1096.86,-332.27 1099.03,-328.95 1096.14,-329.77 1096.12,-329.67 1096.09,-329.58 1098.97,-328.75 1095.38,-327.08 1101.89,-328.03 1101.89,-328.03"/>
+</g>
+<!-- «elliptic.dirichlet.solver»&#45;&gt;«elliptic.dirichlet.continuous_dependence» -->
+<g id="edge19" class="edge">
+<title>«elliptic.dirichlet.solver»&#45;&gt;«elliptic.dirichlet.continuous_dependence»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1028.84,-443.76C1004.79,-418.41 959.53,-370.73 932.65,-342.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="928.49,-338.03 934.58,-340.52 930.63,-340.13 932.7,-342.31 932.62,-342.38 932.55,-342.45 930.49,-340.27 930.67,-344.24 928.49,-338.03 928.49,-338.03"/>
+</g>
+<!-- «elliptic.dirichlet.solver»&#45;&gt;«elliptic.poisson.distributional_exists_unique» -->
+<g id="edge51" class="edge">
+<title>«elliptic.dirichlet.solver»&#45;&gt;«elliptic.poisson.distributional_exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1007.98,-447.02C1001.72,-445.07 995.22,-443.3 989,-441.99 834.4,-409.52 791.6,-430.79 635,-409.99 624.27,-408.57 612.98,-406.83 601.91,-405.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="595.79,-403.98 602.16,-402.31 598.77,-404.38 601.73,-404.88 601.71,-404.97 601.69,-405.07 598.73,-404.58 601.26,-407.64 595.79,-403.98 595.79,-403.98"/>
+</g>
+<!-- «elliptic.divergence.ae_ellipticity» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eae&#45;005Fellipticity&#45;00BB" class="node">
+<title>«elliptic.divergence.ae_ellipticity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Edivergence&#45;002Eae&#45;005Fellipticity&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___divergence___ae_ellipticity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="469,-551.39 353,-551.39 353,-515.39 469,-515.39 469,-551.39"/>
+<text text-anchor="middle" x="411" y="-530.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">divergence.ae_ellipticity</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.divergence.ae_ellipticity»&#45;&gt;«elliptic.divergence.ae_implies_integrated» -->
+<g id="edge41" class="edge">
+<title>«elliptic.divergence.ae_ellipticity»&#45;&gt;«elliptic.divergence.ae_implies_integrated»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M422.87,-515.18C428.77,-506.62 436,-496.14 442.44,-486.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="445.92,-481.75 444.74,-488.22 444.3,-484.28 442.6,-486.75 442.51,-486.69 442.43,-486.63 444.14,-484.17 440.29,-485.16 445.92,-481.75 445.92,-481.75"/>
+</g>
+<!-- «elliptic.divergence.shifted_coercive»&#45;&gt;«elliptic.divergence.shifted_exists_unique» -->
+<g id="edge26" class="edge">
+<title>«elliptic.divergence.shifted_coercive»&#45;&gt;«elliptic.divergence.shifted_exists_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M130.15,-301.63C146.24,-291.81 167.01,-279.12 184.32,-268.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="189.57,-265.35 185.86,-270.78 187.19,-267.21 184.63,-268.78 184.45,-268.48 184.27,-268.18 186.83,-266.62 183.04,-266.17 189.57,-265.35 189.57,-265.35"/>
+</g>
+<!-- «elliptic.dirichlet.energy»&#45;&gt;«elliptic.dirichlet.energy_identity» -->
+<g id="edge12" class="edge">
+<title>«elliptic.dirichlet.energy»&#45;&gt;«elliptic.dirichlet.energy_identity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1143.54,-515.36C1136.93,-490.13 1124.51,-442.75 1117.08,-414.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1115.48,-408.28 1119.61,-413.4 1116.34,-411.16 1117.1,-414.06 1117,-414.09 1116.9,-414.11 1116.14,-411.21 1114.39,-414.77 1115.48,-408.28 1115.48,-408.28"/>
+</g>
+</g>
+</svg>

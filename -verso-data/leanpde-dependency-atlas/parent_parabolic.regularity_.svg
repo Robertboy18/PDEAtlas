@@ -1,0 +1,242 @@
+<svg data-node-count="13" data-edge-count="17" data-cluster-count="1" data-variant-key="parent:«parabolic.regularity»" width="625pt" height="604pt"
+ viewBox="0.00 0.00 625.00 603.78" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 599.78)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-599.78 621,-599.78 621,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 597,-8 597,-8 603,-8 609,-14 609,-20 609,-20 609,-575.78 609,-575.78 609,-581.78 603,-587.78 597,-587.78 597,-587.78 20,-587.78 20,-587.78 14,-587.78 8,-581.78 8,-575.78 8,-575.78 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="308.5" y="-572.58" font-family="Helvetica" font-size="14.00">Parabolic regularity</text>
+</g>
+<!-- «parabolic.ritz_l2_differentiation» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eritz&#45;005Fl2&#45;005Fdifferentiation&#45;00BB" class="node">
+<title>«parabolic.ritz_l2_differentiation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eritz&#45;005Fl2&#45;005Fdifferentiation&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___ritz_l2_differentiation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="289" cy="-250.59" rx="72.25" ry="19.6"/>
+<text text-anchor="middle" x="289" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="289" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">ritz_l2_differentiation</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.improved_spatial_regularity» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eimproved&#45;005Fspatial&#45;005Fregularity&#45;00BB" class="node">
+<title>«parabolic.improved_spatial_regularity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eimproved&#45;005Fspatial&#45;005Fregularity&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___improved_spatial_regularity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="296" cy="-178.99" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="296" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="296" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">improved_spatial_regularity</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.ritz_l2_differentiation»&#45;&gt;«parabolic.improved_spatial_regularity» -->
+<g id="edge8" class="edge">
+<title>«parabolic.ritz_l2_differentiation»&#45;&gt;«parabolic.improved_spatial_regularity»</title>
+<path fill="none" stroke="#6b7280" d="M290.91,-230.57C291.7,-222.75 292.62,-213.57 293.46,-205.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="294.09,-198.99 296.18,-205.23 293.79,-201.97 293.49,-204.96 293.49,-204.96 293.49,-204.96 293.79,-201.97 290.8,-204.69 294.09,-198.99 294.09,-198.99"/>
+</g>
+<!-- «parabolic.paired_l2_differentiation» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Epaired&#45;005Fl2&#45;005Fdifferentiation&#45;00BB" class="node">
+<title>«parabolic.paired_l2_differentiation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Epaired&#45;005Fl2&#45;005Fdifferentiation&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___paired_l2_differentiation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="124" cy="-322.19" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="124" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="124" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">paired_l2_differentiation</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.paired_l2_differentiation»&#45;&gt;«parabolic.ritz_l2_differentiation» -->
+<g id="edge1" class="edge">
+<title>«parabolic.paired_l2_differentiation»&#45;&gt;«parabolic.ritz_l2_differentiation»</title>
+<path fill="none" stroke="#6b7280" d="M163.1,-304.7C187.91,-294.23 220.04,-280.68 245.63,-269.89"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="251.31,-267.49 246.83,-272.31 248.55,-268.66 245.79,-269.82 245.79,-269.82 245.79,-269.82 248.55,-268.66 244.74,-267.33 251.31,-267.49 251.31,-267.49"/>
+</g>
+<!-- «parabolic.spatial_h2_order_one» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Espatial&#45;005Fh2&#45;005Forder&#45;005Fone&#45;00BB" class="node">
+<title>«parabolic.spatial_h2_order_one»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Espatial&#45;005Fh2&#45;005Forder&#45;005Fone&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___spatial_h2_order_one_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="495" cy="-393.79" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="495" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="495" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">spatial_h2_order_one</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.spatial_h2_bochner» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Espatial&#45;005Fh2&#45;005Fbochner&#45;00BB" class="node">
+<title>«parabolic.spatial_h2_bochner»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Espatial&#45;005Fh2&#45;005Fbochner&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___spatial_h2_bochner_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="495" cy="-322.19" rx="78.69" ry="18"/>
+<text text-anchor="middle" x="495" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.spatial_h2_bochner</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.spatial_h2_order_one»&#45;&gt;«parabolic.spatial_h2_bochner» -->
+<g id="edge13" class="edge">
+<title>«parabolic.spatial_h2_order_one»&#45;&gt;«parabolic.spatial_h2_bochner»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M495,-373.77C495,-365.35 495,-355.37 495,-346.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="495,-340.28 497.7,-346.28 495.1,-343.28 495.1,-346.28 495,-346.28 494.9,-346.28 494.9,-343.28 492.3,-346.28 495,-340.28 495,-340.28"/>
+</g>
+<!-- «parabolic.differentiated_galerkin_construction» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Edifferentiated&#45;005Fgalerkin&#45;005Fconstruction&#45;00BB" class="node">
+<title>«parabolic.differentiated_galerkin_construction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Edifferentiated&#45;005Fgalerkin&#45;005Fconstruction&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___differentiated_galerkin_construction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="267" cy="-393.79" rx="117.26" ry="19.6"/>
+<text text-anchor="middle" x="267" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="267" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">differentiated_galerkin_construction</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.differentiated_galerkin_construction»&#45;&gt;«parabolic.paired_l2_differentiation» -->
+<g id="edge4" class="edge">
+<title>«parabolic.differentiated_galerkin_construction»&#45;&gt;«parabolic.paired_l2_differentiation»</title>
+<path fill="none" stroke="#6b7280" d="M230.17,-374.87C209.97,-365.03 184.89,-352.82 164.17,-342.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="158.73,-340.1 165.31,-340.29 161.43,-341.41 164.13,-342.72 164.13,-342.72 164.13,-342.72 161.43,-341.41 162.95,-345.15 158.73,-340.1 158.73,-340.1"/>
+</g>
+<!-- «parabolic.ritz_initial_compatibility» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eritz&#45;005Finitial&#45;005Fcompatibility&#45;00BB" class="node">
+<title>«parabolic.ritz_initial_compatibility»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eritz&#45;005Finitial&#45;005Fcompatibility&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___ritz_initial_compatibility_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="311" cy="-322.19" rx="80.72" ry="19.6"/>
+<text text-anchor="middle" x="311" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="311" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">ritz_initial_compatibility</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.differentiated_galerkin_construction»&#45;&gt;«parabolic.ritz_initial_compatibility» -->
+<g id="edge6" class="edge">
+<title>«parabolic.differentiated_galerkin_construction»&#45;&gt;«parabolic.ritz_initial_compatibility»</title>
+<path fill="none" stroke="#6b7280" d="M279.02,-373.77C284.16,-365.64 290.23,-356.05 295.69,-347.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="298.99,-342.19 298.07,-348.7 297.39,-344.72 295.79,-347.26 295.79,-347.26 295.79,-347.26 297.39,-344.72 293.5,-345.81 298.99,-342.19 298.99,-342.19"/>
+</g>
+<!-- «parabolic.ritz_initial_compatibility»&#45;&gt;«parabolic.ritz_l2_differentiation» -->
+<g id="edge2" class="edge">
+<title>«parabolic.ritz_initial_compatibility»&#45;&gt;«parabolic.ritz_l2_differentiation»</title>
+<path fill="none" stroke="#6b7280" d="M304.99,-302.17C302.51,-294.35 299.61,-285.17 296.97,-276.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="295,-270.59 299.39,-275.5 295.91,-273.45 296.81,-276.31 296.81,-276.31 296.81,-276.31 295.91,-273.45 294.24,-277.12 295,-270.59 295,-270.59"/>
+</g>
+<!-- «parabolic.all_order_regularity» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eall&#45;005Forder&#45;005Fregularity&#45;00BB" class="node">
+<title>«parabolic.all_order_regularity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eall&#45;005Forder&#45;005Fregularity&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___all_order_regularity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="296" cy="-107.4" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="296" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="296" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">all_order_regularity</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.improved_spatial_regularity»&#45;&gt;«parabolic.all_order_regularity» -->
+<g id="edge11" class="edge">
+<title>«parabolic.improved_spatial_regularity»&#45;&gt;«parabolic.all_order_regularity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M296,-158.98C296,-151.15 296,-141.97 296,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="296,-127.39 298.7,-133.39 296.35,-130.39 296.35,-133.39 296,-133.39 295.65,-133.39 295.65,-130.39 293.3,-133.39 296,-127.39 296,-127.39"/>
+</g>
+<!-- «parabolic.smooth_classical_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Esmooth&#45;005Fclassical&#45;005Fsolution&#45;00BB" class="node">
+<title>«parabolic.smooth_classical_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Esmooth&#45;005Fclassical&#45;005Fsolution&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___smooth_classical_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="296" cy="-35.8" rx="89.61" ry="19.6"/>
+<text text-anchor="middle" x="296" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="296" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">smooth_classical_solution</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.all_order_regularity»&#45;&gt;«parabolic.smooth_classical_solution» -->
+<g id="edge14" class="edge">
+<title>«parabolic.all_order_regularity»&#45;&gt;«parabolic.smooth_classical_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M296,-87.38C296,-79.55 296,-70.38 296,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="296,-55.79 298.7,-61.79 296.35,-58.79 296.35,-61.79 296,-61.79 295.65,-61.79 295.65,-58.79 293.3,-61.79 296,-55.79 296,-55.79"/>
+</g>
+<!-- «parabolic.spatial_h2_data_bounds» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Espatial&#45;005Fh2&#45;005Fdata&#45;005Fbounds&#45;00BB" class="node">
+<title>«parabolic.spatial_h2_data_bounds»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Espatial&#45;005Fh2&#45;005Fdata&#45;005Fbounds&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___spatial_h2_data_bounds_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="503" cy="-178.99" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="503" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="503" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">spatial_h2_data_bounds</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.spatial_h2_bochner»&#45;&gt;«parabolic.improved_spatial_regularity» -->
+<g id="edge10" class="edge">
+<title>«parabolic.spatial_h2_bochner»&#45;&gt;«parabolic.improved_spatial_regularity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M458.05,-306.25C439.58,-297.6 417.67,-285.43 401,-270.39 385.18,-256.13 389.22,-245.7 374,-230.79 362.38,-219.42 347.84,-209.13 334.47,-200.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="329.22,-197.65 335.75,-198.46 331.84,-199.12 334.4,-200.68 334.35,-200.77 334.3,-200.85 331.73,-199.29 332.95,-203.07 329.22,-197.65 329.22,-197.65"/>
+</g>
+<!-- «parabolic.autonomous_h2_bootstrap» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eautonomous&#45;005Fh2&#45;005Fbootstrap&#45;00BB" class="node">
+<title>«parabolic.autonomous_h2_bootstrap»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eautonomous&#45;005Fh2&#45;005Fbootstrap&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___autonomous_h2_bootstrap_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="503" cy="-250.59" rx="89.61" ry="19.6"/>
+<text text-anchor="middle" x="503" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="503" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">autonomous_h2_bootstrap</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.spatial_h2_bochner»&#45;&gt;«parabolic.autonomous_h2_bootstrap» -->
+<g id="edge17" class="edge">
+<title>«parabolic.spatial_h2_bochner»&#45;&gt;«parabolic.autonomous_h2_bootstrap»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M496.98,-303.99C497.92,-295.74 499.08,-285.72 500.12,-276.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="500.82,-270.56 502.82,-276.83 500.58,-273.55 500.23,-276.53 500.13,-276.52 500.04,-276.51 500.38,-273.53 497.45,-276.21 500.82,-270.56 500.82,-270.56"/>
+</g>
+<!-- «parabolic.improved_time_regularity» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eimproved&#45;005Ftime&#45;005Fregularity&#45;00BB" class="node">
+<title>«parabolic.improved_time_regularity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eimproved&#45;005Ftime&#45;005Fregularity&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___improved_time_regularity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="195" cy="-465.39" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="195" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="195" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">improved_time_regularity</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.improved_time_regularity»&#45;&gt;«parabolic.paired_l2_differentiation» -->
+<g id="edge3" class="edge">
+<title>«parabolic.improved_time_regularity»&#45;&gt;«parabolic.paired_l2_differentiation»</title>
+<path fill="none" stroke="#6b7280" d="M167.08,-446.53C155.93,-437.93 144.09,-426.65 137,-413.59 126.06,-393.43 123.33,-367.19 123.03,-348.18"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="123.01,-342.03 125.73,-348.02 123.02,-345.03 123.03,-348.03 123.03,-348.03 123.03,-348.03 123.02,-345.03 120.33,-348.04 123.01,-342.03 123.01,-342.03"/>
+</g>
+<!-- «parabolic.improved_time_regularity»&#45;&gt;«parabolic.differentiated_galerkin_construction» -->
+<g id="edge5" class="edge">
+<title>«parabolic.improved_time_regularity»&#45;&gt;«parabolic.differentiated_galerkin_construction»</title>
+<path fill="none" stroke="#6b7280" d="M214.29,-445.74C223.17,-437.15 233.79,-426.89 243.16,-417.83"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="247.65,-413.49 245.21,-419.6 245.5,-415.58 243.34,-417.66 243.34,-417.66 243.34,-417.66 245.5,-415.58 241.46,-415.72 247.65,-413.49 247.65,-413.49"/>
+</g>
+<!-- «parabolic.improved_time_regularity»&#45;&gt;«parabolic.improved_spatial_regularity» -->
+<g id="edge9" class="edge">
+<title>«parabolic.improved_time_regularity»&#45;&gt;«parabolic.improved_spatial_regularity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M153.73,-447.91C92.83,-421.06 -9.85,-364.59 30,-302.39 71.04,-238.33 155.02,-207.34 217.7,-192.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="223.69,-191.27 218.45,-195.24 220.79,-192.04 217.87,-192.71 217.84,-192.61 217.82,-192.51 220.75,-191.84 217.24,-189.98 223.69,-191.27 223.69,-191.27"/>
+</g>
+<!-- «parabolic.improved_time_regularity»&#45;&gt;«parabolic.autonomous_h2_bootstrap» -->
+<g id="edge16" class="edge">
+<title>«parabolic.improved_time_regularity»&#45;&gt;«parabolic.autonomous_h2_bootstrap»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M276.53,-459.17C383.91,-451.48 561.57,-435.6 582,-413.59 615.64,-377.34 610.18,-345.53 586,-302.39 578.49,-288.99 565.84,-278.7 552.66,-271"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="547.39,-268.07 553.94,-268.63 550.06,-269.44 552.68,-270.9 552.63,-270.99 552.58,-271.08 549.96,-269.62 551.32,-273.35 547.39,-268.07 547.39,-268.07"/>
+</g>
+<!-- «parabolic.autonomous_h2_bootstrap»&#45;&gt;«parabolic.improved_spatial_regularity» -->
+<g id="edge7" class="edge">
+<title>«parabolic.autonomous_h2_bootstrap»&#45;&gt;«parabolic.improved_spatial_regularity»</title>
+<path fill="none" stroke="#6b7280" d="M455.77,-233.71C424.2,-223.1 382.61,-209.11 349.77,-198.07"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="343.74,-196.05 350.29,-195.4 346.59,-197 349.43,-197.96 349.43,-197.96 349.43,-197.96 346.59,-197 348.57,-200.52 343.74,-196.05 343.74,-196.05"/>
+</g>
+<!-- «parabolic.autonomous_h2_bootstrap»&#45;&gt;«parabolic.spatial_h2_data_bounds» -->
+<g id="edge12" class="edge">
+<title>«parabolic.autonomous_h2_bootstrap»&#45;&gt;«parabolic.spatial_h2_data_bounds»</title>
+<path fill="none" stroke="#6b7280" d="M503,-230.57C503,-222.75 503,-213.57 503,-205.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="503,-198.99 505.7,-204.99 503,-201.99 503,-204.99 503,-204.99 503,-204.99 503,-201.99 500.3,-204.99 503,-198.99 503,-198.99"/>
+</g>
+<!-- «parabolic.improved_galerkin_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eimproved&#45;005Fgalerkin&#45;005Fenergy&#45;00BB" class="node">
+<title>«parabolic.improved_galerkin_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eimproved&#45;005Fgalerkin&#45;005Fenergy&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___improved_galerkin_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="195" cy="-536.98" rx="89.19" ry="19.6"/>
+<text text-anchor="middle" x="195" y="-539.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="195" y="-528.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">improved_galerkin_energy</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.improved_galerkin_energy»&#45;&gt;«parabolic.improved_time_regularity» -->
+<g id="edge15" class="edge">
+<title>«parabolic.improved_galerkin_energy»&#45;&gt;«parabolic.improved_time_regularity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M195,-516.97C195,-509.14 195,-499.96 195,-491.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="195,-485.38 197.7,-491.38 195.1,-488.38 195.1,-491.38 195,-491.38 194.9,-491.38 194.9,-488.38 192.3,-491.38 195,-485.38 195,-485.38"/>
+</g>
+</g>
+</svg>

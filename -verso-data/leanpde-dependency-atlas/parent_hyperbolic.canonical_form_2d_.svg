@@ -1,0 +1,91 @@
+<svg data-node-count="5" data-edge-count="5" data-cluster-count="1" data-variant-key="parent:«hyperbolic.canonical_form_2d»" width="330pt" height="314pt"
+ viewBox="0.00 0.00 330.00 313.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 309.79)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-309.79 326,-309.79 326,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 302,-8 302,-8 308,-8 314,-14 314,-20 314,-20 314,-285.79 314,-285.79 314,-291.79 308,-297.79 302,-297.79 302,-297.79 20,-297.79 20,-297.79 14,-297.79 8,-291.79 8,-285.79 8,-285.79 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="161" y="-282.59" font-family="Helvetica" font-size="14.00">Canonical form in two dimensions</text>
+</g>
+<!-- «hyperbolic.canonical_form_2d.local_chart» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Elocal&#45;005Fchart&#45;00BB" class="node">
+<title>«hyperbolic.canonical_form_2d.local_chart»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Elocal&#45;005Fchart&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___canonical_form_2d___local_chart_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="240" cy="-107.4" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="240" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">canonical_form_2d</text>
+<text text-anchor="middle" x="240" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_chart</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.canonical_form_2d.full_wave_change» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Efull&#45;005Fwave&#45;005Fchange&#45;00BB" class="node">
+<title>«hyperbolic.canonical_form_2d.full_wave_change»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Efull&#45;005Fwave&#45;005Fchange&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___canonical_form_2d___full_wave_change_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="161" cy="-35.8" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="161" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">canonical_form_2d</text>
+<text text-anchor="middle" x="161" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">full_wave_change</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.canonical_form_2d.local_chart»&#45;&gt;«hyperbolic.canonical_form_2d.full_wave_change» -->
+<g id="edge2" class="edge">
+<title>«hyperbolic.canonical_form_2d.local_chart»&#45;&gt;«hyperbolic.canonical_form_2d.full_wave_change»</title>
+<path fill="none" stroke="#6b7280" d="M219.66,-88.47C209.33,-79.38 196.71,-68.26 185.82,-58.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="181.28,-54.66 187.56,-56.6 183.53,-56.64 185.78,-58.63 185.78,-58.63 185.78,-58.63 183.53,-56.64 183.99,-60.65 181.28,-54.66 181.28,-54.66"/>
+</g>
+<!-- «hyperbolic.canonical_form_2d.wave_symbol» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Ewave&#45;005Fsymbol&#45;00BB" class="node">
+<title>«hyperbolic.canonical_form_2d.wave_symbol»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Ewave&#45;005Fsymbol&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___canonical_form_2d___wave_symbol_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="82" cy="-107.4" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="82" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">canonical_form_2d</text>
+<text text-anchor="middle" x="82" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">wave_symbol</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.canonical_form_2d.wave_symbol»&#45;&gt;«hyperbolic.canonical_form_2d.full_wave_change» -->
+<g id="edge3" class="edge">
+<title>«hyperbolic.canonical_form_2d.wave_symbol»&#45;&gt;«hyperbolic.canonical_form_2d.full_wave_change»</title>
+<path fill="none" stroke="#6b7280" d="M102.34,-88.47C112.67,-79.38 125.29,-68.26 136.18,-58.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="140.72,-54.66 138.01,-60.65 138.47,-56.64 136.22,-58.63 136.22,-58.63 136.22,-58.63 138.47,-56.64 134.44,-56.6 140.72,-54.66 140.72,-54.66"/>
+</g>
+<!-- «hyperbolic.canonical_form_2d.characteristic_covectors» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Echaracteristic&#45;005Fcovectors&#45;00BB" class="node">
+<title>«hyperbolic.canonical_form_2d.characteristic_covectors»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Echaracteristic&#45;005Fcovectors&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___canonical_form_2d___characteristic_covectors_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="214" cy="-178.99" rx="84.29" ry="19.6"/>
+<text text-anchor="middle" x="214" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">canonical_form_2d</text>
+<text text-anchor="middle" x="214" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">characteristic_covectors</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.canonical_form_2d.characteristic_covectors»&#45;&gt;«hyperbolic.canonical_form_2d.local_chart» -->
+<g id="edge1" class="edge">
+<title>«hyperbolic.canonical_form_2d.characteristic_covectors»&#45;&gt;«hyperbolic.canonical_form_2d.local_chart»</title>
+<path fill="none" stroke="#6b7280" d="M221.1,-158.98C224.09,-151 227.59,-141.61 230.77,-133.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="232.9,-127.39 233.33,-133.96 231.85,-130.2 230.8,-133.01 230.8,-133.01 230.8,-133.01 231.85,-130.2 228.27,-132.07 232.9,-127.39 232.9,-127.39"/>
+</g>
+<!-- «hyperbolic.canonical_form_2d.principal_symbol» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Eprincipal&#45;005Fsymbol&#45;00BB" class="node">
+<title>«hyperbolic.canonical_form_2d.principal_symbol»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;002Eprincipal&#45;005Fsymbol&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___canonical_form_2d___principal_symbol_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="191,-266.79 97,-266.79 97,-230.79 191,-230.79 191,-266.79"/>
+<text text-anchor="middle" x="144" y="-251.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">canonical_form_2d</text>
+<text text-anchor="middle" x="144" y="-240.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">principal_symbol</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.canonical_form_2d.principal_symbol»&#45;&gt;«hyperbolic.canonical_form_2d.wave_symbol» -->
+<g id="edge4" class="edge">
+<title>«hyperbolic.canonical_form_2d.principal_symbol»&#45;&gt;«hyperbolic.canonical_form_2d.wave_symbol»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M133.67,-230.4C128.38,-221.16 122.01,-209.53 117,-198.79 106.9,-177.14 97.24,-151.71 90.64,-133.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="88.52,-127.4 93.08,-132.15 89.62,-130.19 90.63,-133.02 90.53,-133.05 90.44,-133.09 89.43,-130.26 87.99,-133.96 88.52,-127.4 88.52,-127.4"/>
+</g>
+<!-- «hyperbolic.canonical_form_2d.principal_symbol»&#45;&gt;«hyperbolic.canonical_form_2d.characteristic_covectors» -->
+<g id="edge5" class="edge">
+<title>«hyperbolic.canonical_form_2d.principal_symbol»&#45;&gt;«hyperbolic.canonical_form_2d.characteristic_covectors»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M161.66,-230.69C170.3,-222.32 180.81,-212.14 190.14,-203.1"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="194.62,-198.77 192.19,-204.88 192.53,-200.93 190.38,-203.01 190.31,-202.94 190.24,-202.87 192.39,-200.78 188.43,-201 194.62,-198.77 194.62,-198.77"/>
+</g>
+</g>
+</svg>

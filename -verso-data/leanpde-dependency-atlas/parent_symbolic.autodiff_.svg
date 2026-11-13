@@ -1,0 +1,102 @@
+<svg data-node-count="6" data-edge-count="6" data-cluster-count="1" data-variant-key="parent:«symbolic.autodiff»" width="355pt" height="235pt"
+ viewBox="0.00 0.00 355.00 235.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 231)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-231 351,-231 351,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 327,-8 327,-8 333,-8 339,-14 339,-20 339,-20 339,-207 339,-207 339,-213 333,-219 327,-219 327,-219 20,-219 20,-219 14,-219 8,-213 8,-207 8,-207 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="173.5" y="-203.8" font-family="Helvetica" font-size="14.00">Formal jets and residual losses</text>
+</g>
+<!-- «symbolic.gradient_step» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Egradient&#45;005Fstep&#45;00BB" class="node">
+<title>«symbolic.gradient_step»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Egradient&#45;005Fstep&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___gradient_step_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="128,-120 16,-120 16,-84 128,-84 128,-120"/>
+<text text-anchor="middle" x="72" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.gradient_step</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.interval_jet» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Einterval&#45;005Fjet&#45;00BB" class="node">
+<title>«symbolic.interval_jet»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Einterval&#45;005Fjet&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___interval_jet_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="330.5,-52 229.5,-52 229.5,-16 330.5,-16 330.5,-52"/>
+<text text-anchor="middle" x="280" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.interval_jet</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.taylor_jet» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Etaylor&#45;005Fjet&#45;00BB" class="node">
+<title>«symbolic.taylor_jet»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Etaylor&#45;005Fjet&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___taylor_jet_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="289,-188 195,-188 195,-152 289,-152 289,-188"/>
+<text text-anchor="middle" x="242" y="-167.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.taylor_jet</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.taylor_jet»&#45;&gt;«symbolic.interval_jet» -->
+<g id="edge2" class="edge">
+<title>«symbolic.taylor_jet»&#45;&gt;«symbolic.interval_jet»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M282.43,-151.94C295.56,-144.23 308.64,-133.71 316,-120 327.16,-99.22 313.59,-74.24 300.04,-56.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="296.24,-52.04 302.1,-55.02 298.2,-54.31 300.08,-56.65 300,-56.71 299.92,-56.77 298.04,-54.44 297.9,-58.41 296.24,-52.04 296.24,-52.04"/>
+</g>
+<!-- «symbolic.expression_jet» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eexpression&#45;005Fjet&#45;00BB" class="node">
+<title>«symbolic.expression_jet»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eexpression&#45;005Fjet&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___expression_jet_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="204.5,-52 87.5,-52 87.5,-16 204.5,-16 204.5,-52"/>
+<text text-anchor="middle" x="146" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.expression_jet</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.taylor_jet»&#45;&gt;«symbolic.expression_jet» -->
+<g id="edge4" class="edge">
+<title>«symbolic.taylor_jet»&#45;&gt;«symbolic.expression_jet»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M205.32,-151.94C191.8,-143.98 177.48,-133.3 168,-120 155.07,-101.87 149.73,-76.76 147.53,-58.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="146.86,-52.16 150.18,-57.84 147.27,-55.13 147.59,-58.11 147.49,-58.12 147.39,-58.13 147.07,-55.15 144.81,-58.41 146.86,-52.16 146.86,-52.16"/>
+</g>
+<!-- «symbolic.first_order_jet_semantics» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Efirst&#45;005Forder&#45;005Fjet&#45;005Fsemantics&#45;00BB" class="node">
+<title>«symbolic.first_order_jet_semantics»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Efirst&#45;005Forder&#45;005Fjet&#45;005Fsemantics&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___first_order_jet_semantics_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="303.5,-120 180.5,-120 180.5,-84 303.5,-84 303.5,-120"/>
+<text text-anchor="middle" x="242" y="-105" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic</text>
+<text text-anchor="middle" x="242" y="-94" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_order_jet_semantics</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.taylor_jet»&#45;&gt;«symbolic.first_order_jet_semantics» -->
+<g id="edge6" class="edge">
+<title>«symbolic.taylor_jet»&#45;&gt;«symbolic.first_order_jet_semantics»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M242,-151.66C242,-143.99 242,-134.85 242,-126.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="242,-120.45 244.7,-126.45 242.1,-123.45 242.1,-126.45 242,-126.45 241.9,-126.45 241.9,-123.45 239.3,-126.45 242,-120.45 242,-120.45"/>
+</g>
+<!-- «symbolic.residual_loss» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eresidual&#45;005Floss&#45;00BB" class="node">
+<title>«symbolic.residual_loss»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eresidual&#45;005Floss&#45;00BB"><a xlink:href="Verified-Symbolic-and-Continuous-Computation/#--informal-preview-_FLQQ_symbolic___residual_loss_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="127.5,-188 16.5,-188 16.5,-152 127.5,-152 127.5,-188"/>
+<text text-anchor="middle" x="72" y="-167.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">symbolic.residual_loss</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.residual_loss»&#45;&gt;«symbolic.gradient_step» -->
+<g id="edge1" class="edge">
+<title>«symbolic.residual_loss»&#45;&gt;«symbolic.gradient_step»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M72,-151.66C72,-143.99 72,-134.85 72,-126.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="72,-120.45 74.7,-126.45 72.1,-123.45 72.1,-126.45 72,-126.45 71.9,-126.45 71.9,-123.45 69.3,-126.45 72,-120.45 72,-120.45"/>
+</g>
+<!-- «symbolic.first_order_jet_semantics»&#45;&gt;«symbolic.interval_jet» -->
+<g id="edge3" class="edge">
+<title>«symbolic.first_order_jet_semantics»&#45;&gt;«symbolic.interval_jet»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M251.98,-83.66C256.49,-75.84 261.87,-66.49 266.71,-58.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="269.95,-52.45 269.3,-59 268.54,-55.1 267.04,-57.7 266.96,-57.65 266.87,-57.6 268.37,-55 264.62,-56.31 269.95,-52.45 269.95,-52.45"/>
+</g>
+<!-- «symbolic.first_order_jet_semantics»&#45;&gt;«symbolic.expression_jet» -->
+<g id="edge5" class="edge">
+<title>«symbolic.first_order_jet_semantics»&#45;&gt;«symbolic.expression_jet»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M217.03,-83.83C204.47,-75.2 189.16,-64.67 175.97,-55.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="170.85,-52.08 177.32,-53.26 173.38,-53.7 175.85,-55.4 175.79,-55.48 175.73,-55.56 173.26,-53.86 174.26,-57.71 170.85,-52.08 170.85,-52.08"/>
+</g>
+</g>
+</svg>

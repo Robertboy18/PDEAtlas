@@ -1,0 +1,81 @@
+<svg data-node-count="5" data-edge-count="4" data-cluster-count="1" data-variant-key="parent:«foundations.euclidean_space»" width="266pt" height="303pt"
+ viewBox="0.00 0.00 266.00 303.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 299)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-299 262,-299 262,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 238,-8 238,-8 244,-8 250,-14 250,-20 250,-20 250,-275 250,-275 250,-281 244,-287 238,-287 238,-287 20,-287 20,-287 14,-287 8,-281 8,-275 8,-275 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="129" y="-271.8" font-family="Helvetica" font-size="14.00">Euclidean and spacetime foundations</text>
+</g>
+<!-- «foundations.euclidean_space.constructor» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Econstructor&#45;00BB" class="node">
+<title>«foundations.euclidean_space.constructor»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Econstructor&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___euclidean_space___constructor_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="197.5,-188 60.5,-188 60.5,-152 197.5,-152 197.5,-188"/>
+<text text-anchor="middle" x="129" y="-167.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">euclidean_space.constructor</text>
+</a>
+</g>
+</g>
+<!-- «foundations.euclidean_space.spacetime» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Espacetime&#45;00BB" class="node">
+<title>«foundations.euclidean_space.spacetime»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Espacetime&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___euclidean_space___spacetime_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="195.5,-120 62.5,-120 62.5,-84 195.5,-84 195.5,-120"/>
+<text text-anchor="middle" x="129" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">euclidean_space.spacetime</text>
+</a>
+</g>
+</g>
+<!-- «foundations.euclidean_space.constructor»&#45;&gt;«foundations.euclidean_space.spacetime» -->
+<g id="edge3" class="edge">
+<title>«foundations.euclidean_space.constructor»&#45;&gt;«foundations.euclidean_space.spacetime»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M129,-151.66C129,-143.99 129,-134.85 129,-126.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="129,-120.45 131.7,-126.45 129.1,-123.45 129.1,-126.45 129,-126.45 128.9,-126.45 128.9,-123.45 126.3,-126.45 129,-120.45 129,-120.45"/>
+</g>
+<!-- «foundations.euclidean_space.spatial_projection» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Espatial&#45;005Fprojection&#45;00BB" class="node">
+<title>«foundations.euclidean_space.spatial_projection»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Espatial&#45;005Fprojection&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___euclidean_space___spatial_projection_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="106,-52 18,-52 18,-16 106,-16 106,-52"/>
+<text text-anchor="middle" x="62" y="-37" font-family="Helvetica" font-size="10.00" fill="#ffffff">euclidean_space</text>
+<text text-anchor="middle" x="62" y="-26" font-family="Helvetica" font-size="10.00" fill="#ffffff">spatial_projection</text>
+</a>
+</g>
+</g>
+<!-- «foundations.euclidean_space.type» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Etype&#45;00BB" class="node">
+<title>«foundations.euclidean_space.type»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Etype&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___euclidean_space___type_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="182.5,-256 75.5,-256 75.5,-220 182.5,-220 182.5,-256"/>
+<text text-anchor="middle" x="129" y="-235.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">euclidean_space.type</text>
+</a>
+</g>
+</g>
+<!-- «foundations.euclidean_space.type»&#45;&gt;«foundations.euclidean_space.constructor» -->
+<g id="edge1" class="edge">
+<title>«foundations.euclidean_space.type»&#45;&gt;«foundations.euclidean_space.constructor»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M129,-219.66C129,-211.99 129,-202.85 129,-194.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="129,-188.45 131.7,-194.45 129.1,-191.45 129.1,-194.45 129,-194.45 128.9,-194.45 128.9,-191.45 126.3,-194.45 129,-188.45 129,-188.45"/>
+</g>
+<!-- «foundations.euclidean_space.spacetime»&#45;&gt;«foundations.euclidean_space.spatial_projection» -->
+<g id="edge2" class="edge">
+<title>«foundations.euclidean_space.spacetime»&#45;&gt;«foundations.euclidean_space.spatial_projection»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M111.4,-83.66C103.15,-75.54 93.24,-65.77 84.46,-57.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="79.72,-52.45 85.89,-54.74 81.93,-54.49 84.06,-56.59 83.99,-56.66 83.92,-56.74 81.79,-54.63 82.1,-58.59 79.72,-52.45 79.72,-52.45"/>
+</g>
+<!-- «foundations.euclidean_space.time» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Etime&#45;00BB" class="node">
+<title>«foundations.euclidean_space.time»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;002Etime&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___euclidean_space___time_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="238.5,-52 131.5,-52 131.5,-16 238.5,-16 238.5,-52"/>
+<text text-anchor="middle" x="185" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">euclidean_space.time</text>
+</a>
+</g>
+</g>
+<!-- «foundations.euclidean_space.spacetime»&#45;&gt;«foundations.euclidean_space.time» -->
+<g id="edge4" class="edge">
+<title>«foundations.euclidean_space.spacetime»&#45;&gt;«foundations.euclidean_space.time»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M143.71,-83.66C150.6,-75.54 158.89,-65.77 166.23,-57.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="170.19,-52.45 168.37,-58.78 168.33,-54.81 166.38,-57.09 166.31,-57.03 166.23,-56.96 168.17,-54.68 164.25,-55.28 170.19,-52.45 170.19,-52.45"/>
+</g>
+</g>
+</svg>

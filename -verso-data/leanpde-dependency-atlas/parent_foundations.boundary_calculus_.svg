@@ -1,0 +1,1654 @@
+<svg data-node-count="89" data-edge-count="126" data-cluster-count="1" data-variant-key="parent:«foundations.boundary_calculus»" width="2376pt" height="1101pt"
+ viewBox="0.00 0.00 2376.00 1101.37" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1097.37)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-1097.37 2372,-1097.37 2372,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 2348,-8 2348,-8 2354,-8 2360,-14 2360,-20 2360,-20 2360,-1073.37 2360,-1073.37 2360,-1079.37 2354,-1085.37 2348,-1085.37 2348,-1085.37 20,-1085.37 20,-1085.37 14,-1085.37 8,-1079.37 8,-1073.37 8,-1073.37 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="1184" y="-1070.17" font-family="Helvetica" font-size="14.00">Boundary integration and operational boundary geometry</text>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_transition»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_transition_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1075,-912.97 949,-912.97 949,-876.97 1075,-876.97 1075,-912.97"/>
+<text text-anchor="middle" x="1012" y="-897.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1012" y="-886.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_transition</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition_parametrization» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;005Fparametrization&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_transition_parametrization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;005Fparametrization&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_transition_parametrization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="777" cy="-823.38" rx="140.01" ry="19.6"/>
+<text text-anchor="middle" x="777" y="-826.38" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="777" y="-815.38" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_transition_parametrization</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_parametrization» -->
+<g id="edge29" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_transition»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_parametrization»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M954.51,-876.95C920.09,-866.75 876.27,-853.78 840.78,-843.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="834.71,-841.47 841.23,-840.58 837.61,-842.22 840.49,-843.08 840.46,-843.17 840.43,-843.27 837.56,-842.42 839.69,-845.76 834.71,-841.47 834.71,-841.47"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition_regular» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;005Fregular&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_transition_regular»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;005Fregular&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_transition_regular_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1082" cy="-823.38" rx="113.27" ry="19.6"/>
+<text text-anchor="middle" x="1082" y="-826.38" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1082" y="-815.38" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_transition_regular</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_regular» -->
+<g id="edge121" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_transition»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_regular»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1029.3,-876.77C1038.22,-867.9 1049.22,-856.97 1058.86,-847.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1063.18,-843.09 1060.83,-849.24 1061.12,-845.28 1058.99,-847.39 1058.92,-847.32 1058.85,-847.25 1060.98,-845.14 1057.02,-845.41 1063.18,-843.09 1063.18,-843.09"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_restricted_integral» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Frestricted&#45;005Fintegral&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_restricted_integral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Frestricted&#45;005Fintegral&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_restricted_integral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="943" cy="-608.58" rx="115.02" ry="19.6"/>
+<text text-anchor="middle" x="943" y="-611.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="943" y="-600.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_restricted_integral</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition»&#45;&gt;«foundations.boundary_calculus.chart_boundary_restricted_integral» -->
+<g id="edge125" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_transition»&#45;&gt;«foundations.boundary_calculus.chart_boundary_restricted_integral»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M985.37,-876.89C974.25,-868.23 962.44,-856.68 956,-843.18 922.87,-773.67 931.68,-679 938.48,-634.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="939.42,-628.63 941.15,-634.98 939.05,-631.61 938.58,-634.57 938.48,-634.55 938.38,-634.54 938.85,-631.58 935.81,-634.13 939.42,-628.63 939.42,-628.63"/>
+</g>
+<!-- «foundations.boundary_calculus.intrinsic_surface_measure_finite» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eintrinsic&#45;005Fsurface&#45;005Fmeasure&#45;005Ffinite&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.intrinsic_surface_measure_finite»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eintrinsic&#45;005Fsurface&#45;005Fmeasure&#45;005Ffinite&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___intrinsic_surface_measure_finite_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1997" cy="-393.79" rx="108.79" ry="19.6"/>
+<text text-anchor="middle" x="1997" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1997" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">intrinsic_surface_measure_finite</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.surface_density_finite» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fdensity&#45;005Ffinite&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_density_finite»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fdensity&#45;005Ffinite&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_density_finite_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2078" cy="-322.19" rx="77.15" ry="19.6"/>
+<text text-anchor="middle" x="2078" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="2078" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_density_finite</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.intrinsic_surface_measure_finite»&#45;&gt;«foundations.boundary_calculus.surface_density_finite» -->
+<g id="edge40" class="edge">
+<title>«foundations.boundary_calculus.intrinsic_surface_measure_finite»&#45;&gt;«foundations.boundary_calculus.surface_density_finite»</title>
+<path fill="none" stroke="#6b7280" d="M2018.71,-374.14C2028.95,-365.34 2041.25,-354.77 2051.98,-345.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2056.79,-341.41 2054,-347.37 2054.52,-343.37 2052.24,-345.32 2052.24,-345.32 2052.24,-345.32 2054.52,-343.37 2050.48,-343.27 2056.79,-341.41 2056.79,-341.41"/>
+</g>
+<!-- «foundations.boundary_calculus.gauss_green_c1» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egauss&#45;005Fgreen&#45;005Fc1&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.gauss_green_c1»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egauss&#45;005Fgreen&#45;005Fc1&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___gauss_green_c1_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="557" cy="-250.59" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="557" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="557" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">gauss_green_c1</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.intrinsic_surface_measure_finite»&#45;&gt;«foundations.boundary_calculus.gauss_green_c1» -->
+<g id="edge108" class="edge">
+<title>«foundations.boundary_calculus.intrinsic_surface_measure_finite»&#45;&gt;«foundations.boundary_calculus.gauss_green_c1»</title>
+<path fill="none" stroke="#6b7280" d="M1919.63,-379.78C1842.46,-366.58 1734.19,-347.34 1726,-341.99 1708.17,-330.34 1717.68,-312.63 1699,-302.39 1596.35,-246.13 762.22,-284.32 646,-270.39 635.28,-269.11 623.95,-267.17 613.08,-265.02"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="607.1,-263.8 613.52,-262.35 610.04,-264.4 612.98,-265 612.98,-265 612.98,-265 610.04,-264.4 612.45,-267.64 607.1,-263.8 607.1,-263.8"/>
+</g>
+<!-- «foundations.boundary_calculus.gauss_box» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egauss&#45;005Fbox&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.gauss_box»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egauss&#45;005Fbox&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___gauss_box_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="249" cy="-966.57" rx="82.5" ry="18"/>
+<text text-anchor="middle" x="249" y="-964.07" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus.gauss_box</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.green_circulation_rectangle» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Fcirculation&#45;005Frectangle&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.green_circulation_rectangle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Fcirculation&#45;005Frectangle&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___green_circulation_rectangle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="279" cy="-894.97" rx="92.76" ry="19.6"/>
+<text text-anchor="middle" x="279" y="-897.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="279" y="-886.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">green_circulation_rectangle</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.gauss_box»&#45;&gt;«foundations.boundary_calculus.green_circulation_rectangle» -->
+<g id="edge44" class="edge">
+<title>«foundations.boundary_calculus.gauss_box»&#45;&gt;«foundations.boundary_calculus.green_circulation_rectangle»</title>
+<path fill="none" stroke="#6b7280" d="M256.42,-948.37C260.04,-939.97 264.46,-929.71 268.43,-920.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="270.83,-914.94 270.93,-921.52 269.64,-917.69 268.45,-920.45 268.45,-920.45 268.45,-920.45 269.64,-917.69 265.97,-919.38 270.83,-914.94 270.83,-914.94"/>
+</g>
+<!-- «foundations.boundary_calculus.green_flux_rectangle» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Fflux&#45;005Frectangle&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.green_flux_rectangle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Fflux&#45;005Frectangle&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___green_flux_rectangle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="89" cy="-894.97" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="89" y="-897.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="89" y="-886.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">green_flux_rectangle</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.gauss_box»&#45;&gt;«foundations.boundary_calculus.green_flux_rectangle» -->
+<g id="edge90" class="edge">
+<title>«foundations.boundary_calculus.gauss_box»&#45;&gt;«foundations.boundary_calculus.green_flux_rectangle»</title>
+<path fill="none" stroke="#6b7280" d="M213.49,-950.13C189.35,-939.63 157.29,-925.68 131.75,-914.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="126.08,-912.1 132.66,-912.02 128.83,-913.3 131.58,-914.5 131.58,-914.5 131.58,-914.5 128.83,-913.3 130.5,-916.97 126.08,-912.1 126.08,-912.1"/>
+</g>
+<!-- «foundations.boundary_calculus.rectangle_circulation» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erectangle&#45;005Fcirculation&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.rectangle_circulation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erectangle&#45;005Fcirculation&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___rectangle_circulation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="458,-984.57 356,-984.57 356,-948.57 458,-948.57 458,-984.57"/>
+<text text-anchor="middle" x="407" y="-969.57" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="407" y="-958.57" font-family="Helvetica" font-size="10.00" fill="#ffffff">rectangle_circulation</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.rectangle_circulation»&#45;&gt;«foundations.boundary_calculus.green_circulation_rectangle» -->
+<g id="edge45" class="edge">
+<title>«foundations.boundary_calculus.rectangle_circulation»&#45;&gt;«foundations.boundary_calculus.green_circulation_rectangle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M375.69,-948.55C357.98,-938.92 335.71,-926.81 317.01,-916.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="311.33,-913.55 317.89,-914.05 314.01,-914.9 316.64,-916.33 316.6,-916.42 316.55,-916.51 313.91,-915.07 315.31,-918.79 311.33,-913.55 311.33,-913.55"/>
+</g>
+<!-- «foundations.boundary_calculus.c1_graph_boundary» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Ec1&#45;005Fgraph&#45;005Fboundary&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.c1_graph_boundary»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Ec1&#45;005Fgraph&#45;005Fboundary&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___c1_graph_boundary_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="141,-340.19 43,-340.19 43,-304.19 141,-304.19 141,-340.19"/>
+<text text-anchor="middle" x="92" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="92" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">c1_graph_boundary</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.star_shaped_flux» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Estar&#45;005Fshaped&#45;005Fflux&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.star_shaped_flux»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Estar&#45;005Fshaped&#45;005Fflux&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___star_shaped_flux_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="82" cy="-250.59" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="82" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="82" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">star_shaped_flux</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.c1_graph_boundary»&#45;&gt;«foundations.boundary_calculus.star_shaped_flux» -->
+<g id="edge27" class="edge">
+<title>«foundations.boundary_calculus.c1_graph_boundary»&#45;&gt;«foundations.boundary_calculus.star_shaped_flux»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M89.53,-303.99C88.34,-295.74 86.9,-285.72 85.6,-276.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="84.72,-270.56 88.25,-276.11 85.25,-273.51 85.68,-276.48 85.58,-276.5 85.48,-276.51 85.05,-273.54 82.91,-276.88 84.72,-270.56 84.72,-270.56"/>
+</g>
+<!-- «foundations.boundary_calculus.c1_graph_boundary»&#45;&gt;«foundations.boundary_calculus.gauss_green_c1» -->
+<g id="edge106" class="edge">
+<title>«foundations.boundary_calculus.c1_graph_boundary»&#45;&gt;«foundations.boundary_calculus.gauss_green_c1»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M141.19,-305.33C145.49,-304.23 149.81,-303.23 154,-302.39 295.92,-274.15 335.29,-294.31 478,-270.39 485.87,-269.07 494.12,-267.42 502.19,-265.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="508.33,-264.26 503.06,-268.21 505.42,-265.02 502.49,-265.68 502.47,-265.58 502.45,-265.48 505.38,-264.82 501.88,-262.95 508.33,-264.26 508.33,-264.26"/>
+</g>
+<!-- «foundations.boundary_calculus.ball_normal_derivative_gradient» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eball&#45;005Fnormal&#45;005Fderivative&#45;005Fgradient&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.ball_normal_derivative_gradient»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eball&#45;005Fnormal&#45;005Fderivative&#45;005Fgradient&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___ball_normal_derivative_gradient_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="892" cy="-322.19" rx="104.8" ry="19.6"/>
+<text text-anchor="middle" x="892" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="892" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">ball_normal_derivative_gradient</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_ac_surface» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Fac&#45;005Fsurface&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_ac_surface»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Fac&#45;005Fsurface&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_measure_ac_surface_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1954" cy="-465.39" rx="124.4" ry="19.6"/>
+<text text-anchor="middle" x="1954" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1954" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_measure_ac_surface</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_surface_same_null_sets» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fsurface&#45;005Fsame&#45;005Fnull&#45;005Fsets&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_surface_same_null_sets»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fsurface&#45;005Fsame&#45;005Fnull&#45;005Fsets&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_surface_same_null_sets_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1761" cy="-393.79" rx="102.56" ry="19.6"/>
+<text text-anchor="middle" x="1761" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1761" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_surface_same_null_sets</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_ac_surface»&#45;&gt;«foundations.boundary_calculus.atlas_surface_same_null_sets» -->
+<g id="edge10" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_ac_surface»&#45;&gt;«foundations.boundary_calculus.atlas_surface_same_null_sets»</title>
+<path fill="none" stroke="#6b7280" d="M1905.8,-447C1877.53,-436.81 1841.83,-423.94 1812.94,-413.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1807.26,-411.47 1813.82,-410.97 1810.08,-412.49 1812.91,-413.51 1812.91,-413.51 1812.91,-413.51 1810.08,-412.49 1811.99,-416.05 1807.26,-411.47 1807.26,-411.47"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_density_positive» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fdensity&#45;005Fpositive&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_density_positive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fdensity&#45;005Fpositive&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_density_positive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2266" cy="-322.19" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="2266" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="2266" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_density_positive</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_ac_surface»&#45;&gt;«foundations.boundary_calculus.surface_density_positive» -->
+<g id="edge47" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_ac_surface»&#45;&gt;«foundations.boundary_calculus.surface_density_positive»</title>
+<path fill="none" stroke="#6b7280" d="M2042.59,-451.46C2134.15,-437.89 2264.3,-417.94 2268,-413.59 2283.12,-395.82 2280.01,-368.22 2274.74,-348.18"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2273.05,-342.23 2277.29,-347.27 2273.87,-345.11 2274.69,-348 2274.69,-348 2274.69,-348 2273.87,-345.11 2272.09,-348.74 2273.05,-342.23 2273.05,-342.23"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_density» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Fdensity&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_density»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Fdensity&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_measure_density_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1633.5,-411.79 1474.5,-411.79 1474.5,-375.79 1633.5,-375.79 1633.5,-411.79"/>
+<text text-anchor="middle" x="1554" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1554" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_measure_density</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_ac_surface»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_density» -->
+<g id="edge104" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_ac_surface»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_density»</title>
+<path fill="none" stroke="#6b7280" d="M1867.88,-451.08C1806.04,-441.31 1720.75,-427.38 1646,-413.59 1644,-413.22 1641.97,-412.84 1639.92,-412.45"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1633.75,-411.28 1640.15,-409.75 1636.7,-411.84 1639.64,-412.4 1639.64,-412.4 1639.64,-412.4 1636.7,-411.84 1639.14,-415.05 1633.75,-411.28 1633.75,-411.28"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_measure» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparameter&#45;005Fmeasure&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_measure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparameter&#45;005Fmeasure&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_parameter_measure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1438,-769.78 1266,-769.78 1266,-733.78 1438,-733.78 1438,-769.78"/>
+<text text-anchor="middle" x="1352" y="-754.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1352" y="-743.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_parameter_measure</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_measure» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fmeasure&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_measure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fmeasure&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_measure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1275,-698.18 1151,-698.18 1151,-662.18 1275,-662.18 1275,-698.18"/>
+<text text-anchor="middle" x="1213" y="-683.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1213" y="-672.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_measure</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure» -->
+<g id="edge19" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1318,-733.75C1298.22,-723.85 1273.21,-711.33 1252.56,-700.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1247.13,-698.27 1253.71,-698.54 1249.86,-699.53 1252.54,-700.87 1252.5,-700.96 1252.45,-701.05 1249.77,-699.7 1251.29,-703.37 1247.13,-698.27 1247.13,-698.27"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_integral» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparameter&#45;005Fintegral&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_integral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparameter&#45;005Fintegral&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_parameter_integral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1417" cy="-680.18" rx="117.26" ry="19.6"/>
+<text text-anchor="middle" x="1417" y="-683.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1417" y="-672.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_parameter_integral</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parameter_integral» -->
+<g id="edge41" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parameter_integral»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1368.07,-733.57C1376.21,-724.86 1386.22,-714.14 1395.06,-704.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1399.29,-700.14 1397.17,-706.37 1397.31,-702.4 1395.27,-704.6 1395.19,-704.53 1395.12,-704.46 1397.17,-702.27 1393.22,-702.69 1399.29,-700.14 1399.29,-700.14"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_tangential_derivative_injective» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftangential&#45;005Fderivative&#45;005Finjective&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_tangential_derivative_injective»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftangential&#45;005Fderivative&#45;005Finjective&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_tangential_derivative_injective_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1914" cy="-751.78" rx="151.14" ry="19.6"/>
+<text text-anchor="middle" x="1914" y="-754.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1914" y="-743.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_tangential_derivative_injective</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_jacobian_pos» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fjacobian&#45;005Fpos&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_jacobian_pos»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fjacobian&#45;005Fpos&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_jacobian_pos_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1909" cy="-680.18" rx="101.23" ry="19.6"/>
+<text text-anchor="middle" x="1909" y="-683.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1909" y="-672.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_jacobian_pos</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_tangential_derivative_injective»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian_pos» -->
+<g id="edge58" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_tangential_derivative_injective»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian_pos»</title>
+<path fill="none" stroke="#6b7280" d="M1912.63,-731.76C1912.07,-723.94 1911.41,-714.76 1910.81,-706.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1910.36,-700.18 1913.49,-705.97 1910.58,-703.17 1910.79,-706.16 1910.79,-706.16 1910.79,-706.16 1910.58,-703.17 1908.1,-706.35 1910.36,-700.18 1910.36,-700.18"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_surface_same_ae_equality» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fsurface&#45;005Fsame&#45;005Fae&#45;005Fequality&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_surface_same_ae_equality»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fsurface&#45;005Fsame&#45;005Fae&#45;005Fequality&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_surface_same_ae_equality_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1320" cy="-322.19" rx="110.12" ry="19.6"/>
+<text text-anchor="middle" x="1320" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1320" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_surface_same_ae_equality</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_surface_same_null_sets»&#45;&gt;«foundations.boundary_calculus.atlas_surface_same_ae_equality» -->
+<g id="edge23" class="edge">
+<title>«foundations.boundary_calculus.atlas_surface_same_null_sets»&#45;&gt;«foundations.boundary_calculus.atlas_surface_same_ae_equality»</title>
+<path fill="none" stroke="#6b7280" d="M1685.54,-380.37C1672.37,-378.23 1658.79,-376.03 1646,-373.99 1565.18,-361.09 1473.01,-346.76 1407.35,-336.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1401.08,-335.65 1407.42,-333.9 1404.04,-336.11 1407.01,-336.57 1407.01,-336.57 1407.01,-336.57 1404.04,-336.11 1406.6,-339.24 1401.08,-335.65 1401.08,-335.65"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cell_measurable» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fcell&#45;005Fmeasurable&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_cell_measurable»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fcell&#45;005Fmeasurable&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_cell_measurable_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1711" cy="-536.98" rx="111.03" ry="19.6"/>
+<text text-anchor="middle" x="1711" y="-539.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1711" y="-528.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_cell_measurable</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_trace_lp_norm» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Ftrace&#45;005Flp&#45;005Fnorm&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_trace_lp_norm»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Ftrace&#45;005Flp&#45;005Fnorm&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_trace_lp_norm_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2187" cy="-107.4" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="2187" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="2187" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_trace_lp_norm</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_surface_measure_iff» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Fsurface&#45;005Fmeasure&#45;005Fiff&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_surface_measure_iff»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Fsurface&#45;005Fmeasure&#45;005Fiff&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_measure_surface_measure_iff_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="555" cy="-322.19" rx="152.97" ry="19.6"/>
+<text text-anchor="middle" x="555" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="555" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_measure_surface_measure_iff</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_surface_measure_iff»&#45;&gt;«foundations.boundary_calculus.gauss_green_c1» -->
+<g id="edge107" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_surface_measure_iff»&#45;&gt;«foundations.boundary_calculus.gauss_green_c1»</title>
+<path fill="none" stroke="#6b7280" d="M555.55,-302.17C555.77,-294.35 556.04,-285.17 556.28,-276.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="556.45,-270.59 558.98,-276.66 556.37,-273.59 556.28,-276.59 556.28,-276.59 556.28,-276.59 556.37,-273.59 553.58,-276.51 556.45,-270.59 556.45,-270.59"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_integral_local» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fintegral&#45;005Flocal&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_integral_local»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fintegral&#45;005Flocal&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_integral_local_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="857" cy="-393.79" rx="100.32" ry="19.6"/>
+<text text-anchor="middle" x="857" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="857" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_integral_local</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_measure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_measure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1134,-554.98 1012,-554.98 1012,-518.98 1134,-518.98 1134,-554.98"/>
+<text text-anchor="middle" x="1073" y="-539.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1073" y="-528.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_measure</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure» -->
+<g id="edge66" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1196.11,-662.15C1170.57,-636.39 1122.14,-587.55 1094.24,-559.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1089.95,-555.08 1096.09,-557.44 1092.13,-557.14 1094.24,-559.27 1094.17,-559.34 1094.1,-559.41 1091.99,-557.28 1092.25,-561.24 1089.95,-555.08 1089.95,-555.08"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cell» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fcell&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_cell»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fcell&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_cell_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1304.5,-626.58 1203.5,-626.58 1203.5,-590.58 1304.5,-590.58 1304.5,-626.58"/>
+<text text-anchor="middle" x="1254" y="-611.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1254" y="-600.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_cell</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_cell» -->
+<g id="edge103" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_cell»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1223.13,-661.98C1228.5,-652.87 1235.14,-641.59 1240.89,-631.83"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1243.98,-626.59 1243.26,-633.13 1242.55,-629.22 1241.02,-631.81 1240.94,-631.76 1240.85,-631.71 1242.37,-629.12 1238.61,-630.39 1243.98,-626.59 1243.98,-626.59"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_integral» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fintegral&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_integral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fintegral&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_integral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1417" cy="-608.58" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="1417" y="-611.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1417" y="-600.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_integral</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_integral» -->
+<g id="edge112" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_integral»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1262.9,-662.16C1294,-651.55 1333.92,-637.93 1365.34,-627.21"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1371.1,-625.24 1366.29,-629.74 1368.29,-626.31 1365.45,-627.27 1365.42,-627.18 1365.39,-627.09 1368.23,-626.12 1364.55,-624.62 1371.1,-625.24 1371.1,-625.24"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_restricted_integral» -->
+<g id="edge124" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_restricted_integral»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1150.72,-663.13C1108.77,-652.31 1053.48,-638.06 1010.49,-626.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1004.5,-625.44 1010.99,-624.32 1007.43,-626.09 1010.34,-626.84 1010.31,-626.93 1010.29,-627.03 1007.38,-626.28 1009.64,-629.55 1004.5,-625.44 1004.5,-625.44"/>
+</g>
+<!-- «foundations.boundary_calculus.ball_normal_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eball&#45;005Fnormal&#45;005Fderivative&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.ball_normal_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eball&#45;005Fnormal&#45;005Fderivative&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___ball_normal_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1090,-411.79 982,-411.79 982,-375.79 1090,-375.79 1090,-411.79"/>
+<text text-anchor="middle" x="1036" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1036" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">ball_normal_derivative</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.ball_normal_derivative»&#45;&gt;«foundations.boundary_calculus.ball_normal_derivative_gradient» -->
+<g id="edge4" class="edge">
+<title>«foundations.boundary_calculus.ball_normal_derivative»&#45;&gt;«foundations.boundary_calculus.ball_normal_derivative_gradient»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1000.77,-375.76C980.6,-366.01 955.15,-353.71 933.94,-343.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="928.37,-340.77 934.94,-340.95 931.11,-341.98 933.81,-343.29 933.77,-343.38 933.72,-343.47 931.02,-342.16 932.59,-345.81 928.37,-340.77 928.37,-340.77"/>
+</g>
+<!-- «foundations.boundary_calculus.gauss_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egauss&#45;005Fball&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.gauss_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egauss&#45;005Fball&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___gauss_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1103" cy="-322.19" rx="81.86" ry="18"/>
+<text text-anchor="middle" x="1103" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus.gauss_ball</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.ball_normal_derivative»&#45;&gt;«foundations.boundary_calculus.gauss_ball» -->
+<g id="edge81" class="edge">
+<title>«foundations.boundary_calculus.ball_normal_derivative»&#45;&gt;«foundations.boundary_calculus.gauss_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1052.56,-375.58C1061.57,-366.23 1072.79,-354.57 1082.36,-344.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1086.63,-340.2 1084.41,-346.39 1084.62,-342.43 1082.54,-344.59 1082.47,-344.52 1082.4,-344.45 1084.48,-342.29 1080.52,-342.65 1086.63,-340.2 1086.63,-340.2"/>
+</g>
+<!-- «foundations.boundary_calculus.green_second_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Fsecond&#45;005Fball&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.green_second_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Fsecond&#45;005Fball&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___green_second_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="883" cy="-250.59" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="883" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="883" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">green_second_ball</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.ball_normal_derivative»&#45;&gt;«foundations.boundary_calculus.green_second_ball» -->
+<g id="edge88" class="edge">
+<title>«foundations.boundary_calculus.ball_normal_derivative»&#45;&gt;«foundations.boundary_calculus.green_second_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M981.74,-376.8C977.78,-375.8 973.84,-374.85 970,-373.99 927.15,-364.4 803.43,-375.46 775,-341.99 763.61,-328.58 765.57,-317.25 775,-302.39 786.32,-284.56 805.75,-272.87 825.04,-265.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="831.01,-263.03 826.34,-267.66 828.24,-264.18 825.43,-265.23 825.39,-265.13 825.36,-265.04 828.17,-263.99 824.45,-262.6 831.01,-263.03 831.01,-263.03"/>
+</g>
+<!-- «foundations.boundary_calculus.green_first_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Ffirst&#45;005Fball&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.green_first_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Ffirst&#45;005Fball&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___green_first_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="725" cy="-250.59" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="725" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="725" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">green_first_ball</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.ball_normal_derivative»&#45;&gt;«foundations.boundary_calculus.green_first_ball» -->
+<g id="edge123" class="edge">
+<title>«foundations.boundary_calculus.ball_normal_derivative»&#45;&gt;«foundations.boundary_calculus.green_first_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M981.75,-376.75C977.79,-375.76 973.84,-374.83 970,-373.99 878.19,-353.97 834.55,-400.48 761,-341.99 740.99,-326.08 732.06,-297.38 728.1,-276.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="727.02,-270.41 730.71,-275.85 727.64,-273.34 728.15,-276.3 728.05,-276.32 727.95,-276.33 727.44,-273.38 725.39,-276.78 727.02,-270.41 727.02,-270.41"/>
+</g>
+<!-- «foundations.boundary_calculus.supercritical_nonexistence» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esupercritical&#45;005Fnonexistence&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.supercritical_nonexistence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esupercritical&#45;005Fnonexistence&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___supercritical_nonexistence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="288" cy="-35.8" rx="90.52" ry="19.6"/>
+<text text-anchor="middle" x="288" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="288" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">supercritical_nonexistence</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_domain» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparameter&#45;005Fdomain&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_domain»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparameter&#45;005Fdomain&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_parameter_domain_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1506,-1054.37 1340,-1054.37 1340,-1018.37 1506,-1018.37 1506,-1054.37"/>
+<text text-anchor="middle" x="1423" y="-1039.37" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1423" y="-1028.37" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_parameter_domain</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_domain»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parameter_measure» -->
+<g id="edge7" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_domain»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parameter_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1386.93,-1018.26C1374.52,-1010.4 1361.98,-999.8 1355,-986.37 1318.97,-917.1 1335.44,-819.9 1345.82,-775.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1347.3,-769.87 1348.5,-776.34 1346.69,-772.81 1345.98,-775.73 1345.88,-775.7 1345.78,-775.68 1346.49,-772.76 1343.26,-775.06 1347.3,-769.87 1347.3,-769.87"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_reference_measure» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Freference&#45;005Fmeasure&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_reference_measure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Freference&#45;005Fmeasure&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_reference_measure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2070.5,-912.97 1901.5,-912.97 1901.5,-876.97 2070.5,-876.97 2070.5,-912.97"/>
+<text text-anchor="middle" x="1986" y="-897.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1986" y="-886.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_reference_measure</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_domain»&#45;&gt;«foundations.boundary_calculus.chart_boundary_reference_measure» -->
+<g id="edge49" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_domain»&#45;&gt;«foundations.boundary_calculus.chart_boundary_reference_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1506.02,-1018.84C1549.86,-1009.82 1604.49,-998.11 1653,-986.37 1746.68,-963.7 1854.14,-933.82 1921.06,-914.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1927,-913.05 1921.97,-917.29 1924.15,-913.97 1921.26,-914.79 1921.23,-914.69 1921.21,-914.6 1924.09,-913.78 1920.49,-912.1 1927,-913.05 1927,-913.05"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_domain_open» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparameter&#45;005Fdomain&#45;005Fopen&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_domain_open»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparameter&#45;005Fdomain&#45;005Fopen&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_parameter_domain_open_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1504" cy="-966.57" rx="136.44" ry="19.6"/>
+<text text-anchor="middle" x="1504" y="-969.57" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1504" y="-958.57" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_parameter_domain_open</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_domain»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parameter_domain_open» -->
+<g id="edge63" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_domain»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parameter_domain_open»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1443.44,-1018.26C1453.52,-1009.83 1465.82,-999.53 1476.69,-990.43"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1481.57,-986.35 1478.7,-992.27 1479.34,-988.35 1477.03,-990.27 1476.97,-990.2 1476.91,-990.12 1479.21,-988.19 1475.24,-988.13 1481.57,-986.35 1481.57,-986.35"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parametrization» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparametrization&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_parametrization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparametrization&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_parametrization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1297.5,-984.57 1144.5,-984.57 1144.5,-948.57 1297.5,-948.57 1297.5,-984.57"/>
+<text text-anchor="middle" x="1221" y="-969.57" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1221" y="-958.57" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_parametrization</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_domain»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parametrization» -->
+<g id="edge80" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_domain»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parametrization»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1372.29,-1018.35C1343.47,-1008.68 1307.33,-996.55 1277.59,-986.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1271.73,-984.6 1278.28,-983.95 1274.61,-985.46 1277.45,-986.42 1277.42,-986.51 1277.39,-986.6 1274.55,-985.65 1276.56,-989.07 1271.73,-984.6 1271.73,-984.6"/>
+</g>
+<!-- «foundations.boundary_calculus.rellich_boundary» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erellich&#45;005Fboundary&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.rellich_boundary»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erellich&#45;005Fboundary&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___rellich_boundary_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="343" cy="-178.99" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="343" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="343" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_boundary</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.pohozaev_boundary» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Epohozaev&#45;005Fboundary&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.pohozaev_boundary»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Epohozaev&#45;005Fboundary&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___pohozaev_boundary_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="503" cy="-107.4" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="503" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="503" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">pohozaev_boundary</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.rellich_boundary»&#45;&gt;«foundations.boundary_calculus.pohozaev_boundary» -->
+<g id="edge51" class="edge">
+<title>«foundations.boundary_calculus.rellich_boundary»&#45;&gt;«foundations.boundary_calculus.pohozaev_boundary»</title>
+<path fill="none" stroke="#6b7280" d="M379.31,-162.2C403.48,-151.69 435.33,-137.83 460.66,-126.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="466.28,-124.37 461.86,-129.24 463.53,-125.56 460.78,-126.76 460.78,-126.76 460.78,-126.76 463.53,-125.56 459.7,-124.29 466.28,-124.37 466.28,-124.37"/>
+</g>
+<!-- «foundations.boundary_calculus.rellich_transverse» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erellich&#45;005Ftransverse&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.rellich_transverse»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erellich&#45;005Ftransverse&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___rellich_transverse_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="341" cy="-107.4" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="341" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="341" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_transverse</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.rellich_boundary»&#45;&gt;«foundations.boundary_calculus.rellich_transverse» -->
+<g id="edge62" class="edge">
+<title>«foundations.boundary_calculus.rellich_boundary»&#45;&gt;«foundations.boundary_calculus.rellich_transverse»</title>
+<path fill="none" stroke="#6b7280" d="M342.45,-158.98C342.23,-151.15 341.96,-141.97 341.72,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="341.55,-127.39 344.42,-133.31 341.63,-130.39 341.72,-133.39 341.72,-133.39 341.72,-133.39 341.63,-130.39 339.02,-133.47 341.55,-127.39 341.55,-127.39"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_atlas_lp_equiv_symm_apply_ae» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fatlas&#45;005Flp&#45;005Fequiv&#45;005Fsymm&#45;005Fapply&#45;005Fae&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_atlas_lp_equiv_symm_apply_ae»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fatlas&#45;005Flp&#45;005Fequiv&#45;005Fsymm&#45;005Fapply&#45;005Fae&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_atlas_lp_equiv_symm_apply_ae_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1744" cy="-178.99" rx="133.79" ry="19.6"/>
+<text text-anchor="middle" x="1744" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1744" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_atlas_lp_equiv_symm_apply_ae</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.star_shaped_flux»&#45;&gt;«foundations.boundary_calculus.supercritical_nonexistence» -->
+<g id="edge22" class="edge">
+<title>«foundations.boundary_calculus.star_shaped_flux»&#45;&gt;«foundations.boundary_calculus.supercritical_nonexistence»</title>
+<path fill="none" stroke="#6b7280" d="M99.56,-231.45C136.93,-192.85 224.24,-102.66 265.56,-59.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="269.89,-55.5 267.66,-61.69 267.81,-57.66 265.72,-59.81 265.72,-59.81 265.72,-59.81 267.81,-57.66 263.78,-57.94 269.89,-55.5 269.89,-55.5"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition_inverse» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;005Finverse&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_transition_inverse»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;005Finverse&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_transition_inverse_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="802" cy="-751.78" rx="115.02" ry="19.6"/>
+<text text-anchor="middle" x="802" y="-754.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="802" y="-743.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_transition_inverse</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_inverse» -->
+<g id="edge73" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_transition_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_inverse»</title>
+<path fill="none" stroke="#6b7280" d="M783.83,-803.36C786.7,-795.38 790.07,-786 793.12,-777.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="795.18,-771.77 795.69,-778.33 794.16,-774.6 793.15,-777.42 793.15,-777.42 793.15,-777.42 794.16,-774.6 790.61,-776.51 795.18,-771.77 795.18,-771.77"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_surface_densities_reciprocal» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fsurface&#45;005Fdensities&#45;005Freciprocal&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_surface_densities_reciprocal»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fsurface&#45;005Fdensities&#45;005Freciprocal&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_surface_densities_reciprocal_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1571" cy="-322.19" rx="115.02" ry="19.6"/>
+<text text-anchor="middle" x="1571" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1571" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_surface_densities_reciprocal</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_jacobian» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fjacobian&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_jacobian»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fjacobian&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_jacobian_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1503,-841.38 1381,-841.38 1381,-805.38 1503,-805.38 1503,-841.38"/>
+<text text-anchor="middle" x="1442" y="-826.38" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1442" y="-815.38" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_jacobian</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_jacobian»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parameter_measure» -->
+<g id="edge8" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_jacobian»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parameter_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1419.75,-805.17C1407.44,-795.65 1392.04,-783.74 1379.03,-773.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1373.99,-769.78 1380.39,-771.32 1376.43,-771.54 1378.8,-773.38 1378.74,-773.46 1378.68,-773.53 1376.3,-771.7 1377.09,-775.59 1373.99,-769.78 1373.99,-769.78"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_jacobian»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian_pos» -->
+<g id="edge57" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_jacobian»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian_pos»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1443.64,-805.28C1446.62,-784.4 1454.95,-749.67 1478,-731.98 1527.13,-694.28 1690.89,-684.05 1801.8,-681.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1808.03,-681.42 1802.09,-684.25 1805.04,-681.59 1802.04,-681.65 1802.04,-681.55 1802.03,-681.45 1805.03,-681.39 1801.98,-678.85 1808.03,-681.42 1808.03,-681.42"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_jacobian_continuous» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fjacobian&#45;005Fcontinuous&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_jacobian_continuous»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fjacobian&#45;005Fcontinuous&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_jacobian_continuous_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1614" cy="-751.78" rx="123.99" ry="19.6"/>
+<text text-anchor="middle" x="1614" y="-754.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1614" y="-743.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_jacobian_continuous</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_jacobian»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian_continuous» -->
+<g id="edge82" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_jacobian»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian_continuous»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1484.08,-805.35C1508.49,-795.47 1539.35,-782.99 1564.87,-772.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1570.56,-770.36 1566.01,-775.11 1567.82,-771.57 1565.04,-772.7 1565,-772.61 1564.96,-772.51 1567.74,-771.39 1563.99,-770.1 1570.56,-770.36 1570.56,-770.36"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition_integral» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;005Fintegral&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_transition_integral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftransition&#45;005Fintegral&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_transition_integral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="802" cy="-680.18" rx="115.02" ry="19.6"/>
+<text text-anchor="middle" x="802" y="-683.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="802" y="-672.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_transition_integral</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_jacobian»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_integral» -->
+<g id="edge97" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_jacobian»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_integral»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1380.92,-808.9C1262.82,-782.85 1003.56,-725.65 875.94,-697.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="869.96,-696.17 876.4,-694.83 872.91,-696.72 875.84,-697.37 875.82,-697.47 875.8,-697.56 872.87,-696.92 875.24,-700.1 869.96,-696.17 869.96,-696.17"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_atlas_lp_equiv_apply_ae» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fatlas&#45;005Flp&#45;005Fequiv&#45;005Fapply&#45;005Fae&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_atlas_lp_equiv_apply_ae»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fatlas&#45;005Flp&#45;005Fequiv&#45;005Fapply&#45;005Fae&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_atlas_lp_equiv_apply_ae_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2014" cy="-178.99" rx="111.03" ry="19.6"/>
+<text text-anchor="middle" x="2014" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="2014" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_atlas_lp_equiv_apply_ae</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.outward_unit_normal_unit» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eoutward&#45;005Funit&#45;005Fnormal&#45;005Funit&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.outward_unit_normal_unit»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eoutward&#45;005Funit&#45;005Fnormal&#45;005Funit&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___outward_unit_normal_unit_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="379" cy="-250.59" rx="86.95" ry="19.6"/>
+<text text-anchor="middle" x="379" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="379" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">outward_unit_normal_unit</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_trace_lp» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Ftrace&#45;005Flp&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_trace_lp»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Ftrace&#45;005Flp&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_trace_lp_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2271,-196.99 2177,-196.99 2177,-160.99 2271,-160.99 2271,-196.99"/>
+<text text-anchor="middle" x="2224" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="2224" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_trace_lp</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_trace_lp»&#45;&gt;«foundations.boundary_calculus.atlas_trace_lp_norm» -->
+<g id="edge13" class="edge">
+<title>«foundations.boundary_calculus.atlas_trace_lp»&#45;&gt;«foundations.boundary_calculus.atlas_trace_lp_norm»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2214.85,-160.79C2210.35,-152.31 2204.83,-141.94 2199.9,-132.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2197.08,-127.36 2202.28,-131.39 2198.58,-129.96 2199.99,-132.61 2199.9,-132.66 2199.81,-132.71 2198.4,-130.06 2197.51,-133.93 2197.08,-127.36 2197.08,-127.36"/>
+</g>
+<!-- «foundations.boundary_calculus.green_first_c1» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Ffirst&#45;005Fc1&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.green_first_c1»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Ffirst&#45;005Fc1&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___green_first_c1_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="591" cy="-178.99" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="591" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="591" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">green_first_c1</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.green_first_c1»&#45;&gt;«foundations.boundary_calculus.pohozaev_boundary» -->
+<g id="edge52" class="edge">
+<title>«foundations.boundary_calculus.green_first_c1»&#45;&gt;«foundations.boundary_calculus.pohozaev_boundary»</title>
+<path fill="none" stroke="#6b7280" d="M568.34,-160.07C556.74,-150.9 542.53,-139.66 530.33,-130.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="525.59,-126.26 531.97,-127.86 527.94,-128.12 530.29,-129.98 530.29,-129.98 530.29,-129.98 527.94,-128.12 528.62,-132.1 525.59,-126.26 525.59,-126.26"/>
+</g>
+<!-- «foundations.boundary_calculus.green_second_c1» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Fsecond&#45;005Fc1&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.green_second_c1»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Egreen&#45;005Fsecond&#45;005Fc1&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___green_second_c1_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="699" cy="-107.4" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="699" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="699" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">green_second_c1</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.green_first_c1»&#45;&gt;«foundations.boundary_calculus.green_second_c1» -->
+<g id="edge101" class="edge">
+<title>«foundations.boundary_calculus.green_first_c1»&#45;&gt;«foundations.boundary_calculus.green_second_c1»</title>
+<path fill="none" stroke="#6b7280" d="M617.7,-160.79C632.62,-151.17 651.33,-139.12 667.04,-129"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="672.24,-125.64 668.66,-131.16 669.71,-127.27 667.19,-128.89 667.19,-128.89 667.19,-128.89 669.71,-127.27 665.73,-126.62 672.24,-125.64 672.24,-125.64"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_atlas_lp_equiv» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fatlas&#45;005Flp&#45;005Fequiv&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_atlas_lp_equiv»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fatlas&#45;005Flp&#45;005Fequiv&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_atlas_lp_equiv_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2139.5,-268.59 2026.5,-268.59 2026.5,-232.59 2139.5,-232.59 2139.5,-268.59"/>
+<text text-anchor="middle" x="2083" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="2083" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_atlas_lp_equiv</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.surface_density_finite»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv» -->
+<g id="edge119" class="edge">
+<title>«foundations.boundary_calculus.surface_density_finite»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv»</title>
+<path fill="none" stroke="#6b7280" d="M2079.37,-302.17C2079.97,-293.75 2080.69,-283.77 2081.33,-274.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2081.77,-268.69 2084.04,-274.86 2081.56,-271.68 2081.34,-274.67 2081.34,-274.67 2081.34,-274.67 2081.56,-271.68 2078.65,-274.48 2081.77,-268.69 2081.77,-268.69"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parameter_integral»&#45;&gt;«foundations.boundary_calculus.chart_boundary_integral» -->
+<g id="edge113" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parameter_integral»&#45;&gt;«foundations.boundary_calculus.chart_boundary_integral»</title>
+<path fill="none" stroke="#6b7280" d="M1417,-660.16C1417,-652.34 1417,-643.16 1417,-634.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1417,-628.58 1419.7,-634.58 1417,-631.58 1417,-634.58 1417,-634.58 1417,-634.58 1417,-631.58 1414.3,-634.58 1417,-628.58 1417,-628.58"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal_evaluation» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;005Fevaluation&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_outward_normal_evaluation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;005Fevaluation&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_outward_normal_evaluation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="576" cy="-536.98" rx="111.03" ry="19.6"/>
+<text text-anchor="middle" x="576" y="-539.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="576" y="-528.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_outward_normal_evaluation</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal_orientation» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;005Forientation&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_outward_normal_orientation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;005Forientation&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_outward_normal_orientation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="477" cy="-465.39" rx="112.36" ry="19.6"/>
+<text text-anchor="middle" x="477" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="477" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_outward_normal_orientation</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal_evaluation»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_orientation» -->
+<g id="edge85" class="edge">
+<title>«foundations.boundary_calculus.chart_outward_normal_evaluation»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_orientation»</title>
+<path fill="none" stroke="#6b7280" d="M549.99,-517.7C537.24,-508.74 521.79,-497.88 508.4,-488.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="503.18,-484.79 509.64,-486.03 505.64,-486.52 508.09,-488.24 508.09,-488.24 508.09,-488.24 505.64,-486.52 506.54,-490.45 503.18,-484.79 503.18,-484.79"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_density_positive»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv» -->
+<g id="edge118" class="edge">
+<title>«foundations.boundary_calculus.surface_density_positive»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv»</title>
+<path fill="none" stroke="#6b7280" d="M2223.09,-304.87C2196.37,-294.71 2161.85,-281.58 2133.76,-270.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2127.87,-268.66 2134.44,-268.27 2130.67,-269.72 2133.48,-270.79 2133.48,-270.79 2133.48,-270.79 2130.67,-269.72 2132.52,-273.31 2127.87,-268.66 2127.87,-268.66"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_integral_cells» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fintegral&#45;005Fcells&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_integral_cells»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fintegral&#45;005Fcells&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_integral_cells_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1411" cy="-465.39" rx="100.32" ry="19.6"/>
+<text text-anchor="middle" x="1411" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1411" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_integral_cells</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_height_domain_sign» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fheight&#45;005Fdomain&#45;005Fsign&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_height_domain_sign»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fheight&#45;005Fdomain&#45;005Fsign&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_height_domain_sign_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="572" cy="-751.78" rx="89.61" ry="19.6"/>
+<text text-anchor="middle" x="572" y="-754.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="572" y="-743.78" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_height_domain_sign</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fconormal&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_conormal»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fconormal&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_conormal_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="619,-698.18 525,-698.18 525,-662.18 619,-662.18 619,-698.18"/>
+<text text-anchor="middle" x="572" y="-683.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="572" y="-672.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_conormal</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_height_domain_sign»&#45;&gt;«foundations.boundary_calculus.chart_conormal» -->
+<g id="edge53" class="edge">
+<title>«foundations.boundary_calculus.chart_height_domain_sign»&#45;&gt;«foundations.boundary_calculus.chart_conormal»</title>
+<path fill="none" stroke="#6b7280" d="M572,-731.76C572,-723.34 572,-713.36 572,-704.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="572,-698.27 574.7,-704.27 572,-701.27 572,-704.27 572,-704.27 572,-704.27 572,-701.27 569.3,-704.27 572,-698.27 572,-698.27"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parametrization_image» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparametrization&#45;005Fimage&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_parametrization_image»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparametrization&#45;005Fimage&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_parametrization_image_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="175" cy="-680.18" rx="130.22" ry="19.6"/>
+<text text-anchor="middle" x="175" y="-683.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="175" y="-672.18" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_parametrization_image</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_height_domain_sign»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parametrization_image» -->
+<g id="edge70" class="edge">
+<title>«foundations.boundary_calculus.chart_height_domain_sign»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parametrization_image»</title>
+<path fill="none" stroke="#6b7280" d="M503.75,-738.81C437.23,-727.15 335.76,-709.36 263.16,-696.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="257.11,-695.57 263.48,-693.95 260.06,-696.09 263.02,-696.61 263.02,-696.61 263.02,-696.61 260.06,-696.09 262.55,-699.27 257.11,-695.57 257.11,-695.57"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal_compatible» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fconormal&#45;005Fcompatible&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_conormal_compatible»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fconormal&#45;005Fcompatible&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_conormal_compatible_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="137" cy="-536.98" rx="94.09" ry="19.6"/>
+<text text-anchor="middle" x="137" y="-539.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="137" y="-528.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_conormal_compatible</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_height_domain_sign»&#45;&gt;«foundations.boundary_calculus.chart_conormal_compatible» -->
+<g id="edge77" class="edge">
+<title>«foundations.boundary_calculus.chart_height_domain_sign»&#45;&gt;«foundations.boundary_calculus.chart_conormal_compatible»</title>
+<path fill="none" stroke="#6b7280" d="M536.77,-733.55C457.01,-694.53 262.97,-599.61 178,-558.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="172.56,-555.38 179.13,-555.59 175.25,-556.7 177.95,-558.02 177.95,-558.02 177.95,-558.02 175.25,-556.7 176.76,-560.44 172.56,-555.38 172.56,-555.38"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_patch_ac_chart_boundary_measure» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fpatch&#45;005Fac&#45;005Fchart&#45;005Fboundary&#45;005Fmeasure&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_patch_ac_chart_boundary_measure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fpatch&#45;005Fac&#45;005Fchart&#45;005Fboundary&#45;005Fmeasure&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_patch_ac_chart_boundary_measure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2206" cy="-608.58" rx="146.24" ry="19.6"/>
+<text text-anchor="middle" x="2206" y="-611.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="2206" y="-600.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_patch_ac_chart_boundary_measure</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_reference_measure»&#45;&gt;«foundations.boundary_calculus.surface_patch_ac_chart_boundary_measure» -->
+<g id="edge67" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_reference_measure»&#45;&gt;«foundations.boundary_calculus.surface_patch_ac_chart_boundary_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2017.87,-876.91C2032.42,-868.1 2049.22,-856.43 2062,-843.18 2125.41,-777.39 2174.64,-679.06 2195.34,-633.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2197.84,-628.38 2197.81,-634.96 2196.69,-631.15 2195.44,-633.88 2195.35,-633.84 2195.26,-633.8 2196.5,-631.07 2192.9,-632.72 2197.84,-628.38 2197.84,-628.38"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_measure_ac_surface» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fmeasure&#45;005Fac&#45;005Fsurface&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_measure_ac_surface»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fmeasure&#45;005Fac&#45;005Fsurface&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_measure_ac_surface_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1909" cy="-608.58" rx="125.73" ry="19.6"/>
+<text text-anchor="middle" x="1909" y="-611.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1909" y="-600.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_measure_ac_surface</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_reference_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure_ac_surface» -->
+<g id="edge93" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_reference_measure»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure_ac_surface»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2007.48,-876.81C2040.32,-848.33 2097.3,-788.79 2078,-731.98 2065.09,-693.99 2054.51,-685.22 2023,-660.38 2006.5,-647.38 1986.14,-636.93 1967.22,-628.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1961.4,-626.59 1967.97,-626.37 1964.21,-627.64 1966.99,-628.78 1966.95,-628.87 1966.91,-628.96 1964.13,-627.82 1965.92,-631.37 1961.4,-626.59 1961.4,-626.59"/>
+</g>
+<!-- «foundations.boundary_calculus.pohozaev_boundary»&#45;&gt;«foundations.boundary_calculus.supercritical_nonexistence» -->
+<g id="edge21" class="edge">
+<title>«foundations.boundary_calculus.pohozaev_boundary»&#45;&gt;«foundations.boundary_calculus.supercritical_nonexistence»</title>
+<path fill="none" stroke="#6b7280" d="M458.45,-91.98C424.85,-81.1 378.58,-66.12 342.72,-54.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="336.61,-52.53 343.15,-51.81 339.46,-53.46 342.32,-54.38 342.32,-54.38 342.32,-54.38 339.46,-53.46 341.49,-56.95 336.61,-52.53 336.61,-52.53"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal_nonzero» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fconormal&#45;005Fnonzero&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_conormal_nonzero»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fconormal&#45;005Fnonzero&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_conormal_nonzero_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="576" cy="-608.58" rx="84.29" ry="19.6"/>
+<text text-anchor="middle" x="576" y="-611.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="576" y="-600.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_conormal_nonzero</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal»&#45;&gt;«foundations.boundary_calculus.chart_conormal_nonzero» -->
+<g id="edge61" class="edge">
+<title>«foundations.boundary_calculus.chart_conormal»&#45;&gt;«foundations.boundary_calculus.chart_conormal_nonzero»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M572.99,-661.98C573.46,-653.73 574.04,-643.71 574.56,-634.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="574.91,-628.55 577.26,-634.69 574.84,-631.55 574.67,-634.54 574.57,-634.54 574.47,-634.53 574.64,-631.54 571.87,-634.38 574.91,-628.55 574.91,-628.55"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_outward_normal»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_outward_normal_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="466.5,-626.58 357.5,-626.58 357.5,-590.58 466.5,-590.58 466.5,-626.58"/>
+<text text-anchor="middle" x="412" y="-611.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="412" y="-600.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_outward_normal</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal» -->
+<g id="edge105" class="edge">
+<title>«foundations.boundary_calculus.chart_conormal»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M532.86,-662.16C509.91,-652.17 480.82,-639.52 456.93,-629.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="451.29,-626.67 457.87,-626.59 454.08,-627.78 456.83,-628.98 456.79,-629.07 456.75,-629.16 454,-627.96 455.72,-631.54 451.29,-626.67 451.29,-626.67"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_supported» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Fsupported&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_supported»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Fsupported&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_measure_supported_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1657" cy="-465.39" rx="120.83" ry="19.6"/>
+<text text-anchor="middle" x="1657" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1657" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_measure_supported</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.outward_unit_normal» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eoutward&#45;005Funit&#45;005Fnormal&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.outward_unit_normal»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eoutward&#45;005Funit&#45;005Fnormal&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___outward_unit_normal_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="162,-411.79 60,-411.79 60,-375.79 162,-375.79 162,-411.79"/>
+<text text-anchor="middle" x="111" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="111" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">outward_unit_normal</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.outward_unit_normal»&#45;&gt;«foundations.boundary_calculus.c1_graph_boundary» -->
+<g id="edge3" class="edge">
+<title>«foundations.boundary_calculus.outward_unit_normal»&#45;&gt;«foundations.boundary_calculus.c1_graph_boundary»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M106.3,-375.58C103.89,-366.74 100.91,-355.83 98.3,-346.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="96.64,-340.2 100.83,-345.27 97.53,-343.06 98.32,-345.96 98.22,-345.99 98.13,-346.01 97.34,-343.12 95.62,-346.7 96.64,-340.2 96.64,-340.2"/>
+</g>
+<!-- «foundations.boundary_calculus.outward_unit_normal»&#45;&gt;«foundations.boundary_calculus.star_shaped_flux» -->
+<g id="edge28" class="edge">
+<title>«foundations.boundary_calculus.outward_unit_normal»&#45;&gt;«foundations.boundary_calculus.star_shaped_flux»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M66.8,-375.61C52.44,-367.66 38.12,-356.66 30,-341.99 21.48,-326.59 23.17,-318.61 30,-302.39 34.67,-291.3 43.07,-281.43 51.78,-273.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="56.63,-269.13 53.91,-275.12 54.45,-271.19 52.19,-273.17 52.13,-273.1 52.06,-273.02 54.31,-271.04 50.34,-271.07 56.63,-269.13 56.63,-269.13"/>
+</g>
+<!-- «foundations.boundary_calculus.outward_unit_normal_chart» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eoutward&#45;005Funit&#45;005Fnormal&#45;005Fchart&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.outward_unit_normal_chart»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eoutward&#45;005Funit&#45;005Fnormal&#45;005Fchart&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___outward_unit_normal_chart_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="258" cy="-322.19" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="258" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="258" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">outward_unit_normal_chart</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.outward_unit_normal»&#45;&gt;«foundations.boundary_calculus.outward_unit_normal_chart» -->
+<g id="edge111" class="edge">
+<title>«foundations.boundary_calculus.outward_unit_normal»&#45;&gt;«foundations.boundary_calculus.outward_unit_normal_chart»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M146.96,-375.76C167.88,-365.86 194.35,-353.33 216.2,-342.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="221.65,-340.4 217.38,-345.41 218.98,-341.78 216.27,-343.06 216.22,-342.97 216.18,-342.88 218.89,-341.6 215.07,-340.53 221.65,-340.4 221.65,-340.4"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_jacobian_pos»&#45;&gt;«foundations.boundary_calculus.surface_patch_ac_chart_boundary_measure» -->
+<g id="edge68" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_jacobian_pos»&#45;&gt;«foundations.boundary_calculus.surface_patch_ac_chart_boundary_measure»</title>
+<path fill="none" stroke="#6b7280" d="M1971.62,-664.51C2017.82,-653.68 2080.92,-638.89 2130.01,-627.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2135.92,-626 2130.7,-630 2133,-626.69 2130.08,-627.37 2130.08,-627.37 2130.08,-627.37 2133,-626.69 2129.46,-624.74 2135.92,-626 2135.92,-626"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_jacobian_pos»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure_ac_surface» -->
+<g id="edge94" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_jacobian_pos»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure_ac_surface»</title>
+<path fill="none" stroke="#6b7280" d="M1909,-660.16C1909,-652.34 1909,-643.16 1909,-634.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1909,-628.58 1911.7,-634.58 1909,-631.58 1909,-634.58 1909,-634.58 1909,-634.58 1909,-631.58 1906.3,-634.58 1909,-628.58 1909,-628.58"/>
+</g>
+<!-- «foundations.boundary_calculus.box_flux» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Ebox&#45;005Fflux&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.box_flux»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Ebox&#45;005Fflux&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___box_flux_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="234,-1054.37 100,-1054.37 100,-1018.37 234,-1018.37 234,-1054.37"/>
+<text text-anchor="middle" x="167" y="-1033.87" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus.box_flux</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.box_flux»&#45;&gt;«foundations.boundary_calculus.gauss_box» -->
+<g id="edge2" class="edge">
+<title>«foundations.boundary_calculus.box_flux»&#45;&gt;«foundations.boundary_calculus.gauss_box»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M187.69,-1018.26C198.73,-1009.13 212.41,-997.83 224.04,-988.21"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="228.88,-984.21 225.98,-990.11 226.63,-986.2 224.32,-988.11 224.26,-988.03 224.19,-987.95 226.51,-986.04 222.54,-985.95 228.88,-984.21 228.88,-984.21"/>
+</g>
+<!-- «foundations.boundary_calculus.rectangle_outward_flux» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erectangle&#45;005Foutward&#45;005Fflux&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.rectangle_outward_flux»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erectangle&#45;005Foutward&#45;005Fflux&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___rectangle_outward_flux_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="142,-984.57 30,-984.57 30,-948.57 142,-948.57 142,-984.57"/>
+<text text-anchor="middle" x="86" y="-969.57" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="86" y="-958.57" font-family="Helvetica" font-size="10.00" fill="#ffffff">rectangle_outward_flux</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.box_flux»&#45;&gt;«foundations.boundary_calculus.rectangle_outward_flux» -->
+<g id="edge98" class="edge">
+<title>«foundations.boundary_calculus.box_flux»&#45;&gt;«foundations.boundary_calculus.rectangle_outward_flux»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M146.56,-1018.26C135.82,-1009.27 122.55,-998.17 111.18,-988.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="106.43,-984.68 112.77,-986.46 108.8,-986.52 111.1,-988.45 111.03,-988.53 110.97,-988.6 108.67,-986.68 109.3,-990.6 106.43,-984.68 106.43,-984.68"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal_unit» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;005Funit&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_outward_normal_unit»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;005Funit&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_outward_normal_unit_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="348" cy="-536.98" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="348" y="-539.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="348" y="-528.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_outward_normal_unit</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal_unit»&#45;&gt;«foundations.boundary_calculus.outward_unit_normal_unit» -->
+<g id="edge35" class="edge">
+<title>«foundations.boundary_calculus.chart_outward_normal_unit»&#45;&gt;«foundations.boundary_calculus.outward_unit_normal_unit»</title>
+<path fill="none" stroke="#6b7280" d="M348.32,-516.9C348.76,-498.58 349.75,-470.15 352,-445.59 357.58,-384.61 368.67,-313.42 374.76,-276.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="375.76,-270.52 377.44,-276.89 375.27,-273.48 374.78,-276.44 374.78,-276.44 374.78,-276.44 375.27,-273.48 372.11,-276 375.76,-270.52 375.76,-270.52"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal_nonzero»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_evaluation» -->
+<g id="edge42" class="edge">
+<title>«foundations.boundary_calculus.chart_conormal_nonzero»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_evaluation»</title>
+<path fill="none" stroke="#6b7280" d="M576,-588.56C576,-580.74 576,-571.56 576,-563.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="576,-556.98 578.7,-562.98 576,-559.98 576,-562.98 576,-562.98 576,-562.98 576,-559.98 573.3,-562.98 576,-556.98 576,-556.98"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal_nonzero»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_unit» -->
+<g id="edge59" class="edge">
+<title>«foundations.boundary_calculus.chart_conormal_nonzero»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_unit»</title>
+<path fill="none" stroke="#6b7280" d="M526.53,-592.48C490.72,-581.55 442.26,-566.76 404.86,-555.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="398.95,-553.54 405.48,-552.71 401.82,-554.41 404.69,-555.29 404.69,-555.29 404.69,-555.29 401.82,-554.41 403.91,-557.87 398.95,-553.54 398.95,-553.54"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal_nonzero»&#45;&gt;«foundations.boundary_calculus.chart_conormal_compatible» -->
+<g id="edge76" class="edge">
+<title>«foundations.boundary_calculus.chart_conormal_nonzero»&#45;&gt;«foundations.boundary_calculus.chart_conormal_compatible»</title>
+<path fill="none" stroke="#6b7280" d="M514.26,-595.08C502.57,-592.86 490.42,-590.67 479,-588.78 375,-571.64 348.15,-573.02 244,-556.78 233.62,-555.17 222.7,-553.36 211.95,-551.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="206.01,-550.51 212.38,-548.86 208.96,-551.02 211.92,-551.53 211.92,-551.53 211.92,-551.53 208.96,-551.02 211.46,-554.19 206.01,-550.51 206.01,-550.51"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal_nonzero»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_orientation» -->
+<g id="edge86" class="edge">
+<title>«foundations.boundary_calculus.chart_conormal_nonzero»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_orientation»</title>
+<path fill="none" stroke="#6b7280" d="M641.63,-596.16C663.97,-588.79 686.65,-576.68 700,-556.78 709.81,-542.17 710.98,-530.94 700,-517.19 691.07,-505.99 621.36,-491.28 562.22,-480.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="556.17,-479.48 562.55,-477.88 559.12,-480.01 562.07,-480.54 562.07,-480.54 562.07,-480.54 559.12,-480.01 561.6,-483.2 556.17,-479.48 556.17,-479.48"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cells_cover» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fcells&#45;005Fcover&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_cells_cover»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fcells&#45;005Fcover&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_cells_cover_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1254" cy="-536.98" rx="95.42" ry="19.6"/>
+<text text-anchor="middle" x="1254" y="-539.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1254" y="-528.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_cells_cover</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cells_cover»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_supported» -->
+<g id="edge55" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_cells_cover»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_supported»</title>
+<path fill="none" stroke="#6b7280" d="M1324.87,-523.63C1337.25,-521.48 1350,-519.26 1362,-517.19 1432.18,-505.04 1511.76,-491.34 1570.56,-481.23"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1576.55,-480.2 1571.09,-483.88 1573.59,-480.71 1570.63,-481.22 1570.63,-481.22 1570.63,-481.22 1573.59,-480.71 1570.18,-478.56 1576.55,-480.2 1576.55,-480.2"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_measure_ac_atlas_boundary» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fmeasure&#45;005Fac&#45;005Fatlas&#45;005Fboundary&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_measure_ac_atlas_boundary»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fmeasure&#45;005Fac&#45;005Fatlas&#45;005Fboundary&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_measure_ac_atlas_boundary_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2228" cy="-465.39" rx="124.4" ry="19.6"/>
+<text text-anchor="middle" x="2228" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="2228" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_measure_ac_atlas_boundary</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cells_cover»&#45;&gt;«foundations.boundary_calculus.surface_measure_ac_atlas_boundary» -->
+<g id="edge79" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_cells_cover»&#45;&gt;«foundations.boundary_calculus.surface_measure_ac_atlas_boundary»</title>
+<path fill="none" stroke="#6b7280" d="M1321.22,-522.91C1334.68,-520.68 1348.76,-518.62 1362,-517.19 1684.42,-482.2 1768,-514.37 2091,-485.19 2105.12,-483.91 2120.02,-482.22 2134.58,-480.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2140.8,-479.58 2135.19,-483.02 2137.83,-479.96 2134.85,-480.35 2134.85,-480.35 2134.85,-480.35 2137.83,-479.96 2134.51,-477.67 2140.8,-479.58 2140.8,-479.58"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_ac_surface» -->
+<g id="edge5" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_ac_surface»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1134.15,-519.28C1138.14,-518.49 1142.12,-517.78 1146,-517.19 1429.32,-474.12 1504.38,-508.63 1790,-485.19 1810.41,-483.51 1832.2,-481.31 1853.01,-479"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1859.14,-478.31 1853.48,-481.66 1856.17,-478.75 1853.19,-479.08 1853.18,-478.98 1853.17,-478.88 1856.15,-478.55 1852.88,-476.3 1859.14,-478.31 1859.14,-478.31"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_integral_cells» -->
+<g id="edge48" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_integral_cells»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1134.27,-519.91C1138.23,-518.96 1142.17,-518.05 1146,-517.19 1208.28,-503.21 1279.33,-489.72 1332.17,-480.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1338.2,-479.07 1332.77,-482.8 1335.26,-479.71 1332.31,-480.24 1332.29,-480.14 1332.28,-480.04 1335.23,-479.51 1331.82,-477.48 1338.2,-479.07 1338.2,-479.07"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_supported» -->
+<g id="edge54" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_supported»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1134.18,-519.44C1138.16,-518.6 1142.13,-517.84 1146,-517.19 1312.22,-488.95 1356.46,-504.1 1524,-485.19 1537.06,-483.71 1550.82,-481.97 1564.33,-480.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1570.52,-479.33 1564.94,-482.81 1567.56,-479.83 1564.59,-480.23 1564.58,-480.13 1564.56,-480.03 1567.54,-479.63 1564.21,-477.45 1570.52,-479.33 1570.52,-479.33"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_finite» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Ffinite&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_finite»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Ffinite&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_measure_finite_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="953" cy="-465.39" rx="104.8" ry="19.6"/>
+<text text-anchor="middle" x="953" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="953" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_measure_finite</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_finite» -->
+<g id="edge72" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_finite»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1043.64,-518.96C1027.3,-509.48 1006.8,-497.59 989.43,-487.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="984.15,-484.45 990.69,-485.13 986.79,-485.87 989.39,-487.38 989.34,-487.46 989.29,-487.55 986.69,-486.04 987.98,-489.8 984.15,-484.45 984.15,-484.45"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_lintegral_cells» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Flintegral&#45;005Fcells&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_lintegral_cells»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Flintegral&#45;005Fcells&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_lintegral_cells_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1184" cy="-465.39" rx="101.65" ry="19.6"/>
+<text text-anchor="middle" x="1184" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1184" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_lintegral_cells</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_lintegral_cells» -->
+<g id="edge92" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_lintegral_cells»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1100.15,-518.96C1115.15,-509.56 1133.91,-497.79 1149.89,-487.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1155.19,-484.45 1151.54,-489.93 1152.7,-486.13 1150.16,-487.73 1150.1,-487.64 1150.05,-487.56 1152.59,-485.96 1148.67,-485.35 1155.19,-484.45 1155.19,-484.45"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_local» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Flocal&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_local»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Flocal&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_measure_local_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="719" cy="-465.39" rx="104.8" ry="19.6"/>
+<text text-anchor="middle" x="719" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="719" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_measure_local</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_local» -->
+<g id="edge115" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_local»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1011.74,-519.86C1007.77,-518.93 1003.84,-518.03 1000,-517.19 933.88,-502.72 858.37,-489.23 802.28,-479.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="796.23,-478.78 802.59,-477.11 799.2,-479.18 802.16,-479.68 802.15,-479.78 802.13,-479.87 799.17,-479.38 801.7,-482.44 796.23,-478.78 796.23,-478.78"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_patch_ac_chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.surface_measure_ac_atlas_boundary» -->
+<g id="edge78" class="edge">
+<title>«foundations.boundary_calculus.surface_patch_ac_chart_boundary_measure»&#45;&gt;«foundations.boundary_calculus.surface_measure_ac_atlas_boundary»</title>
+<path fill="none" stroke="#6b7280" d="M2208.97,-588.54C2212.87,-563.49 2219.74,-519.39 2224.07,-491.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2225.01,-485.58 2226.75,-491.92 2224.55,-488.54 2224.09,-491.51 2224.09,-491.51 2224.09,-491.51 2224.55,-488.54 2221.42,-491.09 2225.01,-485.58 2225.01,-485.58"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_measure_density» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fmeasure&#45;005Fdensity&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_measure_density»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fmeasure&#45;005Fdensity&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_measure_density_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2255.5,-411.79 2130.5,-411.79 2130.5,-375.79 2255.5,-375.79 2255.5,-411.79"/>
+<text text-anchor="middle" x="2193" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="2193" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_measure_density</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.surface_measure_density»&#45;&gt;«foundations.boundary_calculus.atlas_surface_densities_reciprocal» -->
+<g id="edge30" class="edge">
+<title>«foundations.boundary_calculus.surface_measure_density»&#45;&gt;«foundations.boundary_calculus.atlas_surface_densities_reciprocal»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2130.14,-376.24C2126.05,-375.41 2121.97,-374.65 2118,-373.99 1945.53,-345.53 1899.91,-359.63 1726,-341.99 1706.81,-340.04 1686.32,-337.73 1666.73,-335.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1660.68,-334.67 1666.96,-332.71 1663.67,-334.93 1666.65,-335.29 1666.64,-335.39 1666.63,-335.49 1663.65,-335.13 1666.32,-338.07 1660.68,-334.67 1660.68,-334.67"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_measure_density»&#45;&gt;«foundations.boundary_calculus.surface_density_finite» -->
+<g id="edge39" class="edge">
+<title>«foundations.boundary_calculus.surface_measure_density»&#45;&gt;«foundations.boundary_calculus.surface_density_finite»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2164.87,-375.76C2149.1,-366.22 2129.29,-354.23 2112.58,-344.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2107.04,-340.77 2113.57,-341.56 2109.66,-342.24 2112.23,-343.79 2112.18,-343.87 2112.12,-343.96 2109.56,-342.41 2110.78,-346.18 2107.04,-340.77 2107.04,-340.77"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_measure_density»&#45;&gt;«foundations.boundary_calculus.surface_density_positive» -->
+<g id="edge46" class="edge">
+<title>«foundations.boundary_calculus.surface_measure_density»&#45;&gt;«foundations.boundary_calculus.surface_density_positive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2211.04,-375.58C2220.42,-366.65 2231.99,-355.61 2242.1,-345.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2246.63,-341.66 2244.15,-347.75 2244.53,-343.8 2242.36,-345.87 2242.29,-345.8 2242.22,-345.73 2244.39,-343.66 2240.42,-343.85 2246.63,-341.66 2246.63,-341.66"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_weighted_by_surface_density» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fweighted&#45;005Fby&#45;005Fsurface&#45;005Fdensity&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_weighted_by_surface_density»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fweighted&#45;005Fby&#45;005Fsurface&#45;005Fdensity&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_weighted_by_surface_density_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1857" cy="-322.19" rx="118.59" ry="19.6"/>
+<text text-anchor="middle" x="1857" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1857" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_weighted_by_surface_density</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.surface_measure_density»&#45;&gt;«foundations.boundary_calculus.atlas_weighted_by_surface_density» -->
+<g id="edge95" class="edge">
+<title>«foundations.boundary_calculus.surface_measure_density»&#45;&gt;«foundations.boundary_calculus.atlas_weighted_by_surface_density»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2130.45,-376.84C2126.24,-375.85 2122.06,-374.89 2118,-373.99 2059.11,-360.89 1992.33,-347.92 1941.06,-338.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1934.89,-337.23 1941.28,-335.67 1937.85,-337.68 1940.8,-338.22 1940.78,-338.32 1940.77,-338.42 1937.82,-337.87 1940.29,-340.98 1934.89,-337.23 1934.89,-337.23"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition_inverse»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_integral» -->
+<g id="edge96" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_transition_inverse»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition_integral»</title>
+<path fill="none" stroke="#6b7280" d="M802,-731.76C802,-723.94 802,-714.76 802,-706.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="802,-700.18 804.7,-706.18 802,-703.18 802,-706.18 802,-706.18 802,-706.18 802,-703.18 799.3,-706.18 802,-700.18 802,-700.18"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal_compatible» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;005Fcompatible&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_outward_normal_compatible»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Foutward&#45;005Fnormal&#45;005Fcompatible&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_outward_normal_compatible_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="130" cy="-465.39" rx="113.69" ry="19.6"/>
+<text text-anchor="middle" x="130" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="130" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_outward_normal_compatible</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal_compatible»&#45;&gt;«foundations.boundary_calculus.outward_unit_normal» -->
+<g id="edge56" class="edge">
+<title>«foundations.boundary_calculus.chart_outward_normal_compatible»&#45;&gt;«foundations.boundary_calculus.outward_unit_normal»</title>
+<path fill="none" stroke="#6b7280" d="M124.81,-445.37C122.49,-436.87 119.73,-426.77 117.29,-417.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="115.67,-411.88 119.85,-416.96 116.46,-414.78 117.25,-417.67 117.25,-417.67 117.25,-417.67 116.46,-414.78 114.64,-418.38 115.67,-411.88 115.67,-411.88"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_conormal_compatible»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_compatible» -->
+<g id="edge74" class="edge">
+<title>«foundations.boundary_calculus.chart_conormal_compatible»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_compatible»</title>
+<path fill="none" stroke="#6b7280" d="M135.09,-516.97C134.3,-509.14 133.38,-499.96 132.54,-491.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="131.91,-485.38 135.2,-491.08 132.21,-488.37 132.51,-491.35 132.51,-491.35 132.51,-491.35 132.21,-488.37 129.82,-491.62 131.91,-485.38 131.91,-485.38"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_measure_ac_atlas_boundary»&#45;&gt;«foundations.boundary_calculus.atlas_surface_same_null_sets» -->
+<g id="edge11" class="edge">
+<title>«foundations.boundary_calculus.surface_measure_ac_atlas_boundary»&#45;&gt;«foundations.boundary_calculus.atlas_surface_same_null_sets»</title>
+<path fill="none" stroke="#6b7280" d="M2137.13,-451.75C2066.01,-441.74 1964.64,-427.23 1876,-413.59 1865.02,-411.9 1853.45,-410.07 1842.06,-408.24"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1836.13,-407.28 1842.48,-405.57 1839.09,-407.76 1842.05,-408.23 1842.05,-408.23 1842.05,-408.23 1839.09,-407.76 1841.62,-410.9 1836.13,-407.28 1836.13,-407.28"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_measure_ac_atlas_boundary»&#45;&gt;«foundations.boundary_calculus.surface_measure_density» -->
+<g id="edge71" class="edge">
+<title>«foundations.boundary_calculus.surface_measure_ac_atlas_boundary»&#45;&gt;«foundations.boundary_calculus.surface_measure_density»</title>
+<path fill="none" stroke="#6b7280" d="M2218.44,-445.37C2214.08,-436.7 2208.89,-426.38 2204.33,-417.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2201.6,-411.88 2206.7,-416.03 2202.94,-414.56 2204.29,-417.24 2204.29,-417.24 2204.29,-417.24 2202.94,-414.56 2201.88,-418.45 2201.6,-411.88 2201.6,-411.88"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition» -->
+<g id="edge1" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_transition»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1169.87,-948.55C1139.38,-938.39 1100.61,-925.48 1069.12,-914.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1063.32,-913.07 1069.87,-912.4 1066.2,-913.92 1069.05,-914.87 1069.02,-914.96 1068.98,-915.06 1066.14,-914.11 1068.16,-917.52 1063.32,-913.07 1063.32,-913.07"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure» -->
+<g id="edge20" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1220.51,-948.21C1219.13,-899.21 1215.21,-759.8 1213.65,-704.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1213.48,-698.32 1216.35,-704.24 1213.67,-701.31 1213.75,-704.31 1213.65,-704.31 1213.55,-704.32 1213.47,-701.32 1210.95,-704.39 1213.48,-698.32 1213.48,-698.32"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_reference_measure» -->
+<g id="edge50" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_reference_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1297.79,-954.01C1316.48,-951.41 1336.44,-948.82 1355,-946.77 1546.89,-925.61 1772.54,-909.57 1895.26,-901.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1901.39,-901.19 1895.58,-904.28 1898.4,-901.49 1895.41,-901.68 1895.4,-901.58 1895.4,-901.48 1898.39,-901.29 1895.23,-898.89 1901.39,-901.19 1901.39,-901.19"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parametrization_image» -->
+<g id="edge69" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parametrization_image»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1144.27,-952.87C1087.01,-943.15 1006.94,-929.02 937,-914.77 797.17,-886.29 760.93,-883.38 624,-843.18 476.27,-799.8 306.48,-734.06 224.46,-701.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="218.7,-698.96 225.28,-698.68 221.53,-699.98 224.31,-701.1 224.27,-701.19 224.24,-701.28 221.45,-700.17 223.27,-703.7 218.7,-698.96 218.7,-698.96"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_tangential_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftangential&#45;005Fderivative&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_tangential_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftangential&#45;005Fderivative&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_tangential_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1542,-912.97 1368,-912.97 1368,-876.97 1542,-876.97 1542,-912.97"/>
+<text text-anchor="middle" x="1455" y="-897.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1455" y="-886.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_tangential_derivative</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_tangential_derivative» -->
+<g id="edge99" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_tangential_derivative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1278.24,-948.55C1312.52,-938.35 1356.15,-925.37 1391.49,-914.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1397.54,-913.07 1392.56,-917.36 1394.69,-914.02 1391.81,-914.87 1391.79,-914.78 1391.76,-914.68 1394.63,-913.83 1391.02,-912.19 1397.54,-913.07 1397.54,-913.07"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parametrization_regular» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparametrization&#45;005Fregular&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_parametrization_regular»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fparametrization&#45;005Fregular&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_parametrization_regular_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="529" cy="-894.97" rx="132.46" ry="19.6"/>
+<text text-anchor="middle" x="529" y="-897.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="529" y="-886.97" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_parametrization_regular</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parametrization_regular» -->
+<g id="edge120" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_parametrization»&#45;&gt;«foundations.boundary_calculus.chart_boundary_parametrization_regular»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1144.33,-959.11C1039.42,-950.1 845.29,-932.82 680,-914.77 664.58,-913.09 648.3,-911.19 632.35,-909.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="626.02,-908.49 632.3,-906.54 629.01,-908.76 631.99,-909.12 631.97,-909.22 631.96,-909.32 628.98,-908.95 631.65,-911.9 626.02,-908.49 626.02,-908.49"/>
+</g>
+<!-- «foundations.boundary_calculus.gauss_ball»&#45;&gt;«foundations.boundary_calculus.green_second_ball» -->
+<g id="edge87" class="edge">
+<title>«foundations.boundary_calculus.gauss_ball»&#45;&gt;«foundations.boundary_calculus.green_second_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1058.21,-307.02C1021.84,-295.52 970.58,-279.3 932.9,-267.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="926.97,-265.5 933.51,-264.74 929.94,-266.07 932.8,-266.98 932.69,-267.31 932.59,-267.65 929.73,-266.74 931.88,-269.89 926.97,-265.5 926.97,-265.5"/>
+</g>
+<!-- «foundations.boundary_calculus.gauss_ball»&#45;&gt;«foundations.boundary_calculus.green_first_ball» -->
+<g id="edge122" class="edge">
+<title>«foundations.boundary_calculus.gauss_ball»&#45;&gt;«foundations.boundary_calculus.green_first_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1045.41,-309.27C1033.39,-306.9 1020.8,-304.49 1009,-302.39 918.21,-286.24 894.48,-288.19 804,-270.39 796.28,-268.87 788.18,-267.13 780.22,-265.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="774.18,-263.93 780.63,-262.64 777.18,-264.26 780.1,-264.93 780.02,-265.27 779.94,-265.61 777.02,-264.94 779.42,-267.9 774.18,-263.93 774.18,-263.93"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_tangential_derivative_formula» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftangential&#45;005Fderivative&#45;005Fformula&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_tangential_derivative_formula»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Ftangential&#45;005Fderivative&#45;005Fformula&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_tangential_derivative_formula_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1677" cy="-823.38" rx="149.4" ry="19.6"/>
+<text text-anchor="middle" x="1677" y="-826.38" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1677" y="-815.38" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_tangential_derivative_formula</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_tangential_derivative_formula»&#45;&gt;«foundations.boundary_calculus.chart_boundary_tangential_derivative_injective» -->
+<g id="edge9" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_tangential_derivative_formula»&#45;&gt;«foundations.boundary_calculus.chart_boundary_tangential_derivative_injective»</title>
+<path fill="none" stroke="#6b7280" d="M1735.89,-805.08C1770.23,-795 1813.61,-782.26 1848.95,-771.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1855,-770.1 1850.01,-774.39 1852.13,-770.95 1849.25,-771.79 1849.25,-771.79 1849.25,-771.79 1852.13,-770.95 1848.49,-769.2 1855,-770.1 1855,-770.1"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_tangential_derivative_formula»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian_continuous» -->
+<g id="edge83" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_tangential_derivative_formula»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian_continuous»</title>
+<path fill="none" stroke="#6b7280" d="M1659.78,-803.36C1652.28,-795.07 1643.41,-785.27 1635.49,-776.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1631.19,-771.77 1637.22,-774.41 1633.21,-774 1635.22,-776.22 1635.22,-776.22 1635.22,-776.22 1633.21,-774 1633.22,-778.03 1631.19,-771.77 1631.19,-771.77"/>
+</g>
+<!-- «foundations.boundary_calculus.green_second_ball»&#45;&gt;«foundations.boundary_calculus.green_second_c1» -->
+<g id="edge102" class="edge">
+<title>«foundations.boundary_calculus.green_second_ball»&#45;&gt;«foundations.boundary_calculus.green_second_c1»</title>
+<path fill="none" stroke="#6b7280" d="M860.07,-232C826.37,-206.14 763.54,-157.92 727.11,-129.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="721.93,-125.99 728.33,-127.5 724.31,-127.82 726.69,-129.65 726.69,-129.65 726.69,-129.65 724.31,-127.82 725.05,-131.79 721.93,-125.99 721.93,-125.99"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_lintegral_as_weighted_atlas_lintegral» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Flintegral&#45;005Fas&#45;005Fweighted&#45;005Fatlas&#45;005Flintegral&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_lintegral_as_weighted_atlas_lintegral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Flintegral&#45;005Fas&#45;005Fweighted&#45;005Fatlas&#45;005Flintegral&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_lintegral_as_weighted_atlas_lintegral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1539" cy="-250.59" rx="147.57" ry="19.6"/>
+<text text-anchor="middle" x="1539" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1539" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_lintegral_as_weighted_atlas_lintegral</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_measure_ac_surface»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_ac_surface» -->
+<g id="edge6" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_measure_ac_surface»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_ac_surface»</title>
+<path fill="none" stroke="#6b7280" d="M1915.07,-588.54C1923.05,-563.49 1937.11,-519.39 1945.97,-491.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1947.88,-485.58 1948.63,-492.12 1946.97,-488.44 1946.06,-491.3 1946.06,-491.3 1946.06,-491.3 1946.97,-488.44 1943.49,-490.48 1947.88,-485.58 1947.88,-485.58"/>
+</g>
+<!-- «foundations.boundary_calculus.rellich_field» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erellich&#45;005Ffield&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.rellich_field»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Erellich&#45;005Ffield&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___rellich_field_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="267,-268.59 173,-268.59 173,-232.59 267,-232.59 267,-268.59"/>
+<text text-anchor="middle" x="220" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="220" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_field</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.rellich_field»&#45;&gt;«foundations.boundary_calculus.rellich_boundary» -->
+<g id="edge24" class="edge">
+<title>«foundations.boundary_calculus.rellich_field»&#45;&gt;«foundations.boundary_calculus.rellich_boundary»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M250.09,-232.57C267.49,-222.72 289.48,-210.28 307.7,-199.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="313.22,-196.84 309.33,-202.15 310.66,-198.41 308.05,-199.89 308,-199.8 307.95,-199.71 310.56,-198.24 306.67,-197.45 313.22,-196.84 313.22,-196.84"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_weighted_by_surface_density»&#45;&gt;«foundations.boundary_calculus.surface_lintegral_as_weighted_atlas_lintegral» -->
+<g id="edge89" class="edge">
+<title>«foundations.boundary_calculus.atlas_weighted_by_surface_density»&#45;&gt;«foundations.boundary_calculus.surface_lintegral_as_weighted_atlas_lintegral»</title>
+<path fill="none" stroke="#6b7280" d="M1787.61,-306C1737.9,-295.12 1670.83,-280.45 1618.89,-269.08"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1612.95,-267.78 1619.39,-266.42 1615.88,-268.42 1618.81,-269.06 1618.81,-269.06 1618.81,-269.06 1615.88,-268.42 1618.24,-271.7 1612.95,-267.78 1612.95,-267.78"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_integral_as_weighted_atlas_integral» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fintegral&#45;005Fas&#45;005Fweighted&#45;005Fatlas&#45;005Fintegral&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.surface_integral_as_weighted_atlas_integral»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Esurface&#45;005Fintegral&#45;005Fas&#45;005Fweighted&#45;005Fatlas&#45;005Fintegral&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___surface_integral_as_weighted_atlas_integral_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1857" cy="-250.59" rx="144.91" ry="19.6"/>
+<text text-anchor="middle" x="1857" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1857" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_integral_as_weighted_atlas_integral</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_weighted_by_surface_density»&#45;&gt;«foundations.boundary_calculus.surface_integral_as_weighted_atlas_integral» -->
+<g id="edge100" class="edge">
+<title>«foundations.boundary_calculus.atlas_weighted_by_surface_density»&#45;&gt;«foundations.boundary_calculus.surface_integral_as_weighted_atlas_integral»</title>
+<path fill="none" stroke="#6b7280" d="M1857,-302.17C1857,-294.35 1857,-285.17 1857,-276.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1857,-270.59 1859.7,-276.59 1857,-273.59 1857,-276.59 1857,-276.59 1857,-276.59 1857,-273.59 1854.3,-276.59 1857,-270.59 1857,-270.59"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_weighted_by_surface_density»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv» -->
+<g id="edge117" class="edge">
+<title>«foundations.boundary_calculus.atlas_weighted_by_surface_density»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv»</title>
+<path fill="none" stroke="#6b7280" d="M1911.13,-304.52C1944.46,-294.26 1987.27,-281.07 2021.83,-270.43"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2027.74,-268.61 2022.8,-272.96 2024.87,-269.49 2022,-270.38 2022,-270.38 2022,-270.38 2024.87,-269.49 2021.21,-267.8 2027.74,-268.61 2027.74,-268.61"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_measure_compatible» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fmeasure&#45;005Fcompatible&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_measure_compatible»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fmeasure&#45;005Fcompatible&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_measure_compatible_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="863" cy="-536.98" rx="124.4" ry="19.6"/>
+<text text-anchor="middle" x="863" y="-539.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="863" y="-528.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_measure_compatible</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_transition_integral»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure_compatible» -->
+<g id="edge109" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_transition_integral»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure_compatible»</title>
+<path fill="none" stroke="#6b7280" d="M801.46,-660.22C801.65,-641.23 803.97,-611.63 815,-588.78 819.99,-578.46 827.83,-568.83 835.75,-560.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="840.13,-556.51 837.74,-562.63 837.99,-558.61 835.85,-560.7 835.85,-560.7 835.85,-560.7 837.99,-558.61 833.96,-558.77 840.13,-556.51 840.13,-556.51"/>
+</g>
+<!-- «foundations.boundary_calculus.rectangle_outward_flux»&#45;&gt;«foundations.boundary_calculus.green_flux_rectangle» -->
+<g id="edge91" class="edge">
+<title>«foundations.boundary_calculus.rectangle_outward_flux»&#45;&gt;«foundations.boundary_calculus.green_flux_rectangle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M86.74,-948.37C87.1,-940.13 87.53,-930.1 87.92,-921.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="88.18,-914.94 90.62,-921.05 88.15,-917.94 88.02,-920.94 87.92,-920.93 87.82,-920.93 87.95,-917.93 85.23,-920.82 88.18,-914.94 88.18,-914.94"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_tangential_derivative»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian» -->
+<g id="edge32" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_tangential_derivative»&#45;&gt;«foundations.boundary_calculus.chart_boundary_jacobian»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1451.79,-876.77C1450.13,-867.92 1448.1,-857.01 1446.31,-847.44"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1445.18,-841.38 1448.93,-846.79 1445.83,-844.31 1446.38,-847.26 1446.28,-847.28 1446.18,-847.3 1445.63,-844.35 1443.62,-847.78 1445.18,-841.38 1445.18,-841.38"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_tangential_derivative»&#45;&gt;«foundations.boundary_calculus.chart_boundary_tangential_derivative_formula» -->
+<g id="edge84" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_tangential_derivative»&#45;&gt;«foundations.boundary_calculus.chart_boundary_tangential_derivative_formula»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1509.31,-876.95C1541.33,-866.91 1581.96,-854.17 1615.21,-843.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1621.32,-841.83 1616.41,-846.2 1618.49,-842.82 1615.63,-843.72 1615.6,-843.63 1615.57,-843.53 1618.43,-842.63 1614.79,-841.05 1621.32,-841.83 1621.32,-841.83"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cell»&#45;&gt;«foundations.boundary_calculus.chart_boundary_cell_measurable» -->
+<g id="edge12" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_cell»&#45;&gt;«foundations.boundary_calculus.chart_boundary_cell_measurable»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1304.65,-592.48C1310.14,-591.11 1315.67,-589.84 1321,-588.78 1438.22,-565.46 1469.58,-572.93 1588,-556.78 1599.77,-555.18 1612.16,-553.4 1624.36,-551.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1630.34,-550.7 1624.8,-554.25 1627.38,-551.24 1624.42,-551.68 1624.4,-551.58 1624.39,-551.48 1627.35,-551.04 1624,-548.91 1630.34,-550.7 1630.34,-550.7"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cell»&#45;&gt;«foundations.boundary_calculus.chart_boundary_cells_cover» -->
+<g id="edge64" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_cell»&#45;&gt;«foundations.boundary_calculus.chart_boundary_cells_cover»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1254,-590.38C1254,-582.14 1254,-572.11 1254,-563.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1254,-556.95 1256.7,-562.95 1254.1,-559.95 1254.1,-562.95 1254,-562.95 1253.9,-562.95 1253.9,-559.95 1251.3,-562.95 1254,-556.95 1254,-556.95"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cell»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure» -->
+<g id="edge65" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_cell»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1209.72,-590.56C1183.54,-580.49 1150.29,-567.71 1123.14,-557.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1117.45,-555.08 1124.02,-554.71 1120.28,-556.06 1123.08,-557.14 1123.05,-557.23 1123.01,-557.32 1120.21,-556.25 1122.08,-559.75 1117.45,-555.08 1117.45,-555.08"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cells_disjoint» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fcells&#45;005Fdisjoint&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.chart_boundary_cells_disjoint»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Echart&#45;005Fboundary&#45;005Fcells&#45;005Fdisjoint&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___chart_boundary_cells_disjoint_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1475" cy="-536.98" rx="100.32" ry="19.6"/>
+<text text-anchor="middle" x="1475" y="-539.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="1475" y="-528.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">chart_boundary_cells_disjoint</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_cell»&#45;&gt;«foundations.boundary_calculus.chart_boundary_cells_disjoint» -->
+<g id="edge126" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_cell»&#45;&gt;«foundations.boundary_calculus.chart_boundary_cells_disjoint»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1304.7,-591.62C1338.43,-580.99 1382.8,-567.02 1417.79,-556"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1423.77,-554.12 1418.86,-558.5 1420.94,-555.12 1418.08,-556.02 1418.05,-555.92 1418.02,-555.83 1420.88,-554.92 1417.23,-553.35 1423.77,-554.12 1423.77,-554.12"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_density»&#45;&gt;«foundations.boundary_calculus.atlas_surface_densities_reciprocal» -->
+<g id="edge31" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_density»&#45;&gt;«foundations.boundary_calculus.atlas_surface_densities_reciprocal»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1558.2,-375.58C1560.23,-367.26 1562.71,-357.12 1564.94,-347.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1566.37,-342.15 1567.57,-348.62 1565.75,-345.09 1565.04,-348.01 1564.94,-347.98 1564.85,-347.96 1565.56,-345.04 1562.32,-347.34 1566.37,-342.15 1566.37,-342.15"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_evaluation» -->
+<g id="edge43" class="edge">
+<title>«foundations.boundary_calculus.chart_outward_normal»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_evaluation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M452.12,-590.56C475.38,-580.68 504.8,-568.2 529.12,-557.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="534.87,-555.44 530.4,-560.27 532.15,-556.7 529.39,-557.88 529.35,-557.78 529.31,-557.69 532.07,-556.52 528.29,-555.3 534.87,-555.44 534.87,-555.44"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_unit» -->
+<g id="edge60" class="edge">
+<title>«foundations.boundary_calculus.chart_outward_normal»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_unit»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M396.18,-590.38C388.04,-581.52 378,-570.6 369.19,-561.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="364.98,-556.45 371.03,-559.04 367.09,-558.59 369.12,-560.8 369.04,-560.87 368.97,-560.94 366.94,-558.73 367.06,-562.7 364.98,-556.45 364.98,-556.45"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_outward_normal»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_compatible» -->
+<g id="edge75" class="edge">
+<title>«foundations.boundary_calculus.chart_outward_normal»&#45;&gt;«foundations.boundary_calculus.chart_outward_normal_compatible»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M357.46,-604.25C257.05,-597.57 51.24,-581.04 30,-556.78 18.4,-543.54 20.8,-532.19 30,-517.19 38.66,-503.07 52.61,-492.73 67.37,-485.21"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="72.84,-482.56 68.61,-487.6 70.18,-483.96 67.48,-485.26 67.43,-485.17 67.39,-485.08 70.09,-483.78 66.26,-482.74 72.84,-482.56 72.84,-482.56"/>
+</g>
+<!-- «foundations.boundary_calculus.gauss_green_c1»&#45;&gt;«foundations.boundary_calculus.rellich_boundary» -->
+<g id="edge25" class="edge">
+<title>«foundations.boundary_calculus.gauss_green_c1»&#45;&gt;«foundations.boundary_calculus.rellich_boundary»</title>
+<path fill="none" stroke="#6b7280" d="M513.69,-235.51C478.45,-224.05 428.71,-207.87 392.02,-195.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="386.24,-194.06 392.78,-193.35 389.09,-194.99 391.95,-195.91 391.95,-195.91 391.95,-195.91 389.09,-194.99 391.11,-198.48 386.24,-194.06 386.24,-194.06"/>
+</g>
+<!-- «foundations.boundary_calculus.gauss_green_c1»&#45;&gt;«foundations.boundary_calculus.green_first_c1» -->
+<g id="edge37" class="edge">
+<title>«foundations.boundary_calculus.gauss_green_c1»&#45;&gt;«foundations.boundary_calculus.green_first_c1»</title>
+<path fill="none" stroke="#6b7280" d="M566.11,-230.94C570.07,-222.83 574.77,-213.21 579.01,-204.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="581.86,-198.7 581.66,-205.27 580.55,-201.39 579.23,-204.09 579.23,-204.09 579.23,-204.09 580.55,-201.39 576.8,-202.9 581.86,-198.7 581.86,-198.7"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_measure_compatible»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_local» -->
+<g id="edge116" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_measure_compatible»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_local»</title>
+<path fill="none" stroke="#6b7280" d="M825.92,-518.06C806.03,-508.45 781.45,-496.57 760.87,-486.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="755.46,-484.01 762.04,-484.19 758.16,-485.31 760.86,-486.62 760.86,-486.62 760.86,-486.62 758.16,-485.31 759.69,-489.05 755.46,-484.01 755.46,-484.01"/>
+</g>
+<!-- «foundations.boundary_calculus.outward_unit_normal_chart»&#45;&gt;«foundations.boundary_calculus.outward_unit_normal_unit» -->
+<g id="edge34" class="edge">
+<title>«foundations.boundary_calculus.outward_unit_normal_chart»&#45;&gt;«foundations.boundary_calculus.outward_unit_normal_unit»</title>
+<path fill="none" stroke="#6b7280" d="M288.85,-303.45C305.34,-293.96 325.75,-282.22 342.97,-272.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="348.21,-269.3 344.36,-274.64 345.61,-270.8 343.01,-272.29 343.01,-272.29 343.01,-272.29 345.61,-270.8 341.66,-269.95 348.21,-269.3 348.21,-269.3"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_integral»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_integral_local» -->
+<g id="edge18" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_integral»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_integral_local»</title>
+<path fill="none" stroke="#6b7280" d="M1497.96,-603.43C1613.19,-596.69 1813.07,-581.55 1835,-556.78 1846.67,-543.61 1839.87,-534.1 1835,-517.19 1833.7,-512.67 1794.07,-447.94 1790,-445.59 1711.07,-399.94 1060.71,-422.87 970,-413.59 958.18,-412.38 945.73,-410.71 933.58,-408.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="927.64,-407.94 933.99,-406.2 930.61,-408.4 933.57,-408.86 933.57,-408.86 933.57,-408.86 930.61,-408.4 933.16,-411.53 927.64,-407.94 927.64,-407.94"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_unique» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Funique&#45;00BB" class="node">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_unique»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;002Eatlas&#45;005Fboundary&#45;005Fmeasure&#45;005Funique&#45;00BB"><a xlink:href="Foundations/#--informal-preview-_FLQQ_foundations___boundary_calculus___atlas_boundary_measure_unique_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="621" cy="-393.79" rx="110.12" ry="19.6"/>
+<text text-anchor="middle" x="621" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_calculus</text>
+<text text-anchor="middle" x="621" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">atlas_boundary_measure_unique</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_unique»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_surface_measure_iff» -->
+<g id="edge16" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_unique»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_surface_measure_iff»</title>
+<path fill="none" stroke="#6b7280" d="M603.31,-374.14C595.32,-365.71 585.79,-355.66 577.32,-346.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="572.74,-341.89 578.82,-344.39 574.8,-344.07 576.86,-346.25 576.86,-346.25 576.86,-346.25 574.8,-344.07 574.91,-348.1 572.74,-341.89 572.74,-341.89"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_local»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_surface_measure_iff» -->
+<g id="edge15" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_local»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_surface_measure_iff»</title>
+<path fill="none" stroke="#6b7280" d="M642.93,-451.68C582.73,-440.85 507.27,-425.23 498,-413.59 487.04,-399.82 490.8,-390.05 498,-373.99 502.94,-362.97 511.59,-353.36 520.67,-345.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="525.45,-341.63 522.52,-347.52 523.13,-343.53 520.81,-345.44 520.81,-345.44 520.81,-345.44 523.13,-343.53 519.09,-343.35 525.45,-341.63 525.45,-341.63"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_local»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_integral_local» -->
+<g id="edge17" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_local»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_integral_local»</title>
+<path fill="none" stroke="#6b7280" d="M754.18,-446.64C773.16,-437.07 796.67,-425.21 816.42,-415.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="821.88,-412.5 817.74,-417.61 819.21,-413.85 816.53,-415.2 816.53,-415.2 816.53,-415.2 819.21,-413.85 815.31,-412.79 821.88,-412.5 821.88,-412.5"/>
+</g>
+<!-- «foundations.boundary_calculus.atlas_boundary_measure_local»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_unique» -->
+<g id="edge114" class="edge">
+<title>«foundations.boundary_calculus.atlas_boundary_measure_local»&#45;&gt;«foundations.boundary_calculus.atlas_boundary_measure_unique»</title>
+<path fill="none" stroke="#6b7280" d="M693.25,-446.1C680.64,-437.14 665.34,-426.28 652.08,-416.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="646.92,-413.19 653.37,-414.47 649.36,-414.93 651.81,-416.67 651.81,-416.67 651.81,-416.67 649.36,-414.93 650.25,-418.87 646.92,-413.19 646.92,-413.19"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_atlas_lp_equiv»&#45;&gt;«foundations.boundary_calculus.atlas_trace_lp_norm» -->
+<g id="edge14" class="edge">
+<title>«foundations.boundary_calculus.surface_atlas_lp_equiv»&#45;&gt;«foundations.boundary_calculus.atlas_trace_lp_norm»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2104.7,-232.47C2115.53,-223.24 2128.35,-211.21 2138,-198.79 2153.99,-178.23 2167.67,-151.74 2176.48,-132.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2179.05,-127.13 2179.01,-133.71 2177.9,-129.9 2176.65,-132.63 2176.56,-132.59 2176.47,-132.55 2177.72,-129.82 2174.1,-131.47 2179.05,-127.13 2179.05,-127.13"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_atlas_lp_equiv»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv_symm_apply_ae» -->
+<g id="edge26" class="edge">
+<title>«foundations.boundary_calculus.surface_atlas_lp_equiv»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv_symm_apply_ae»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2026.23,-233.74C2022.1,-232.71 2017.99,-231.71 2014,-230.79 1954.92,-217.21 1887.95,-204.59 1835.49,-195.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1829.49,-194.27 1835.86,-192.66 1832.46,-194.7 1835.41,-195.22 1835.39,-195.31 1835.38,-195.41 1832.42,-194.89 1834.93,-197.97 1829.49,-194.27 1829.49,-194.27"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_atlas_lp_equiv»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv_apply_ae» -->
+<g id="edge33" class="edge">
+<title>«foundations.boundary_calculus.surface_atlas_lp_equiv»&#45;&gt;«foundations.boundary_calculus.surface_atlas_lp_equiv_apply_ae»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2065.94,-232.39C2057.22,-223.59 2046.48,-212.76 2037.04,-203.23"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2032.8,-198.96 2038.94,-201.32 2034.98,-201.02 2037.1,-203.15 2037.02,-203.22 2036.95,-203.29 2034.84,-201.16 2035.11,-205.12 2032.8,-198.96 2032.8,-198.96"/>
+</g>
+<!-- «foundations.boundary_calculus.surface_atlas_lp_equiv»&#45;&gt;«foundations.boundary_calculus.atlas_trace_lp» -->
+<g id="edge36" class="edge">
+<title>«foundations.boundary_calculus.surface_atlas_lp_equiv»&#45;&gt;«foundations.boundary_calculus.atlas_trace_lp»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2117.49,-232.57C2137.55,-222.67 2162.92,-210.14 2183.87,-199.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2189.37,-197.09 2185.19,-202.16 2186.73,-198.5 2184.04,-199.83 2183.99,-199.74 2183.95,-199.65 2186.64,-198.32 2182.8,-197.32 2189.37,-197.09 2189.37,-197.09"/>
+</g>
+<!-- «foundations.boundary_calculus.green_first_ball»&#45;&gt;«foundations.boundary_calculus.green_first_c1» -->
+<g id="edge38" class="edge">
+<title>«foundations.boundary_calculus.green_first_ball»&#45;&gt;«foundations.boundary_calculus.green_first_c1»</title>
+<path fill="none" stroke="#6b7280" d="M693.24,-233.1C673.78,-222.99 648.76,-210 628.35,-199.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="622.99,-196.61 629.56,-196.98 625.65,-197.99 628.32,-199.38 628.32,-199.38 628.32,-199.38 625.65,-197.99 627.07,-201.77 622.99,-196.61 622.99,-196.61"/>
+</g>
+<!-- «foundations.boundary_calculus.chart_boundary_restricted_integral»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure_compatible» -->
+<g id="edge110" class="edge">
+<title>«foundations.boundary_calculus.chart_boundary_restricted_integral»&#45;&gt;«foundations.boundary_calculus.chart_boundary_measure_compatible»</title>
+<path fill="none" stroke="#6b7280" d="M921.56,-588.93C911.61,-580.27 899.68,-569.9 889.2,-560.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="884.5,-556.69 890.8,-558.59 886.76,-558.66 889.02,-560.63 889.02,-560.63 889.02,-560.63 886.76,-558.66 887.25,-562.66 884.5,-556.69 884.5,-556.69"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,67 @@
+<svg data-node-count="4" data-edge-count="3" data-cluster-count="1" data-variant-key="parent:«hyperbolic.energy_uniqueness»" width="386pt" height="242pt"
+ viewBox="0.00 0.00 386.00 242.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 238.2)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-238.2 382,-238.2 382,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 358,-8 358,-8 364,-8 370,-14 370,-20 370,-20 370,-214.2 370,-214.2 370,-220.2 364,-226.2 358,-226.2 358,-226.2 20,-226.2 20,-226.2 14,-226.2 8,-220.2 8,-214.2 8,-214.2 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="189" y="-211" font-family="Helvetica" font-size="14.00">Wave energy and uniqueness</text>
+</g>
+<!-- «hyperbolic.weak_wave.uniqueness_reduction» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Euniqueness&#45;005Freduction&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.uniqueness_reduction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Euniqueness&#45;005Freduction&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___uniqueness_reduction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="286" cy="-175.4" rx="75.82" ry="19.6"/>
+<text text-anchor="middle" x="286" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave</text>
+<text text-anchor="middle" x="286" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">uniqueness_reduction</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.backward_estimate» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Ebackward&#45;005Festimate&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.backward_estimate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Ebackward&#45;005Festimate&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___backward_estimate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="101" cy="-175.4" rx="84.53" ry="18"/>
+<text text-anchor="middle" x="101" y="-172.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave.backward_estimate</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Euniqueness&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Euniqueness&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="123" cy="-34" rx="65.46" ry="18"/>
+<text text-anchor="middle" x="123" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave.uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.backward_estimate»&#45;&gt;«hyperbolic.weak_wave.uniqueness» -->
+<g id="edge1" class="edge">
+<title>«hyperbolic.weak_wave.backward_estimate»&#45;&gt;«hyperbolic.weak_wave.uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M83.72,-157.77C75.42,-148.58 66.36,-136.44 62,-123.6 56.34,-106.93 54.39,-99.87 62,-84 67.91,-71.68 78.59,-61.47 89.38,-53.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="94.34,-50.19 90.95,-55.83 92.07,-52.19 89.61,-53.9 89.41,-53.61 89.21,-53.32 91.67,-51.61 87.87,-51.39 94.34,-50.19 94.34,-50.19"/>
+</g>
+<!-- «hyperbolic.weak_wave.finite_partition_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Efinite&#45;005Fpartition&#45;005Funiqueness&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave.finite_partition_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;002Efinite&#45;005Fpartition&#45;005Funiqueness&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___weak_wave___finite_partition_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="166" cy="-103.8" rx="91.43" ry="19.6"/>
+<text text-anchor="middle" x="166" y="-106.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_wave</text>
+<text text-anchor="middle" x="166" y="-95.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">finite_partition_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave.backward_estimate»&#45;&gt;«hyperbolic.weak_wave.finite_partition_uniqueness» -->
+<g id="edge3" class="edge">
+<title>«hyperbolic.weak_wave.backward_estimate»&#45;&gt;«hyperbolic.weak_wave.finite_partition_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M116.73,-157.55C125,-148.7 135.26,-137.71 144.27,-128.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="148.58,-123.45 146.46,-129.68 146.79,-125.88 144.74,-128.07 144.49,-127.84 144.23,-127.6 146.28,-125.4 142.51,-125.99 148.58,-123.45 148.58,-123.45"/>
+</g>
+<!-- «hyperbolic.weak_wave.finite_partition_uniqueness»&#45;&gt;«hyperbolic.weak_wave.uniqueness» -->
+<g id="edge2" class="edge">
+<title>«hyperbolic.weak_wave.finite_partition_uniqueness»&#45;&gt;«hyperbolic.weak_wave.uniqueness»</title>
+<path fill="none" stroke="#6b7280" d="M154.02,-83.91C148.75,-75.61 142.53,-65.79 137.04,-57.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="133.74,-51.93 139.23,-55.55 135.35,-54.47 136.95,-57 136.95,-57 136.95,-57 135.35,-54.47 134.67,-58.45 133.74,-51.93 133.74,-51.93"/>
+</g>
+</g>
+</svg>

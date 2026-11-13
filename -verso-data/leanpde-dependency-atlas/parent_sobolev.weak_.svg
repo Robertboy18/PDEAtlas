@@ -1,0 +1,333 @@
+<svg data-node-count="15" data-edge-count="30" data-cluster-count="1" data-variant-key="parent:«sobolev.weak»" width="719pt" height="661pt"
+ viewBox="0.00 0.00 719.00 660.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 656.99)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-656.99 715,-656.99 715,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 691,-8 691,-8 697,-8 703,-14 703,-20 703,-20 703,-632.99 703,-632.99 703,-638.99 697,-644.99 691,-644.99 691,-644.99 20,-644.99 20,-644.99 14,-644.99 8,-638.99 8,-632.99 8,-632.99 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="355.5" y="-629.79" font-family="Helvetica" font-size="14.00">Weak derivatives and Sobolev spaces</text>
+</g>
+<!-- «sobolev.graph_space_complete» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fspace&#45;005Fcomplete&#45;00BB" class="node">
+<title>«sobolev.graph_space_complete»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fspace&#45;005Fcomplete&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___graph_space_complete_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="583" cy="-246.99" rx="84.53" ry="18"/>
+<text text-anchor="middle" x="583" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.graph_space_complete</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.h1_space» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eh1&#45;005Fspace&#45;00BB" class="node">
+<title>«sobolev.h1_space»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eh1&#45;005Fspace&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___h1_space_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="616.5,-193.4 525.5,-193.4 525.5,-157.4 616.5,-157.4 616.5,-193.4"/>
+<text text-anchor="middle" x="571" y="-172.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.h1_space</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.graph_space_complete»&#45;&gt;«sobolev.h1_space» -->
+<g id="edge26" class="edge">
+<title>«sobolev.graph_space_complete»&#45;&gt;«sobolev.h1_space»</title>
+<path fill="none" stroke="#6b7280" d="M580.03,-228.79C578.51,-219.94 576.63,-209.03 574.98,-199.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="573.93,-193.4 577.61,-198.86 574.44,-196.36 574.95,-199.32 574.95,-199.32 574.95,-199.32 574.44,-196.36 572.29,-199.77 573.93,-193.4 573.93,-193.4"/>
+</g>
+<!-- «sobolev.h10_space» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eh10&#45;005Fspace&#45;00BB" class="node">
+<title>«sobolev.h10_space»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eh10&#45;005Fspace&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___h10_space_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="619,-123.6 523,-123.6 523,-87.6 619,-87.6 619,-123.6"/>
+<text text-anchor="middle" x="571" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.h10_space</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.continuous_zero_boundary» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Econtinuous&#45;005Fzero&#45;005Fboundary&#45;00BB" class="node">
+<title>«sobolev.continuous_zero_boundary»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Econtinuous&#45;005Fzero&#45;005Fboundary&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___continuous_zero_boundary_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="571" cy="-35.8" rx="91.43" ry="19.6"/>
+<text text-anchor="middle" x="571" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="571" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">continuous_zero_boundary</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.h10_space»&#45;&gt;«sobolev.continuous_zero_boundary» -->
+<g id="edge28" class="edge">
+<title>«sobolev.h10_space»&#45;&gt;«sobolev.continuous_zero_boundary»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M571,-87.49C571,-79.86 571,-70.72 571,-62.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="571,-56.06 573.7,-62.06 571.1,-59.06 571.1,-62.06 571,-62.06 570.9,-62.06 570.9,-59.06 568.3,-62.06 571,-56.06 571,-56.06"/>
+</g>
+<!-- «sobolev.symmetric_derivative_index» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Esymmetric&#45;005Fderivative&#45;005Findex&#45;00BB" class="node">
+<title>«sobolev.symmetric_derivative_index»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Esymmetric&#45;005Fderivative&#45;005Findex&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___symmetric_derivative_index_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="416,-472.59 284,-472.59 284,-436.59 416,-436.59 416,-472.59"/>
+<text text-anchor="middle" x="350" y="-457.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="350" y="-446.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">symmetric_derivative_index</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.symmetric_derivative_index»&#45;&gt;«sobolev.graph_space_complete» -->
+<g id="edge3" class="edge">
+<title>«sobolev.symmetric_derivative_index»&#45;&gt;«sobolev.graph_space_complete»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M386.1,-436.47C403.85,-427.42 425.2,-415.54 443,-402.79 479.31,-376.78 486.92,-367.81 517,-334.79 535.83,-314.12 554.91,-288.41 567.67,-270.35"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="571.43,-265.01 570.19,-271.47 569.78,-267.52 568.06,-269.97 567.98,-269.92 567.9,-269.86 569.62,-267.4 565.77,-268.37 571.43,-265.01 571.43,-265.01"/>
+</g>
+<!-- «sobolev.model_bridge» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Emodel&#45;005Fbridge&#45;00BB" class="node">
+<title>«sobolev.model_bridge»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Emodel&#45;005Fbridge&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___model_bridge_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="176,-264.99 70,-264.99 70,-228.99 176,-228.99 176,-264.99"/>
+<text text-anchor="middle" x="123" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.model_bridge</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.symmetric_derivative_index»&#45;&gt;«sobolev.model_bridge» -->
+<g id="edge9" class="edge">
+<title>«sobolev.symmetric_derivative_index»&#45;&gt;«sobolev.model_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M321.48,-436.38C308.91,-427.63 294.8,-416.03 285,-402.79 255.53,-362.99 279.54,-334.29 245,-298.79 228.04,-281.36 204.2,-269.65 182.09,-261.92"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="176.21,-259.94 182.76,-259.3 179.08,-260.8 181.93,-261.76 181.89,-261.85 181.86,-261.95 179.02,-260.99 181.03,-264.41 176.21,-259.94 176.21,-259.94"/>
+</g>
+<!-- «sobolev.model_bridge_round_trip» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Emodel&#45;005Fbridge&#45;005Fround&#45;005Ftrip&#45;00BB" class="node">
+<title>«sobolev.model_bridge_round_trip»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Emodel&#45;005Fbridge&#45;005Fround&#45;005Ftrip&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___model_bridge_round_trip_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="166" cy="-175.4" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="166" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="166" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">model_bridge_round_trip</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.symmetric_derivative_index»&#45;&gt;«sobolev.model_bridge_round_trip» -->
+<g id="edge21" class="edge">
+<title>«sobolev.symmetric_derivative_index»&#45;&gt;«sobolev.model_bridge_round_trip»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M332.68,-436.32C323.92,-426.95 313.57,-414.85 306,-402.79 279.2,-360.15 294.29,-336.59 261,-298.79 242.56,-277.86 225.62,-287.57 207,-266.79 206.85,-266.63 189.23,-227.73 177.14,-201.02"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="174.65,-195.52 179.59,-199.87 175.98,-198.21 177.22,-200.95 177.13,-200.99 177.04,-201.03 175.8,-198.29 174.67,-202.1 174.65,-195.52 174.65,-195.52"/>
+</g>
+<!-- «sobolev.graph_ambient» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fambient&#45;00BB" class="node">
+<title>«sobolev.graph_ambient»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fambient&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___graph_ambient_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="430,-402.79 318,-402.79 318,-366.79 430,-366.79 430,-402.79"/>
+<text text-anchor="middle" x="374" y="-382.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.graph_ambient</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.symmetric_derivative_index»&#45;&gt;«sobolev.graph_ambient» -->
+<g id="edge23" class="edge">
+<title>«sobolev.symmetric_derivative_index»&#45;&gt;«sobolev.graph_ambient»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M356.06,-436.48C359.02,-428.12 362.63,-417.93 365.83,-408.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="367.86,-403.13 368.41,-409.69 366.96,-405.99 365.95,-408.82 365.86,-408.79 365.77,-408.76 366.77,-405.93 363.31,-407.89 367.86,-403.13 367.86,-403.13"/>
+</g>
+<!-- «sobolev.model_bridge»&#45;&gt;«sobolev.model_bridge_round_trip» -->
+<g id="edge18" class="edge">
+<title>«sobolev.model_bridge»&#45;&gt;«sobolev.model_bridge_round_trip»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M133.63,-228.79C138.87,-220.31 145.28,-209.94 151,-200.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="154.28,-195.36 153.43,-201.88 152.79,-197.97 151.22,-200.52 151.13,-200.46 151.05,-200.41 152.62,-197.86 148.83,-199.05 154.28,-195.36 154.28,-195.36"/>
+</g>
+<!-- «sobolev.graph_space» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fspace&#45;00BB" class="node">
+<title>«sobolev.graph_space»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fspace&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___graph_space_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="476,-334.79 372,-334.79 372,-298.79 476,-298.79 476,-334.79"/>
+<text text-anchor="middle" x="424" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.graph_space</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.graph_space»&#45;&gt;«sobolev.graph_space_complete» -->
+<g id="edge2" class="edge">
+<title>«sobolev.graph_space»&#45;&gt;«sobolev.graph_space_complete»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M464.12,-298.69C487.71,-288.63 517.5,-275.93 541.35,-265.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="546.96,-263.36 542.5,-268.2 544.24,-264.63 541.48,-265.81 541.44,-265.71 541.41,-265.62 544.17,-264.45 540.39,-263.23 546.96,-263.36 546.96,-263.36"/>
+</g>
+<!-- «sobolev.graph_space»&#45;&gt;«sobolev.model_bridge» -->
+<g id="edge7" class="edge">
+<title>«sobolev.graph_space»&#45;&gt;«sobolev.model_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M371.91,-304.06C319.07,-292.16 237.4,-273.76 182.15,-261.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="176.22,-259.98 182.67,-258.67 179.17,-260.54 182.09,-261.2 182.07,-261.3 182.05,-261.4 179.12,-260.74 181.48,-263.93 176.22,-259.98 176.22,-259.98"/>
+</g>
+<!-- «sobolev.graph_space»&#45;&gt;«sobolev.model_bridge_round_trip» -->
+<g id="edge17" class="edge">
+<title>«sobolev.graph_space»&#45;&gt;«sobolev.model_bridge_round_trip»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M371.82,-302.68C333.79,-292.5 286.05,-278.24 269,-266.79 249.98,-254.03 252.73,-242.84 236,-227.2 224.68,-216.61 211.1,-206.3 198.93,-197.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="193.81,-194.22 200.28,-195.41 196.33,-195.84 198.8,-197.55 198.74,-197.63 198.69,-197.71 196.22,-196.01 197.21,-199.85 193.81,-194.22 193.81,-194.22"/>
+</g>
+<!-- «sobolev.graph_space_restriction» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fspace&#45;005Frestriction&#45;00BB" class="node">
+<title>«sobolev.graph_space_restriction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fspace&#45;005Frestriction&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___graph_space_restriction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="364" cy="-246.99" rx="82.05" ry="19.6"/>
+<text text-anchor="middle" x="364" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="364" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">graph_space_restriction</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.graph_space»&#45;&gt;«sobolev.graph_space_restriction» -->
+<g id="edge24" class="edge">
+<title>«sobolev.graph_space»&#45;&gt;«sobolev.graph_space_restriction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M408.86,-298.69C401.6,-290.48 392.78,-280.51 384.89,-271.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="380.61,-266.77 386.61,-269.47 382.68,-268.95 384.67,-271.2 384.59,-271.26 384.52,-271.33 382.53,-269.08 382.57,-273.05 380.61,-266.77 380.61,-266.77"/>
+</g>
+<!-- «sobolev.graph_space»&#45;&gt;«sobolev.h1_space» -->
+<g id="edge25" class="edge">
+<title>«sobolev.graph_space»&#45;&gt;«sobolev.h1_space»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M436.4,-298.62C443.14,-289.25 451.58,-277.42 459,-266.79 471.19,-249.33 470.49,-241.8 486,-227.2 498.71,-215.23 514.7,-204.76 529.38,-196.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="534.72,-193.54 530.77,-198.81 532.14,-195.08 529.52,-196.53 529.47,-196.44 529.42,-196.35 532.05,-194.91 528.17,-194.08 534.72,-193.54 534.72,-193.54"/>
+</g>
+<!-- «sobolev.representative_space» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erepresentative&#45;005Fspace&#45;00BB" class="node">
+<title>«sobolev.representative_space»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erepresentative&#45;005Fspace&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___representative_space_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="157.5,-334.79 16.5,-334.79 16.5,-298.79 157.5,-298.79 157.5,-334.79"/>
+<text text-anchor="middle" x="87" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.representative_space</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.representative_space»&#45;&gt;«sobolev.model_bridge» -->
+<g id="edge8" class="edge">
+<title>«sobolev.representative_space»&#45;&gt;«sobolev.model_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M96.08,-298.69C100.57,-290.24 106.04,-279.93 110.88,-270.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="113.79,-265.33 113.36,-271.9 112.47,-268.03 111.07,-270.68 110.98,-270.63 110.89,-270.59 112.3,-267.94 108.59,-269.37 113.79,-265.33 113.79,-265.33"/>
+</g>
+<!-- «sobolev.representative_space»&#45;&gt;«sobolev.model_bridge_round_trip» -->
+<g id="edge19" class="edge">
+<title>«sobolev.representative_space»&#45;&gt;«sobolev.model_bridge_round_trip»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M62.34,-298.64C52.5,-290.29 42.27,-279.34 37,-266.79 30.18,-250.57 27.09,-241.74 37,-227.2 49.87,-208.29 70.96,-196.42 92.39,-188.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="98.13,-187.08 93.28,-191.52 95.32,-188.11 92.47,-189.05 92.44,-188.96 92.41,-188.86 95.25,-187.92 91.59,-186.39 98.13,-187.08 98.13,-187.08"/>
+</g>
+<!-- «sobolev.weak_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweak&#45;005Fderivative&#45;00BB" class="node">
+<title>«sobolev.weak_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweak&#45;005Fderivative&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weak_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="400.5,-613.99 283.5,-613.99 283.5,-577.99 400.5,-577.99 400.5,-613.99"/>
+<text text-anchor="middle" x="342" y="-593.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.weak_derivative</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weak_derivative»&#45;&gt;«sobolev.graph_space_complete» -->
+<g id="edge4" class="edge">
+<title>«sobolev.weak_derivative»&#45;&gt;«sobolev.graph_space_complete»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M400.58,-586.57C470.77,-572.8 579,-538.18 579,-455.59 579,-455.59 579,-455.59 579,-383.79 579,-344.27 580.71,-298.31 581.9,-271.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="582.17,-265.14 584.6,-271.25 582.14,-268.14 582,-271.14 581.9,-271.13 581.8,-271.13 581.94,-268.13 579.21,-271.01 582.17,-265.14 582.17,-265.14"/>
+</g>
+<!-- «sobolev.weak_derivative»&#45;&gt;«sobolev.model_bridge» -->
+<g id="edge12" class="edge">
+<title>«sobolev.weak_derivative»&#45;&gt;«sobolev.model_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M294.37,-577.83C278.94,-570.2 262.99,-559.75 252,-545.99 234.18,-523.69 197.36,-322.86 182,-298.79 174.75,-287.43 164.2,-277.22 154.02,-268.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="149.07,-265.1 155.46,-266.67 151.49,-266.87 153.85,-268.72 153.79,-268.8 153.73,-268.88 151.37,-267.03 152.12,-270.92 149.07,-265.1 149.07,-265.1"/>
+</g>
+<!-- «sobolev.weak_derivative»&#45;&gt;«sobolev.graph_space» -->
+<g id="edge13" class="edge">
+<title>«sobolev.weak_derivative»&#45;&gt;«sobolev.graph_space»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M393.59,-577.82C408.36,-570.36 422.91,-560.03 432,-545.99 475.36,-479 457.67,-445.23 443,-366.79 441.37,-358.07 438.24,-348.91 434.98,-340.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="432.48,-335.02 437.31,-339.49 433.75,-337.74 434.92,-340.51 434.83,-340.55 434.74,-340.58 433.56,-337.82 432.34,-341.6 432.48,-335.02 432.48,-335.02"/>
+</g>
+<!-- «sobolev.weak_derivative»&#45;&gt;«sobolev.representative_space» -->
+<g id="edge15" class="edge">
+<title>«sobolev.weak_derivative»&#45;&gt;«sobolev.representative_space»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M283.27,-592.43C208.48,-585.56 82.63,-560.99 30,-474.39 3.19,-430.27 41.45,-371.57 67.1,-340.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="71.09,-335.23 69.34,-341.57 69.25,-337.61 67.34,-339.92 67.26,-339.85 67.18,-339.79 69.1,-337.48 65.18,-338.13 71.09,-335.23 71.09,-335.23"/>
+</g>
+<!-- «sobolev.weak_derivative»&#45;&gt;«sobolev.model_bridge_round_trip» -->
+<g id="edge22" class="edge">
+<title>«sobolev.weak_derivative»&#45;&gt;«sobolev.model_bridge_round_trip»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M400.52,-584.34C500.61,-564.45 694,-517.95 694,-455.59 694,-455.59 694,-455.59 694,-315.79 694,-275.93 709.3,-254.23 680,-227.2 645.77,-195.61 308.16,-201.46 262,-195.2 252.31,-193.88 242.13,-192.21 232.16,-190.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="225.99,-189.26 232.38,-187.7 228.96,-189.71 231.91,-190.25 231.89,-190.35 231.87,-190.45 228.92,-189.91 231.4,-193.01 225.99,-189.26 225.99,-189.26"/>
+</g>
+<!-- «sobolev.weak_derivative_unique» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweak&#45;005Fderivative&#45;005Funique&#45;00BB" class="node">
+<title>«sobolev.weak_derivative_unique»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweak&#45;005Fderivative&#45;005Funique&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___weak_derivative_unique_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="124" cy="-454.59" rx="81.13" ry="19.6"/>
+<text text-anchor="middle" x="124" y="-457.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="124" y="-446.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_derivative_unique</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weak_derivative»&#45;&gt;«sobolev.weak_derivative_unique» -->
+<g id="edge29" class="edge">
+<title>«sobolev.weak_derivative»&#45;&gt;«sobolev.weak_derivative_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" stroke-dasharray="5,2" d="M290.46,-577.98C269.08,-569.82 244.52,-558.98 224,-545.99 193.85,-526.91 164.14,-498.49 145.04,-478.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="140.9,-474.27 146.99,-476.75 143.22,-476.2 145.29,-478.38 145.04,-478.62 144.78,-478.86 142.71,-476.69 143.08,-480.48 140.9,-474.27 140.9,-474.27"/>
+</g>
+<!-- «sobolev.derivative_permutation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Ederivative&#45;005Fpermutation&#45;00BB" class="node">
+<title>«sobolev.derivative_permutation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Ederivative&#45;005Fpermutation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___derivative_permutation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="342" cy="-526.19" rx="77.15" ry="19.6"/>
+<text text-anchor="middle" x="342" y="-529.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="342" y="-518.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">derivative_permutation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weak_derivative»&#45;&gt;«sobolev.derivative_permutation» -->
+<g id="edge30" class="edge">
+<title>«sobolev.weak_derivative»&#45;&gt;«sobolev.derivative_permutation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" stroke-dasharray="5,2" d="M342,-577.88C342,-570.25 342,-561.11 342,-552.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="342,-546.45 344.7,-552.45 342.35,-549.45 342.35,-552.45 342,-552.45 341.65,-552.45 341.65,-549.45 339.3,-552.45 342,-546.45 342,-546.45"/>
+</g>
+<!-- «sobolev.graph_ambient»&#45;&gt;«sobolev.graph_space_complete» -->
+<g id="edge1" class="edge">
+<title>«sobolev.graph_ambient»&#45;&gt;«sobolev.graph_space_complete»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M424.28,-366.7C445.12,-358.53 469.05,-347.7 489,-334.79 517.71,-316.22 545.89,-288.59 563.79,-269.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="568.11,-264.87 566,-271.1 566.14,-267.13 564.1,-269.33 564.03,-269.26 563.95,-269.2 565.99,-267 562.05,-267.43 568.11,-264.87 568.11,-264.87"/>
+</g>
+<!-- «sobolev.graph_ambient»&#45;&gt;«sobolev.model_bridge» -->
+<g id="edge11" class="edge">
+<title>«sobolev.graph_ambient»&#45;&gt;«sobolev.model_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M357.41,-366.61C338.35,-347.71 305.36,-317.53 272,-298.79 243.97,-283.05 210.24,-271.05 181.96,-262.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="176.02,-260.95 182.53,-260.03 178.93,-261.69 181.81,-262.53 181.78,-262.62 181.75,-262.72 178.87,-261.88 181.02,-265.22 176.02,-260.95 176.02,-260.95"/>
+</g>
+<!-- «sobolev.graph_ambient»&#45;&gt;«sobolev.graph_space» -->
+<g id="edge14" class="edge">
+<title>«sobolev.graph_ambient»&#45;&gt;«sobolev.graph_space»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M387.14,-366.45C393.18,-358.48 400.42,-348.93 406.87,-340.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="410.78,-335.25 409.31,-341.66 409.05,-337.7 407.23,-340.09 407.15,-340.03 407.07,-339.97 408.89,-337.58 405,-338.4 410.78,-335.25 410.78,-335.25"/>
+</g>
+<!-- «sobolev.graph_ambient»&#45;&gt;«sobolev.model_bridge_round_trip» -->
+<g id="edge16" class="edge">
+<title>«sobolev.graph_ambient»&#45;&gt;«sobolev.model_bridge_round_trip»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M363.23,-366.5C350.86,-347.77 329.01,-318.02 304,-298.79 276.88,-277.95 259.76,-289.3 234,-266.79 218.33,-253.1 221.31,-243.98 209,-227.2 202.2,-217.92 194.18,-208.17 186.93,-199.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="182.98,-195.18 188.95,-197.95 185.03,-197.38 186.99,-199.65 186.91,-199.72 186.84,-199.78 184.87,-197.51 184.87,-201.48 182.98,-195.18 182.98,-195.18"/>
+</g>
+<!-- «sobolev.graph_space_order_restriction» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fspace&#45;005Forder&#45;005Frestriction&#45;00BB" class="node">
+<title>«sobolev.graph_space_order_restriction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Egraph&#45;005Fspace&#45;005Forder&#45;005Frestriction&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___graph_space_order_restriction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="376" cy="-175.4" rx="101.23" ry="19.6"/>
+<text text-anchor="middle" x="376" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="376" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">graph_space_order_restriction</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.graph_space_restriction»&#45;&gt;«sobolev.graph_space_order_restriction» -->
+<g id="edge27" class="edge">
+<title>«sobolev.graph_space_restriction»&#45;&gt;«sobolev.graph_space_order_restriction»</title>
+<path fill="none" stroke="#6b7280" d="M367.28,-226.98C368.63,-219.15 370.21,-209.97 371.65,-201.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="372.72,-195.39 374.37,-201.76 372.22,-198.35 371.71,-201.3 371.71,-201.3 371.71,-201.3 372.22,-198.35 369.04,-200.85 372.72,-195.39 372.72,-195.39"/>
+</g>
+<!-- «sobolev.h1_space»&#45;&gt;«sobolev.h10_space» -->
+<g id="edge5" class="edge">
+<title>«sobolev.h1_space»&#45;&gt;«sobolev.h10_space»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M571,-157.29C571,-149 571,-138.92 571,-129.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="571,-123.94 573.7,-129.94 571.1,-126.94 571.1,-129.94 571,-129.94 570.9,-129.94 570.9,-126.94 568.3,-129.94 571,-123.94 571,-123.94"/>
+</g>
+<!-- «sobolev.weak_derivative_unique»&#45;&gt;«sobolev.model_bridge_round_trip» -->
+<g id="edge20" class="edge">
+<title>«sobolev.weak_derivative_unique»&#45;&gt;«sobolev.model_bridge_round_trip»</title>
+<path fill="none" stroke="#6b7280" d="M139.12,-435.03C162.5,-403.94 201.62,-340.61 170,-298.79 138.52,-257.16 88.48,-308.43 57,-266.79 46.39,-252.76 47.54,-242.04 57,-227.2 67.38,-210.9 84.5,-199.75 102.13,-192.15"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="108.12,-189.71 103.58,-194.48 105.34,-190.84 102.56,-191.98 102.56,-191.98 102.56,-191.98 105.34,-190.84 101.54,-189.48 108.12,-189.71 108.12,-189.71"/>
+</g>
+<!-- «sobolev.derivative_permutation»&#45;&gt;«sobolev.symmetric_derivative_index» -->
+<g id="edge6" class="edge">
+<title>«sobolev.derivative_permutation»&#45;&gt;«sobolev.symmetric_derivative_index»</title>
+<path fill="none" stroke="#6b7280" d="M344.19,-506.17C345.15,-497.75 346.3,-487.77 347.32,-478.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="348.04,-472.69 350.03,-478.95 347.69,-475.67 347.35,-478.65 347.35,-478.65 347.35,-478.65 347.69,-475.67 344.67,-478.34 348.04,-472.69 348.04,-472.69"/>
+</g>
+<!-- «sobolev.derivative_permutation»&#45;&gt;«sobolev.model_bridge» -->
+<g id="edge10" class="edge">
+<title>«sobolev.derivative_permutation»&#45;&gt;«sobolev.model_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M309.76,-508.04C296.4,-499.51 281.78,-488.07 272,-474.39 224.51,-407.97 269.91,-361.82 218,-298.79 207.2,-285.68 192.1,-275.48 177.11,-267.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="171.61,-265.04 178.18,-265.28 174.34,-266.28 177.03,-267.61 176.98,-267.7 176.94,-267.79 174.25,-266.46 175.78,-270.12 171.61,-265.04 171.61,-265.04"/>
+</g>
+</g>
+</svg>

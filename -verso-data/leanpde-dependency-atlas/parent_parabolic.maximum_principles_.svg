@@ -1,0 +1,365 @@
+<svg data-node-count="18" data-edge-count="30" data-cluster-count="1" data-variant-key="parent:«parabolic.maximum_principles»" width="1280pt" height="382pt"
+ viewBox="0.00 0.00 1280.00 381.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 377.79)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-377.79 1276,-377.79 1276,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1252,-8 1252,-8 1258,-8 1264,-14 1264,-20 1264,-20 1264,-353.79 1264,-353.79 1264,-359.79 1258,-365.79 1252,-365.79 1252,-365.79 20,-365.79 20,-365.79 14,-365.79 8,-359.79 8,-353.79 8,-353.79 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="636" y="-350.59" font-family="Helvetica" font-size="14.00">Parabolic maximum principles</text>
+</g>
+<!-- «parabolic.weak_minimum_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eweak&#45;005Fminimum&#45;005Fprinciple&#45;00BB" class="node">
+<title>«parabolic.weak_minimum_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eweak&#45;005Fminimum&#45;005Fprinciple&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___weak_minimum_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="580" cy="-107.4" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="580" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="580" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_minimum_principle</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_positivity» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fpositivity&#45;00BB" class="node">
+<title>«parabolic.heat_positivity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fpositivity&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_positivity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="828" cy="-35.8" rx="66.87" ry="18"/>
+<text text-anchor="middle" x="828" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.heat_positivity</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.weak_minimum_principle»&#45;&gt;«parabolic.heat_positivity» -->
+<g id="edge22" class="edge">
+<title>«parabolic.weak_minimum_principle»&#45;&gt;«parabolic.heat_positivity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M632.29,-91.72C675.05,-79.72 735.13,-62.86 777.41,-51"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="783.26,-49.36 778.21,-53.58 780.46,-50.5 777.57,-51.31 777.48,-50.98 777.39,-50.64 780.27,-49.83 776.75,-48.38 783.26,-49.36 783.26,-49.36"/>
+</g>
+<!-- «parabolic.weak_maximum_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eweak&#45;005Fmaximum&#45;005Fprinciple&#45;00BB" class="node">
+<title>«parabolic.weak_maximum_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eweak&#45;005Fmaximum&#45;005Fprinciple&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___weak_maximum_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="185" cy="-178.99" rx="88.28" ry="19.6"/>
+<text text-anchor="middle" x="185" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="185" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_maximum_principle</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.weak_maximum_principle»&#45;&gt;«parabolic.weak_minimum_principle» -->
+<g id="edge1" class="edge">
+<title>«parabolic.weak_maximum_principle»&#45;&gt;«parabolic.weak_minimum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M252.45,-166.11C323.5,-153.59 434.97,-133.95 507.77,-121.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="513.81,-120.06 508.37,-123.76 510.92,-120.92 507.96,-121.45 507.9,-121.1 507.84,-120.76 510.8,-120.24 507.43,-118.44 513.81,-120.06 513.81,-120.06"/>
+</g>
+<!-- «parabolic.comparison_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Ecomparison&#45;005Fprinciple&#45;00BB" class="node">
+<title>«parabolic.comparison_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Ecomparison&#45;005Fprinciple&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___comparison_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="368" cy="-107.4" rx="73.58" ry="19.6"/>
+<text text-anchor="middle" x="368" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="368" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">comparison_principle</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.weak_maximum_principle»&#45;&gt;«parabolic.comparison_principle» -->
+<g id="edge10" class="edge">
+<title>«parabolic.weak_maximum_principle»&#45;&gt;«parabolic.comparison_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M227.91,-161.68C256.03,-150.98 292.79,-137 321.6,-126.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="327.25,-123.9 322.6,-128.55 324.48,-125.06 321.68,-126.12 321.64,-126.03 321.6,-125.94 324.41,-124.87 320.68,-123.5 327.25,-123.9 327.25,-123.9"/>
+</g>
+<!-- «parabolic.whole_space_maximum_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Ewhole&#45;005Fspace&#45;005Fmaximum&#45;005Fprinciple&#45;00BB" class="node">
+<title>«parabolic.whole_space_maximum_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Ewhole&#45;005Fspace&#45;005Fmaximum&#45;005Fprinciple&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___whole_space_maximum_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="129" cy="-107.4" rx="113.27" ry="19.6"/>
+<text text-anchor="middle" x="129" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="129" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">whole_space_maximum_principle</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.weak_maximum_principle»&#45;&gt;«parabolic.whole_space_maximum_principle» -->
+<g id="edge30" class="edge">
+<title>«parabolic.weak_maximum_principle»&#45;&gt;«parabolic.whole_space_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M169.99,-159.34C163.21,-150.92 155.13,-140.87 147.94,-131.93"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="144.05,-127.1 149.91,-130.08 146.2,-129.22 148.08,-131.55 147.81,-131.77 147.54,-131.99 145.66,-129.66 145.71,-133.47 144.05,-127.1 144.05,-127.1"/>
+</g>
+<!-- «parabolic.strong_maximum_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Estrong&#45;005Fmaximum&#45;005Fprinciple&#45;00BB" class="node">
+<title>«parabolic.strong_maximum_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Estrong&#45;005Fmaximum&#45;005Fprinciple&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___strong_maximum_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1039" cy="-178.99" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="1039" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1039" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">strong_maximum_principle</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.heat_strong_maximum_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fstrong&#45;005Fmaximum&#45;005Fprinciple&#45;00BB" class="node">
+<title>«parabolic.heat_strong_maximum_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eheat&#45;005Fstrong&#45;005Fmaximum&#45;005Fprinciple&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___heat_strong_maximum_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1076" cy="-107.4" rx="108.79" ry="19.6"/>
+<text text-anchor="middle" x="1076" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="1076" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">heat_strong_maximum_principle</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.strong_maximum_principle»&#45;&gt;«parabolic.heat_strong_maximum_principle» -->
+<g id="edge19" class="edge">
+<title>«parabolic.strong_maximum_principle»&#45;&gt;«parabolic.heat_strong_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1049.11,-158.98C1053.35,-151 1058.34,-141.61 1062.86,-133.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1065.9,-127.39 1065.47,-133.96 1064.8,-130.21 1063.39,-132.85 1063.09,-132.69 1062.78,-132.53 1064.18,-129.88 1060.7,-131.42 1065.9,-127.39 1065.9,-127.39"/>
+</g>
+<!-- «parabolic.classical_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eclassical&#45;005Funiqueness&#45;00BB" class="node">
+<title>«parabolic.classical_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eclassical&#45;005Funiqueness&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___classical_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="390" cy="-35.8" rx="74.91" ry="19.6"/>
+<text text-anchor="middle" x="390" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="390" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">classical_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.comparison_principle»&#45;&gt;«parabolic.classical_uniqueness» -->
+<g id="edge18" class="edge">
+<title>«parabolic.comparison_principle»&#45;&gt;«parabolic.classical_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M374.01,-87.38C376.49,-79.55 379.39,-70.38 382.03,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="384,-55.79 384.76,-62.33 383.19,-58.68 382.28,-61.55 382.19,-61.51 382.09,-61.48 383,-58.62 379.61,-60.7 384,-55.79 384,-55.79"/>
+</g>
+<!-- «parabolic.maximum_principle_with_potential» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Emaximum&#45;005Fprinciple&#45;005Fwith&#45;005Fpotential&#45;00BB" class="node">
+<title>«parabolic.maximum_principle_with_potential»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Emaximum&#45;005Fprinciple&#45;005Fwith&#45;005Fpotential&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___maximum_principle_with_potential_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="807" cy="-178.99" rx="115.02" ry="19.6"/>
+<text text-anchor="middle" x="807" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="807" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">maximum_principle_with_potential</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.minimum_principle_with_potential» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eminimum&#45;005Fprinciple&#45;005Fwith&#45;005Fpotential&#45;00BB" class="node">
+<title>«parabolic.minimum_principle_with_potential»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eminimum&#45;005Fprinciple&#45;005Fwith&#45;005Fpotential&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___minimum_principle_with_potential_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="830" cy="-107.4" rx="112.36" ry="19.6"/>
+<text text-anchor="middle" x="830" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="830" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimum_principle_with_potential</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.maximum_principle_with_potential»&#45;&gt;«parabolic.minimum_principle_with_potential» -->
+<g id="edge28" class="edge">
+<title>«parabolic.maximum_principle_with_potential»&#45;&gt;«parabolic.minimum_principle_with_potential»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M813.28,-158.98C815.92,-151 819.02,-141.61 821.83,-133.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="823.72,-127.39 824.4,-133.94 823.11,-130.35 822.17,-133.2 821.84,-133.09 821.51,-132.98 822.45,-130.13 819.28,-132.24 823.72,-127.39 823.72,-127.39"/>
+</g>
+<!-- «parabolic.matrix_operator» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Ematrix&#45;005Foperator&#45;00BB" class="node">
+<title>«parabolic.matrix_operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Ematrix&#45;005Foperator&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___matrix_operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1100,-266.79 978,-266.79 978,-230.79 1100,-230.79 1100,-266.79"/>
+<text text-anchor="middle" x="1039" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.matrix_operator</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.matrix_operator»&#45;&gt;«parabolic.strong_maximum_principle» -->
+<g id="edge5" class="edge">
+<title>«parabolic.matrix_operator»&#45;&gt;«parabolic.strong_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1039,-230.69C1039,-223.06 1039,-213.91 1039,-205.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1039,-199.25 1041.7,-205.25 1039.1,-202.25 1039.1,-205.25 1039,-205.25 1038.9,-205.25 1038.9,-202.25 1036.3,-205.25 1039,-199.25 1039,-199.25"/>
+</g>
+<!-- «parabolic.harnack» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eharnack&#45;00BB" class="node">
+<title>«parabolic.harnack»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eharnack&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___harnack_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1206" cy="-178.99" rx="50.47" ry="18"/>
+<text text-anchor="middle" x="1206" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.harnack</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.matrix_operator»&#45;&gt;«parabolic.harnack» -->
+<g id="edge21" class="edge">
+<title>«parabolic.matrix_operator»&#45;&gt;«parabolic.harnack»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1081.14,-230.69C1107.91,-219.82 1142.27,-205.87 1168.16,-195.36"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1173.89,-193.03 1169.34,-197.79 1171.15,-194.25 1168.37,-195.38 1168.33,-195.29 1168.29,-195.2 1171.07,-194.07 1167.31,-192.79 1173.89,-193.03 1173.89,-193.03"/>
+</g>
+<!-- «parabolic.factored_operator» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Efactored&#45;005Foperator&#45;00BB" class="node">
+<title>«parabolic.factored_operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Efactored&#45;005Foperator&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___factored_operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="872,-334.79 742,-334.79 742,-298.79 872,-298.79 872,-334.79"/>
+<text text-anchor="middle" x="807" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.factored_operator</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.factored_operator»&#45;&gt;«parabolic.maximum_principle_with_potential» -->
+<g id="edge13" class="edge">
+<title>«parabolic.factored_operator»&#45;&gt;«parabolic.maximum_principle_with_potential»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M807,-298.59C807,-274.94 807,-232.21 807,-205.02"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="807,-198.79 809.7,-204.79 807.1,-201.79 807.1,-204.79 807,-204.79 806.9,-204.79 806.9,-201.79 804.3,-204.79 807,-198.79 807,-198.79"/>
+</g>
+<!-- «parabolic.factored_operator»&#45;&gt;«parabolic.matrix_operator» -->
+<g id="edge14" class="edge">
+<title>«parabolic.factored_operator»&#45;&gt;«parabolic.matrix_operator»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M867.05,-298.71C899.53,-289.47 939.71,-278.04 973.06,-268.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="979.2,-266.8 974.17,-271.04 976.35,-267.72 973.46,-268.54 973.43,-268.45 973.41,-268.35 976.29,-267.53 972.69,-265.85 979.2,-266.8 979.2,-266.8"/>
+</g>
+<!-- «parabolic.factored_weak_maximum_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Efactored&#45;005Fweak&#45;005Fmaximum&#45;005Fprinciple&#45;00BB" class="node">
+<title>«parabolic.factored_weak_maximum_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Efactored&#45;005Fweak&#45;005Fmaximum&#45;005Fprinciple&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___factored_weak_maximum_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="496" cy="-178.99" rx="117.26" ry="19.6"/>
+<text text-anchor="middle" x="496" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="496" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">factored_weak_maximum_principle</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.factored_operator»&#45;&gt;«parabolic.factored_weak_maximum_principle» -->
+<g id="edge27" class="edge">
+<title>«parabolic.factored_operator»&#45;&gt;«parabolic.factored_weak_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M741.82,-311.84C694.41,-306.64 630.04,-294.6 580,-266.79 552.12,-251.3 527.71,-223.57 512.5,-203.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="508.83,-198.73 514.59,-201.91 510.71,-201.07 512.51,-203.47 512.43,-203.53 512.35,-203.59 510.55,-201.19 510.27,-205.15 508.83,-198.73 508.83,-198.73"/>
+</g>
+<!-- «parabolic.heat_strong_maximum_principle»&#45;&gt;«parabolic.heat_positivity» -->
+<g id="edge23" class="edge">
+<title>«parabolic.heat_strong_maximum_principle»&#45;&gt;«parabolic.heat_positivity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1019.1,-90.43C976.71,-78.53 919.35,-62.44 878.56,-50.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="872.67,-49.33 879.18,-48.36 875.65,-49.81 878.54,-50.62 878.45,-50.96 878.35,-51.29 875.46,-50.48 877.72,-53.56 872.67,-49.33 872.67,-49.33"/>
+</g>
+<!-- «parabolic.closed_cylinder» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eclosed&#45;005Fcylinder&#45;00BB" class="node">
+<title>«parabolic.closed_cylinder»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eclosed&#45;005Fcylinder&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___closed_cylinder_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="714,-266.79 592,-266.79 592,-230.79 714,-230.79 714,-266.79"/>
+<text text-anchor="middle" x="653" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.closed_cylinder</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.closed_cylinder»&#45;&gt;«parabolic.weak_maximum_principle» -->
+<g id="edge2" class="edge">
+<title>«parabolic.closed_cylinder»&#45;&gt;«parabolic.weak_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M591.82,-238.93C507.57,-226.73 355.79,-204.74 263.34,-191.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="257.34,-190.47 263.66,-188.66 260.32,-190.81 263.29,-191.24 263.27,-191.33 263.26,-191.43 260.29,-191 262.89,-194.01 257.34,-190.47 257.34,-190.47"/>
+</g>
+<!-- «parabolic.closed_cylinder»&#45;&gt;«parabolic.strong_maximum_principle» -->
+<g id="edge6" class="edge">
+<title>«parabolic.closed_cylinder»&#45;&gt;«parabolic.strong_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M714.08,-237.3C771.21,-227.46 858.92,-212.28 935,-198.79 944.74,-197.07 954.99,-195.23 965.11,-193.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="971.04,-192.35 965.61,-196.07 968.11,-192.98 965.15,-193.51 965.14,-193.41 965.12,-193.31 968.07,-192.78 964.66,-190.75 971.04,-192.35 971.04,-192.35"/>
+</g>
+<!-- «parabolic.closed_cylinder»&#45;&gt;«parabolic.comparison_principle» -->
+<g id="edge7" class="edge">
+<title>«parabolic.closed_cylinder»&#45;&gt;«parabolic.comparison_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M652.77,-230.72C651.53,-210.58 646.28,-177.52 626,-159.2 618.84,-152.73 508.7,-132.66 434.66,-119.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="428.51,-118.7 434.88,-117.07 431.48,-119.12 434.43,-119.63 434.42,-119.73 434.4,-119.83 431.44,-119.31 433.95,-122.39 428.51,-118.7 428.51,-118.7"/>
+</g>
+<!-- «parabolic.closed_cylinder»&#45;&gt;«parabolic.maximum_principle_with_potential» -->
+<g id="edge11" class="edge">
+<title>«parabolic.closed_cylinder»&#45;&gt;«parabolic.maximum_principle_with_potential»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M691.86,-230.69C713.05,-221.36 739.4,-209.75 761.55,-200.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="767.08,-197.57 762.67,-202.46 764.37,-198.87 761.63,-200.08 761.59,-199.99 761.55,-199.9 764.29,-198.69 760.5,-197.52 767.08,-197.57 767.08,-197.57"/>
+</g>
+<!-- «parabolic.closed_cylinder»&#45;&gt;«parabolic.classical_uniqueness» -->
+<g id="edge15" class="edge">
+<title>«parabolic.closed_cylinder»&#45;&gt;«parabolic.classical_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M658.84,-230.7C670.91,-193.95 696,-109.05 678,-87.6 651.89,-56.48 545.92,-44.42 470.11,-39.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="463.79,-39.37 469.94,-37.03 466.79,-39.45 469.78,-39.63 469.78,-39.73 469.77,-39.83 466.78,-39.65 469.62,-42.42 463.79,-39.37 463.79,-39.37"/>
+</g>
+<!-- «parabolic.closed_cylinder»&#45;&gt;«parabolic.factored_weak_maximum_principle» -->
+<g id="edge25" class="edge">
+<title>«parabolic.closed_cylinder»&#45;&gt;«parabolic.factored_weak_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M613.38,-230.69C591.78,-221.36 564.91,-209.75 542.34,-200.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="536.7,-197.57 543.28,-197.47 539.49,-198.67 542.25,-199.86 542.21,-199.95 542.17,-200.04 539.41,-198.85 541.14,-202.43 536.7,-197.57 536.7,-197.57"/>
+</g>
+<!-- «parabolic.whole_space_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Ewhole&#45;005Fspace&#45;005Funiqueness&#45;00BB" class="node">
+<title>«parabolic.whole_space_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Ewhole&#45;005Fspace&#45;005Funiqueness&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___whole_space_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="129" cy="-35.8" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="129" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="129" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">whole_space_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.classical_heat_operator» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eclassical&#45;005Fheat&#45;005Foperator&#45;00BB" class="node">
+<title>«parabolic.classical_heat_operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eclassical&#45;005Fheat&#45;005Foperator&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___classical_heat_operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="131.5,-266.79 16.5,-266.79 16.5,-230.79 131.5,-230.79 131.5,-266.79"/>
+<text text-anchor="middle" x="74" y="-251.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic</text>
+<text text-anchor="middle" x="74" y="-240.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">classical_heat_operator</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.classical_heat_operator»&#45;&gt;«parabolic.weak_maximum_principle» -->
+<g id="edge4" class="edge">
+<title>«parabolic.classical_heat_operator»&#45;&gt;«parabolic.weak_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M102.01,-230.69C116.78,-221.66 135.03,-210.52 150.65,-200.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="155.84,-197.81 152.12,-203.24 153.33,-199.46 150.77,-201.02 150.72,-200.94 150.66,-200.85 153.22,-199.29 149.31,-198.63 155.84,-197.81 155.84,-197.81"/>
+</g>
+<!-- «parabolic.classical_heat_operator»&#45;&gt;«parabolic.comparison_principle» -->
+<g id="edge9" class="edge">
+<title>«parabolic.classical_heat_operator»&#45;&gt;«parabolic.comparison_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M70.44,-230.63C67.41,-210.71 66,-178.18 84,-159.2 113.6,-127.96 232.68,-135.02 275,-127.2 284.88,-125.37 295.34,-123.35 305.54,-121.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="311.5,-120.13 306.15,-123.95 308.58,-120.82 305.64,-121.4 305.62,-121.31 305.6,-121.21 308.54,-120.62 305.09,-118.66 311.5,-120.13 311.5,-120.13"/>
+</g>
+<!-- «parabolic.classical_heat_operator»&#45;&gt;«parabolic.classical_uniqueness» -->
+<g id="edge17" class="edge">
+<title>«parabolic.classical_heat_operator»&#45;&gt;«parabolic.classical_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M65.03,-230.63C56.17,-211.01 46.17,-179.06 63,-159.2 118.92,-93.19 182.11,-173.79 255,-127.2 272.95,-115.72 265.79,-101.42 282,-87.6 298.65,-73.4 319.93,-62.28 339.2,-54.1"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="345.11,-51.66 340.59,-56.45 342.37,-52.9 339.6,-54.05 339.56,-53.95 339.52,-53.86 342.3,-52.71 338.53,-51.46 345.11,-51.66 345.11,-51.66"/>
+</g>
+<!-- «parabolic.classical_heat_operator»&#45;&gt;«parabolic.heat_strong_maximum_principle» -->
+<g id="edge20" class="edge">
+<title>«parabolic.classical_heat_operator»&#45;&gt;«parabolic.heat_strong_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M131.72,-238.21C174.95,-230.14 235.13,-216.98 286,-198.79 323.36,-185.44 327.63,-169.28 366,-159.2 492.78,-125.88 824.63,-140.83 955,-127.2 967.36,-125.9 980.38,-124.22 993.11,-122.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="999.34,-121.49 993.79,-125.03 996.38,-122.02 993.42,-122.45 993.4,-122.35 993.39,-122.25 996.36,-121.82 993.01,-119.68 999.34,-121.49 999.34,-121.49"/>
+</g>
+<!-- «parabolic.classical_heat_operator»&#45;&gt;«parabolic.whole_space_maximum_principle» -->
+<g id="edge29" class="edge">
+<title>«parabolic.classical_heat_operator»&#45;&gt;«parabolic.whole_space_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M56.43,-230.38C48.89,-221.68 40.93,-210.52 37,-198.79 31.41,-182.11 28.06,-174.35 37,-159.2 44.94,-145.74 57.86,-135.6 71.55,-128.07"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="77.03,-125.2 72.96,-130.38 74.41,-126.68 71.75,-128.07 71.71,-127.98 71.66,-127.9 74.32,-126.51 70.46,-125.59 77.03,-125.2 77.03,-125.2"/>
+</g>
+<!-- «parabolic.whole_space_maximum_principle»&#45;&gt;«parabolic.whole_space_uniqueness» -->
+<g id="edge24" class="edge">
+<title>«parabolic.whole_space_maximum_principle»&#45;&gt;«parabolic.whole_space_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M129,-87.38C129,-79.55 129,-70.38 129,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="129,-55.79 131.7,-61.79 129.35,-58.79 129.35,-61.79 129,-61.79 128.65,-61.79 128.65,-58.79 126.3,-61.79 129,-55.79 129,-55.79"/>
+</g>
+<!-- «parabolic.parabolic_boundary» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eparabolic&#45;005Fboundary&#45;00BB" class="node">
+<title>«parabolic.parabolic_boundary»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eparabolic&#45;005Fboundary&#45;00BB"><a xlink:href="Parabolic-Equations/#--informal-preview-_FLQQ_parabolic___parabolic_boundary_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="422.5,-266.79 283.5,-266.79 283.5,-230.79 422.5,-230.79 422.5,-266.79"/>
+<text text-anchor="middle" x="353" y="-246.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">parabolic.parabolic_boundary</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.parabolic_boundary»&#45;&gt;«parabolic.weak_maximum_principle» -->
+<g id="edge3" class="edge">
+<title>«parabolic.parabolic_boundary»&#45;&gt;«parabolic.weak_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M310.61,-230.69C286.67,-221.03 256.7,-208.93 232.04,-198.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="226.22,-196.63 232.79,-196.37 229.04,-197.66 231.82,-198.78 231.78,-198.87 231.74,-198.97 228.96,-197.84 230.77,-201.38 226.22,-196.63 226.22,-196.63"/>
+</g>
+<!-- «parabolic.parabolic_boundary»&#45;&gt;«parabolic.comparison_principle» -->
+<g id="edge8" class="edge">
+<title>«parabolic.parabolic_boundary»&#45;&gt;«parabolic.comparison_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M348.81,-230.63C345.08,-212.65 340.93,-183.67 346,-159.2 347.87,-150.17 351.42,-140.78 355.14,-132.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="357.72,-127.09 357.61,-133.66 356.53,-129.84 355.26,-132.56 355.17,-132.52 355.07,-132.47 356.35,-129.76 352.72,-131.37 357.72,-127.09 357.72,-127.09"/>
+</g>
+<!-- «parabolic.parabolic_boundary»&#45;&gt;«parabolic.maximum_principle_with_potential» -->
+<g id="edge12" class="edge">
+<title>«parabolic.parabolic_boundary»&#45;&gt;«parabolic.maximum_principle_with_potential»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M422.94,-237.35C501.76,-225.58 630.14,-206.41 716.53,-193.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="722.68,-192.59 717.14,-196.14 719.73,-193.13 716.76,-193.57 716.75,-193.47 716.73,-193.37 719.7,-192.93 716.35,-190.8 722.68,-192.59 722.68,-192.59"/>
+</g>
+<!-- «parabolic.parabolic_boundary»&#45;&gt;«parabolic.classical_uniqueness» -->
+<g id="edge16" class="edge">
+<title>«parabolic.parabolic_boundary»&#45;&gt;«parabolic.classical_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M350.7,-230.76C349.06,-211.27 349.5,-179.44 366,-159.2 392.29,-126.94 430.12,-161.28 454,-127.2 464.1,-112.78 461.65,-103.45 454,-87.6 448.11,-75.41 437.73,-65.26 427.01,-57.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="422.08,-53.81 428.54,-55.08 424.59,-55.46 427.04,-57.2 426.98,-57.28 426.92,-57.36 424.47,-55.63 425.42,-59.48 422.08,-53.81 422.08,-53.81"/>
+</g>
+<!-- «parabolic.parabolic_boundary»&#45;&gt;«parabolic.factored_weak_maximum_principle» -->
+<g id="edge26" class="edge">
+<title>«parabolic.parabolic_boundary»&#45;&gt;«parabolic.factored_weak_maximum_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M389.08,-230.69C408.45,-221.51 432.44,-210.13 452.79,-200.48"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="458.43,-197.81 454.16,-202.82 455.76,-199.18 453.05,-200.47 453.01,-200.38 452.96,-200.29 455.67,-199 451.85,-197.94 458.43,-197.81 458.43,-197.81"/>
+</g>
+</g>
+</svg>

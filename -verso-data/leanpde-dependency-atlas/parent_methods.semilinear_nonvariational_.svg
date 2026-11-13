@@ -1,0 +1,159 @@
+<svg data-node-count="11" data-edge-count="7" data-cluster-count="1" data-variant-key="parent:«methods.semilinear_nonvariational»" width="769pt" height="385pt"
+ viewBox="0.00 0.00 769.00 385.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 381.39)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-381.39 765,-381.39 765,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 741,-8 741,-8 747,-8 753,-14 753,-20 753,-20 753,-357.39 753,-357.39 753,-363.39 747,-369.39 741,-369.39 741,-369.39 20,-369.39 20,-369.39 14,-369.39 8,-363.39 8,-357.39 8,-357.39 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="380.5" y="-354.19" font-family="Helvetica" font-size="14.00">Semilinear fixed&#45;point methods</text>
+</g>
+<!-- «methods.semilinear.monotone_extremal_solutions» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Emonotone&#45;005Fextremal&#45;005Fsolutions&#45;00BB" class="node">
+<title>«methods.semilinear.monotone_extremal_solutions»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Emonotone&#45;005Fextremal&#45;005Fsolutions&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___monotone_extremal_solutions_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="645" cy="-318.59" rx="100.32" ry="19.6"/>
+<text text-anchor="middle" x="645" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="645" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">monotone_extremal_solutions</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.contraction» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Econtraction&#45;00BB" class="node">
+<title>«methods.semilinear.contraction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Econtraction&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___contraction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="465" cy="-177.2" rx="61.02" ry="18"/>
+<text text-anchor="middle" x="465" y="-174.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.contraction</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.contraction_coercivity» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Econtraction&#45;005Fcoercivity&#45;00BB" class="node">
+<title>«methods.semilinear.contraction_coercivity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Econtraction&#45;005Fcoercivity&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___contraction_coercivity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="465" cy="-107.4" rx="76.24" ry="19.6"/>
+<text text-anchor="middle" x="465" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="465" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">contraction_coercivity</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.contraction»&#45;&gt;«methods.semilinear.contraction_coercivity» -->
+<g id="edge5" class="edge">
+<title>«methods.semilinear.contraction»&#45;&gt;«methods.semilinear.contraction_coercivity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M465,-159.09C465,-151.46 465,-142.32 465,-133.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="465,-127.66 467.7,-133.66 465.1,-130.66 465.1,-133.66 465,-133.66 464.9,-133.66 464.9,-130.66 462.3,-133.66 465,-127.66 465,-127.66"/>
+</g>
+<!-- «methods.semilinear.dirichlet_contraction» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Edirichlet&#45;005Fcontraction&#45;00BB" class="node">
+<title>«methods.semilinear.dirichlet_contraction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Edirichlet&#45;005Fcontraction&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___dirichlet_contraction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="465" cy="-35.8" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="465" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="465" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">dirichlet_contraction</text>
+</a>
+</g>
+</g>
+<!-- «methods.validated.quadratic_dirichlet» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Evalidated&#45;002Equadratic&#45;005Fdirichlet&#45;00BB" class="node">
+<title>«methods.validated.quadratic_dirichlet»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Evalidated&#45;002Equadratic&#45;005Fdirichlet&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___validated___quadratic_dirichlet_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="91" cy="-246.99" rx="64.19" ry="19.6"/>
+<text text-anchor="middle" x="91" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">validated</text>
+<text text-anchor="middle" x="91" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">quadratic_dirichlet</text>
+</a>
+</g>
+</g>
+<!-- «methods.validated.cube_poisson» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Evalidated&#45;002Ecube&#45;005Fpoisson&#45;00BB" class="node">
+<title>«methods.validated.cube_poisson»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Evalidated&#45;002Ecube&#45;005Fpoisson&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___validated___cube_poisson_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="86" cy="-177.2" rx="64.83" ry="18"/>
+<text text-anchor="middle" x="86" y="-174.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">validated.cube_poisson</text>
+</a>
+</g>
+</g>
+<!-- «methods.validated.quadratic_dirichlet»&#45;&gt;«methods.validated.cube_poisson» -->
+<g id="edge4" class="edge">
+<title>«methods.validated.quadratic_dirichlet»&#45;&gt;«methods.validated.cube_poisson»</title>
+<path fill="none" stroke="#6b7280" d="M89.61,-227.11C89.03,-219.24 88.35,-210.02 87.73,-201.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="87.28,-195.59 90.42,-201.37 87.5,-198.58 87.72,-201.57 87.72,-201.57 87.72,-201.57 87.5,-198.58 85.03,-201.77 87.28,-195.59 87.28,-195.59"/>
+</g>
+<!-- «methods.validated.interval_poisson» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Evalidated&#45;002Einterval&#45;005Fpoisson&#45;00BB" class="node">
+<title>«methods.validated.interval_poisson»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Evalidated&#45;002Einterval&#45;005Fpoisson&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___validated___interval_poisson_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="246" cy="-177.2" rx="70.17" ry="18"/>
+<text text-anchor="middle" x="246" y="-174.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">validated.interval_poisson</text>
+</a>
+</g>
+</g>
+<!-- «methods.validated.quadratic_dirichlet»&#45;&gt;«methods.validated.interval_poisson» -->
+<g id="edge7" class="edge">
+<title>«methods.validated.quadratic_dirichlet»&#45;&gt;«methods.validated.interval_poisson»</title>
+<path fill="none" stroke="#6b7280" d="M126.56,-230.44C150.31,-220.05 181.57,-206.38 206.16,-195.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="211.94,-193.1 207.52,-197.97 209.19,-194.3 206.44,-195.5 206.44,-195.5 206.44,-195.5 209.19,-194.3 205.36,-193.03 211.94,-193.1 211.94,-193.1"/>
+</g>
+<!-- «methods.semilinear.picard_map» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Epicard&#45;005Fmap&#45;00BB" class="node">
+<title>«methods.semilinear.picard_map»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Epicard&#45;005Fmap&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___picard_map_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="520,-336.59 410,-336.59 410,-300.59 520,-300.59 520,-336.59"/>
+<text text-anchor="middle" x="465" y="-316.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear.picard_map</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.picard_contraction» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Epicard&#45;005Fcontraction&#45;00BB" class="node">
+<title>«methods.semilinear.picard_contraction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Epicard&#45;005Fcontraction&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___picard_contraction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="465" cy="-246.99" rx="65.11" ry="19.6"/>
+<text text-anchor="middle" x="465" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="465" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">picard_contraction</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear.picard_map»&#45;&gt;«methods.semilinear.picard_contraction» -->
+<g id="edge6" class="edge">
+<title>«methods.semilinear.picard_map»&#45;&gt;«methods.semilinear.picard_contraction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M465,-300.39C465,-292.15 465,-282.12 465,-273.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="465,-266.96 467.7,-272.96 465.1,-269.96 465.1,-272.96 465,-272.96 464.9,-272.96 464.9,-269.96 462.3,-272.96 465,-266.96 465,-266.96"/>
+</g>
+<!-- «methods.semilinear.monotone_lipschitz_bijective» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Emonotone&#45;005Flipschitz&#45;005Fbijective&#45;00BB" class="node">
+<title>«methods.semilinear.monotone_lipschitz_bijective»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;002Emonotone&#45;005Flipschitz&#45;005Fbijective&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___semilinear___monotone_lipschitz_bijective_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="288" cy="-318.59" rx="96.75" ry="19.6"/>
+<text text-anchor="middle" x="288" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">semilinear</text>
+<text text-anchor="middle" x="288" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">monotone_lipschitz_bijective</text>
+</a>
+</g>
+</g>
+<!-- «methods.validated.finite_rank_correction» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Evalidated&#45;002Efinite&#45;005Frank&#45;005Fcorrection&#45;00BB" class="node">
+<title>«methods.validated.finite_rank_correction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Evalidated&#45;002Efinite&#45;005Frank&#45;005Fcorrection&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___validated___finite_rank_correction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="91" cy="-318.59" rx="74.91" ry="19.6"/>
+<text text-anchor="middle" x="91" y="-321.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">validated</text>
+<text text-anchor="middle" x="91" y="-310.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">finite_rank_correction</text>
+</a>
+</g>
+</g>
+<!-- «methods.validated.finite_rank_correction»&#45;&gt;«methods.validated.quadratic_dirichlet» -->
+<g id="edge3" class="edge">
+<title>«methods.validated.finite_rank_correction»&#45;&gt;«methods.validated.quadratic_dirichlet»</title>
+<path fill="none" stroke="#6b7280" d="M91,-298.57C91,-290.75 91,-281.57 91,-273.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="91,-266.99 93.7,-272.99 91,-269.99 91,-272.99 91,-272.99 91,-272.99 91,-269.99 88.3,-272.99 91,-266.99 91,-266.99"/>
+</g>
+<!-- «methods.semilinear.contraction_coercivity»&#45;&gt;«methods.semilinear.dirichlet_contraction» -->
+<g id="edge2" class="edge">
+<title>«methods.semilinear.contraction_coercivity»&#45;&gt;«methods.semilinear.dirichlet_contraction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M465,-87.38C465,-79.55 465,-70.38 465,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="465,-55.79 467.7,-61.79 465.1,-58.79 465.1,-61.79 465,-61.79 464.9,-61.79 464.9,-58.79 462.3,-61.79 465,-55.79 465,-55.79"/>
+</g>
+<!-- «methods.semilinear.picard_contraction»&#45;&gt;«methods.semilinear.contraction» -->
+<g id="edge1" class="edge">
+<title>«methods.semilinear.picard_contraction»&#45;&gt;«methods.semilinear.contraction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M465,-227.11C465,-219.24 465,-210.02 465,-201.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="465,-195.59 467.7,-201.59 465.1,-198.59 465.1,-201.59 465,-201.59 464.9,-201.59 464.9,-198.59 462.3,-201.59 465,-195.59 465,-195.59"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,122 @@
+<svg data-node-count="7" data-edge-count="8" data-cluster-count="1" data-variant-key="parent:«sobolev.holder»" width="290pt" height="439pt"
+ viewBox="0.00 0.00 290.00 439.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 435)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-435 286,-435 286,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 262,-8 262,-8 268,-8 274,-14 274,-20 274,-20 274,-411 274,-411 274,-417 268,-423 262,-423 262,-423 20,-423 20,-423 14,-423 8,-417 8,-411 8,-411 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="141" y="-407.8" font-family="Helvetica" font-size="14.00">Hölder spaces</text>
+</g>
+<!-- «sobolev.holder.banach» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Ebanach&#45;00BB" class="node">
+<title>«sobolev.holder.banach»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Ebanach&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___holder___banach_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="142" cy="-102" rx="41.32" ry="18"/>
+<text text-anchor="middle" x="142" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">holder.banach</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.holder.restriction» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Erestriction&#45;00BB" class="node">
+<title>«sobolev.holder.restriction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Erestriction&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___holder___restriction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="101.5,-52 16.5,-52 16.5,-16 101.5,-16 101.5,-52"/>
+<text text-anchor="middle" x="59" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">holder.restriction</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.holder.banach»&#45;&gt;«sobolev.holder.restriction» -->
+<g id="edge5" class="edge">
+<title>«sobolev.holder.banach»&#45;&gt;«sobolev.holder.restriction»</title>
+<path fill="none" stroke="#6b7280" d="M122.75,-85.69C111.59,-76.82 97.38,-65.52 85.21,-55.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="80.48,-52.08 86.86,-53.7 82.83,-53.95 85.18,-55.82 85.18,-55.82 85.18,-55.82 82.83,-53.95 83.5,-57.93 80.48,-52.08 80.48,-52.08"/>
+</g>
+<!-- «sobolev.holder.observation_operators» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Eobservation&#45;005Foperators&#45;00BB" class="node">
+<title>«sobolev.holder.observation_operators»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Eobservation&#45;005Foperators&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___holder___observation_operators_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="265.5,-52 126.5,-52 126.5,-16 265.5,-16 265.5,-52"/>
+<text text-anchor="middle" x="196" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">holder.observation_operators</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.holder.banach»&#45;&gt;«sobolev.holder.observation_operators» -->
+<g id="edge8" class="edge">
+<title>«sobolev.holder.banach»&#45;&gt;«sobolev.holder.observation_operators»</title>
+<path fill="none" stroke="#6b7280" d="M155.35,-84.69C162.2,-76.31 170.64,-65.99 178.06,-56.93"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="182.05,-52.05 180.34,-58.4 180.15,-54.37 178.25,-56.69 178.25,-56.69 178.25,-56.69 180.15,-54.37 176.16,-54.98 182.05,-52.05 182.05,-52.05"/>
+</g>
+<!-- «sobolev.holder.seminorm» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Eseminorm&#45;00BB" class="node">
+<title>«sobolev.holder.seminorm»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Eseminorm&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___holder___seminorm_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="184.5,-188 99.5,-188 99.5,-152 184.5,-152 184.5,-188"/>
+<text text-anchor="middle" x="142" y="-167.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">holder.seminorm</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.holder.seminorm»&#45;&gt;«sobolev.holder.banach» -->
+<g id="edge1" class="edge">
+<title>«sobolev.holder.seminorm»&#45;&gt;«sobolev.holder.banach»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M142,-151.66C142,-143.99 142,-134.85 142,-126.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="142,-120.45 144.7,-126.45 142.1,-123.45 142.1,-126.45 142,-126.45 141.9,-126.45 141.9,-123.45 139.3,-126.45 142,-120.45 142,-120.45"/>
+</g>
+<!-- «sobolev.holder.quantitative» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Equantitative&#45;00BB" class="node">
+<title>«sobolev.holder.quantitative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Equantitative&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___holder___quantitative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="153.5,-324 62.5,-324 62.5,-288 153.5,-288 153.5,-324"/>
+<text text-anchor="middle" x="108" y="-303.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">holder.quantitative</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.holder.quantitative»&#45;&gt;«sobolev.holder.seminorm» -->
+<g id="edge3" class="edge">
+<title>«sobolev.holder.quantitative»&#45;&gt;«sobolev.holder.seminorm»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M109.68,-287.82C111.65,-270.47 115.49,-243.03 122,-220 124.43,-211.4 127.9,-202.27 131.27,-194.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="133.8,-188.35 133.91,-194.93 132.71,-191.15 131.52,-193.9 131.43,-193.87 131.34,-193.83 132.52,-191.07 128.95,-192.8 133.8,-188.35 133.8,-188.35"/>
+</g>
+<!-- «sobolev.holder.c0gamma» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Ec0gamma&#45;00BB" class="node">
+<title>«sobolev.holder.c0gamma»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Ec0gamma&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___holder___c0gamma_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="219.5,-256 134.5,-256 134.5,-220 219.5,-220 219.5,-256"/>
+<text text-anchor="middle" x="177" y="-235.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">holder.c0gamma</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.holder.quantitative»&#45;&gt;«sobolev.holder.c0gamma» -->
+<g id="edge7" class="edge">
+<title>«sobolev.holder.quantitative»&#45;&gt;«sobolev.holder.c0gamma»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M126.13,-287.66C134.78,-279.39 145.21,-269.41 154.37,-260.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="158.75,-256.45 156.28,-262.55 156.65,-258.6 154.49,-260.67 154.42,-260.6 154.35,-260.53 156.52,-258.46 152.55,-258.65 158.75,-256.45 158.75,-256.45"/>
+</g>
+<!-- «sobolev.holder.c0gamma»&#45;&gt;«sobolev.holder.seminorm» -->
+<g id="edge2" class="edge">
+<title>«sobolev.holder.c0gamma»&#45;&gt;«sobolev.holder.seminorm»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M167.8,-219.66C163.66,-211.84 158.7,-202.49 154.24,-194.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="151.26,-188.45 156.45,-192.49 152.75,-191.06 154.16,-193.71 154.07,-193.75 153.98,-193.8 152.57,-191.15 151.68,-195.02 151.26,-188.45 151.26,-188.45"/>
+</g>
+<!-- «sobolev.holder.exponent» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Eexponent&#45;00BB" class="node">
+<title>«sobolev.holder.exponent»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;002Eexponent&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___holder___exponent_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="185,-392 103,-392 103,-356 185,-356 185,-392"/>
+<text text-anchor="middle" x="144" y="-371.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">holder.exponent</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.holder.exponent»&#45;&gt;«sobolev.holder.quantitative» -->
+<g id="edge4" class="edge">
+<title>«sobolev.holder.exponent»&#45;&gt;«sobolev.holder.quantitative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M134.54,-355.66C130.28,-347.84 125.18,-338.49 120.59,-330.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="117.52,-324.45 122.76,-328.43 119.04,-327.04 120.48,-329.67 120.39,-329.72 120.31,-329.77 118.87,-327.14 118.02,-331.01 117.52,-324.45 117.52,-324.45"/>
+</g>
+<!-- «sobolev.holder.exponent»&#45;&gt;«sobolev.holder.c0gamma» -->
+<g id="edge6" class="edge">
+<title>«sobolev.holder.exponent»&#45;&gt;«sobolev.holder.c0gamma»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M153.23,-355.78C157.77,-346.59 162.91,-334.95 166,-324 171.77,-303.59 174.52,-279.57 175.83,-262.28"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="176.25,-256.23 178.53,-262.4 176.14,-259.23 175.93,-262.22 175.83,-262.21 175.73,-262.21 175.94,-259.21 173.14,-262.03 176.25,-256.23 176.25,-256.23"/>
+</g>
+</g>
+</svg>

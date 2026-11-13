@@ -1,0 +1,76 @@
+<svg data-node-count="5" data-edge-count="3" data-cluster-count="1" data-variant-key="parent:«elliptic.energy_methods»" width="541pt" height="171pt"
+ viewBox="0.00 0.00 541.00 170.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 166.6)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-166.6 537,-166.6 537,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 513,-8 513,-8 519,-8 525,-14 525,-20 525,-20 525,-142.6 525,-142.6 525,-148.6 519,-154.6 513,-154.6 513,-154.6 20,-154.6 20,-154.6 14,-154.6 8,-148.6 8,-142.6 8,-142.6 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="266.5" y="-139.4" font-family="Helvetica" font-size="14.00">Green identities and energy methods</text>
+</g>
+<!-- «elliptic.energy.green_second_box» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Egreen&#45;005Fsecond&#45;005Fbox&#45;00BB" class="node">
+<title>«elliptic.energy.green_second_box»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Egreen&#45;005Fsecond&#45;005Fbox&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___energy___green_second_box_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="248" cy="-35.8" rx="71.44" ry="18"/>
+<text text-anchor="middle" x="248" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">energy.green_second_box</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.energy.dirichlet_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Edirichlet&#45;005Fprinciple&#45;00BB" class="node">
+<title>«elliptic.energy.dirichlet_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Edirichlet&#45;005Fprinciple&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___energy___dirichlet_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="84" cy="-35.8" rx="67.5" ry="18"/>
+<text text-anchor="middle" x="84" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">energy.dirichlet_principle</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.energy.green_first_box» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Egreen&#45;005Ffirst&#45;005Fbox&#45;00BB" class="node">
+<title>«elliptic.energy.green_first_box»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Egreen&#45;005Ffirst&#45;005Fbox&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___energy___green_first_box_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="339" cy="-105.6" rx="63.56" ry="18"/>
+<text text-anchor="middle" x="339" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">energy.green_first_box</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.energy.green_first_box»&#45;&gt;«elliptic.energy.green_second_box» -->
+<g id="edge1" class="edge">
+<title>«elliptic.energy.green_first_box»&#45;&gt;«elliptic.energy.green_second_box»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M317.43,-88.53C304.61,-78.97 288.24,-66.78 274.61,-56.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="269.73,-52.99 276.15,-54.41 272.34,-54.5 274.75,-56.29 274.54,-56.57 274.33,-56.85 271.92,-55.06 272.92,-58.74 269.73,-52.99 269.73,-52.99"/>
+</g>
+<!-- «elliptic.energy.box_dirichlet_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Ebox&#45;005Fdirichlet&#45;005Funiqueness&#45;00BB" class="node">
+<title>«elliptic.energy.box_dirichlet_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Ebox&#45;005Fdirichlet&#45;005Funiqueness&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___energy___box_dirichlet_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="431" cy="-35.8" rx="86.03" ry="19.6"/>
+<text text-anchor="middle" x="431" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">energy</text>
+<text text-anchor="middle" x="431" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">box_dirichlet_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.energy.green_first_box»&#45;&gt;«elliptic.energy.box_dirichlet_uniqueness» -->
+<g id="edge3" class="edge">
+<title>«elliptic.energy.green_first_box»&#45;&gt;«elliptic.energy.box_dirichlet_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M360.8,-88.53C372.91,-79.61 388.13,-68.39 401.31,-58.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="406.43,-54.9 403.21,-60.64 404.08,-56.76 401.66,-58.54 401.6,-58.46 401.55,-58.38 403.96,-56.6 400,-56.29 406.43,-54.9 406.43,-54.9"/>
+</g>
+<!-- «elliptic.energy.classical_dirichlet_class» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Eclassical&#45;005Fdirichlet&#45;005Fclass&#45;00BB" class="node">
+<title>«elliptic.energy.classical_dirichlet_class»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;002Eclassical&#45;005Fdirichlet&#45;005Fclass&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___energy___classical_dirichlet_class_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="143,-123.6 25,-123.6 25,-87.6 143,-87.6 143,-123.6"/>
+<text text-anchor="middle" x="84" y="-108.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">energy</text>
+<text text-anchor="middle" x="84" y="-97.6" font-family="Helvetica" font-size="10.00" fill="#ffffff">classical_dirichlet_class</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.energy.classical_dirichlet_class»&#45;&gt;«elliptic.energy.dirichlet_principle» -->
+<g id="edge2" class="edge">
+<title>«elliptic.energy.classical_dirichlet_class»&#45;&gt;«elliptic.energy.dirichlet_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M84,-87.49C84,-79.2 84,-69.12 84,-60.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="84,-54.14 86.7,-60.14 84.1,-57.14 84.1,-60.14 84,-60.14 83.9,-60.14 83.9,-57.14 81.3,-60.14 84,-54.14 84,-54.14"/>
+</g>
+</g>
+</svg>

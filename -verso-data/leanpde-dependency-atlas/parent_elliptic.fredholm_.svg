@@ -1,0 +1,314 @@
+<svg data-node-count="18" data-edge-count="23" data-cluster-count="1" data-variant-key="parent:«elliptic.fredholm»" width="731pt" height="650pt"
+ viewBox="0.00 0.00 731.00 650.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 646.2)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-646.2 727,-646.2 727,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 703,-8 703,-8 709,-8 715,-14 715,-20 715,-20 715,-622.2 715,-622.2 715,-628.2 709,-634.2 703,-634.2 703,-634.2 20,-634.2 20,-634.2 14,-634.2 8,-628.2 8,-622.2 8,-622.2 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="361.5" y="-619" font-family="Helvetica" font-size="14.00">Fredholm alternative and spectrum</text>
+</g>
+<!-- «elliptic.spectrum.solvability_off_spectrum» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Esolvability&#45;005Foff&#45;005Fspectrum&#45;00BB" class="node">
+<title>«elliptic.spectrum.solvability_off_spectrum»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Esolvability&#45;005Foff&#45;005Fspectrum&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___solvability_off_spectrum_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="250" cy="-311.4" rx="82.96" ry="19.6"/>
+<text text-anchor="middle" x="250" y="-314.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum</text>
+<text text-anchor="middle" x="250" y="-303.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">solvability_off_spectrum</text>
+</a>
+</g>
+</g>
+<!-- «analysis.fredholm.adjoint_solvability» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Efredholm&#45;002Eadjoint&#45;005Fsolvability&#45;00BB" class="node">
+<title>«analysis.fredholm.adjoint_solvability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Efredholm&#45;002Eadjoint&#45;005Fsolvability&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_analysis___fredholm___adjoint_solvability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="225" cy="-381.2" rx="73.98" ry="18"/>
+<text text-anchor="middle" x="225" y="-378.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">fredholm.adjoint_solvability</text>
+</a>
+</g>
+</g>
+<!-- «analysis.fredholm.index_zero» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Efredholm&#45;002Eindex&#45;005Fzero&#45;00BB" class="node">
+<title>«analysis.fredholm.index_zero»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Efredholm&#45;002Eindex&#45;005Fzero&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_analysis___fredholm___index_zero_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="263" cy="-517.2" rx="56.95" ry="18"/>
+<text text-anchor="middle" x="263" y="-514.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">fredholm.index_zero</text>
+</a>
+</g>
+</g>
+<!-- «analysis.fredholm.weak_nullity» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Efredholm&#45;002Eweak&#45;005Fnullity&#45;00BB" class="node">
+<title>«analysis.fredholm.weak_nullity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Efredholm&#45;002Eweak&#45;005Fnullity&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_analysis___fredholm___weak_nullity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="432" cy="-449.2" rx="60.25" ry="18"/>
+<text text-anchor="middle" x="432" y="-446.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">fredholm.weak_nullity</text>
+</a>
+</g>
+</g>
+<!-- «analysis.fredholm.index_zero»&#45;&gt;«analysis.fredholm.weak_nullity» -->
+<g id="edge8" class="edge">
+<title>«analysis.fredholm.index_zero»&#45;&gt;«analysis.fredholm.weak_nullity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M297.61,-502.68C324.77,-492.07 362.64,-477.28 391.26,-466.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="396.86,-463.92 392.25,-468.62 394.19,-465.34 391.4,-466.43 391.27,-466.1 391.14,-465.78 393.94,-464.69 390.29,-463.59 396.86,-463.92 396.86,-463.92"/>
+</g>
+<!-- «analysis.fredholm.exact_alternative» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Efredholm&#45;002Eexact&#45;005Falternative&#45;00BB" class="node">
+<title>«analysis.fredholm.exact_alternative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Efredholm&#45;002Eexact&#45;005Falternative&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_analysis___fredholm___exact_alternative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="87" cy="-449.2" rx="71.44" ry="18"/>
+<text text-anchor="middle" x="87" y="-446.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">fredholm.exact_alternative</text>
+</a>
+</g>
+</g>
+<!-- «analysis.fredholm.index_zero»&#45;&gt;«analysis.fredholm.exact_alternative» -->
+<g id="edge22" class="edge">
+<title>«analysis.fredholm.index_zero»&#45;&gt;«analysis.fredholm.exact_alternative»</title>
+<path fill="none" stroke="#6b7280" d="M227.81,-503C199.97,-492.56 160.94,-477.93 131.04,-466.71"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="125.18,-464.51 131.75,-464.09 127.99,-465.57 130.8,-466.62 130.8,-466.62 130.8,-466.62 127.99,-465.57 129.85,-469.15 125.18,-464.51 125.18,-464.51"/>
+</g>
+<!-- «analysis.fredholm.weak_nullity»&#45;&gt;«analysis.fredholm.adjoint_solvability» -->
+<g id="edge5" class="edge">
+<title>«analysis.fredholm.weak_nullity»&#45;&gt;«analysis.fredholm.adjoint_solvability»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M392.09,-435.47C358.44,-424.74 310.14,-409.34 274.12,-397.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="268,-395.91 274.54,-395.16 270.97,-396.48 273.82,-397.4 273.72,-397.73 273.61,-398.06 270.75,-397.15 272.9,-400.3 268,-395.91 268,-395.91"/>
+</g>
+<!-- «elliptic.spectrum.finite_multiplicity» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Efinite&#45;005Fmultiplicity&#45;00BB" class="node">
+<title>«elliptic.spectrum.finite_multiplicity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Efinite&#45;005Fmultiplicity&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___finite_multiplicity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="397" cy="-381.2" rx="73.35" ry="18"/>
+<text text-anchor="middle" x="397" y="-378.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum.finite_multiplicity</text>
+</a>
+</g>
+</g>
+<!-- «analysis.fredholm.weak_nullity»&#45;&gt;«elliptic.spectrum.finite_multiplicity» -->
+<g id="edge18" class="edge">
+<title>«analysis.fredholm.weak_nullity»&#45;&gt;«elliptic.spectrum.finite_multiplicity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M422.99,-431.2C418.77,-423.25 413.69,-413.68 409.15,-405.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="406.1,-399.36 411.3,-403.4 407.82,-401.85 409.22,-404.5 408.92,-404.67 408.61,-404.83 407.2,-402.18 406.53,-405.93 406.1,-399.36 406.1,-399.36"/>
+</g>
+<!-- «elliptic.spectrum.countable» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Ecountable&#45;00BB" class="node">
+<title>«elliptic.spectrum.countable»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Ecountable&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___countable_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="441" cy="-311.4" rx="55.68" ry="18"/>
+<text text-anchor="middle" x="441" y="-308.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum.countable</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.spectrum.no_finite_accumulation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eno&#45;005Ffinite&#45;005Faccumulation&#45;00BB" class="node">
+<title>«elliptic.spectrum.no_finite_accumulation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eno&#45;005Ffinite&#45;005Faccumulation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___no_finite_accumulation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="601" cy="-311.4" rx="79.39" ry="19.6"/>
+<text text-anchor="middle" x="601" y="-314.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum</text>
+<text text-anchor="middle" x="601" y="-303.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">no_finite_accumulation</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.spectrum.increasing_eigenvalues_diverge» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eincreasing&#45;005Feigenvalues&#45;005Fdiverge&#45;00BB" class="node">
+<title>«elliptic.spectrum.increasing_eigenvalues_diverge»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eincreasing&#45;005Feigenvalues&#45;005Fdiverge&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___increasing_eigenvalues_diverge_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="575" cy="-239.8" rx="105.22" ry="19.6"/>
+<text text-anchor="middle" x="575" y="-242.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum</text>
+<text text-anchor="middle" x="575" y="-231.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">increasing_eigenvalues_diverge</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.spectrum.no_finite_accumulation»&#45;&gt;«elliptic.spectrum.increasing_eigenvalues_diverge» -->
+<g id="edge16" class="edge">
+<title>«elliptic.spectrum.no_finite_accumulation»&#45;&gt;«elliptic.spectrum.increasing_eigenvalues_diverge»</title>
+<path fill="none" stroke="#6b7280" d="M593.9,-291.38C590.91,-283.4 587.41,-274.02 584.23,-265.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="582.1,-259.79 586.73,-264.47 583.15,-262.6 584.2,-265.41 584.2,-265.41 584.2,-265.41 583.15,-262.6 581.67,-266.36 582.1,-259.79 582.1,-259.79"/>
+</g>
+<!-- «elliptic.spectrum.ordered_basis» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eordered&#45;005Fbasis&#45;00BB" class="node">
+<title>«elliptic.spectrum.ordered_basis»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eordered&#45;005Fbasis&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___ordered_basis_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="575" cy="-170" rx="66.23" ry="18"/>
+<text text-anchor="middle" x="575" y="-167.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum.ordered_basis</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.spectrum.first_divergence» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Efirst&#45;005Fdivergence&#45;00BB" class="node">
+<title>«elliptic.spectrum.first_divergence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Efirst&#45;005Fdivergence&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___first_divergence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="450" cy="-102" rx="70.81" ry="18"/>
+<text text-anchor="middle" x="450" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum.first_divergence</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.spectrum.ordered_basis»&#45;&gt;«elliptic.spectrum.first_divergence» -->
+<g id="edge21" class="edge">
+<title>«elliptic.spectrum.ordered_basis»&#45;&gt;«elliptic.spectrum.first_divergence»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M546.01,-153.69C527.68,-144.02 503.9,-131.46 484.59,-121.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="479.27,-118.45 485.83,-118.87 482.08,-119.54 484.74,-120.95 484.57,-121.25 484.41,-121.56 481.76,-120.16 483.31,-123.64 479.27,-118.45 479.27,-118.45"/>
+</g>
+<!-- «elliptic.spectrum.first_dirichlet» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Efirst&#45;005Fdirichlet&#45;00BB" class="node">
+<title>«elliptic.spectrum.first_dirichlet»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Efirst&#45;005Fdirichlet&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___first_dirichlet_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="609" cy="-102" rx="63.56" ry="18"/>
+<text text-anchor="middle" x="609" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum.first_dirichlet</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.spectrum.ordered_basis»&#45;&gt;«elliptic.spectrum.first_dirichlet» -->
+<g id="edge23" class="edge">
+<title>«elliptic.spectrum.ordered_basis»&#45;&gt;«elliptic.spectrum.first_dirichlet»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M583.76,-152C587.85,-144.06 592.78,-134.48 597.2,-125.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="600.16,-120.17 599.81,-126.74 599.09,-123 597.72,-125.66 597.41,-125.5 597.1,-125.34 598.47,-122.68 595.01,-124.27 600.16,-120.17 600.16,-120.17"/>
+</g>
+<!-- «elliptic.spectrum.compact_reduction» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Ecompact&#45;005Freduction&#45;00BB" class="node">
+<title>«elliptic.spectrum.compact_reduction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Ecompact&#45;005Freduction&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___compact_reduction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="628" cy="-381.2" rx="78.69" ry="18"/>
+<text text-anchor="middle" x="628" y="-378.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum.compact_reduction</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.spectrum.compact_reduction»&#45;&gt;«elliptic.spectrum.countable» -->
+<g id="edge9" class="edge">
+<title>«elliptic.spectrum.compact_reduction»&#45;&gt;«elliptic.spectrum.countable»</title>
+<path fill="none" stroke="#6b7280" d="M587.88,-365.65C556.77,-354.37 513.79,-338.79 482.36,-327.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="476.63,-325.32 483.19,-324.82 479.45,-326.34 482.27,-327.36 482.27,-327.36 482.27,-327.36 479.45,-326.34 481.35,-329.9 476.63,-325.32 476.63,-325.32"/>
+</g>
+<!-- «elliptic.spectrum.compact_reduction»&#45;&gt;«elliptic.spectrum.no_finite_accumulation» -->
+<g id="edge10" class="edge">
+<title>«elliptic.spectrum.compact_reduction»&#45;&gt;«elliptic.spectrum.no_finite_accumulation»</title>
+<path fill="none" stroke="#6b7280" d="M621.19,-363.09C618.04,-355.18 614.24,-345.65 610.79,-336.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="608.48,-331.17 613.2,-335.75 609.59,-333.96 610.7,-336.74 610.7,-336.74 610.7,-336.74 609.59,-333.96 608.19,-337.74 608.48,-331.17 608.48,-331.17"/>
+</g>
+<!-- «elliptic.spectrum.compact_reduction»&#45;&gt;«elliptic.spectrum.ordered_basis» -->
+<g id="edge13" class="edge">
+<title>«elliptic.spectrum.compact_reduction»&#45;&gt;«elliptic.spectrum.ordered_basis»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M659.86,-364.57C672.61,-356.51 685.94,-345.36 693,-331.2 715.05,-286.97 720.44,-261.1 693,-220 680.06,-200.61 657.85,-188.88 636.17,-181.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="630.37,-180 636.9,-179.19 633.27,-180.79 636.14,-181.68 636.11,-181.77 636.08,-181.87 633.21,-180.98 635.31,-184.35 630.37,-180 630.37,-180"/>
+</g>
+<!-- «elliptic.spectrum.principal_eigenpair» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eprincipal&#45;005Feigenpair&#45;00BB" class="node">
+<title>«elliptic.spectrum.principal_eigenpair»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eprincipal&#45;005Feigenpair&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___principal_eigenpair_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="450" cy="-34" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="450" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum.principal_eigenpair</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.spectrum.increasing_eigenvalues_diverge»&#45;&gt;«elliptic.spectrum.ordered_basis» -->
+<g id="edge12" class="edge">
+<title>«elliptic.spectrum.increasing_eigenvalues_diverge»&#45;&gt;«elliptic.spectrum.ordered_basis»</title>
+<path fill="none" stroke="#6b7280" d="M575,-219.91C575,-212.04 575,-202.82 575,-194.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="575,-188.39 577.7,-194.39 575,-191.39 575,-194.39 575,-194.39 575,-194.39 575,-191.39 572.3,-194.39 575,-188.39 575,-188.39"/>
+</g>
+<!-- «elliptic.fredholm.compact_mass» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efredholm&#45;002Ecompact&#45;005Fmass&#45;00BB" class="node">
+<title>«elliptic.fredholm.compact_mass»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efredholm&#45;002Ecompact&#45;005Fmass&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fredholm___compact_mass_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="252" cy="-449.2" rx="68.13" ry="18"/>
+<text text-anchor="middle" x="252" y="-446.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">fredholm.compact_mass</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fredholm.alternative» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efredholm&#45;002Ealternative&#45;00BB" class="node">
+<title>«elliptic.fredholm.alternative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efredholm&#45;002Ealternative&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fredholm___alternative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="71" cy="-381.2" rx="55.04" ry="18"/>
+<text text-anchor="middle" x="71" y="-378.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">fredholm.alternative</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fredholm.compact_mass»&#45;&gt;«elliptic.fredholm.alternative» -->
+<g id="edge20" class="edge">
+<title>«elliptic.fredholm.compact_mass»&#45;&gt;«elliptic.fredholm.alternative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M213.61,-434.2C183.85,-423.34 142.66,-408.33 112.2,-397.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="106.26,-395.05 112.82,-394.57 109.11,-395.99 111.93,-397.02 111.9,-397.11 111.86,-397.2 109.05,-396.18 110.97,-399.65 106.26,-395.05 106.26,-395.05"/>
+</g>
+<!-- «elliptic.spectrum.finite_multiplicity»&#45;&gt;«elliptic.spectrum.solvability_off_spectrum» -->
+<g id="edge2" class="edge">
+<title>«elliptic.spectrum.finite_multiplicity»&#45;&gt;«elliptic.spectrum.solvability_off_spectrum»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M364.01,-364.98C342.78,-355.19 315,-342.38 292.18,-331.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="286.49,-329.23 293.07,-329.29 289.26,-330.39 291.98,-331.65 291.94,-331.74 291.9,-331.83 289.17,-330.57 290.81,-334.19 286.49,-329.23 286.49,-329.23"/>
+</g>
+<!-- «elliptic.spectrum.weak_pencil» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eweak&#45;005Fpencil&#45;00BB" class="node">
+<title>«elliptic.spectrum.weak_pencil»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Espectrum&#45;002Eweak&#45;005Fpencil&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___spectrum___weak_pencil_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="626.5,-467.2 517.5,-467.2 517.5,-431.2 626.5,-431.2 626.5,-467.2"/>
+<text text-anchor="middle" x="572" y="-446.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">spectrum.weak_pencil</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.spectrum.weak_pencil»&#45;&gt;«elliptic.spectrum.solvability_off_spectrum» -->
+<g id="edge1" class="edge">
+<title>«elliptic.spectrum.weak_pencil»&#45;&gt;«elliptic.spectrum.solvability_off_spectrum»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M551.3,-431.03C540.52,-421.86 527.27,-410.21 516,-399.2 500.48,-384.03 501.82,-374.01 483,-363.2 468.79,-355.03 382.97,-337.52 319.59,-325.36"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="313.53,-324.2 319.93,-322.67 316.5,-324.66 319.44,-325.23 319.42,-325.33 319.4,-325.42 316.46,-324.86 318.92,-327.98 313.53,-324.2 313.53,-324.2"/>
+</g>
+<!-- «elliptic.spectrum.weak_pencil»&#45;&gt;«elliptic.spectrum.ordered_basis» -->
+<g id="edge11" class="edge">
+<title>«elliptic.spectrum.weak_pencil»&#45;&gt;«elliptic.spectrum.ordered_basis»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M559.59,-430.98C542.49,-407.48 513.02,-367.73 506,-363.2 454.92,-330.22 410.63,-378.95 373,-331.2 362.11,-317.37 365.62,-307.58 373,-291.6 400.14,-232.8 471.15,-200.57 521.28,-184.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="527.28,-182.69 522.36,-187.05 524.45,-183.68 521.58,-184.57 521.55,-184.47 521.52,-184.38 524.39,-183.49 520.75,-181.9 527.28,-182.69 527.28,-182.69"/>
+</g>
+<!-- «elliptic.spectrum.weak_pencil»&#45;&gt;«elliptic.spectrum.compact_reduction» -->
+<g id="edge14" class="edge">
+<title>«elliptic.spectrum.weak_pencil»&#45;&gt;«elliptic.spectrum.compact_reduction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M586.71,-430.86C593.71,-422.61 602.15,-412.66 609.58,-403.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="613.58,-399.19 611.76,-405.51 611.71,-401.54 609.77,-403.83 609.7,-403.77 609.62,-403.7 611.56,-401.42 607.64,-402.02 613.58,-399.19 613.58,-399.19"/>
+</g>
+<!-- «elliptic.spectrum.weak_pencil»&#45;&gt;«elliptic.spectrum.finite_multiplicity» -->
+<g id="edge17" class="edge">
+<title>«elliptic.spectrum.weak_pencil»&#45;&gt;«elliptic.spectrum.finite_multiplicity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M526.48,-431.03C500.12,-421.09 467.09,-408.63 440.99,-398.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="435.19,-396.6 441.76,-396.19 438.04,-397.57 440.84,-398.62 440.81,-398.72 440.77,-398.81 437.97,-397.75 439.86,-401.24 435.19,-396.6 435.19,-396.6"/>
+</g>
+<!-- «analysis.compact_adjoint» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Ecompact&#45;005Fadjoint&#45;00BB" class="node">
+<title>«analysis.compact_adjoint»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Ecompact&#45;005Fadjoint&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_analysis___compact_adjoint_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="346" cy="-585.2" rx="69.4" ry="18"/>
+<text text-anchor="middle" x="346" y="-582.7" font-family="Helvetica" font-size="10.00" fill="#ffffff">analysis.compact_adjoint</text>
+</a>
+</g>
+</g>
+<!-- «analysis.compact_adjoint»&#45;&gt;«analysis.fredholm.adjoint_solvability» -->
+<g id="edge4" class="edge">
+<title>«analysis.compact_adjoint»&#45;&gt;«analysis.fredholm.adjoint_solvability»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M349.68,-567.18C355.23,-536.81 362.22,-472.57 333,-431.2 321.21,-414.51 302.34,-403.39 283.64,-396.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="277.85,-393.88 284.41,-393.45 280.78,-394.6 283.59,-395.65 283.47,-395.98 283.35,-396.3 280.54,-395.25 282.52,-398.51 277.85,-393.88 277.85,-393.88"/>
+</g>
+<!-- «analysis.compact_adjoint»&#45;&gt;«analysis.fredholm.index_zero» -->
+<g id="edge6" class="edge">
+<title>«analysis.compact_adjoint»&#45;&gt;«analysis.fredholm.index_zero»</title>
+<path fill="none" stroke="#6b7280" d="M325.48,-567.88C314.14,-558.86 299.96,-547.59 287.98,-538.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="282.99,-534.1 289.37,-535.72 285.34,-535.96 287.69,-537.83 287.69,-537.83 287.69,-537.83 285.34,-535.96 286.01,-539.94 282.99,-534.1 282.99,-534.1"/>
+</g>
+<!-- «analysis.compact_adjoint»&#45;&gt;«analysis.fredholm.weak_nullity» -->
+<g id="edge7" class="edge">
+<title>«analysis.compact_adjoint»&#45;&gt;«analysis.fredholm.weak_nullity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M356.89,-567.22C372.4,-543.06 400.86,-498.72 417.94,-472.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="421.2,-467.03 420.23,-473.54 419.87,-469.74 418.25,-472.27 417.96,-472.08 417.66,-471.89 419.28,-469.37 415.68,-470.62 421.2,-467.03 421.2,-467.03"/>
+</g>
+<!-- «elliptic.fredholm.alternative»&#45;&gt;«elliptic.spectrum.solvability_off_spectrum» -->
+<g id="edge3" class="edge">
+<title>«elliptic.fredholm.alternative»&#45;&gt;«elliptic.spectrum.solvability_off_spectrum»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M105.51,-367.12C132.85,-356.77 171.35,-342.18 201.74,-330.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="207.71,-328.42 203.05,-333.07 204.94,-329.57 202.13,-330.63 202.1,-330.54 202.06,-330.45 204.87,-329.39 201.14,-328.02 207.71,-328.42 207.71,-328.42"/>
+</g>
+<!-- «elliptic.spectrum.first_divergence»&#45;&gt;«elliptic.spectrum.principal_eigenpair» -->
+<g id="edge15" class="edge">
+<title>«elliptic.spectrum.first_divergence»&#45;&gt;«elliptic.spectrum.principal_eigenpair»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M450,-83.66C450,-75.99 450,-66.85 450,-58.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="450,-52.45 452.7,-58.45 450.35,-55.45 450.35,-58.45 450,-58.45 449.65,-58.45 449.65,-55.45 447.3,-58.45 450,-52.45 450,-52.45"/>
+</g>
+<!-- «analysis.fredholm.exact_alternative»&#45;&gt;«elliptic.fredholm.alternative» -->
+<g id="edge19" class="edge">
+<title>«analysis.fredholm.exact_alternative»&#45;&gt;«elliptic.fredholm.alternative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M82.88,-431.2C80.99,-423.41 78.72,-414.05 76.67,-405.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="75.16,-399.36 79.2,-404.56 76.21,-402.2 76.92,-405.11 76.58,-405.2 76.24,-405.28 75.53,-402.36 73.95,-405.83 75.16,-399.36 75.16,-399.36"/>
+</g>
+</g>
+</svg>

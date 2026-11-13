@@ -1,0 +1,491 @@
+<svg data-node-count="31" data-edge-count="31" data-cluster-count="1" data-variant-key="parent:«methods.direct_method»" width="1402pt" height="389pt"
+ viewBox="0.00 0.00 1402.00 388.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 384.99)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-384.99 1398,-384.99 1398,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1374,-8 1374,-8 1380,-8 1386,-14 1386,-20 1386,-20 1386,-360.99 1386,-360.99 1386,-366.99 1380,-372.99 1374,-372.99 1374,-372.99 20,-372.99 20,-372.99 14,-372.99 8,-366.99 8,-360.99 8,-360.99 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="697" y="-357.79" font-family="Helvetica" font-size="14.00">Direct variational methods</text>
+</g>
+<!-- «analysis.weak_compactness.norm_bound» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Enorm&#45;005Fbound&#45;00BB" class="node">
+<title>«analysis.weak_compactness.norm_bound»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Enorm&#45;005Fbound&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_analysis___weak_compactness___norm_bound_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="787" cy="-250.59" rx="87.84" ry="18"/>
+<text text-anchor="middle" x="787" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_compactness.norm_bound</text>
+</a>
+</g>
+</g>
+<!-- «methods.euler_lagrange.first_variation» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Efirst&#45;005Fvariation&#45;00BB" class="node">
+<title>«methods.euler_lagrange.first_variation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Efirst&#45;005Fvariation&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___euler_lagrange___first_variation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1324" cy="-322.19" rx="53.98" ry="19.6"/>
+<text text-anchor="middle" x="1324" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">euler_lagrange</text>
+<text text-anchor="middle" x="1324" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_variation</text>
+</a>
+</g>
+</g>
+<!-- «analysis.weak_compactness.hilbert_reflexive» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Ehilbert&#45;005Freflexive&#45;00BB" class="node">
+<title>«analysis.weak_compactness.hilbert_reflexive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Ehilbert&#45;005Freflexive&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_analysis___weak_compactness___hilbert_reflexive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="941" cy="-322.19" rx="70.01" ry="19.6"/>
+<text text-anchor="middle" x="941" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_compactness</text>
+<text text-anchor="middle" x="941" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert_reflexive</text>
+</a>
+</g>
+</g>
+<!-- «analysis.weak_compactness.bounded_closed» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Ebounded&#45;005Fclosed&#45;00BB" class="node">
+<title>«analysis.weak_compactness.bounded_closed»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Ebounded&#45;005Fclosed&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_analysis___weak_compactness___bounded_closed_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1167" cy="-250.59" rx="70.01" ry="19.6"/>
+<text text-anchor="middle" x="1167" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_compactness</text>
+<text text-anchor="middle" x="1167" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">bounded_closed</text>
+</a>
+</g>
+</g>
+<!-- «analysis.weak_compactness.hilbert_reflexive»&#45;&gt;«analysis.weak_compactness.bounded_closed» -->
+<g id="edge31" class="edge">
+<title>«analysis.weak_compactness.hilbert_reflexive»&#45;&gt;«analysis.weak_compactness.bounded_closed»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M986.73,-307.11C1023.95,-295.64 1076.48,-279.47 1115.24,-267.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1121.33,-265.66 1116.39,-270 1118.57,-266.87 1115.7,-267.76 1115.6,-267.42 1115.5,-267.09 1118.36,-266.2 1114.8,-264.84 1121.33,-265.66 1121.33,-265.66"/>
+</g>
+<!-- «methods.l2.quadratic_weak_lsc» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fweak&#45;005Flsc&#45;00BB" class="node">
+<title>«methods.l2.quadratic_weak_lsc»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fweak&#45;005Flsc&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___l2___quadratic_weak_lsc_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="459" cy="-107.4" rx="61.66" ry="18"/>
+<text text-anchor="middle" x="459" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">l2.quadratic_weak_lsc</text>
+</a>
+</g>
+</g>
+<!-- «methods.l2.quadratic_unique» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Funique&#45;00BB" class="node">
+<title>«methods.l2.quadratic_unique»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Funique&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___l2___quadratic_unique_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="415" cy="-35.8" rx="55.04" ry="18"/>
+<text text-anchor="middle" x="415" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">l2.quadratic_unique</text>
+</a>
+</g>
+</g>
+<!-- «methods.l2.quadratic_weak_lsc»&#45;&gt;«methods.l2.quadratic_unique» -->
+<g id="edge12" class="edge">
+<title>«methods.l2.quadratic_weak_lsc»&#45;&gt;«methods.l2.quadratic_unique»</title>
+<path fill="none" stroke="#6b7280" d="M448.35,-89.55C442.51,-80.32 435.21,-68.76 428.92,-58.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="425.55,-53.49 431.04,-57.12 427.16,-56.03 428.76,-58.56 428.76,-58.56 428.76,-58.56 427.16,-56.03 426.48,-60.01 425.55,-53.49 425.55,-53.49"/>
+</g>
+<!-- «methods.sobolev.quadratic_unique» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Equadratic&#45;005Funique&#45;00BB" class="node">
+<title>«methods.sobolev.quadratic_unique»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Equadratic&#45;005Funique&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___sobolev___quadratic_unique_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="943" cy="-35.8" rx="69.4" ry="18"/>
+<text text-anchor="middle" x="943" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.quadratic_unique</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method.convex_weak_lsc» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Econvex&#45;005Fweak&#45;005Flsc&#45;00BB" class="node">
+<title>«methods.direct_method.convex_weak_lsc»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Econvex&#45;005Fweak&#45;005Flsc&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___direct_method___convex_weak_lsc_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="785" cy="-178.99" rx="62.87" ry="19.6"/>
+<text text-anchor="middle" x="785" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">direct_method</text>
+<text text-anchor="middle" x="785" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">convex_weak_lsc</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method.convex_weak_lsc»&#45;&gt;«methods.l2.quadratic_weak_lsc» -->
+<g id="edge3" class="edge">
+<title>«methods.direct_method.convex_weak_lsc»&#45;&gt;«methods.l2.quadratic_weak_lsc»</title>
+<path fill="none" stroke="#6b7280" d="M737.64,-165.95C728.17,-163.64 718.28,-161.29 709,-159.2 642.78,-144.28 566.24,-129.02 515.47,-119.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="509.41,-117.99 515.82,-116.49 512.36,-118.57 515.3,-119.14 515.3,-119.14 515.3,-119.14 512.36,-118.57 514.79,-121.79 509.41,-117.99 509.41,-117.99"/>
+</g>
+<!-- «methods.direct_method.unique_minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Eunique&#45;005Fminimizer&#45;00BB" class="node">
+<title>«methods.direct_method.unique_minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Eunique&#45;005Fminimizer&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___direct_method___unique_minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="653" cy="-107.4" rx="62.45" ry="19.6"/>
+<text text-anchor="middle" x="653" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">direct_method</text>
+<text text-anchor="middle" x="653" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">unique_minimizer</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method.convex_weak_lsc»&#45;&gt;«methods.direct_method.unique_minimizer» -->
+<g id="edge7" class="edge">
+<title>«methods.direct_method.convex_weak_lsc»&#45;&gt;«methods.direct_method.unique_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M754.05,-161.68C734.61,-151.42 709.44,-138.16 689.09,-127.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="683.75,-124.61 690.32,-125.02 686.45,-125.92 689.11,-127.32 689.06,-127.41 689.02,-127.5 686.36,-126.1 687.8,-129.8 683.75,-124.61 683.75,-124.61"/>
+</g>
+<!-- «methods.direct_method.convex_minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Econvex&#45;005Fminimizer&#45;00BB" class="node">
+<title>«methods.direct_method.convex_minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Econvex&#45;005Fminimizer&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___direct_method___convex_minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="785" cy="-35.8" rx="63.78" ry="19.6"/>
+<text text-anchor="middle" x="785" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">direct_method</text>
+<text text-anchor="middle" x="785" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">convex_minimizer</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method.convex_weak_lsc»&#45;&gt;«methods.direct_method.convex_minimizer» -->
+<g id="edge24" class="edge">
+<title>«methods.direct_method.convex_weak_lsc»&#45;&gt;«methods.direct_method.convex_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M785,-158.95C785,-133.9 785,-89.8 785,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="785,-55.99 787.7,-61.99 785.1,-58.99 785.1,-61.99 785,-61.99 784.9,-61.99 784.9,-58.99 782.3,-61.99 785,-55.99 785,-55.99"/>
+</g>
+<!-- «methods.sobolev.integral_weak_lsc» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Eintegral&#45;005Fweak&#45;005Flsc&#45;00BB" class="node">
+<title>«methods.sobolev.integral_weak_lsc»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Eintegral&#45;005Fweak&#45;005Flsc&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___sobolev___integral_weak_lsc_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1290" cy="-107.4" rx="71.44" ry="18"/>
+<text text-anchor="middle" x="1290" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.integral_weak_lsc</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method.convex_weak_lsc»&#45;&gt;«methods.sobolev.integral_weak_lsc» -->
+<g id="edge27" class="edge">
+<title>«methods.direct_method.convex_weak_lsc»&#45;&gt;«methods.sobolev.integral_weak_lsc»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M831.63,-165.65C841.61,-163.28 852.11,-160.98 862,-159.2 985.68,-136.84 1131.32,-121.95 1216.85,-114.36"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1222.91,-113.82 1217.17,-117.04 1219.93,-114.19 1216.94,-114.45 1216.93,-114.35 1216.92,-114.25 1219.91,-113.99 1216.69,-111.66 1222.91,-113.82 1222.91,-113.82"/>
+</g>
+<!-- «methods.sobolev.integral_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Eintegral&#45;005Fenergy&#45;00BB" class="node">
+<title>«methods.sobolev.integral_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Eintegral&#45;005Fenergy&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___sobolev___integral_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1377.5,-268.59 1262.5,-268.59 1262.5,-232.59 1377.5,-232.59 1377.5,-268.59"/>
+<text text-anchor="middle" x="1320" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.integral_energy</text>
+</a>
+</g>
+</g>
+<!-- «methods.sobolev.integral_minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Eintegral&#45;005Fminimizer&#45;00BB" class="node">
+<title>«methods.sobolev.integral_minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Eintegral&#45;005Fminimizer&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___sobolev___integral_minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1193" cy="-35.8" rx="72.08" ry="18"/>
+<text text-anchor="middle" x="1193" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.integral_minimizer</text>
+</a>
+</g>
+</g>
+<!-- «methods.sobolev.integral_energy»&#45;&gt;«methods.sobolev.integral_minimizer» -->
+<g id="edge17" class="edge">
+<title>«methods.sobolev.integral_energy»&#45;&gt;«methods.sobolev.integral_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1267.44,-232.55C1250.68,-224.72 1233.52,-213.75 1222,-198.79 1190.49,-157.88 1189.02,-93.98 1190.88,-59.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1191.26,-53.96 1193.57,-60.12 1191.17,-56.96 1190.98,-59.96 1190.88,-59.95 1190.78,-59.94 1190.97,-56.95 1188.18,-59.78 1191.26,-53.96 1191.26,-53.96"/>
+</g>
+<!-- «methods.sobolev.integral_convex» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Eintegral&#45;005Fconvex&#45;00BB" class="node">
+<title>«methods.sobolev.integral_convex»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Eintegral&#45;005Fconvex&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___sobolev___integral_convex_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1312" cy="-178.99" rx="65.6" ry="18"/>
+<text text-anchor="middle" x="1312" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.integral_convex</text>
+</a>
+</g>
+</g>
+<!-- «methods.sobolev.integral_energy»&#45;&gt;«methods.sobolev.integral_convex» -->
+<g id="edge22" class="edge">
+<title>«methods.sobolev.integral_energy»&#45;&gt;«methods.sobolev.integral_convex»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1318.02,-232.39C1317.01,-223.54 1315.75,-212.63 1314.65,-203.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1313.95,-197 1317.32,-202.65 1314.4,-199.97 1314.74,-202.95 1314.64,-202.96 1314.54,-202.97 1314.2,-199.99 1311.96,-203.27 1313.95,-197 1313.95,-197"/>
+</g>
+<!-- «methods.sobolev.integral_energy»&#45;&gt;«methods.sobolev.integral_weak_lsc» -->
+<g id="edge26" class="edge">
+<title>«methods.sobolev.integral_energy»&#45;&gt;«methods.sobolev.integral_weak_lsc»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1272.24,-232.53C1257.3,-224.68 1242.51,-213.7 1234,-198.79 1225.28,-183.51 1226.87,-175.29 1234,-159.2 1239.39,-147.03 1249.3,-136.53 1259.3,-128.28"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1264.19,-124.42 1261.16,-130.26 1261.9,-126.36 1259.55,-128.22 1259.48,-128.14 1259.42,-128.06 1261.78,-126.2 1257.81,-126.02 1264.19,-124.42 1264.19,-124.42"/>
+</g>
+<!-- «methods.euler_lagrange.convex_converse» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Econvex&#45;005Fconverse&#45;00BB" class="node">
+<title>«methods.euler_lagrange.convex_converse»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Econvex&#45;005Fconverse&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___euler_lagrange___convex_converse_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="413" cy="-250.59" rx="62.45" ry="19.6"/>
+<text text-anchor="middle" x="413" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">euler_lagrange</text>
+<text text-anchor="middle" x="413" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">convex_converse</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method.unique_minimizer»&#45;&gt;«methods.l2.quadratic_unique» -->
+<g id="edge15" class="edge">
+<title>«methods.direct_method.unique_minimizer»&#45;&gt;«methods.l2.quadratic_unique»</title>
+<path fill="none" stroke="#6b7280" d="M608.51,-93.39C566.24,-81.03 502.97,-62.52 460.39,-50.07"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="454.53,-48.36 461.04,-47.45 457.41,-49.2 460.29,-50.04 460.29,-50.04 460.29,-50.04 457.41,-49.2 459.53,-52.63 454.53,-48.36 454.53,-48.36"/>
+</g>
+<!-- «methods.l2.quadratic_coercive» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fcoercive&#45;00BB" class="node">
+<title>«methods.l2.quadratic_coercive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fcoercive&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___l2___quadratic_coercive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="269" cy="-107.4" rx="58.98" ry="18"/>
+<text text-anchor="middle" x="269" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">l2.quadratic_coercive</text>
+</a>
+</g>
+</g>
+<!-- «methods.l2.quadratic_coercive»&#45;&gt;«methods.l2.quadratic_unique» -->
+<g id="edge13" class="edge">
+<title>«methods.l2.quadratic_coercive»&#45;&gt;«methods.l2.quadratic_unique»</title>
+<path fill="none" stroke="#6b7280" d="M299.61,-91.81C322.83,-80.74 354.81,-65.49 379.22,-53.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="384.93,-51.13 380.68,-56.15 382.23,-52.42 379.52,-53.71 379.52,-53.71 379.52,-53.71 382.23,-52.42 378.36,-51.28 384.93,-51.13 384.93,-51.13"/>
+</g>
+<!-- «methods.euler_lagrange.noether» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Enoether&#45;00BB" class="node">
+<title>«methods.euler_lagrange.noether»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Enoether&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___euler_lagrange___noether_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1099" cy="-322.19" rx="62.92" ry="18"/>
+<text text-anchor="middle" x="1099" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">euler_lagrange.noether</text>
+</a>
+</g>
+</g>
+<!-- «methods.l2.quadratic_identity» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fidentity&#45;00BB" class="node">
+<title>«methods.l2.quadratic_identity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fidentity&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___l2___quadratic_identity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="269" cy="-250.59" rx="56.95" ry="18"/>
+<text text-anchor="middle" x="269" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">l2.quadratic_identity</text>
+</a>
+</g>
+</g>
+<!-- «methods.l2.quadratic_identity»&#45;&gt;«methods.l2.quadratic_coercive» -->
+<g id="edge8" class="edge">
+<title>«methods.l2.quadratic_identity»&#45;&gt;«methods.l2.quadratic_coercive»</title>
+<path fill="none" stroke="#6b7280" d="M267.72,-232.21C267.06,-222.4 266.33,-209.92 266,-198.79 265.48,-181.2 265.48,-176.79 266,-159.2 266.26,-150.24 266.79,-140.41 267.33,-131.81"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="267.72,-125.78 270.02,-131.95 267.52,-128.78 267.33,-131.77 267.33,-131.77 267.33,-131.77 267.52,-128.78 264.64,-131.6 267.72,-125.78 267.72,-125.78"/>
+</g>
+<!-- «methods.l2.quadratic_strong_convexity» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fstrong&#45;005Fconvexity&#45;00BB" class="node">
+<title>«methods.l2.quadratic_strong_convexity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fstrong&#45;005Fconvexity&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___l2___quadratic_strong_convexity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="371" cy="-178.99" rx="92.76" ry="19.6"/>
+<text text-anchor="middle" x="371" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">l2</text>
+<text text-anchor="middle" x="371" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">quadratic_strong_convexity</text>
+</a>
+</g>
+</g>
+<!-- «methods.l2.quadratic_identity»&#45;&gt;«methods.l2.quadratic_strong_convexity» -->
+<g id="edge16" class="edge">
+<title>«methods.l2.quadratic_identity»&#45;&gt;«methods.l2.quadratic_strong_convexity»</title>
+<path fill="none" stroke="#6b7280" d="M291.89,-233.97C305.93,-224.4 324.1,-212 339.48,-201.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="344.58,-198.02 341.15,-203.63 342.1,-199.71 339.63,-201.4 339.63,-201.4 339.63,-201.4 342.1,-199.71 338.1,-199.17 344.58,-198.02 344.58,-198.02"/>
+</g>
+<!-- «methods.l2.quadratic_energy_convergence» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fenergy&#45;005Fconvergence&#45;00BB" class="node">
+<title>«methods.l2.quadratic_energy_convergence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fenergy&#45;005Fconvergence&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___l2___quadratic_energy_convergence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="593" cy="-178.99" rx="103.89" ry="19.6"/>
+<text text-anchor="middle" x="593" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">l2</text>
+<text text-anchor="middle" x="593" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">quadratic_energy_convergence</text>
+</a>
+</g>
+</g>
+<!-- «methods.l2.quadratic_identity»&#45;&gt;«methods.l2.quadratic_energy_convergence» -->
+<g id="edge29" class="edge">
+<title>«methods.l2.quadratic_identity»&#45;&gt;«methods.l2.quadratic_energy_convergence»</title>
+<path fill="none" stroke="#6b7280" d="M309.74,-237.99C319,-235.49 328.82,-232.96 338,-230.79 396.58,-217 463.31,-203.79 513.81,-194.3"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="519.89,-193.17 514.49,-196.92 516.94,-193.72 513.99,-194.27 513.99,-194.27 513.99,-194.27 516.94,-193.72 513.5,-191.62 519.89,-193.17 519.89,-193.17"/>
+</g>
+<!-- «methods.euler_lagrange.vector_sobolev_minimum» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Evector&#45;005Fsobolev&#45;005Fminimum&#45;00BB" class="node">
+<title>«methods.euler_lagrange.vector_sobolev_minimum»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Evector&#45;005Fsobolev&#45;005Fminimum&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___euler_lagrange___vector_sobolev_minimum_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="587" cy="-250.59" rx="86.95" ry="19.6"/>
+<text text-anchor="middle" x="587" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">euler_lagrange</text>
+<text text-anchor="middle" x="587" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">vector_sobolev_minimum</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method.coercive» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Ecoercive&#45;00BB" class="node">
+<title>«methods.direct_method.coercive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Ecoercive&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___direct_method___coercive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="940" cy="-107.4" rx="64.19" ry="18"/>
+<text text-anchor="middle" x="940" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">direct_method.coercive</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method.coercive»&#45;&gt;«methods.sobolev.quadratic_unique» -->
+<g id="edge4" class="edge">
+<title>«methods.direct_method.coercive»&#45;&gt;«methods.sobolev.quadratic_unique»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M940.74,-89.19C941.12,-80.34 941.59,-69.43 942.01,-59.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="942.27,-53.81 944.71,-59.92 942.24,-56.81 942.11,-59.8 942.01,-59.8 941.91,-59.8 942.04,-56.8 939.31,-59.68 942.27,-53.81 942.27,-53.81"/>
+</g>
+<!-- «methods.direct_method.coercive»&#45;&gt;«methods.sobolev.integral_minimizer» -->
+<g id="edge18" class="edge">
+<title>«methods.direct_method.coercive»&#45;&gt;«methods.sobolev.integral_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M984.07,-94.27C1027.65,-82.29 1094.35,-63.94 1140.62,-51.21"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1146.44,-49.61 1141.37,-53.8 1143.57,-50.5 1140.68,-51.3 1140.65,-51.2 1140.63,-51.1 1143.52,-50.31 1139.94,-48.6 1146.44,-49.61 1146.44,-49.61"/>
+</g>
+<!-- «methods.direct_method.coercive»&#45;&gt;«methods.direct_method.convex_minimizer» -->
+<g id="edge23" class="edge">
+<title>«methods.direct_method.coercive»&#45;&gt;«methods.direct_method.convex_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M907.51,-91.81C883.66,-81.1 851.1,-66.48 825.55,-55.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="819.87,-52.46 826.45,-52.45 822.65,-53.6 825.39,-54.83 825.35,-54.92 825.31,-55.01 822.57,-53.78 824.24,-57.38 819.87,-52.46 819.87,-52.46"/>
+</g>
+<!-- «methods.sobolev.jet» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Ejet&#45;00BB" class="node">
+<title>«methods.sobolev.jet»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esobolev&#45;002Ejet&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___sobolev___jet_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1245.5,-340.19 1186.5,-340.19 1186.5,-304.19 1245.5,-304.19 1245.5,-340.19"/>
+<text text-anchor="middle" x="1216" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.jet</text>
+</a>
+</g>
+</g>
+<!-- «methods.sobolev.jet»&#45;&gt;«methods.sobolev.integral_energy» -->
+<g id="edge5" class="edge">
+<title>«methods.sobolev.jet»&#45;&gt;«methods.sobolev.integral_energy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1241.44,-304.17C1255.92,-294.48 1274.16,-282.27 1289.41,-272.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1294.46,-268.68 1290.98,-274.26 1292.02,-270.44 1289.53,-272.1 1289.47,-272.02 1289.42,-271.94 1291.91,-270.27 1287.97,-269.78 1294.46,-268.68 1294.46,-268.68"/>
+</g>
+<!-- «analysis.weak_compactness.evaluation» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Eevaluation&#45;00BB" class="node">
+<title>«analysis.weak_compactness.evaluation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Eevaluation&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_analysis___weak_compactness___evaluation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="764" cy="-322.19" rx="82.5" ry="18"/>
+<text text-anchor="middle" x="764" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_compactness.evaluation</text>
+</a>
+</g>
+</g>
+<!-- «analysis.weak_compactness.evaluation»&#45;&gt;«analysis.weak_compactness.norm_bound» -->
+<g id="edge1" class="edge">
+<title>«analysis.weak_compactness.evaluation»&#45;&gt;«analysis.weak_compactness.norm_bound»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M769.69,-303.99C772.64,-295.05 776.28,-284.02 779.47,-274.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="781.38,-268.6 782.06,-275.14 780.77,-271.56 779.83,-274.41 779.5,-274.3 779.16,-274.19 780.11,-271.34 776.93,-273.45 781.38,-268.6 781.38,-268.6"/>
+</g>
+<!-- «analysis.weak_compactness.radon_riesz» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Eradon&#45;005Friesz&#45;00BB" class="node">
+<title>«analysis.weak_compactness.radon_riesz»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Eradon&#45;005Friesz&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_analysis___weak_compactness___radon_riesz_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="986" cy="-250.59" rx="86.44" ry="18"/>
+<text text-anchor="middle" x="986" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_compactness.radon_riesz</text>
+</a>
+</g>
+</g>
+<!-- «analysis.weak_compactness.evaluation»&#45;&gt;«analysis.weak_compactness.radon_riesz» -->
+<g id="edge30" class="edge">
+<title>«analysis.weak_compactness.evaluation»&#45;&gt;«analysis.weak_compactness.radon_riesz»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M808.93,-307.11C845.24,-295.72 896.4,-279.68 934.4,-267.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="940.38,-265.9 935.46,-270.27 937.62,-267.13 934.76,-268.02 934.65,-267.69 934.55,-267.36 937.41,-266.46 933.85,-265.11 940.38,-265.9 940.38,-265.9"/>
+</g>
+<!-- «methods.euler_lagrange.sobolev_minimum» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Esobolev&#45;005Fminimum&#45;00BB" class="node">
+<title>«methods.euler_lagrange.sobolev_minimum»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Esobolev&#45;005Fminimum&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___euler_lagrange___sobolev_minimum_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="500" cy="-322.19" rx="64.19" ry="19.6"/>
+<text text-anchor="middle" x="500" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">euler_lagrange</text>
+<text text-anchor="middle" x="500" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev_minimum</text>
+</a>
+</g>
+</g>
+<!-- «methods.euler_lagrange.sobolev_minimum»&#45;&gt;«methods.euler_lagrange.convex_converse» -->
+<g id="edge6" class="edge">
+<title>«methods.euler_lagrange.sobolev_minimum»&#45;&gt;«methods.euler_lagrange.convex_converse»</title>
+<path fill="none" stroke="#6b7280" d="M477.6,-303.27C466.04,-294.02 451.86,-282.68 439.74,-272.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="435.03,-269.21 441.4,-270.85 437.37,-271.09 439.71,-272.96 439.71,-272.96 439.71,-272.96 437.37,-271.09 438.03,-275.07 435.03,-269.21 435.03,-269.21"/>
+</g>
+<!-- «methods.euler_lagrange.sobolev_minimum»&#45;&gt;«methods.euler_lagrange.vector_sobolev_minimum» -->
+<g id="edge10" class="edge">
+<title>«methods.euler_lagrange.sobolev_minimum»&#45;&gt;«methods.euler_lagrange.vector_sobolev_minimum»</title>
+<path fill="none" stroke="#6b7280" d="M522.4,-303.27C533.59,-294.32 547.24,-283.4 559.1,-273.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="564.07,-269.94 561.07,-275.8 561.72,-271.81 559.38,-273.69 559.38,-273.69 559.38,-273.69 561.72,-271.81 557.69,-271.58 564.07,-269.94 564.07,-269.94"/>
+</g>
+<!-- «methods.l2.quadratic_strong_convexity»&#45;&gt;«methods.l2.quadratic_weak_lsc» -->
+<g id="edge2" class="edge">
+<title>«methods.l2.quadratic_strong_convexity»&#45;&gt;«methods.l2.quadratic_weak_lsc»</title>
+<path fill="none" stroke="#6b7280" d="M394.12,-159.71C406.35,-150.04 421.38,-138.15 433.89,-128.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="438.73,-124.43 435.7,-130.27 436.38,-126.29 434.02,-128.15 434.02,-128.15 434.02,-128.15 436.38,-126.29 432.35,-126.03 438.73,-124.43 438.73,-124.43"/>
+</g>
+<!-- «methods.l2.quadratic_strong_convexity»&#45;&gt;«methods.l2.quadratic_unique» -->
+<g id="edge14" class="edge">
+<title>«methods.l2.quadratic_strong_convexity»&#45;&gt;«methods.l2.quadratic_unique»</title>
+<path fill="none" stroke="#6b7280" d="M371.84,-159.14C373.15,-140.49 376.49,-111.37 385,-87.6 388.6,-77.54 394.25,-67.24 399.68,-58.57"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="403.01,-53.39 402.03,-59.9 401.39,-55.92 399.76,-58.44 399.76,-58.44 399.76,-58.44 401.39,-55.92 397.49,-56.97 403.01,-53.39 403.01,-53.39"/>
+</g>
+<!-- «methods.direct_method.bounded_sublevel» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Ebounded&#45;005Fsublevel&#45;00BB" class="node">
+<title>«methods.direct_method.bounded_sublevel»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;002Ebounded&#45;005Fsublevel&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___direct_method___bounded_sublevel_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="938" cy="-178.99" rx="63.78" ry="19.6"/>
+<text text-anchor="middle" x="938" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">direct_method</text>
+<text text-anchor="middle" x="938" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">bounded_sublevel</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method.bounded_sublevel»&#45;&gt;«methods.direct_method.coercive» -->
+<g id="edge11" class="edge">
+<title>«methods.direct_method.bounded_sublevel»&#45;&gt;«methods.direct_method.coercive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M938.55,-158.98C938.79,-150.56 939.08,-140.57 939.33,-131.71"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="939.51,-125.49 942.04,-131.56 939.52,-128.49 939.44,-131.49 939.34,-131.49 939.24,-131.48 939.32,-128.49 936.64,-131.41 939.51,-125.49 939.51,-125.49"/>
+</g>
+<!-- «analysis.weak_compactness.linear_constraints» -->
+<g id="bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Elinear&#45;005Fconstraints&#45;00BB" class="node">
+<title>«analysis.weak_compactness.linear_constraints»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABanalysis&#45;002Eweak&#45;005Fcompactness&#45;002Elinear&#45;005Fconstraints&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_analysis___weak_compactness___linear_constraints_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1097" cy="-178.99" rx="70.01" ry="19.6"/>
+<text text-anchor="middle" x="1097" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">weak_compactness</text>
+<text text-anchor="middle" x="1097" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">linear_constraints</text>
+</a>
+</g>
+</g>
+<!-- «methods.sobolev.integral_convex»&#45;&gt;«methods.sobolev.integral_weak_lsc» -->
+<g id="edge28" class="edge">
+<title>«methods.sobolev.integral_convex»&#45;&gt;«methods.sobolev.integral_weak_lsc»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1306.56,-160.79C1303.74,-151.86 1300.25,-140.82 1297.2,-131.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1295.38,-125.4 1299.76,-130.31 1296.38,-128.23 1297.28,-131.09 1297.18,-131.12 1297.09,-131.15 1296.18,-128.29 1294.61,-131.94 1295.38,-125.4 1295.38,-125.4"/>
+</g>
+<!-- «methods.euler_lagrange.classical_local_minimum» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Eclassical&#45;005Flocal&#45;005Fminimum&#45;00BB" class="node">
+<title>«methods.euler_lagrange.classical_local_minimum»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Eclassical&#45;005Flocal&#45;005Fminimum&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___euler_lagrange___classical_local_minimum_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="102" cy="-250.59" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="102" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">euler_lagrange</text>
+<text text-anchor="middle" x="102" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">classical_local_minimum</text>
+</a>
+</g>
+</g>
+<!-- «methods.sobolev.integral_weak_lsc»&#45;&gt;«methods.sobolev.integral_minimizer» -->
+<g id="edge19" class="edge">
+<title>«methods.sobolev.integral_weak_lsc»&#45;&gt;«methods.sobolev.integral_minimizer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1267.5,-90.25C1253.52,-80.23 1235.45,-67.26 1220.61,-56.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1215.71,-53.09 1222.16,-54.4 1218.21,-54.76 1220.64,-56.51 1220.59,-56.59 1220.53,-56.67 1218.09,-54.92 1219.01,-58.79 1215.71,-53.09 1215.71,-53.09"/>
+</g>
+<!-- «methods.l2.quadratic_energy» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fenergy&#45;00BB" class="node">
+<title>«methods.l2.quadratic_energy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002El2&#45;002Equadratic&#45;005Fenergy&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___l2___quadratic_energy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="317.5,-340.19 220.5,-340.19 220.5,-304.19 317.5,-304.19 317.5,-340.19"/>
+<text text-anchor="middle" x="269" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">l2.quadratic_energy</text>
+</a>
+</g>
+</g>
+<!-- «methods.l2.quadratic_energy»&#45;&gt;«methods.l2.quadratic_identity» -->
+<g id="edge9" class="edge">
+<title>«methods.l2.quadratic_energy»&#45;&gt;«methods.l2.quadratic_identity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M269,-303.99C269,-295.14 269,-284.23 269,-274.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="269,-268.6 271.7,-274.6 269.1,-271.6 269.1,-274.6 269,-274.6 268.9,-274.6 268.9,-271.6 266.3,-274.6 269,-268.6 269,-268.6"/>
+</g>
+<!-- «methods.euler_lagrange.fundamental_lemma» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Efundamental&#45;005Flemma&#45;00BB" class="node">
+<title>«methods.euler_lagrange.fundamental_lemma»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eeuler&#45;005Flagrange&#45;002Efundamental&#45;005Flemma&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/#--informal-preview-_FLQQ_methods___euler_lagrange___fundamental_lemma_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="102" cy="-322.19" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="102" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">euler_lagrange</text>
+<text text-anchor="middle" x="102" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_lemma</text>
+</a>
+</g>
+</g>
+<!-- «methods.euler_lagrange.fundamental_lemma»&#45;&gt;«methods.euler_lagrange.classical_local_minimum» -->
+<g id="edge25" class="edge">
+<title>«methods.euler_lagrange.fundamental_lemma»&#45;&gt;«methods.euler_lagrange.classical_local_minimum»</title>
+<path fill="none" stroke="#6b7280" d="M102,-302.17C102,-294.35 102,-285.17 102,-276.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="102,-270.59 104.7,-276.59 102,-273.59 102,-276.59 102,-276.59 102,-276.59 102,-273.59 99.3,-276.59 102,-270.59 102,-270.59"/>
+</g>
+<!-- «analysis.weak_compactness.bounded_closed»&#45;&gt;«methods.direct_method.bounded_sublevel» -->
+<g id="edge20" class="edge">
+<title>«analysis.weak_compactness.bounded_closed»&#45;&gt;«methods.direct_method.bounded_sublevel»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1120.93,-235.59C1082.5,-223.91 1027.82,-207.29 988.26,-195.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="982.05,-193.38 988.57,-192.54 985.02,-193.92 987.89,-194.79 987.79,-195.13 987.69,-195.46 984.82,-194.59 987,-197.71 982.05,-193.38 982.05,-193.38"/>
+</g>
+<!-- «analysis.weak_compactness.bounded_closed»&#45;&gt;«analysis.weak_compactness.linear_constraints» -->
+<g id="edge21" class="edge">
+<title>«analysis.weak_compactness.bounded_closed»&#45;&gt;«analysis.weak_compactness.linear_constraints»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1148.61,-231.31C1139.84,-222.58 1129.25,-212.06 1119.96,-202.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1115.51,-198.4 1121.67,-200.72 1117.89,-200.27 1120.01,-202.38 1119.77,-202.63 1119.52,-202.88 1117.39,-200.76 1117.86,-204.55 1115.51,-198.4 1115.51,-198.4"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,1244 @@
+<svg data-node-count="64" data-edge-count="102" data-cluster-count="1" data-variant-key="parent:«hyperbolic.conservation»" width="2313pt" height="600pt"
+ viewBox="0.00 0.00 2313.00 600.19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 596.19)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-596.19 2309,-596.19 2309,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 2285,-8 2285,-8 2291,-8 2297,-14 2297,-20 2297,-20 2297,-572.19 2297,-572.19 2297,-578.19 2291,-584.19 2285,-584.19 2285,-584.19 20,-584.19 20,-584.19 14,-584.19 8,-578.19 8,-572.19 8,-572.19 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="1152.5" y="-568.99" font-family="Helvetica" font-size="14.00">Scalar and system conservation laws</text>
+</g>
+<!-- «hyperbolic.conservation.scalar_characteristics» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fcharacteristics&#45;00BB" class="node">
+<title>«hyperbolic.conservation.scalar_characteristics»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fcharacteristics&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___scalar_characteristics_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2243,-553.19 2135,-553.19 2135,-517.19 2243,-517.19 2243,-553.19"/>
+<text text-anchor="middle" x="2189" y="-538.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2189" y="-527.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">scalar_characteristics</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.scalar_characteristic_residual» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fcharacteristic&#45;005Fresidual&#45;00BB" class="node">
+<title>«hyperbolic.conservation.scalar_characteristic_residual»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fcharacteristic&#45;005Fresidual&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___scalar_characteristic_residual_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2189" cy="-465.39" rx="100.32" ry="19.6"/>
+<text text-anchor="middle" x="2189" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2189" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">scalar_characteristic_residual</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.scalar_characteristics»&#45;&gt;«hyperbolic.conservation.scalar_characteristic_residual» -->
+<g id="edge54" class="edge">
+<title>«hyperbolic.conservation.scalar_characteristics»&#45;&gt;«hyperbolic.conservation.scalar_characteristic_residual»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2189,-517.08C2189,-509.45 2189,-500.31 2189,-491.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2189,-485.65 2191.7,-491.65 2189.1,-488.65 2189.1,-491.65 2189,-491.65 2188.9,-491.65 2188.9,-488.65 2186.3,-491.65 2189,-485.65 2189,-485.65"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_local_entropy_riemann» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Flocal&#45;005Fentropy&#45;005Friemann&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system_local_entropy_riemann»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Flocal&#45;005Fentropy&#45;005Friemann&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_local_entropy_riemann_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1641" cy="-35.8" rx="111.03" ry="19.6"/>
+<text text-anchor="middle" x="1641" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1641" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">p_system_local_entropy_riemann</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.curved_entropy_shock» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ecurved&#45;005Fentropy&#45;005Fshock&#45;00BB" class="node">
+<title>«hyperbolic.conservation.curved_entropy_shock»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ecurved&#45;005Fentropy&#45;005Fshock&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___curved_entropy_shock_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="252" cy="-107.4" rx="78.48" ry="19.6"/>
+<text text-anchor="middle" x="252" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="252" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">curved_entropy_shock</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.convex_secant_speed» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Econvex&#45;005Fsecant&#45;005Fspeed&#45;00BB" class="node">
+<title>«hyperbolic.conservation.convex_secant_speed»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Econvex&#45;005Fsecant&#45;005Fspeed&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___convex_secant_speed_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="278" cy="-178.99" rx="77.15" ry="19.6"/>
+<text text-anchor="middle" x="278" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="278" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">convex_secant_speed</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.convex_lax_shock» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Econvex&#45;005Flax&#45;005Fshock&#45;00BB" class="node">
+<title>«hyperbolic.conservation.convex_lax_shock»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Econvex&#45;005Flax&#45;005Fshock&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___convex_lax_shock_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="82" cy="-107.4" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="82" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="82" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">convex_lax_shock</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.convex_secant_speed»&#45;&gt;«hyperbolic.conservation.convex_lax_shock» -->
+<g id="edge88" class="edge">
+<title>«hyperbolic.conservation.convex_secant_speed»&#45;&gt;«hyperbolic.conservation.convex_lax_shock»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M234.5,-162.55C203.29,-151.46 161.26,-136.54 129.22,-125.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="123.36,-123.09 129.92,-122.55 126.22,-123.99 129.05,-125 129.02,-125.09 128.99,-125.19 126.16,-124.18 128.12,-127.64 123.36,-123.09 123.36,-123.09"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_riemann_invariants» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Friemann&#45;005Finvariants&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system_riemann_invariants»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Friemann&#45;005Finvariants&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_riemann_invariants_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1042" cy="-322.19" rx="98.99" ry="19.6"/>
+<text text-anchor="middle" x="1042" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1042" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">p_system_riemann_invariants</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.p_system_rarefaction_fan» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Frarefaction&#45;005Ffan&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system_rarefaction_fan»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Frarefaction&#45;005Ffan&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_rarefaction_fan_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1229,-268.59 1105,-268.59 1105,-232.59 1229,-232.59 1229,-268.59"/>
+<text text-anchor="middle" x="1167" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1167" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">p_system_rarefaction_fan</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.p_system_riemann_invariants»&#45;&gt;«hyperbolic.conservation.p_system_rarefaction_fan» -->
+<g id="edge14" class="edge">
+<title>«hyperbolic.conservation.p_system_riemann_invariants»&#45;&gt;«hyperbolic.conservation.p_system_rarefaction_fan»</title>
+<path fill="none" stroke="#6b7280" d="M1074.19,-303.27C1091.5,-293.63 1112.9,-281.72 1130.78,-271.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1136.21,-268.74 1132.28,-274.01 1133.59,-270.19 1130.97,-271.65 1130.97,-271.65 1130.97,-271.65 1133.59,-270.19 1129.66,-269.3 1136.21,-268.74 1136.21,-268.74"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_diagonal» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Fdiagonal&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system_diagonal»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Fdiagonal&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_diagonal_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1013" cy="-250.59" rx="67.35" ry="19.6"/>
+<text text-anchor="middle" x="1013" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1013" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">p_system_diagonal</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.p_system_riemann_invariants»&#45;&gt;«hyperbolic.conservation.p_system_diagonal» -->
+<g id="edge68" class="edge">
+<title>«hyperbolic.conservation.p_system_riemann_invariants»&#45;&gt;«hyperbolic.conservation.p_system_diagonal»</title>
+<path fill="none" stroke="#6b7280" d="M1034.08,-302.17C1030.75,-294.19 1026.84,-284.81 1023.3,-276.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1020.91,-270.59 1025.71,-275.09 1022.07,-273.36 1023.22,-276.13 1023.22,-276.13 1023.22,-276.13 1022.07,-273.36 1020.73,-277.16 1020.91,-270.59 1020.91,-270.59"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_elementary_wave_weak» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Felementary&#45;005Fwave&#45;005Fweak&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system_elementary_wave_weak»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Felementary&#45;005Fwave&#45;005Fweak&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_elementary_wave_weak_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1809" cy="-107.4" rx="115.02" ry="19.6"/>
+<text text-anchor="middle" x="1809" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1809" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">p_system_elementary_wave_weak</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.p_system_rarefaction_fan»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak» -->
+<g id="edge60" class="edge">
+<title>«hyperbolic.conservation.p_system_rarefaction_fan»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1229.23,-240.06C1250.96,-236.9 1275.53,-233.49 1298,-230.79 1371.37,-221.99 1563.41,-232.84 1629,-198.79 1649.59,-188.11 1643.83,-172.26 1663,-159.2 1684.97,-144.23 1711.8,-133.24 1736.44,-125.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1742.31,-123.56 1737.39,-127.92 1739.48,-124.55 1736.61,-125.44 1736.58,-125.34 1736.56,-125.24 1739.42,-124.35 1735.78,-122.76 1742.31,-123.56 1742.31,-123.56"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_elementary_wave» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Felementary&#45;005Fwave&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system_elementary_wave»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Felementary&#45;005Fwave&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_elementary_wave_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1810.5,-196.99 1675.5,-196.99 1675.5,-160.99 1810.5,-160.99 1810.5,-196.99"/>
+<text text-anchor="middle" x="1743" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1743" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">p_system_elementary_wave</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.p_system_rarefaction_fan»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave» -->
+<g id="edge94" class="edge">
+<title>«hyperbolic.conservation.p_system_rarefaction_fan»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1229.22,-239.97C1250.95,-236.8 1275.52,-233.41 1298,-230.79 1456.67,-212.33 1498.07,-222.82 1656,-198.79 1660.31,-198.14 1664.72,-197.4 1669.16,-196.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1675.23,-195.49 1669.82,-199.23 1672.3,-196.13 1669.35,-196.67 1669.33,-196.57 1669.31,-196.47 1672.27,-195.93 1668.84,-193.92 1675.23,-195.49 1675.23,-195.49"/>
+</g>
+<!-- «hyperbolic.conservation.kruzhkov_contraction» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ekruzhkov&#45;005Fcontraction&#45;00BB" class="node">
+<title>«hyperbolic.conservation.kruzhkov_contraction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ekruzhkov&#45;005Fcontraction&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___kruzhkov_contraction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="784" cy="-107.4" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="784" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="784" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">kruzhkov_contraction</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.kruzhkov_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ekruzhkov&#45;005Funiqueness&#45;00BB" class="node">
+<title>«hyperbolic.conservation.kruzhkov_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ekruzhkov&#45;005Funiqueness&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___kruzhkov_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="772" cy="-35.8" rx="74.91" ry="19.6"/>
+<text text-anchor="middle" x="772" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="772" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">kruzhkov_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.kruzhkov_contraction»&#45;&gt;«hyperbolic.conservation.kruzhkov_uniqueness» -->
+<g id="edge51" class="edge">
+<title>«hyperbolic.conservation.kruzhkov_contraction»&#45;&gt;«hyperbolic.conservation.kruzhkov_uniqueness»</title>
+<path fill="none" stroke="#6b7280" d="M780.72,-87.38C779.37,-79.55 777.79,-70.38 776.35,-62"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="775.28,-55.79 778.96,-61.25 775.78,-58.75 776.29,-61.71 776.29,-61.71 776.29,-61.71 775.78,-58.75 773.63,-62.17 775.28,-55.79 775.28,-55.79"/>
+</g>
+<!-- «hyperbolic.conservation.system_entropy_inequality» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fentropy&#45;005Finequality&#45;00BB" class="node">
+<title>«hyperbolic.conservation.system_entropy_inequality»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fentropy&#45;005Finequality&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___system_entropy_inequality_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1117.5,-196.99 990.5,-196.99 990.5,-160.99 1117.5,-160.99 1117.5,-196.99"/>
+<text text-anchor="middle" x="1054" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1054" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">system_entropy_inequality</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_entropy_inequality»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann» -->
+<g id="edge4" class="edge">
+<title>«hyperbolic.conservation.system_entropy_inequality»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1117.71,-162.55C1124.2,-161.28 1130.72,-160.13 1137,-159.2 1233.31,-144.85 1488.69,-174.14 1574,-127.2 1581.11,-123.28 1607.22,-86.36 1624.67,-60.93"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1628.25,-55.69 1627.09,-62.17 1626.64,-58.23 1624.95,-60.7 1624.86,-60.65 1624.78,-60.59 1626.48,-58.11 1622.64,-59.12 1628.25,-55.69 1628.25,-55.69"/>
+</g>
+<!-- «hyperbolic.conservation.vanishing_viscosity» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Evanishing&#45;005Fviscosity&#45;00BB" class="node">
+<title>«hyperbolic.conservation.vanishing_viscosity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Evanishing&#45;005Fviscosity&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___vanishing_viscosity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1351" cy="-107.4" rx="68.68" ry="19.6"/>
+<text text-anchor="middle" x="1351" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1351" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">vanishing_viscosity</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_entropy_inequality»&#45;&gt;«hyperbolic.conservation.vanishing_viscosity» -->
+<g id="edge52" class="edge">
+<title>«hyperbolic.conservation.system_entropy_inequality»&#45;&gt;«hyperbolic.conservation.vanishing_viscosity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1117.71,-163.06C1169.8,-150.86 1242.81,-133.75 1293.22,-121.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1299.25,-120.52 1294.02,-124.52 1296.35,-121.31 1293.43,-121.99 1293.41,-121.89 1293.38,-121.8 1296.3,-121.11 1292.79,-119.26 1299.25,-120.52 1299.25,-120.52"/>
+</g>
+<!-- «hyperbolic.conservation.planar_shock_weak» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eplanar&#45;005Fshock&#45;005Fweak&#45;00BB" class="node">
+<title>«hyperbolic.conservation.planar_shock_weak»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eplanar&#45;005Fshock&#45;005Fweak&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___planar_shock_weak_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1239" cy="-178.99" rx="69.09" ry="19.6"/>
+<text text-anchor="middle" x="1239" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1239" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">planar_shock_weak</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.burgers.weak_shock» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eweak&#45;005Fshock&#45;00BB" class="node">
+<title>«hyperbolic.burgers.weak_shock»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eweak&#45;005Fshock&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___burgers___weak_shock_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1503" cy="-107.4" rx="58.35" ry="18"/>
+<text text-anchor="middle" x="1503" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">burgers.weak_shock</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.planar_shock_weak»&#45;&gt;«hyperbolic.burgers.weak_shock» -->
+<g id="edge50" class="edge">
+<title>«hyperbolic.conservation.planar_shock_weak»&#45;&gt;«hyperbolic.burgers.weak_shock»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1288.59,-164.96C1327.58,-154.71 1383.26,-140.06 1432,-127.2 1439.13,-125.31 1446.66,-123.32 1454.04,-121.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1460.2,-119.74 1455.09,-123.88 1457.33,-120.6 1454.43,-121.37 1454.4,-121.27 1454.38,-121.18 1457.28,-120.41 1453.71,-118.66 1460.2,-119.74 1460.2,-119.74"/>
+</g>
+<!-- «hyperbolic.conservation.planar_shock_weak»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak» -->
+<g id="edge58" class="edge">
+<title>«hyperbolic.conservation.planar_shock_weak»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1296.83,-167.95C1315.09,-164.94 1335.36,-161.76 1354,-159.2 1474.01,-142.7 1612.39,-127.84 1704.73,-118.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1710.75,-117.91 1705.05,-121.2 1707.77,-118.31 1704.79,-118.61 1704.78,-118.51 1704.77,-118.41 1707.75,-118.11 1704.5,-115.83 1710.75,-117.91 1710.75,-117.91"/>
+</g>
+<!-- «hyperbolic.conservation.scalar_shock_time_value» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fshock&#45;005Ftime&#45;005Fvalue&#45;00BB" class="node">
+<title>«hyperbolic.conservation.scalar_shock_time_value»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fshock&#45;005Ftime&#45;005Fvalue&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___scalar_shock_time_value_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2036" cy="-322.19" rx="86.03" ry="19.6"/>
+<text text-anchor="middle" x="2036" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2036" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">scalar_shock_time_value</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_entropy_pair» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fentropy&#45;005Fpair&#45;00BB" class="node">
+<title>«hyperbolic.conservation.system_entropy_pair»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fentropy&#45;005Fpair&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___system_entropy_pair_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="300,-483.39 198,-483.39 198,-447.39 300,-447.39 300,-483.39"/>
+<text text-anchor="middle" x="249" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="249" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">system_entropy_pair</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_entropy_pair»&#45;&gt;«hyperbolic.conservation.system_entropy_inequality» -->
+<g id="edge18" class="edge">
+<title>«hyperbolic.conservation.system_entropy_pair»&#45;&gt;«hyperbolic.conservation.system_entropy_inequality»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M197.85,-449.47C180.52,-441.7 163.02,-430.23 153,-413.59 143.92,-398.51 142.27,-387.94 153,-373.99 262.64,-231.52 371.1,-319.61 544,-270.39 602.09,-253.85 614.82,-242.88 674,-230.79 804.08,-204.22 840.04,-220.61 971,-198.79 975.31,-198.08 979.73,-197.27 984.18,-196.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="990.25,-195.21 984.89,-199.03 987.33,-195.89 984.39,-196.48 984.37,-196.38 984.35,-196.28 987.29,-195.7 983.84,-193.73 990.25,-195.21 990.25,-195.21"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_entropy» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Fentropy&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system_entropy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Fentropy&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_entropy_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="448.5,-411.79 357.5,-411.79 357.5,-375.79 448.5,-375.79 448.5,-411.79"/>
+<text text-anchor="middle" x="403" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="403" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">p_system_entropy</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_entropy_pair»&#45;&gt;«hyperbolic.conservation.p_system_entropy» -->
+<g id="edge36" class="edge">
+<title>«hyperbolic.conservation.system_entropy_pair»&#45;&gt;«hyperbolic.conservation.p_system_entropy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M286.67,-447.36C308.67,-437.42 336.53,-424.83 359.46,-414.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="365.18,-411.88 360.83,-416.81 362.49,-413.21 359.76,-414.44 359.71,-414.35 359.67,-414.26 362.41,-413.02 358.6,-411.89 365.18,-411.88 365.18,-411.88"/>
+</g>
+<!-- «hyperbolic.conservation.system_entropy_identity» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fentropy&#45;005Fidentity&#45;00BB" class="node">
+<title>«hyperbolic.conservation.system_entropy_identity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fentropy&#45;005Fidentity&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___system_entropy_identity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="249" cy="-393.79" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="249" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="249" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">system_entropy_identity</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_entropy_pair»&#45;&gt;«hyperbolic.conservation.system_entropy_identity» -->
+<g id="edge98" class="edge">
+<title>«hyperbolic.conservation.system_entropy_pair»&#45;&gt;«hyperbolic.conservation.system_entropy_identity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M249,-447.18C249,-438.94 249,-428.91 249,-419.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="249,-413.75 251.7,-419.75 249.1,-416.75 249.1,-419.75 249,-419.75 248.9,-419.75 248.9,-416.75 246.3,-419.75 249,-413.75 249,-413.75"/>
+</g>
+<!-- «hyperbolic.burgers.riemann_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eriemann&#45;005Fsolution&#45;00BB" class="node">
+<title>«hyperbolic.burgers.riemann_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eriemann&#45;005Fsolution&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___burgers___riemann_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="556" cy="-35.8" rx="69.4" ry="18"/>
+<text text-anchor="middle" x="556" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">burgers.riemann_solution</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.entropy_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eentropy&#45;005Fsolution&#45;00BB" class="node">
+<title>«hyperbolic.conservation.entropy_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eentropy&#45;005Fsolution&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___entropy_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="464,-196.99 380,-196.99 380,-160.99 464,-160.99 464,-196.99"/>
+<text text-anchor="middle" x="422" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="422" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">entropy_solution</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.conservation.curved_entropy_shock» -->
+<g id="edge6" class="edge">
+<title>«hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.conservation.curved_entropy_shock»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M380.41,-160.97C355.19,-150.64 323,-137.46 297.15,-126.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="291.41,-124.53 297.98,-124.3 294.22,-125.57 297,-126.71 296.96,-126.8 296.92,-126.9 294.14,-125.76 295.93,-129.3 291.41,-124.53 291.41,-124.53"/>
+</g>
+<!-- «hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.conservation.kruzhkov_contraction» -->
+<g id="edge17" class="edge">
+<title>«hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.conservation.kruzhkov_contraction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M464.11,-162.72C468.43,-161.42 472.78,-160.21 477,-159.2 573.05,-136.01 599.77,-144.75 697,-127.2 705.53,-125.66 714.49,-123.89 723.29,-122.07"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="729.35,-120.8 724.03,-124.67 726.43,-121.51 723.5,-122.13 723.48,-122.03 723.46,-121.93 726.39,-121.32 722.92,-119.39 729.35,-120.8 729.35,-120.8"/>
+</g>
+<!-- «hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.burgers.riemann_solution» -->
+<g id="edge25" class="edge">
+<title>«hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.burgers.riemann_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M451.62,-160.94C465.7,-151.98 482.21,-140.17 495,-127.2 500.61,-121.5 525.4,-83.94 541.59,-59.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="544.91,-53.96 543.9,-60.46 543.36,-56.53 541.72,-59.04 541.64,-58.99 541.55,-58.93 543.19,-56.42 539.38,-57.52 544.91,-53.96 544.91,-53.96"/>
+</g>
+<!-- «hyperbolic.conservation.scalar_riemann» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Friemann&#45;00BB" class="node">
+<title>«hyperbolic.conservation.scalar_riemann»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Friemann&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___scalar_riemann_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="950" cy="-35.8" rx="77.92" ry="18"/>
+<text text-anchor="middle" x="950" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.scalar_riemann</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.conservation.scalar_riemann» -->
+<g id="edge32" class="edge">
+<title>«hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.conservation.scalar_riemann»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M464.04,-162.45C468.38,-161.2 472.75,-160.08 477,-159.2 563,-141.3 799.13,-177.71 871,-127.2 886.82,-116.08 877.28,-102.97 889,-87.6 897.84,-76 909.79,-65.32 920.77,-56.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="925.74,-52.99 922.6,-58.77 923.41,-54.89 921.02,-56.71 920.96,-56.63 920.9,-56.55 923.29,-54.73 919.33,-54.48 925.74,-52.99 925.74,-52.99"/>
+</g>
+<!-- «hyperbolic.burgers.entropy_rarefaction» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eentropy&#45;005Frarefaction&#45;00BB" class="node">
+<title>«hyperbolic.burgers.entropy_rarefaction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eentropy&#45;005Frarefaction&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___burgers___entropy_rarefaction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="610" cy="-107.4" rx="74.75" ry="18"/>
+<text text-anchor="middle" x="610" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">burgers.entropy_rarefaction</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.burgers.entropy_rarefaction» -->
+<g id="edge62" class="edge">
+<title>«hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.burgers.entropy_rarefaction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M464.19,-162.38C494.13,-151.29 534.27,-136.43 564.85,-125.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="570.84,-122.9 566.15,-127.51 568.06,-124.03 565.24,-125.07 565.21,-124.98 565.18,-124.88 567.99,-123.84 564.27,-122.45 570.84,-122.9 570.84,-122.9"/>
+</g>
+<!-- «hyperbolic.burgers.entropy_shock» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eentropy&#45;005Fshock&#45;00BB" class="node">
+<title>«hyperbolic.burgers.entropy_shock»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eentropy&#45;005Fshock&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___burgers___entropy_shock_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="419" cy="-107.4" rx="63.56" ry="18"/>
+<text text-anchor="middle" x="419" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">burgers.entropy_shock</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.burgers.entropy_shock» -->
+<g id="edge72" class="edge">
+<title>«hyperbolic.conservation.entropy_solution»&#45;&gt;«hyperbolic.burgers.entropy_shock»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M421.26,-160.79C420.88,-151.94 420.41,-141.03 419.99,-131.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="419.73,-125.4 422.69,-131.28 419.96,-128.4 420.09,-131.39 419.99,-131.4 419.89,-131.4 419.76,-128.4 417.29,-131.51 419.73,-125.4 419.73,-125.4"/>
+</g>
+<!-- «hyperbolic.conservation.characteristic_field» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Echaracteristic&#45;005Ffield&#45;00BB" class="node">
+<title>«hyperbolic.conservation.characteristic_field»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Echaracteristic&#45;005Ffield&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___characteristic_field_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1634,-483.39 1540,-483.39 1540,-447.39 1634,-447.39 1634,-483.39"/>
+<text text-anchor="middle" x="1587" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1587" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">characteristic_field</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.characteristic_classes» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Echaracteristic&#45;005Fclasses&#45;00BB" class="node">
+<title>«hyperbolic.conservation.characteristic_classes»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Echaracteristic&#45;005Fclasses&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___characteristic_classes_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1642,-411.79 1532,-411.79 1532,-375.79 1642,-375.79 1642,-411.79"/>
+<text text-anchor="middle" x="1587" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1587" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">characteristic_classes</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.characteristic_field»&#45;&gt;«hyperbolic.conservation.characteristic_classes» -->
+<g id="edge78" class="edge">
+<title>«hyperbolic.conservation.characteristic_field»&#45;&gt;«hyperbolic.conservation.characteristic_classes»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1587,-447.18C1587,-438.33 1587,-427.42 1587,-417.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1587,-411.79 1589.7,-417.79 1587.1,-414.79 1587.1,-417.79 1587,-417.79 1586.9,-417.79 1586.9,-414.79 1584.3,-417.8 1587,-411.79 1587,-411.79"/>
+</g>
+<!-- «hyperbolic.conservation.ordered_wave_map» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eordered&#45;005Fwave&#45;005Fmap&#45;00BB" class="node">
+<title>«hyperbolic.conservation.ordered_wave_map»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eordered&#45;005Fwave&#45;005Fmap&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___ordered_wave_map_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2054,-268.59 1958,-268.59 1958,-232.59 2054,-232.59 2054,-268.59"/>
+<text text-anchor="middle" x="2006" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2006" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">ordered_wave_map</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.characteristic_field»&#45;&gt;«hyperbolic.conservation.ordered_wave_map» -->
+<g id="edge96" class="edge">
+<title>«hyperbolic.conservation.characteristic_field»&#45;&gt;«hyperbolic.conservation.ordered_wave_map»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1634,-452.37C1695.42,-435.1 1804.4,-398.9 1883,-341.99 1901.79,-328.39 1899.11,-317.16 1917,-302.39 1931.18,-290.69 1948.41,-280.16 1963.91,-271.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1969.54,-268.77 1965.51,-273.97 1966.94,-270.27 1964.29,-271.68 1964.25,-271.59 1964.2,-271.5 1966.85,-270.09 1962.98,-269.2 1969.54,-268.77 1969.54,-268.77"/>
+</g>
+<!-- «hyperbolic.conservation.oleinik_bound» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eoleinik&#45;005Fbound&#45;00BB" class="node">
+<title>«hyperbolic.conservation.oleinik_bound»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eoleinik&#45;005Fbound&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___oleinik_bound_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="756,-196.99 626,-196.99 626,-160.99 756,-160.99 756,-196.99"/>
+<text text-anchor="middle" x="691" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.oleinik_bound</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.lax_oleinik» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elax&#45;005Foleinik&#45;00BB" class="node">
+<title>«hyperbolic.conservation.lax_oleinik»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elax&#45;005Foleinik&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___lax_oleinik_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1190" cy="-107.4" rx="66.87" ry="18"/>
+<text text-anchor="middle" x="1190" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.lax_oleinik</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.oleinik_bound»&#45;&gt;«hyperbolic.conservation.lax_oleinik» -->
+<g id="edge77" class="edge">
+<title>«hyperbolic.conservation.oleinik_bound»&#45;&gt;«hyperbolic.conservation.lax_oleinik»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M756.42,-162.52C762.68,-161.29 768.95,-160.16 775,-159.2 923.15,-135.66 963.01,-151.73 1111,-127.2 1119.7,-125.75 1128.87,-123.89 1137.75,-121.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1143.85,-120.51 1138.6,-124.48 1140.95,-121.28 1138.02,-121.95 1138,-121.85 1137.98,-121.75 1140.9,-121.08 1137.4,-119.22 1143.85,-120.51 1143.85,-120.51"/>
+</g>
+<!-- «hyperbolic.conservation.oleinik_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eoleinik&#45;005Funiqueness&#45;00BB" class="node">
+<title>«hyperbolic.conservation.oleinik_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eoleinik&#45;005Funiqueness&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___oleinik_uniqueness_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1031" cy="-107.4" rx="67.35" ry="19.6"/>
+<text text-anchor="middle" x="1031" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1031" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">oleinik_uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.oleinik_bound»&#45;&gt;«hyperbolic.conservation.oleinik_uniqueness» -->
+<g id="edge81" class="edge">
+<title>«hyperbolic.conservation.oleinik_bound»&#45;&gt;«hyperbolic.conservation.oleinik_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M756.07,-163.2C762.46,-161.82 768.85,-160.46 775,-159.2 850.3,-143.69 869.66,-142.52 945,-127.2 953.97,-125.37 963.45,-123.37 972.71,-121.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="978.75,-120.07 973.46,-123.98 975.84,-120.8 972.91,-121.44 972.89,-121.34 972.87,-121.24 975.8,-120.61 972.32,-118.7 978.75,-120.07 978.75,-120.07"/>
+</g>
+<!-- «hyperbolic.conservation.self_similar_wave» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eself&#45;005Fsimilar&#45;005Fwave&#45;00BB" class="node">
+<title>«hyperbolic.conservation.self_similar_wave»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eself&#45;005Fsimilar&#45;005Fwave&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___self_similar_wave_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="828" cy="-322.19" rx="62.87" ry="19.6"/>
+<text text-anchor="middle" x="828" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="828" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">self_similar_wave</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.self_similar_wave»&#45;&gt;«hyperbolic.conservation.p_system_rarefaction_fan» -->
+<g id="edge15" class="edge">
+<title>«hyperbolic.conservation.self_similar_wave»&#45;&gt;«hyperbolic.conservation.p_system_rarefaction_fan»</title>
+<path fill="none" stroke="#6b7280" d="M881.03,-311.41C946.33,-299.3 1053.45,-279.2 1093,-270.39 1094.94,-269.96 1096.91,-269.51 1098.89,-269.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1104.89,-267.66 1099.66,-271.65 1101.96,-268.34 1099.04,-269.02 1099.04,-269.02 1099.04,-269.02 1101.96,-268.34 1098.43,-266.39 1104.89,-267.66 1104.89,-267.66"/>
+</g>
+<!-- «hyperbolic.conservation.self_similar_wave»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak» -->
+<g id="edge61" class="edge">
+<title>«hyperbolic.conservation.self_similar_wave»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M855.6,-304.18C869.57,-294.98 886.4,-282.94 900,-270.39 916.84,-254.86 912.49,-241 933,-230.79 1066.24,-164.46 1473.41,-273.74 1602,-198.79 1619.98,-188.31 1610.3,-171.62 1627,-159.2 1652.04,-140.56 1683.61,-128.75 1713.4,-121.28"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1719.33,-119.85 1714.13,-123.88 1716.44,-120.65 1713.52,-121.36 1713.5,-121.26 1713.47,-121.16 1716.39,-120.46 1712.86,-118.63 1719.33,-119.85 1719.33,-119.85"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_entropy»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann» -->
+<g id="edge2" class="edge">
+<title>«hyperbolic.conservation.p_system_entropy»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M432.63,-375.62C499.06,-337.45 658.69,-247.61 718,-230.79 806.35,-205.75 1050.53,-244.82 1130,-198.79 1148.43,-188.12 1138.54,-169.83 1157,-159.2 1241.96,-110.27 1515.82,-182.16 1597,-127.2 1602.98,-123.15 1619.61,-86.56 1630.63,-61.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1633.03,-55.65 1633.12,-62.23 1631.93,-58.44 1630.74,-61.2 1630.65,-61.16 1630.55,-61.12 1631.74,-58.36 1628.17,-60.08 1633.03,-55.65 1633.03,-55.65"/>
+</g>
+<!-- «hyperbolic.burgers.affine_ivp» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eaffine&#45;005Fivp&#45;00BB" class="node">
+<title>«hyperbolic.burgers.affine_ivp»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eaffine&#45;005Fivp&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___burgers___affine_ivp_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="2046,-553.19 1956,-553.19 1956,-517.19 2046,-517.19 2046,-553.19"/>
+<text text-anchor="middle" x="2001" y="-532.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">burgers.affine_ivp</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.burgers.affine_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eaffine&#45;005Fsolution&#45;00BB" class="node">
+<title>«hyperbolic.burgers.affine_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Eaffine&#45;005Fsolution&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___burgers___affine_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2001" cy="-465.39" rx="62.92" ry="18"/>
+<text text-anchor="middle" x="2001" y="-462.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">burgers.affine_solution</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.burgers.affine_ivp»&#45;&gt;«hyperbolic.burgers.affine_solution» -->
+<g id="edge66" class="edge">
+<title>«hyperbolic.burgers.affine_ivp»&#45;&gt;«hyperbolic.burgers.affine_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" stroke-dasharray="5,2" d="M2001,-517.08C2001,-508.79 2001,-498.71 2001,-489.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2001,-483.73 2003.7,-489.73 2001.35,-486.73 2001.35,-489.73 2001,-489.73 2000.65,-489.73 2000.65,-486.73 1998.3,-489.73 2001,-483.73 2001,-483.73"/>
+</g>
+<!-- «hyperbolic.conservation.riemann_invariant_constant» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eriemann&#45;005Finvariant&#45;005Fconstant&#45;00BB" class="node">
+<title>«hyperbolic.conservation.riemann_invariant_constant»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eriemann&#45;005Finvariant&#45;005Fconstant&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___riemann_invariant_constant_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="976" cy="-393.79" rx="92.76" ry="19.6"/>
+<text text-anchor="middle" x="976" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="976" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">riemann_invariant_constant</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.riemann_invariant_constant»&#45;&gt;«hyperbolic.conservation.p_system_riemann_invariants» -->
+<g id="edge11" class="edge">
+<title>«hyperbolic.conservation.riemann_invariant_constant»&#45;&gt;«hyperbolic.conservation.p_system_riemann_invariants»</title>
+<path fill="none" stroke="#6b7280" d="M993.69,-374.14C1001.68,-365.71 1011.21,-355.66 1019.68,-346.73"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1024.26,-341.89 1022.09,-348.1 1022.2,-344.07 1020.14,-346.25 1020.14,-346.25 1020.14,-346.25 1022.2,-344.07 1018.18,-344.39 1024.26,-341.89 1024.26,-341.89"/>
+</g>
+<!-- «hyperbolic.conservation.linearly_degenerate_contact» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elinearly&#45;005Fdegenerate&#45;005Fcontact&#45;00BB" class="node">
+<title>«hyperbolic.conservation.linearly_degenerate_contact»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elinearly&#45;005Fdegenerate&#45;005Fcontact&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___linearly_degenerate_contact_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1838" cy="-250.59" rx="94.51" ry="19.6"/>
+<text text-anchor="middle" x="1838" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1838" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">linearly_degenerate_contact</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.p_system_hugoniot_branch» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Fhugoniot&#45;005Fbranch&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system_hugoniot_branch»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Fhugoniot&#45;005Fbranch&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_hugoniot_branch_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1473,-268.59 1343,-268.59 1343,-232.59 1473,-232.59 1473,-268.59"/>
+<text text-anchor="middle" x="1408" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1408" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">p_system_hugoniot_branch</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.p_system_hugoniot_branch»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak» -->
+<g id="edge59" class="edge">
+<title>«hyperbolic.conservation.p_system_hugoniot_branch»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1473.37,-246.69C1589.01,-240.87 1819.8,-225.97 1844,-198.79 1860.92,-179.79 1845.65,-151.7 1830.3,-131.89"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1826.42,-127.04 1832.28,-130.04 1828.38,-129.32 1830.25,-131.66 1830.17,-131.73 1830.09,-131.79 1828.22,-129.45 1828.07,-133.41 1826.42,-127.04 1826.42,-127.04"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_hugoniot_branch»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave» -->
+<g id="edge93" class="edge">
+<title>«hyperbolic.conservation.p_system_hugoniot_branch»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1473.05,-236.47C1523.1,-226.32 1593.96,-211.85 1656,-198.79 1660.26,-197.9 1664.64,-196.97 1669.06,-196.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1675.1,-194.74 1669.79,-198.63 1672.19,-195.46 1669.25,-196.09 1669.23,-195.99 1669.21,-195.89 1672.14,-195.27 1668.67,-193.35 1675.1,-194.74 1675.1,-194.74"/>
+</g>
+<!-- «hyperbolic.conservation.n_wave» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002En&#45;005Fwave&#45;00BB" class="node">
+<title>«hyperbolic.conservation.n_wave»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002En&#45;005Fwave&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___n_wave_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1190" cy="-35.8" rx="58.35" ry="18"/>
+<text text-anchor="middle" x="1190" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.n_wave</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_classical_to_weak» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fclassical&#45;005Fto&#45;005Fweak&#45;00BB" class="node">
+<title>«hyperbolic.conservation.system_classical_to_weak»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fclassical&#45;005Fto&#45;005Fweak&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___system_classical_to_weak_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1478" cy="-178.99" rx="90.52" ry="19.6"/>
+<text text-anchor="middle" x="1478" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1478" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">system_classical_to_weak</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.weak_ivp» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eweak&#45;005Fivp&#45;00BB" class="node">
+<title>«hyperbolic.conservation.weak_ivp»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eweak&#45;005Fivp&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___weak_ivp_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="601,-196.99 489,-196.99 489,-160.99 601,-160.99 601,-196.99"/>
+<text text-anchor="middle" x="545" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.weak_ivp</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.kruzhkov_contraction» -->
+<g id="edge16" class="edge">
+<title>«hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.kruzhkov_contraction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M601.03,-161.68C639.8,-150.39 691.12,-135.44 729.54,-124.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="735.59,-122.49 730.58,-126.76 732.74,-123.43 729.86,-124.27 729.83,-124.17 729.8,-124.08 732.68,-123.24 729.07,-121.58 735.59,-122.49 735.59,-122.49"/>
+</g>
+<!-- «hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.burgers.riemann_solution» -->
+<g id="edge26" class="edge">
+<title>«hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.burgers.riemann_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M601.33,-161.95C605.6,-160.95 609.86,-160.01 614,-159.2 670.46,-148.05 832.9,-170.33 871,-127.2 882.65,-114.01 882.41,-101 871,-87.6 866.95,-82.84 712.26,-59.57 621.2,-46.24"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="615.02,-45.34 621.35,-43.53 618,-45.67 620.97,-46.11 620.96,-46.2 620.94,-46.3 617.98,-45.87 620.57,-48.88 615.02,-45.34 615.02,-45.34"/>
+</g>
+<!-- «hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.scalar_riemann» -->
+<g id="edge33" class="edge">
+<title>«hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.scalar_riemann»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M601.32,-161.92C605.6,-160.93 609.86,-160 614,-159.2 731.74,-136.26 778.04,-187.05 882,-127.2 909.03,-111.64 928.69,-80.59 939.73,-59.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="942.48,-53.8 942.19,-60.37 941.22,-56.52 939.87,-59.2 939.78,-59.16 939.69,-59.11 941.04,-56.43 937.37,-57.95 942.48,-53.8 942.48,-53.8"/>
+</g>
+<!-- «hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.vanishing_viscosity» -->
+<g id="edge53" class="edge">
+<title>«hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.vanishing_viscosity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M601.27,-161.6C605.55,-160.68 609.83,-159.86 614,-159.2 901.86,-113.51 980.28,-167.03 1269,-127.2 1277.58,-126.01 1286.59,-124.37 1295.36,-122.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1301.39,-121.25 1296.09,-125.15 1298.48,-121.97 1295.55,-122.6 1295.53,-122.5 1295.5,-122.41 1298.44,-121.78 1294.96,-119.86 1301.39,-121.25 1301.39,-121.25"/>
+</g>
+<!-- «hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.lax_oleinik» -->
+<g id="edge76" class="edge">
+<title>«hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.lax_oleinik»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M601.28,-161.67C605.56,-160.73 609.84,-159.89 614,-159.2 832.33,-122.81 892.1,-160.05 1111,-127.2 1119.92,-125.86 1129.32,-124.01 1138.39,-122"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1144.31,-120.66 1139.05,-124.62 1141.4,-121.42 1138.48,-122.08 1138.45,-121.99 1138.43,-121.89 1141.36,-121.22 1137.86,-119.35 1144.31,-120.66 1144.31,-120.66"/>
+</g>
+<!-- «hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.oleinik_uniqueness» -->
+<g id="edge82" class="edge">
+<title>«hyperbolic.conservation.weak_ivp»&#45;&gt;«hyperbolic.conservation.oleinik_uniqueness»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M601.3,-161.82C605.58,-160.85 609.85,-159.96 614,-159.2 759.38,-132.56 798.99,-150.13 945,-127.2 954.5,-125.7 964.53,-123.81 974.25,-121.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="980.26,-120.54 974.94,-124.41 977.34,-121.25 974.41,-121.87 974.39,-121.77 974.36,-121.67 977.3,-121.06 973.83,-119.13 980.26,-120.54 980.26,-120.54"/>
+</g>
+<!-- «hyperbolic.conservation.scalar_pre_shock» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fpre&#45;005Fshock&#45;00BB" class="node">
+<title>«hyperbolic.conservation.scalar_pre_shock»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fpre&#45;005Fshock&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___scalar_pre_shock_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2189" cy="-393.79" rx="62.87" ry="19.6"/>
+<text text-anchor="middle" x="2189" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2189" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">scalar_pre_shock</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.scalar_characteristic_residual»&#45;&gt;«hyperbolic.conservation.scalar_pre_shock» -->
+<g id="edge70" class="edge">
+<title>«hyperbolic.conservation.scalar_characteristic_residual»&#45;&gt;«hyperbolic.conservation.scalar_pre_shock»</title>
+<path fill="none" stroke="#6b7280" d="M2189,-445.37C2189,-437.54 2189,-428.37 2189,-419.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2189,-413.78 2191.7,-419.78 2189,-416.78 2189,-419.78 2189,-419.78 2189,-419.78 2189,-416.78 2186.3,-419.78 2189,-413.78 2189,-413.78"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_elementary_wave_weak»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann» -->
+<g id="edge5" class="edge">
+<title>«hyperbolic.conservation.p_system_elementary_wave_weak»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1766.61,-88.83C1742.94,-79.03 1713.38,-66.78 1688.88,-56.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1683.09,-54.24 1689.67,-54.04 1685.9,-55.29 1688.67,-56.44 1688.63,-56.53 1688.59,-56.62 1685.82,-55.48 1687.6,-59.03 1683.09,-54.24 1683.09,-54.24"/>
+</g>
+<!-- «hyperbolic.burgers.entropy_rarefaction»&#45;&gt;«hyperbolic.burgers.riemann_solution» -->
+<g id="edge28" class="edge">
+<title>«hyperbolic.burgers.entropy_rarefaction»&#45;&gt;«hyperbolic.burgers.riemann_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M596.93,-89.55C589.63,-80.15 580.47,-68.33 572.66,-58.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="568.95,-53.49 574.76,-56.58 570.87,-55.8 572.71,-58.17 572.63,-58.23 572.55,-58.29 570.71,-55.92 570.5,-59.89 568.95,-53.49 568.95,-53.49"/>
+</g>
+<!-- «hyperbolic.burgers.lax_shock» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Elax&#45;005Fshock&#45;00BB" class="node">
+<title>«hyperbolic.burgers.lax_shock»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eburgers&#45;002Elax&#45;005Fshock&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___burgers___lax_shock_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="123" cy="-178.99" rx="53.14" ry="18"/>
+<text text-anchor="middle" x="123" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">burgers.lax_shock</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.local_riemann_solver» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elocal&#45;005Friemann&#45;005Fsolver&#45;00BB" class="node">
+<title>«hyperbolic.conservation.local_riemann_solver»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elocal&#45;005Friemann&#45;005Fsolver&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___local_riemann_solver_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2191" cy="-107.4" rx="72.66" ry="19.6"/>
+<text text-anchor="middle" x="2191" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2191" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_riemann_solver</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.local_riemann_initial_value» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elocal&#45;005Friemann&#45;005Finitial&#45;005Fvalue&#45;00BB" class="node">
+<title>«hyperbolic.conservation.local_riemann_initial_value»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elocal&#45;005Friemann&#45;005Finitial&#45;005Fvalue&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___local_riemann_initial_value_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2070" cy="-35.8" rx="90.52" ry="19.6"/>
+<text text-anchor="middle" x="2070" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2070" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_riemann_initial_value</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.local_riemann_solver»&#45;&gt;«hyperbolic.conservation.local_riemann_initial_value» -->
+<g id="edge83" class="edge">
+<title>«hyperbolic.conservation.local_riemann_solver»&#45;&gt;«hyperbolic.conservation.local_riemann_initial_value»</title>
+<path fill="none" stroke="#6b7280" d="M2161.09,-89.19C2144.47,-79.64 2123.68,-67.67 2106.15,-57.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2100.83,-54.53 2107.38,-55.18 2103.43,-56.03 2106.03,-57.52 2106.03,-57.52 2106.03,-57.52 2103.43,-56.03 2104.68,-59.86 2100.83,-54.53 2100.83,-54.53"/>
+</g>
+<!-- «hyperbolic.conservation.system_hyperbolicity» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fhyperbolicity&#45;00BB" class="node">
+<title>«hyperbolic.conservation.system_hyperbolicity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fhyperbolicity&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___system_hyperbolicity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1208,-553.19 1104,-553.19 1104,-517.19 1208,-517.19 1208,-553.19"/>
+<text text-anchor="middle" x="1156" y="-538.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1156" y="-527.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">system_hyperbolicity</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.characteristic_field» -->
+<g id="edge30" class="edge">
+<title>«hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.characteristic_field»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1208.42,-525.94C1291.04,-512.94 1450.68,-487.83 1533.79,-474.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1539.88,-473.8 1534.37,-477.4 1536.93,-474.36 1533.97,-474.83 1533.96,-474.73 1533.94,-474.63 1536.9,-474.17 1533.54,-472.06 1539.88,-473.8 1539.88,-473.8"/>
+</g>
+<!-- «hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.local_riemann_solver» -->
+<g id="edge65" class="edge">
+<title>«hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.local_riemann_solver»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1208.33,-534.82C1299.28,-534.65 1491.68,-528.57 1647,-485.19 1774.06,-449.69 1810.45,-431.89 1907,-341.99 1923.16,-326.94 1918.55,-314.53 1937,-302.39 1986.71,-269.69 2009.93,-287.25 2067,-270.39 2160.36,-242.82 2217.52,-278.09 2274,-198.79 2284.21,-184.46 2282.6,-174.55 2274,-159.2 2266.13,-145.14 2252.6,-134.51 2238.73,-126.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2233.2,-123.74 2239.77,-124.19 2235.9,-125.07 2238.54,-126.49 2238.49,-126.57 2238.45,-126.66 2235.8,-125.25 2237.22,-128.95 2233.2,-123.74 2233.2,-123.74"/>
+</g>
+<!-- «hyperbolic.conservation.symmetric_hyperbolic» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esymmetric&#45;005Fhyperbolic&#45;00BB" class="node">
+<title>«hyperbolic.conservation.symmetric_hyperbolic»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esymmetric&#45;005Fhyperbolic&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___symmetric_hyperbolic_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1156" cy="-465.39" rx="76.24" ry="19.6"/>
+<text text-anchor="middle" x="1156" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1156" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">symmetric_hyperbolic</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.symmetric_hyperbolic» -->
+<g id="edge85" class="edge">
+<title>«hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.symmetric_hyperbolic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1156,-517.08C1156,-509.45 1156,-500.31 1156,-491.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1156,-485.65 1158.7,-491.65 1156.1,-488.65 1156.1,-491.65 1156,-491.65 1155.9,-491.65 1155.9,-488.65 1153.3,-491.65 1156,-485.65 1156,-485.65"/>
+</g>
+<!-- «hyperbolic.conservation.simple_wave» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esimple&#45;005Fwave&#45;00BB" class="node">
+<title>«hyperbolic.conservation.simple_wave»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esimple&#45;005Fwave&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___simple_wave_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="600" cy="-393.79" rx="72.08" ry="18"/>
+<text text-anchor="middle" x="600" y="-391.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.simple_wave</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.simple_wave» -->
+<g id="edge90" class="edge">
+<title>«hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.simple_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1103.73,-529.19C1041.23,-522.49 933.79,-508.62 844,-485.19 770.07,-465.89 687.33,-432.64 639.69,-412.29"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="634.05,-409.87 640.63,-409.76 636.85,-410.96 639.61,-412.15 639.57,-412.24 639.53,-412.33 636.77,-411.15 638.5,-414.72 634.05,-409.87 634.05,-409.87"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_hyperbolic» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Fhyperbolic&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system_hyperbolic»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;005Fhyperbolic&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_hyperbolic_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1167" cy="-393.79" rx="73.58" ry="19.6"/>
+<text text-anchor="middle" x="1167" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1167" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">p_system_hyperbolic</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.p_system_hyperbolic» -->
+<g id="edge102" class="edge">
+<title>«hyperbolic.conservation.system_hyperbolicity»&#45;&gt;«hyperbolic.conservation.p_system_hyperbolic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1103.85,-517.06C1089.37,-509.64 1075.35,-499.31 1067,-485.19 1058.05,-470.03 1057.8,-460.59 1067,-445.59 1076.84,-429.56 1093.48,-418.39 1110.4,-410.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1116.14,-408.23 1111.7,-413.08 1113.43,-409.51 1110.67,-410.7 1110.63,-410.6 1110.59,-410.51 1113.35,-409.32 1109.56,-408.13 1116.14,-408.23 1116.14,-408.23"/>
+</g>
+<!-- «hyperbolic.conservation.scalar_pre_shock»&#45;&gt;«hyperbolic.conservation.scalar_shock_time_value» -->
+<g id="edge24" class="edge">
+<title>«hyperbolic.conservation.scalar_pre_shock»&#45;&gt;«hyperbolic.conservation.scalar_shock_time_value»</title>
+<path fill="none" stroke="#6b7280" d="M2154.66,-377.17C2132.23,-366.97 2102.77,-353.56 2078.81,-342.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2073.16,-340.1 2079.74,-340.12 2075.9,-341.34 2078.63,-342.58 2078.63,-342.58 2078.63,-342.58 2075.9,-341.34 2077.51,-345.04 2073.16,-340.1 2073.16,-340.1"/>
+</g>
+<!-- «hyperbolic.conservation.scalar_shock_onset» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fshock&#45;005Fonset&#45;00BB" class="node">
+<title>«hyperbolic.conservation.scalar_shock_onset»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Escalar&#45;005Fshock&#45;005Fonset&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___scalar_shock_onset_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2218" cy="-322.19" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="2218" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2218" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">scalar_shock_onset</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.scalar_pre_shock»&#45;&gt;«hyperbolic.conservation.scalar_shock_onset» -->
+<g id="edge92" class="edge">
+<title>«hyperbolic.conservation.scalar_pre_shock»&#45;&gt;«hyperbolic.conservation.scalar_shock_onset»</title>
+<path fill="none" stroke="#6b7280" d="M2196.77,-374.14C2200.15,-366.02 2204.16,-356.41 2207.78,-347.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2210.21,-341.89 2210.39,-348.47 2209.05,-344.66 2207.9,-347.43 2207.9,-347.43 2207.9,-347.43 2209.05,-344.66 2205.41,-346.39 2210.21,-341.89 2210.21,-341.89"/>
+</g>
+<!-- «hyperbolic.conservation.classical_to_weak» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eclassical&#45;005Fto&#45;005Fweak&#45;00BB" class="node">
+<title>«hyperbolic.conservation.classical_to_weak»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eclassical&#45;005Fto&#45;005Fweak&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___classical_to_weak_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="873" cy="-178.99" rx="65.11" ry="19.6"/>
+<text text-anchor="middle" x="873" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="873" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">classical_to_weak</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.burgers.entropy_shock»&#45;&gt;«hyperbolic.burgers.riemann_solution» -->
+<g id="edge27" class="edge">
+<title>«hyperbolic.burgers.entropy_shock»&#45;&gt;«hyperbolic.burgers.riemann_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M448.73,-91.3C469.77,-80.61 498.08,-66.22 520.34,-54.92"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="525.86,-52.11 521.73,-57.24 523.23,-53.56 520.55,-54.92 520.51,-54.83 520.46,-54.74 523.14,-53.38 519.29,-52.42 525.86,-52.11 525.86,-52.11"/>
+</g>
+<!-- «hyperbolic.conservation.system_elementary_waves» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Felementary&#45;005Fwaves&#45;00BB" class="node">
+<title>«hyperbolic.conservation.system_elementary_waves»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Felementary&#45;005Fwaves&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___system_elementary_waves_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1485,-340.19 1355,-340.19 1355,-304.19 1485,-304.19 1485,-340.19"/>
+<text text-anchor="middle" x="1420" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1420" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">system_elementary_waves</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_elementary_waves»&#45;&gt;«hyperbolic.conservation.linearly_degenerate_contact» -->
+<g id="edge38" class="edge">
+<title>«hyperbolic.conservation.system_elementary_waves»&#45;&gt;«hyperbolic.conservation.linearly_degenerate_contact»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1485.02,-304.84C1489.06,-303.97 1493.08,-303.14 1497,-302.39 1597.06,-283.17 1623.28,-285.79 1724,-270.39 1735.84,-268.58 1748.36,-266.59 1760.6,-264.61"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1766.59,-263.63 1761.1,-267.26 1763.64,-264.21 1760.68,-264.7 1760.66,-264.6 1760.65,-264.5 1763.61,-264.02 1760.23,-261.93 1766.59,-263.63 1766.59,-263.63"/>
+</g>
+<!-- «hyperbolic.conservation.system_elementary_waves»&#45;&gt;«hyperbolic.conservation.p_system_hugoniot_branch» -->
+<g id="edge43" class="edge">
+<title>«hyperbolic.conservation.system_elementary_waves»&#45;&gt;«hyperbolic.conservation.p_system_hugoniot_branch»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1417.03,-303.99C1415.51,-295.14 1413.63,-284.23 1411.98,-274.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1410.93,-268.6 1414.61,-274.05 1411.54,-271.54 1412.05,-274.49 1411.95,-274.51 1411.85,-274.53 1411.34,-271.57 1409.29,-274.97 1410.93,-268.6 1410.93,-268.6"/>
+</g>
+<!-- «hyperbolic.conservation.system_elementary_waves»&#45;&gt;«hyperbolic.conservation.local_riemann_initial_value» -->
+<g id="edge84" class="edge">
+<title>«hyperbolic.conservation.system_elementary_waves»&#45;&gt;«hyperbolic.conservation.local_riemann_initial_value»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1476.9,-304.13C1539.15,-285.58 1641.96,-255.31 1731,-230.79 1785.46,-215.8 1803.44,-223.98 1854,-198.79 1879.37,-186.15 1881.48,-176.41 1904,-159.2 1950.85,-123.39 2006.12,-83 2039.59,-58.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2044.77,-54.99 2041.49,-60.69 2042.4,-56.83 2039.97,-58.59 2039.91,-58.51 2039.85,-58.43 2042.28,-56.67 2038.33,-56.32 2044.77,-54.99 2044.77,-54.99"/>
+</g>
+<!-- «hyperbolic.conservation.system_elementary_waves»&#45;&gt;«hyperbolic.conservation.ordered_wave_map» -->
+<g id="edge95" class="edge">
+<title>«hyperbolic.conservation.system_elementary_waves»&#45;&gt;«hyperbolic.conservation.ordered_wave_map»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1485.38,-304.44C1489.3,-303.68 1493.19,-302.99 1497,-302.39 1694.21,-271.5 1748.79,-307.14 1945,-270.39 1947.26,-269.97 1949.55,-269.49 1951.85,-268.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1957.97,-267.5 1952.77,-271.53 1955.08,-268.3 1952.16,-269 1952.14,-268.9 1952.12,-268.81 1955.03,-268.1 1951.51,-266.28 1957.97,-267.5 1957.97,-267.5"/>
+</g>
+<!-- «hyperbolic.conservation.characteristic_flow_family» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Echaracteristic&#45;005Fflow&#45;005Ffamily&#45;00BB" class="node">
+<title>«hyperbolic.conservation.characteristic_flow_family»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Echaracteristic&#45;005Fflow&#45;005Ffamily&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___characteristic_flow_family_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2006" cy="-178.99" rx="89.19" ry="19.6"/>
+<text text-anchor="middle" x="2006" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2006" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">characteristic_flow_family</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.lax_oleinik»&#45;&gt;«hyperbolic.conservation.n_wave» -->
+<g id="edge44" class="edge">
+<title>«hyperbolic.conservation.lax_oleinik»&#45;&gt;«hyperbolic.conservation.n_wave»</title>
+<path fill="none" stroke="#6b7280" d="M1190,-89.19C1190,-80.34 1190,-69.43 1190,-59.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1190,-53.81 1192.7,-59.81 1190,-56.81 1190,-59.81 1190,-59.81 1190,-59.81 1190,-56.81 1187.3,-59.81 1190,-53.81 1190,-53.81"/>
+</g>
+<!-- «hyperbolic.conservation.riemann_invariant» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eriemann&#45;005Finvariant&#45;00BB" class="node">
+<title>«hyperbolic.conservation.riemann_invariant»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eriemann&#45;005Finvariant&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___riemann_invariant_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="944,-483.39 856,-483.39 856,-447.39 944,-447.39 944,-483.39"/>
+<text text-anchor="middle" x="900" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="900" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">riemann_invariant</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.riemann_invariant»&#45;&gt;«hyperbolic.conservation.riemann_invariant_constant» -->
+<g id="edge37" class="edge">
+<title>«hyperbolic.conservation.riemann_invariant»&#45;&gt;«hyperbolic.conservation.riemann_invariant_constant»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M918.79,-447.18C928.63,-438.17 940.81,-427.01 951.4,-417.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="955.83,-413.26 953.23,-419.3 953.69,-415.36 951.48,-417.38 951.41,-417.31 951.34,-417.24 953.55,-415.21 949.58,-415.32 955.83,-413.26 955.83,-413.26"/>
+</g>
+<!-- «hyperbolic.conservation.gradient_blowup» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Egradient&#45;005Fblowup&#45;00BB" class="node">
+<title>«hyperbolic.conservation.gradient_blowup»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Egradient&#45;005Fblowup&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___gradient_blowup_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="778" cy="-393.79" rx="80.59" ry="18"/>
+<text text-anchor="middle" x="778" y="-391.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.gradient_blowup</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.riemann_invariant»&#45;&gt;«hyperbolic.conservation.gradient_blowup» -->
+<g id="edge79" class="edge">
+<title>«hyperbolic.conservation.riemann_invariant»&#45;&gt;«hyperbolic.conservation.gradient_blowup»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M870.16,-447.36C852.38,-437.22 829.79,-424.33 811.42,-413.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="805.86,-410.68 812.41,-411.31 808.52,-412.08 811.12,-413.57 811.08,-413.66 811.03,-413.74 808.42,-412.26 809.74,-416 805.86,-410.68 805.86,-410.68"/>
+</g>
+<!-- «hyperbolic.conservation.characteristic_classes»&#45;&gt;«hyperbolic.conservation.system_elementary_waves» -->
+<g id="edge74" class="edge">
+<title>«hyperbolic.conservation.characteristic_classes»&#45;&gt;«hyperbolic.conservation.system_elementary_waves»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1546.15,-375.76C1522.09,-365.74 1491.57,-353.02 1466.58,-342.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1461.01,-340.28 1467.59,-340.1 1463.82,-341.34 1466.59,-342.5 1466.55,-342.59 1466.51,-342.68 1463.74,-341.53 1465.51,-345.08 1461.01,-340.28 1461.01,-340.28"/>
+</g>
+<!-- «hyperbolic.conservation.linearly_degenerate_speed» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elinearly&#45;005Fdegenerate&#45;005Fspeed&#45;00BB" class="node">
+<title>«hyperbolic.conservation.linearly_degenerate_speed»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Elinearly&#45;005Fdegenerate&#45;005Fspeed&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___linearly_degenerate_speed_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1780" cy="-322.19" rx="90.52" ry="19.6"/>
+<text text-anchor="middle" x="1780" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="1780" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">linearly_degenerate_speed</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.characteristic_classes»&#45;&gt;«hyperbolic.conservation.linearly_degenerate_speed» -->
+<g id="edge91" class="edge">
+<title>«hyperbolic.conservation.characteristic_classes»&#45;&gt;«hyperbolic.conservation.linearly_degenerate_speed»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1634.21,-375.76C1662.98,-365.39 1699.75,-352.13 1729.15,-341.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1734.93,-339.44 1730.21,-344.02 1732.15,-340.55 1729.32,-341.57 1729.29,-341.48 1729.26,-341.38 1732.08,-340.37 1728.37,-338.94 1734.93,-339.44 1734.93,-339.44"/>
+</g>
+<!-- «hyperbolic.conservation.viscous_profile» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eviscous&#45;005Fprofile&#45;00BB" class="node">
+<title>«hyperbolic.conservation.viscous_profile»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eviscous&#45;005Fprofile&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___viscous_profile_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1587" cy="-322.19" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="1587" y="-319.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.viscous_profile</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.characteristic_classes»&#45;&gt;«hyperbolic.conservation.viscous_profile» -->
+<g id="edge100" class="edge">
+<title>«hyperbolic.conservation.characteristic_classes»&#45;&gt;«hyperbolic.conservation.viscous_profile»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1587,-375.58C1587,-366.74 1587,-355.83 1587,-346.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1587,-340.2 1589.7,-346.2 1587.1,-343.2 1587.1,-346.2 1587,-346.2 1586.9,-346.2 1586.9,-343.2 1584.3,-346.2 1587,-340.2 1587,-340.2"/>
+</g>
+<!-- «hyperbolic.conservation.system_jump» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fjump&#45;00BB" class="node">
+<title>«hyperbolic.conservation.system_jump»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fjump&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___system_jump_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1502,-411.79 1374,-411.79 1374,-375.79 1502,-375.79 1502,-411.79"/>
+<text text-anchor="middle" x="1438" y="-391.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.system_jump</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_jump»&#45;&gt;«hyperbolic.conservation.planar_shock_weak» -->
+<g id="edge21" class="edge">
+<title>«hyperbolic.conservation.system_jump»&#45;&gt;«hyperbolic.conservation.planar_shock_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1385.4,-375.74C1366.36,-367.7 1345.7,-356.6 1330,-341.99 1287.8,-302.73 1260.18,-239.37 1247.34,-204.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1245.26,-198.94 1249.85,-203.66 1246.38,-201.73 1247.41,-204.55 1247.31,-204.58 1247.22,-204.62 1246.19,-201.8 1244.78,-205.5 1245.26,-198.94 1245.26,-198.94"/>
+</g>
+<!-- «hyperbolic.conservation.system_jump»&#45;&gt;«hyperbolic.conservation.p_system_hugoniot_branch» -->
+<g id="edge42" class="edge">
+<title>«hyperbolic.conservation.system_jump»&#45;&gt;«hyperbolic.conservation.p_system_hugoniot_branch»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1382.88,-375.62C1367.25,-367.92 1352.04,-357.07 1343,-341.99 1333.95,-326.89 1335.29,-318.21 1343,-302.39 1348.93,-290.22 1359.35,-280.12 1370.12,-272.21"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1375.09,-268.73 1371.72,-274.38 1372.69,-270.53 1370.23,-272.25 1370.17,-272.17 1370.12,-272.09 1372.57,-270.37 1368.62,-269.96 1375.09,-268.73 1375.09,-268.73"/>
+</g>
+<!-- «hyperbolic.conservation.system_jump»&#45;&gt;«hyperbolic.conservation.system_elementary_waves» -->
+<g id="edge73" class="edge">
+<title>«hyperbolic.conservation.system_jump»&#45;&gt;«hyperbolic.conservation.system_elementary_waves»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1433.55,-375.58C1431.26,-366.74 1428.44,-355.83 1425.97,-346.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1424.4,-340.2 1428.51,-345.33 1425.25,-343.08 1426,-345.98 1425.9,-346.01 1425.8,-346.03 1425.05,-343.13 1423.29,-346.68 1424.4,-340.2 1424.4,-340.2"/>
+</g>
+<!-- «hyperbolic.conservation.system_jump»&#45;&gt;«hyperbolic.conservation.viscous_profile» -->
+<g id="edge99" class="edge">
+<title>«hyperbolic.conservation.system_jump»&#45;&gt;«hyperbolic.conservation.viscous_profile»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1474.45,-375.76C1496.85,-365.3 1525.52,-351.91 1548.31,-341.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1553.98,-338.62 1549.68,-343.6 1551.3,-339.98 1548.58,-341.25 1548.54,-341.16 1548.5,-341.06 1551.22,-339.8 1547.4,-338.71 1553.98,-338.62 1553.98,-338.62"/>
+</g>
+<!-- «hyperbolic.conservation.oleinik_uniqueness»&#45;&gt;«hyperbolic.conservation.scalar_riemann» -->
+<g id="edge31" class="edge">
+<title>«hyperbolic.conservation.oleinik_uniqueness»&#45;&gt;«hyperbolic.conservation.scalar_riemann»</title>
+<path fill="none" stroke="#6b7280" d="M1010.14,-88.47C999.15,-79.03 985.61,-67.4 974.16,-57.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="969.4,-53.47 975.71,-55.33 971.67,-55.42 973.95,-57.38 973.95,-57.38 973.95,-57.38 971.67,-55.42 972.19,-59.42 969.4,-53.47 969.4,-53.47"/>
+</g>
+<!-- «hyperbolic.conservation.system_weak_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fweak&#45;005Fsolution&#45;00BB" class="node">
+<title>«hyperbolic.conservation.system_weak_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fweak&#45;005Fsolution&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___system_weak_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="840,-268.59 730,-268.59 730,-232.59 840,-232.59 840,-268.59"/>
+<text text-anchor="middle" x="785" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="785" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">system_weak_solution</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann» -->
+<g id="edge3" class="edge">
+<title>«hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M840.13,-234.43C846.46,-233.04 852.85,-231.78 859,-230.79 909.81,-222.65 1278.73,-228.13 1321,-198.79 1336.88,-187.77 1323.36,-170.56 1339,-159.2 1441.03,-85.03 1527.26,-211.6 1621,-127.2 1638.97,-111.02 1642.73,-82.64 1642.77,-61.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1642.67,-55.84 1645.47,-61.8 1642.82,-58.84 1642.87,-61.84 1642.77,-61.84 1642.67,-61.84 1642.62,-58.84 1640.07,-61.88 1642.67,-55.84 1642.67,-55.84"/>
+</g>
+<!-- «hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.system_entropy_inequality» -->
+<g id="edge19" class="edge">
+<title>«hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.system_entropy_inequality»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M840.09,-235.34C881.86,-224.53 939.57,-209.6 984.52,-197.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="990.49,-196.43 985.36,-200.54 987.61,-197.28 984.71,-198.03 984.68,-197.93 984.66,-197.83 987.56,-197.08 984.01,-195.32 990.49,-196.43 990.49,-196.43"/>
+</g>
+<!-- «hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.planar_shock_weak» -->
+<g id="edge20" class="edge">
+<title>«hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.planar_shock_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M840.17,-234.68C846.5,-233.24 852.87,-231.9 859,-230.79 987.47,-207.55 1022.11,-219.57 1151,-198.79 1160.58,-197.25 1170.69,-195.35 1180.51,-193.35"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1186.58,-192.1 1181.25,-195.96 1183.66,-192.81 1180.73,-193.41 1180.7,-193.31 1180.68,-193.22 1183.62,-192.61 1180.16,-190.67 1186.58,-192.1 1186.58,-192.1"/>
+</g>
+<!-- «hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.system_classical_to_weak» -->
+<g id="edge46" class="edge">
+<title>«hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.system_classical_to_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M840.13,-234.39C846.46,-233.01 852.85,-231.76 859,-230.79 1082.92,-195.63 1142.86,-225.03 1368,-198.79 1380.16,-197.38 1393.01,-195.52 1405.48,-193.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1411.56,-192.52 1406.07,-196.15 1408.62,-193.1 1405.65,-193.59 1405.64,-193.49 1405.62,-193.39 1408.58,-192.91 1405.2,-190.82 1411.56,-192.52 1411.56,-192.52"/>
+</g>
+<!-- «hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak» -->
+<g id="edge57" class="edge">
+<title>«hyperbolic.conservation.system_weak_solution»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M840.13,-234.42C846.46,-233.02 852.85,-231.77 859,-230.79 965.02,-213.95 1244.99,-246.82 1341,-198.79 1361.75,-188.42 1354.52,-170.09 1375,-159.2 1375.23,-159.07 1582.19,-134.89 1710.19,-119.93"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1716.23,-119.23 1710.58,-122.61 1713.26,-119.68 1710.28,-120.03 1710.27,-119.93 1710.25,-119.83 1713.23,-119.48 1709.95,-117.24 1716.23,-119.23 1716.23,-119.23"/>
+</g>
+<!-- «hyperbolic.conservation.wave_map_columns» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ewave&#45;005Fmap&#45;005Fcolumns&#45;00BB" class="node">
+<title>«hyperbolic.conservation.wave_map_columns»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ewave&#45;005Fmap&#45;005Fcolumns&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___wave_map_columns_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="2191" cy="-178.99" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="2191" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="2191" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">wave_map_columns</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.wave_map_columns»&#45;&gt;«hyperbolic.conservation.local_riemann_solver» -->
+<g id="edge64" class="edge">
+<title>«hyperbolic.conservation.wave_map_columns»&#45;&gt;«hyperbolic.conservation.local_riemann_solver»</title>
+<path fill="none" stroke="#6b7280" d="M2191,-158.98C2191,-151.15 2191,-141.97 2191,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2191,-127.39 2193.7,-133.39 2191,-130.39 2191,-133.39 2191,-133.39 2191,-133.39 2191,-130.39 2188.3,-133.39 2191,-127.39 2191,-127.39"/>
+</g>
+<!-- «hyperbolic.conservation.simple_wave»&#45;&gt;«hyperbolic.conservation.self_similar_wave» -->
+<g id="edge34" class="edge">
+<title>«hyperbolic.conservation.simple_wave»&#45;&gt;«hyperbolic.conservation.self_similar_wave»</title>
+<path fill="none" stroke="#6b7280" d="M643.69,-379.45C682.14,-367.71 738.1,-350.63 778.26,-338.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="784.07,-336.6 779.12,-340.94 781.2,-337.48 778.33,-338.35 778.33,-338.35 778.33,-338.35 781.2,-337.48 777.54,-335.77 784.07,-336.6 784.07,-336.6"/>
+</g>
+<!-- «hyperbolic.conservation.linearly_degenerate_speed»&#45;&gt;«hyperbolic.conservation.linearly_degenerate_contact» -->
+<g id="edge39" class="edge">
+<title>«hyperbolic.conservation.linearly_degenerate_speed»&#45;&gt;«hyperbolic.conservation.linearly_degenerate_contact»</title>
+<path fill="none" stroke="#6b7280" d="M1795.54,-302.54C1802.56,-294.11 1810.94,-284.07 1818.39,-275.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1822.41,-270.3 1820.65,-276.63 1820.49,-272.6 1818.57,-274.9 1818.57,-274.9 1818.57,-274.9 1820.49,-272.6 1816.5,-273.18 1822.41,-270.3 1822.41,-270.3"/>
+</g>
+<!-- «hyperbolic.conservation.weak_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eweak&#45;005Fsolution&#45;00BB" class="node">
+<title>«hyperbolic.conservation.weak_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Eweak&#45;005Fsolution&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___weak_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="531.5,-268.59 398.5,-268.59 398.5,-232.59 531.5,-232.59 531.5,-268.59"/>
+<text text-anchor="middle" x="465" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.weak_solution</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.conservation.planar_shock_weak» -->
+<g id="edge22" class="edge">
+<title>«hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.conservation.planar_shock_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M531.61,-244.59C697.19,-232.14 1115.27,-200.62 1130,-198.79 1145.23,-196.9 1161.56,-194.36 1176.84,-191.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1182.86,-190.72 1177.4,-194.4 1179.92,-191.33 1176.96,-191.84 1176.95,-191.74 1176.93,-191.64 1179.89,-191.13 1176.49,-189.08 1182.86,-190.72 1182.86,-190.72"/>
+</g>
+<!-- «hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.conservation.entropy_solution» -->
+<g id="edge29" class="edge">
+<title>«hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.conservation.entropy_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M454.37,-232.39C448.75,-223.29 441.78,-212 435.75,-202.24"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="432.51,-197 437.96,-200.69 434.17,-199.5 435.75,-202.05 435.66,-202.11 435.58,-202.16 434,-199.61 433.36,-203.52 432.51,-197 432.51,-197"/>
+</g>
+<!-- «hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.conservation.weak_ivp» -->
+<g id="edge47" class="edge">
+<title>«hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.conservation.weak_ivp»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M484.78,-232.39C495.63,-222.95 509.17,-211.17 520.67,-201.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="525.45,-197 522.7,-202.98 523.25,-199.05 520.99,-201.01 520.93,-200.94 520.86,-200.86 523.12,-198.89 519.15,-198.9 525.45,-197 525.45,-197"/>
+</g>
+<!-- «hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.burgers.weak_shock» -->
+<g id="edge48" class="edge">
+<title>«hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.burgers.weak_shock»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M531.5,-234.12C538.07,-232.88 544.65,-231.74 551,-230.79 639.2,-217.69 873.89,-243.57 951,-198.79 969.42,-188.1 959.53,-169.81 978,-159.2 1065.7,-108.82 1332.23,-143.77 1432,-127.2 1440.02,-125.86 1448.45,-124.03 1456.58,-122.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1462.74,-120.47 1457.58,-124.56 1459.85,-121.3 1456.94,-122.04 1456.92,-121.94 1456.9,-121.84 1459.8,-121.11 1456.26,-119.32 1462.74,-120.47 1462.74,-120.47"/>
+</g>
+<!-- «hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.conservation.classical_to_weak» -->
+<g id="edge71" class="edge">
+<title>«hyperbolic.conservation.weak_solution»&#45;&gt;«hyperbolic.conservation.classical_to_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M531.56,-234.48C538.12,-233.16 544.68,-231.91 551,-230.79 656.11,-212.27 683.94,-217.58 789,-198.79 798.26,-197.14 808.04,-195.16 817.53,-193.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="823.4,-191.84 818.11,-195.76 820.49,-192.58 817.55,-193.22 817.53,-193.12 817.51,-193.02 820.44,-192.38 816.96,-190.48 823.4,-191.84 823.4,-191.84"/>
+</g>
+<!-- «hyperbolic.conservation.p_system» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;00BB" class="node">
+<title>«hyperbolic.conservation.p_system»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ep&#45;005Fsystem&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___p_system_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1369,-483.39 1257,-483.39 1257,-447.39 1369,-447.39 1369,-483.39"/>
+<text text-anchor="middle" x="1313" y="-462.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.p_system</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_riemann_invariants» -->
+<g id="edge9" class="edge">
+<title>«hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_riemann_invariants»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1303.51,-447C1290.38,-423.55 1266.74,-383.6 1253,-373.99 1219.74,-350.72 1177.1,-338.04 1138.88,-331.15"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1132.78,-330.1 1139.15,-328.46 1135.75,-330.51 1138.71,-331.02 1138.69,-331.12 1138.67,-331.22 1135.72,-330.71 1138.23,-333.78 1132.78,-330.1 1132.78,-330.1"/>
+</g>
+<!-- «hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_rarefaction_fan» -->
+<g id="edge12" class="edge">
+<title>«hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_rarefaction_fan»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1309.24,-447.17C1304.17,-427.44 1293.45,-395.12 1274,-373.99 1253.53,-351.75 1235.26,-363.47 1214,-341.99 1195.06,-322.85 1182.02,-294.5 1174.57,-274.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1172.43,-268.81 1177.02,-273.52 1173.55,-271.59 1174.58,-274.41 1174.49,-274.44 1174.39,-274.48 1173.37,-271.66 1171.95,-275.37 1172.43,-268.81 1172.43,-268.81"/>
+</g>
+<!-- «hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_entropy» -->
+<g id="edge35" class="edge">
+<title>«hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_entropy»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1256.81,-447.8C1252.84,-446.95 1248.87,-446.2 1245,-445.59 924.23,-394.89 837.97,-447.64 515,-413.59 495.27,-411.51 473.75,-408.16 454.89,-404.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="448.6,-403.74 454.98,-402.13 451.57,-404.17 454.53,-404.69 454.51,-404.79 454.49,-404.89 451.54,-404.37 454.04,-407.45 448.6,-403.74 448.6,-403.74"/>
+</g>
+<!-- «hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_hugoniot_branch» -->
+<g id="edge40" class="edge">
+<title>«hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_hugoniot_branch»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1319.31,-447.25C1322.58,-437.52 1326.24,-425.04 1328,-413.59 1328.94,-407.48 1327.01,-307.8 1330,-302.39 1337.06,-289.65 1348.81,-279.58 1361.08,-271.89"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1366.36,-268.74 1362.59,-274.13 1363.84,-270.36 1361.26,-271.9 1361.21,-271.81 1361.16,-271.73 1363.73,-270.19 1359.83,-269.5 1366.36,-268.74 1366.36,-268.74"/>
+</g>
+<!-- «hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak» -->
+<g id="edge56" class="edge">
+<title>«hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1307.63,-447.07C1295.27,-403.36 1270.29,-287.96 1331,-230.79 1410.77,-155.68 1748.08,-278.74 1823,-198.79 1839.38,-181.32 1831.6,-153.06 1822.44,-132.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1819.84,-127.3 1824.85,-131.56 1821.22,-129.96 1822.5,-132.68 1822.41,-132.72 1822.32,-132.76 1821.04,-130.05 1819.97,-133.87 1819.84,-127.3 1819.84,-127.3"/>
+</g>
+<!-- «hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_hyperbolic» -->
+<g id="edge101" class="edge">
+<title>«hyperbolic.conservation.p_system»&#45;&gt;«hyperbolic.conservation.p_system_hyperbolic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1277.28,-447.36C1256.12,-437.27 1229.23,-424.45 1207.3,-414"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1201.84,-411.4 1208.42,-411.54 1204.59,-412.6 1207.3,-413.89 1207.26,-413.98 1207.22,-414.07 1204.51,-412.78 1206.1,-416.42 1201.84,-411.4 1201.84,-411.4"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_elementary_wave»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak» -->
+<g id="edge55" class="edge">
+<title>«hyperbolic.conservation.p_system_elementary_wave»&#45;&gt;«hyperbolic.conservation.p_system_elementary_wave_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1759.31,-160.79C1767.58,-152.07 1777.74,-141.36 1786.72,-131.89"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1791.02,-127.36 1788.85,-133.57 1789.03,-129.61 1786.96,-131.78 1786.89,-131.71 1786.82,-131.65 1788.88,-129.47 1784.93,-129.86 1791.02,-127.36 1791.02,-127.36"/>
+</g>
+<!-- «hyperbolic.conservation.ordered_wave_map»&#45;&gt;«hyperbolic.conservation.characteristic_flow_family» -->
+<g id="edge75" class="edge">
+<title>«hyperbolic.conservation.ordered_wave_map»&#45;&gt;«hyperbolic.conservation.characteristic_flow_family»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2006,-232.39C2006,-224.15 2006,-214.12 2006,-205.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2006,-198.96 2008.7,-204.96 2006.1,-201.96 2006.1,-204.96 2006,-204.96 2005.9,-204.96 2005.9,-201.96 2003.3,-204.96 2006,-198.96 2006,-198.96"/>
+</g>
+<!-- «hyperbolic.conservation.ordered_wave_map»&#45;&gt;«hyperbolic.conservation.wave_map_columns» -->
+<g id="edge86" class="edge">
+<title>«hyperbolic.conservation.ordered_wave_map»&#45;&gt;«hyperbolic.conservation.wave_map_columns»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M2051.26,-232.57C2079.52,-221.93 2115.82,-208.28 2144.35,-197.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2150.31,-195.3 2145.64,-199.94 2147.54,-196.45 2144.73,-197.51 2144.69,-197.42 2144.66,-197.32 2147.47,-196.27 2143.74,-194.89 2150.31,-195.3 2150.31,-195.3"/>
+</g>
+<!-- «hyperbolic.conservation.system_flux_forms» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fflux&#45;005Fforms&#45;00BB" class="node">
+<title>«hyperbolic.conservation.system_flux_forms»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Esystem&#45;005Fflux&#45;005Fforms&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___system_flux_forms_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="549,-483.39 455,-483.39 455,-447.39 549,-447.39 549,-483.39"/>
+<text text-anchor="middle" x="502" y="-468.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation</text>
+<text text-anchor="middle" x="502" y="-457.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">system_flux_forms</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.system_classical_to_weak» -->
+<g id="edge45" class="edge">
+<title>«hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.system_classical_to_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M493.41,-447.27C484.76,-427.33 474.93,-394.5 492,-373.99 542.01,-313.88 595.7,-378.21 665,-341.99 687.17,-330.4 683.01,-314.31 705,-302.39 764.17,-270.33 795.43,-305.25 853,-270.39 872.6,-258.53 865.59,-241.2 886,-230.79 981.05,-182.35 1259.03,-211.12 1365,-198.79 1377.85,-197.3 1391.46,-195.35 1404.62,-193.28"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1410.63,-192.31 1405.13,-195.93 1407.69,-192.89 1404.72,-193.36 1404.71,-193.26 1404.69,-193.16 1407.65,-192.69 1404.28,-190.6 1410.63,-192.31 1410.63,-192.31"/>
+</g>
+<!-- «hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.p_system_diagonal» -->
+<g id="edge67" class="edge">
+<title>«hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.p_system_diagonal»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M499.08,-447.2C496.69,-426.89 496.29,-393.39 515,-373.99 570.5,-316.45 617.68,-371.44 692,-341.99 722.05,-330.08 723.04,-314.51 753,-302.39 787.64,-288.38 883.08,-271.69 948.16,-261.36"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="954.36,-260.38 948.85,-263.99 951.41,-260.95 948.45,-261.42 948.43,-261.32 948.42,-261.22 951.38,-260.75 948.01,-258.65 954.36,-260.38 954.36,-260.38"/>
+</g>
+<!-- «hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.gradient_blowup» -->
+<g id="edge80" class="edge">
+<title>«hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.gradient_blowup»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M549.13,-452.5C596.48,-440.56 669.51,-422.15 720.29,-409.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="726.37,-407.81 721.21,-411.89 723.49,-408.64 720.58,-409.37 720.55,-409.28 720.53,-409.18 723.44,-408.44 719.89,-406.66 726.37,-407.81 726.37,-407.81"/>
+</g>
+<!-- «hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.simple_wave» -->
+<g id="edge89" class="edge">
+<title>«hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.simple_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M525.97,-447.36C539.9,-437.47 557.52,-424.96 572.07,-414.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="577.28,-410.92 573.96,-416.6 574.9,-412.74 572.45,-414.48 572.39,-414.4 572.33,-414.31 574.78,-412.58 570.83,-412.19 577.28,-410.92 577.28,-410.92"/>
+</g>
+<!-- «hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.system_entropy_identity» -->
+<g id="edge97" class="edge">
+<title>«hyperbolic.conservation.system_flux_forms»&#45;&gt;«hyperbolic.conservation.system_entropy_identity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M454.71,-451.38C413.1,-439.93 352.36,-423.22 307.66,-410.93"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="301.74,-409.3 308.24,-408.29 304.66,-410 307.55,-410.79 307.52,-410.89 307.5,-410.98 304.6,-410.19 306.81,-413.49 301.74,-409.3 301.74,-409.3"/>
+</g>
+<!-- «hyperbolic.conservation.jump_conditions» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ejump&#45;005Fconditions&#45;00BB" class="node">
+<title>«hyperbolic.conservation.jump_conditions»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;002Ejump&#45;005Fconditions&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_hyperbolic___conservation___jump_conditions_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="305,-268.59 163,-268.59 163,-232.59 305,-232.59 305,-268.59"/>
+<text text-anchor="middle" x="234" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">conservation.jump_conditions</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.conservation.curved_entropy_shock» -->
+<g id="edge7" class="edge">
+<title>«hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.conservation.curved_entropy_shock»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M162.88,-238.11C119.58,-229.51 70.13,-216.22 57,-198.79 46.41,-184.74 46.24,-173.12 57,-159.2 61.22,-153.74 134.28,-135.72 189.75,-122.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="195.73,-121.29 190.51,-125.28 192.84,-122.07 189.92,-122.75 189.89,-122.65 189.87,-122.56 192.79,-121.87 189.28,-120.03 195.73,-121.29 195.73,-121.29"/>
+</g>
+<!-- «hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.conservation.convex_secant_speed» -->
+<g id="edge8" class="edge">
+<title>«hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.conservation.convex_secant_speed»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M244.88,-232.39C250.24,-223.91 256.79,-213.54 262.66,-204.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="266.01,-198.96 265.09,-205.47 264.49,-201.55 262.89,-204.08 262.81,-204.03 262.72,-203.98 264.32,-201.44 260.52,-202.59 266.01,-198.96 266.01,-198.96"/>
+</g>
+<!-- «hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.conservation.planar_shock_weak» -->
+<g id="edge23" class="edge">
+<title>«hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.conservation.planar_shock_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M305.02,-239.61C330.51,-236.35 359.5,-233 386,-230.79 715.83,-203.35 800.92,-234.1 1130,-198.79 1145.42,-197.14 1161.97,-194.66 1177.39,-192.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1183.46,-190.98 1178.01,-194.67 1180.52,-191.59 1177.57,-192.1 1177.55,-192.01 1177.53,-191.91 1180.49,-191.4 1177.09,-189.35 1183.46,-190.98 1183.46,-190.98"/>
+</g>
+<!-- «hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.burgers.weak_shock» -->
+<g id="edge49" class="edge">
+<title>«hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.burgers.weak_shock»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M305.08,-240.21C330.57,-237 359.55,-233.53 386,-230.79 470.95,-222 695.6,-242.45 769,-198.79 787.09,-188.03 776.73,-169.66 795,-159.2 856.5,-123.98 1361.98,-138.1 1432,-127.2 1440.03,-125.94 1448.47,-124.15 1456.61,-122.16"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1462.76,-120.61 1457.6,-124.7 1459.88,-121.44 1456.97,-122.17 1456.94,-122.08 1456.92,-121.98 1459.83,-121.25 1456.28,-119.46 1462.76,-120.61 1462.76,-120.61"/>
+</g>
+<!-- «hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.burgers.lax_shock» -->
+<g id="edge63" class="edge">
+<title>«hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.burgers.lax_shock»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M206.85,-232.57C190.33,-222.21 169.23,-208.98 152.33,-198.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="147.23,-195.19 153.75,-196.09 149.82,-196.7 152.37,-198.29 152.31,-198.37 152.26,-198.46 149.72,-196.86 150.88,-200.66 147.23,-195.19 147.23,-195.19"/>
+</g>
+<!-- «hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.conservation.convex_lax_shock» -->
+<g id="edge87" class="edge">
+<title>«hyperbolic.conservation.jump_conditions»&#45;&gt;«hyperbolic.conservation.convex_lax_shock»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M162.94,-239.83C114.99,-231.63 57.85,-218.11 43,-198.79 27.35,-178.43 43.51,-150.83 59.53,-131.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="63.58,-126.77 61.72,-133.09 61.7,-129.12 59.75,-131.4 59.67,-131.33 59.6,-131.27 61.55,-128.99 57.62,-129.57 63.58,-126.77 63.58,-126.77"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann» -->
+<g id="edge1" class="edge">
+<title>«hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_local_entropy_riemann»</title>
+<path fill="none" stroke="#6b7280" d="M1113.51,-380.07C1102.79,-377.81 1091.57,-375.65 1081,-373.99 933.61,-350.77 661.74,-420.44 753,-302.39 787.55,-257.7 831.34,-304.98 876,-270.39 891.92,-258.06 880.89,-241.41 898,-230.79 1027.12,-150.7 1454.33,-282.71 1581,-198.79 1597.27,-188.01 1588.15,-174.71 1600,-159.2 1613.2,-141.92 1627.52,-146.76 1637,-127.2 1646.84,-106.87 1646.89,-80.87 1645.04,-61.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1644.36,-55.86 1647.71,-61.52 1644.69,-58.84 1645.03,-61.82 1645.03,-61.82 1645.03,-61.82 1644.69,-58.84 1642.34,-62.12 1644.36,-55.86 1644.36,-55.86"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_riemann_invariants» -->
+<g id="edge10" class="edge">
+<title>«hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_riemann_invariants»</title>
+<path fill="none" stroke="#6b7280" d="M1136.42,-375.76C1119.26,-366.21 1097.71,-354.21 1079.53,-344.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1074.01,-341.01 1080.56,-341.57 1076.63,-342.47 1079.25,-343.93 1079.25,-343.93 1079.25,-343.93 1076.63,-342.47 1077.94,-346.29 1074.01,-341.01 1074.01,-341.01"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_rarefaction_fan» -->
+<g id="edge13" class="edge">
+<title>«hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_rarefaction_fan»</title>
+<path fill="none" stroke="#6b7280" d="M1167,-373.75C1167,-348.24 1167,-303 1167,-275.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1167,-269.01 1169.7,-275.01 1167,-272.01 1167,-275.01 1167,-275.01 1167,-275.01 1167,-272.01 1164.3,-275.01 1167,-269.01 1167,-269.01"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_hugoniot_branch» -->
+<g id="edge41" class="edge">
+<title>«hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_hugoniot_branch»</title>
+<path fill="none" stroke="#6b7280" d="M1189.7,-374.73C1214.62,-355.39 1256.25,-324.51 1295,-302.39 1315.4,-290.74 1338.97,-279.79 1359.28,-271.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1364.92,-268.65 1360.46,-273.49 1362.16,-269.83 1359.4,-271 1359.4,-271 1359.4,-271 1362.16,-269.83 1358.34,-268.52 1364.92,-268.65 1364.92,-268.65"/>
+</g>
+<!-- «hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_diagonal» -->
+<g id="edge69" class="edge">
+<title>«hyperbolic.conservation.p_system_hyperbolic»&#45;&gt;«hyperbolic.conservation.p_system_diagonal»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1111.49,-380.61C1101.35,-378.4 1090.86,-376.12 1081,-373.99 1014.37,-359.6 973.88,-394.98 931,-341.99 919.93,-328.31 922.44,-317.77 931,-302.39 938.91,-288.18 952.62,-277.45 966.59,-269.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="972.15,-266.61 968.14,-271.82 969.56,-268.11 966.91,-269.53 966.86,-269.44 966.82,-269.35 969.46,-267.94 965.59,-267.06 972.15,-266.61 972.15,-266.61"/>
+</g>
+</g>
+</svg>

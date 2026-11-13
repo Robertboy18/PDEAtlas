@@ -1,0 +1,244 @@
+<svg data-node-count="15" data-edge-count="15" data-cluster-count="1" data-variant-key="parent:«evolution.semigroups»" width="781pt" height="385pt"
+ viewBox="0.00 0.00 781.00 385.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 381.39)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-381.39 777,-381.39 777,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 753,-8 753,-8 759,-8 765,-14 765,-20 765,-20 765,-357.39 765,-357.39 765,-363.39 759,-369.39 753,-369.39 753,-369.39 20,-369.39 20,-369.39 14,-369.39 8,-363.39 8,-357.39 8,-357.39 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="386.5" y="-354.19" font-family="Helvetica" font-size="14.00">Strongly continuous semigroups</text>
+</g>
+<!-- «evolution.semigroup.subgradient_closure» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Esubgradient&#45;005Fclosure&#45;00BB" class="node">
+<title>«evolution.semigroup.subgradient_closure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Esubgradient&#45;005Fclosure&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___subgradient_closure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="686" cy="-250.59" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="686" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup</text>
+<text text-anchor="middle" x="686" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">subgradient_closure</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.dense_generator_domain» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Edense&#45;005Fgenerator&#45;005Fdomain&#45;00BB" class="node">
+<title>«evolution.semigroup.dense_generator_domain»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Edense&#45;005Fgenerator&#45;005Fdomain&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___dense_generator_domain_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="102" cy="-178.99" rx="85.62" ry="19.6"/>
+<text text-anchor="middle" x="102" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup</text>
+<text text-anchor="middle" x="102" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">dense_generator_domain</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.generator_commutes» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;005Fcommutes&#45;00BB" class="node">
+<title>«evolution.semigroup.generator_commutes»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;005Fcommutes&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___generator_commutes_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="102" cy="-107.4" rx="86.44" ry="18"/>
+<text text-anchor="middle" x="102" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup.generator_commutes</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.generator_orbit_continuous» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;005Forbit&#45;005Fcontinuous&#45;00BB" class="node">
+<title>«evolution.semigroup.generator_orbit_continuous»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;005Forbit&#45;005Fcontinuous&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___generator_orbit_continuous_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="108" cy="-35.8" rx="91.85" ry="19.6"/>
+<text text-anchor="middle" x="108" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup</text>
+<text text-anchor="middle" x="108" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">generator_orbit_continuous</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.generator_commutes»&#45;&gt;«evolution.semigroup.generator_orbit_continuous» -->
+<g id="edge4" class="edge">
+<title>«evolution.semigroup.generator_commutes»&#45;&gt;«evolution.semigroup.generator_orbit_continuous»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M103.48,-89.19C104.19,-80.95 105.06,-70.92 105.84,-61.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="106.37,-55.76 108.54,-61.97 106.46,-58.78 106.2,-61.77 105.85,-61.74 105.5,-61.71 105.76,-58.72 103.16,-61.51 106.37,-55.76 106.37,-55.76"/>
+</g>
+<!-- «evolution.semigroup.orbit_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Eorbit&#45;005Fderivative&#45;00BB" class="node">
+<title>«evolution.semigroup.orbit_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Eorbit&#45;005Fderivative&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___orbit_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="296" cy="-35.8" rx="71.44" ry="18"/>
+<text text-anchor="middle" x="296" y="-33.3" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup.orbit_derivative</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.generator_commutes»&#45;&gt;«evolution.semigroup.orbit_derivative» -->
+<g id="edge13" class="edge">
+<title>«evolution.semigroup.generator_commutes»&#45;&gt;«evolution.semigroup.orbit_derivative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M143.62,-91.47C175.17,-80.15 218.47,-64.61 250.85,-53"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="256.77,-50.87 252.03,-55.44 254.06,-52.22 251.24,-53.23 251.12,-52.9 251,-52.57 253.82,-51.56 250.21,-50.36 256.77,-50.87 256.77,-50.87"/>
+</g>
+<!-- «evolution.semigroup.contraction» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Econtraction&#45;00BB" class="node">
+<title>«evolution.semigroup.contraction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Econtraction&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___contraction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="590.5,-268.59 481.5,-268.59 481.5,-232.59 590.5,-232.59 590.5,-268.59"/>
+<text text-anchor="middle" x="536" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup.contraction</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.laplace_transform» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Elaplace&#45;005Ftransform&#45;00BB" class="node">
+<title>«evolution.semigroup.laplace_transform»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Elaplace&#45;005Ftransform&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___laplace_transform_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="699,-196.99 561,-196.99 561,-160.99 699,-160.99 699,-196.99"/>
+<text text-anchor="middle" x="630" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup.laplace_transform</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.contraction»&#45;&gt;«evolution.semigroup.laplace_transform» -->
+<g id="edge7" class="edge">
+<title>«evolution.semigroup.contraction»&#45;&gt;«evolution.semigroup.laplace_transform»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M559.24,-232.39C572.21,-222.78 588.47,-210.74 602.13,-200.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="607.03,-197 603.82,-202.74 604.68,-198.87 602.27,-200.65 602.21,-200.57 602.15,-200.49 604.56,-198.71 600.6,-198.4 607.03,-197 607.03,-197"/>
+</g>
+<!-- «evolution.semigroup.generator» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;00BB" class="node">
+<title>«evolution.semigroup.generator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___generator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="456.5,-268.59 355.5,-268.59 355.5,-232.59 456.5,-232.59 456.5,-268.59"/>
+<text text-anchor="middle" x="406" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup.generator</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.generator»&#45;&gt;«evolution.semigroup.dense_generator_domain» -->
+<g id="edge2" class="edge">
+<title>«evolution.semigroup.generator»&#45;&gt;«evolution.semigroup.dense_generator_domain»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M355.46,-238.02C303.74,-226.18 223.17,-207.74 166.8,-194.83"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="160.73,-193.44 167.18,-192.15 163.68,-194.01 166.6,-194.68 166.58,-194.78 166.56,-194.88 163.64,-194.21 165.98,-197.41 160.73,-193.44 160.73,-193.44"/>
+</g>
+<!-- «evolution.semigroup.generator»&#45;&gt;«evolution.semigroup.laplace_transform» -->
+<g id="edge8" class="edge">
+<title>«evolution.semigroup.generator»&#45;&gt;«evolution.semigroup.laplace_transform»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M456.55,-233.89C489.85,-223.54 533.65,-209.93 568.9,-198.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="574.93,-197.11 570,-201.46 572.09,-198.09 569.23,-198.98 569.2,-198.89 569.17,-198.79 572.03,-197.9 568.4,-196.31 574.93,-197.11 574.93,-197.11"/>
+</g>
+<!-- «evolution.semigroup.closed_generator» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Eclosed&#45;005Fgenerator&#45;00BB" class="node">
+<title>«evolution.semigroup.closed_generator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Eclosed&#45;005Fgenerator&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___closed_generator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="459" cy="-178.99" rx="76.65" ry="18"/>
+<text text-anchor="middle" x="459" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup.closed_generator</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.generator»&#45;&gt;«evolution.semigroup.closed_generator» -->
+<g id="edge11" class="edge">
+<title>«evolution.semigroup.generator»&#45;&gt;«evolution.semigroup.closed_generator»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M419.1,-232.39C426.1,-223.2 434.78,-211.8 442.26,-201.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="446.05,-197 444.56,-203.41 444.31,-199.45 442.49,-201.84 442.41,-201.77 442.33,-201.71 444.15,-199.33 440.27,-200.14 446.05,-197 446.05,-197"/>
+</g>
+<!-- «evolution.semigroup.generator_invariance» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;005Finvariance&#45;00BB" class="node">
+<title>«evolution.semigroup.generator_invariance»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;005Finvariance&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___generator_invariance_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="285" cy="-178.99" rx="72.25" ry="19.6"/>
+<text text-anchor="middle" x="285" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup</text>
+<text text-anchor="middle" x="285" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">generator_invariance</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.generator»&#45;&gt;«evolution.semigroup.generator_invariance» -->
+<g id="edge12" class="edge">
+<title>«evolution.semigroup.generator»&#45;&gt;«evolution.semigroup.generator_invariance»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M376.4,-232.57C359.41,-222.79 337.97,-210.46 320.13,-200.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="314.71,-197.09 321.26,-197.74 317.36,-198.5 319.96,-199.99 319.91,-200.08 319.86,-200.16 317.26,-198.67 318.57,-202.42 314.71,-197.09 314.71,-197.09"/>
+</g>
+<!-- «evolution.semigroup.laplace_resolvent_identities» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Elaplace&#45;005Fresolvent&#45;005Fidentities&#45;00BB" class="node">
+<title>«evolution.semigroup.laplace_resolvent_identities»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Elaplace&#45;005Fresolvent&#45;005Fidentities&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___laplace_resolvent_identities_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="471" cy="-107.4" rx="93.18" ry="19.6"/>
+<text text-anchor="middle" x="471" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup</text>
+<text text-anchor="middle" x="471" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">laplace_resolvent_identities</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.laplace_transform»&#45;&gt;«evolution.semigroup.laplace_resolvent_identities» -->
+<g id="edge10" class="edge">
+<title>«evolution.semigroup.laplace_transform»&#45;&gt;«evolution.semigroup.laplace_resolvent_identities»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M591.1,-160.97C568.29,-150.98 539.39,-138.33 515.65,-127.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="510.05,-125.49 516.62,-125.42 512.83,-126.6 515.58,-127.8 515.54,-127.89 515.5,-127.99 512.75,-126.78 514.46,-130.37 510.05,-125.49 510.05,-125.49"/>
+</g>
+<!-- «evolution.semigroup.laplace_resolvent_bound» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Elaplace&#45;005Fresolvent&#45;005Fbound&#45;00BB" class="node">
+<title>«evolution.semigroup.laplace_resolvent_bound»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Elaplace&#45;005Fresolvent&#45;005Fbound&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___laplace_resolvent_bound_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="673" cy="-107.4" rx="84.29" ry="19.6"/>
+<text text-anchor="middle" x="673" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup</text>
+<text text-anchor="middle" x="673" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">laplace_resolvent_bound</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.laplace_transform»&#45;&gt;«evolution.semigroup.laplace_resolvent_bound» -->
+<g id="edge15" class="edge">
+<title>«evolution.semigroup.laplace_transform»&#45;&gt;«evolution.semigroup.laplace_resolvent_bound»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M640.63,-160.79C645.87,-152.31 652.28,-141.94 658,-132.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="661.28,-127.36 660.43,-133.88 659.79,-129.97 658.22,-132.52 658.13,-132.46 658.05,-132.41 659.62,-129.86 655.83,-131.05 661.28,-127.36 661.28,-127.36"/>
+</g>
+<!-- «evolution.semigroup.closed_generator»&#45;&gt;«evolution.semigroup.laplace_resolvent_identities» -->
+<g id="edge9" class="edge">
+<title>«evolution.semigroup.closed_generator»&#45;&gt;«evolution.semigroup.laplace_resolvent_identities»</title>
+<path fill="none" stroke="#6b7280" d="M461.97,-160.79C463.39,-152.55 465.12,-142.52 466.68,-133.45"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="467.73,-127.36 469.37,-133.73 467.22,-130.32 466.71,-133.27 466.71,-133.27 466.71,-133.27 467.22,-130.32 464.05,-132.81 467.73,-127.36 467.73,-127.36"/>
+</g>
+<!-- «evolution.semigroup.generator_invariance»&#45;&gt;«evolution.semigroup.generator_commutes» -->
+<g id="edge3" class="edge">
+<title>«evolution.semigroup.generator_invariance»&#45;&gt;«evolution.semigroup.generator_commutes»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M244.39,-162.55C215.66,-151.62 177.12,-136.97 147.38,-125.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="141.56,-123.44 148.12,-123.05 144.49,-124.18 147.29,-125.25 147.16,-125.57 147.04,-125.9 144.24,-124.83 146.21,-128.1 141.56,-123.44 141.56,-123.44"/>
+</g>
+<!-- «evolution.semigroup.generator_domain_semigroup» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;005Fdomain&#45;005Fsemigroup&#45;00BB" class="node">
+<title>«evolution.semigroup.generator_domain_semigroup»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Egenerator&#45;005Fdomain&#45;005Fsemigroup&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___generator_domain_semigroup_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="353,-125.4 213,-125.4 213,-89.4 353,-89.4 353,-125.4"/>
+<text text-anchor="middle" x="283" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup</text>
+<text text-anchor="middle" x="283" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">generator_domain_semigroup</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.generator_invariance»&#45;&gt;«evolution.semigroup.generator_domain_semigroup» -->
+<g id="edge14" class="edge">
+<title>«evolution.semigroup.generator_invariance»&#45;&gt;«evolution.semigroup.generator_domain_semigroup»</title>
+<path fill="none" stroke="#6b7280" d="M284.45,-158.98C284.21,-150.56 283.92,-140.57 283.67,-131.71"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="283.49,-125.49 286.36,-131.41 283.58,-128.49 283.66,-131.49 283.66,-131.49 283.66,-131.49 283.58,-128.49 280.96,-131.56 283.49,-125.49 283.49,-125.49"/>
+</g>
+<!-- «evolution.subgradient.domain_flow» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esubgradient&#45;002Edomain&#45;005Fflow&#45;00BB" class="node">
+<title>«evolution.subgradient.domain_flow»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esubgradient&#45;002Edomain&#45;005Fflow&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___subgradient___domain_flow_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="686" cy="-320.39" rx="68.77" ry="18"/>
+<text text-anchor="middle" x="686" y="-317.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">subgradient.domain_flow</text>
+</a>
+</g>
+</g>
+<!-- «evolution.subgradient.domain_flow»&#45;&gt;«evolution.semigroup.subgradient_closure» -->
+<g id="edge1" class="edge">
+<title>«evolution.subgradient.domain_flow»&#45;&gt;«evolution.semigroup.subgradient_closure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M686,-302.28C686,-294.66 686,-285.51 686,-277.1"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="686,-270.85 688.7,-276.85 686.1,-273.85 686.1,-276.85 686,-276.85 685.9,-276.85 685.9,-273.85 683.3,-276.85 686,-270.85 686,-270.85"/>
+</g>
+<!-- «evolution.semigroup.strongly_continuous» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Estrongly&#45;005Fcontinuous&#45;00BB" class="node">
+<title>«evolution.semigroup.strongly_continuous»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroup&#45;002Estrongly&#45;005Fcontinuous&#45;00BB"><a xlink:href="Hyperbolic-Equations/#--informal-preview-_FLQQ_evolution___semigroup___strongly_continuous_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="521,-338.39 421,-338.39 421,-302.39 521,-302.39 521,-338.39"/>
+<text text-anchor="middle" x="471" y="-323.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">semigroup</text>
+<text text-anchor="middle" x="471" y="-312.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">strongly_continuous</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroup.strongly_continuous»&#45;&gt;«evolution.semigroup.contraction» -->
+<g id="edge5" class="edge">
+<title>«evolution.semigroup.strongly_continuous»&#45;&gt;«evolution.semigroup.contraction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M487.4,-302.28C495.81,-293.52 506.13,-282.75 515.1,-273.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="519.38,-268.93 517.17,-275.13 517.37,-271.17 515.3,-273.33 515.22,-273.26 515.15,-273.19 517.23,-271.03 513.28,-271.39 519.38,-268.93 519.38,-268.93"/>
+</g>
+<!-- «evolution.semigroup.strongly_continuous»&#45;&gt;«evolution.semigroup.generator» -->
+<g id="edge6" class="edge">
+<title>«evolution.semigroup.strongly_continuous»&#45;&gt;«evolution.semigroup.generator»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M454.6,-302.28C446.19,-293.52 435.87,-282.75 426.9,-273.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="422.62,-268.93 428.72,-271.39 424.77,-271.03 426.85,-273.19 426.78,-273.26 426.7,-273.33 424.63,-271.17 424.83,-275.13 422.62,-268.93 422.62,-268.93"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,328 @@
+<svg data-node-count="19" data-edge-count="22" data-cluster-count="1" data-variant-key="parent:«sobolev.compactness»" width="885pt" height="529pt"
+ viewBox="0.00 0.00 885.00 528.59" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 524.59)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-524.59 881,-524.59 881,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 857,-8 857,-8 863,-8 869,-14 869,-20 869,-20 869,-500.59 869,-500.59 869,-506.59 863,-512.59 857,-512.59 857,-512.59 20,-512.59 20,-512.59 14,-512.59 8,-506.59 8,-500.59 8,-500.59 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="438.5" y="-497.39" font-family="Helvetica" font-size="14.00">Sobolev compactness</text>
+</g>
+<!-- «sobolev.rellich_zero_extension_global» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fzero&#45;005Fextension&#45;005Fglobal&#45;00BB" class="node">
+<title>«sobolev.rellich_zero_extension_global»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fzero&#45;005Fextension&#45;005Fglobal&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_zero_extension_global_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="673" cy="-250.59" rx="98.08" ry="19.6"/>
+<text text-anchor="middle" x="673" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="673" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_zero_extension_global</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_c1» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fc1&#45;00BB" class="node">
+<title>«sobolev.rellich_c1»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fc1&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_c1_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="810" cy="-178.99" rx="51.1" ry="18"/>
+<text text-anchor="middle" x="810" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.rellich_c1</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_zero_extension_global»&#45;&gt;«sobolev.rellich_c1» -->
+<g id="edge7" class="edge">
+<title>«sobolev.rellich_zero_extension_global»&#45;&gt;«sobolev.rellich_c1»</title>
+<path fill="none" stroke="#6b7280" d="M707.57,-232.03C728.67,-221.31 755.52,-207.67 776.44,-197.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="781.89,-194.27 777.77,-199.4 779.22,-195.63 776.54,-196.99 776.54,-196.99 776.54,-196.99 779.22,-195.63 775.32,-194.58 781.89,-194.27 781.89,-194.27"/>
+</g>
+<!-- «sobolev.rellich_zero_trace» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fzero&#45;005Ftrace&#45;00BB" class="node">
+<title>«sobolev.rellich_zero_trace»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fzero&#45;005Ftrace&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_zero_trace_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="664" cy="-178.99" rx="70.17" ry="18"/>
+<text text-anchor="middle" x="664" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.rellich_zero_trace</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_zero_extension_global»&#45;&gt;«sobolev.rellich_zero_trace» -->
+<g id="edge21" class="edge">
+<title>«sobolev.rellich_zero_extension_global»&#45;&gt;«sobolev.rellich_zero_trace»</title>
+<path fill="none" stroke="#6b7280" d="M670.54,-230.57C669.44,-222.07 668.14,-211.98 666.98,-203.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="666.21,-197.09 669.66,-202.69 666.6,-200.06 666.98,-203.04 666.98,-203.04 666.98,-203.04 666.6,-200.06 664.3,-203.38 666.21,-197.09 666.21,-197.09"/>
+</g>
+<!-- «sobolev.rellich_translation_continuity» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Ftranslation&#45;005Fcontinuity&#45;00BB" class="node">
+<title>«sobolev.rellich_translation_continuity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Ftranslation&#45;005Fcontinuity&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_translation_continuity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="454" cy="-393.79" rx="96.33" ry="19.6"/>
+<text text-anchor="middle" x="454" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="454" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_translation_continuity</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_full_subcritical» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Ffull&#45;005Fsubcritical&#45;00BB" class="node">
+<title>«sobolev.rellich_full_subcritical»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Ffull&#45;005Fsubcritical&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_full_subcritical_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="208" cy="-35.8" rx="74.91" ry="19.6"/>
+<text text-anchor="middle" x="208" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="208" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_full_subcritical</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.finite_measure_exponent_restriction» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Efinite&#45;005Fmeasure&#45;005Fexponent&#45;005Frestriction&#45;00BB" class="node">
+<title>«sobolev.finite_measure_exponent_restriction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Efinite&#45;005Fmeasure&#45;005Fexponent&#45;005Frestriction&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___finite_measure_exponent_restriction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="365.5,-196.99 196.5,-196.99 196.5,-160.99 365.5,-160.99 365.5,-196.99"/>
+<text text-anchor="middle" x="281" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="281" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">finite_measure_exponent_restriction</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_subcritical_general» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fsubcritical&#45;005Fgeneral&#45;00BB" class="node">
+<title>«sobolev.rellich_subcritical_general»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fsubcritical&#45;005Fgeneral&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_subcritical_general_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="480" cy="-107.4" rx="87.86" ry="19.6"/>
+<text text-anchor="middle" x="480" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="480" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_subcritical_general</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.finite_measure_exponent_restriction»&#45;&gt;«sobolev.rellich_subcritical_general» -->
+<g id="edge9" class="edge">
+<title>«sobolev.finite_measure_exponent_restriction»&#45;&gt;«sobolev.rellich_subcritical_general»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M329.68,-160.97C359.56,-150.52 397.8,-137.14 428.23,-126.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="434.21,-124.41 429.44,-128.94 431.41,-125.5 428.58,-126.49 428.55,-126.39 428.52,-126.3 431.35,-125.31 427.66,-123.84 434.21,-124.41 434.21,-124.41"/>
+</g>
+<!-- «sobolev.rellich_w11_reduction» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fw11&#45;005Freduction&#45;00BB" class="node">
+<title>«sobolev.rellich_w11_reduction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fw11&#45;005Freduction&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_w11_reduction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="238" cy="-107.4" rx="74.91" ry="19.6"/>
+<text text-anchor="middle" x="238" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="238" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_w11_reduction</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.finite_measure_exponent_restriction»&#45;&gt;«sobolev.rellich_w11_reduction» -->
+<g id="edge16" class="edge">
+<title>«sobolev.finite_measure_exponent_restriction»&#45;&gt;«sobolev.rellich_w11_reduction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M270.37,-160.79C265.13,-152.31 258.72,-141.94 253,-132.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="249.72,-127.36 255.17,-131.05 251.38,-129.86 252.95,-132.41 252.87,-132.46 252.78,-132.52 251.21,-129.97 250.57,-133.88 249.72,-127.36 249.72,-127.36"/>
+</g>
+<!-- «sobolev.rellich_translation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Ftranslation&#45;00BB" class="node">
+<title>«sobolev.rellich_translation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Ftranslation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_translation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="625,-481.59 501,-481.59 501,-445.59 625,-445.59 625,-481.59"/>
+<text text-anchor="middle" x="563" y="-461.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.rellich_translation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_translation»&#45;&gt;«sobolev.rellich_translation_continuity» -->
+<g id="edge3" class="edge">
+<title>«sobolev.rellich_translation»&#45;&gt;«sobolev.rellich_translation_continuity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M535.49,-445.48C521.23,-436.61 503.66,-425.68 488.49,-416.24"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="483.02,-412.84 489.54,-413.72 485.62,-414.34 488.17,-415.93 488.12,-416.01 488.06,-416.09 485.52,-414.51 486.69,-418.3 483.02,-412.84 483.02,-412.84"/>
+</g>
+<!-- «sobolev.rellich_zero_trace_translation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fzero&#45;005Ftrace&#45;005Ftranslation&#45;00BB" class="node">
+<title>«sobolev.rellich_zero_trace_translation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fzero&#45;005Ftrace&#45;005Ftranslation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_zero_trace_translation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="673" cy="-393.79" rx="98.08" ry="19.6"/>
+<text text-anchor="middle" x="673" y="-396.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="673" y="-385.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_zero_trace_translation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_translation»&#45;&gt;«sobolev.rellich_zero_trace_translation» -->
+<g id="edge8" class="edge">
+<title>«sobolev.rellich_translation»&#45;&gt;«sobolev.rellich_zero_trace_translation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M590.76,-445.48C605.28,-436.53 623.2,-425.49 638.59,-415.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="643.71,-412.84 640.02,-418.29 641.21,-414.5 638.66,-416.07 638.6,-415.99 638.55,-415.9 641.11,-414.33 637.19,-413.69 643.71,-412.84 643.71,-412.84"/>
+</g>
+<!-- «sobolev.rellich_l1_translation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fl1&#45;005Ftranslation&#45;00BB" class="node">
+<title>«sobolev.rellich_l1_translation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fl1&#45;005Ftranslation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_l1_translation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="93" cy="-322.19" rx="71.34" ry="19.6"/>
+<text text-anchor="middle" x="93" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="93" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_l1_translation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_supported_l1» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fsupported&#45;005Fl1&#45;00BB" class="node">
+<title>«sobolev.rellich_supported_l1»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fsupported&#45;005Fl1&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_supported_l1_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="93" cy="-250.59" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="93" y="-248.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.rellich_supported_l1</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_l1_translation»&#45;&gt;«sobolev.rellich_supported_l1» -->
+<g id="edge20" class="edge">
+<title>«sobolev.rellich_l1_translation»&#45;&gt;«sobolev.rellich_supported_l1»</title>
+<path fill="none" stroke="#6b7280" d="M93,-302.17C93,-293.75 93,-283.77 93,-274.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="93,-268.69 95.7,-274.69 93,-271.69 93,-274.69 93,-274.69 93,-274.69 93,-271.69 90.3,-274.69 93,-268.69 93,-268.69"/>
+</g>
+<!-- «sobolev.rellich_c1»&#45;&gt;«sobolev.rellich_subcritical_general» -->
+<g id="edge10" class="edge">
+<title>«sobolev.rellich_c1»&#45;&gt;«sobolev.rellich_subcritical_general»</title>
+<path fill="none" stroke="#6b7280" d="M773.19,-166.33C764.64,-163.81 755.54,-161.28 747,-159.2 682.88,-143.57 609.13,-129.86 555.41,-120.63"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="549.29,-119.58 555.66,-117.93 552.25,-120.09 555.2,-120.59 555.2,-120.59 555.2,-120.59 552.25,-120.09 554.75,-123.26 549.29,-119.58 549.29,-119.58"/>
+</g>
+<!-- «sobolev.rellich_subcritical_hilbert» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fsubcritical&#45;005Fhilbert&#45;00BB" class="node">
+<title>«sobolev.rellich_subcritical_hilbert»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fsubcritical&#45;005Fhilbert&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_subcritical_hilbert_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="727" cy="-107.4" rx="84.71" ry="19.6"/>
+<text text-anchor="middle" x="727" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="727" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_subcritical_hilbert</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_c1»&#45;&gt;«sobolev.rellich_subcritical_hilbert» -->
+<g id="edge12" class="edge">
+<title>«sobolev.rellich_c1»&#45;&gt;«sobolev.rellich_subcritical_hilbert»</title>
+<path fill="none" stroke="#6b7280" d="M791.17,-162.2C780.02,-152.85 765.72,-140.87 753.46,-130.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="748.69,-126.59 755.02,-128.37 750.99,-128.51 753.29,-130.44 753.29,-130.44 753.29,-130.44 750.99,-128.51 751.55,-132.51 748.69,-126.59 748.69,-126.59"/>
+</g>
+<!-- «sobolev.rellich_l2_grid_approximation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fl2&#45;005Fgrid&#45;005Fapproximation&#45;00BB" class="node">
+<title>«sobolev.rellich_l2_grid_approximation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fl2&#45;005Fgrid&#45;005Fapproximation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_l2_grid_approximation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="673" cy="-322.19" rx="97.66" ry="19.6"/>
+<text text-anchor="middle" x="673" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="673" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_l2_grid_approximation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_zero_trace_translation»&#45;&gt;«sobolev.rellich_l2_grid_approximation» -->
+<g id="edge15" class="edge">
+<title>«sobolev.rellich_zero_trace_translation»&#45;&gt;«sobolev.rellich_l2_grid_approximation»</title>
+<path fill="none" stroke="#6b7280" d="M673,-373.77C673,-365.95 673,-356.77 673,-348.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="673,-342.19 675.7,-348.19 673,-345.19 673,-348.19 673,-348.19 673,-348.19 673,-345.19 670.3,-348.19 673,-342.19 673,-342.19"/>
+</g>
+<!-- «sobolev.finite_measure_support_exponent_restriction» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Efinite&#45;005Fmeasure&#45;005Fsupport&#45;005Fexponent&#45;005Frestriction&#45;00BB" class="node">
+<title>«sobolev.finite_measure_support_exponent_restriction»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Efinite&#45;005Fmeasure&#45;005Fsupport&#45;005Fexponent&#45;005Frestriction&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___finite_measure_support_exponent_restriction_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="403,-268.59 195,-268.59 195,-232.59 403,-232.59 403,-268.59"/>
+<text text-anchor="middle" x="299" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="299" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">finite_measure_support_exponent_restriction</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.finite_measure_support_exponent_restriction»&#45;&gt;«sobolev.finite_measure_exponent_restriction» -->
+<g id="edge6" class="edge">
+<title>«sobolev.finite_measure_support_exponent_restriction»&#45;&gt;«sobolev.finite_measure_exponent_restriction»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M294.55,-232.39C292.26,-223.54 289.44,-212.63 286.97,-203.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="285.4,-197 289.51,-202.13 286.25,-199.88 287,-202.78 286.9,-202.81 286.8,-202.83 286.05,-199.93 284.29,-203.49 285.4,-197 285.4,-197"/>
+</g>
+<!-- «sobolev.rellich_endpoint_one» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fendpoint&#45;005Fone&#45;00BB" class="node">
+<title>«sobolev.rellich_endpoint_one»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fendpoint&#45;005Fone&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_endpoint_one_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="94" cy="-178.99" rx="77.92" ry="18"/>
+<text text-anchor="middle" x="94" y="-176.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev.rellich_endpoint_one</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_endpoint_one»&#45;&gt;«sobolev.rellich_full_subcritical» -->
+<g id="edge4" class="edge">
+<title>«sobolev.rellich_endpoint_one»&#45;&gt;«sobolev.rellich_full_subcritical»</title>
+<path fill="none" stroke="#6b7280" d="M102.8,-161.05C113.04,-142.13 131.1,-111.1 151,-87.6 159.69,-77.34 170.44,-67.24 180.25,-58.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="184.98,-54.76 182.15,-60.71 182.69,-56.71 180.41,-58.65 180.41,-58.65 180.41,-58.65 182.69,-56.71 178.66,-56.59 184.98,-54.76 184.98,-54.76"/>
+</g>
+<!-- «sobolev.rellich_endpoint_one»&#45;&gt;«sobolev.rellich_w11_reduction» -->
+<g id="edge17" class="edge">
+<title>«sobolev.rellich_endpoint_one»&#45;&gt;«sobolev.rellich_w11_reduction»</title>
+<path fill="none" stroke="#6b7280" d="M125.96,-162.55C147.19,-152.29 175.24,-138.73 197.96,-127.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="203.62,-125.01 199.39,-130.06 200.92,-126.32 198.21,-127.63 198.21,-127.63 198.21,-127.63 200.92,-126.32 197.04,-125.19 203.62,-125.01 203.62,-125.01"/>
+</g>
+<!-- «sobolev.rellich_l2_grid_approximation»&#45;&gt;«sobolev.rellich_zero_extension_global» -->
+<g id="edge2" class="edge">
+<title>«sobolev.rellich_l2_grid_approximation»&#45;&gt;«sobolev.rellich_zero_extension_global»</title>
+<path fill="none" stroke="#6b7280" d="M673,-302.17C673,-294.35 673,-285.17 673,-276.8"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="673,-270.59 675.7,-276.59 673,-273.59 673,-276.59 673,-276.59 673,-276.59 673,-273.59 670.3,-276.59 673,-270.59 673,-270.59"/>
+</g>
+<!-- «sobolev.rellich_inclusion_operator» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Finclusion&#45;005Foperator&#45;00BB" class="node">
+<title>«sobolev.rellich_inclusion_operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Finclusion&#45;005Foperator&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_inclusion_operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="550,-268.59 428,-268.59 428,-232.59 550,-232.59 550,-268.59"/>
+<text text-anchor="middle" x="489" y="-253.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="489" y="-242.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_inclusion_operator</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_subcritical_transfer» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fsubcritical&#45;005Ftransfer&#45;00BB" class="node">
+<title>«sobolev.rellich_subcritical_transfer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Erellich&#45;005Fsubcritical&#45;005Ftransfer&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___rellich_subcritical_transfer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="480" cy="-178.99" rx="89.19" ry="19.6"/>
+<text text-anchor="middle" x="480" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="480" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">rellich_subcritical_transfer</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.rellich_inclusion_operator»&#45;&gt;«sobolev.rellich_subcritical_transfer» -->
+<g id="edge22" class="edge">
+<title>«sobolev.rellich_inclusion_operator»&#45;&gt;«sobolev.rellich_subcritical_transfer»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M486.78,-232.39C485.71,-224.15 484.41,-214.12 483.24,-205.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="482.45,-198.96 485.9,-204.56 482.94,-201.92 483.32,-204.9 483.22,-204.91 483.12,-204.92 482.74,-201.95 480.54,-205.26 482.45,-198.96 482.45,-198.96"/>
+</g>
+<!-- «sobolev.rellich_w11_reduction»&#45;&gt;«sobolev.rellich_full_subcritical» -->
+<g id="edge5" class="edge">
+<title>«sobolev.rellich_w11_reduction»&#45;&gt;«sobolev.rellich_full_subcritical»</title>
+<path fill="none" stroke="#6b7280" d="M229.8,-87.38C226.36,-79.4 222.32,-70.02 218.65,-61.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="216.19,-55.79 221.04,-60.24 217.38,-58.55 218.56,-61.3 218.56,-61.3 218.56,-61.3 217.38,-58.55 216.08,-62.37 216.19,-55.79 216.19,-55.79"/>
+</g>
+<!-- «sobolev.rellich_supported_l1»&#45;&gt;«sobolev.rellich_endpoint_one» -->
+<g id="edge14" class="edge">
+<title>«sobolev.rellich_supported_l1»&#45;&gt;«sobolev.rellich_endpoint_one»</title>
+<path fill="none" stroke="#6b7280" d="M93.25,-232.39C93.37,-223.54 93.53,-212.63 93.67,-203.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="93.76,-197 96.37,-203.04 93.71,-200 93.67,-203 93.67,-203 93.67,-203 93.71,-200 90.97,-202.96 93.76,-197 93.76,-197"/>
+</g>
+<!-- «sobolev.rellich_subcritical_transfer»&#45;&gt;«sobolev.rellich_subcritical_general» -->
+<g id="edge11" class="edge">
+<title>«sobolev.rellich_subcritical_transfer»&#45;&gt;«sobolev.rellich_subcritical_general»</title>
+<path fill="none" stroke="#6b7280" d="M480,-158.98C480,-151.15 480,-141.97 480,-133.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="480,-127.39 482.7,-133.39 480,-130.39 480,-133.39 480,-133.39 480,-133.39 480,-130.39 477.3,-133.39 480,-127.39 480,-127.39"/>
+</g>
+<!-- «sobolev.rellich_subcritical_transfer»&#45;&gt;«sobolev.rellich_subcritical_hilbert» -->
+<g id="edge13" class="edge">
+<title>«sobolev.rellich_subcritical_transfer»&#45;&gt;«sobolev.rellich_subcritical_hilbert»</title>
+<path fill="none" stroke="#6b7280" d="M532.99,-163.06C572.98,-151.8 627.81,-136.35 668.98,-124.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="674.95,-123.06 669.9,-127.29 672.06,-123.88 669.17,-124.69 669.17,-124.69 669.17,-124.69 672.06,-123.88 668.44,-122.09 674.95,-123.06 674.95,-123.06"/>
+</g>
+<!-- «sobolev.rellich_subcritical_transfer»&#45;&gt;«sobolev.rellich_w11_reduction» -->
+<g id="edge18" class="edge">
+<title>«sobolev.rellich_subcritical_transfer»&#45;&gt;«sobolev.rellich_w11_reduction»</title>
+<path fill="none" stroke="#6b7280" d="M427.49,-162.89C387.74,-151.46 333.29,-135.8 292.95,-124.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="287.11,-122.52 293.62,-121.58 289.99,-123.35 292.88,-124.18 292.88,-124.18 292.88,-124.18 289.99,-123.35 292.13,-126.77 287.11,-122.52 287.11,-122.52"/>
+</g>
+<!-- «sobolev.compact_uniform_approximation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Ecompact&#45;005Funiform&#45;005Fapproximation&#45;00BB" class="node">
+<title>«sobolev.compact_uniform_approximation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Ecompact&#45;005Funiform&#45;005Fapproximation&#45;00BB"><a xlink:href="Sobolev-Spaces-and-Weak-Derivatives/#--informal-preview-_FLQQ_sobolev___compact_uniform_approximation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="370" cy="-322.19" rx="108.79" ry="19.6"/>
+<text text-anchor="middle" x="370" y="-325.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">sobolev</text>
+<text text-anchor="middle" x="370" y="-314.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">compact_uniform_approximation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.compact_uniform_approximation»&#45;&gt;«sobolev.rellich_zero_extension_global» -->
+<g id="edge1" class="edge">
+<title>«sobolev.compact_uniform_approximation»&#45;&gt;«sobolev.rellich_zero_extension_global»</title>
+<path fill="none" stroke="#6b7280" d="M435,-306.26C484.88,-294.8 553.57,-279.03 604.34,-267.36"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="610.44,-265.96 605.2,-269.94 607.51,-266.63 604.59,-267.31 604.59,-267.31 604.59,-267.31 607.51,-266.63 603.99,-264.67 610.44,-265.96 610.44,-265.96"/>
+</g>
+<!-- «sobolev.compact_uniform_approximation»&#45;&gt;«sobolev.rellich_supported_l1» -->
+<g id="edge19" class="edge">
+<title>«sobolev.compact_uniform_approximation»&#45;&gt;«sobolev.rellich_supported_l1»</title>
+<path fill="none" stroke="#6b7280" d="M308.52,-305.74C260.99,-293.8 195.7,-277.4 149.47,-265.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="143.65,-264.32 150.13,-263.16 146.56,-265.05 149.47,-265.78 149.47,-265.78 149.47,-265.78 146.56,-265.05 148.81,-268.4 143.65,-264.32 143.65,-264.32"/>
+</g>
+</g>
+</svg>

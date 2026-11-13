@@ -1,0 +1,1029 @@
+<svg data-node-count="58" data-edge-count="78" data-cluster-count="1" data-variant-key="parent:«elliptic.representation»" width="2025pt" height="947pt"
+ viewBox="0.00 0.00 2025.00 947.38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 943.38)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-943.38 2021,-943.38 2021,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 1997,-8 1997,-8 2003,-8 2009,-14 2009,-20 2009,-20 2009,-919.38 2009,-919.38 2009,-925.38 2003,-931.38 1997,-931.38 1997,-931.38 20,-931.38 20,-931.38 14,-931.38 8,-925.38 8,-919.38 8,-919.38 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="1008.5" y="-916.18" font-family="Helvetica" font-size="14.00">Fundamental solutions and mean values</text>
+</g>
+<!-- «elliptic.harmonic.first_derivative_estimate» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonic&#45;002Efirst&#45;005Fderivative&#45;005Festimate&#45;00BB" class="node">
+<title>«elliptic.harmonic.first_derivative_estimate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonic&#45;002Efirst&#45;005Fderivative&#45;005Festimate&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harmonic___first_derivative_estimate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1341" cy="-386.59" rx="83.38" ry="19.6"/>
+<text text-anchor="middle" x="1341" y="-389.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">harmonic</text>
+<text text-anchor="middle" x="1341" y="-378.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">first_derivative_estimate</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.ball_volume_scaling» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Eball&#45;005Fvolume&#45;005Fscaling&#45;00BB" class="node">
+<title>«elliptic.geometry.ball_volume_scaling»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Eball&#45;005Fvolume&#45;005Fscaling&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___geometry___ball_volume_scaling_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1270" cy="-739.19" rx="81.23" ry="18"/>
+<text text-anchor="middle" x="1270" y="-736.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">geometry.ball_volume_scaling</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.unit_sphere_area» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Eunit&#45;005Fsphere&#45;005Farea&#45;00BB" class="node">
+<title>«elliptic.geometry.unit_sphere_area»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Eunit&#45;005Fsphere&#45;005Farea&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___geometry___unit_sphere_area_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1270" cy="-671.19" rx="73.98" ry="18"/>
+<text text-anchor="middle" x="1270" y="-668.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">geometry.unit_sphere_area</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.ball_volume_scaling»&#45;&gt;«elliptic.geometry.unit_sphere_area» -->
+<g id="edge7" class="edge">
+<title>«elliptic.geometry.ball_volume_scaling»&#45;&gt;«elliptic.geometry.unit_sphere_area»</title>
+<path fill="none" stroke="#6b7280" d="M1270,-720.85C1270,-713.18 1270,-704.04 1270,-695.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1270,-689.64 1272.7,-695.64 1270,-692.64 1270,-695.64 1270,-695.64 1270,-695.64 1270,-692.64 1267.3,-695.64 1270,-689.64 1270,-689.64"/>
+</g>
+<!-- «elliptic.mean_value.integrals» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eintegrals&#45;00BB" class="node">
+<title>«elliptic.mean_value.integrals»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eintegrals&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___mean_value___integrals_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="789,-619.39 685,-619.39 685,-583.39 789,-583.39 789,-619.39"/>
+<text text-anchor="middle" x="737" y="-598.89" font-family="Helvetica" font-size="10.00" fill="#ffffff">mean_value.integrals</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.ball_volume_scaling»&#45;&gt;«elliptic.mean_value.integrals» -->
+<g id="edge27" class="edge">
+<title>«elliptic.geometry.ball_volume_scaling»&#45;&gt;«elliptic.mean_value.integrals»</title>
+<path fill="none" stroke="#6b7280" d="M1193.7,-732.96C1124.78,-726.86 1021.11,-714.23 934,-689.19 875.97,-672.5 812.73,-642.31 773.96,-622.3"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="768.42,-619.43 774.99,-619.79 771.08,-620.81 773.75,-622.19 773.75,-622.19 773.75,-622.19 771.08,-620.81 772.5,-624.59 768.42,-619.43 768.42,-619.43"/>
+</g>
+<!-- «elliptic.moving_planes.strict_comparison» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emoving&#45;005Fplanes&#45;002Estrict&#45;005Fcomparison&#45;00BB" class="node">
+<title>«elliptic.moving_planes.strict_comparison»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emoving&#45;005Fplanes&#45;002Estrict&#45;005Fcomparison&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___moving_planes___strict_comparison_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="297" cy="-175.4" rx="63.78" ry="19.6"/>
+<text text-anchor="middle" x="297" y="-178.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">moving_planes</text>
+<text text-anchor="middle" x="297" y="-167.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">strict_comparison</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.moving_planes.continuation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emoving&#45;005Fplanes&#45;002Econtinuation&#45;00BB" class="node">
+<title>«elliptic.moving_planes.continuation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emoving&#45;005Fplanes&#45;002Econtinuation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___moving_planes___continuation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="343" cy="-105.6" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="343" y="-103.1" font-family="Helvetica" font-size="10.00" fill="#ffffff">moving_planes.continuation</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.moving_planes.strict_comparison»&#45;&gt;«elliptic.moving_planes.continuation» -->
+<g id="edge15" class="edge">
+<title>«elliptic.moving_planes.strict_comparison»&#45;&gt;«elliptic.moving_planes.continuation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M309.57,-155.87C315.21,-147.56 321.91,-137.68 327.83,-128.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="331.39,-123.71 330.26,-130.19 330,-126.39 328.31,-128.87 328.02,-128.67 327.73,-128.48 329.42,-125.99 325.79,-127.16 331.39,-123.71 331.39,-123.71"/>
+</g>
+<!-- «elliptic.poisson_equation.residual» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;005Fequation&#45;002Eresidual&#45;00BB" class="node">
+<title>«elliptic.poisson_equation.residual»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;005Fequation&#45;002Eresidual&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___poisson_equation___residual_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1105" cy="-808.98" rx="70.81" ry="18"/>
+<text text-anchor="middle" x="1105" y="-806.48" font-family="Helvetica" font-size="10.00" fill="#ffffff">poisson_equation.residual</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.radial_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eradial&#45;005Fderivative&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.radial_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eradial&#45;005Fderivative&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___radial_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1370" cy="-601.39" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="1370" y="-604.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1370" y="-593.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">radial_derivative</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.unit_sphere_area»&#45;&gt;«elliptic.fundamental_solution.radial_derivative» -->
+<g id="edge12" class="edge">
+<title>«elliptic.geometry.unit_sphere_area»&#45;&gt;«elliptic.fundamental_solution.radial_derivative»</title>
+<path fill="none" stroke="#6b7280" d="M1293.7,-654.12C1307.18,-644.98 1324.22,-633.43 1338.77,-623.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1344.01,-620.01 1340.56,-625.61 1341.53,-621.69 1339.05,-623.37 1339.05,-623.37 1339.05,-623.37 1341.53,-621.69 1337.53,-621.14 1344.01,-620.01 1344.01,-620.01"/>
+</g>
+<!-- «elliptic.geometry.unit_sphere_area»&#45;&gt;«elliptic.mean_value.integrals» -->
+<g id="edge28" class="edge">
+<title>«elliptic.geometry.unit_sphere_area»&#45;&gt;«elliptic.mean_value.integrals»</title>
+<path fill="none" stroke="#6b7280" d="M1201.33,-664.5C1090.41,-655.07 876.67,-635.77 802,-621.19 799.8,-620.76 797.56,-620.28 795.3,-619.78"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="789.31,-618.38 795.77,-617.12 792.23,-619.06 795.15,-619.75 795.15,-619.75 795.15,-619.75 792.23,-619.06 794.54,-622.37 789.31,-618.38 789.31,-618.38"/>
+</g>
+<!-- «elliptic.fundamental_solution.flux_normalization» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eflux&#45;005Fnormalization&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.flux_normalization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eflux&#45;005Fnormalization&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___flux_normalization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1418" cy="-458.19" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="1418" y="-461.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1418" y="-450.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">flux_normalization</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.unit_sphere_area»&#45;&gt;«elliptic.fundamental_solution.flux_normalization» -->
+<g id="edge60" class="edge">
+<title>«elliptic.geometry.unit_sphere_area»&#45;&gt;«elliptic.fundamental_solution.flux_normalization»</title>
+<path fill="none" stroke="#6b7280" d="M1265.98,-653.18C1259.56,-621.49 1250.75,-552.77 1283,-509.99 1292.9,-496.86 1328.17,-483.83 1360.17,-474.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1366.1,-472.51 1361.11,-476.8 1363.23,-473.36 1360.35,-474.21 1360.35,-474.21 1360.35,-474.21 1363.23,-473.36 1359.59,-471.62 1366.1,-472.51 1366.1,-472.51"/>
+</g>
+<!-- «elliptic.mean_value.sphere_property» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Esphere&#45;005Fproperty&#45;00BB" class="node">
+<title>«elliptic.mean_value.sphere_property»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Esphere&#45;005Fproperty&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___mean_value___sphere_property_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="505,-547.79 367,-547.79 367,-511.79 505,-511.79 505,-547.79"/>
+<text text-anchor="middle" x="436" y="-527.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">mean_value.sphere_property</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.sphere_and_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Esphere&#45;005Fand&#45;005Fball&#45;00BB" class="node">
+<title>«elliptic.mean_value.sphere_and_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Esphere&#45;005Fand&#45;005Fball&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___mean_value___sphere_and_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1009" cy="-458.19" rx="78.06" ry="18"/>
+<text text-anchor="middle" x="1009" y="-455.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">mean_value.sphere_and_ball</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.sphere_property»&#45;&gt;«elliptic.mean_value.sphere_and_ball» -->
+<g id="edge13" class="edge">
+<title>«elliptic.mean_value.sphere_property»&#45;&gt;«elliptic.mean_value.sphere_and_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M505.21,-512.18C509.52,-511.37 513.81,-510.63 518,-509.99 694.27,-482.88 741.44,-503.19 918,-477.99 928.15,-476.54 938.86,-474.65 949.24,-472.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="955.3,-471.43 949.94,-475.25 952.38,-472.12 949.43,-472.7 949.41,-472.6 949.4,-472.5 952.34,-471.92 948.89,-469.95 955.3,-471.43 955.3,-471.43"/>
+</g>
+<!-- «elliptic.mean_value.to_harmonicity» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eto&#45;005Fharmonicity&#45;00BB" class="node">
+<title>«elliptic.mean_value.to_harmonicity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eto&#45;005Fharmonicity&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___mean_value___to_harmonicity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1030" cy="-386.59" rx="74.11" ry="18"/>
+<text text-anchor="middle" x="1030" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">mean_value.to_harmonicity</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.sphere_property»&#45;&gt;«elliptic.mean_value.to_harmonicity» -->
+<g id="edge34" class="edge">
+<title>«elliptic.mean_value.sphere_property»&#45;&gt;«elliptic.mean_value.to_harmonicity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M505.27,-512.53C509.57,-511.64 513.84,-510.78 518,-509.99 610.3,-492.37 645.17,-524.19 727,-477.99 746.95,-466.73 740.17,-449.87 760,-438.39 831.47,-397.04 861.96,-422.23 943,-406.39 952.08,-404.62 961.68,-402.64 971.04,-400.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="977.16,-399.36 971.85,-403.25 974.25,-400.08 971.31,-400.71 971.29,-400.61 971.27,-400.51 974.21,-399.89 970.73,-397.97 977.16,-399.36 977.16,-399.36"/>
+</g>
+<!-- «elliptic.mean_value.boundary_principle» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eboundary&#45;005Fprinciple&#45;00BB" class="node">
+<title>«elliptic.mean_value.boundary_principle»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eboundary&#45;005Fprinciple&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___mean_value___boundary_principle_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="839" cy="-458.19" rx="66.44" ry="19.6"/>
+<text text-anchor="middle" x="839" y="-461.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">mean_value</text>
+<text text-anchor="middle" x="839" y="-450.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_principle</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.sphere_property»&#45;&gt;«elliptic.mean_value.boundary_principle» -->
+<g id="edge36" class="edge">
+<title>«elliptic.mean_value.sphere_property»&#45;&gt;«elliptic.mean_value.boundary_principle»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M505.25,-512.45C509.56,-511.58 513.83,-510.75 518,-509.99 622.14,-491.03 649.79,-496.55 754,-477.99 763.15,-476.36 772.82,-474.43 782.22,-472.43"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="788.35,-471.11 783.05,-475.02 785.44,-471.84 782.5,-472.47 782.48,-472.38 782.46,-472.28 785.39,-471.65 781.91,-469.74 788.35,-471.11 788.35,-471.11"/>
+</g>
+<!-- «elliptic.mean_value.from_harmonicity» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Efrom&#45;005Fharmonicity&#45;00BB" class="node">
+<title>«elliptic.mean_value.from_harmonicity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Efrom&#45;005Fharmonicity&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___mean_value___from_harmonicity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="613" cy="-458.19" rx="80.59" ry="18"/>
+<text text-anchor="middle" x="613" y="-455.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">mean_value.from_harmonicity</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.sphere_property»&#45;&gt;«elliptic.mean_value.from_harmonicity» -->
+<g id="edge41" class="edge">
+<title>«elliptic.mean_value.sphere_property»&#45;&gt;«elliptic.mean_value.from_harmonicity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M479.3,-511.76C506.63,-501.02 541.81,-487.18 569.23,-476.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="574.96,-474.15 570.36,-478.86 572.2,-475.34 569.41,-476.44 569.37,-476.35 569.34,-476.25 572.13,-475.15 568.38,-473.83 574.96,-474.15 574.96,-474.15"/>
+</g>
+<!-- «elliptic.maximum.matrix_strong» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ematrix&#45;005Fstrong&#45;00BB" class="node">
+<title>«elliptic.maximum.matrix_strong»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ematrix&#45;005Fstrong&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___maximum___matrix_strong_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="296" cy="-246.99" rx="66.87" ry="18"/>
+<text text-anchor="middle" x="296" y="-244.49" font-family="Helvetica" font-size="10.00" fill="#ffffff">maximum.matrix_strong</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.maximum.matrix_strong»&#45;&gt;«elliptic.moving_planes.strict_comparison» -->
+<g id="edge4" class="edge">
+<title>«elliptic.maximum.matrix_strong»&#45;&gt;«elliptic.moving_planes.strict_comparison»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M296.25,-228.79C296.37,-220.55 296.51,-210.52 296.64,-201.45"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="296.73,-195.36 299.34,-201.4 297.03,-198.37 296.99,-201.36 296.64,-201.36 296.29,-201.35 296.33,-198.35 293.94,-201.32 296.73,-195.36 296.73,-195.36"/>
+</g>
+<!-- «elliptic.fundamental_solution.surface_flux» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Esurface&#45;005Fflux&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.surface_flux»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Esurface&#45;005Fflux&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___surface_flux_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1370" cy="-529.79" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="1370" y="-532.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1370" y="-521.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">surface_flux</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.radial_derivative»&#45;&gt;«elliptic.fundamental_solution.surface_flux» -->
+<g id="edge70" class="edge">
+<title>«elliptic.fundamental_solution.radial_derivative»&#45;&gt;«elliptic.fundamental_solution.surface_flux»</title>
+<path fill="none" stroke="#6b7280" d="M1370,-581.37C1370,-573.54 1370,-564.37 1370,-555.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1370,-549.78 1372.7,-555.78 1370,-552.78 1370,-555.78 1370,-555.78 1370,-555.78 1370,-552.78 1367.3,-555.78 1370,-549.78 1370,-549.78"/>
+</g>
+<!-- «elliptic.mean_value.sphere_and_ball»&#45;&gt;«elliptic.harmonic.first_derivative_estimate» -->
+<g id="edge2" class="edge">
+<title>«elliptic.mean_value.sphere_and_ball»&#45;&gt;«elliptic.harmonic.first_derivative_estimate»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1064.94,-445.46C1122.65,-433.37 1212.66,-414.5 1274.1,-401.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1280.32,-400.31 1275,-404.19 1277.46,-401.27 1274.52,-401.89 1274.45,-401.54 1274.38,-401.2 1277.31,-400.59 1273.9,-398.9 1280.32,-400.31 1280.32,-400.31"/>
+</g>
+<!-- «elliptic.harnack.local_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Elocal&#45;005Fball&#45;00BB" class="node">
+<title>«elliptic.harnack.local_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Elocal&#45;005Fball&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harnack___local_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1181" cy="-386.59" rx="51.74" ry="18"/>
+<text text-anchor="middle" x="1181" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">harnack.local_ball</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.sphere_and_ball»&#45;&gt;«elliptic.harnack.local_ball» -->
+<g id="edge69" class="edge">
+<title>«elliptic.mean_value.sphere_and_ball»&#45;&gt;«elliptic.harnack.local_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1045.9,-442.26C1074.49,-430.69 1113.98,-414.71 1142.88,-403.02"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1148.51,-400.74 1143.96,-405.49 1145.86,-402.19 1143.08,-403.31 1142.95,-402.99 1142.82,-402.67 1145.6,-401.54 1141.94,-400.49 1148.51,-400.74 1148.51,-400.74"/>
+</g>
+<!-- «elliptic.moving_planes.radial_symmetry» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emoving&#45;005Fplanes&#45;002Eradial&#45;005Fsymmetry&#45;00BB" class="node">
+<title>«elliptic.moving_planes.radial_symmetry»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emoving&#45;005Fplanes&#45;002Eradial&#45;005Fsymmetry&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___moving_planes___radial_symmetry_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="343" cy="-35.8" rx="60.21" ry="19.6"/>
+<text text-anchor="middle" x="343" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">moving_planes</text>
+<text text-anchor="middle" x="343" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">radial_symmetry</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.moving_planes.continuation»&#45;&gt;«elliptic.moving_planes.radial_symmetry» -->
+<g id="edge63" class="edge">
+<title>«elliptic.moving_planes.continuation»&#45;&gt;«elliptic.moving_planes.radial_symmetry»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M343,-87.49C343,-79.86 343,-70.72 343,-62.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="343,-56.06 345.7,-62.06 343.35,-59.06 343.35,-62.06 343,-62.06 342.65,-62.06 342.65,-59.06 340.3,-62.06 343,-56.06 343,-56.06"/>
+</g>
+<!-- «elliptic.harmonic.boundary_sup_derivative_estimate» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonic&#45;002Eboundary&#45;005Fsup&#45;005Fderivative&#45;005Festimate&#45;00BB" class="node">
+<title>«elliptic.harmonic.boundary_sup_derivative_estimate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonic&#45;002Eboundary&#45;005Fsup&#45;005Fderivative&#45;005Festimate&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harmonic___boundary_sup_derivative_estimate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1886" cy="-458.19" rx="115.02" ry="19.6"/>
+<text text-anchor="middle" x="1886" y="-461.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">harmonic</text>
+<text text-anchor="middle" x="1886" y="-450.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">boundary_sup_derivative_estimate</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harmonic.boundary_sup_derivative_estimate»&#45;&gt;«elliptic.harmonic.first_derivative_estimate» -->
+<g id="edge1" class="edge">
+<title>«elliptic.harmonic.boundary_sup_derivative_estimate»&#45;&gt;«elliptic.harmonic.first_derivative_estimate»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1795.23,-445.9C1774.46,-443.38 1752.47,-440.75 1732,-438.39 1600.99,-423.29 1567.39,-426.19 1437,-406.39 1427.48,-404.95 1417.46,-403.22 1407.63,-401.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1401.55,-400.26 1407.94,-398.71 1404.56,-400.47 1407.51,-401.02 1407.45,-401.37 1407.38,-401.71 1404.43,-401.16 1406.95,-404.02 1401.55,-400.26 1401.55,-400.26"/>
+</g>
+<!-- «elliptic.harmonic.iterated_derivative_estimate» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonic&#45;002Eiterated&#45;005Fderivative&#45;005Festimate&#45;00BB" class="node">
+<title>«elliptic.harmonic.iterated_derivative_estimate»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonic&#45;002Eiterated&#45;005Fderivative&#45;005Festimate&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harmonic___iterated_derivative_estimate_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1734" cy="-386.59" rx="94.09" ry="19.6"/>
+<text text-anchor="middle" x="1734" y="-389.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">harmonic</text>
+<text text-anchor="middle" x="1734" y="-378.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">iterated_derivative_estimate</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harmonic.boundary_sup_derivative_estimate»&#45;&gt;«elliptic.harmonic.iterated_derivative_estimate» -->
+<g id="edge61" class="edge">
+<title>«elliptic.harmonic.boundary_sup_derivative_estimate»&#45;&gt;«elliptic.harmonic.iterated_derivative_estimate»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1847.25,-439.45C1825.84,-429.65 1799.2,-417.45 1777.13,-407.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1771.63,-404.82 1778.21,-404.87 1774.5,-405.75 1777.23,-407 1777.08,-407.32 1776.94,-407.64 1774.21,-406.39 1775.96,-409.77 1771.63,-404.82 1771.63,-404.82"/>
+</g>
+<!-- «elliptic.harmonic.liouville_bounded» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonic&#45;002Eliouville&#45;005Fbounded&#45;00BB" class="node">
+<title>«elliptic.harmonic.liouville_bounded»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonic&#45;002Eliouville&#45;005Fbounded&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harmonic___liouville_bounded_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1927" cy="-386.59" rx="73.98" ry="18"/>
+<text text-anchor="middle" x="1927" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">harmonic.liouville_bounded</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harmonic.boundary_sup_derivative_estimate»&#45;&gt;«elliptic.harmonic.liouville_bounded» -->
+<g id="edge67" class="edge">
+<title>«elliptic.harmonic.boundary_sup_derivative_estimate»&#45;&gt;«elliptic.harmonic.liouville_bounded»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1897.2,-438.17C1902.36,-429.43 1908.5,-418.99 1913.87,-409.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1916.93,-404.69 1916.21,-411.23 1915.71,-407.45 1914.19,-410.03 1913.89,-409.86 1913.58,-409.68 1915.11,-407.09 1911.56,-408.48 1916.93,-404.69 1916.93,-404.69"/>
+</g>
+<!-- «elliptic.geometry.unit_ball_volume_positive» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Eunit&#45;005Fball&#45;005Fvolume&#45;005Fpositive&#45;00BB" class="node">
+<title>«elliptic.geometry.unit_ball_volume_positive»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Eunit&#45;005Fball&#45;005Fvolume&#45;005Fpositive&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___geometry___unit_ball_volume_positive_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1315" cy="-808.98" rx="86.95" ry="19.6"/>
+<text text-anchor="middle" x="1315" y="-811.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">geometry</text>
+<text text-anchor="middle" x="1315" y="-800.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">unit_ball_volume_positive</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.unit_ball_volume_positive»&#45;&gt;«elliptic.geometry.ball_volume_scaling» -->
+<g id="edge3" class="edge">
+<title>«elliptic.geometry.unit_ball_volume_positive»&#45;&gt;«elliptic.geometry.ball_volume_scaling»</title>
+<path fill="none" stroke="#6b7280" d="M1302.46,-789.1C1296.95,-780.79 1290.44,-770.98 1284.7,-762.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1281.24,-757.12 1286.81,-760.63 1282.9,-759.62 1284.56,-762.12 1284.56,-762.12 1284.56,-762.12 1282.9,-759.62 1282.31,-763.61 1281.24,-757.12 1281.24,-757.12"/>
+</g>
+<!-- «elliptic.minimum.strong_harmonic» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimum&#45;002Estrong&#45;005Fharmonic&#45;00BB" class="node">
+<title>«elliptic.minimum.strong_harmonic»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimum&#45;002Estrong&#45;005Fharmonic&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___minimum___strong_harmonic_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="806" cy="-316.79" rx="72.08" ry="18"/>
+<text text-anchor="middle" x="806" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimum.strong_harmonic</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harnack.level_decay» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Elevel&#45;005Fdecay&#45;00BB" class="node">
+<title>«elliptic.harnack.level_decay»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Elevel&#45;005Fdecay&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harnack___level_decay_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="94" cy="-316.79" rx="57.08" ry="18"/>
+<text text-anchor="middle" x="94" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">harnack.level_decay</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harnack.variable_coefficients» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Evariable&#45;005Fcoefficients&#45;00BB" class="node">
+<title>«elliptic.harnack.variable_coefficients»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Evariable&#45;005Fcoefficients&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harnack___variable_coefficients_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="133" cy="-246.99" rx="70.92" ry="19.6"/>
+<text text-anchor="middle" x="133" y="-249.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">harnack</text>
+<text text-anchor="middle" x="133" y="-238.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">variable_coefficients</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harnack.level_decay»&#45;&gt;«elliptic.harnack.variable_coefficients» -->
+<g id="edge50" class="edge">
+<title>«elliptic.harnack.level_decay»&#45;&gt;«elliptic.harnack.variable_coefficients»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M103.64,-299.03C108.27,-290.98 113.91,-281.18 119.01,-272.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="122.09,-266.95 121.44,-273.5 120.9,-269.73 119.41,-272.33 119.1,-272.15 118.8,-271.98 120.29,-269.38 116.76,-270.81 122.09,-266.95 122.09,-266.95"/>
+</g>
+<!-- «elliptic.maximum.uniqueness_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Euniqueness&#45;005Fball&#45;00BB" class="node">
+<title>«elliptic.maximum.uniqueness_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Euniqueness&#45;005Fball&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___maximum___uniqueness_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="486" cy="-316.79" rx="73.35" ry="18"/>
+<text text-anchor="middle" x="486" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">maximum.uniqueness_ball</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.unit_ball_volume» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Eunit&#45;005Fball&#45;005Fvolume&#45;00BB" class="node">
+<title>«elliptic.geometry.unit_ball_volume»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Eunit&#45;005Fball&#45;005Fvolume&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___geometry___unit_ball_volume_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1407,-898.58 1279,-898.58 1279,-862.58 1407,-862.58 1407,-898.58"/>
+<text text-anchor="middle" x="1343" y="-878.08" font-family="Helvetica" font-size="10.00" fill="#ffffff">geometry.unit_ball_volume</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.unit_ball_volume»&#45;&gt;«elliptic.geometry.unit_ball_volume_positive» -->
+<g id="edge17" class="edge">
+<title>«elliptic.geometry.unit_ball_volume»&#45;&gt;«elliptic.geometry.unit_ball_volume_positive»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1336.08,-862.38C1332.7,-853.98 1328.57,-843.72 1324.87,-834.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1322.63,-828.95 1327.37,-833.51 1323.84,-831.69 1324.96,-834.48 1324.87,-834.51 1324.78,-834.55 1323.66,-831.77 1322.36,-835.52 1322.63,-828.95 1322.63,-828.95"/>
+</g>
+<!-- «elliptic.fundamental_solution» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1614.5,-689.19 1509.5,-689.19 1509.5,-653.19 1614.5,-653.19 1614.5,-689.19"/>
+<text text-anchor="middle" x="1562" y="-674.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">elliptic</text>
+<text text-anchor="middle" x="1562" y="-663.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.geometry.unit_ball_volume»&#45;&gt;«elliptic.fundamental_solution» -->
+<g id="edge68" class="edge">
+<title>«elliptic.geometry.unit_ball_volume»&#45;&gt;«elliptic.fundamental_solution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1369.54,-862.39C1383.29,-853.05 1400.07,-840.94 1414,-828.78 1464.57,-784.67 1516.95,-725.48 1543.76,-694.01"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1547.84,-689.2 1546.02,-695.52 1545.98,-691.55 1544.04,-693.84 1543.96,-693.77 1543.88,-693.71 1545.82,-691.42 1541.9,-692.03 1547.84,-689.2 1547.84,-689.2"/>
+</g>
+<!-- «elliptic.fundamental_solution.local_integrability» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Elocal&#45;005Fintegrability&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.local_integrability»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Elocal&#45;005Fintegrability&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___local_integrability_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1562" cy="-601.39" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="1562" y="-604.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1562" y="-593.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_integrability</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.planar_distribution_operator» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eplanar&#45;005Fdistribution&#45;005Foperator&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.planar_distribution_operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eplanar&#45;005Fdistribution&#45;005Foperator&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___planar_distribution_operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1628,-547.79 1496,-547.79 1496,-511.79 1628,-511.79 1628,-547.79"/>
+<text text-anchor="middle" x="1562" y="-532.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1562" y="-521.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">planar_distribution_operator</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.local_integrability»&#45;&gt;«elliptic.fundamental_solution.planar_distribution_operator» -->
+<g id="edge39" class="edge">
+<title>«elliptic.fundamental_solution.local_integrability»&#45;&gt;«elliptic.fundamental_solution.planar_distribution_operator»</title>
+<path fill="none" stroke="#6b7280" d="M1562,-581.37C1562,-572.95 1562,-562.96 1562,-554.1"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1562,-547.88 1564.7,-553.88 1562,-550.88 1562,-553.88 1562,-553.88 1562,-553.88 1562,-550.88 1559.3,-553.88 1562,-547.88 1562,-547.88"/>
+</g>
+<!-- «elliptic.fundamental_solution.distributional_newtonian» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Edistributional&#45;005Fnewtonian&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.distributional_newtonian»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Edistributional&#45;005Fnewtonian&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___distributional_newtonian_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1532" cy="-386.59" rx="82.96" ry="19.6"/>
+<text text-anchor="middle" x="1532" y="-389.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1532" y="-378.59" font-family="Helvetica" font-size="10.00" fill="#ffffff">distributional_newtonian</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.local_integrability»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian» -->
+<g id="edge44" class="edge">
+<title>«elliptic.fundamental_solution.local_integrability»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian»</title>
+<path fill="none" stroke="#6b7280" d="M1522.27,-584.47C1507.5,-576.37 1492.32,-564.93 1484,-549.59 1475.61,-534.12 1478.96,-526.85 1484,-509.99 1488.87,-493.69 1497.82,-493.41 1505,-477.99 1514.87,-456.78 1522.13,-431.09 1526.62,-412.53"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1528.04,-406.52 1529.29,-412.98 1527.35,-409.44 1526.66,-412.36 1526.66,-412.36 1526.66,-412.36 1527.35,-409.44 1524.03,-411.74 1528.04,-406.52 1528.04,-406.52"/>
+</g>
+<!-- «elliptic.fundamental_solution.distributional_planar» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Edistributional&#45;005Fplanar&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.distributional_planar»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Edistributional&#45;005Fplanar&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___distributional_planar_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1727" cy="-529.79" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="1727" y="-532.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1727" y="-521.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">distributional_planar</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.local_integrability»&#45;&gt;«elliptic.fundamental_solution.distributional_planar» -->
+<g id="edge66" class="edge">
+<title>«elliptic.fundamental_solution.local_integrability»&#45;&gt;«elliptic.fundamental_solution.distributional_planar»</title>
+<path fill="none" stroke="#6b7280" d="M1600.27,-584.24C1625.05,-573.79 1657.39,-560.15 1683.2,-549.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1688.94,-546.84 1684.46,-551.66 1686.17,-548.01 1683.41,-549.18 1683.41,-549.18 1683.41,-549.18 1686.17,-548.01 1682.36,-546.69 1688.94,-546.84 1688.94,-546.84"/>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional_bridge» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;005Fbridge&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.one_dimensional_bridge»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;005Fbridge&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___one_dimensional_bridge_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1060" cy="-601.39" rx="82.96" ry="19.6"/>
+<text text-anchor="middle" x="1060" y="-604.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1060" y="-593.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">one_dimensional_bridge</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.distributional_one_dimensional» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Edistributional&#45;005Fone&#45;005Fdimensional&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.distributional_one_dimensional»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Edistributional&#45;005Fone&#45;005Fdimensional&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___distributional_one_dimensional_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="990" cy="-529.79" rx="102.56" ry="19.6"/>
+<text text-anchor="middle" x="990" y="-532.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="990" y="-521.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">distributional_one_dimensional</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional_bridge»&#45;&gt;«elliptic.fundamental_solution.distributional_one_dimensional» -->
+<g id="edge56" class="edge">
+<title>«elliptic.fundamental_solution.one_dimensional_bridge»&#45;&gt;«elliptic.fundamental_solution.distributional_one_dimensional»</title>
+<path fill="none" stroke="#6b7280" d="M1041.24,-581.74C1032.61,-573.15 1022.29,-562.89 1013.17,-553.83"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1008.81,-549.49 1014.97,-551.81 1010.94,-551.61 1013.07,-553.72 1013.07,-553.72 1013.07,-553.72 1010.94,-551.61 1011.16,-555.64 1008.81,-549.49 1008.81,-549.49"/>
+</g>
+<!-- «elliptic.maximum.weak_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Eweak&#45;005Fball&#45;00BB" class="node">
+<title>«elliptic.maximum.weak_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Eweak&#45;005Fball&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___maximum___weak_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="368" cy="-458.19" rx="57.71" ry="18"/>
+<text text-anchor="middle" x="368" y="-455.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">maximum.weak_ball</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.maximum.matrix_weak» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ematrix&#45;005Fweak&#45;00BB" class="node">
+<title>«elliptic.maximum.matrix_weak»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ematrix&#45;005Fweak&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___maximum___matrix_weak_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="329" cy="-386.59" rx="64.83" ry="18"/>
+<text text-anchor="middle" x="329" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">maximum.matrix_weak</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.maximum.weak_ball»&#45;&gt;«elliptic.maximum.matrix_weak» -->
+<g id="edge53" class="edge">
+<title>«elliptic.maximum.weak_ball»&#45;&gt;«elliptic.maximum.matrix_weak»</title>
+<path fill="none" stroke="#6b7280" d="M358.56,-440.34C353.46,-431.25 347.1,-419.9 341.59,-410.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="338.62,-404.77 343.91,-408.68 340.09,-407.39 341.56,-410 341.56,-410 341.56,-410 340.09,-407.39 339.2,-411.32 338.62,-404.77 338.62,-404.77"/>
+</g>
+<!-- «elliptic.maximum.comparison_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ecomparison&#45;005Fball&#45;00BB" class="node">
+<title>«elliptic.maximum.comparison_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ecomparison&#45;005Fball&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___maximum___comparison_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="520" cy="-386.59" rx="73.98" ry="18"/>
+<text text-anchor="middle" x="520" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">maximum.comparison_ball</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.maximum.weak_ball»&#45;&gt;«elliptic.maximum.comparison_ball» -->
+<g id="edge55" class="edge">
+<title>«elliptic.maximum.weak_ball»&#45;&gt;«elliptic.maximum.comparison_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M399.13,-442.94C422.87,-432.07 455.71,-417.03 481.17,-405.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="486.81,-402.79 482.48,-407.74 484.12,-404.13 481.4,-405.38 481.35,-405.29 481.31,-405.2 484.04,-403.95 480.23,-402.83 486.81,-402.79 486.81,-402.79"/>
+</g>
+<!-- «elliptic.minimum.weak_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimum&#45;002Eweak&#45;005Fball&#45;00BB" class="node">
+<title>«elliptic.minimum.weak_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eminimum&#45;002Eweak&#45;005Fball&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___minimum___weak_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="674" cy="-386.59" rx="55.68" ry="18"/>
+<text text-anchor="middle" x="674" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimum.weak_ball</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.maximum.weak_ball»&#45;&gt;«elliptic.minimum.weak_ball» -->
+<g id="edge58" class="edge">
+<title>«elliptic.maximum.weak_ball»&#45;&gt;«elliptic.minimum.weak_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M411.5,-446.22C422.41,-443.57 434.12,-440.8 445,-438.39 516.23,-422.63 535.02,-423.23 606,-406.39 613.08,-404.71 620.53,-402.8 627.8,-400.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="633.85,-399.22 628.77,-403.39 630.98,-400.1 628.09,-400.88 628.06,-400.78 628.04,-400.69 630.93,-399.9 627.36,-398.18 633.85,-399.22 633.85,-399.22"/>
+</g>
+<!-- «elliptic.mean_value.integrals»&#45;&gt;«elliptic.mean_value.sphere_property» -->
+<g id="edge8" class="edge">
+<title>«elliptic.mean_value.integrals»&#45;&gt;«elliptic.mean_value.sphere_property»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M684.91,-588.34C636.94,-577.25 565.21,-560.67 511.06,-548.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="505.21,-546.79 511.66,-545.51 508.15,-547.37 511.08,-548.05 511.06,-548.14 511.03,-548.24 508.11,-547.56 510.45,-550.77 505.21,-546.79 505.21,-546.79"/>
+</g>
+<!-- «elliptic.geometry.coarea_balls» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Ecoarea&#45;005Fballs&#45;00BB" class="node">
+<title>«elliptic.geometry.coarea_balls»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Egeometry&#45;002Ecoarea&#45;005Fballs&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___geometry___coarea_balls_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="593" cy="-529.79" rx="62.92" ry="18"/>
+<text text-anchor="middle" x="593" y="-527.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">geometry.coarea_balls</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.integrals»&#45;&gt;«elliptic.geometry.coarea_balls» -->
+<g id="edge42" class="edge">
+<title>«elliptic.mean_value.integrals»&#45;&gt;«elliptic.geometry.coarea_balls»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M701.77,-583.36C679.82,-572.75 651.63,-559.13 629.45,-548.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="623.95,-545.75 630.53,-545.93 626.7,-546.96 629.4,-548.27 629.35,-548.36 629.31,-548.45 626.61,-547.14 628.18,-550.79 623.95,-545.75 623.95,-545.75"/>
+</g>
+<!-- «elliptic.mean_value.radial_derivative» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eradial&#45;005Fderivative&#45;00BB" class="node">
+<title>«elliptic.mean_value.radial_derivative»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eradial&#45;005Fderivative&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___mean_value___radial_derivative_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="758" cy="-529.79" rx="77.29" ry="18"/>
+<text text-anchor="middle" x="758" y="-527.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">mean_value.radial_derivative</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.integrals»&#45;&gt;«elliptic.mean_value.radial_derivative» -->
+<g id="edge64" class="edge">
+<title>«elliptic.mean_value.integrals»&#45;&gt;«elliptic.mean_value.radial_derivative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M742.19,-583.18C744.89,-574.25 748.22,-563.22 751.12,-553.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="752.87,-547.79 753.72,-554.32 752.1,-550.7 751.23,-553.57 751.14,-553.54 751.04,-553.51 751.91,-550.64 748.55,-552.76 752.87,-547.79 752.87,-547.79"/>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional_operator» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;005Foperator&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.one_dimensional_operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;005Foperator&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___one_dimensional_operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1244,-547.79 1118,-547.79 1118,-511.79 1244,-511.79 1244,-547.79"/>
+<text text-anchor="middle" x="1181" y="-532.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1181" y="-521.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">one_dimensional_operator</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional_equation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;005Fequation&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.one_dimensional_equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;005Fequation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___one_dimensional_equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1229" cy="-458.19" rx="89.61" ry="19.6"/>
+<text text-anchor="middle" x="1229" y="-461.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1229" y="-450.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">one_dimensional_equation</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional_operator»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_equation» -->
+<g id="edge31" class="edge">
+<title>«elliptic.fundamental_solution.one_dimensional_operator»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1192.87,-511.58C1198.77,-503.03 1206,-492.54 1212.44,-483.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1215.92,-478.15 1214.74,-484.63 1214.3,-480.68 1212.6,-483.15 1212.51,-483.09 1212.43,-483.04 1214.14,-480.57 1210.29,-481.56 1215.92,-478.15 1215.92,-478.15"/>
+</g>
+<!-- «elliptic.harmonicity» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonicity&#45;00BB" class="node">
+<title>«elliptic.harmonicity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharmonicity&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harmonicity_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="342,-547.79 248,-547.79 248,-511.79 342,-511.79 342,-547.79"/>
+<text text-anchor="middle" x="295" y="-527.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">elliptic.harmonicity</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harmonicity»&#45;&gt;«elliptic.minimum.strong_harmonic» -->
+<g id="edge18" class="edge">
+<title>«elliptic.harmonicity»&#45;&gt;«elliptic.minimum.strong_harmonic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M342.15,-513.95C346.49,-512.61 350.82,-511.27 355,-509.99 402.46,-495.46 423.31,-509.09 462,-477.99 477.69,-465.38 467.31,-449.65 484,-438.39 579.78,-373.77 643.37,-466.58 742,-406.39 760.18,-395.3 756.58,-384.1 769,-366.79 775.38,-357.9 782.6,-348.26 788.95,-339.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="792.78,-334.88 791.29,-341.29 791.04,-337.32 789.22,-339.71 789.14,-339.65 789.06,-339.59 790.88,-337.2 787,-338.01 792.78,-334.88 792.78,-334.88"/>
+</g>
+<!-- «elliptic.harmonicity»&#45;&gt;«elliptic.maximum.uniqueness_ball» -->
+<g id="edge21" class="edge">
+<title>«elliptic.harmonicity»&#45;&gt;«elliptic.maximum.uniqueness_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M284.79,-511.57C274.58,-491.84 262.54,-459.51 279,-438.39 314.78,-392.48 357.99,-439.31 406,-406.39 423.78,-394.2 419.86,-383.07 434,-366.79 442.59,-356.91 452.94,-346.84 462.14,-338.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="466.83,-334.18 464.19,-340.21 464.67,-336.27 462.44,-338.28 462.38,-338.21 462.31,-338.13 464.54,-336.12 460.57,-336.2 466.83,-334.18 466.83,-334.18"/>
+</g>
+<!-- «elliptic.harmonicity»&#45;&gt;«elliptic.maximum.weak_ball» -->
+<g id="edge26" class="edge">
+<title>«elliptic.harmonicity»&#45;&gt;«elliptic.maximum.weak_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M313.04,-511.58C323.09,-502 335.67,-490.01 346.26,-479.92"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="350.67,-475.72 348.19,-481.81 348.56,-477.86 346.39,-479.93 346.32,-479.86 346.25,-479.79 348.42,-477.72 344.46,-477.9 350.67,-475.72 350.67,-475.72"/>
+</g>
+<!-- «elliptic.harmonicity»&#45;&gt;«elliptic.mean_value.to_harmonicity» -->
+<g id="edge33" class="edge">
+<title>«elliptic.harmonicity»&#45;&gt;«elliptic.mean_value.to_harmonicity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M342.25,-512.96C346.53,-511.84 350.83,-510.82 355,-509.99 431.8,-494.64 641.68,-522.68 706,-477.99 722.03,-466.85 709.28,-449.96 725,-438.39 803.86,-380.34 846.64,-423.85 943,-406.39 952.32,-404.7 962.16,-402.75 971.74,-400.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="977.67,-399.5 972.35,-403.38 974.75,-400.21 971.82,-400.83 971.8,-400.73 971.78,-400.64 974.71,-400.02 971.24,-398.09 977.67,-399.5 977.67,-399.5"/>
+</g>
+<!-- «elliptic.maximum.strong_harmonic» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Estrong&#45;005Fharmonic&#45;00BB" class="node">
+<title>«elliptic.maximum.strong_harmonic»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Estrong&#45;005Fharmonic&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___maximum___strong_harmonic_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="856" cy="-386.59" rx="74.11" ry="18"/>
+<text text-anchor="middle" x="856" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">maximum.strong_harmonic</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harmonicity»&#45;&gt;«elliptic.maximum.strong_harmonic» -->
+<g id="edge37" class="edge">
+<title>«elliptic.harmonicity»&#45;&gt;«elliptic.maximum.strong_harmonic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M342.08,-513.73C346.44,-512.43 350.79,-511.16 355,-509.99 412.74,-493.91 434.92,-509.34 486,-477.99 505.77,-465.86 499.6,-449.43 520,-438.39 615.8,-386.54 655.55,-424.31 763,-406.39 773.69,-404.61 785.03,-402.5 795.98,-400.35"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="802.02,-399.16 796.66,-402.97 799.1,-399.84 796.16,-400.42 796.14,-400.32 796.12,-400.22 799.06,-399.64 795.61,-397.67 802.02,-399.16 802.02,-399.16"/>
+</g>
+<!-- «elliptic.harmonicity»&#45;&gt;«elliptic.mean_value.from_harmonicity» -->
+<g id="edge40" class="edge">
+<title>«elliptic.harmonicity»&#45;&gt;«elliptic.mean_value.from_harmonicity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M342.03,-513.52C346.39,-512.26 350.77,-511.07 355,-509.99 373.44,-505.3 477.28,-485.17 547.47,-471.71"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="553.73,-470.51 548.35,-474.29 550.81,-471.17 547.86,-471.73 547.84,-471.64 547.82,-471.54 550.77,-470.97 547.33,-468.98 553.73,-470.51 553.73,-470.51"/>
+</g>
+<!-- «elliptic.harmonicity»&#45;&gt;«elliptic.maximum.comparison_ball» -->
+<g id="edge54" class="edge">
+<title>«elliptic.harmonicity»&#45;&gt;«elliptic.maximum.comparison_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M289.95,-511.66C285.22,-491.7 281.12,-458.87 298,-438.39 300.64,-435.19 395.24,-414.35 460.08,-400.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="466.26,-399.05 460.96,-402.95 463.35,-399.78 460.42,-400.41 460.4,-400.31 460.38,-400.21 463.31,-399.58 459.83,-397.67 466.26,-399.05 466.26,-399.05"/>
+</g>
+<!-- «elliptic.harmonicity»&#45;&gt;«elliptic.minimum.weak_ball» -->
+<g id="edge57" class="edge">
+<title>«elliptic.harmonicity»&#45;&gt;«elliptic.minimum.weak_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M342.16,-513.38C380.56,-500.61 429.72,-483.67 438,-477.99 457.13,-464.87 452.2,-450.47 472,-438.39 524.27,-406.5 546.7,-421.66 606,-406.39 612.95,-404.6 620.28,-402.65 627.45,-400.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="633.43,-399.06 628.36,-403.25 630.56,-399.95 627.67,-400.74 627.64,-400.64 627.62,-400.55 630.51,-399.76 626.93,-398.04 633.43,-399.06 633.43,-399.06"/>
+</g>
+<!-- «elliptic.fundamental_solution.smooth_off_pole» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Esmooth&#45;005Foff&#45;005Fpole&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.smooth_off_pole»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Esmooth&#45;005Foff&#45;005Fpole&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___smooth_off_pole_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1887" cy="-601.39" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="1887" y="-604.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1887" y="-593.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">smooth_off_pole</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.harmonic_off_pole» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eharmonic&#45;005Foff&#45;005Fpole&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.harmonic_off_pole»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eharmonic&#45;005Foff&#45;005Fpole&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___harmonic_off_pole_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1900" cy="-529.79" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="1900" y="-532.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1900" y="-521.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">harmonic_off_pole</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.smooth_off_pole»&#45;&gt;«elliptic.fundamental_solution.harmonic_off_pole» -->
+<g id="edge74" class="edge">
+<title>«elliptic.fundamental_solution.smooth_off_pole»&#45;&gt;«elliptic.fundamental_solution.harmonic_off_pole»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1890.55,-581.37C1892.01,-573.54 1893.73,-564.37 1895.29,-555.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1896.45,-549.78 1898,-556.18 1896.25,-552.8 1895.69,-555.75 1895.35,-555.68 1895.01,-555.62 1895.56,-552.67 1892.7,-555.19 1896.45,-549.78 1896.45,-549.78"/>
+</g>
+<!-- «elliptic.mean_value.boundary_principle»&#45;&gt;«elliptic.mean_value.to_harmonicity» -->
+<g id="edge35" class="edge">
+<title>«elliptic.mean_value.boundary_principle»&#45;&gt;«elliptic.mean_value.to_harmonicity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M879.51,-442.43C910.33,-431.2 952.75,-415.74 984.69,-404.1"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="990.53,-401.97 985.82,-406.57 987.83,-403.33 985.02,-404.36 984.9,-404.03 984.78,-403.7 987.59,-402.67 983.97,-401.49 990.53,-401.97 990.53,-401.97"/>
+</g>
+<!-- «elliptic.maximum.strong_harmonic»&#45;&gt;«elliptic.minimum.strong_harmonic» -->
+<g id="edge19" class="edge">
+<title>«elliptic.maximum.strong_harmonic»&#45;&gt;«elliptic.minimum.strong_harmonic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M843.64,-368.83C837.2,-360.1 829.24,-349.3 822.3,-339.89"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="818.56,-334.83 824.3,-338.06 820.43,-337.19 822.21,-339.6 822.13,-339.66 822.05,-339.72 820.26,-337.31 819.95,-341.26 818.56,-334.83 818.56,-334.83"/>
+</g>
+<!-- «elliptic.fundamental_solution.planar_distribution_operator»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian» -->
+<g id="edge45" class="edge">
+<title>«elliptic.fundamental_solution.planar_distribution_operator»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1558.38,-511.76C1553.14,-487.07 1543.39,-441.19 1537.32,-412.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1536.01,-406.48 1539.9,-411.79 1536.73,-409.4 1537.36,-412.33 1537.26,-412.35 1537.16,-412.37 1536.54,-409.44 1534.62,-412.91 1536.01,-406.48 1536.01,-406.48"/>
+</g>
+<!-- «elliptic.fundamental_solution.planar_equation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eplanar&#45;005Fequation&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.planar_equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eplanar&#45;005Fequation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___planar_equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1645" cy="-458.19" rx="74.49" ry="19.6"/>
+<text text-anchor="middle" x="1645" y="-461.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1645" y="-450.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">planar_equation</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.planar_distribution_operator»&#45;&gt;«elliptic.fundamental_solution.planar_equation» -->
+<g id="edge76" class="edge">
+<title>«elliptic.fundamental_solution.planar_distribution_operator»&#45;&gt;«elliptic.fundamental_solution.planar_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1582.52,-511.58C1593.44,-502.43 1606.99,-491.06 1618.68,-481.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1623.56,-477.17 1620.7,-483.09 1621.33,-479.17 1619.03,-481.1 1618.96,-481.02 1618.9,-480.95 1621.2,-479.02 1617.23,-478.95 1623.56,-477.17 1623.56,-477.17"/>
+</g>
+<!-- «elliptic.mean_value.from_harmonicity»&#45;&gt;«elliptic.maximum.strong_harmonic» -->
+<g id="edge38" class="edge">
+<title>«elliptic.mean_value.from_harmonicity»&#45;&gt;«elliptic.maximum.strong_harmonic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M660.43,-443.61C701.72,-431.78 761.46,-414.67 804.04,-402.48"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="809.93,-400.79 804.9,-405.04 807.07,-401.71 804.19,-402.54 804.16,-402.44 804.13,-402.34 807.01,-401.52 803.41,-399.85 809.93,-400.79 809.93,-400.79"/>
+</g>
+<!-- «elliptic.poisson_equation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;005Fequation&#45;00BB" class="node">
+<title>«elliptic.poisson_equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Epoisson&#45;005Fequation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___poisson_equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1249.5,-898.58 1130.5,-898.58 1130.5,-862.58 1249.5,-862.58 1249.5,-898.58"/>
+<text text-anchor="middle" x="1190" y="-878.08" font-family="Helvetica" font-size="10.00" fill="#ffffff">elliptic.poisson_equation</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.poisson_equation»&#45;&gt;«elliptic.poisson_equation.residual» -->
+<g id="edge5" class="edge">
+<title>«elliptic.poisson_equation»&#45;&gt;«elliptic.poisson_equation.residual»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1168.99,-862.38C1157.1,-852.64 1142.16,-840.41 1129.71,-830.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1124.89,-826.27 1131.25,-827.99 1127.28,-828.1 1129.6,-830 1129.54,-830.07 1129.47,-830.15 1127.15,-828.25 1127.83,-832.16 1124.89,-826.27 1124.89,-826.27"/>
+</g>
+<!-- «elliptic.geometry.coarea_balls»&#45;&gt;«elliptic.mean_value.sphere_and_ball» -->
+<g id="edge14" class="edge">
+<title>«elliptic.geometry.coarea_balls»&#45;&gt;«elliptic.mean_value.sphere_and_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M637.23,-516.78C647.29,-514.31 657.97,-511.88 668,-509.99 778.08,-489.22 807.51,-496.45 918,-477.99 927.84,-476.35 938.24,-474.4 948.35,-472.39"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="954.27,-471.2 948.92,-475.03 951.4,-472.14 948.46,-472.73 948.39,-472.38 948.32,-472.04 951.26,-471.45 947.86,-469.74 954.27,-471.2 954.27,-471.2"/>
+</g>
+<!-- «elliptic.geometry.coarea_balls»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian» -->
+<g id="edge47" class="edge">
+<title>«elliptic.geometry.coarea_balls»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M636.36,-516.58C646.66,-514.05 657.66,-511.66 668,-509.99 763.04,-494.68 1016.61,-526.08 1100,-477.99 1118.45,-467.35 1108.7,-449.3 1127,-438.39 1186.49,-402.93 1368.51,-416.68 1437,-406.39 1446.43,-404.98 1456.35,-403.26 1466.07,-401.46"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1472.09,-400.32 1466.7,-404.09 1469.16,-400.97 1466.22,-401.53 1466.2,-401.43 1466.18,-401.33 1469.13,-400.78 1465.7,-398.78 1472.09,-400.32 1472.09,-400.32"/>
+</g>
+<!-- «elliptic.harnack.contact_measure» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Econtact&#45;005Fmeasure&#45;00BB" class="node">
+<title>«elliptic.harnack.contact_measure»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Econtact&#45;005Fmeasure&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harnack___contact_measure_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="87" cy="-386.59" rx="70.81" ry="18"/>
+<text text-anchor="middle" x="87" y="-384.09" font-family="Helvetica" font-size="10.00" fill="#ffffff">harnack.contact_measure</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harnack.contact_measure»&#45;&gt;«elliptic.harnack.level_decay» -->
+<g id="edge20" class="edge">
+<title>«elliptic.harnack.contact_measure»&#45;&gt;«elliptic.harnack.level_decay»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M88.77,-368.48C89.62,-360.2 90.66,-350.12 91.59,-341.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="92.21,-335.13 94.28,-341.38 92.25,-338.15 91.94,-341.14 91.59,-341.1 91.25,-341.07 91.55,-338.08 88.91,-340.82 92.21,-335.13 92.21,-335.13"/>
+</g>
+<!-- «elliptic.maximum.hopf» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ehopf&#45;00BB" class="node">
+<title>«elliptic.maximum.hopf»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ehopf&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___maximum___hopf_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="309" cy="-316.79" rx="44.49" ry="18"/>
+<text text-anchor="middle" x="309" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">maximum.hopf</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.maximum.matrix_weak»&#45;&gt;«elliptic.maximum.hopf» -->
+<g id="edge72" class="edge">
+<title>«elliptic.maximum.matrix_weak»&#45;&gt;«elliptic.maximum.hopf»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M323.95,-368.48C321.51,-360.2 318.54,-350.12 315.89,-341.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="314.11,-335.13 318.4,-340.12 315.3,-337.91 316.15,-340.79 315.81,-340.89 315.48,-340.99 314.63,-338.11 313.22,-341.65 314.11,-335.13 314.11,-335.13"/>
+</g>
+<!-- «elliptic.maximum.comparison_ball»&#45;&gt;«elliptic.maximum.uniqueness_ball» -->
+<g id="edge22" class="edge">
+<title>«elliptic.maximum.comparison_ball»&#45;&gt;«elliptic.maximum.uniqueness_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M511.42,-368.48C507.18,-360.04 502.02,-349.73 497.45,-340.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="494.7,-335.13 499.8,-339.29 496.13,-337.77 497.47,-340.45 497.38,-340.5 497.3,-340.54 495.95,-337.86 494.97,-341.71 494.7,-335.13 494.7,-335.13"/>
+</g>
+<!-- «elliptic.fundamental_solution.distributional_one_dimensional»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_equation» -->
+<g id="edge29" class="edge">
+<title>«elliptic.fundamental_solution.distributional_one_dimensional»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_equation»</title>
+<path fill="none" stroke="#6b7280" d="M1044.53,-512.91C1082.19,-501.94 1132.23,-487.37 1170.68,-476.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1176.75,-474.41 1171.75,-478.68 1173.87,-475.24 1170.99,-476.08 1170.99,-476.08 1170.99,-476.08 1173.87,-475.24 1170.24,-473.49 1176.75,-474.41 1176.75,-474.41"/>
+</g>
+<!-- «elliptic.laplace_equation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Elaplace&#45;005Fequation&#45;00BB" class="node">
+<title>«elliptic.laplace_equation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Elaplace&#45;005Fequation&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___laplace_equation_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1105,-898.58 989,-898.58 989,-862.58 1105,-862.58 1105,-898.58"/>
+<text text-anchor="middle" x="1047" y="-878.08" font-family="Helvetica" font-size="10.00" fill="#ffffff">elliptic.laplace_equation</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.laplace_equation»&#45;&gt;«elliptic.poisson_equation.residual» -->
+<g id="edge6" class="edge">
+<title>«elliptic.laplace_equation»&#45;&gt;«elliptic.poisson_equation.residual»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1061.34,-862.38C1069.06,-853.11 1078.67,-841.58 1086.91,-831.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1090.83,-826.99 1089.06,-833.33 1088.98,-829.36 1087.06,-831.66 1086.99,-831.6 1086.91,-831.54 1088.83,-829.23 1084.91,-829.87 1090.83,-826.99 1090.83,-826.99"/>
+</g>
+<!-- «elliptic.mean_value.one_dimensional_affine» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eone&#45;005Fdimensional&#45;005Faffine&#45;00BB" class="node">
+<title>«elliptic.mean_value.one_dimensional_affine»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eone&#45;005Fdimensional&#45;005Faffine&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___mean_value___one_dimensional_affine_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="880" cy="-880.58" rx="80.72" ry="19.6"/>
+<text text-anchor="middle" x="880" y="-883.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">mean_value</text>
+<text text-anchor="middle" x="880" y="-872.58" font-family="Helvetica" font-size="10.00" fill="#ffffff">one_dimensional_affine</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.one_dimensional_ball» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eone&#45;005Fdimensional&#45;005Fball&#45;00BB" class="node">
+<title>«elliptic.mean_value.one_dimensional_ball»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emean&#45;005Fvalue&#45;002Eone&#45;005Fdimensional&#45;005Fball&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___mean_value___one_dimensional_ball_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="880" cy="-808.98" rx="74.91" ry="19.6"/>
+<text text-anchor="middle" x="880" y="-811.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">mean_value</text>
+<text text-anchor="middle" x="880" y="-800.98" font-family="Helvetica" font-size="10.00" fill="#ffffff">one_dimensional_ball</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.mean_value.one_dimensional_affine»&#45;&gt;«elliptic.mean_value.one_dimensional_ball» -->
+<g id="edge73" class="edge">
+<title>«elliptic.mean_value.one_dimensional_affine»&#45;&gt;«elliptic.mean_value.one_dimensional_ball»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M880,-860.56C880,-852.74 880,-843.56 880,-835.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="880,-828.98 882.7,-834.98 880.35,-831.98 880.35,-834.98 880,-834.98 879.65,-834.98 879.65,-831.98 877.3,-834.98 880,-828.98 880,-828.98"/>
+</g>
+<!-- «elliptic.fundamental_solution.flux_normalization»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian» -->
+<g id="edge46" class="edge">
+<title>«elliptic.fundamental_solution.flux_normalization»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1446.47,-439.81C1462,-430.33 1481.32,-418.53 1497.68,-408.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1503.1,-405.24 1499.38,-410.67 1500.59,-406.89 1498.03,-408.45 1497.98,-408.36 1497.93,-408.28 1500.49,-406.72 1496.57,-406.06 1503.1,-405.24 1503.1,-405.24"/>
+</g>
+<!-- «elliptic.fundamental_solution.planar_regularization» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eplanar&#45;005Fregularization&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.planar_regularization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eplanar&#45;005Fregularization&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___planar_regularization_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1773.5,-619.39 1668.5,-619.39 1668.5,-583.39 1773.5,-583.39 1773.5,-619.39"/>
+<text text-anchor="middle" x="1721" y="-604.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="1721" y="-593.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">planar_regularization</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.planar_regularization»&#45;&gt;«elliptic.fundamental_solution.distributional_planar» -->
+<g id="edge65" class="edge">
+<title>«elliptic.fundamental_solution.planar_regularization»&#45;&gt;«elliptic.fundamental_solution.distributional_planar»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1722.48,-583.18C1723.19,-574.94 1724.06,-564.91 1724.84,-555.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1725.37,-549.75 1727.54,-555.96 1725.21,-552.75 1724.95,-555.74 1724.85,-555.73 1724.75,-555.72 1725.01,-552.73 1722.16,-555.5 1725.37,-549.75 1725.37,-549.75"/>
+</g>
+<!-- «elliptic.fundamental_solution.distributional_planar»&#45;&gt;«elliptic.fundamental_solution.planar_equation» -->
+<g id="edge75" class="edge">
+<title>«elliptic.fundamental_solution.distributional_planar»&#45;&gt;«elliptic.fundamental_solution.planar_equation»</title>
+<path fill="none" stroke="#6b7280" d="M1705.46,-510.5C1694.91,-501.55 1682.13,-490.7 1671.04,-481.29"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1666.4,-477.35 1672.72,-479.18 1668.69,-479.3 1670.98,-481.24 1670.98,-481.24 1670.98,-481.24 1668.69,-479.3 1669.23,-483.3 1666.4,-477.35 1666.4,-477.35"/>
+</g>
+<!-- «elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.radial_derivative» -->
+<g id="edge11" class="edge">
+<title>«elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.radial_derivative»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1513.55,-653.08C1484.6,-642.85 1447.92,-629.9 1418.89,-619.65"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1413.19,-617.64 1419.75,-617.09 1416.06,-618.54 1418.88,-619.54 1418.85,-619.64 1418.82,-619.73 1415.99,-618.73 1417.95,-622.18 1413.19,-617.64 1413.19,-617.64"/>
+</g>
+<!-- «elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.local_integrability» -->
+<g id="edge23" class="edge">
+<title>«elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.local_integrability»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1562,-653.08C1562,-645.45 1562,-636.31 1562,-627.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1562,-621.65 1564.7,-627.65 1562.1,-624.65 1562.1,-627.65 1562,-627.65 1561.9,-627.65 1561.9,-624.65 1559.3,-627.65 1562,-621.65 1562,-621.65"/>
+</g>
+<!-- «elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_bridge» -->
+<g id="edge24" class="edge">
+<title>«elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1509.23,-663.06C1420.13,-651.02 1239.53,-626.63 1136.52,-612.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1130.46,-611.9 1136.77,-610.03 1133.45,-612.21 1136.42,-612.61 1136.41,-612.71 1136.39,-612.81 1133.42,-612.4 1136.04,-615.38 1130.46,-611.9 1130.46,-611.9"/>
+</g>
+<!-- «elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.smooth_off_pole» -->
+<g id="edge32" class="edge">
+<title>«elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.smooth_off_pole»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1614.58,-659.22C1671.72,-647.3 1763,-628.25 1823.95,-615.54"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1830.12,-614.25 1824.8,-618.12 1827.21,-614.96 1824.27,-615.58 1824.25,-615.48 1824.23,-615.38 1827.17,-614.77 1823.7,-612.83 1830.12,-614.25 1830.12,-614.25"/>
+</g>
+<!-- «elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian» -->
+<g id="edge43" class="edge">
+<title>«elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.distributional_newtonian»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1614.65,-667.38C1719.86,-661.28 1948.26,-645.4 1974,-621.19 2010.24,-587.1 2019.66,-547.53 1987,-509.99 1919.55,-432.46 1844.83,-532.95 1758,-477.99 1740.21,-466.73 1749.14,-450.61 1732,-438.39 1720.83,-430.43 1651.49,-413.83 1597.55,-401.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1591.39,-400.39 1597.83,-399.06 1594.34,-400.94 1597.27,-401.59 1597.24,-401.69 1597.22,-401.79 1594.29,-401.14 1596.66,-404.33 1591.39,-400.39 1591.39,-400.39"/>
+</g>
+<!-- «elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.planar_regularization» -->
+<g id="edge62" class="edge">
+<title>«elliptic.fundamental_solution»&#45;&gt;«elliptic.fundamental_solution.planar_regularization»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1602.12,-653.08C1624.34,-643.6 1652.05,-631.79 1675.13,-621.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1680.89,-619.49 1676.43,-624.33 1678.17,-620.76 1675.41,-621.94 1675.37,-621.84 1675.33,-621.75 1678.09,-620.57 1674.31,-619.36 1680.89,-619.49 1680.89,-619.49"/>
+</g>
+<!-- «elliptic.harnack.compact_comparison» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Ecompact&#45;005Fcomparison&#45;00BB" class="node">
+<title>«elliptic.harnack.compact_comparison»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eharnack&#45;002Ecompact&#45;005Fcomparison&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___harnack___compact_comparison_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="1107" cy="-316.79" rx="81.23" ry="18"/>
+<text text-anchor="middle" x="1107" y="-314.29" font-family="Helvetica" font-size="10.00" fill="#ffffff">harnack.compact_comparison</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.harnack.local_ball»&#45;&gt;«elliptic.harnack.compact_comparison» -->
+<g id="edge77" class="edge">
+<title>«elliptic.harnack.local_ball»&#45;&gt;«elliptic.harnack.compact_comparison»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1163.46,-369.53C1153.37,-360.27 1140.56,-348.55 1129.71,-338.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1125.18,-334.45 1131.43,-336.52 1127.63,-336.22 1129.84,-338.25 1129.61,-338.51 1129.37,-338.77 1127.16,-336.74 1127.78,-340.5 1125.18,-334.45 1125.18,-334.45"/>
+</g>
+<!-- «elliptic.fundamental_solution.surface_flux»&#45;&gt;«elliptic.fundamental_solution.flux_normalization» -->
+<g id="edge59" class="edge">
+<title>«elliptic.fundamental_solution.surface_flux»&#45;&gt;«elliptic.fundamental_solution.flux_normalization»</title>
+<path fill="none" stroke="#6b7280" d="M1382.86,-510.14C1388.57,-501.87 1395.35,-492.04 1401.42,-483.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1405.1,-477.89 1403.92,-484.37 1403.4,-480.36 1401.69,-482.83 1401.69,-482.83 1401.69,-482.83 1403.4,-480.36 1399.47,-481.3 1405.1,-477.89 1405.1,-477.89"/>
+</g>
+<!-- «elliptic.maximum.hopf»&#45;&gt;«elliptic.maximum.matrix_strong» -->
+<g id="edge10" class="edge">
+<title>«elliptic.maximum.hopf»&#45;&gt;«elliptic.maximum.matrix_strong»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M305.72,-298.69C304.13,-290.4 302.2,-280.32 300.48,-271.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="299.32,-265.33 303.11,-270.72 300.23,-268.21 300.8,-271.16 300.45,-271.23 300.11,-271.29 299.55,-268.35 297.8,-271.73 299.32,-265.33 299.32,-265.33"/>
+</g>
+<!-- «elliptic.maximum.hopf»&#45;&gt;«elliptic.moving_planes.continuation» -->
+<g id="edge16" class="edge">
+<title>«elliptic.maximum.hopf»&#45;&gt;«elliptic.moving_planes.continuation»</title>
+<path fill="none" stroke="#6b7280" d="M337.2,-302.75C351.31,-294.59 367.05,-282.6 375,-266.79 380.23,-256.4 379.3,-176.82 373,-155.6 370.23,-146.27 365.22,-136.95 360.08,-128.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="356.52,-123.68 362.11,-127.15 358.19,-126.17 359.87,-128.66 359.87,-128.66 359.87,-128.66 358.19,-126.17 357.63,-130.16 356.52,-123.68 356.52,-123.68"/>
+</g>
+<!-- «elliptic.harnack.compact_comparison»&#45;&gt;«elliptic.harnack.variable_coefficients» -->
+<g id="edge51" class="edge">
+<title>«elliptic.harnack.compact_comparison»&#45;&gt;«elliptic.harnack.variable_coefficients»</title>
+<path fill="none" stroke="#6b7280" d="M1032.57,-309.36C990.95,-305.91 938.11,-301.77 891,-298.79 591.7,-279.92 514.21,-306.8 217,-266.79 208.13,-265.6 198.82,-263.94 189.75,-262.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="183.83,-260.85 190.26,-259.44 186.77,-261.46 189.7,-262.08 189.7,-262.08 189.7,-262.08 186.77,-261.46 189.15,-264.72 183.83,-260.85 183.83,-260.85"/>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional_distribution» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;005Fdistribution&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.one_dimensional_distribution»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;005Fdistribution&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___one_dimensional_distribution_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="952,-619.39 814,-619.39 814,-583.39 952,-583.39 952,-619.39"/>
+<text text-anchor="middle" x="883" y="-604.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="883" y="-593.39" font-family="Helvetica" font-size="10.00" fill="#ffffff">one_dimensional_distribution</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional_distribution»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_equation» -->
+<g id="edge30" class="edge">
+<title>«elliptic.fundamental_solution.one_dimensional_distribution»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_equation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M874.77,-583.1C866.55,-562.99 857.43,-530 875,-509.99 911.22,-468.73 1065.71,-486.21 1120,-477.99 1131.4,-476.26 1143.45,-474.31 1155.21,-472.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1161.33,-471.3 1155.86,-474.97 1158.39,-471.9 1155.43,-472.4 1155.41,-472.3 1155.4,-472.2 1158.36,-471.71 1154.97,-469.64 1161.33,-471.3 1161.33,-471.3"/>
+</g>
+<!-- «elliptic.maximum.matrix_operator» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ematrix&#45;005Foperator&#45;00BB" class="node">
+<title>«elliptic.maximum.matrix_operator»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emaximum&#45;002Ematrix&#45;005Foperator&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___maximum___matrix_operator_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="230.5,-476.19 103.5,-476.19 103.5,-440.19 230.5,-440.19 230.5,-476.19"/>
+<text text-anchor="middle" x="167" y="-455.69" font-family="Helvetica" font-size="10.00" fill="#ffffff">maximum.matrix_operator</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.maximum.matrix_strong» -->
+<g id="edge9" class="edge">
+<title>«elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.maximum.matrix_strong»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M174.76,-439.83C188.48,-409.89 218.72,-347.11 252,-298.79 259.04,-288.58 267.82,-278.09 275.68,-269.31"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="279.94,-264.62 277.9,-270.88 277.99,-266.91 275.98,-269.13 275.9,-269.06 275.83,-269 277.84,-266.78 273.9,-267.25 279.94,-264.62 279.94,-264.62"/>
+</g>
+<!-- «elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.harnack.contact_measure» -->
+<g id="edge48" class="edge">
+<title>«elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.harnack.contact_measure»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M147.22,-439.99C136.21,-430.41 122.42,-418.41 110.82,-408.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="106,-404.12 112.3,-406.02 108.33,-406.01 110.59,-407.98 110.52,-408.06 110.46,-408.13 108.19,-406.16 108.75,-410.09 106,-404.12 106,-404.12"/>
+</g>
+<!-- «elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.harnack.variable_coefficients» -->
+<g id="edge49" class="edge">
+<title>«elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.harnack.variable_coefficients»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M169.9,-440C174.21,-410.31 180.17,-347.91 164,-298.79 160.96,-289.54 155.95,-280.22 150.84,-272.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="147.31,-266.74 152.86,-270.28 149.04,-269.2 150.68,-271.71 150.6,-271.76 150.52,-271.82 148.87,-269.31 148.34,-273.24 147.31,-266.74 147.31,-266.74"/>
+</g>
+<!-- «elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.maximum.matrix_weak» -->
+<g id="edge52" class="edge">
+<title>«elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.maximum.matrix_weak»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" stroke-dasharray="5,2" d="M206.63,-440.17C231.88,-429.32 264.47,-415.31 289.67,-404.49"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="295.25,-402.09 290.81,-406.94 292.64,-403.6 289.88,-404.78 289.74,-404.46 289.6,-404.14 292.36,-402.95 288.68,-401.98 295.25,-402.09 295.25,-402.09"/>
+</g>
+<!-- «elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.maximum.hopf» -->
+<g id="edge71" class="edge">
+<title>«elliptic.maximum.matrix_operator»&#45;&gt;«elliptic.maximum.hopf»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M184.81,-440.12C194.76,-430.42 207.28,-417.93 218,-406.39 233.78,-389.39 235.6,-383.2 252,-366.79 262.32,-356.47 274.5,-345.81 284.95,-337.08"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="289.62,-333.22 286.72,-339.12 287.37,-335.21 285.06,-337.12 285,-337.04 284.94,-336.97 287.25,-335.05 283.28,-334.96 289.62,-333.22 289.62,-333.22"/>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;00BB" class="node">
+<title>«elliptic.fundamental_solution.one_dimensional»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efundamental&#45;005Fsolution&#45;002Eone&#45;005Fdimensional&#45;00BB"><a xlink:href="Elliptic-Equations/#--informal-preview-_FLQQ_elliptic___fundamental_solution___one_dimensional_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="1051.5,-689.19 946.5,-689.19 946.5,-653.19 1051.5,-653.19 1051.5,-689.19"/>
+<text text-anchor="middle" x="999" y="-674.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">fundamental_solution</text>
+<text text-anchor="middle" x="999" y="-663.19" font-family="Helvetica" font-size="10.00" fill="#ffffff">one_dimensional</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_bridge» -->
+<g id="edge25" class="edge">
+<title>«elliptic.fundamental_solution.one_dimensional»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_bridge»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M1014.39,-653.08C1021.78,-644.87 1030.74,-634.9 1038.77,-625.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1043.11,-621.16 1041.1,-627.43 1041.18,-623.46 1039.17,-625.69 1039.1,-625.62 1039.02,-625.55 1041.03,-623.32 1037.09,-623.81 1043.11,-621.16 1043.11,-621.16"/>
+</g>
+<!-- «elliptic.fundamental_solution.one_dimensional»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_distribution» -->
+<g id="edge78" class="edge">
+<title>«elliptic.fundamental_solution.one_dimensional»&#45;&gt;«elliptic.fundamental_solution.one_dimensional_distribution»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M969.73,-653.08C953.93,-643.84 934.33,-632.39 917.76,-622.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="912.26,-619.49 918.8,-620.19 914.9,-620.92 917.49,-622.43 917.44,-622.52 917.39,-622.6 914.8,-621.09 916.08,-624.85 912.26,-619.49 912.26,-619.49"/>
+</g>
+</g>
+</svg>

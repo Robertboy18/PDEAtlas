@@ -1,0 +1,1455 @@
+<svg data-node-count="67" data-edge-count="124" data-cluster-count="0" data-variant-key="group" width="2976pt" height="876pt"
+ viewBox="0.00 0.00 2976.00 876.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 872)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-872 2972,-872 2972,4 -4,4"/>
+<!-- «fluid.axisymmetric» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;00BB" class="node">
+<title>«fluid.axisymmetric»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;00BB"><a xlink:title="Group View: Axisymmetric coordinates and streamfunctions (4 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="125,-311 12,-311 12,-315 0,-315 0,-275 125,-275 125,-311"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="0,-311 12,-311 "/>
+<text text-anchor="middle" x="62.5" y="-296" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Axisymmetric coordinates</text>
+<text text-anchor="middle" x="62.5" y="-285" font-family="Helvetica" font-size="10.00" fill="#f8fafc">and streamfunctions</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric_swirl» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;00BB" class="node">
+<title>«fluid.axisymmetric_swirl»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eaxisymmetric&#45;005Fswirl&#45;00BB"><a xlink:title="Group View: Axisymmetric flow with swirl (8 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="185.5,-243 83.5,-243 83.5,-247 71.5,-247 71.5,-207 185.5,-207 185.5,-243"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="71.5,-243 83.5,-243 "/>
+<text text-anchor="middle" x="128.5" y="-228" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Axisymmetric flow with</text>
+<text text-anchor="middle" x="128.5" y="-217" font-family="Helvetica" font-size="10.00" fill="#f8fafc">swirl</text>
+</a>
+</g>
+</g>
+<!-- «fluid.axisymmetric»&#45;&gt;«fluid.axisymmetric_swirl» -->
+<g id="edge2" class="edge">
+<title>«fluid.axisymmetric»&#45;&gt;«fluid.axisymmetric_swirl»</title>
+<path fill="none" stroke="#6b7280" d="M79.84,-274.66C87.96,-266.54 97.73,-256.77 106.38,-248.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="111.05,-243.45 108.71,-249.61 108.92,-245.58 106.8,-247.7 106.8,-247.7 106.8,-247.7 108.92,-245.58 104.89,-245.79 111.05,-243.45 111.05,-243.45"/>
+</g>
+<!-- «foundations.boundary_calculus» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;00BB" class="node">
+<title>«foundations.boundary_calculus»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eboundary&#45;005Fcalculus&#45;00BB"><a xlink:title="Group View: Boundary integration and operational boundary geometry (89 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1615,-450 1506,-450 1506,-454 1494,-454 1494,-411 1615,-411 1615,-450"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1494,-450 1506,-450 "/>
+<text text-anchor="middle" x="1554.5" y="-439" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Boundary integration and</text>
+<text text-anchor="middle" x="1554.5" y="-428" font-family="Helvetica" font-size="10.00" fill="#f8fafc">operational boundary</text>
+<text text-anchor="middle" x="1554.5" y="-417" font-family="Helvetica" font-size="10.00" fill="#f8fafc">geometry</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.energy_methods» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;005Fmethods&#45;00BB" class="node">
+<title>«elliptic.energy_methods»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eenergy&#45;005Fmethods&#45;00BB"><a xlink:title="Group View: Green identities and energy methods (5 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1604.5,-379 1516.5,-379 1516.5,-383 1504.5,-383 1504.5,-343 1604.5,-343 1604.5,-379"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1504.5,-379 1516.5,-379 "/>
+<text text-anchor="middle" x="1554.5" y="-364" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Green identities and</text>
+<text text-anchor="middle" x="1554.5" y="-353" font-family="Helvetica" font-size="10.00" fill="#f8fafc">energy methods</text>
+</a>
+</g>
+</g>
+<!-- «foundations.boundary_calculus»&#45;&gt;«elliptic.energy_methods» -->
+<g id="edge44" class="edge">
+<title>«foundations.boundary_calculus»&#45;&gt;«elliptic.energy_methods»</title>
+<path fill="none" stroke="#6b7280" d="M1554.5,-410.7C1554.5,-402.86 1554.5,-393.68 1554.5,-385.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1554.5,-379.31 1557.2,-385.31 1554.5,-382.31 1554.5,-385.31 1554.5,-385.31 1554.5,-385.31 1554.5,-382.31 1551.8,-385.31 1554.5,-379.31 1554.5,-379.31"/>
+</g>
+<!-- «hyperbolic.canonical_form_2d» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;00BB" class="node">
+<title>«hyperbolic.canonical_form_2d»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ecanonical&#45;005Fform&#45;005F2d&#45;00BB"><a xlink:title="Group View: Canonical form in two dimensions (5 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2025.5,-868 1931.5,-868 1931.5,-872 1919.5,-872 1919.5,-832 2025.5,-832 2025.5,-868"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1919.5,-868 1931.5,-868 "/>
+<text text-anchor="middle" x="1972.5" y="-853" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Canonical form in two</text>
+<text text-anchor="middle" x="1972.5" y="-842" font-family="Helvetica" font-size="10.00" fill="#f8fafc">dimensions</text>
+</a>
+</g>
+</g>
+<!-- «foundations.cauchy» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;00BB" class="node">
+<title>«foundations.cauchy»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecauchy&#45;00BB"><a xlink:title="Group View: Cauchy problems and the Cauchy–Kovalevskaya theorem (12 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="710.5,-450 598.5,-450 598.5,-454 586.5,-454 586.5,-411 710.5,-411 710.5,-450"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="586.5,-450 598.5,-450 "/>
+<text text-anchor="middle" x="648.5" y="-439" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Cauchy problems and the</text>
+<text text-anchor="middle" x="648.5" y="-428" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Cauchy–Kovalevskaya</text>
+<text text-anchor="middle" x="648.5" y="-417" font-family="Helvetica" font-size="10.00" fill="#f8fafc">theorem</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.cega» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Ecega&#45;00BB" class="node">
+<title>«symbolic.cega»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Ecega&#45;00BB"><a xlink:title="Group View: Certified continuous computation (106 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2087.5,-448.5 1999.5,-448.5 1999.5,-452.5 1987.5,-452.5 1987.5,-412.5 2087.5,-412.5 2087.5,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1987.5,-448.5 1999.5,-448.5 "/>
+<text text-anchor="middle" x="2037.5" y="-433.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Certified continuous</text>
+<text text-anchor="middle" x="2037.5" y="-422.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">computation</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.classical» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eclassical&#45;00BB" class="node">
+<title>«parabolic.classical»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eclassical&#45;00BB"><a xlink:title="Group View: Classical heat equation (34 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1366,-518 1263,-518 1263,-522 1251,-522 1251,-482 1366,-482 1366,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1251,-518 1263,-518 "/>
+<text text-anchor="middle" x="1308.5" y="-497.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Classical heat equation</text>
+</a>
+</g>
+</g>
+<!-- «methods.representations» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Erepresentations&#45;00BB" class="node">
+<title>«methods.representations»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Erepresentations&#45;00BB"><a xlink:title="Group View: Representation methods (79 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1315.5,-448.5 1209.5,-448.5 1209.5,-452.5 1197.5,-452.5 1197.5,-412.5 1315.5,-412.5 1315.5,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1197.5,-448.5 1209.5,-448.5 "/>
+<text text-anchor="middle" x="1256.5" y="-428" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Representation methods</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.classical»&#45;&gt;«methods.representations» -->
+<g id="edge69" class="edge">
+<title>«parabolic.classical»&#45;&gt;«methods.representations»</title>
+<path fill="none" stroke="#6b7280" d="M1295.38,-481.97C1288.78,-473.4 1280.7,-462.91 1273.61,-453.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1269.8,-448.76 1275.6,-451.87 1271.63,-451.14 1273.46,-453.52 1273.46,-453.52 1273.46,-453.52 1271.63,-451.14 1271.32,-455.16 1269.8,-448.76 1269.8,-448.76"/>
+</g>
+<!-- «symbolic.theorem_api» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Etheorem&#45;005Fapi&#45;00BB" class="node">
+<title>«symbolic.theorem_api»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Etheorem&#45;005Fapi&#45;00BB"><a xlink:title="Group View: Symbolic PDE proofs (5 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1431.5,-379 1337.5,-379 1337.5,-383 1325.5,-383 1325.5,-343 1431.5,-343 1431.5,-379"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1325.5,-379 1337.5,-379 "/>
+<text text-anchor="middle" x="1378.5" y="-358.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Symbolic PDE proofs</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.classical»&#45;&gt;«symbolic.theorem_api» -->
+<g id="edge101" class="edge">
+<title>«parabolic.classical»&#45;&gt;«symbolic.theorem_api»</title>
+<path fill="none" stroke="#6b7280" d="M1317.22,-481.93C1329.75,-457.42 1352.85,-412.21 1366.83,-384.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1369.67,-379.29 1369.34,-385.86 1368.3,-381.96 1366.94,-384.63 1366.94,-384.63 1366.94,-384.63 1368.3,-381.96 1364.53,-383.4 1369.67,-379.29 1369.67,-379.29"/>
+</g>
+<!-- «hyperbolic.classical_wave» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eclassical&#45;005Fwave&#45;00BB" class="node">
+<title>«hyperbolic.classical_wave»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eclassical&#45;005Fwave&#45;00BB"><a xlink:title="Group View: Classical wave equations (25 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1121,-448.5 1010,-448.5 1010,-452.5 998,-452.5 998,-412.5 1121,-412.5 1121,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="998,-448.5 1010,-448.5 "/>
+<text text-anchor="middle" x="1059.5" y="-428" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Classical wave equations</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.nonlinear_wave» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Enonlinear&#45;005Fwave&#45;00BB" class="node">
+<title>«hyperbolic.nonlinear_wave»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Enonlinear&#45;005Fwave&#45;00BB"><a xlink:title="Group View: Semilinear wave equations (22 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1905.5,-173.5 1789.5,-173.5 1789.5,-177.5 1777.5,-177.5 1777.5,-137.5 1905.5,-137.5 1905.5,-173.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1777.5,-173.5 1789.5,-173.5 "/>
+<text text-anchor="middle" x="1841.5" y="-153" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Semilinear wave equations</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.classical_wave»&#45;&gt;«hyperbolic.nonlinear_wave» -->
+<g id="edge78" class="edge">
+<title>«hyperbolic.classical_wave»&#45;&gt;«hyperbolic.nonlinear_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1103.45,-412.49C1153.65,-393.54 1238.55,-362.95 1313.5,-343 1425.95,-313.06 1746.53,-326.58 1827.5,-243 1843.55,-226.44 1845.5,-199.16 1844.42,-179.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1843.98,-173.63 1847.11,-179.42 1844.55,-176.6 1844.77,-179.59 1844.42,-179.61 1844.07,-179.64 1843.85,-176.65 1841.72,-179.81 1843.98,-173.63 1843.98,-173.63"/>
+</g>
+<!-- «foundations.coordinates» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;00BB" class="node">
+<title>«foundations.coordinates»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ecoordinates&#45;00BB"><a xlink:title="Group View: Coordinate systems (17 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="383,-518 296,-518 296,-522 284,-522 284,-482 383,-482 383,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="284,-518 296,-518 "/>
+<text text-anchor="middle" x="333.5" y="-497.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Coordinate systems</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.hamilton_jacobi» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehamilton&#45;005Fjacobi&#45;00BB" class="node">
+<title>«hyperbolic.hamilton_jacobi»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehamilton&#45;005Fjacobi&#45;00BB"><a xlink:title="Group View: Hamilton–Jacobi and Hopf–Lax (24 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="510,-448.5 417,-448.5 417,-452.5 405,-452.5 405,-412.5 510,-412.5 510,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="405,-448.5 417,-448.5 "/>
+<text text-anchor="middle" x="457.5" y="-433.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Hamilton–Jacobi and</text>
+<text text-anchor="middle" x="457.5" y="-422.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Hopf–Lax</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates»&#45;&gt;«hyperbolic.hamilton_jacobi» -->
+<g id="edge50" class="edge">
+<title>«foundations.coordinates»&#45;&gt;«hyperbolic.hamilton_jacobi»</title>
+<path fill="none" stroke="#6b7280" d="M364.79,-481.97C381.83,-472.69 403,-461.17 420.81,-451.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="426.22,-448.53 422.24,-453.77 423.58,-449.96 420.95,-451.4 420.95,-451.4 420.95,-451.4 423.58,-449.96 419.66,-449.02 426.22,-448.53 426.22,-448.53"/>
+</g>
+<!-- «fluid.equations» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;00BB" class="node">
+<title>«fluid.equations»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eequations&#45;00BB"><a xlink:title="Group View: Incompressible fluid equations (14 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="321.5,-448.5 233.5,-448.5 233.5,-452.5 221.5,-452.5 221.5,-412.5 321.5,-412.5 321.5,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="221.5,-448.5 233.5,-448.5 "/>
+<text text-anchor="middle" x="271.5" y="-433.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Incompressible fluid</text>
+<text text-anchor="middle" x="271.5" y="-422.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">equations</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates»&#45;&gt;«fluid.equations» -->
+<g id="edge55" class="edge">
+<title>«foundations.coordinates»&#45;&gt;«fluid.equations»</title>
+<path fill="none" stroke="#6b7280" d="M317.85,-481.97C309.84,-473.24 299.99,-462.52 291.44,-453.21"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="287.36,-448.76 293.4,-451.35 289.39,-450.97 291.41,-453.18 291.41,-453.18 291.41,-453.18 289.39,-450.97 289.43,-455.01 287.36,-448.76 287.36,-448.76"/>
+</g>
+<!-- «fluid.boussinesq» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;00BB" class="node">
+<title>«fluid.boussinesq»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eboussinesq&#45;00BB"><a xlink:title="Group View: Two&#45;dimensional inviscid Boussinesq flow (26 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="427,-311 318,-311 318,-315 306,-315 306,-275 427,-275 427,-311"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="306,-311 318,-311 "/>
+<text text-anchor="middle" x="366.5" y="-296" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Two&#45;dimensional inviscid</text>
+<text text-anchor="middle" x="366.5" y="-285" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Boussinesq flow</text>
+</a>
+</g>
+</g>
+<!-- «foundations.coordinates»&#45;&gt;«fluid.boussinesq» -->
+<g id="edge108" class="edge">
+<title>«foundations.coordinates»&#45;&gt;«fluid.boussinesq»</title>
+<path fill="none" stroke="#6b7280" d="M336.26,-481.87C342.17,-445.17 356.05,-358.89 362.75,-317.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="363.73,-311.22 365.44,-317.57 363.25,-314.18 362.77,-317.14 362.77,-317.14 362.77,-317.14 363.25,-314.18 360.11,-316.72 363.73,-311.22 363.73,-311.22"/>
+</g>
+<!-- «sobolev.difference_quotients» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Edifference&#45;005Fquotients&#45;00BB" class="node">
+<title>«sobolev.difference_quotients»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Edifference&#45;005Fquotients&#45;00BB"><a xlink:title="Group View: Difference quotients (12 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2187.5,-311 2099.5,-311 2099.5,-315 2087.5,-315 2087.5,-275 2187.5,-275 2187.5,-311"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2087.5,-311 2099.5,-311 "/>
+<text text-anchor="middle" x="2137.5" y="-290.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Difference quotients</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;00BB" class="node">
+<title>«foundations.derivatives»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ederivatives&#45;00BB"><a xlink:title="Group View: Differential operators (26 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1299,-586 1208,-586 1208,-590 1196,-590 1196,-550 1299,-550 1299,-586"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1196,-586 1208,-586 "/>
+<text text-anchor="middle" x="1247.5" y="-565.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Differential operators</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«foundations.boundary_calculus» -->
+<g id="edge4" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«foundations.boundary_calculus»</title>
+<path fill="none" stroke="#6b7280" d="M1299.13,-563.66C1393.63,-557.02 1586.59,-540.81 1606.5,-518 1623.53,-498.49 1603.56,-472.67 1583.63,-454.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1579.13,-450.3 1585.4,-452.29 1581.37,-452.3 1583.6,-454.3 1583.6,-454.3 1583.6,-454.3 1581.37,-452.3 1581.8,-456.32 1579.13,-450.3 1579.13,-450.3"/>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«foundations.cauchy» -->
+<g id="edge7" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«foundations.cauchy»</title>
+<path fill="none" stroke="#6b7280" d="M1195.66,-567.04C1079.87,-566.36 803.98,-560.22 722.5,-518 695.6,-504.06 674.38,-475.8 661.69,-455.36"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="658.49,-450.09 663.91,-453.82 660.04,-452.65 661.6,-455.22 661.6,-455.22 661.6,-455.22 660.04,-452.65 659.29,-456.62 658.49,-450.09 658.49,-450.09"/>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«parabolic.classical» -->
+<g id="edge10" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«parabolic.classical»</title>
+<path fill="none" stroke="#6b7280" d="M1263.53,-549.66C1271.03,-541.54 1280.06,-531.77 1288.05,-523.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1292.37,-518.45 1290.28,-524.69 1290.33,-520.66 1288.3,-522.86 1288.3,-522.86 1288.3,-522.86 1290.33,-520.66 1286.31,-521.03 1292.37,-518.45 1292.37,-518.45"/>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«hyperbolic.classical_wave» -->
+<g id="edge11" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«hyperbolic.classical_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1195.91,-565.07C1126.4,-561.26 1008.24,-550.12 981.5,-518 971.26,-505.7 973.86,-496.06 981.5,-482 988.38,-469.35 999.94,-459.38 1012.09,-451.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1017.32,-448.64 1013.55,-454.04 1014.92,-450.48 1012.34,-452.02 1012.16,-451.72 1011.98,-451.42 1014.56,-449.88 1010.78,-449.4 1017.32,-448.64 1017.32,-448.64"/>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«foundations.coordinates» -->
+<g id="edge13" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«foundations.coordinates»</title>
+<path fill="none" stroke="#6b7280" d="M1195.8,-565.45C1035.92,-560.44 550.94,-543.49 395.5,-518 393.34,-517.64 391.14,-517.24 388.92,-516.81"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="383.04,-515.57 389.47,-514.16 385.98,-516.19 388.91,-516.8 388.91,-516.8 388.91,-516.8 385.98,-516.19 388.36,-519.45 383.04,-515.57 383.04,-515.57"/>
+</g>
+<!-- «methods.direct_method» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;00BB" class="node">
+<title>«methods.direct_method»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Edirect&#45;005Fmethod&#45;00BB"><a xlink:title="Group View: Direct variational methods (31 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2061.5,-379 1947.5,-379 1947.5,-383 1935.5,-383 1935.5,-343 2061.5,-343 2061.5,-379"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1935.5,-379 1947.5,-379 "/>
+<text text-anchor="middle" x="1998.5" y="-358.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Direct variational methods</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«methods.direct_method» -->
+<g id="edge19" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«methods.direct_method»</title>
+<path fill="none" stroke="#6b7280" d="M1299.33,-563.38C1389.08,-556.6 1569.5,-540.62 1628.5,-518 1706.66,-488.04 1706.87,-444.68 1783.5,-411 1830.03,-390.55 1886.12,-378.13 1929.34,-370.92"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1935.35,-369.93 1929.87,-373.57 1932.39,-370.42 1929.43,-370.9 1929.43,-370.9 1929.43,-370.9 1932.39,-370.42 1928.99,-368.24 1935.35,-369.93 1935.35,-369.93"/>
+</g>
+<!-- «foundations.distributions» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Edistributions&#45;00BB" class="node">
+<title>«foundations.distributions»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Edistributions&#45;00BB"><a xlink:title="Group View: Distributions (96 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1788,-518 1733,-518 1733,-522 1721,-522 1721,-482 1788,-482 1788,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1721,-518 1733,-518 "/>
+<text text-anchor="middle" x="1754.5" y="-497.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Distributions</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«foundations.distributions» -->
+<g id="edge22" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«foundations.distributions»</title>
+<path fill="none" stroke="#6b7280" d="M1299.1,-564.84C1383.89,-560.53 1557.64,-548.5 1701.5,-518 1705.85,-517.08 1710.36,-515.94 1714.82,-514.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1720.85,-512.92 1715.85,-517.2 1717.97,-513.76 1715.09,-514.6 1715.09,-514.6 1715.09,-514.6 1717.97,-513.76 1714.33,-512.01 1720.85,-512.92 1720.85,-512.92"/>
+</g>
+<!-- «elliptic.representation» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Erepresentation&#45;00BB" class="node">
+<title>«elliptic.representation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Erepresentation&#45;00BB"><a xlink:title="Group View: Fundamental solutions and mean values (58 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="972.5,-448.5 854.5,-448.5 854.5,-452.5 842.5,-452.5 842.5,-412.5 972.5,-412.5 972.5,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="842.5,-448.5 854.5,-448.5 "/>
+<text text-anchor="middle" x="907.5" y="-433.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Fundamental solutions and</text>
+<text text-anchor="middle" x="907.5" y="-422.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">mean values</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«elliptic.representation» -->
+<g id="edge40" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«elliptic.representation»</title>
+<path fill="none" stroke="#6b7280" d="M1195.79,-562.57C1126.06,-555.8 1006.36,-541.2 969.5,-518 945.2,-502.71 927.56,-474.11 917.44,-453.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="914.79,-448.56 919.85,-452.77 916.11,-451.26 917.42,-453.95 917.42,-453.95 917.42,-453.95 916.11,-451.26 915,-455.14 914.79,-448.56 914.79,-448.56"/>
+</g>
+<!-- «elliptic.green_kernels» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Egreen&#45;005Fkernels&#45;00BB" class="node">
+<title>«elliptic.green_kernels»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Egreen&#45;005Fkernels&#45;00BB"><a xlink:title="Group View: Green and Poisson kernels (40 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="840.5,-379 722.5,-379 722.5,-383 710.5,-383 710.5,-343 840.5,-343 840.5,-379"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="710.5,-379 722.5,-379 "/>
+<text text-anchor="middle" x="775.5" y="-358.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Green and Poisson kernels</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«elliptic.green_kernels» -->
+<g id="edge43" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«elliptic.green_kernels»</title>
+<path fill="none" stroke="#6b7280" d="M1195.93,-565.85C1073.96,-562.62 770.87,-551.38 675.5,-518 624.08,-500 599.21,-498.04 573.5,-450 565.32,-434.72 562.79,-424.62 573.5,-411 589.74,-390.35 652.83,-377.34 704.24,-369.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="710.45,-369.09 704.88,-372.6 707.48,-369.51 704.51,-369.92 704.51,-369.92 704.51,-369.92 707.48,-369.51 704.13,-367.25 710.45,-369.09 710.45,-369.09"/>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«elliptic.energy_methods» -->
+<g id="edge45" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«elliptic.energy_methods»</title>
+<path fill="none" stroke="#6b7280" d="M1299.34,-559.47C1331.9,-552.76 1373.47,-540.38 1404.5,-518 1452.02,-483.73 1439.4,-451.75 1481.5,-411 1492.54,-400.32 1506.18,-390.46 1518.67,-382.43"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1523.94,-379.11 1520.3,-384.59 1521.4,-380.71 1518.86,-382.31 1518.86,-382.31 1518.86,-382.31 1521.4,-380.71 1517.42,-380.03 1523.94,-379.11 1523.94,-379.11"/>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«hyperbolic.hamilton_jacobi» -->
+<g id="edge48" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«hyperbolic.hamilton_jacobi»</title>
+<path fill="none" stroke="#6b7280" d="M1195.64,-566.87C1058.68,-565.94 690.03,-559.54 576.5,-518 556.32,-510.62 511.26,-475.57 482.74,-452.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="477.96,-448.52 484.32,-450.22 480.29,-450.42 482.62,-452.31 482.62,-452.31 482.62,-452.31 480.29,-450.42 480.91,-454.41 477.96,-448.52 477.96,-448.52"/>
+</g>
+<!-- «foundations.pde_problems» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;00BB" class="node">
+<title>«foundations.pde_problems»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Epde&#45;005Fproblems&#45;00BB"><a xlink:title="Group View: PDE problem interfaces (10 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="851.5,-518 747.5,-518 747.5,-522 735.5,-522 735.5,-482 851.5,-482 851.5,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="735.5,-518 747.5,-518 "/>
+<text text-anchor="middle" x="793.5" y="-497.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">PDE problem interfaces</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«foundations.pde_problems» -->
+<g id="edge64" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«foundations.pde_problems»</title>
+<path fill="none" stroke="#6b7280" d="M1195.98,-560.76C1125.84,-552.1 996.43,-535.5 886.5,-518 877.24,-516.53 867.48,-514.86 857.9,-513.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="851.97,-512.11 858.35,-510.51 854.92,-512.64 857.88,-513.16 857.88,-513.16 857.88,-513.16 854.92,-512.64 857.4,-515.82 851.97,-512.11 851.97,-512.11"/>
+</g>
+<!-- «parabolic.maximum_principles» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Emaximum&#45;005Fprinciples&#45;00BB" class="node">
+<title>«parabolic.maximum_principles»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Emaximum&#45;005Fprinciples&#45;00BB"><a xlink:title="Group View: Parabolic maximum principles (18 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1593.5,-518 1505.5,-518 1505.5,-522 1493.5,-522 1493.5,-482 1593.5,-482 1593.5,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1493.5,-518 1505.5,-518 "/>
+<text text-anchor="middle" x="1543.5" y="-503" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Parabolic maximum</text>
+<text text-anchor="middle" x="1543.5" y="-492" font-family="Helvetica" font-size="10.00" fill="#f8fafc">principles</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«parabolic.maximum_principles» -->
+<g id="edge65" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«parabolic.maximum_principles»</title>
+<path fill="none" stroke="#6b7280" d="M1299.44,-556.24C1345.51,-546.58 1414.59,-531.84 1474.5,-518 1478.71,-517.03 1483.07,-516 1487.45,-514.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1493.42,-513.52 1488.21,-517.55 1490.5,-514.22 1487.58,-514.92 1487.58,-514.92 1487.58,-514.92 1490.5,-514.22 1486.95,-512.3 1493.42,-513.52 1493.42,-513.52"/>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«symbolic.theorem_api» -->
+<g id="edge100" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«symbolic.theorem_api»</title>
+<path fill="none" stroke="#6b7280" d="M1299.05,-561.79C1327.52,-555.98 1360.65,-543.74 1378.5,-518 1406.11,-478.19 1395.14,-417.86 1386.02,-385.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1384.35,-379.33 1388.61,-384.34 1385.18,-382.21 1386.01,-385.09 1386.01,-385.09 1386.01,-385.09 1385.18,-382.21 1383.42,-385.84 1384.35,-379.33 1384.35,-379.33"/>
+</g>
+<!-- «symbolic.calculus» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Ecalculus&#45;00BB" class="node">
+<title>«symbolic.calculus»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Ecalculus&#45;00BB"><a xlink:title="Group View: Symbolic calculus (7 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1956.5,-518 1876.5,-518 1876.5,-522 1864.5,-522 1864.5,-482 1956.5,-482 1956.5,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1864.5,-518 1876.5,-518 "/>
+<text text-anchor="middle" x="1910.5" y="-497.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Symbolic calculus</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«symbolic.calculus» -->
+<g id="edge104" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«symbolic.calculus»</title>
+<path fill="none" stroke="#6b7280" d="M1299.08,-563.55C1397.01,-556.76 1616.56,-540.34 1800.5,-518 1819.37,-515.71 1839.98,-512.67 1858.21,-509.79"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1864.3,-508.82 1858.79,-512.43 1861.33,-509.29 1858.37,-509.77 1858.37,-509.77 1858.37,-509.77 1861.33,-509.29 1857.95,-507.1 1864.3,-508.82 1864.3,-508.82"/>
+</g>
+<!-- «hyperbolic.transport» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;00BB" class="node">
+<title>«hyperbolic.transport»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Etransport&#45;00BB"><a xlink:title="Group View: Transport and characteristics (12 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1225.5,-518 1161.5,-518 1161.5,-522 1149.5,-522 1149.5,-482 1225.5,-482 1225.5,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1149.5,-518 1161.5,-518 "/>
+<text text-anchor="middle" x="1187.5" y="-503" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Transport and</text>
+<text text-anchor="middle" x="1187.5" y="-492" font-family="Helvetica" font-size="10.00" fill="#f8fafc">characteristics</text>
+</a>
+</g>
+</g>
+<!-- «foundations.derivatives»&#45;&gt;«hyperbolic.transport» -->
+<g id="edge106" class="edge">
+<title>«foundations.derivatives»&#45;&gt;«hyperbolic.transport»</title>
+<path fill="none" stroke="#6b7280" d="M1231.74,-549.66C1224.35,-541.54 1215.47,-531.77 1207.61,-523.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1203.37,-518.45 1209.4,-521.08 1205.39,-520.67 1207.4,-522.89 1207.4,-522.89 1207.4,-522.89 1205.39,-520.67 1205.41,-524.71 1203.37,-518.45 1203.37,-518.45"/>
+</g>
+<!-- «methods.direct_method»&#45;&gt;«sobolev.difference_quotients» -->
+<g id="edge16" class="edge">
+<title>«methods.direct_method»&#45;&gt;«sobolev.difference_quotients»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M2034.66,-342.83C2053.4,-333.93 2076.38,-323.02 2095.86,-313.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2101.52,-311.08 2097.26,-316.1 2098.86,-312.46 2096.15,-313.75 2096.1,-313.66 2096.06,-313.57 2098.77,-312.28 2094.95,-311.22 2101.52,-311.08 2101.52,-311.08"/>
+</g>
+<!-- «methods.constraints» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;00BB" class="node">
+<title>«methods.constraints»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Econstraints&#45;00BB"><a xlink:title="Group View: Null Lagrangians, polyconvexity, and constrained minimization (10 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2109,-175 2000,-175 2000,-179 1988,-179 1988,-136 2109,-136 2109,-175"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1988,-175 2000,-175 "/>
+<text text-anchor="middle" x="2048.5" y="-164" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Null Lagrangians,</text>
+<text text-anchor="middle" x="2048.5" y="-153" font-family="Helvetica" font-size="10.00" fill="#f8fafc">polyconvexity, and</text>
+<text text-anchor="middle" x="2048.5" y="-142" font-family="Helvetica" font-size="10.00" fill="#f8fafc">constrained minimization</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method»&#45;&gt;«methods.constraints» -->
+<g id="edge61" class="edge">
+<title>«methods.direct_method»&#45;&gt;«methods.constraints»</title>
+<path fill="none" stroke="#6b7280" d="M2001.3,-342.84C2006.13,-314.34 2016.83,-255.59 2030.5,-207 2032.91,-198.43 2036.03,-189.22 2039,-181.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2041.22,-175.01 2041.68,-181.57 2040.18,-177.83 2039.14,-180.64 2039.14,-180.64 2039.14,-180.64 2040.18,-177.83 2036.61,-179.71 2041.22,-175.01 2041.22,-175.01"/>
+</g>
+<!-- «methods.semilinear_variational» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;005Fvariational&#45;00BB" class="node">
+<title>«methods.semilinear_variational»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;005Fvariational&#45;00BB"><a xlink:title="Group View: Semilinear variational methods (15 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2413,-173.5 2320,-173.5 2320,-177.5 2308,-177.5 2308,-137.5 2413,-137.5 2413,-173.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2308,-173.5 2320,-173.5 "/>
+<text text-anchor="middle" x="2360.5" y="-158.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Semilinear variational</text>
+<text text-anchor="middle" x="2360.5" y="-147.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">methods</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method»&#45;&gt;«methods.semilinear_variational» -->
+<g id="edge77" class="edge">
+<title>«methods.direct_method»&#45;&gt;«methods.semilinear_variational»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M2010.34,-342.93C2024.13,-324.14 2048.49,-294.05 2075.5,-275 2146.3,-225.05 2241.36,-190.92 2301.79,-172.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2307.89,-170.72 2302.93,-175.04 2305.05,-171.68 2302.18,-172.55 2302.15,-172.45 2302.12,-172.36 2304.99,-171.49 2301.37,-169.87 2307.89,-170.72 2307.89,-170.72"/>
+</g>
+<!-- «fluid.solenoidal» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;00BB" class="node">
+<title>«fluid.solenoidal»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esolenoidal&#45;00BB"><a xlink:title="Group View: Solenoidal spaces and weak pressure (5 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1906.5,-36 1782.5,-36 1782.5,-40 1770.5,-40 1770.5,0 1906.5,0 1906.5,-36"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1770.5,-36 1782.5,-36 "/>
+<text text-anchor="middle" x="1838.5" y="-21" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Solenoidal spaces and weak</text>
+<text text-anchor="middle" x="1838.5" y="-10" font-family="Helvetica" font-size="10.00" fill="#f8fafc">pressure</text>
+</a>
+</g>
+</g>
+<!-- «methods.direct_method»&#45;&gt;«fluid.solenoidal» -->
+<g id="edge98" class="edge">
+<title>«methods.direct_method»&#45;&gt;«fluid.solenoidal»</title>
+<path fill="none" stroke="#6b7280" d="M1935.38,-355.05C1865.31,-345.79 1755.27,-319.23 1703.5,-243 1654.32,-170.59 1755.77,-80.21 1808.87,-39.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1813.85,-36.25 1810.67,-42.01 1811.45,-38.05 1809.05,-39.85 1809.05,-39.85 1809.05,-39.85 1811.45,-38.05 1807.43,-37.69 1813.85,-36.25 1813.85,-36.25"/>
+</g>
+<!-- «foundations.distributions»&#45;&gt;«foundations.boundary_calculus» -->
+<g id="edge5" class="edge">
+<title>«foundations.distributions»&#45;&gt;«foundations.boundary_calculus»</title>
+<path fill="none" stroke="#6b7280" d="M1720.57,-487.55C1691.81,-477.84 1649.85,-463.68 1615.31,-452.02"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1609.39,-450.02 1615.94,-449.39 1612.23,-450.98 1615.07,-451.94 1615.07,-451.94 1615.07,-451.94 1612.23,-450.98 1614.21,-454.5 1609.39,-450.02 1609.39,-450.02"/>
+</g>
+<!-- «foundations.distributions»&#45;&gt;«methods.direct_method» -->
+<g id="edge20" class="edge">
+<title>«foundations.distributions»&#45;&gt;«methods.direct_method»</title>
+<path fill="none" stroke="#6b7280" d="M1765.31,-481.83C1778.72,-461.93 1803.38,-429.51 1832.5,-411 1861.62,-392.49 1898.02,-380.72 1929.31,-373.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1935.5,-371.97 1930.25,-375.93 1932.57,-372.63 1929.65,-373.3 1929.65,-373.3 1929.65,-373.3 1932.57,-372.63 1929.05,-370.67 1935.5,-371.97 1935.5,-371.97"/>
+</g>
+<!-- «sobolev.fourier» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Efourier&#45;00BB" class="node">
+<title>«sobolev.fourier»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Efourier&#45;00BB"><a xlink:title="Group View: Fourier and fractional Sobolev spaces (62 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2318.5,-448.5 2226.5,-448.5 2226.5,-452.5 2214.5,-452.5 2214.5,-412.5 2318.5,-412.5 2318.5,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2214.5,-448.5 2226.5,-448.5 "/>
+<text text-anchor="middle" x="2266.5" y="-433.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Fourier and fractional</text>
+<text text-anchor="middle" x="2266.5" y="-422.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Sobolev spaces</text>
+</a>
+</g>
+</g>
+<!-- «foundations.distributions»&#45;&gt;«sobolev.fourier» -->
+<g id="edge34" class="edge">
+<title>«foundations.distributions»&#45;&gt;«sobolev.fourier»</title>
+<path fill="none" stroke="#6b7280" d="M1788.45,-492.68C1807.28,-489.28 1831.15,-485.15 1852.5,-482 1919.77,-472.07 2111.17,-449.53 2208.36,-438.23"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2214.33,-437.53 2208.69,-440.91 2211.35,-437.88 2208.37,-438.22 2208.37,-438.22 2208.37,-438.22 2211.35,-437.88 2208.06,-435.54 2214.33,-437.53 2214.33,-437.53"/>
+</g>
+<!-- «foundations.distributions»&#45;&gt;«elliptic.representation» -->
+<g id="edge39" class="edge">
+<title>«foundations.distributions»&#45;&gt;«elliptic.representation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1720.76,-494.51C1690.8,-490.67 1645.81,-485.27 1606.5,-482 1331.08,-459.11 1259.08,-489.16 985.5,-450 983.3,-449.69 981.08,-449.34 978.84,-448.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="972.87,-447.91 979.25,-446.3 975.89,-448.09 978.84,-448.61 978.78,-448.96 978.72,-449.3 975.77,-448.78 978.31,-451.61 972.87,-447.91 972.87,-447.91"/>
+</g>
+<!-- «elliptic.regularity» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;00BB" class="node">
+<title>«elliptic.regularity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eregularity&#45;00BB"><a xlink:title="Group View: Elliptic regularity (22 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2728,-173.5 2655,-173.5 2655,-177.5 2643,-177.5 2643,-137.5 2728,-137.5 2728,-173.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2643,-173.5 2655,-173.5 "/>
+<text text-anchor="middle" x="2685.5" y="-153" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Elliptic regularity</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.solution_operators» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperators&#45;00BB" class="node">
+<title>«elliptic.solution_operators»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Esolution&#45;005Foperators&#45;00BB"><a xlink:title="Group View: Elliptic solution operators (8 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2581,-104 2514,-104 2514,-108 2502,-108 2502,-68 2581,-68 2581,-104"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2502,-104 2514,-104 "/>
+<text text-anchor="middle" x="2541.5" y="-89" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Elliptic solution</text>
+<text text-anchor="middle" x="2541.5" y="-78" font-family="Helvetica" font-size="10.00" fill="#f8fafc">operators</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity»&#45;&gt;«elliptic.solution_operators» -->
+<g id="edge28" class="edge">
+<title>«elliptic.regularity»&#45;&gt;«elliptic.solution_operators»</title>
+<path fill="none" stroke="#6b7280" d="M2649.16,-137.47C2629.12,-128.07 2604.15,-116.37 2583.31,-106.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2577.83,-104.03 2584.4,-104.13 2580.54,-105.3 2583.26,-106.57 2583.26,-106.57 2583.26,-106.57 2580.54,-105.3 2582.11,-109.02 2577.83,-104.03 2577.83,-104.03"/>
+</g>
+<!-- «hyperbolic.higher_regularity» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehigher&#45;005Fregularity&#45;00BB" class="node">
+<title>«hyperbolic.higher_regularity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Ehigher&#45;005Fregularity&#45;00BB"><a xlink:title="Group View: Higher wave regularity (13 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2767,-104 2670,-104 2670,-108 2658,-108 2658,-68 2767,-68 2767,-104"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2658,-104 2670,-104 "/>
+<text text-anchor="middle" x="2712.5" y="-83.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Higher wave regularity</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity»&#45;&gt;«hyperbolic.higher_regularity» -->
+<g id="edge52" class="edge">
+<title>«elliptic.regularity»&#45;&gt;«hyperbolic.higher_regularity»</title>
+<path fill="none" stroke="#6b7280" d="M2692.31,-137.47C2695.65,-129.14 2699.7,-118.99 2703.31,-109.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2705.6,-104.26 2705.87,-110.84 2704.48,-107.05 2703.37,-109.83 2703.37,-109.83 2703.37,-109.83 2704.48,-107.05 2700.86,-108.83 2705.6,-104.26 2705.6,-104.26"/>
+</g>
+<!-- «parabolic.regularity» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eregularity&#45;00BB" class="node">
+<title>«parabolic.regularity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eregularity&#45;00BB"><a xlink:title="Group View: Parabolic regularity (13 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2589.5,-36 2505.5,-36 2505.5,-40 2493.5,-40 2493.5,0 2589.5,0 2589.5,-36"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2493.5,-36 2505.5,-36 "/>
+<text text-anchor="middle" x="2541.5" y="-15.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Parabolic regularity</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.regularity»&#45;&gt;«parabolic.regularity» -->
+<g id="edge68" class="edge">
+<title>«elliptic.regularity»&#45;&gt;«parabolic.regularity»</title>
+<path fill="none" stroke="#6b7280" d="M2667.26,-137.34C2640.97,-112.6 2592.45,-66.95 2563.98,-40.15"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2559.59,-36.02 2565.81,-38.17 2561.77,-38.08 2563.96,-40.13 2563.96,-40.13 2563.96,-40.13 2561.77,-38.08 2562.11,-42.1 2559.59,-36.02 2559.59,-36.02"/>
+</g>
+<!-- «elliptic.solution_operators»&#45;&gt;«parabolic.regularity» -->
+<g id="edge67" class="edge">
+<title>«elliptic.solution_operators»&#45;&gt;«parabolic.regularity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2541.5,-67.66C2541.5,-59.99 2541.5,-50.85 2541.5,-42.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2541.5,-36.45 2544.2,-42.45 2541.85,-39.45 2541.85,-42.45 2541.5,-42.45 2541.15,-42.45 2541.15,-39.45 2538.8,-42.45 2541.5,-36.45 2541.5,-36.45"/>
+</g>
+<!-- «foundations.euclidean_space» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;00BB" class="node">
+<title>«foundations.euclidean_space»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Eeuclidean&#45;005Fspace&#45;00BB"><a xlink:title="Group View: Euclidean and spacetime foundations (5 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1308.5,-654 1198.5,-654 1198.5,-658 1186.5,-658 1186.5,-618 1308.5,-618 1308.5,-654"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1186.5,-654 1198.5,-654 "/>
+<text text-anchor="middle" x="1247.5" y="-639" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Euclidean and spacetime</text>
+<text text-anchor="middle" x="1247.5" y="-628" font-family="Helvetica" font-size="10.00" fill="#f8fafc">foundations</text>
+</a>
+</g>
+</g>
+<!-- «foundations.euclidean_space»&#45;&gt;«foundations.coordinates» -->
+<g id="edge14" class="edge">
+<title>«foundations.euclidean_space»&#45;&gt;«foundations.coordinates»</title>
+<path fill="none" stroke="#6b7280" d="M1186.34,-629.38C1045.73,-615.86 688.95,-578.11 395.5,-518 393.35,-517.56 391.17,-517.09 388.96,-516.59"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="383.11,-515.22 389.56,-513.96 386.03,-515.9 388.95,-516.59 388.95,-516.59 388.95,-516.59 386.03,-515.9 388.33,-519.21 383.11,-515.22 383.11,-515.22"/>
+</g>
+<!-- «foundations.euclidean_space»&#45;&gt;«foundations.derivatives» -->
+<g id="edge18" class="edge">
+<title>«foundations.euclidean_space»&#45;&gt;«foundations.derivatives»</title>
+<path fill="none" stroke="#6b7280" d="M1247.5,-617.66C1247.5,-609.99 1247.5,-600.85 1247.5,-592.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1247.5,-586.45 1250.2,-592.45 1247.5,-589.45 1247.5,-592.45 1247.5,-592.45 1247.5,-592.45 1247.5,-589.45 1244.8,-592.45 1247.5,-586.45 1247.5,-586.45"/>
+</g>
+<!-- «foundations.euclidean_space»&#45;&gt;«foundations.distributions» -->
+<g id="edge23" class="edge">
+<title>«foundations.euclidean_space»&#45;&gt;«foundations.distributions»</title>
+<path fill="none" stroke="#6b7280" d="M1308.76,-620.41C1396.26,-599.3 1561.92,-558.33 1701.5,-518 1705.94,-516.72 1710.57,-515.32 1715.16,-513.9"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1720.95,-512.09 1716.03,-516.46 1718.08,-512.98 1715.22,-513.88 1715.22,-513.88 1715.22,-513.88 1718.08,-512.98 1714.41,-511.3 1720.95,-512.09 1720.95,-512.09"/>
+</g>
+<!-- «symbolic.exact» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eexact&#45;00BB" class="node">
+<title>«symbolic.exact»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eexact&#45;00BB"><a xlink:title="Group View: Exact symbolic computation (17 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2044,-586 1921,-586 1921,-590 1909,-590 1909,-550 2044,-550 2044,-586"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1909,-586 1921,-586 "/>
+<text text-anchor="middle" x="1976.5" y="-565.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Exact symbolic computation</text>
+</a>
+</g>
+</g>
+<!-- «symbolic.exact»&#45;&gt;«symbolic.cega» -->
+<g id="edge8" class="edge">
+<title>«symbolic.exact»&#45;&gt;«symbolic.cega»</title>
+<path fill="none" stroke="#6b7280" d="M1984.23,-549.84C1995.13,-525.61 2015.07,-481.32 2027.22,-454.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2029.84,-448.52 2029.84,-455.1 2028.61,-451.26 2027.37,-453.99 2027.37,-453.99 2027.37,-453.99 2028.61,-451.26 2024.91,-452.88 2029.84,-448.52 2029.84,-448.52"/>
+</g>
+<!-- «symbolic.exact»&#45;&gt;«symbolic.calculus» -->
+<g id="edge103" class="edge">
+<title>«symbolic.exact»&#45;&gt;«symbolic.calculus»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1959.16,-549.66C1951.04,-541.54 1941.27,-531.77 1932.62,-523.12"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1927.95,-518.45 1934.11,-520.79 1930.32,-520.33 1932.44,-522.45 1932.2,-522.7 1931.95,-522.94 1929.83,-520.82 1930.29,-524.61 1927.95,-518.45 1927.95,-518.45"/>
+</g>
+<!-- «parabolic.blowup» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Eblowup&#45;00BB" class="node">
+<title>«parabolic.blowup»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Eblowup&#45;00BB"><a xlink:title="Group View: Finite&#45;time blow&#45;up models (58 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1124.5,-518 1006.5,-518 1006.5,-522 994.5,-522 994.5,-482 1124.5,-482 1124.5,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="994.5,-518 1006.5,-518 "/>
+<text text-anchor="middle" x="1059.5" y="-497.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Finite&#45;time blow&#45;up models</text>
+</a>
+</g>
+</g>
+<!-- «fluid.millennium» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Emillennium&#45;00BB" class="node">
+<title>«fluid.millennium»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Emillennium&#45;00BB"><a xlink:title="Group View: Navier–Stokes global regularity (3 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="659,-243 566,-243 566,-247 554,-247 554,-207 659,-207 659,-243"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="554,-243 566,-243 "/>
+<text text-anchor="middle" x="606.5" y="-228" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Navier–Stokes global</text>
+<text text-anchor="middle" x="606.5" y="-217" font-family="Helvetica" font-size="10.00" fill="#f8fafc">regularity</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.blowup»&#45;&gt;«fluid.millennium» -->
+<g id="edge59" class="edge">
+<title>«parabolic.blowup»&#45;&gt;«fluid.millennium»</title>
+<path fill="none" stroke="#6b7280" d="M1099.93,-481.94C1113.06,-474.23 1126.14,-463.71 1133.5,-450 1141.7,-434.73 1143.52,-425.14 1133.5,-411 1077.81,-332.42 791.23,-264.4 665.62,-237.86"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="659.39,-236.56 665.82,-235.15 662.33,-237.17 665.27,-237.79 665.27,-237.79 665.27,-237.79 662.33,-237.17 664.71,-240.43 659.39,-236.56 659.39,-236.56"/>
+</g>
+<!-- «parabolic.blowup»&#45;&gt;«methods.representations» -->
+<g id="edge70" class="edge">
+<title>«parabolic.blowup»&#45;&gt;«methods.representations»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1109.21,-481.97C1137.21,-472.37 1172.24,-460.37 1201.12,-450.48"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1206.8,-448.53 1202,-453.03 1204.08,-449.83 1201.24,-450.8 1201.13,-450.47 1201.01,-450.14 1203.85,-449.17 1200.25,-447.92 1206.8,-448.53 1206.8,-448.53"/>
+</g>
+<!-- «symbolic.autodiff» -->
+<g id="bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eautodiff&#45;00BB" class="node">
+<title>«symbolic.autodiff»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsymbolic&#45;002Eautodiff&#45;00BB"><a xlink:title="Group View: Formal jets and residual losses (6 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1962,-448.5 1857,-448.5 1857,-452.5 1845,-452.5 1845,-412.5 1962,-412.5 1962,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1845,-448.5 1857,-448.5 "/>
+<text text-anchor="middle" x="1903.5" y="-433.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Formal jets and residual</text>
+<text text-anchor="middle" x="1903.5" y="-422.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">losses</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.fredholm» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Efredholm&#45;00BB" class="node">
+<title>«elliptic.fredholm»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Efredholm&#45;00BB"><a xlink:title="Group View: Fredholm alternative and spectrum (18 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1042,-173.5 935,-173.5 935,-177.5 923,-177.5 923,-137.5 1042,-137.5 1042,-173.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="923,-173.5 935,-173.5 "/>
+<text text-anchor="middle" x="982.5" y="-158.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Fredholm alternative and</text>
+<text text-anchor="middle" x="982.5" y="-147.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">spectrum</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.representation»&#45;&gt;«elliptic.fredholm» -->
+<g id="edge37" class="edge">
+<title>«elliptic.representation»&#45;&gt;«elliptic.fredholm»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M912.19,-412.42C925.16,-365.21 961.51,-232.91 976.21,-179.4"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="977.81,-173.57 978.82,-180.07 977.35,-176.56 976.56,-179.45 976.22,-179.36 975.88,-179.26 976.68,-176.37 973.62,-178.64 977.81,-173.57 977.81,-173.57"/>
+</g>
+<!-- «elliptic.representation»&#45;&gt;«elliptic.green_kernels» -->
+<g id="edge42" class="edge">
+<title>«elliptic.representation»&#45;&gt;«elliptic.green_kernels»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M866.25,-412.47C846.83,-403.19 824.18,-391.67 806.26,-381.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="800.86,-379.03 807.42,-379.53 803.66,-380.16 806.3,-381.59 806.13,-381.9 805.96,-382.21 803.33,-380.77 804.84,-384.27 800.86,-379.03 800.86,-379.03"/>
+</g>
+<!-- «elliptic.representation»&#45;&gt;«symbolic.theorem_api» -->
+<g id="edge99" class="edge">
+<title>«elliptic.representation»&#45;&gt;«symbolic.theorem_api»</title>
+<path fill="none" stroke="#6b7280" d="M972.51,-413.52C976.89,-412.62 981.25,-411.77 985.5,-411 1102.98,-389.81 1241.87,-374.82 1319.1,-367.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1325.46,-366.76 1319.75,-370.02 1322.48,-367.05 1319.49,-367.34 1319.49,-367.34 1319.49,-367.34 1322.48,-367.05 1319.23,-364.65 1325.46,-366.76 1325.46,-366.76"/>
+</g>
+<!-- «elliptic.green_kernels»&#45;&gt;«elliptic.representation» -->
+<g id="edge38" class="edge">
+<title>«elliptic.green_kernels»&#45;&gt;«elliptic.representation»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M817.4,-379.03C836.92,-388.3 859.59,-399.83 877.42,-409.52"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="882.79,-412.47 876.23,-411.95 879.99,-411.33 877.36,-409.89 877.53,-409.58 877.7,-409.27 880.33,-410.72 878.83,-407.21 882.79,-412.47 882.79,-412.47"/>
+</g>
+<!-- «elliptic.green_kernels»&#45;&gt;«fluid.boussinesq» -->
+<g id="edge109" class="edge">
+<title>«elliptic.green_kernels»&#45;&gt;«fluid.boussinesq»</title>
+<path fill="none" stroke="#6b7280" d="M710.24,-349.47C634.45,-337.24 510.07,-317.17 433.53,-304.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="427.19,-303.79 433.54,-302.08 430.15,-304.27 433.11,-304.75 433.11,-304.75 433.11,-304.75 430.15,-304.27 432.68,-307.41 427.19,-303.79 427.19,-303.79"/>
+</g>
+<!-- «hyperbolic.viscosity» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eviscosity&#45;00BB" class="node">
+<title>«hyperbolic.viscosity»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eviscosity&#45;00BB"><a xlink:title="Group View: Viscosity solutions (8 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="505,-379 422,-379 422,-383 410,-383 410,-343 505,-343 505,-379"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="410,-379 422,-379 "/>
+<text text-anchor="middle" x="457.5" y="-358.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Viscosity solutions</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.hamilton_jacobi»&#45;&gt;«hyperbolic.viscosity» -->
+<g id="edge111" class="edge">
+<title>«hyperbolic.hamilton_jacobi»&#45;&gt;«hyperbolic.viscosity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M457.5,-412.47C457.5,-404.3 457.5,-394.38 457.5,-385.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="457.5,-379.26 460.2,-385.26 457.85,-382.26 457.85,-385.26 457.5,-385.26 457.15,-385.26 457.15,-382.26 454.8,-385.26 457.5,-379.26 457.5,-379.26"/>
+</g>
+<!-- «sobolev.holder» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;00BB" class="node">
+<title>«sobolev.holder»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eholder&#45;00BB"><a xlink:title="Group View: Hölder spaces (7 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2725.5,-379 2661.5,-379 2661.5,-383 2649.5,-383 2649.5,-343 2725.5,-343 2725.5,-379"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2649.5,-379 2661.5,-379 "/>
+<text text-anchor="middle" x="2687.5" y="-358.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Hölder spaces</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.inequalities» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Einequalities&#45;00BB" class="node">
+<title>«sobolev.inequalities»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Einequalities&#45;00BB"><a xlink:title="Group View: Sobolev inequalities (45 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2735.5,-311 2647.5,-311 2647.5,-315 2635.5,-315 2635.5,-275 2735.5,-275 2735.5,-311"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2635.5,-311 2647.5,-311 "/>
+<text text-anchor="middle" x="2685.5" y="-290.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Sobolev inequalities</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.holder»&#45;&gt;«sobolev.inequalities» -->
+<g id="edge93" class="edge">
+<title>«sobolev.holder»&#45;&gt;«sobolev.inequalities»</title>
+<path fill="none" stroke="#6b7280" d="M2686.97,-342.66C2686.74,-334.99 2686.47,-325.85 2686.21,-317.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2686.03,-311.45 2688.91,-317.37 2686.12,-314.45 2686.21,-317.45 2686.21,-317.45 2686.21,-317.45 2686.12,-314.45 2683.51,-317.53 2686.03,-311.45 2686.03,-311.45"/>
+</g>
+<!-- «fluid.euler» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Eeuler&#45;00BB" class="node">
+<title>«fluid.euler»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Eeuler&#45;00BB"><a xlink:title="Group View: Incompressible Euler flow (20 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="226,-379 113,-379 113,-383 101,-383 101,-343 226,-343 226,-379"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="101,-379 113,-379 "/>
+<text text-anchor="middle" x="163.5" y="-358.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Incompressible Euler flow</text>
+</a>
+</g>
+</g>
+<!-- «fluid.euler»&#45;&gt;«fluid.axisymmetric_swirl» -->
+<g id="edge1" class="edge">
+<title>«fluid.euler»&#45;&gt;«fluid.axisymmetric_swirl»</title>
+<path fill="none" stroke="#6b7280" d="M159,-342.76C152.77,-318.94 141.53,-275.89 134.57,-249.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="132.99,-243.18 137.12,-248.3 133.74,-246.08 134.5,-248.98 134.5,-248.98 134.5,-248.98 133.74,-246.08 131.89,-249.67 132.99,-243.18 132.99,-243.18"/>
+</g>
+<!-- «fluid.navier_stokes» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Enavier&#45;005Fstokes&#45;00BB" class="node">
+<title>«fluid.navier_stokes»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Enavier&#45;005Fstokes&#45;00BB"><a xlink:title="Group View: Navier–Stokes (22 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="280.5,-311 216.5,-311 216.5,-315 204.5,-315 204.5,-275 280.5,-275 280.5,-311"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="204.5,-311 216.5,-311 "/>
+<text text-anchor="middle" x="242.5" y="-290.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Navier–Stokes</text>
+</a>
+</g>
+</g>
+<!-- «fluid.euler»&#45;&gt;«fluid.navier_stokes» -->
+<g id="edge58" class="edge">
+<title>«fluid.euler»&#45;&gt;«fluid.navier_stokes»</title>
+<path fill="none" stroke="#6b7280" d="M184.26,-342.66C194.33,-334.25 206.51,-324.07 217.13,-315.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="221.88,-311.22 219.01,-317.14 219.58,-313.15 217.28,-315.07 217.28,-315.07 217.28,-315.07 219.58,-313.15 215.55,-313 221.88,-311.22 221.88,-311.22"/>
+</g>
+<!-- «fluid.euler»&#45;&gt;«fluid.boussinesq» -->
+<g id="edge107" class="edge">
+<title>«fluid.euler»&#45;&gt;«fluid.boussinesq»</title>
+<path fill="none" stroke="#6b7280" d="M216.04,-342.92C244.35,-333.72 279.33,-322.34 308.44,-312.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="314.18,-311.01 309.31,-315.43 311.33,-311.94 308.47,-312.87 308.47,-312.87 308.47,-312.87 311.33,-311.94 307.64,-310.3 314.18,-311.01 314.18,-311.01"/>
+</g>
+<!-- «fluid.equations»&#45;&gt;«fluid.euler» -->
+<g id="edge54" class="edge">
+<title>«fluid.equations»&#45;&gt;«fluid.euler»</title>
+<path fill="none" stroke="#6b7280" d="M244.25,-412.47C229.54,-403.27 211.29,-391.87 195.86,-382.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="190.74,-379.03 197.26,-379.92 193.29,-380.62 195.83,-382.21 195.83,-382.21 195.83,-382.21 193.29,-380.62 194.4,-384.5 190.74,-379.03 190.74,-379.03"/>
+</g>
+<!-- «fluid.equations»&#45;&gt;«fluid.navier_stokes» -->
+<g id="edge57" class="edge">
+<title>«fluid.equations»&#45;&gt;«fluid.navier_stokes»</title>
+<path fill="none" stroke="#6b7280" d="M267.83,-412.34C262.66,-388.21 253.24,-344.19 247.46,-317.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="246.14,-311.02 250.04,-316.32 246.77,-313.96 247.4,-316.89 247.4,-316.89 247.4,-316.89 246.77,-313.96 244.76,-317.45 246.14,-311.02 246.14,-311.02"/>
+</g>
+<!-- «fluid.equations»&#45;&gt;«fluid.boussinesq» -->
+<g id="edge110" class="edge">
+<title>«fluid.equations»&#45;&gt;«fluid.boussinesq»</title>
+<path fill="none" stroke="#6b7280" d="M283.53,-412.34C300.66,-387.9 332.1,-343.07 350.97,-316.15"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="354.57,-311.02 353.33,-317.48 352.84,-313.48 351.12,-315.93 351.12,-315.93 351.12,-315.93 352.84,-313.48 348.91,-314.38 354.57,-311.02 354.57,-311.02"/>
+</g>
+<!-- «elliptic.modified_helmholtz» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;00BB" class="node">
+<title>«elliptic.modified_helmholtz»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Emodified&#45;005Fhelmholtz&#45;00BB"><a xlink:title="Group View: Modified Helmholtz equation (12 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2231,-173.5 2146,-173.5 2146,-177.5 2134,-177.5 2134,-137.5 2231,-137.5 2231,-173.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2134,-173.5 2146,-173.5 "/>
+<text text-anchor="middle" x="2182.5" y="-158.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Modified Helmholtz</text>
+<text text-anchor="middle" x="2182.5" y="-147.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">equation</text>
+</a>
+</g>
+</g>
+<!-- «parabolic.variational» -->
+<g id="bp&#45;node&#45;&#45;00ABparabolic&#45;002Evariational&#45;00BB" class="node">
+<title>«parabolic.variational»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABparabolic&#45;002Evariational&#45;00BB"><a xlink:title="Group View: Weak parabolic evolution (72 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2130,-104 2021,-104 2021,-108 2009,-108 2009,-68 2130,-68 2130,-104"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2009,-104 2021,-104 "/>
+<text text-anchor="middle" x="2069.5" y="-83.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Weak parabolic evolution</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.modified_helmholtz»&#45;&gt;«parabolic.variational» -->
+<g id="edge121" class="edge">
+<title>«elliptic.modified_helmholtz»&#45;&gt;«parabolic.variational»</title>
+<path fill="none" stroke="#6b7280" d="M2153.99,-137.47C2138.6,-128.27 2119.5,-116.87 2103.36,-107.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2098.01,-104.03 2104.54,-104.79 2100.58,-105.57 2103.16,-107.1 2103.16,-107.1 2103.16,-107.1 2100.58,-105.57 2101.77,-109.42 2098.01,-104.03 2098.01,-104.03"/>
+</g>
+<!-- «fluid.navier_stokes»&#45;&gt;«fluid.axisymmetric_swirl» -->
+<g id="edge3" class="edge">
+<title>«fluid.navier_stokes»&#45;&gt;«fluid.axisymmetric_swirl»</title>
+<path fill="none" stroke="#6b7280" d="M212.85,-274.83C197.67,-266.05 179.11,-255.3 163.27,-246.13"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="158.01,-243.08 164.55,-243.75 160.6,-244.59 163.2,-246.09 163.2,-246.09 163.2,-246.09 160.6,-244.59 161.85,-248.43 158.01,-243.08 158.01,-243.08"/>
+</g>
+<!-- «fluid.navier_stokes»&#45;&gt;«fluid.millennium» -->
+<g id="edge60" class="edge">
+<title>«fluid.navier_stokes»&#45;&gt;«fluid.millennium»</title>
+<path fill="none" stroke="#6b7280" d="M280.73,-278.5C285.01,-277.21 289.33,-276.01 293.5,-275 381,-253.72 484.6,-239.62 547.92,-232.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="553.92,-231.52 548.27,-234.89 550.94,-231.87 547.96,-232.21 547.96,-232.21 547.96,-232.21 550.94,-231.87 547.65,-229.53 553.92,-231.52 553.92,-231.52"/>
+</g>
+<!-- «fluid.steady_stokes» -->
+<g id="bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;00BB" class="node">
+<title>«fluid.steady_stokes»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfluid&#45;002Esteady&#45;005Fstokes&#45;00BB"><a xlink:title="Group View: The steady Stokes problem (4 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="342.5,-243 222.5,-243 222.5,-247 210.5,-247 210.5,-207 342.5,-207 342.5,-243"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="210.5,-243 222.5,-243 "/>
+<text text-anchor="middle" x="276.5" y="-222.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">The steady Stokes problem</text>
+</a>
+</g>
+</g>
+<!-- «fluid.navier_stokes»&#45;&gt;«fluid.steady_stokes» -->
+<g id="edge105" class="edge">
+<title>«fluid.navier_stokes»&#45;&gt;«fluid.steady_stokes»</title>
+<path fill="none" stroke="#6b7280" d="M251.43,-274.66C255.46,-266.84 260.28,-257.49 264.61,-249.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="267.51,-243.45 267.16,-250.02 266.13,-246.12 264.76,-248.79 264.76,-248.79 264.76,-248.79 266.13,-246.12 262.36,-247.55 267.51,-243.45 267.51,-243.45"/>
+</g>
+<!-- «hyperbolic.first_order» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;00BB" class="node">
+<title>«hyperbolic.first_order»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Efirst&#45;005Forder&#45;00BB"><a xlink:title="Group View: Nonlinear first&#45;order equations (23 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="506.5,-518 420.5,-518 420.5,-522 408.5,-522 408.5,-482 506.5,-482 506.5,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="408.5,-518 420.5,-518 "/>
+<text text-anchor="middle" x="457.5" y="-503" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Nonlinear first&#45;order</text>
+<text text-anchor="middle" x="457.5" y="-492" font-family="Helvetica" font-size="10.00" fill="#f8fafc">equations</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.first_order»&#45;&gt;«hyperbolic.hamilton_jacobi» -->
+<g id="edge47" class="edge">
+<title>«hyperbolic.first_order»&#45;&gt;«hyperbolic.hamilton_jacobi»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M457.5,-481.97C457.5,-473.8 457.5,-463.88 457.5,-455"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="457.5,-448.76 460.2,-454.76 457.85,-451.76 457.85,-454.76 457.5,-454.76 457.15,-454.76 457.15,-451.76 454.8,-454.76 457.5,-448.76 457.5,-448.76"/>
+</g>
+<!-- «foundations.pde_problems»&#45;&gt;«foundations.cauchy» -->
+<g id="edge6" class="edge">
+<title>«foundations.pde_problems»&#45;&gt;«foundations.cauchy»</title>
+<path fill="none" stroke="#6b7280" d="M756.91,-481.97C737.82,-473.08 714.27,-462.12 694.01,-452.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="688.39,-450.07 694.97,-450.15 691.11,-451.34 693.83,-452.6 693.83,-452.6 693.83,-452.6 691.11,-451.34 692.69,-455.05 688.39,-450.07 688.39,-450.07"/>
+</g>
+<!-- «foundations.pde_problems»&#45;&gt;«hyperbolic.classical_wave» -->
+<g id="edge12" class="edge">
+<title>«foundations.pde_problems»&#45;&gt;«hyperbolic.classical_wave»</title>
+<path fill="none" stroke="#6b7280" d="M851.55,-484.27C892.86,-473.79 948.51,-459.66 991.84,-448.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="997.87,-447.14 992.72,-451.23 994.97,-447.88 992.06,-448.61 992.06,-448.61 992.06,-448.61 994.97,-447.88 991.39,-446 997.87,-447.14 997.87,-447.14"/>
+</g>
+<!-- «foundations.pde_problems»&#45;&gt;«elliptic.representation» -->
+<g id="edge41" class="edge">
+<title>«foundations.pde_problems»&#45;&gt;«elliptic.representation»</title>
+<path fill="none" stroke="#6b7280" d="M822.27,-481.97C837.79,-472.77 857.06,-461.37 873.34,-451.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="878.74,-448.53 874.95,-453.91 876.16,-450.06 873.58,-451.58 873.58,-451.58 873.58,-451.58 876.16,-450.06 872.2,-449.26 878.74,-448.53 878.74,-448.53"/>
+</g>
+<!-- «foundations.pde_problems»&#45;&gt;«hyperbolic.hamilton_jacobi» -->
+<g id="edge49" class="edge">
+<title>«foundations.pde_problems»&#45;&gt;«hyperbolic.hamilton_jacobi»</title>
+<path fill="none" stroke="#6b7280" d="M735.36,-487.32C674.07,-475.01 578.05,-455.72 516.46,-443.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="510.24,-442.09 516.65,-440.63 513.18,-442.69 516.12,-443.28 516.12,-443.28 516.12,-443.28 513.18,-442.69 515.59,-445.92 510.24,-442.09 510.24,-442.09"/>
+</g>
+<!-- «foundations.well_posedness» -->
+<g id="bp&#45;node&#45;&#45;00ABfoundations&#45;002Ewell&#45;005Fposedness&#45;00BB" class="node">
+<title>«foundations.well_posedness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABfoundations&#45;002Ewell&#45;005Fposedness&#45;00BB"><a xlink:title="Group View: Well&#45;posedness (3 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="817.5,-448.5 747.5,-448.5 747.5,-452.5 735.5,-452.5 735.5,-412.5 817.5,-412.5 817.5,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="735.5,-448.5 747.5,-448.5 "/>
+<text text-anchor="middle" x="776.5" y="-428" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Well&#45;posedness</text>
+</a>
+</g>
+</g>
+<!-- «foundations.pde_problems»&#45;&gt;«foundations.well_posedness» -->
+<g id="edge124" class="edge">
+<title>«foundations.pde_problems»&#45;&gt;«foundations.well_posedness»</title>
+<path fill="none" stroke="#6b7280" d="M789.21,-481.97C787.13,-473.72 784.61,-463.68 782.35,-454.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="780.85,-448.76 784.93,-453.92 781.58,-451.67 782.31,-454.58 782.31,-454.58 782.31,-454.58 781.58,-451.67 779.69,-455.24 780.85,-448.76 780.85,-448.76"/>
+</g>
+<!-- «hyperbolic.conservation» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;00BB" class="node">
+<title>«hyperbolic.conservation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Econservation&#45;00BB"><a xlink:title="Group View: Scalar and system conservation laws (64 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1821,-868 1740,-868 1740,-872 1728,-872 1728,-832 1821,-832 1821,-868"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1728,-868 1740,-868 "/>
+<text text-anchor="middle" x="1774.5" y="-853" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Scalar and system</text>
+<text text-anchor="middle" x="1774.5" y="-842" font-family="Helvetica" font-size="10.00" fill="#f8fafc">conservation laws</text>
+</a>
+</g>
+</g>
+<!-- «methods.second_variation» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;00BB" class="node">
+<title>«methods.second_variation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esecond&#45;005Fvariation&#45;00BB"><a xlink:title="Group View: Second variations and necessary positivity (11 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1645,-868 1548,-868 1548,-872 1536,-872 1536,-832 1645,-832 1645,-868"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1536,-868 1548,-868 "/>
+<text text-anchor="middle" x="1590.5" y="-853" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Second variations and</text>
+<text text-anchor="middle" x="1590.5" y="-842" font-family="Helvetica" font-size="10.00" fill="#f8fafc">necessary positivity</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear_convex_regularization» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;005Fconvex&#45;005Fregularization&#45;00BB" class="node">
+<title>«methods.semilinear_convex_regularization»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;005Fconvex&#45;005Fregularization&#45;00BB"><a xlink:title="Group View: Semilinear convex regularization (8 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2345.5,-104 2265.5,-104 2265.5,-108 2253.5,-108 2253.5,-68 2345.5,-68 2345.5,-104"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2253.5,-104 2265.5,-104 "/>
+<text text-anchor="middle" x="2299.5" y="-89" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Semilinear convex</text>
+<text text-anchor="middle" x="2299.5" y="-78" font-family="Helvetica" font-size="10.00" fill="#f8fafc">regularization</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear_nonvariational» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;005Fnonvariational&#45;00BB" class="node">
+<title>«methods.semilinear_nonvariational»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esemilinear&#45;005Fnonvariational&#45;00BB"><a xlink:title="Group View: Semilinear fixed&#45;point methods (11 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2476.5,-104 2382.5,-104 2382.5,-108 2370.5,-108 2370.5,-68 2476.5,-68 2476.5,-104"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2370.5,-104 2382.5,-104 "/>
+<text text-anchor="middle" x="2423.5" y="-89" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Semilinear fixed&#45;point</text>
+<text text-anchor="middle" x="2423.5" y="-78" font-family="Helvetica" font-size="10.00" fill="#f8fafc">methods</text>
+</a>
+</g>
+</g>
+<!-- «methods.semilinear_variational»&#45;&gt;«methods.semilinear_convex_regularization» -->
+<g id="edge72" class="edge">
+<title>«methods.semilinear_variational»&#45;&gt;«methods.semilinear_convex_regularization»</title>
+<path fill="none" stroke="#6b7280" d="M2345.11,-137.47C2337.29,-128.82 2327.71,-118.21 2319.35,-108.96"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2315.1,-104.26 2321.13,-106.9 2317.11,-106.49 2319.12,-108.71 2319.12,-108.71 2319.12,-108.71 2317.11,-106.49 2317.12,-110.52 2315.1,-104.26 2315.1,-104.26"/>
+</g>
+<!-- «methods.semilinear_variational»&#45;&gt;«methods.semilinear_nonvariational» -->
+<g id="edge74" class="edge">
+<title>«methods.semilinear_variational»&#45;&gt;«methods.semilinear_nonvariational»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2376.4,-137.47C2384.54,-128.74 2394.55,-118.02 2403.24,-108.71"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2407.39,-104.26 2405.27,-110.49 2405.6,-106.69 2403.55,-108.89 2403.29,-108.65 2403.04,-108.41 2405.09,-106.22 2401.32,-106.81 2407.39,-104.26 2407.39,-104.26"/>
+</g>
+<!-- «sobolev.approximation» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eapproximation&#45;00BB" class="node">
+<title>«sobolev.approximation»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eapproximation&#45;00BB"><a xlink:title="Group View: Sobolev approximation (26 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2708.5,-654 2608.5,-654 2608.5,-658 2596.5,-658 2596.5,-618 2708.5,-618 2708.5,-654"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2596.5,-654 2608.5,-654 "/>
+<text text-anchor="middle" x="2652.5" y="-633.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Sobolev approximation</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.approximation»&#45;&gt;«sobolev.difference_quotients» -->
+<g id="edge17" class="edge">
+<title>«sobolev.approximation»&#45;&gt;«sobolev.difference_quotients»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M2596.28,-634.25C2534.82,-631.53 2434.67,-621.4 2356.5,-586 2273.32,-548.33 2254.13,-525.32 2202.5,-450 2173.11,-407.12 2153.26,-348.86 2143.83,-317.06"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2142.08,-311.06 2146.35,-316.07 2143.02,-313.92 2143.86,-316.8 2143.76,-316.82 2143.67,-316.85 2142.83,-313.97 2141.17,-317.58 2142.08,-311.06 2142.08,-311.06"/>
+</g>
+<!-- «sobolev.approximation»&#45;&gt;«sobolev.fourier» -->
+<g id="edge30" class="edge">
+<title>«sobolev.approximation»&#45;&gt;«sobolev.fourier»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2596.18,-622.07C2508.98,-601.1 2346.83,-557.97 2303.5,-518 2285.3,-501.21 2275.68,-473.97 2270.86,-454.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2269.46,-448.54 2273.45,-453.77 2270.48,-451.38 2271.16,-454.31 2270.82,-454.38 2270.48,-454.46 2269.8,-451.54 2268.19,-455 2269.46,-448.54 2269.46,-448.54"/>
+</g>
+<!-- «sobolev.compactness» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Ecompactness&#45;00BB" class="node">
+<title>«sobolev.compactness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Ecompactness&#45;00BB"><a xlink:title="Group View: Sobolev compactness (19 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2767,-448.5 2670,-448.5 2670,-452.5 2658,-452.5 2658,-412.5 2767,-412.5 2767,-448.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2658,-448.5 2670,-448.5 "/>
+<text text-anchor="middle" x="2712.5" y="-428" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Sobolev compactness</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.approximation»&#45;&gt;«sobolev.compactness» -->
+<g id="edge84" class="edge">
+<title>«sobolev.approximation»&#45;&gt;«sobolev.compactness»</title>
+<path fill="none" stroke="#6b7280" d="M2657.51,-618C2668.25,-581.56 2693.51,-495.91 2705.69,-454.6"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2707.46,-448.6 2708.35,-455.11 2706.61,-451.47 2705.76,-454.35 2705.76,-454.35 2705.76,-454.35 2706.61,-451.47 2703.17,-453.59 2707.46,-448.6 2707.46,-448.6"/>
+</g>
+<!-- «sobolev.extension» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eextension&#45;00BB" class="node">
+<title>«sobolev.extension»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eextension&#45;00BB"><a xlink:title="Group View: Sobolev extension (11 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2793,-586 2712,-586 2712,-590 2700,-590 2700,-550 2793,-550 2793,-586"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2700,-586 2712,-586 "/>
+<text text-anchor="middle" x="2746.5" y="-565.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Sobolev extension</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.approximation»&#45;&gt;«sobolev.extension» -->
+<g id="edge88" class="edge">
+<title>«sobolev.approximation»&#45;&gt;«sobolev.extension»</title>
+<path fill="none" stroke="#6b7280" d="M2677.2,-617.66C2689.39,-609.1 2704.2,-598.7 2716.99,-589.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2721.97,-586.22 2718.61,-591.88 2719.51,-587.95 2717.06,-589.67 2717.06,-589.67 2717.06,-589.67 2719.51,-587.95 2715.51,-587.46 2721.97,-586.22 2721.97,-586.22"/>
+</g>
+<!-- «sobolev.approximation»&#45;&gt;«sobolev.inequalities» -->
+<g id="edge92" class="edge">
+<title>«sobolev.approximation»&#45;&gt;«sobolev.inequalities»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2646.7,-617.69C2632.11,-571.16 2597.79,-440.28 2637.5,-343 2641.79,-332.49 2649.54,-323.01 2657.58,-315.25"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2662.06,-311.12 2659.48,-317.18 2660.09,-313.42 2657.89,-315.45 2657.65,-315.19 2657.41,-314.93 2659.62,-312.9 2655.82,-313.21 2662.06,-311.12 2662.06,-311.12"/>
+</g>
+<!-- «sobolev.calculus» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Ecalculus&#45;00BB" class="node">
+<title>«sobolev.calculus»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Ecalculus&#45;00BB"><a xlink:title="Group View: Weak Sobolev calculus (35 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2968,-379 2865,-379 2865,-383 2853,-383 2853,-343 2968,-343 2968,-379"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2853,-379 2865,-379 "/>
+<text text-anchor="middle" x="2910.5" y="-358.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Weak Sobolev calculus</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.approximation»&#45;&gt;«sobolev.calculus» -->
+<g id="edge116" class="edge">
+<title>«sobolev.approximation»&#45;&gt;«sobolev.calculus»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2708.76,-624.62C2739.15,-617.2 2776.32,-605.07 2805.5,-586 2867.01,-545.8 2878.21,-520.32 2899.5,-450 2905.94,-428.74 2908.61,-403.49 2909.72,-385.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2910.06,-379.23 2912.43,-385.36 2910.25,-382.24 2910.09,-385.24 2909.74,-385.22 2909.39,-385.2 2909.55,-382.2 2907.04,-385.07 2910.06,-379.23 2910.06,-379.23"/>
+</g>
+<!-- «sobolev.approximation»&#45;&gt;«parabolic.variational» -->
+<g id="edge122" class="edge">
+<title>«sobolev.approximation»&#45;&gt;«parabolic.variational»</title>
+<path fill="none" stroke="#6b7280" d="M2596.47,-634.25C2431.68,-631.64 1956.38,-621.13 1896.5,-586 1825.07,-544.09 1812.83,-491.45 1832.5,-411 1865.21,-277.18 1878.14,-233.46 1975.5,-136 1987.43,-124.06 2002.88,-114.38 2017.8,-106.88"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2023.26,-104.22 2019.05,-109.27 2020.57,-105.53 2017.87,-106.85 2017.87,-106.85 2017.87,-106.85 2020.57,-105.53 2016.69,-104.42 2023.26,-104.22 2023.26,-104.22"/>
+</g>
+<!-- «sobolev.compactness»&#45;&gt;«methods.direct_method» -->
+<g id="edge21" class="edge">
+<title>«sobolev.compactness»&#45;&gt;«methods.direct_method»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M2657.95,-424.34C2529.79,-412.23 2209.61,-381.96 2067.88,-368.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2061.68,-367.97 2067.91,-365.85 2064.68,-368.16 2067.66,-368.44 2067.65,-368.54 2067.64,-368.64 2064.66,-368.35 2067.4,-371.23 2061.68,-367.97 2061.68,-367.97"/>
+</g>
+<!-- «sobolev.compactness»&#45;&gt;«sobolev.calculus» -->
+<g id="edge113" class="edge">
+<title>«sobolev.compactness»&#45;&gt;«sobolev.calculus»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2762.46,-412.47C2790.6,-402.87 2825.81,-390.87 2854.83,-380.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2860.55,-379.03 2855.74,-383.52 2857.83,-380.33 2854.99,-381.3 2854.87,-380.96 2854.76,-380.63 2857.6,-379.66 2854,-378.41 2860.55,-379.03 2860.55,-379.03"/>
+</g>
+<!-- «sobolev.extension»&#45;&gt;«sobolev.fourier» -->
+<g id="edge33" class="edge">
+<title>«sobolev.extension»&#45;&gt;«sobolev.fourier»</title>
+<path fill="none" stroke="#6b7280" d="M2699.81,-564.81C2609.9,-559.98 2416.32,-546.55 2356.5,-518 2325.85,-503.37 2299,-474.24 2282.78,-453.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2278.89,-448.85 2284.71,-451.92 2280.74,-451.22 2282.58,-453.58 2282.58,-453.58 2282.58,-453.58 2280.74,-451.22 2280.45,-455.25 2278.89,-448.85 2278.89,-448.85"/>
+</g>
+<!-- «sobolev.extension»&#45;&gt;«sobolev.compactness» -->
+<g id="edge85" class="edge">
+<title>«sobolev.extension»&#45;&gt;«sobolev.compactness»</title>
+<path fill="none" stroke="#6b7280" d="M2742.19,-549.84C2736.14,-525.71 2725.09,-481.69 2718.31,-454.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2716.77,-448.52 2720.85,-453.68 2717.5,-451.43 2718.23,-454.34 2718.23,-454.34 2718.23,-454.34 2717.5,-451.43 2715.61,-455 2716.77,-448.52 2716.77,-448.52"/>
+</g>
+<!-- «sobolev.extension»&#45;&gt;«sobolev.inequalities» -->
+<g id="edge90" class="edge">
+<title>«sobolev.extension»&#45;&gt;«sobolev.inequalities»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2754.28,-549.81C2766.28,-521.19 2787.18,-461.91 2779.5,-411 2774.78,-379.72 2777.38,-368.38 2758.5,-343 2750.05,-331.64 2738.13,-322.07 2726.37,-314.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2720.99,-311.16 2727.52,-312.03 2723.73,-312.44 2726.28,-314.03 2726.09,-314.32 2725.91,-314.62 2723.36,-313.04 2724.67,-316.62 2720.99,-311.16 2720.99,-311.16"/>
+</g>
+<!-- «sobolev.trace» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Etrace&#45;00BB" class="node">
+<title>«sobolev.trace»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Etrace&#45;00BB"><a xlink:title="Group View: Sobolev traces (43 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2446.5,-518 2380.5,-518 2380.5,-522 2368.5,-522 2368.5,-482 2446.5,-482 2446.5,-518"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2368.5,-518 2380.5,-518 "/>
+<text text-anchor="middle" x="2407.5" y="-497.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Sobolev traces</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.extension»&#45;&gt;«sobolev.trace» -->
+<g id="edge96" class="edge">
+<title>«sobolev.extension»&#45;&gt;«sobolev.trace»</title>
+<path fill="none" stroke="#6b7280" d="M2699.72,-557.89C2634.53,-545.2 2517.13,-522.34 2452.76,-509.81"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2446.7,-508.63 2453.11,-507.13 2449.65,-509.21 2452.59,-509.78 2452.59,-509.78 2452.59,-509.78 2449.65,-509.21 2452.08,-512.43 2446.7,-508.63 2446.7,-508.63"/>
+</g>
+<!-- «sobolev.extension»&#45;&gt;«sobolev.calculus» -->
+<g id="edge115" class="edge">
+<title>«sobolev.extension»&#45;&gt;«sobolev.calculus»</title>
+<path fill="none" stroke="#6b7280" d="M2788.09,-549.99C2803.78,-542.04 2820.87,-531.34 2833.5,-518 2870.65,-478.77 2893.47,-418.21 2903.86,-385.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2905.65,-379.45 2906.46,-385.98 2904.77,-382.32 2903.88,-385.19 2903.88,-385.19 2903.88,-385.19 2904.77,-382.32 2901.3,-384.39 2905.65,-379.45 2905.65,-379.45"/>
+</g>
+<!-- «sobolev.inequalities»&#45;&gt;«elliptic.regularity» -->
+<g id="edge25" class="edge">
+<title>«sobolev.inequalities»&#45;&gt;«elliptic.regularity»</title>
+<path fill="none" stroke="#6b7280" d="M2685.5,-274.84C2685.5,-250.71 2685.5,-206.69 2685.5,-179.67"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2685.5,-173.52 2688.2,-179.52 2685.5,-176.52 2685.5,-179.52 2685.5,-179.52 2685.5,-179.52 2685.5,-176.52 2682.8,-179.52 2685.5,-173.52 2685.5,-173.52"/>
+</g>
+<!-- «sobolev.inequalities»&#45;&gt;«methods.semilinear_nonvariational» -->
+<g id="edge75" class="edge">
+<title>«sobolev.inequalities»&#45;&gt;«methods.semilinear_nonvariational»</title>
+<path fill="none" stroke="#6b7280" d="M2663.61,-274.87C2615.84,-237.49 2502.33,-148.68 2450.34,-108"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2445.51,-104.22 2451.9,-105.79 2447.87,-106.07 2450.23,-107.92 2450.23,-107.92 2450.23,-107.92 2447.87,-106.07 2448.57,-110.04 2445.51,-104.22 2445.51,-104.22"/>
+</g>
+<!-- «sobolev.inequalities»&#45;&gt;«sobolev.compactness» -->
+<g id="edge86" class="edge">
+<title>«sobolev.inequalities»&#45;&gt;«sobolev.compactness»</title>
+<path fill="none" stroke="#6b7280" d="M2711.88,-311.09C2722.22,-319.35 2732.93,-330.26 2738.5,-343 2747.73,-364.09 2737.82,-389.44 2727.69,-407.23"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2724.56,-412.49 2725.31,-405.95 2726.09,-409.91 2727.63,-407.33 2727.63,-407.33 2727.63,-407.33 2726.09,-409.91 2729.95,-408.71 2724.56,-412.49 2724.56,-412.49"/>
+</g>
+<!-- «sobolev.inequalities»&#45;&gt;«sobolev.calculus» -->
+<g id="edge117" class="edge">
+<title>«sobolev.inequalities»&#45;&gt;«sobolev.calculus»</title>
+<path fill="none" stroke="#6b7280" d="M2735.68,-306.42C2771.17,-316.21 2818.58,-330.01 2855.15,-341.15"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2860.93,-342.92 2854.4,-343.75 2858.06,-342.04 2855.19,-341.16 2855.19,-341.16 2855.19,-341.16 2858.06,-342.04 2855.98,-338.58 2860.93,-342.92 2860.93,-342.92"/>
+</g>
+<!-- «elliptic.weak_theory» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Eweak&#45;005Ftheory&#45;00BB" class="node">
+<title>«elliptic.weak_theory»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Eweak&#45;005Ftheory&#45;00BB"><a xlink:title="Group View: Weak elliptic problems (34 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2514,-243 2415,-243 2415,-247 2403,-247 2403,-207 2514,-207 2514,-243"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2403,-243 2415,-243 "/>
+<text text-anchor="middle" x="2458.5" y="-222.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Weak elliptic problems</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.inequalities»&#45;&gt;«elliptic.weak_theory» -->
+<g id="edge119" class="edge">
+<title>«sobolev.inequalities»&#45;&gt;«elliptic.weak_theory»</title>
+<path fill="none" stroke="#6b7280" d="M2635.4,-277.43C2601.46,-267.57 2556.38,-254.46 2520.22,-243.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2514.04,-242.15 2520.56,-241.23 2516.92,-242.99 2519.8,-243.82 2519.8,-243.82 2519.8,-243.82 2516.92,-242.99 2519.05,-246.42 2514.04,-242.15 2514.04,-242.15"/>
+</g>
+<!-- «sobolev.trace»&#45;&gt;«sobolev.fourier» -->
+<g id="edge31" class="edge">
+<title>«sobolev.trace»&#45;&gt;«sobolev.fourier»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2371.92,-481.97C2352.38,-472.61 2328.06,-460.97 2307.7,-451.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2302.07,-448.53 2308.65,-448.68 2304.93,-449.51 2307.63,-450.8 2307.48,-451.12 2307.33,-451.43 2304.62,-450.14 2306.31,-453.55 2302.07,-448.53 2302.07,-448.53"/>
+</g>
+<!-- «sobolev.trace»&#45;&gt;«elliptic.energy_methods» -->
+<g id="edge46" class="edge">
+<title>«sobolev.trace»&#45;&gt;«elliptic.energy_methods»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M2398.37,-481.78C2386.22,-460.85 2362.6,-426.44 2331.5,-411 2299.29,-395.01 1783.49,-371.74 1610.54,-364.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1604.53,-364.09 1610.64,-361.65 1607.53,-364.12 1610.53,-364.24 1610.52,-364.34 1610.52,-364.44 1607.52,-364.32 1610.41,-367.04 1604.53,-364.09 1604.53,-364.09"/>
+</g>
+<!-- «sobolev.trace»&#45;&gt;«methods.constraints» -->
+<g id="edge63" class="edge">
+<title>«sobolev.trace»&#45;&gt;«methods.constraints»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M2403.52,-481.79C2398.56,-463.03 2388.7,-432.76 2372.5,-411 2292.3,-303.31 2155.5,-216.71 2088.23,-178.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="2082.73,-175.04 2089.28,-175.66 2085.38,-176.44 2087.99,-177.92 2087.94,-178.01 2087.89,-178.09 2085.28,-176.61 2086.6,-180.35 2082.73,-175.04 2082.73,-175.04"/>
+</g>
+<!-- «sobolev.trace»&#45;&gt;«sobolev.compactness» -->
+<g id="edge82" class="edge">
+<title>«sobolev.trace»&#45;&gt;«sobolev.compactness»</title>
+<path fill="none" stroke="#6b7280" d="M2446.75,-490.31C2498.7,-478.82 2590.83,-458.43 2651.79,-444.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2657.96,-443.57 2652.68,-447.5 2655.03,-444.22 2652.1,-444.87 2652.1,-444.87 2652.1,-444.87 2655.03,-444.22 2651.52,-442.23 2657.96,-443.57 2657.96,-443.57"/>
+</g>
+<!-- «sobolev.trace»&#45;&gt;«sobolev.inequalities» -->
+<g id="edge91" class="edge">
+<title>«sobolev.trace»&#45;&gt;«sobolev.inequalities»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2417.79,-481.82C2437.73,-449.95 2484.71,-381.4 2541.5,-343 2567.85,-325.19 2601.27,-313.29 2629.29,-305.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2635.18,-304.12 2630.07,-308.27 2632.37,-305.23 2629.47,-306 2629.38,-305.66 2629.29,-305.32 2632.19,-304.55 2628.69,-303.05 2635.18,-304.12 2635.18,-304.12"/>
+</g>
+<!-- «elliptic.compact_spectrum» -->
+<g id="bp&#45;node&#45;&#45;00ABelliptic&#45;002Ecompact&#45;005Fspectrum&#45;00BB" class="node">
+<title>«elliptic.compact_spectrum»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABelliptic&#45;002Ecompact&#45;005Fspectrum&#45;00BB"><a xlink:title="Group View: Spectrum of a compact operator (3 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="944,-243 841,-243 841,-247 829,-247 829,-207 944,-207 944,-243"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="829,-243 841,-243 "/>
+<text text-anchor="middle" x="886.5" y="-228" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Spectrum of a compact</text>
+<text text-anchor="middle" x="886.5" y="-217" font-family="Helvetica" font-size="10.00" fill="#f8fafc">operator</text>
+</a>
+</g>
+</g>
+<!-- «elliptic.compact_spectrum»&#45;&gt;«elliptic.fredholm» -->
+<g id="edge35" class="edge">
+<title>«elliptic.compact_spectrum»&#45;&gt;«elliptic.fredholm»</title>
+<path fill="none" stroke="#6b7280" d="M910.72,-206.97C923.57,-197.93 939.46,-186.76 953.02,-177.23"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="958.28,-173.53 954.93,-179.19 955.83,-175.25 953.37,-176.98 953.37,-176.98 953.37,-176.98 955.83,-175.25 951.82,-174.77 958.28,-173.53 958.28,-173.53"/>
+</g>
+<!-- «methods.splines» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;00BB" class="node">
+<title>«methods.splines»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Esplines&#45;00BB"><a xlink:title="Group View: Spline approximation (8 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1447,-868 1356,-868 1356,-872 1344,-872 1344,-832 1447,-832 1447,-868"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1344,-868 1356,-868 "/>
+<text text-anchor="middle" x="1395.5" y="-847.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Spline approximation</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroups» -->
+<g id="bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroups&#45;00BB" class="node">
+<title>«evolution.semigroups»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABevolution&#45;002Esemigroups&#45;00BB"><a xlink:title="Group View: Strongly continuous semigroups (15 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1815,-243 1728,-243 1728,-247 1716,-247 1716,-207 1815,-207 1815,-243"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1716,-243 1728,-243 "/>
+<text text-anchor="middle" x="1765.5" y="-228" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Strongly continuous</text>
+<text text-anchor="middle" x="1765.5" y="-217" font-family="Helvetica" font-size="10.00" fill="#f8fafc">semigroups</text>
+</a>
+</g>
+</g>
+<!-- «evolution.semigroups»&#45;&gt;«hyperbolic.nonlinear_wave» -->
+<g id="edge79" class="edge">
+<title>«evolution.semigroups»&#45;&gt;«hyperbolic.nonlinear_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1784.68,-206.97C1794.67,-198.09 1806.98,-187.16 1817.59,-177.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1822.33,-173.53 1819.63,-179.53 1820.15,-175.59 1817.91,-177.59 1817.84,-177.51 1817.78,-177.44 1820.02,-175.45 1816.05,-175.49 1822.33,-173.53 1822.33,-173.53"/>
+</g>
+<!-- «evolution.semigroups»&#45;&gt;«parabolic.variational» -->
+<g id="edge120" class="edge">
+<title>«evolution.semigroups»&#45;&gt;«parabolic.variational»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M1759.6,-206.88C1754.06,-187.33 1748.86,-155.54 1765.5,-136 1795.36,-100.95 1922.68,-90.88 2002.78,-88.05"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2008.94,-87.84 2003.04,-90.74 2005.96,-88.29 2002.96,-88.39 2002.95,-88.04 2002.94,-87.69 2005.93,-87.59 2002.86,-85.34 2008.94,-87.84 2008.94,-87.84"/>
+</g>
+<!-- «symbolic.calculus»&#45;&gt;«symbolic.cega» -->
+<g id="edge9" class="edge">
+<title>«symbolic.calculus»&#45;&gt;«symbolic.cega»</title>
+<path fill="none" stroke="#6b7280" d="M1942.55,-481.97C1959.99,-472.69 1981.68,-461.17 1999.92,-451.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2005.46,-448.53 2001.43,-453.73 2002.81,-449.94 2000.16,-451.34 2000.16,-451.34 2000.16,-451.34 2002.81,-449.94 1998.9,-448.96 2005.46,-448.53 2005.46,-448.53"/>
+</g>
+<!-- «symbolic.calculus»&#45;&gt;«symbolic.autodiff» -->
+<g id="edge29" class="edge">
+<title>«symbolic.calculus»&#45;&gt;«symbolic.autodiff»</title>
+<path fill="none" stroke="#6b7280" d="M1908.73,-481.97C1907.88,-473.72 1906.84,-463.68 1905.91,-454.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="1905.29,-448.76 1908.59,-454.45 1905.6,-451.75 1905.91,-454.73 1905.91,-454.73 1905.91,-454.73 1905.6,-451.75 1903.22,-455.01 1905.29,-448.76 1905.29,-448.76"/>
+</g>
+<!-- «symbolic.calculus»&#45;&gt;«symbolic.theorem_api» -->
+<g id="edge102" class="edge">
+<title>«symbolic.calculus»&#45;&gt;«symbolic.theorem_api»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1864.36,-482.98C1808.7,-464.04 1712.05,-432.4 1627.5,-411 1563.27,-394.74 1488.57,-380.68 1437.87,-371.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1431.81,-370.79 1438.19,-369.15 1434.79,-371.2 1437.74,-371.71 1437.72,-371.81 1437.71,-371.91 1434.75,-371.4 1437.26,-374.47 1431.81,-370.79 1431.81,-370.79"/>
+</g>
+<!-- «hyperbolic.symmetric_systems» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esymmetric&#45;005Fsystems&#45;00BB" class="node">
+<title>«hyperbolic.symmetric_systems»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Esymmetric&#45;005Fsystems&#45;00BB"><a xlink:title="Group View: Symmetric first&#45;order systems (13 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="1255.5,-868 1163.5,-868 1163.5,-872 1151.5,-872 1151.5,-832 1255.5,-832 1255.5,-868"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="1151.5,-868 1163.5,-868 "/>
+<text text-anchor="middle" x="1203.5" y="-853" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Symmetric first&#45;order</text>
+<text text-anchor="middle" x="1203.5" y="-842" font-family="Helvetica" font-size="10.00" fill="#f8fafc">systems</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.transport»&#45;&gt;«methods.representations» -->
+<g id="edge71" class="edge">
+<title>«hyperbolic.transport»&#45;&gt;«methods.representations»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M1204.91,-481.97C1213.83,-473.24 1224.79,-462.52 1234.31,-453.21"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1238.85,-448.76 1236.45,-454.89 1236.78,-450.93 1234.63,-453.03 1234.56,-452.96 1234.49,-452.89 1236.64,-450.79 1232.68,-451.03 1238.85,-448.76 1238.85,-448.76"/>
+</g>
+<!-- «hyperbolic.energy_uniqueness» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eenergy&#45;005Funiqueness&#45;00BB" class="node">
+<title>«hyperbolic.energy_uniqueness»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eenergy&#45;005Funiqueness&#45;00BB"><a xlink:title="Group View: Wave energy and uniqueness (4 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2932.5,-104 2804.5,-104 2804.5,-108 2792.5,-108 2792.5,-68 2932.5,-68 2932.5,-104"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2792.5,-104 2804.5,-104 "/>
+<text text-anchor="middle" x="2862.5" y="-83.5" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Wave energy and uniqueness</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.calculus»&#45;&gt;«elliptic.regularity» -->
+<g id="edge26" class="edge">
+<title>«sobolev.calculus»&#45;&gt;«elliptic.regularity»</title>
+<path fill="none" stroke="#6b7280" d="M2891.7,-343C2850.84,-306.04 2753.99,-218.44 2709.1,-177.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2704.4,-173.6 2710.66,-175.62 2706.63,-175.61 2708.85,-177.62 2708.85,-177.62 2708.85,-177.62 2706.63,-175.61 2707.04,-179.62 2704.4,-173.6 2704.4,-173.6"/>
+</g>
+<!-- «sobolev.calculus»&#45;&gt;«sobolev.inequalities» -->
+<g id="edge94" class="edge">
+<title>«sobolev.calculus»&#45;&gt;«sobolev.inequalities»</title>
+<path fill="none" stroke="#6b7280" d="M2852.94,-345.35C2818.65,-335.77 2775.45,-323.15 2741.46,-312.83"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2735.66,-311.06 2742.18,-310.22 2738.53,-311.93 2741.4,-312.81 2741.4,-312.81 2741.4,-312.81 2738.53,-311.93 2740.61,-315.39 2735.66,-311.06 2735.66,-311.06"/>
+</g>
+<!-- «sobolev.weak» -->
+<g id="bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweak&#45;00BB" class="node">
+<title>«sobolev.weak»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABsobolev&#45;002Eweak&#45;00BB"><a xlink:title="Group View: Weak derivatives and Sobolev spaces (15 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2611,-722 2518,-722 2518,-726 2506,-726 2506,-686 2611,-686 2611,-722"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2506,-722 2518,-722 "/>
+<text text-anchor="middle" x="2558.5" y="-707" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Weak derivatives and</text>
+<text text-anchor="middle" x="2558.5" y="-696" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Sobolev spaces</text>
+</a>
+</g>
+</g>
+<!-- «sobolev.weak»&#45;&gt;«sobolev.difference_quotients» -->
+<g id="edge15" class="edge">
+<title>«sobolev.weak»&#45;&gt;«sobolev.difference_quotients»</title>
+<path fill="none" stroke="#6b7280" d="M2505.84,-697.91C2390.44,-685.31 2125.5,-647.79 2125.5,-569 2125.5,-569 2125.5,-569 2125.5,-429.5 2125.5,-389.93 2130.64,-344.11 2134.19,-317.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2135.01,-311.07 2136.89,-317.38 2134.61,-314.04 2134.21,-317.02 2134.21,-317.02 2134.21,-317.02 2134.61,-314.04 2131.54,-316.66 2135.01,-311.07 2135.01,-311.07"/>
+</g>
+<!-- «sobolev.weak»&#45;&gt;«sobolev.fourier» -->
+<g id="edge32" class="edge">
+<title>«sobolev.weak»&#45;&gt;«sobolev.fourier»</title>
+<path fill="none" stroke="#6b7280" d="M2505.77,-686.91C2437.31,-662.8 2320.99,-609.99 2273.5,-518 2263.47,-498.57 2262.56,-473.36 2263.66,-455.17"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2264.14,-448.81 2266.38,-455 2263.91,-451.8 2263.69,-454.8 2263.69,-454.8 2263.69,-454.8 2263.91,-451.8 2260.99,-454.59 2264.14,-448.81 2264.14,-448.81"/>
+</g>
+<!-- «sobolev.weak»&#45;&gt;«sobolev.approximation» -->
+<g id="edge81" class="edge">
+<title>«sobolev.weak»&#45;&gt;«sobolev.approximation»</title>
+<path fill="none" stroke="#6b7280" d="M2583.2,-685.66C2595.39,-677.1 2610.2,-666.7 2622.99,-657.72"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2627.97,-654.22 2624.61,-659.88 2625.51,-655.95 2623.06,-657.67 2623.06,-657.67 2623.06,-657.67 2625.51,-655.95 2621.51,-655.46 2627.97,-654.22 2627.97,-654.22"/>
+</g>
+<!-- «sobolev.weak»&#45;&gt;«sobolev.compactness» -->
+<g id="edge83" class="edge">
+<title>«sobolev.weak»&#45;&gt;«sobolev.compactness»</title>
+<path fill="none" stroke="#6b7280" d="M2611.05,-698.43C2651.52,-692.91 2707.47,-680.73 2749.5,-654 2782.54,-632.99 2792.28,-622.85 2805.5,-586 2823.99,-534.46 2773.81,-481.23 2740.15,-452.68"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2735.32,-448.64 2741.66,-450.41 2737.62,-450.57 2739.93,-452.49 2739.93,-452.49 2739.93,-452.49 2737.62,-450.57 2738.2,-454.56 2735.32,-448.64 2735.32,-448.64"/>
+</g>
+<!-- «sobolev.weak»&#45;&gt;«sobolev.extension» -->
+<g id="edge87" class="edge">
+<title>«sobolev.weak»&#45;&gt;«sobolev.extension»</title>
+<path fill="none" stroke="#6b7280" d="M2611.37,-699.9C2646.98,-695.07 2692.54,-683.13 2721.5,-654 2737.77,-637.63 2743.56,-611.25 2745.56,-592.22"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2746.1,-586.07 2748.26,-592.29 2745.84,-589.06 2745.57,-592.05 2745.57,-592.05 2745.57,-592.05 2745.84,-589.06 2742.88,-591.81 2746.1,-586.07 2746.1,-586.07"/>
+</g>
+<!-- «sobolev.weak»&#45;&gt;«sobolev.inequalities» -->
+<g id="edge89" class="edge">
+<title>«sobolev.weak»&#45;&gt;«sobolev.inequalities»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2557.21,-685.7C2553.95,-630.96 2550.16,-458.33 2620.5,-343 2627.33,-331.8 2637.75,-322.28 2648.26,-314.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2653.41,-311.13 2650.02,-316.77 2651.15,-313.13 2648.68,-314.83 2648.48,-314.55 2648.28,-314.26 2650.75,-312.55 2646.94,-312.33 2653.41,-311.13 2653.41,-311.13"/>
+</g>
+<!-- «sobolev.weak»&#45;&gt;«sobolev.trace» -->
+<g id="edge95" class="edge">
+<title>«sobolev.weak»&#45;&gt;«sobolev.trace»</title>
+<path fill="none" stroke="#6b7280" d="M2510.45,-685.82C2494.43,-678.14 2477.59,-667.67 2465.5,-654 2431.98,-616.1 2417.03,-556.87 2411.03,-524.34"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2409.95,-518.2 2413.65,-523.64 2410.47,-521.16 2410.99,-524.11 2410.99,-524.11 2410.99,-524.11 2410.47,-521.16 2408.33,-524.58 2409.95,-518.2 2409.95,-518.2"/>
+</g>
+<!-- «sobolev.weak»&#45;&gt;«sobolev.calculus» -->
+<g id="edge114" class="edge">
+<title>«sobolev.weak»&#45;&gt;«sobolev.calculus»</title>
+<path fill="none" stroke="#6b7280" d="M2611.13,-696.98C2721.6,-682.88 2967.5,-643.16 2967.5,-569 2967.5,-569 2967.5,-569 2967.5,-499 2967.5,-455.95 2943.21,-410.72 2926.34,-384.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2922.87,-379.21 2928.42,-382.75 2924.51,-381.72 2926.16,-384.23 2926.16,-384.23 2926.16,-384.23 2924.51,-381.72 2923.9,-385.71 2922.87,-379.21 2922.87,-379.21"/>
+</g>
+<!-- «sobolev.weak»&#45;&gt;«elliptic.weak_theory» -->
+<g id="edge118" class="edge">
+<title>«sobolev.weak»&#45;&gt;«elliptic.weak_theory»</title>
+<path fill="none" stroke="#6b7280" d="M2554.88,-685.74C2539.66,-613.14 2480.82,-332.45 2463.39,-249.32"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2462.11,-243.24 2465.99,-248.55 2462.73,-246.17 2463.34,-249.11 2463.34,-249.11 2463.34,-249.11 2462.73,-246.17 2460.7,-249.66 2462.11,-243.24 2462.11,-243.24"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«elliptic.regularity» -->
+<g id="edge24" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«elliptic.regularity»</title>
+<path fill="none" stroke="#6b7280" d="M2514.26,-207.46C2546.23,-197.97 2587.13,-185.83 2623.5,-175 2627.89,-173.69 2632.46,-172.33 2637.03,-170.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2642.81,-169.25 2637.83,-173.55 2639.94,-170.1 2637.06,-170.96 2637.06,-170.96 2637.06,-170.96 2639.94,-170.1 2636.29,-168.37 2642.81,-169.25 2642.81,-169.25"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«elliptic.solution_operators» -->
+<g id="edge27" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«elliptic.solution_operators»</title>
+<path fill="none" stroke="#6b7280" d="M2468.84,-206.93C2483.76,-182.31 2511.31,-136.83 2527.87,-109.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2531.03,-104.29 2530.23,-110.82 2529.47,-106.86 2527.92,-109.42 2527.92,-109.42 2527.92,-109.42 2529.47,-106.86 2525.61,-108.02 2531.03,-104.29 2531.03,-104.29"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«elliptic.fredholm» -->
+<g id="edge36" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«elliptic.fredholm»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2402.89,-221.46C2172.91,-210.94 1296.61,-170.86 1048.38,-159.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1042.28,-159.23 1048.4,-156.81 1045.3,-159.02 1048.29,-159.16 1048.28,-159.51 1048.26,-159.86 1045.27,-159.72 1048.15,-162.21 1042.28,-159.23 1042.28,-159.23"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«hyperbolic.higher_regularity» -->
+<g id="edge53" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«hyperbolic.higher_regularity»</title>
+<path fill="none" stroke="#6b7280" d="M2490.16,-206.93C2537.25,-181.53 2625.55,-133.9 2675.54,-106.94"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2680.85,-104.07 2676.85,-109.3 2678.2,-105.5 2675.56,-106.92 2675.56,-106.92 2675.56,-106.92 2678.2,-105.5 2674.28,-104.55 2680.85,-104.07 2680.85,-104.07"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«elliptic.modified_helmholtz» -->
+<g id="edge56" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«elliptic.modified_helmholtz»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2402.76,-211.41C2360.8,-201.81 2301.92,-188.05 2250.5,-175 2246.08,-173.88 2241.51,-172.69 2236.92,-171.48"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2231.11,-169.94 2237.6,-168.87 2234.1,-170.37 2237,-171.14 2236.91,-171.48 2236.82,-171.82 2233.92,-171.05 2236.21,-174.09 2231.11,-169.94 2231.11,-169.94"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«methods.constraints» -->
+<g id="edge62" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«methods.constraints»</title>
+<path fill="none" stroke="#6b7280" d="M2402.93,-210.74C2396.4,-209.38 2389.81,-208.1 2383.5,-207 2267.93,-186.9 2236.81,-196.56 2121.5,-175 2119.51,-174.63 2117.49,-174.23 2115.46,-173.82"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2109.32,-172.53 2115.74,-171.12 2112.25,-173.14 2115.19,-173.76 2115.19,-173.76 2115.19,-173.76 2112.25,-173.14 2114.63,-176.4 2109.32,-172.53 2109.32,-172.53"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«methods.semilinear_nonvariational» -->
+<g id="edge73" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«methods.semilinear_nonvariational»</title>
+<path fill="none" stroke="#6b7280" d="M2454.14,-206.93C2447.9,-182.52 2436.42,-137.59 2429.42,-110.19"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2427.92,-104.29 2432.02,-109.43 2428.66,-107.2 2429.4,-110.1 2429.4,-110.1 2429.4,-110.1 2428.66,-107.2 2426.79,-110.77 2427.92,-104.29 2427.92,-104.29"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«methods.semilinear_variational» -->
+<g id="edge76" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«methods.semilinear_variational»</title>
+<path fill="none" stroke="#6b7280" d="M2433.77,-206.97C2420.54,-197.85 2404.15,-186.56 2390.23,-176.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2385.22,-173.53 2391.69,-174.71 2387.69,-175.23 2390.16,-176.93 2390.16,-176.93 2390.16,-176.93 2387.69,-175.23 2388.63,-179.15 2385.22,-173.53 2385.22,-173.53"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«hyperbolic.nonlinear_wave» -->
+<g id="edge80" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«hyperbolic.nonlinear_wave»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M2402.65,-218.99C2312.62,-210.78 2129.9,-193.48 1975.5,-175 1954.7,-172.51 1932.13,-169.51 1911.54,-166.66"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="1905.51,-165.82 1911.82,-163.97 1908.49,-166.13 1911.47,-166.54 1911.45,-166.64 1911.44,-166.74 1908.47,-166.33 1911.08,-169.32 1905.51,-165.82 1905.51,-165.82"/>
+</g>
+<!-- «elliptic.weak_theory»&#45;&gt;«parabolic.variational» -->
+<g id="edge123" class="edge">
+<title>«elliptic.weak_theory»&#45;&gt;«parabolic.variational»</title>
+<path fill="none" stroke="#6b7280" d="M2402.7,-209.47C2363.35,-198.8 2314.42,-184.56 2295.5,-175 2269.71,-161.97 2269.4,-148.8 2243.5,-136 2209.86,-119.38 2169.69,-107.59 2136.43,-99.75"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2130.3,-98.34 2136.75,-97.06 2133.22,-99.01 2136.15,-99.69 2136.15,-99.69 2136.15,-99.69 2133.22,-99.01 2135.54,-102.32 2130.3,-98.34 2130.3,-98.34"/>
+</g>
+<!-- «parabolic.variational»&#45;&gt;«parabolic.regularity» -->
+<g id="edge66" class="edge">
+<title>«parabolic.variational»&#45;&gt;«parabolic.regularity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2130.24,-76.51C2223.09,-63.52 2398.87,-38.94 2487.51,-26.55"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2493.48,-25.71 2487.91,-29.22 2490.56,-26.48 2487.59,-26.89 2487.54,-26.55 2487.49,-26.2 2490.46,-25.78 2487.16,-23.87 2493.48,-25.71 2493.48,-25.71"/>
+</g>
+<!-- «parabolic.variational»&#45;&gt;«fluid.solenoidal» -->
+<g id="edge97" class="edge">
+<title>«parabolic.variational»&#45;&gt;«fluid.solenoidal»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2009.71,-67.92C1977.37,-58.68 1937.36,-47.25 1904.16,-37.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="1898.04,-36.01 1904.55,-35.06 1901.02,-36.5 1903.9,-37.32 1903.81,-37.66 1903.71,-38 1900.83,-37.17 1903.07,-40.26 1898.04,-36.01 1898.04,-36.01"/>
+</g>
+<!-- «hyperbolic.weak_wave» -->
+<g id="bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;00BB" class="node">
+<title>«hyperbolic.weak_wave»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABhyperbolic&#45;002Eweak&#45;005Fwave&#45;00BB"><a xlink:title="Group View: Weak wave equations (10 nodes)">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.4" points="2888,-173.5 2793,-173.5 2793,-177.5 2781,-177.5 2781,-137.5 2888,-137.5 2888,-173.5"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2.4" points="2781,-173.5 2793,-173.5 "/>
+<text text-anchor="middle" x="2834.5" y="-153" font-family="Helvetica" font-size="10.00" fill="#f8fafc">Weak wave equations</text>
+</a>
+</g>
+</g>
+<!-- «hyperbolic.weak_wave»&#45;&gt;«hyperbolic.higher_regularity» -->
+<g id="edge51" class="edge">
+<title>«hyperbolic.weak_wave»&#45;&gt;«hyperbolic.higher_regularity»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.7" d="M2803.71,-137.47C2786.95,-128.19 2766.12,-116.67 2748.6,-106.97"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.7" points="2743.28,-104.03 2749.83,-104.57 2746.07,-105.17 2748.7,-106.63 2748.53,-106.93 2748.36,-107.24 2745.73,-105.79 2747.22,-109.29 2743.28,-104.03 2743.28,-104.03"/>
+</g>
+<!-- «hyperbolic.weak_wave»&#45;&gt;«hyperbolic.energy_uniqueness» -->
+<g id="edge112" class="edge">
+<title>«hyperbolic.weak_wave»&#45;&gt;«hyperbolic.energy_uniqueness»</title>
+<path fill="none" stroke="#6b7280" d="M2841.57,-137.47C2845.02,-129.14 2849.23,-118.99 2852.97,-109.98"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="2855.34,-104.26 2855.53,-110.84 2854.19,-107.03 2853.04,-109.8 2853.04,-109.8 2853.04,-109.8 2854.19,-107.03 2850.55,-108.77 2855.34,-104.26 2855.34,-104.26"/>
+</g>
+</g>
+</svg>
