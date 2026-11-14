@@ -6,43 +6,32 @@ Authors: LeanPDE Team
 
 module
 
-public import PDE.Analysis.Calculus.PositivePartRpow
+public import PDE.Analysis.Calculus.PowerPotential.Classical
+import CAS.ExactTactic
 
 /-!
-# Regularity of the superquadratic wave source
+# Regularity of the wave source `|s|^p` for `p ≥ 2`
 
-For `p>2`, the nonlinearity `|s|^p` is `C²` across zero. This follows
-by writing it as the sum of two positive-part powers. It supplies the source
-regularity needed by the three-dimensional retarded Kirchhoff construction.
+For every real `p ≥ 2`, the nonlinearity `|s|^p` is `C²` across zero: it is `p` times the power
+potential `Real.signedPowerPotential (p - 1)`, which is `C²` by
+`Real.contDiff_two_signedPowerPotential`. At `p = 2` it is the polynomial `s²`. It supplies the
+source regularity needed by the three-dimensional retarded Kirchhoff construction.
+
+The signed power `|s|^(p-1) s` differs at `p = 2`, where it is `s |s|`:
+`PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.contDiff_two_signedPower`
+is for `p > 2`. Nothing is proved here about the exponents `p < 2`.
 -/
 
 @[expose] public noncomputable section
 
 namespace WaveEquation.SmallData
 
-/-- A positive-part power of exponent greater than two is twice continuously
-differentiable, including at its interface. -/
-theorem contDiff_two_posPart_rpow {p : ℝ} (hp : 2 < p) :
-    ContDiff ℝ 2 (fun x : ℝ ↦ x⁺ ^ p) := by
-  rw [show (2 : WithTop ℕ∞) = (1 : ℕ) + 1 by norm_num, contDiff_succ_iff_deriv]
-  refine ⟨fun x ↦ (PDE.Analysis.hasDerivAt_posPart_rpow (by linarith) x).differentiableAt, ?_, ?_⟩
-  · norm_num
-  · have hd : deriv (fun x : ℝ ↦ x⁺ ^ p) = fun x ↦ p * x⁺ ^ (p - 1) :=
-      funext fun x ↦ (PDE.Analysis.hasDerivAt_posPart_rpow (by linarith) x).deriv
-    rw [hd]
-    exact contDiff_const.mul (PDE.Analysis.contDiff_one_posPart_rpow (by linarith))
-
-/-- The absolute power source is `C²` for every real exponent above two. -/
-theorem contDiff_two_abs_rpow {p : ℝ} (hp : 2 < p) :
+/-- The absolute power source `x ↦ |x|^p` is `C²` on `ℝ` for every real exponent `p ≥ 2`. -/
+theorem contDiff_two_abs_rpow {p : ℝ} (hp : 2 ≤ p) :
     ContDiff ℝ 2 (fun x : ℝ ↦ |x| ^ p) := by
-  have heq : (fun x : ℝ ↦ |x| ^ p) = fun x ↦ x⁺ ^ p + (-x)⁺ ^ p := by
-    funext x
-    rcases le_total 0 x with hx | hx
-    · rw [abs_of_nonneg hx, posPart_eq_self.mpr hx,
-        posPart_eq_zero.mpr (neg_nonpos.mpr hx), Real.zero_rpow (by linarith), add_zero]
-    · rw [abs_of_nonpos hx, posPart_eq_zero.mpr hx,
-        posPart_eq_self.mpr (neg_nonneg.mpr hx), Real.zero_rpow (by linarith), zero_add]
-  rw [heq]
-  exact (contDiff_two_posPart_rpow hp).add ((contDiff_two_posPart_rpow hp).comp contDiff_neg)
+  have hp0 : p ≠ 0 := (zero_lt_two.trans_le hp).ne'
+  rw [show (fun x : ℝ ↦ |x| ^ p) = fun x ↦ p * Real.signedPowerPotential (p - 1) x from
+    funext fun x ↦ by rw [Real.signedPowerPotential, sub_add_cancel]; cas]
+  exact contDiff_const.mul (Real.contDiff_two_signedPowerPotential (by cas using [hp]))
 
 end WaveEquation.SmallData

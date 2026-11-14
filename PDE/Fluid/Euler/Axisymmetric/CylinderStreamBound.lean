@@ -14,6 +14,7 @@ public import PDE.CoordinateSystems.Axisymmetric.Isometry
 public import Mathlib.Analysis.SpecialFunctions.SmoothTransition
 import Mathlib.Analysis.InnerProductSpace.Calculus
 import Mathlib.Analysis.Calculus.ContDiff.Convolution
+import PDE.Analysis.Integration.Radial.Profile
 import PDE.Elliptic.PotentialTheory.FundamentalSolution.LocalIntegrability
 
 /-!
@@ -101,9 +102,10 @@ radius `δ`. -/
 def radialBump (δ : ℝ) (y : ℝ^3) : ℝ :=
   Real.smoothTransition (1 - ‖y‖ ^ 2 / δ ^ 2)
 
-/-- The radial bump is smooth. -/
-theorem contDiff_radialBump (δ : ℝ) : ContDiff ℝ (⊤ : ℕ∞) (radialBump δ) :=
-  Real.smoothTransition.contDiff.comp (contDiff_const.sub ((contDiff_norm_sq ℝ).div_const _))
+/-- The radial bump is smooth: the case `A = 1` of `PDE.Analysis.contDiff_profile`. -/
+theorem contDiff_radialBump (δ : ℝ) : ContDiff ℝ (⊤ : ℕ∞) (radialBump δ) := by
+  unfold radialBump
+  simpa only [one_mul] using PDE.Analysis.contDiff_profile Real.smoothTransition.contDiff 1 δ
 
 /-- The radial bump is nonnegative. -/
 theorem radialBump_nonneg (δ : ℝ) (y : ℝ^3) : 0 ≤ radialBump δ y := by
@@ -127,11 +129,12 @@ theorem support_radialBump {δ : ℝ} (hδ : 0 < δ) :
   · intro h
     exact pow_lt_pow_left₀ h (norm_nonneg _) two_ne_zero
 
-/-- The radial bump has compact support. -/
+/-- The radial bump has compact support: the case `A = 1` of
+`PDE.Analysis.hasCompactSupport_profile`. -/
 theorem hasCompactSupport_radialBump {δ : ℝ} (hδ : 0 < δ) : HasCompactSupport (radialBump δ) := by
-  apply HasCompactSupport.of_support_subset_isCompact (isCompact_closedBall (0 : ℝ^3) δ)
-  rw [support_radialBump hδ]
-  exact Metric.ball_subset_closedBall
+  unfold radialBump
+  simpa only [one_mul] using PDE.Analysis.hasCompactSupport_profile
+    (fun _ ↦ Real.smoothTransition.zero_of_nonpos) hδ 1
 
 /-- The radial bump has positive integral. -/
 theorem integral_radialBump_pos {δ : ℝ} (hδ : 0 < δ) : 0 < ∫ y, radialBump δ y := by

@@ -8,6 +8,7 @@ module
 
 public import PDE.Fluid.Euler.Axisymmetric.Cylinder
 public import PDE.Common.Euclidean.CoordinateReflection
+import PDE.Analysis.Calculus.Periodic
 import PDE.FDeriv.Calculus
 import PDE.FDeriv.Reflection.Coordinate
 import Mathlib.Analysis.Calculus.Deriv.Add
@@ -266,16 +267,6 @@ theorem HasReflectionSymmetry.reflect_eq {f : MeridianFields} (h : HasReflection
     · funext y t
       simpa [axialReflection] using congrArg Neg.neg (h.streamFunction t y)
 
-/-- An odd `L`-periodic function of `z` vanishes at the odd multiples of `L / 2`. -/
-theorem eq_zero_of_odd_of_periodic {g : ℝ → ℝ} {L : ℝ} (hodd : ∀ z, g (-z) = -g z)
-    (hper : Function.Periodic g L) (k : ℤ) : g (L / 2 + k * L) = 0 := by
-  have hhalf : g (L / 2) = 0 := by
-    have h := hper (-(L / 2))
-    rw [show -(L / 2) + L = L / 2 by ring, hodd] at h
-    linarith
-  rw [(hper.int_mul k) (L / 2)]
-  exact hhalf
-
 /-- The meridian translation of `meridianPoint r z` by `L` is `meridianPoint r (z + L)`. -/
 @[simp]
 theorem axialTranslate_meridianPoint (L r z : ℝ) :
@@ -288,8 +279,8 @@ theorem axialTranslate_meridianPoint (L r z : ℝ) :
 theorem streamFunction_eq_zero_of_odd_of_periodic {f : MeridianFields} {L : ℝ}
     (hsym : HasReflectionSymmetry f) (hper : IsAxiallyPeriodic L f) (r t : ℝ) (k : ℤ) :
     f.streamFunction (meridianPoint r (L / 2 + k * L)) t = 0 := by
-  refine eq_zero_of_odd_of_periodic (g := fun z ↦ f.streamFunction (meridianPoint r z) t)
-    ?_ ?_ k
+  refine PDE.Analysis.eq_zero_of_odd_of_periodic
+    (g := fun z ↦ f.streamFunction (meridianPoint r z) t) ?_ ?_ k
   · intro z
     have h := hsym.streamFunction t (meridianPoint r z)
     simpa [← axialReflection_meridianPoint, axialReflection] using h

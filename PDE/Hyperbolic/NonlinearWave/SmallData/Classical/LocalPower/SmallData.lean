@@ -6,17 +6,19 @@ Authors: LeanPDE Team
 
 module
 
-public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.Power
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.StraussLifespan
 public import PDE.Spaces.Sobolev.Approximation.Density.SmallNorm
+import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.LocalExistence
+import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.PowerSource
 
 /-!
-# Small noninteger-power waves with finite classical lifespan
+# Small power waves with finite classical lifespan
 
-The local construction gives the existence hypothesis in the range `2 < p < 1 + √2`. The Strauss
-contradiction and classical gluing theorem then give a finite maximal solution. Positive multiples
-of a fixed smooth mollifier supply nonzero data arbitrarily small in any prescribed integer-order
-Sobolev norm.
+In the range `2 ≤ p < 1 + √2` the power `|z|^p` is `C²`, so compactly supported data have a
+maximal classical solution once the durations of their solutions are bounded
+(`exists_maximalSolution_of_compact_data`), and the Strauss contradiction bounds them. This gives
+a finite maximal solution from zero displacement. Positive multiples of a fixed smooth mollifier
+supply nonzero data arbitrarily small in any prescribed integer-order Sobolev norm.
 
 The conclusion is failure of classical continuation at a finite time.
 -/
@@ -24,26 +26,29 @@ The conclusion is failure of classical continuation at a finite time.
 @[expose] public noncomputable section
 
 open MeasureTheory Set SobolevSpace.GraphSpace TopologicalSpace
+open PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower
+  (exists_maximalSolution_of_compact_data)
 open scoped Distributions ENNReal Sobolev
 
 namespace WaveEquation.SmallData.Classical.LocalPower
 
 /-- Compact C² velocity of positive integral gives a finite maximal
-classical power wave in the upper part of the strict three-dimensional Strauss
-range. Its local existence is constructed from the data. -/
-theorem exists_finite_maximalSolution_abs_rpow_three {p R : ℝ} (hp : 2 < p)
+classical power wave in the upper part `2 ≤ p < 1 + √2` of the strict three-dimensional
+Strauss range. This is `exists_maximalSolution_of_compact_data` for zero displacement, with the
+bound on the durations from the Strauss obstruction. -/
+theorem exists_finite_maximalSolution_abs_rpow_three {p R : ℝ} (hp : 2 ≤ p)
     (hcrit : p < 1 + Real.sqrt 2) {h : ℝ^3 → ℝ} (hh : ContDiff ℝ 2 h) (hhc : HasCompactSupport h)
     (hs : ∀ x, R < ‖x‖ → h x = 0) (hR : 0 < R) (hpositive : 0 < ∫ x, h x) :
-    ∃ T : ℝ, ∃ u : ℝ^4 → ℝ, IsMaximalSolutionBefore (fun z ↦ -|z| ^ p) (fun _ ↦ 0) h T u := by
-  obtain ⟨a, u₀, _, h₀⟩ := exists_solutionBefore_abs_rpow_three hp hh hhc
-  obtain ⟨T, u, hu, _⟩ := exists_maximalSolution_three_of_lt_strauss
-    contDiff_const hh (fun _ _ ↦ rfl) hs hR (by linarith) hcrit (by simp) hpositive h₀
-  exact ⟨T, u, hu⟩
+    ∃ T : ℝ, ∃ u : ℝ^4 → ℝ, IsMaximalSolutionBefore (fun z ↦ -|z| ^ p) (fun _ ↦ 0) h T u :=
+  ⟨_, exists_maximalSolution_of_compact_data (contDiff_two_abs_rpow hp).neg
+    contDiff_const hh HasCompactSupport.zero hhc
+    (bddAbove_existenceTimes_three_of_lt_strauss contDiff_const hh (fun _ _ ↦ rfl) hs hR
+      (one_lt_two.trans_le hp) hcrit (by simp) hpositive)⟩
 
 /-- Arbitrarily small smooth compact velocity constructs a
-finite maximal noninteger-power wave for `2 < p < 1 + √2`. The positive
+finite maximal power wave for `2 ≤ p < 1 + √2`. The positive
 integral ensures that the constructed velocity is nontrivial. -/
-theorem exists_small_data_finite_maximalSolution_abs_rpow_three {p : ℝ} (hp : 2 < p)
+theorem exists_small_data_finite_maximalSolution_abs_rpow_three {p : ℝ} (hp : 2 ≤ p)
     (hcrit : p < 1 + Real.sqrt 2) (k : ℕ) (q : ℝ≥0∞) [Fact (1 ≤ q)] {ε : ℝ} (hε : 0 < ε) :
     ∃ h : 𝓓((⊤ : Opens (ℝ^3)), ℝ),
       (∀ x, 0 ≤ h x) ∧

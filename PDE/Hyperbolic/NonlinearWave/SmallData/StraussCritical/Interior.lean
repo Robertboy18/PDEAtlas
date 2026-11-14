@@ -98,7 +98,7 @@ theorem radiusMean_semilinear_interior_lower_bound {u : ℝ^4 → ℝ} {h : ℝ^
   have ha0 : 0 < a := by linarith only [hR, ha]
   have ht0 : 0 ≤ t := by linarith only [ha0, hat]
   have hr0 : 0 ≤ t - a := by linarith only [ha0, hat]
-  have hf : ContDiff ℝ 1 f := ((contDiff_two_abs_rpow hp).comp hu).of_le (by norm_num)
+  have hf : ContDiff ℝ 1 f := ((contDiff_two_abs_rpow hp.le).comp hu).of_le (by norm_num)
   have hJ : Continuous J := by
     apply continuous_const.fun_mul
     apply continuous_intervalIntegral_moving_endpoints

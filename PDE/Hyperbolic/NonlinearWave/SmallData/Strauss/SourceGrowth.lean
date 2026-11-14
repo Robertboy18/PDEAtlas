@@ -131,7 +131,7 @@ theorem semilinear_source_lower_bound {u : ℝ^4 → ℝ} {g h : ℝ^3 → ℝ} 
     shellSourceCoefficient R (∫ y : ℝ^3, h y) p * t ^ (2 - p) ≤
       ∫ x : ℝ^3, |u (timeSpaceCons t x)| ^ p := by
   have htpos : 0 < t := hR.trans_le ht
-  have hreg : Continuous (fun z : ℝ ↦ |z| ^ p) := (contDiff_two_abs_rpow hp).continuous
+  have hreg : Continuous (fun z : ℝ ↦ |z| ^ p) := (contDiff_two_abs_rpow hp.le).continuous
   have hslice : Continuous (fun x : ℝ^3 ↦ u (timeSpaceCons t x)) :=
     hu.continuous.comp (contDiff_timeSpaceCons_spatial 3 t (m := 1)).continuous
   have hsupp : HasCompactSupport (fun x : ℝ^3 ↦ |u (timeSpaceCons t x)| ^ p) :=
@@ -142,7 +142,7 @@ theorem semilinear_source_lower_bound {u : ℝ^4 → ℝ} {g h : ℝ^3 → ℝ} 
   exact kirchhoffFormula_shell_lower_bound (w := fun x : ℝ^3 ↦ u (timeSpaceCons t x))
     (R := R) (p := p) (t := t) hg hh hgs hhs hR (by linarith) hG hH ht hint
     (fun x ↦ kirchhoffFormula_le_of_nonneg_source (f := fun z : ℝ^4 ↦ |u z| ^ p)
-      hu ((contDiff_two_abs_rpow hp).comp hu)
+      hu ((contDiff_two_abs_rpow hp.le).comp hu)
       hg hh hwave hposition hinitial (fun _ _ _ ↦ Real.rpow_nonneg (abs_nonneg _) _) htpos.le x)
 
 end WaveEquation.SmallData

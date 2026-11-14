@@ -51,7 +51,7 @@ theorem tendsto_semilinear_source_div_rpow_atTop {u : ℝ^4 → ℝ} {h : ℝ^3 
   have hv : ContDiff ℝ 2 (fun x : ℝ^3 ↦ u (timeSpaceCons t x)) :=
     hu.comp (contDiff_timeSpaceCons_spatial 3 t)
   have hvi : Integrable (fun x : ℝ^3 ↦ |u (timeSpaceCons t x)| ^ p) :=
-    ((contDiff_two_abs_rpow hp).comp hv).continuous.integrable_of_hasCompactSupport
+    ((contDiff_two_abs_rpow hp.le).comp hv).continuous.integrable_of_hasCompactSupport
       ((hs.hasCompactSupport_slice ht0.le).comp_left
         (g := fun z : ℝ ↦ |z| ^ p) (by simp [Real.zero_rpow (by linarith : p ≠ 0)]))
   have hbound := power_integral_logarithmic_lower_bound hv hvi hc hR ht hp hcritical

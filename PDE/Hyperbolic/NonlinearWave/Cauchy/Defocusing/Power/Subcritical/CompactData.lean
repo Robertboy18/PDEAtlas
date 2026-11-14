@@ -50,20 +50,9 @@ theorem eq_zero_of_initial_support {p : ℝ} (hp : 1 ≤ p) {u : ℝ^4 → ℝ} 
   have hV := Real.contDiff_one_signedPowerPotential hp
   have hclosed (x : ℝ^3) : EqOn
       (fun t ↦ semilinearWaveOperator (Real.signedPowerPotential p) u (timeSpaceCons t x))
-      (fun _ ↦ 0) (Icc 0 S) := by
-    have hc : Continuous
-        (fun t ↦ semilinearWaveOperator (Real.signedPowerPotential p) u (timeSpaceCons t x)) :=
-      ((continuous_waveOperator_of_contDiff_two hu).add
-        (hV.continuous_deriv_one.comp hu.continuous)).comp
-          ((contDiff_timeSpaceCons_uncurry 3 (m := 1)).continuous.comp
-            (continuous_id.prodMk continuous_const))
-    have he : EqOn
-        (fun t ↦ semilinearWaveOperator (Real.signedPowerPotential p) u (timeSpaceCons t x))
-        (fun _ ↦ 0) (Ioo 0 S) := by
-      intro t ht
-      simpa only [semilinearWaveOperator, (Real.hasDerivAt_signedPowerPotential hp _).deriv]
-        using hwave t ht x
-    simpa only [closure_Ioo hS.ne] using he.closure hc continuous_const
+      (fun _ ↦ 0) (Icc 0 S) := fun t ht ↦
+    waveOperator_add_eq_zero_of_mem_Icc hV.continuous_deriv_one hu hS (fun r hr ↦ by
+      simpa only [(Real.hasDerivAt_signedPowerPotential hp _).deriv] using hwave r hr x) ht
   intro t ht x hx
   have haway (y : ℝ^3) (hy : y ∈ closedBall x (t - 0)) : R < ‖y‖ := by
     have hd : ‖x - y‖ ≤ t := by

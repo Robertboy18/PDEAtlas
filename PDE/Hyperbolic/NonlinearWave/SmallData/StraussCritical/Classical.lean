@@ -43,7 +43,7 @@ theorem exists_finite_maximalSolution_three_at_strauss {h : ℝ^3 → ℝ} {R : 
     refine HasCompactSupport.intro (isCompact_closedBall (0 : ℝ^3) R) fun x hx ↦ ?_
     exact hs x (by simpa only [Metric.mem_closedBall, dist_zero_right, not_le] using hx)
   obtain ⟨a, u₀, _, h₀⟩ :=
-    LocalPower.exists_solutionBefore_abs_rpow_three two_lt_one_add_sqrt_two hh hhc
+    LocalPower.exists_solutionBefore_abs_rpow_three two_lt_one_add_sqrt_two.le hh hhc
   obtain ⟨T, u, hu, _⟩ := exists_maximalSolution_three_at_strauss hh hhn hs hR hpositive h₀
   exact ⟨T, u, hu⟩
 

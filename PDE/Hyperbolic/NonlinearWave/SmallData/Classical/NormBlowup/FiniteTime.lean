@@ -9,6 +9,7 @@ module
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.NormBlowup.MaximalBridge
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.NormBlowup.QuadraticEvolution
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.StraussLifespan
+import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.Exponent
 
 /-!
 # Finiteness of the constructed quadratic higher lifetime
@@ -39,11 +40,8 @@ theorem quadraticLifespan_ne_top
   let h : ℝ^3 → ℝ := classicalRepresentativeCLM (by norm_num) H
   have hh : ContDiff ℝ 2 h :=
     contDiff_classicalRepresentativeCLM (by norm_num) (by norm_num) H
-  have hcrit : (2 : ℝ) < 1 + Real.sqrt 2 := by
-    have hsq : (1 : ℝ) < Real.sqrt 2 := (Real.lt_sqrt (by norm_num)).2 (by norm_num)
-    linarith
   obtain ⟨B, hB⟩ := bddAbove_existenceTimes_three_of_lt_strauss contDiff_const hh
-    (fun _ _ ↦ rfl) hs hR (by norm_num : (1 : ℝ) < 2) hcrit (by simp) hpositive
+    (fun _ _ ↦ rfl) hs hR (by norm_num : (1 : ℝ) < 2) two_lt_one_add_sqrt_two (by simp) hpositive
   intro htop
   let a := max B 0 + 1
   have ha : 0 < a := by positivity

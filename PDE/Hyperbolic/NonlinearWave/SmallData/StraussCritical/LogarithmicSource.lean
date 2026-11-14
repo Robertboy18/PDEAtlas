@@ -73,7 +73,7 @@ theorem power_integral_logarithmic_lower_bound {v : ℝ^3 → ℝ} {c R t p : �
     unitSphereArea 3 * c ^ p * t ^ (2 - p) * (Real.log (t / 4) - Real.log (4 * R)) ≤ ∫ x : ℝ^3,
       |v x| ^ p := by
   let g := fun x : ℝ^3 ↦ |v x| ^ p
-  have hg : ContDiff ℝ 1 g := ((contDiff_two_abs_rpow hp).comp hv).of_le (by norm_num)
+  have hg : ContDiff ℝ 1 g := ((contDiff_two_abs_rpow hp.le).comp hv).of_le (by norm_num)
   have hm : Continuous (unitSphereAverage 3 g 0) := ((contDiff_unitSphereAverage hg).comp
       (contDiff_const.prodMk contDiff_id)).continuous
   have htpos : 0 < t := by linarith only [ht, hR]

@@ -11,13 +11,13 @@ public import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.PowerSource
 import Mathlib.Topology.ContinuousMap.BoundedCompactlySupported
 
 /-!
-# Local classical waves for noninteger absolute powers
+# Local classical waves for absolute powers
 
-For every real `p > 2`, zero displacement and compactly supported C² velocity
+For every real `p ≥ 2`, zero displacement and compactly supported C² velocity
 construct a local classical solution of `u_tt - Δu = |u|^p` in three dimensions.
 The representative is jointly C² across the initial hyperplane; its ordinary
 initial velocity is the prescribed function. In particular the result applies
-to smooth compact velocity and to `2 < p < 1 + √2`.
+to smooth compact velocity and to `2 ≤ p < 1 + √2`.
 
 This argument uses the C² regularity of the power at zero. The case `1 < p < 2` needs a different
 lower-regularity argument.
@@ -30,19 +30,19 @@ open PDE (partialDeriv laplacian)
 
 namespace WaveEquation.SmallData.Classical.LocalPower
 
-/-- Local existence for a real power greater than two, with
+/-- Local existence for a real power at least two, with
 compactly supported C² velocity and zero displacement. -/
-theorem exists_solutionBefore_abs_rpow_three {p : ℝ} (hp : 2 < p)
+theorem exists_solutionBefore_abs_rpow_three {p : ℝ} (hp : 2 ≤ p)
     {h : ℝ^3 → ℝ} (hh : ContDiff ℝ 2 h) (hhc : HasCompactSupport h) :
     ∃ T : ℝ, ∃ u : ℝ^4 → ℝ, ContDiff ℝ 2 u ∧
       IsSolutionBefore (fun z ↦ -|z| ^ p) (fun _ ↦ 0) h T u := by
   exact exists_solutionBefore_of_contDiff_two (WaveEquation.SmallData.contDiff_two_abs_rpow hp)
     (ofCompactSupport h hh.continuous hhc) hh
 
-/-- The constructed noninteger-power wave satisfies the PDE written using
-ordinary time derivatives and the spatial Laplacian, together with ordinary
+/-- The constructed power wave, for a real power at least two, satisfies the PDE written
+using ordinary time derivatives and the spatial Laplacian, together with ordinary
 Cauchy traces and joint C² regularity at time zero. -/
-theorem exists_classical_abs_rpow_three {p : ℝ} (hp : 2 < p)
+theorem exists_classical_abs_rpow_three {p : ℝ} (hp : 2 ≤ p)
     {h : ℝ^3 → ℝ} (hh : ContDiff ℝ 2 h) (hhc : HasCompactSupport h) :
     ∃ T : ℝ, 0 < T ∧ ∃ u : ℝ^4 → ℝ,
       ContDiff ℝ 2 u ∧

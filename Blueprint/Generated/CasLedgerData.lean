@@ -15,8 +15,8 @@ regenerates this file before it builds the Blueprint package, and
 coverage map, the card index and the call-site counts quoted in the computation
 chapter.
 
-Production rows: 1562 call sites in
-605 modules (PDE: 1562 sites in 605 modules). Example rows:
+Production rows: 1662 call sites in
+620 modules (PDE: 1662 sites in 620 modules). Example rows:
 606 call sites in 114 modules.
 -/
 
@@ -32,19 +32,19 @@ def json : String := r####"
   ],
   "summary": {
     "production": {
-      "rows": 1562,
-      "modules": 605,
+      "rows": 1662,
+      "modules": 620,
       "libraries": {
         "PDE": {
-          "rows": 1562,
-          "modules": 605
+          "rows": 1662,
+          "modules": 620
         }
       },
       "tactics": {
-        "cas": 1144,
-        "cas using": 375,
+        "cas": 1189,
+        "cas using": 429,
         "cas_nf using": 1,
-        "cega": 28,
+        "cega": 29,
         "cega [fast]": 4,
         "cas [lemmas]": 9,
         "cega [enclose]": 1
@@ -4021,6 +4021,57 @@ def json : String := r####"
     {
       "scope": "production",
       "library": "PDE",
+      "module": "PDE.Analysis.Calculus.Transport.MinimumPrinciple",
+      "path": "PDE/Analysis/Calculus/Transport/MinimumPrinciple.lean",
+      "line": 116,
+      "tactic": "cas using",
+      "form": "cas using [(hzt x' hx' t' ht'T).hasDerivAt]",
+      "statement": "∀ x ∈ Icc a b, ∀ t ∈ Icc 0 T, 0 ≤ z x t",
+      "decl": {
+        "kind": "theorem",
+        "name": "nonneg_of_transport_ineq",
+        "fullName": "PDE.Analysis.Transport.nonneg_of_transport_ineq",
+        "line": 68,
+        "binders": "{z u c : ℝ → ℝ → ℝ} {a b T M : ℝ} (hz : ContinuousOn (Function.uncurry z) (Icc a b ×ˢ Icc 0 T)) (hzt : ∀ x ∈ Icc a b, ∀ t ∈ Ioo 0 T, DifferentiableAt ℝ (z x) t) (hua : ∀ t ∈ Ioo 0 T, u a t = 0) (hub : ∀ t ∈ Ioo 0 T, u b t = 0) (hc : ∀ x ∈ Icc a b, ∀ t ∈ Ioo 0 T, -M ≤ c x t) (hineq : ∀ x ∈ Icc a b, ∀ t ∈ Ioo 0 T, 0 ≤ deriv (z x) t + u x t * deriv (z · t) x + c x t * z x t) (h₀ : ∀ x ∈ Icc a b, 0 ≤ z x 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Calculus.Transport.MinimumPrinciple",
+      "path": "PDE/Analysis/Calculus/Transport/MinimumPrinciple.lean",
+      "line": 131,
+      "tactic": "cas using",
+      "form": "cas using [hc x' hx' t' ht'T]",
+      "statement": "∀ x ∈ Icc a b, ∀ t ∈ Icc 0 T, 0 ≤ z x t",
+      "decl": {
+        "kind": "theorem",
+        "name": "nonneg_of_transport_ineq",
+        "fullName": "PDE.Analysis.Transport.nonneg_of_transport_ineq",
+        "line": 68,
+        "binders": "{z u c : ℝ → ℝ → ℝ} {a b T M : ℝ} (hz : ContinuousOn (Function.uncurry z) (Icc a b ×ˢ Icc 0 T)) (hzt : ∀ x ∈ Icc a b, ∀ t ∈ Ioo 0 T, DifferentiableAt ℝ (z x) t) (hua : ∀ t ∈ Ioo 0 T, u a t = 0) (hub : ∀ t ∈ Ioo 0 T, u b t = 0) (hc : ∀ x ∈ Icc a b, ∀ t ∈ Ioo 0 T, -M ≤ c x t) (hineq : ∀ x ∈ Icc a b, ∀ t ∈ Ioo 0 T, 0 ≤ deriv (z x) t + u x t * deriv (z · t) x + c x t * z x t) (h₀ : ∀ x ∈ Icc a b, 0 ≤ z x 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Calculus.Transport.MinimumPrinciple",
+      "path": "PDE/Analysis/Calculus/Transport/MinimumPrinciple.lean",
+      "line": 132,
+      "tactic": "cas using",
+      "form": "cas using [hineq x' hx' t' ht'T, mul_neg_of_pos_of_neg hM hz']",
+      "statement": "∀ x ∈ Icc a b, ∀ t ∈ Icc 0 T, 0 ≤ z x t",
+      "decl": {
+        "kind": "theorem",
+        "name": "nonneg_of_transport_ineq",
+        "fullName": "PDE.Analysis.Transport.nonneg_of_transport_ineq",
+        "line": 68,
+        "binders": "{z u c : ℝ → ℝ → ℝ} {a b T M : ℝ} (hz : ContinuousOn (Function.uncurry z) (Icc a b ×ˢ Icc 0 T)) (hzt : ∀ x ∈ Icc a b, ∀ t ∈ Ioo 0 T, DifferentiableAt ℝ (z x) t) (hua : ∀ t ∈ Ioo 0 T, u a t = 0) (hub : ∀ t ∈ Ioo 0 T, u b t = 0) (hc : ∀ x ∈ Icc a b, ∀ t ∈ Ioo 0 T, -M ≤ c x t) (hineq : ∀ x ∈ Icc a b, ∀ t ∈ Ioo 0 T, 0 ≤ deriv (z x) t + u x t * deriv (z · t) x + c x t * z x t) (h₀ : ∀ x ∈ Icc a b, 0 ≤ z x 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
       "module": "PDE.Analysis.Calculus.TransportCone",
       "path": "PDE/Analysis/Calculus/TransportCone.lean",
       "line": 149,
@@ -5279,6 +5330,550 @@ def json : String := r####"
     {
       "scope": "production",
       "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.LogSinePotential",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/LogSinePotential.lean",
+      "line": 123,
+      "tactic": "cas using",
+      "form": "cas using [hL]",
+      "statement": "Periodic (fun z ↦ log |sin (π * z / L)|) L",
+      "decl": {
+        "kind": "theorem",
+        "name": "periodic_log_abs_sin",
+        "fullName": "PDE.Analysis.periodic_log_abs_sin",
+        "line": 119,
+        "binders": "(L : ℝ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.LogSinePotential",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/LogSinePotential.lean",
+      "line": 131,
+      "tactic": "cas using",
+      "form": "cas using [mul_le_mul_of_nonneg_right ha (neg_nonneg.mpr h)]",
+      "statement": "|a * log (|sin z|)| ≤ -M * log |sin z|",
+      "decl": {
+        "kind": "theorem",
+        "name": "abs_mul_log_abs_sin_le",
+        "fullName": "PDE.Analysis.abs_mul_log_abs_sin_le",
+        "line": 127,
+        "binders": "{a M : ℝ} (ha : |a| ≤ M) (z : ℝ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.LogSinePotential",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/LogSinePotential.lean",
+      "line": 269,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "logSinePotential L (fun y ↦ -f (-y)) x = -logSinePotential L f (-x)",
+      "decl": {
+        "kind": "theorem",
+        "name": "logSinePotential_neg_comp_neg",
+        "fullName": "PDE.Analysis.logSinePotential_neg_comp_neg",
+        "line": 266,
+        "binders": "(hper : f.Periodic L) (x : ℝ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 107,
+      "tactic": "cas using",
+      "form": "cas using [hj']",
+      "statement": "∫ s in (0 : ℝ)..π, cos s * ∑ i ∈ Finset.range n, cos (2 * s * i + s) = π / 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_sum_cos",
+        "fullName": "PDE.Analysis.integral_cos_mul_sum_cos",
+        "line": 95,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 118,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ s in (0 : ℝ)..π, cos s * ∑ i ∈ Finset.range n, cos (2 * s * i + s) = π / 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_sum_cos",
+        "fullName": "PDE.Analysis.integral_cos_mul_sum_cos",
+        "line": 95,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 119,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ s in (0 : ℝ)..π, cos s * ∑ i ∈ Finset.range n, cos (2 * s * i + s) = π / 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_sum_cos",
+        "fullName": "PDE.Analysis.integral_cos_mul_sum_cos",
+        "line": 95,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 120,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ s in (0 : ℝ)..π, cos s * ∑ i ∈ Finset.range n, cos (2 * s * i + s) = π / 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_sum_cos",
+        "fullName": "PDE.Analysis.integral_cos_mul_sum_cos",
+        "line": 95,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 124,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ s in (0 : ℝ)..π, cos s * ∑ i ∈ Finset.range n, cos (2 * s * i + s) = π / 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_sum_cos",
+        "fullName": "PDE.Analysis.integral_cos_mul_sum_cos",
+        "line": 95,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 141,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ s in (0 : ℝ)..π, cos (2 * n * s) * log (sin s) = -(π / (2 * n))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_sin",
+        "line": 134,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 141,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ s in (0 : ℝ)..π, cos (2 * n * s) * log (sin s) = -(π / (2 * n))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_sin",
+        "line": 134,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 142,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ s in (0 : ℝ)..π, cos (2 * n * s) * log (sin s) = -(π / (2 * n))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_sin",
+        "line": 134,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 143,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ s in (0 : ℝ)..π, cos (2 * n * s) * log (sin s) = -(π / (2 * n))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_sin",
+        "line": 134,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 144,
+      "tactic": "cas using",
+      "form": "cas using [h]",
+      "statement": "∫ s in (0 : ℝ)..π, cos (2 * n * s) * log (sin s) = -(π / (2 * n))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_sin",
+        "line": 134,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 151,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ s in (0 : ℝ)..π, cos (2 * n * s) * log (sin s) = -(π / (2 * n))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_sin",
+        "line": 134,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 161,
+      "tactic": "cas using",
+      "form": "cas using [hs0, hn']",
+      "statement": "∫ s in (0 : ℝ)..π, cos (2 * n * s) * log (sin s) = -(π / (2 * n))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_sin",
+        "line": 134,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 164,
+      "tactic": "cas using",
+      "form": "cas using [hs0, hn']",
+      "statement": "∫ s in (0 : ℝ)..π, cos (2 * n * s) * log (sin s) = -(π / (2 * n))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_sin",
+        "line": 134,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 176,
+      "tactic": "cas using",
+      "form": "cas using [h]",
+      "statement": "∫ s in (0 : ℝ)..π, cos (2 * n * s) * log (sin s) = -(π / (2 * n))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_sin",
+        "line": 134,
+        "binders": "{n : ℕ} (hn : n ≠ 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 194,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ z in (0 : ℝ)..L, cos (2 * π * n * z / L) * log |sin (π * z / L)| = L * (if n = 0 then -log 2 else -(1 / (2 * |(n : ℝ)|)))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_abs_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_abs_sin",
+        "line": 181,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 195,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ z in (0 : ℝ)..L, cos (2 * π * n * z / L) * log |sin (π * z / L)| = L * (if n = 0 then -log 2 else -(1 / (2 * |(n : ℝ)|)))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_abs_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_abs_sin",
+        "line": 181,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 196,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ z in (0 : ℝ)..L, cos (2 * π * n * z / L) * log |sin (π * z / L)| = L * (if n = 0 then -log 2 else -(1 / (2 * |(n : ℝ)|)))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_abs_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_abs_sin",
+        "line": 181,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 208,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ z in (0 : ℝ)..L, cos (2 * π * n * z / L) * log |sin (π * z / L)| = L * (if n = 0 then -log 2 else -(1 / (2 * |(n : ℝ)|)))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_abs_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_abs_sin",
+        "line": 181,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 212,
+      "tactic": "cas using",
+      "form": "cas using [hm0]",
+      "statement": "∫ z in (0 : ℝ)..L, cos (2 * π * n * z / L) * log |sin (π * z / L)| = L * (if n = 0 then -log 2 else -(1 / (2 * |(n : ℝ)|)))",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_cos_mul_log_abs_sin",
+        "fullName": "PDE.Analysis.integral_cos_mul_log_abs_sin",
+        "line": 181,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 224,
+      "tactic": "cas using",
+      "form": "cas using [hL0],",
+      "statement": "∫ z in (0 : ℝ)..L, sin (2 * π * n * z / L) * log |sin (π * z / L)| = 0",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_sin_mul_log_abs_sin",
+        "fullName": "PDE.Analysis.integral_sin_mul_log_abs_sin",
+        "line": 216,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 225,
+      "tactic": "cas using",
+      "form": "cas using [hL0],",
+      "statement": "∫ z in (0 : ℝ)..L, sin (2 * π * n * z / L) * log |sin (π * z / L)| = 0",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_sin_mul_log_abs_sin",
+        "fullName": "PDE.Analysis.integral_sin_mul_log_abs_sin",
+        "line": 216,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 233,
+      "tactic": "cas using",
+      "form": "cas using [h3]",
+      "statement": "∫ z in (0 : ℝ)..L, sin (2 * π * n * z / L) * log |sin (π * z / L)| = 0",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_sin_mul_log_abs_sin",
+        "fullName": "PDE.Analysis.integral_sin_mul_log_abs_sin",
+        "line": 216,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 260,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "fourierCoeffOn hL (fun z ↦ ((log |sin (π * z / L)| : ℝ) : ℂ)) n = ((if n = 0 then -log 2 else -(1 / (2 * |(n : ℝ)|)) : ℝ) : ℂ)",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_log_abs_sin",
+        "fullName": "PDE.Analysis.fourierCoeffOn_log_abs_sin",
+        "line": 238,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 263,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "fourierCoeffOn hL (fun z ↦ ((log |sin (π * z / L)| : ℝ) : ℂ)) n = ((if n = 0 then -log 2 else -(1 / (2 * |(n : ℝ)|)) : ℝ) : ℂ)",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_log_abs_sin",
+        "fullName": "PDE.Analysis.fourierCoeffOn_log_abs_sin",
+        "line": 238,
+        "binders": "(hL : 0 < L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 298,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "fourierCoeffOn hL (fun x ↦ (logSinePotential L f x : ℂ)) n = ((if n = 0 then -(L * log 2 / π) else -(L / (2 * π * |(n : ℝ)|)) : ℝ) : ℂ) * fourierCoeffOn hL (fun x ↦ (f x : ℂ)) n",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_logSinePotential",
+        "fullName": "PDE.Analysis.fourierCoeffOn_logSinePotential",
+        "line": 279,
+        "binders": "(hL : 0 < L) (hf : Continuous f) (hper : f.Periodic L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 333,
+      "tactic": "cas using",
+      "form": "cas using [hnC, hπC]",
+      "statement": "fourierCoeffOn hL (fun x ↦ (logSinePotential L (deriv f) x : ℂ)) n = -Complex.I * (n.sign : ℂ) * fourierCoeffOn hL (fun x ↦ (f x : ℂ)) n",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_logSinePotential_deriv",
+        "fullName": "PDE.Analysis.fourierCoeffOn_logSinePotential_deriv",
+        "line": 306,
+        "binders": "(hL : 0 < L) (hf : ContDiff ℝ 1 f) (hper : f.Periodic L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 336,
+      "tactic": "cas using",
+      "form": "cas using [hnC, hπC]",
+      "statement": "fourierCoeffOn hL (fun x ↦ (logSinePotential L (deriv f) x : ℂ)) n = -Complex.I * (n.sign : ℂ) * fourierCoeffOn hL (fun x ↦ (f x : ℂ)) n",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_logSinePotential_deriv",
+        "fullName": "PDE.Analysis.fourierCoeffOn_logSinePotential_deriv",
+        "line": 306,
+        "binders": "(hL : 0 < L) (hf : ContDiff ℝ 1 f) (hper : f.Periodic L) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 349,
+      "tactic": "cega",
+      "form": "cega",
+      "statement": "∫ x in (0 : ℝ)..L, logSinePotential L f x ^ 2 ≤ (L * log 2 / π) ^ 2 * ∫ x in (0 : ℝ)..L, f x ^ 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_sq_logSinePotential_le",
+        "fullName": "PDE.Analysis.integral_sq_logSinePotential_le",
+        "line": 341,
+        "binders": "(hL : 0 < L) (hf : Continuous f) (hper : f.Periodic L)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Periodic/Multiplier.lean",
+      "line": 355,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ x in (0 : ℝ)..L, logSinePotential L f x ^ 2 ≤ (L * log 2 / π) ^ 2 * ∫ x in (0 : ℝ)..L, f x ^ 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_sq_logSinePotential_le",
+        "fullName": "PDE.Analysis.integral_sq_logSinePotential_le",
+        "line": 341,
+        "binders": "(hL : 0 < L) (hf : Continuous f) (hper : f.Periodic L)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
       "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue",
       "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue.lean",
       "line": 182,
@@ -5313,6 +5908,125 @@ def json : String := r####"
     {
       "scope": "production",
       "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
+      "line": 97,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "Continuous fun x ↦ hilbertTruncation f x ε",
+      "decl": {
+        "kind": "theorem",
+        "name": "continuous_hilbertTruncation",
+        "fullName": "PDE.Analysis.continuous_hilbertTruncation",
+        "line": 60,
+        "binders": "{f : ℝ → ℝ} (hf : Integrable f) {ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
+      "line": 99,
+      "tactic": "cas using",
+      "form": "cas using [h]",
+      "statement": "Continuous fun x ↦ hilbertTruncation f x ε",
+      "decl": {
+        "kind": "theorem",
+        "name": "continuous_hilbertTruncation",
+        "fullName": "PDE.Analysis.continuous_hilbertTruncation",
+        "line": 60,
+        "binders": "{f : ℝ → ℝ} (hf : Integrable f) {ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
+      "line": 100,
+      "tactic": "cas using",
+      "form": "cas using [h]",
+      "statement": "Continuous fun x ↦ hilbertTruncation f x ε",
+      "decl": {
+        "kind": "theorem",
+        "name": "continuous_hilbertTruncation",
+        "fullName": "PDE.Analysis.continuous_hilbertTruncation",
+        "line": 60,
+        "binders": "{f : ℝ → ℝ} (hf : Integrable f) {ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
+      "line": 110,
+      "tactic": "cas using",
+      "form": "cas using [hr]",
+      "statement": "Continuous (hilbertPV f)",
+      "decl": {
+        "kind": "theorem",
+        "name": "continuous_hilbertPV",
+        "fullName": "PDE.Analysis.continuous_hilbertPV",
+        "line": 104,
+        "binders": "{f : ℝ → ℝ} (hf : Integrable f) (hlip : LocallyLipschitz f)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
+      "line": 116,
+      "tactic": "cas using",
+      "form": "cas using [hx, ht]",
+      "statement": "Continuous (hilbertPV f)",
+      "decl": {
+        "kind": "theorem",
+        "name": "continuous_hilbertPV",
+        "fullName": "PDE.Analysis.continuous_hilbertPV",
+        "line": 104,
+        "binders": "{f : ℝ → ℝ} (hf : Integrable f) (hlip : LocallyLipschitz f)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
+      "line": 119,
+      "tactic": "cas using",
+      "form": "cas using [hx, hr]",
+      "statement": "Continuous (hilbertPV f)",
+      "decl": {
+        "kind": "theorem",
+        "name": "continuous_hilbertPV",
+        "fullName": "PDE.Analysis.continuous_hilbertPV",
+        "line": 104,
+        "binders": "{f : ℝ → ℝ} (hf : Integrable f) (hlip : LocallyLipschitz f)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
+      "line": 139,
+      "tactic": "cas using",
+      "form": "cas using [hr, not_lt.mp (show ¬r / 4 < |t| from ht)]",
+      "statement": "Continuous (hilbertPV f)",
+      "decl": {
+        "kind": "theorem",
+        "name": "continuous_hilbertPV",
+        "fullName": "PDE.Analysis.continuous_hilbertPV",
+        "line": 104,
+        "binders": "{f : ℝ → ℝ} (hf : Integrable f) (hlip : LocallyLipschitz f)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
       "module": "PDE.Analysis.Fourier.HilbertTransform.QuotientBounds",
       "path": "PDE/Analysis/Fourier/HilbertTransform/QuotientBounds.lean",
       "line": 96,
@@ -5342,6 +6056,210 @@ def json : String := r####"
         "fullName": "PDE.Analysis.integral_hilbertPV_endpoint_weight_le",
         "line": 81,
         "binders": "{f : ℝ → ℝ} {K : ℝ≥0} {L a : ℝ} (hf : LipschitzWith K f) (hc : HasCompactSupport f) (hodd : Function.Odd f) (hsupport : ∀ x, L ≤ x → f x = 0) (ha : 0 ≤ a)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson.lean",
+      "line": 97,
+      "tactic": "cas using",
+      "form": "cas using [hε.ne', hd]",
+      "statement": "∫ x, (x / (ε ^ 2 + x ^ 2)) ^ 2 = Real.pi / (2 * ε)",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_sq_conjugate_poisson",
+        "fullName": "PDE.Analysis.integral_sq_conjugate_poisson",
+        "line": 91,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson.lean",
+      "line": 102,
+      "tactic": "cas using",
+      "form": "cas using [hsum, hε.ne']",
+      "statement": "∫ x, (x / (ε ^ 2 + x ^ 2)) ^ 2 = Real.pi / (2 * ε)",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_sq_conjugate_poisson",
+        "fullName": "PDE.Analysis.integral_sq_conjugate_poisson",
+        "line": 91,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 76,
+      "tactic": "cas using",
+      "form": "cas using [hd x]",
+      "statement": "IsHilbertPair (fun x ↦ -(2 * ε * x) / (ε ^ 2 + x ^ 2) ^ 2) (fun x ↦ (ε ^ 2 - x ^ 2) / (ε ^ 2 + x ^ 2) ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "isHilbertPair_deriv_poisson",
+        "fullName": "PDE.Analysis.isHilbertPair_deriv_poisson",
+        "line": 71,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 78,
+      "tactic": "cas using",
+      "form": "cas using [hd x]",
+      "statement": "IsHilbertPair (fun x ↦ -(2 * ε * x) / (ε ^ 2 + x ^ 2) ^ 2) (fun x ↦ (ε ^ 2 - x ^ 2) / (ε ^ 2 + x ^ 2) ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "isHilbertPair_deriv_poisson",
+        "fullName": "PDE.Analysis.isHilbertPair_deriv_poisson",
+        "line": 71,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 81,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "IsHilbertPair (fun x ↦ -(2 * ε * x) / (ε ^ 2 + x ^ 2) ^ 2) (fun x ↦ (ε ^ 2 - x ^ 2) / (ε ^ 2 + x ^ 2) ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "isHilbertPair_deriv_poisson",
+        "fullName": "PDE.Analysis.isHilbertPair_deriv_poisson",
+        "line": 71,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 81,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "IsHilbertPair (fun x ↦ -(2 * ε * x) / (ε ^ 2 + x ^ 2) ^ 2) (fun x ↦ (ε ^ 2 - x ^ 2) / (ε ^ 2 + x ^ 2) ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "isHilbertPair_deriv_poisson",
+        "fullName": "PDE.Analysis.isHilbertPair_deriv_poisson",
+        "line": 71,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 84,
+      "tactic": "cas using",
+      "form": "cas using [sq_nonneg (ε - |x|), sq_abs x]",
+      "statement": "IsHilbertPair (fun x ↦ -(2 * ε * x) / (ε ^ 2 + x ^ 2) ^ 2) (fun x ↦ (ε ^ 2 - x ^ 2) / (ε ^ 2 + x ^ 2) ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "isHilbertPair_deriv_poisson",
+        "fullName": "PDE.Analysis.isHilbertPair_deriv_poisson",
+        "line": 71,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 86,
+      "tactic": "cas using",
+      "form": "cas using [hε]",
+      "statement": "IsHilbertPair (fun x ↦ -(2 * ε * x) / (ε ^ 2 + x ^ 2) ^ 2) (fun x ↦ (ε ^ 2 - x ^ 2) / (ε ^ 2 + x ^ 2) ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "isHilbertPair_deriv_poisson",
+        "fullName": "PDE.Analysis.isHilbertPair_deriv_poisson",
+        "line": 71,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 88,
+      "tactic": "cas using",
+      "form": "cas using [hε]",
+      "statement": "IsHilbertPair (fun x ↦ -(2 * ε * x) / (ε ^ 2 + x ^ 2) ^ 2) (fun x ↦ (ε ^ 2 - x ^ 2) / (ε ^ 2 + x ^ 2) ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "isHilbertPair_deriv_poisson",
+        "fullName": "PDE.Analysis.isHilbertPair_deriv_poisson",
+        "line": 71,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 101,
+      "tactic": "cas using",
+      "form": "cas using [hd]",
+      "statement": "Integrable fun x : ℝ ↦ -(2 * ε * x) / (ε ^ 2 + x ^ 2) ^ 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "integrable_deriv_poisson",
+        "fullName": "PDE.Analysis.integrable_deriv_poisson",
+        "line": 94,
+        "binders": "{ε : ℝ} (hε : 0 < ε)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 111,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "HasHilbertPV (fun y ↦ -(2 * ε * y) / (ε ^ 2 + y ^ 2) ^ 2) x ((ε ^ 2 - x ^ 2) / (ε ^ 2 + x ^ 2) ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "hasHilbertPV_deriv_poisson",
+        "fullName": "PDE.Analysis.hasHilbertPV_deriv_poisson",
+        "line": 108,
+        "binders": "{ε : ℝ} (hε : 0 < ε) (x : ℝ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/RealPair/Poisson/Derivative.lean",
+      "line": 112,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "HasHilbertPV (fun y ↦ -(2 * ε * y) / (ε ^ 2 + y ^ 2) ^ 2) x ((ε ^ 2 - x ^ 2) / (ε ^ 2 + x ^ 2) ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "hasHilbertPV_deriv_poisson",
+        "fullName": "PDE.Analysis.hasHilbertPV_deriv_poisson",
+        "line": 108,
+        "binders": "{ε : ℝ} (hε : 0 < ε) (x : ℝ)"
       }
     },
     {
@@ -5840,6 +6758,23 @@ def json : String := r####"
     {
       "scope": "production",
       "library": "PDE",
+      "module": "PDE.Analysis.Fourier.HilbertTransform.Translation",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/Translation.lean",
+      "line": 52,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "hilbertMultiplier (charMulL2 a g) = charMulL2 a (hilbertMultiplier g)",
+      "decl": {
+        "kind": "theorem",
+        "name": "hilbertMultiplier_charMulL2",
+        "fullName": null,
+        "line": 46,
+        "binders": "(a : ℝ) (g : ComplexL2)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
       "module": "PDE.Analysis.Fourier.HilbertTransform.WeightedCancellation",
       "path": "PDE/Analysis/Fourier/HilbertTransform/WeightedCancellation.lean",
       "line": 100,
@@ -5869,6 +6804,91 @@ def json : String := r####"
         "fullName": "PDE.Analysis.integral_Ioo_hilbertPV_sub_zero_mul_div_cube",
         "line": 234,
         "binders": "{f : ℝ → ℝ} {K : ℝ≥0} {L : ℝ} (hf : LipschitzWith K f) (hc : HasCompactSupport f) (hodd : Function.Odd f) (hsupport : ∀ y, L ≤ y → f y = 0) (hsecondLp : MemLp (fun x ↦ f x / x ^ 2) 2 (volume : Measure ℝ))"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.PeriodicConvolution",
+      "path": "PDE/Analysis/Fourier/PeriodicConvolution.lean",
+      "line": 73,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "fourierCoeffOn hab (fun x ↦ ∫ z in a..b, g (x - z) * k z) n = (b - a) * fourierCoeffOn hab g n * fourierCoeffOn hab k n",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_convolution",
+        "fullName": "PDE.Analysis.fourierCoeffOn_convolution",
+        "line": 58,
+        "binders": "{a b : ℝ} (hab : a < b) {g k : ℝ → ℂ} (hg : Continuous g) (hper : g.Periodic (b - a)) (hk : IntervalIntegrable k volume a b) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.PeriodicConvolution",
+      "path": "PDE/Analysis/Fourier/PeriodicConvolution.lean",
+      "line": 97,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "fourierCoeffOn hab (fun x ↦ ∫ z in a..b, g (x - z) * k z) n = (b - a) * fourierCoeffOn hab g n * fourierCoeffOn hab k n",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_convolution",
+        "fullName": "PDE.Analysis.fourierCoeffOn_convolution",
+        "line": 58,
+        "binders": "{a b : ℝ} (hab : a < b) {g k : ℝ → ℂ} (hg : Continuous g) (hper : g.Periodic (b - a)) (hk : IntervalIntegrable k volume a b) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.PeriodicConvolution",
+      "path": "PDE/Analysis/Fourier/PeriodicConvolution.lean",
+      "line": 101,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "fourierCoeffOn hab (fun x ↦ ∫ z in a..b, g (x - z) * k z) n = (b - a) * fourierCoeffOn hab g n * fourierCoeffOn hab k n",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_convolution",
+        "fullName": "PDE.Analysis.fourierCoeffOn_convolution",
+        "line": 58,
+        "binders": "{a b : ℝ} (hab : a < b) {g k : ℝ → ℂ} (hg : Continuous g) (hper : g.Periodic (b - a)) (hk : IntervalIntegrable k volume a b) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.PeriodicConvolution",
+      "path": "PDE/Analysis/Fourier/PeriodicConvolution.lean",
+      "line": 101,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "fourierCoeffOn hab (fun x ↦ ∫ z in a..b, g (x - z) * k z) n = (b - a) * fourierCoeffOn hab g n * fourierCoeffOn hab k n",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_convolution",
+        "fullName": "PDE.Analysis.fourierCoeffOn_convolution",
+        "line": 58,
+        "binders": "{a b : ℝ} (hab : a < b) {g k : ℝ → ℂ} (hg : Continuous g) (hper : g.Periodic (b - a)) (hk : IntervalIntegrable k volume a b) (n : ℤ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Fourier.PeriodicConvolution",
+      "path": "PDE/Analysis/Fourier/PeriodicConvolution.lean",
+      "line": 122,
+      "tactic": "cas using",
+      "form": "cas using [hne]",
+      "statement": "fourierCoeffOn hab (fun x ↦ ∫ z in a..b, g (x - z) * k z) n = (b - a) * fourierCoeffOn hab g n * fourierCoeffOn hab k n",
+      "decl": {
+        "kind": "theorem",
+        "name": "fourierCoeffOn_convolution",
+        "fullName": "PDE.Analysis.fourierCoeffOn_convolution",
+        "line": 58,
+        "binders": "{a b : ℝ} (hab : a < b) {g k : ℝ → ℂ} (hg : Continuous g) (hper : g.Periodic (b - a)) (hk : IntervalIntegrable k volume a b) (n : ℤ)"
       }
     },
     {
@@ -6471,7 +7491,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Integration.DerivativeEnergy",
       "path": "PDE/Analysis/Integration/DerivativeEnergy.lean",
-      "line": 84,
+      "line": 98,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∫ x in a..b, (g x - g b) ^ 2) ≤ (b - a) ^ 2 / 2 * ∫ x in a..b, deriv g x ^ 2",
@@ -6479,7 +7499,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integral_sub_right_sq_le_deriv_energy",
         "fullName": "PDE.Analysis.integral_sub_right_sq_le_deriv_energy",
-        "line": 58,
+        "line": 72,
         "binders": "{g : ℝ → ℝ} {a b : ℝ} (hab : a ≤ b) (hd : ∀ x ∈ Ioc a b, DifferentiableAt ℝ g x) (hg : MemLp g 2 (volume.restrict (Ioc a b))) (he : MemLp (deriv g) 2 (volume.restrict (Ioc a b)))"
       }
     },
@@ -6488,7 +7508,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Integration.DerivativeEnergy",
       "path": "PDE/Analysis/Integration/DerivativeEnergy.lean",
-      "line": 113,
+      "line": 127,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∫ x in a..b, (g x - g a) ^ 2) ≤ (b - a) ^ 2 / 2 * ∫ x in a..b, deriv g x ^ 2",
@@ -6496,7 +7516,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integral_sub_left_sq_le_deriv_energy",
         "fullName": "PDE.Analysis.integral_sub_left_sq_le_deriv_energy",
-        "line": 88,
+        "line": 102,
         "binders": "{g : ℝ → ℝ} {a b : ℝ} (hab : a ≤ b) (hd : ∀ x ∈ Ico a b, DifferentiableAt ℝ g x) (hg : MemLp g 2 (volume.restrict (Ioc a b))) (he : MemLp (deriv g) 2 (volume.restrict (Ioc a b)))"
       }
     },
@@ -6505,7 +7525,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Integration.DerivativeEnergy",
       "path": "PDE/Analysis/Integration/DerivativeEnergy.lean",
-      "line": 152,
+      "line": 166,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∫ x in a..b, (g x - g ((a + b) / 2)) ^ 2) ≤ (b - a) ^ 2 / 8 * ∫ x in a..b, deriv g x ^ 2",
@@ -6513,7 +7533,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integral_sub_midpoint_sq_le_deriv_energy",
         "fullName": "PDE.Analysis.integral_sub_midpoint_sq_le_deriv_energy",
-        "line": 118,
+        "line": 132,
         "binders": "{g : ℝ → ℝ} {a b : ℝ} (hab : a < b) (hd : ∀ x ∈ Ioo a b, DifferentiableAt ℝ g x) (hg : MemLp g 2 (volume.restrict (Ioc a b))) (he : MemLp (deriv g) 2 (volume.restrict (Ioc a b)))"
       }
     },
@@ -6522,7 +7542,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Integration.DerivativeEnergy",
       "path": "PDE/Analysis/Integration/DerivativeEnergy.lean",
-      "line": 153,
+      "line": 167,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∫ x in a..b, (g x - g ((a + b) / 2)) ^ 2) ≤ (b - a) ^ 2 / 8 * ∫ x in a..b, deriv g x ^ 2",
@@ -6530,7 +7550,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integral_sub_midpoint_sq_le_deriv_energy",
         "fullName": "PDE.Analysis.integral_sub_midpoint_sq_le_deriv_energy",
-        "line": 118,
+        "line": 132,
         "binders": "{g : ℝ → ℝ} {a b : ℝ} (hab : a < b) (hd : ∀ x ∈ Ioo a b, DifferentiableAt ℝ g x) (hg : MemLp g 2 (volume.restrict (Ioc a b))) (he : MemLp (deriv g) 2 (volume.restrict (Ioc a b)))"
       }
     },
@@ -6539,7 +7559,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Integration.DerivativeEnergy",
       "path": "PDE/Analysis/Integration/DerivativeEnergy.lean",
-      "line": 175,
+      "line": 189,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∫ x in a..b, g x ^ 2) ≤ (1 + η) * ((b - a) * g ((a + b) / 2) ^ 2 + (b - a) ^ 3 / 12 * r ^ 2) + (1 + 1 / η) * (b - a) ^ 2 / 8 * ∫ x in a..b, (deriv g x - r) ^ 2",
@@ -6547,7 +7567,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integral_sq_le_midpoint_affine_deriv_energy",
         "fullName": "PDE.Analysis.integral_sq_le_midpoint_affine_deriv_energy",
-        "line": 160,
+        "line": 174,
         "binders": "{g : ℝ → ℝ} {a b r η : ℝ} (hab : a < b) (hη : 0 < η) (hd : ∀ x ∈ Ioo a b, DifferentiableAt ℝ g x) (hg : MemLp g 2 (volume.restrict (Ioc a b))) (he : MemLp (deriv g) 2 (volume.restrict (Ioc a b)))"
       }
     },
@@ -6556,7 +7576,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Integration.DerivativeEnergy",
       "path": "PDE/Analysis/Integration/DerivativeEnergy.lean",
-      "line": 205,
+      "line": 219,
       "tactic": "cas using",
       "form": "cas using hη.ne'",
       "statement": "(∫ x in a..b, g x ^ 2) ≤ (1 + η) * ((b - a) * g ((a + b) / 2) ^ 2 + (b - a) ^ 3 / 12 * r ^ 2) + (1 + 1 / η) * (b - a) ^ 2 / 8 * ∫ x in a..b, (deriv g x - r) ^ 2",
@@ -6564,7 +7584,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integral_sq_le_midpoint_affine_deriv_energy",
         "fullName": "PDE.Analysis.integral_sq_le_midpoint_affine_deriv_energy",
-        "line": 160,
+        "line": 174,
         "binders": "{g : ℝ → ℝ} {a b r η : ℝ} (hab : a < b) (hη : 0 < η) (hd : ∀ x ∈ Ioo a b, DifferentiableAt ℝ g x) (hg : MemLp g 2 (volume.restrict (Ioc a b))) (he : MemLp (deriv g) 2 (volume.restrict (Ioc a b)))"
       }
     },
@@ -6573,7 +7593,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Integration.DerivativeEnergy",
       "path": "PDE/Analysis/Integration/DerivativeEnergy.lean",
-      "line": 213,
+      "line": 227,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∫ x in a..b, g x ^ 2) ≤ (1 + η) * ((b - a) * g ((a + b) / 2) ^ 2 + (b - a) ^ 3 / 12 * r ^ 2) + (1 + 1 / η) * (b - a) ^ 2 / 8 * ∫ x in a..b, (deriv g x - r) ^ 2",
@@ -6581,7 +7601,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integral_sq_le_midpoint_affine_deriv_energy",
         "fullName": "PDE.Analysis.integral_sq_le_midpoint_affine_deriv_energy",
-        "line": 160,
+        "line": 174,
         "binders": "{g : ℝ → ℝ} {a b r η : ℝ} (hab : a < b) (hη : 0 < η) (hd : ∀ x ∈ Ioo a b, DifferentiableAt ℝ g x) (hg : MemLp g 2 (volume.restrict (Ioc a b))) (he : MemLp (deriv g) 2 (volume.restrict (Ioc a b)))"
       }
     },
@@ -6719,6 +7739,108 @@ def json : String := r####"
         "fullName": "PDE.Analysis.PeriodicAveraging.abs_weighted_rescale_sub_le",
         "line": 30,
         "binders": "{q F f : ℝ → ℝ} {K M ε x : ℝ} (hq : Continuous q) (hF : ∀ y, HasDerivAt F (f y) y) (hf : Continuous f) (hK : 0 ≤ K) (hM : 0 ≤ M) (hb : ∀ y, |fluctuation q y| ≤ K) (hFM : ∀ y ∈ Icc (0 : ℝ) 1, |F y| ≤ M) (hfM : ∀ y ∈ Icc (0 : ℝ) 1, |f y| ≤ M) (hε : ε ≠ 0) (hx : x ∈ Icc (0 : ℝ) 1)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Integration.Radial.Profile",
+      "path": "PDE/Analysis/Integration/Radial/Profile.lean",
+      "line": 72,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "(∂[i] fun y : ℝ^n ↦ ψ (1 - ‖y‖ ^ 2 / R ^ 2)) x = -2 / R ^ 2 * x i * d",
+      "decl": {
+        "kind": "theorem",
+        "name": "partialDeriv_profile",
+        "fullName": "PDE.Analysis.partialDeriv_profile",
+        "line": 68,
+        "binders": "{d : ℝ} {x : ℝ^n} (hψ : HasDerivAt ψ d (1 - ‖x‖ ^ 2 / R ^ 2)) (i : Fin n)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Integration.Radial.Profile",
+      "path": "PDE/Analysis/Integration/Radial/Profile.lean",
+      "line": 75,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "(∂[i] fun y : ℝ^n ↦ ψ (1 - ‖y‖ ^ 2 / R ^ 2)) x = -2 / R ^ 2 * x i * d",
+      "decl": {
+        "kind": "theorem",
+        "name": "partialDeriv_profile",
+        "fullName": "PDE.Analysis.partialDeriv_profile",
+        "line": 68,
+        "binders": "{d : ℝ} {x : ℝ^n} (hψ : HasDerivAt ψ d (1 - ‖x‖ ^ 2 / R ^ 2)) (i : Fin n)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Integration.Radial.Profile",
+      "path": "PDE/Analysis/Integration/Radial/Profile.lean",
+      "line": 86,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∑ i, ((∂[i] fun y : ℝ^n ↦ ψ (1 - ‖y‖ ^ 2 / R ^ 2)) x) ^ 2 = 4 / R ^ 2 * (‖x‖ / R) ^ 2 * d ^ 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "sum_sq_partialDeriv_profile",
+        "fullName": "PDE.Analysis.sum_sq_partialDeriv_profile",
+        "line": 80,
+        "binders": "{d : ℝ} {x : ℝ^n} (hψ : HasDerivAt ψ d (1 - ‖x‖ ^ 2 / R ^ 2))"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Integration.Radial.Profile",
+      "path": "PDE/Analysis/Integration/Radial/Profile.lean",
+      "line": 89,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∑ i, ((∂[i] fun y : ℝ^n ↦ ψ (1 - ‖y‖ ^ 2 / R ^ 2)) x) ^ 2 = 4 / R ^ 2 * (‖x‖ / R) ^ 2 * d ^ 2",
+      "decl": {
+        "kind": "theorem",
+        "name": "sum_sq_partialDeriv_profile",
+        "fullName": "PDE.Analysis.sum_sq_partialDeriv_profile",
+        "line": 80,
+        "binders": "{d : ℝ} {x : ℝ^n} (hψ : HasDerivAt ψ d (1 - ‖x‖ ^ 2 / R ^ 2))"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Integration.Radial.Profile",
+      "path": "PDE/Analysis/Integration/Radial/Profile.lean",
+      "line": 111,
+      "tactic": "cas using",
+      "form": "cas using [hR.ne']",
+      "statement": "∫ x : ℝ^n, Φ (‖x‖ / R) (1 - ‖x‖ ^ 2 / R ^ 2)⁺ = unitSphereArea n * R ^ n * ∫ s in (0 : ℝ)..1, s ^ (n - 1) * Φ s (1 - s ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_profile",
+        "fullName": "PDE.Analysis.integral_profile",
+        "line": 94,
+        "binders": "(n : ℕ) [Fact (0 < n)] (hR : 0 < R) (Φ : ℝ → ℝ → ℝ) (hΦ : ∀ s, Φ s 0 = 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.Integration.Radial.Profile",
+      "path": "PDE/Analysis/Integration/Radial/Profile.lean",
+      "line": 112,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "∫ x : ℝ^n, Φ (‖x‖ / R) (1 - ‖x‖ ^ 2 / R ^ 2)⁺ = unitSphereArea n * R ^ n * ∫ s in (0 : ℝ)..1, s ^ (n - 1) * Φ s (1 - s ^ 2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "integral_profile",
+        "fullName": "PDE.Analysis.integral_profile",
+        "line": 94,
+        "binders": "(n : ℕ) [Fact (0 < n)] (hR : 0 < R) (Φ : ℝ → ℝ → ℝ) (hΦ : ∀ s, Φ s 0 = 0)"
       }
     },
     {
@@ -7229,6 +8351,23 @@ def json : String := r####"
         "fullName": "MeasureTheory.Lp.norm_le_of_forall_integral_integral_mul_le",
         "line": 171,
         "binders": "{p q b c : ℝ≥0∞} [Fact (1 ≤ p)] [Fact (1 ≤ q)] [Fact (1 ≤ b)] {r s C : ℝ} (hp₀ : p ≠ 0) (hp : p ≠ ∞) (hr : 0 < r) (hq : p / ENNReal.ofReal r = q) (hpr : p.toReal = r + 1) (hb₀ : b ≠ 0) (hb : b ≠ ∞) (hs : 0 < s) (hc : b / ENNReal.ofReal s = c) (hbs : b.toReal = s + 1) (hC : 0 ≤ C) (u : Lp (Lp ℝ p ν) b μ) (hbound : ∀ v : Lp (Lp ℝ q ν) c μ, (∫ t, ∫ x, u t x * v t x ∂ν ∂μ) ≤ C * ‖v‖)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.MeasureTheory.Lp.SquareIntegral",
+      "path": "PDE/Analysis/MeasureTheory/Lp/SquareIntegral.lean",
+      "line": 47,
+      "tactic": "cas using",
+      "form": "cas using [hs, sq_abs (∫ x, q x ∂μ), Real.sq_sqrt hA, Real.sq_sqrt (measureReal_nonneg (μ := μ) (s := univ))]",
+      "statement": "(∫ x, q x ∂μ) ^ 2 ≤ μ.real univ * ∫ x, q x ^ 2 ∂μ",
+      "decl": {
+        "kind": "theorem",
+        "name": "sq_integral_le_measureReal_mul_integral_sq",
+        "fullName": "MeasureTheory.sq_integral_le_measureReal_mul_integral_sq",
+        "line": 41,
+        "binders": "{q : α → ℝ} (hq : MemLp q 2 μ)"
       }
     },
     {
@@ -7756,6 +8895,108 @@ def json : String := r####"
         "fullName": "PDE.Analysis.Scalar.secondDifference_le_of_lipschitz_ae_deriv_slope",
         "line": 33,
         "binders": "{v q : ℝ → ℝ} {L : ℝ≥0} (hv : LipschitzWith L v) (hderiv : ∀ᵐ x ∂volume, HasDerivAt v (q x) x) {K : ℝ} (hslope : ∀ᵐ z ∂volume, 0 < z → ∀ᵐ x ∂volume, q (x + z) - q x ≤ K * z)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.SpecialFunctions.Exponential.FlatDerivative",
+      "path": "PDE/Analysis/SpecialFunctions/Exponential/FlatDerivative.lean",
+      "line": 53,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "deriv expNegInvGlue x ≤ 4 * Real.exp (-2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "deriv_le",
+        "fullName": "expNegInvGlue.deriv_le",
+        "line": 44,
+        "binders": "(x : ℝ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.SpecialFunctions.Exponential.FlatDerivative",
+      "path": "PDE/Analysis/SpecialFunctions/Exponential/FlatDerivative.lean",
+      "line": 57,
+      "tactic": "cas using",
+      "form": "cas using [hw, hwE]",
+      "statement": "deriv expNegInvGlue x ≤ 4 * Real.exp (-2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "deriv_le",
+        "fullName": "expNegInvGlue.deriv_le",
+        "line": 44,
+        "binders": "(x : ℝ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.SpecialFunctions.Exponential.FlatDerivative",
+      "path": "PDE/Analysis/SpecialFunctions/Exponential/FlatDerivative.lean",
+      "line": 59,
+      "tactic": "cas using",
+      "form": "cas using [mul_le_mul hwE hwE (by cas using [hw] : 0 ≤ w / 2) hE]",
+      "statement": "deriv expNegInvGlue x ≤ 4 * Real.exp (-2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "deriv_le",
+        "fullName": "expNegInvGlue.deriv_le",
+        "line": 44,
+        "binders": "(x : ℝ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.SpecialFunctions.Exponential.FlatDerivative",
+      "path": "PDE/Analysis/SpecialFunctions/Exponential/FlatDerivative.lean",
+      "line": 59,
+      "tactic": "cas using",
+      "form": "cas using [hw] : 0 ≤ w / 2",
+      "statement": "deriv expNegInvGlue x ≤ 4 * Real.exp (-2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "deriv_le",
+        "fullName": "expNegInvGlue.deriv_le",
+        "line": 44,
+        "binders": "(x : ℝ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.SpecialFunctions.Exponential.FlatDerivative",
+      "path": "PDE/Analysis/SpecialFunctions/Exponential/FlatDerivative.lean",
+      "line": 60,
+      "tactic": "cas using",
+      "form": "cas using [mul_le_mul_of_nonneg_right h2 hc]",
+      "statement": "deriv expNegInvGlue x ≤ 4 * Real.exp (-2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "deriv_le",
+        "fullName": "expNegInvGlue.deriv_le",
+        "line": 44,
+        "binders": "(x : ℝ)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Analysis.SpecialFunctions.Exponential.FlatDerivative",
+      "path": "PDE/Analysis/SpecialFunctions/Exponential/FlatDerivative.lean",
+      "line": 62,
+      "tactic": "cas using",
+      "form": "cas using [Real.add_one_le_exp (x⁻¹ / 2 - 1)]",
+      "statement": "deriv expNegInvGlue x ≤ 4 * Real.exp (-2)",
+      "decl": {
+        "kind": "theorem",
+        "name": "deriv_le",
+        "fullName": "expNegInvGlue.deriv_le",
+        "line": 44,
+        "binders": "(x : ℝ)"
       }
     },
     {
@@ -19323,7 +20564,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.ConeTrajectory",
       "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/FinitePower/ConeTrajectory.lean",
-      "line": 76,
+      "line": 85,
       "tactic": "cas",
       "form": "cas",
       "statement": "∃ T : ℝ, 0 < T ∧ ∀ H : ℝ × ℝ^3 → ℝ, ContDiff ℝ 2 H → ∃ v a : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ 2 v {p | |p.1| < T} ∧ ContDiffOn ℝ 2 a {p | |p.1| < T} ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → v p = H p + p.1 ^ 2 * a p) ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → a p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction, f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3)))) ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3)) ∧ ∀ B : ℝ, 0 ≤ B → (∀ z, |f z| ≤ B) → ∀ p : ℝ × ℝ^3, |p.1| < T → |a p| ≤ ‖duhamelOperator‖ * B",
@@ -19331,8 +20572,59 @@ def json : String := r####"
         "kind": "theorem",
         "name": "exists_c2_cone_trajectory_of_lipschitz",
         "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.exists_c2_cone_trajectory_of_lipschitz",
-        "line": 36,
+        "line": 45,
         "binders": "{f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {C : NNReal} (hLip : LipschitzWith C f)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.ConeTrajectory",
+      "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/FinitePower/ConeTrajectory.lean",
+      "line": 145,
+      "tactic": "cas using",
+      "form": "cas using [mul_nonneg hT.le hK, hTK, hT]",
+      "statement": "∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧ ∀ H : ℝ × ℝ^3 → ℝ, ContDiff ℝ 2 H → (∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 1 → |H p| ≤ B) → ∃ v a : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ 2 v {p | |p.1| < T} ∧ ContDiffOn ℝ 2 a {p | |p.1| < T} ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → v p = H p + p.1 ^ 2 * a p) ∧ (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → |v p| < B + 1) ∧ ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → a p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction, f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3)))) ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3)",
+      "decl": {
+        "kind": "theorem",
+        "name": "exists_c2_cone_trajectory",
+        "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.exists_c2_cone_trajectory",
+        "line": 123,
+        "binders": "{f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {B : ℝ} (hB : 0 ≤ B)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.ConeTrajectory",
+      "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/FinitePower/ConeTrajectory.lean",
+      "line": 155,
+      "tactic": "cas using",
+      "form": "cas using [hp.1, hK, hp.2.le.trans hT1, mul_nonneg hp.1 hK]",
+      "statement": "∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧ ∀ H : ℝ × ℝ^3 → ℝ, ContDiff ℝ 2 H → (∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 1 → |H p| ≤ B) → ∃ v a : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ 2 v {p | |p.1| < T} ∧ ContDiffOn ℝ 2 a {p | |p.1| < T} ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → v p = H p + p.1 ^ 2 * a p) ∧ (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → |v p| < B + 1) ∧ ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → a p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction, f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3)))) ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3)",
+      "decl": {
+        "kind": "theorem",
+        "name": "exists_c2_cone_trajectory",
+        "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.exists_c2_cone_trajectory",
+        "line": 123,
+        "binders": "{f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {B : ℝ} (hB : 0 ≤ B)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.ConeTrajectory",
+      "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/FinitePower/ConeTrajectory.lean",
+      "line": 159,
+      "tactic": "cas using",
+      "form": "cas using [hbound p ⟨hp.1, hp.2.le.trans hT1⟩, mul_le_mul_of_nonneg_left hn (sq_nonneg p.1), hsq, mul_le_mul_of_nonneg_right hp.2.le hK, hTK, hT]",
+      "statement": "∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧ ∀ H : ℝ × ℝ^3 → ℝ, ContDiff ℝ 2 H → (∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 1 → |H p| ≤ B) → ∃ v a : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ 2 v {p | |p.1| < T} ∧ ContDiffOn ℝ 2 a {p | |p.1| < T} ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → v p = H p + p.1 ^ 2 * a p) ∧ (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → |v p| < B + 1) ∧ ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → a p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction, f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3)))) ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3)",
+      "decl": {
+        "kind": "theorem",
+        "name": "exists_c2_cone_trajectory",
+        "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.exists_c2_cone_trajectory",
+        "line": 123,
+        "binders": "{f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {B : ℝ} (hB : 0 ≤ B)"
       }
     },
     {
@@ -20035,6 +21327,23 @@ def json : String := r####"
     {
       "scope": "production",
       "library": "PDE",
+      "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.UnboundedWave",
+      "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/Persistence/UnboundedWave.lean",
+      "line": 194,
+      "tactic": "cas using",
+      "form": "cas using [hk']",
+      "statement": "∃ T u, IsUnboundedWave (oddPowerPolynomial m c k) g h T u",
+      "decl": {
+        "kind": "theorem",
+        "name": "exists_isUnboundedWave_oddPower",
+        "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.exists_isUnboundedWave_oddPower",
+        "line": 184,
+        "binders": "{m c : ℝ} {k : ℕ} (hm : 0 ≤ m) (hk : 0 < k) {g h : ℝ^3 → ℝ} (hg : ContDiff ℝ (⊤ : ℕ∞) g) (hh : ContDiff ℝ (⊤ : ℕ∞) h) (hgc : HasCompactSupport g) (hhc : HasCompactSupport h) (hE : (∫ x : ℝ^3, (1 / 2 : ℝ) * ((h x) ^ 2 + ∑ i : Fin 3, ((∂[i] g) x) ^ 2) + oddPowerPotential m c k (g x)) < 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
       "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Reaction",
       "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/Reaction.lean",
       "line": 45,
@@ -20642,6 +21951,23 @@ def json : String := r####"
         "fullName": "WaveEquation.integral_morawetzCurrent_balance_quintic_of_wave",
         "line": 109,
         "binders": "(c : ℝ^3) {s₀ s τ T : ℝ} (hs : s₀ < s) (hsτ : s ≤ τ) (hτ : τ < T) {u : ℝ^(3 + 1) → ℝ} (hu : ContDiffOn ℝ 2 u {p | s₀ < p 0 ∧ p 0 < T}) (hwave : ∀ t ∈ Icc s τ, ∀ x ∈ Metric.ball c (T - t), waveOperator u (timeSpaceCons t x) + u (timeSpaceCons t x) ^ 5 = 0)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Hyperbolic.NonlinearWave.NegativeEnergy.CompactData.Lifespan",
+      "path": "PDE/Hyperbolic/NonlinearWave/NegativeEnergy/CompactData/Lifespan.lean",
+      "line": 149,
+      "tactic": "cas using",
+      "form": "cas using [hmomentum.ne', (sub_pos.mpr hΛ).ne']",
+      "statement": "T ≤ 2 * (∫ x : ℝ^n, g x ^ 2) / ((Λ - 2) * ∫ x : ℝ^n, g x * h x)",
+      "decl": {
+        "kind": "theorem",
+        "name": "lifespan_le_of_compact_negative_energy",
+        "fullName": "WaveEquation.NegativeEnergy.lifespan_le_of_compact_negative_energy",
+        "line": 95,
+        "binders": "{u : ℝ^(n + 1) → ℝ} {T : ℝ} (hV : ContDiff ℝ 2 V) (hVzero : V 0 = 0) (hΛ : 2 < Λ) (hgrowth : ∀ z, z * deriv V z ≤ Λ * V z) (hgc : HasCompactSupport g) (hhc : HasCompactSupport h) (henergy : (∫ x : ℝ^n, (1 / 2 : ℝ) * ((h x) ^ 2 + ∑ i : Fin n, ((∂[i] g) x) ^ 2) + V (g x)) < 0) (hmomentum : 0 < ∫ x : ℝ^n, g x * h x) (hu : IsSolutionBefore (deriv V) g h T u)"
       }
     },
     {
@@ -21480,6 +22806,23 @@ def json : String := r####"
     {
       "scope": "production",
       "library": "PDE",
+      "module": "PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.Exponent",
+      "path": "PDE/Hyperbolic/NonlinearWave/SmallData/Strauss/Exponent.lean",
+      "line": 36,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "(1 + Real.sqrt 2) * ((1 + Real.sqrt 2) - 2) = 1",
+      "decl": {
+        "kind": "theorem",
+        "name": "one_add_sqrt_two_strauss_equality",
+        "fullName": "WaveEquation.SmallData.one_add_sqrt_two_strauss_equality",
+        "line": 34,
+        "binders": ""
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
       "module": "PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.FreeWave",
       "path": "PDE/Hyperbolic/NonlinearWave/SmallData/Strauss/FreeWave.lean",
       "line": 129,
@@ -21543,6 +22886,40 @@ def json : String := r####"
         "fullName": "WaveEquation.SmallData.Kato.eventually_power_lower_bound_of_acceleration",
         "line": 66,
         "binders": "{F P : ℝ → ℝ} {a c p : ℝ} (ha : 0 < a) (hc : 0 < c) (hp : p < 3) (hF : ∀ t, a ≤ t → HasDerivAt F (P t) t) (hlower : ∀ t, a ≤ t → c * t ^ (2 - p) ≤ deriv P t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.PowerSource",
+      "path": "PDE/Hyperbolic/NonlinearWave/SmallData/Strauss/PowerSource.lean",
+      "line": 34,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "ContDiff ℝ 2 (fun x : ℝ ↦ |x| ^ p)",
+      "decl": {
+        "kind": "theorem",
+        "name": "contDiff_two_abs_rpow",
+        "fullName": "WaveEquation.SmallData.contDiff_two_abs_rpow",
+        "line": 30,
+        "binders": "{p : ℝ} (hp : 2 ≤ p)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.PowerSource",
+      "path": "PDE/Hyperbolic/NonlinearWave/SmallData/Strauss/PowerSource.lean",
+      "line": 35,
+      "tactic": "cas using",
+      "form": "cas using [hp]",
+      "statement": "ContDiff ℝ 2 (fun x : ℝ ↦ |x| ^ p)",
+      "decl": {
+        "kind": "theorem",
+        "name": "contDiff_two_abs_rpow",
+        "fullName": "WaveEquation.SmallData.contDiff_two_abs_rpow",
+        "line": 30,
+        "binders": "{p : ℝ} (hp : 2 ≤ p)"
       }
     },
     {
@@ -21696,23 +23073,6 @@ def json : String := r####"
         "fullName": "WaveEquation.SmallData.integral_reciprocal_displacement",
         "line": 61,
         "binders": "{R t : ℝ} (hR : 0 < R) (ht : 16 * R ≤ t)"
-      }
-    },
-    {
-      "scope": "production",
-      "library": "PDE",
-      "module": "PDE.Hyperbolic.NonlinearWave.SmallData.StraussCritical.Nonexistence",
-      "path": "PDE/Hyperbolic/NonlinearWave/SmallData/StraussCritical/Nonexistence.lean",
-      "line": 105,
-      "tactic": "cas",
-      "form": "cas",
-      "statement": "(1 + Real.sqrt 2) * ((1 + Real.sqrt 2) - 2) = 1",
-      "decl": {
-        "kind": "theorem",
-        "name": "one_add_sqrt_two_strauss_equality",
-        "fullName": "WaveEquation.SmallData.one_add_sqrt_two_strauss_equality",
-        "line": 103,
-        "binders": ""
       }
     },
     {
@@ -24807,6 +26167,346 @@ def json : String := r####"
         "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticGrowth.right_endpoint_lt_riccati_horizon",
         "line": 215,
         "binders": "{y : ℝ → ℝ} {a t₀ T : ℝ} (ha : 0 < a) (hy₀ : 0 < y t₀) (hy_cont : ContinuousOn y (Icc t₀ T)) (hy_diff : DifferentiableOn ℝ y (Ioo t₀ T)) (hy_deriv : ∀ t ∈ Ioo t₀ T, a * y t ^ 2 ≤ deriv y t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 87,
+      "tactic": "cas using",
+      "form": "cas using [hJ, hw_deriv t ht]",
+      "statement": "MonotoneOn (fun t ↦ J t ^ 2 - 2 * c / 3 * w t ^ 3) (Icc t₀ T)",
+      "decl": {
+        "kind": "theorem",
+        "name": "monotoneOn_sq_sub_mul_cube",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.monotoneOn_sq_sub_mul_cube",
+        "line": 78,
+        "binders": "{w J : ℝ → ℝ} {c t₀ T : ℝ} (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hJ_nonneg : ∀ t ∈ Ioo t₀ T, 0 ≤ J t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * w t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 113,
+      "tactic": "cas using",
+      "form": "cas using [hc, hw₀]",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 115,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 116,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 145,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 148,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 160,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 169,
+      "tactic": "cas using",
+      "form": "cas using [h, h', sq_nonneg (J t₀)]",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 172,
+      "tactic": "cas using",
+      "form": "cas using [ht.1]",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 176,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 179,
+      "tactic": "cas using",
+      "form": "cas using [ht.1], ht.2",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 183,
+      "tactic": "cas using",
+      "form": "cas using [ht.1], ht.2.le",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 188,
+      "tactic": "cas using",
+      "form": "cas using [hc, hz]",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 193,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 199,
+      "tactic": "cas using",
+      "form": "cas using [hw_quad (t₀ + R / 2) ⟨by cas, hT.le⟩]",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 199,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 203,
+      "tactic": "cas using",
+      "form": "cas using [hR2]",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 205,
+      "tactic": "cas using",
+      "form": "cas using [hc, hz]",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 206,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * w t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_hasDerivAt",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_hasDerivAt",
+        "line": 100,
+        "binders": "{w I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hw₀ : 0 < w t₀) (hJ₀ : 0 ≤ J t₀) (hw_cont : ContinuousOn w (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hw_deriv : ∀ t ∈ Ioo t₀ T, HasDerivAt w (J t) t) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hwI : ∀ t ∈ Ioo t₀ T, w t ≤ I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
+      }
+    },
+    {
+      "scope": "production",
+      "library": "PDE",
+      "module": "PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem",
+      "path": "PDE/Solution/Singularity/FiniteTime/Comparison/QuadraticSystem.lean",
+      "line": 244,
+      "tactic": "cas",
+      "form": "cas",
+      "statement": "T < t₀ + √(8 * √3 / (c * I t₀))",
+      "decl": {
+        "kind": "theorem",
+        "name": "right_endpoint_lt_of_deriv_ge",
+        "fullName": "PDE.Solution.Singularity.FiniteTime.QuadraticSystem.right_endpoint_lt_of_deriv_ge",
+        "line": 213,
+        "binders": "{I J : ℝ → ℝ} {c t₀ T : ℝ} (hc : 0 < c) (hI₀ : 0 < I t₀) (hJ₀ : 0 ≤ J t₀) (hI_cont : ContinuousOn I (Icc t₀ T)) (hJ_cont : ContinuousOn J (Icc t₀ T)) (hI_diff : DifferentiableOn ℝ I (Ioo t₀ T)) (hJ_diff : DifferentiableOn ℝ J (Ioo t₀ T)) (hI_deriv : ∀ t ∈ Ioo t₀ T, J t ≤ deriv I t) (hJ_deriv : ∀ t ∈ Ioo t₀ T, c * I t ^ 2 ≤ deriv J t)"
       }
     },
     {

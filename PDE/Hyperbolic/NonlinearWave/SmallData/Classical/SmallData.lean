@@ -6,8 +6,9 @@ Authors: LeanPDE Team
 
 module
 
-public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.Quadratic
+public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.SmallData
 public import PDE.Spaces.Sobolev.Approximation.Density.SmallNorm
+import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.Exponent
 
 /-!
 # Small smooth data with a finite classical lifespan
@@ -20,7 +21,8 @@ For the quadratic focusing wave in three dimensions, local existence and the
 finite existence horizon are both proved. Together they give a maximal
 classical solution for these data. The conclusion is failure of classical
 continuation at a finite time; a statement about a diverging solution norm
-requires a separate continuation criterion.
+requires a separate continuation criterion. The theorem is the exponent `p = 2` of
+`LocalPower.exists_small_data_finite_maximalSolution_abs_rpow_three`.
 -/
 
 @[expose] public noncomputable section
@@ -42,11 +44,8 @@ theorem exists_small_data_finite_maximalSolution_quadratic_three
       0 < ∫ x, h x ∧
       ‖globalTestFunctionToWkpOn (k := k) (p := q) (Ω := univ) h‖ < ε ∧
       ∃ T : ℝ, ∃ u : ℝ^4 → ℝ,
-        IsMaximalSolutionBefore (fun z ↦ -|z| ^ (2 : ℝ)) (fun _ ↦ 0) h T u := by
-  obtain ⟨h, hnonneg, hsupport, hpositive, hnorm⟩ :=
-    exists_nonneg_testFunction_sobolevNorm_lt 3 k q hε
-  refine ⟨h, hnonneg, hsupport, hpositive, hnorm, ?_⟩
-  exact exists_finite_maximalSolution_quadratic_three h.contDiff h.hasCompactSupport
-    (fun x hx ↦ hsupport x hx.le) (by norm_num) hpositive
+        IsMaximalSolutionBefore (fun z ↦ -|z| ^ (2 : ℝ)) (fun _ ↦ 0) h T u :=
+  LocalPower.exists_small_data_finite_maximalSolution_abs_rpow_three le_rfl
+    two_lt_one_add_sqrt_two k q hε
 
 end WaveEquation.SmallData.Classical

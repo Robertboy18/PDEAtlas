@@ -77,10 +77,10 @@ theorem semilinear_shell_radius_integral_lower_bound {u : ℝ^4 → ℝ} {h : �
   let f := fun x : ℝ^3 ↦ |w (timeSpaceCons s x)| ^ p
   let g := fun x : ℝ^3 ↦ |u (timeSpaceCons s x)| ^ p
   have hspos : 0 < s := by linarith
-  have hf : ContDiff ℝ 2 f := (contDiff_two_abs_rpow hp).comp
+  have hf : ContDiff ℝ 2 f := (contDiff_two_abs_rpow hp.le).comp
       ((contDiff_kirchhoffPotential hh).comp (contDiff_timeSpaceCons_spatial 3 s))
   have hg : ContDiff ℝ 2 g :=
-    (contDiff_two_abs_rpow hp).comp (hu.comp (contDiff_timeSpaceCons_spatial 3 s))
+    (contDiff_two_abs_rpow hp.le).comp (hu.comp (contDiff_timeSpaceCons_spatial 3 s))
   have hcompact : HasCompactSupport f :=
     ((kirchhoffPotential_hasForwardSupport hhs).hasCompactSupport_slice hspos.le).comp_left
       (g := fun z : ℝ ↦ |z| ^ p) (by simp [Real.zero_rpow (by linarith : p ≠ 0)])

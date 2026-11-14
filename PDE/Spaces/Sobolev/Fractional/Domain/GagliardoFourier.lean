@@ -190,7 +190,7 @@ theorem lintegral_enorm_translate_sub_sq
     filter_upwards [
       coeFn_fourier_translateL2_sub h u
     ] with ξ hξ
-    rw [hξ, enorm_mul, mul_pow]
+    rw [hξ, enorm_smul, mul_pow]
   rw [← hphysical, ← hfrequency]
   exact lintegral_enorm_sq_congr
     (norm_translateL2_sub h u)

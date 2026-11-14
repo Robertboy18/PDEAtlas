@@ -8,8 +8,8 @@ module
 
 public import PDE.Analysis.Integration.Axisymmetric
 public import PDE.Analysis.Integration.CoordinateSplit
+import PDE.Analysis.Integration.Radial
 import Mathlib.MeasureTheory.Function.L2Space
-import Mathlib.MeasureTheory.Measure.Lebesgue.VolumeOfBalls
 
 /-!
 # Cylindrical integration in three dimensions
@@ -28,8 +28,8 @@ is carried by the meridian measure `axisymmetricMeridianMeasure`, which is
 
 The argument splits `ℝ^3` measure-preservingly as `ℝ^2 × ℝ` through
 `lastCoordinateSplit` (see `lastCoordinateSplit_measurePreserving`), applies
-Fubini, and reduces the inner integral over `ℝ^2` to Mathlib's
-`integral_fun_norm_addHaar`, where the area `π` of the unit disc gives the
+Fubini, and reduces the inner integral over `ℝ^2` to the radial integral
+`integral_radial` in dimension two, where the length `2π` of the unit circle gives the
 constant.
 
 ## Main results
@@ -105,10 +105,7 @@ symmetry axis. -/
 theorem integral_radialPlane (g : ℝ → ℝ) :
     (∫ x : ℝ^2, g ‖x‖) =
       2 * Real.pi * ∫ r in Set.Ioi (0 : ℝ), r * g r := by
-  simpa [MeasureTheory.Measure.real, EuclideanSpace.volume_ball_fin_two,
-    ENNReal.toReal_ofReal Real.pi_nonneg, nsmul_eq_mul, mul_assoc] using
-    (MeasureTheory.integral_fun_norm_addHaar
-      (volume : Measure (ℝ^2)) g)
+  simpa [unitSphereArea_two] using integral_radial 2 g
 
 /-- Integration against `volumeIoiPow 1` is integration against the radial
 density `r` on the positive half-line. -/

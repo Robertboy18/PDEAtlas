@@ -17,7 +17,10 @@ import PDE.Analysis.Calculus.HalfSpaceGluing
 Let `F : E × ℝ → G` be `C¹` on `univ ×ˢ J` for a set of times `J` with unique derivatives. Every
 time slice `y ↦ F (y, t)`, `t ∈ J`, is differentiable with derivative the joint derivative within
 `univ ×ˢ J` restricted to the spatial directions, so the spatial derivatives of the slices are
-jointly continuous on `univ ×ˢ J`.
+jointly continuous on `univ ×ˢ J`. More generally, if `F` is `Cⁿ` on `univ ×ˢ J`, every time
+slice is `Cⁿ` and the spatial derivatives of the slices are jointly `Cᵐ` on `univ ×ˢ J` for
+`m + 1 ≤ n`. The set `J` may be a closed interval: the derivatives at its end points are then
+one-sided in time.
 
 For a field on `ℝ² × ℝ` that vanishes on the closed upper half-plane outside a disc at every
 time of a compact interval `[a, b]`, the field and the spatial derivatives of its slices are then
@@ -26,9 +29,14 @@ closed half-plane.
 
 ## Main results
 
+* `contDiff_slice`: a time slice of a field of class `Cⁿ` on `univ ×ˢ J` is of class `Cⁿ`.
+* `contDiffAt_of_contDiffOn_of_mem_nhds`: such a field is of class `Cⁿ` at every point whose
+  time is interior to `J`.
 * `hasFDerivAt_slice_of_contDiffOn`: a time slice has the spatial part of the joint derivative
   within `univ ×ˢ J` as its derivative.
-* `continuousOn_fderiv_slice`: the spatial derivatives of the slices are jointly continuous.
+* `contDiffOn_fderiv_slice`: the spatial derivatives of the slices of a field of class `Cⁿ` are
+  jointly of class `Cᵐ` for `m + 1 ≤ n`. `continuousOn_fderiv_slice` is the case `m = 0`, and
+  `contDiffOn_deriv_slice` is the form with `deriv` for one space dimension.
 * `fderiv_slice_eq_zero`: on the closed half-plane outside the support disc the spatial
   derivative of a slice vanishes.
 * `exists_bounds_of_contDiffOn`: the uniform bounds and the uniform continuity in time of the
@@ -48,6 +56,18 @@ section Slice
 
 variable {E G : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] [NormedAddCommGroup G]
   [NormedSpace ℝ G] {F : E × ℝ → G} {J : Set ℝ}
+
+/-- A time slice of a field of class `Cⁿ` on `univ ×ˢ J` is of class `Cⁿ`. -/
+theorem contDiff_slice {n : WithTop ℕ∞} (hF : ContDiffOn ℝ n F (univ ×ˢ J)) {t : ℝ}
+    (ht : t ∈ J) : ContDiff ℝ n fun y ↦ F (y, t) :=
+  hF.comp_contDiff (contDiff_id.prodMk contDiff_const) fun y ↦ ⟨mem_univ y, ht⟩
+
+/-- A field of class `Cⁿ` on `univ ×ˢ J` is of class `Cⁿ` at every point whose time is interior
+to `J`. -/
+theorem contDiffAt_of_contDiffOn_of_mem_nhds {n : WithTop ℕ∞}
+    (hF : ContDiffOn ℝ n F (univ ×ˢ J)) (x : E) {t : ℝ} (ht : J ∈ 𝓝 t) :
+    ContDiffAt ℝ n F (x, t) :=
+  hF.contDiffAt (prod_mem_nhds univ_mem ht)
 
 /-- A time slice of a jointly `C¹` field has the spatial part of the joint derivative within
 `univ ×ˢ J` as its derivative. -/
@@ -70,17 +90,29 @@ theorem fderiv_slice_of_contDiffOn (hF : ContDiffOn ℝ 1 F (univ ×ˢ J)) {x : 
       (fderivWithin ℝ F (univ ×ˢ J) (x, t)).comp (ContinuousLinearMap.inl ℝ E ℝ) :=
   (hasFDerivAt_slice_of_contDiffOn hF ht).fderiv
 
-/-- The spatial derivatives of the time slices of a jointly `C¹` field are jointly continuous. -/
-theorem continuousOn_fderiv_slice (hF : ContDiffOn ℝ 1 F (univ ×ˢ J)) (hJ : UniqueDiffOn ℝ J) :
-    ContinuousOn (fun p : E × ℝ ↦ fderiv ℝ (fun y ↦ F (y, p.2)) p.1) (univ ×ˢ J) := by
-  have hc : ContinuousOn (fderivWithin ℝ F (univ ×ˢ J)) (univ ×ˢ J) :=
-    hF.continuousOn_fderivWithin (UniqueDiffOn.prod uniqueDiffOn_univ hJ) le_rfl
-  have hc' : ContinuousOn
+/-- The spatial derivatives of the time slices of a field of class `Cⁿ` on `univ ×ˢ J` are
+jointly of class `Cᵐ` there, for `m + 1 ≤ n`. -/
+theorem contDiffOn_fderiv_slice {m n : WithTop ℕ∞} (hF : ContDiffOn ℝ n F (univ ×ˢ J))
+    (hJ : UniqueDiffOn ℝ J) (hmn : m + 1 ≤ n) :
+    ContDiffOn ℝ m (fun p : E × ℝ ↦ fderiv ℝ (fun y ↦ F (y, p.2)) p.1) (univ ×ˢ J) := by
+  have hc : ContDiffOn ℝ m
       (fun p : E × ℝ ↦ (fderivWithin ℝ F (univ ×ˢ J) p).comp (ContinuousLinearMap.inl ℝ E ℝ))
       (univ ×ˢ J) :=
-    hc.clm_comp continuousOn_const
-  refine hc'.congr fun p hp ↦ ?_
-  simpa using fderiv_slice_of_contDiffOn hF hp.2 (x := p.1)
+    (hF.fderivWithin (uniqueDiffOn_univ.prod hJ) hmn).clm_comp contDiffOn_const
+  refine hc.congr fun p hp ↦ ?_
+  simpa using fderiv_slice_of_contDiffOn (hF.of_le (le_add_self.trans hmn)) hp.2 (x := p.1)
+
+/-- The spatial derivatives of the time slices of a jointly `C¹` field are jointly continuous. -/
+theorem continuousOn_fderiv_slice (hF : ContDiffOn ℝ 1 F (univ ×ˢ J)) (hJ : UniqueDiffOn ℝ J) :
+    ContinuousOn (fun p : E × ℝ ↦ fderiv ℝ (fun y ↦ F (y, p.2)) p.1) (univ ×ˢ J) :=
+  (contDiffOn_fderiv_slice hF hJ (zero_add 1).le).continuousOn
+
+/-- In one space dimension, the spatial derivative `(x, t) ↦ deriv (F (·, t)) x` of a field of
+class `Cⁿ` on `univ ×ˢ J` is of class `Cᵐ` there, for `m + 1 ≤ n`. -/
+theorem contDiffOn_deriv_slice {F : ℝ × ℝ → G} {m n : WithTop ℕ∞}
+    (hF : ContDiffOn ℝ n F (univ ×ˢ J)) (hJ : UniqueDiffOn ℝ J) (hmn : m + 1 ≤ n) :
+    ContDiffOn ℝ m (fun p : ℝ × ℝ ↦ deriv (fun y ↦ F (y, p.2)) p.1) (univ ×ˢ J) :=
+  (contDiffOn_fderiv_slice hF hJ hmn).clm_apply contDiffOn_const
 
 end Slice
 

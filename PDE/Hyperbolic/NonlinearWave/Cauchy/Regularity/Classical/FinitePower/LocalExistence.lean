@@ -8,13 +8,50 @@ module
 
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.ConeTrajectory
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.Construction
+public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.Lifespan
+import PDE.Hyperbolic.Models.Wave.Kirchhoff.Family
 
 /-!
-# Classical representatives of the finite-regularity integral wave
+# Local and maximal classical solutions for a C² reaction in three dimensions
 
-The full Kirchhoff field and the classical Duhamel potential represent the
-constructed integral trajectory on a smaller forward strip. Finite C² source
-regularity suffices. For signed powers this gives the range above two.
+The full Kirchhoff field and the classical Duhamel potential represent the constructed integral
+trajectory on a smaller forward strip. Finite C² source regularity suffices.
+
+Let `f : ℝ → ℝ` be `C²`, with no condition on its sign, on its growth or on its value at zero,
+and let `g ∈ C³`, `h ∈ C²` be compactly supported Cauchy data on `ℝ³`. For the classical
+solutions of `u_tt - Δu + f(u) = 0`, `WaveEquation.SmallData.Classical.IsSolutionBefore f g h T u`:
+
+* `exists_classical_of_compact_data`: there is a solution before some time `T > 0`, and it is
+  `C²` on the whole space-time;
+* `exists_maximalSolution_of_compact_data`: when the durations of all solutions from `g`, `h` have
+  a common bound, there is a maximal solution: it lives up to the supremum of the durations, and
+  no solution with the same data extends it.
+
+The first says nothing about the size of `T`, and the second assumes the bound. For signed powers
+this gives the range above two (`exists_classical_signedPower_of_compact_data`).
+
+## How it works
+
+`exists_c2_cone_trajectory` is the fixed point behind the first theorem, for every free field
+that is `C²` and bounded on the slab `0 ≤ t ≤ 1`. The free field of compactly supported data is
+bounded on the slab (`exists_bound_cauchyFreeField_of_compact_data`), and
+`exists_classical_representative_of_c2_integral_eq` turns the trajectory into a classical
+solution. The maximal solution is the union of all solutions,
+`WaveEquation.SmallData.Classical.exists_maximalSolution_of_bounded`.
+
+## Related results
+
+Other local existence theorems for classical solutions of semilinear waves, in other settings:
+
+* smooth compactly supported data and a smooth reaction with `f 0 = 0`:
+  `PDE.Hyperbolic.NonlinearWave.Cauchy.exists_unique_smooth_local_of_smoothCompact` and
+  `exists_maximal_smooth_wave` in `ℝ³`, `exists_classical_localReaction_of_smoothCompact` in every
+  dimension `n ≥ 1`; these are stated for `t ≥ 0`, with a one-sided velocity at `t = 0`;
+* zero displacement and a bounded `C²` velocity that need not have compact support, every `C²`
+  reaction, `ℝ³`: `exists_solutionBefore_of_contDiff_two` of
+  `WaveEquation.SmallData.Classical.LocalPower`;
+* one space dimension, every `C¹` reaction, bounded data `g ∈ C²`, `h ∈ C¹` with `g'` bounded:
+  `WaveEquation.exists_bounded_classicalWaveBefore`.
 -/
 
 @[expose] public noncomputable section
@@ -93,18 +130,41 @@ theorem exists_classical_representative_of_c2_integral_eq {f : ℝ → ℝ} (hf 
       partialDeriv_kirchhoffFormula_initial_velocity (hg.of_le (by norm_num))
         (hh.of_le (by norm_num)), partialDeriv_oddDuhamelSolution_initial 0 hF.contDiffOn, add_zero]
 
+/-- **Local existence.** For a `C²` reaction `f` and compactly supported Cauchy data `g ∈ C³`,
+`h ∈ C²` on `ℝ³`, the equation `u_tt - Δu + f(u) = 0` has a classical solution before some time
+`T > 0`, and the solution is `C²` on the whole space-time. -/
+theorem exists_classical_of_compact_data {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {g h : ℝ^3 → ℝ}
+    (hg : ContDiff ℝ 3 g) (hh : ContDiff ℝ 2 h) (hgs : HasCompactSupport g)
+    (hhs : HasCompactSupport h) :
+    ∃ T : ℝ, ∃ u : ℝ^4 → ℝ, ContDiff ℝ 2 u ∧ IsSolutionBefore f g h T u := by
+  obtain ⟨B, hB, hbound⟩ := exists_bound_cauchyFreeField_of_compact_data (hg.of_le (by norm_num))
+    (hh.of_le (by norm_num)) hgs hhs 1
+  obtain ⟨T, hT, -, htrajectory⟩ := exists_c2_cone_trajectory hf.neg hB
+  obtain ⟨v, a, hv, -, heq, -, hrem⟩ := htrajectory (cauchyFreeField g h)
+    ((contDiff_two_kirchhoffFormula hg hh).comp (contDiff_timeSpaceCons_uncurry 3)) hbound
+  obtain ⟨S, -, -, u, hu, hsol, -⟩ :=
+    exists_classical_representative_of_c2_integral_eq hf.neg hg hh hT hv heq hrem
+  exact ⟨S, u, hu, by simpa only [neg_neg] using hsol⟩
+
+/-- **A maximal solution.** Let `f` be a `C²` reaction and `g ∈ C³`, `h ∈ C²` compactly supported
+Cauchy data on `ℝ³`. When the durations of all classical solutions of `u_tt - Δu + f(u) = 0` from
+`g`, `h` have a common bound, there is a solution up to their supremum, and no classical solution
+with the same data extends it. -/
+theorem exists_maximalSolution_of_compact_data {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {g h : ℝ^3 → ℝ}
+    (hg : ContDiff ℝ 3 g) (hh : ContDiff ℝ 2 h) (hgs : HasCompactSupport g)
+    (hhs : HasCompactSupport h) (hbounded : BddAbove (existenceTimes f g h)) :
+    ∃ u, IsMaximalSolutionBefore f g h (sSup (existenceTimes f g h)) u := by
+  obtain ⟨a, u₀, -, h₀⟩ := exists_classical_of_compact_data hf hg hh hgs hhs
+  exact exists_maximalSolution_of_bounded (hf.of_le (by norm_num)).locallyLipschitz hbounded h₀
+
 /-- Every real signed-power exponent above two admits a local classical
 solution for arbitrary compact C³ displacement and C² velocity. The solution
-has a jointly C² extension across the initial slice. This is a finite-regularity statement. -/
+has a jointly C² extension across the initial slice. This is the case `f = Real.signedPower r`
+of `exists_classical_of_compact_data`. -/
 theorem exists_classical_signedPower_of_compact_data {r : ℝ} (hr : 2 < r)
     {g h : ℝ^3 → ℝ} (hg : ContDiff ℝ 3 g) (hh : ContDiff ℝ 2 h)
     (hgs : HasCompactSupport g) (hhs : HasCompactSupport h) :
-    ∃ T : ℝ, ∃ u : ℝ^4 → ℝ, ContDiff ℝ 2 u ∧ IsSolutionBefore (Real.signedPower r) g h T u := by
-  obtain ⟨T, hT, v, a, hv, _, _, _, heq, hrem⟩ :=
-    exists_c2_signedPower_trajectory_of_compact_data hr hg hh hgs hhs
-  obtain ⟨S, _, _, u, hu, hsol, _⟩ :=
-    exists_classical_representative_of_c2_integral_eq (contDiff_two_signedPower hr).neg
-      hg hh hT hv heq hrem
-  exact ⟨S, u, hu, by simpa only [neg_neg] using hsol⟩
+    ∃ T : ℝ, ∃ u : ℝ^4 → ℝ, ContDiff ℝ 2 u ∧ IsSolutionBefore (Real.signedPower r) g h T u :=
+  exists_classical_of_compact_data (contDiff_two_signedPower hr) hg hh hgs hhs
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower

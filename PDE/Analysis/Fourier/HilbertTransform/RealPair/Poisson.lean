@@ -8,6 +8,8 @@ module
 
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair
 public import PDE.Analysis.Fourier.HilbertTransform.SpectralBridge
+import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+import CAS.ExactTactic
 
 /-!
 # The Poisson kernel and its conjugate as a Hilbert pair
@@ -16,7 +18,8 @@ For `ε > 0` the conjugate Poisson kernel `x / (ε² + x²)` is the Hilbert tran
 kernel `ε / (ε² + x²)` (`isHilbertPair_poisson`). They are the real and imaginary parts of
 `i / (x + i ε)`, the boundary values of `i / (z + i ε)`, which is holomorphic in the upper half
 plane. Explicit solutions of one-dimensional vorticity models with `u_x = Hω` are built from
-this pair.
+this pair. The two kernels have the same square integral, `π / (2 ε)`
+(`integral_sq_conjugate_poisson`).
 
 ## How it works
 
@@ -26,6 +29,10 @@ conjugate kernel `x / (π (ε² + x²))` of the damped multiplier `-i sgn ξ exp
 (`fourierInv_hilbertAbelSymbol`). `fourierInv_eq_L2_ae` identifies these integrals with the `L²`
 inverse transform, and on the Fourier side the Hilbert transform is multiplication by
 `-i sgn ξ`. Multiplying by `π` removes the normalization.
+
+The Hilbert transform is an isometry of `L²` (`IsHilbertPair.integral_sq_eq`), so the kernels
+have the same square integral, and their squares add up to `1 / (ε² + x²)`, whose integral is
+`π / ε` (Mathlib's `integral_univ_inv_one_add_mul_sq`).
 
 ## References
 
@@ -78,5 +85,20 @@ theorem isHilbertPair_poisson {ε : ℝ} (hε : 0 < ε) :
   have hpair := (show IsHilbertPair (fun x ↦ Real.pi⁻¹ * (ε / (ε ^ 2 + x ^ 2)))
     (hilbertAbelKernel ε) from ⟨_, hP, hQ⟩).const_mul Real.pi
   convert hpair using 1 <;> funext x <;> simp [hilbertAbelKernel, Real.pi_ne_zero]
+
+/-- For `ε > 0` the square integral of the conjugate Poisson kernel `x / (ε² + x²)` is
+`π / (2 ε)`. The function is square integrable by `IsHilbertPair.memLp_right`. -/
+theorem integral_sq_conjugate_poisson {ε : ℝ} (hε : 0 < ε) :
+    ∫ x, (x / (ε ^ 2 + x ^ 2)) ^ 2 = Real.pi / (2 * ε) := by
+  have hpair := isHilbertPair_poisson hε
+  have h (x : ℝ) : (ε / (ε ^ 2 + x ^ 2)) ^ 2 + (x / (ε ^ 2 + x ^ 2)) ^ 2 =
+      ε⁻¹ ^ 2 * (1 + (ε⁻¹ * x) ^ 2)⁻¹ := by
+    have hd : ε ^ 2 + x ^ 2 ≠ 0 := by positivity
+    cas using [hε.ne', hd]
+  have hsum := integral_add hpair.memLp_left.integrable_sq hpair.memLp_right.integrable_sq
+  simp_rw [h] at hsum
+  rw [integral_const_mul, integral_univ_inv_one_add_mul_sq, abs_of_pos (inv_pos.mpr hε),
+    ← hpair.integral_sq_eq] at hsum
+  cas using [hsum, hε.ne']
 
 end PDE.Analysis

@@ -56,18 +56,9 @@ theorem eq_zero_on_closed_cone_of_contDiffOn_forward_semilinear [Fact (0 < n)] {
       semilinearWaveOperator V U (timeSpaceCons t x) = 0 := by
     have hx' : dist x c < T - t := Metric.mem_ball.mp hx
     have hε : 0 < T - dist x c := by linarith [ht.1]
-    have hc : Continuous (fun r : ℝ ↦ semilinearWaveOperator V U (timeSpaceCons r x)) :=
-      ((continuous_waveOperator_of_contDiff_two hU).add
-        (hV.continuous_deriv_one.comp hU.continuous)).comp
-          ((contDiff_timeSpaceCons_uncurry n (m := 1)).continuous.comp
-            (continuous_id.prodMk continuous_const))
-    have hz : EqOn (fun r : ℝ ↦ semilinearWaveOperator V U (timeSpaceCons r x))
-        (fun _ ↦ 0) (Ioo 0 (T - dist x c)) :=
-      fun r hr ↦ hwaveU r ⟨hr.1, by linarith [hr.2, dist_nonneg (x := x) (y := c)]⟩ x
-        (Metric.mem_ball.mpr (by linarith [hr.2]))
-    have hcl := hz.closure hc continuous_const
-    rw [closure_Ioo hε.ne] at hcl
-    exact hcl ⟨ht.1, by linarith⟩
+    exact waveOperator_add_eq_zero_of_mem_Icc hV.continuous_deriv_one hU hε
+      (fun r hr ↦ hwaveU r ⟨hr.1, by linarith [hr.2, dist_nonneg (x := x) (y := c)]⟩ x
+        (Metric.mem_ball.mpr (by linarith [hr.2]))) ⟨ht.1, by linarith⟩
   have hposU (x : ℝ^n) (hx : x ∈ Metric.ball c (T - 0)) :
       U (timeSpaceCons 0 x) = 0 := by
     rw [heq (by simp)]

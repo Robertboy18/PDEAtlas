@@ -9,25 +9,34 @@ module
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Integral
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Reaction
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.LocalTrajectory
-import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.CompactData
-import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.FreeWave
+import PDE.Analysis.Calculus.LocalExtension.SmoothCutoff
 import CAS.ExactTactic
 
 /-!
-# C² integral trajectories above exponent two
+# C² integral trajectories for a C² reaction
 
-The compact-cone construction is used at order two with the full
-Kirchhoff field. A finite C² truncation is removed on the trajectory
-by its short-time amplitude bound. This covers exponents above two only.
+The compact-cone construction is used at order two with a bounded C² free field. A compactly
+supported C² cutoff of the reaction is removed on the trajectory by its short-time amplitude
+bound, so the trajectory solves the integral equation of the reaction itself
+(`exists_c2_cone_trajectory`). No sign or growth condition on the reaction is used, and the
+reaction need not vanish at zero. The signed powers above exponent two are the case
+`exists_c2_signedPower_cone_trajectory`.
+
+## How it works
+
+`ContDiff.exists_lipschitzWith_compactSupport_eqOn_closedBall` cuts the reaction `f` off outside
+`[-B - 1, B + 1]`: the cutoff `F` is `C²`, Lipschitz and bounded by some `M`.
+`exists_c2_cone_trajectory_of_lipschitz` solves `v = H + t² a` for `|t| < T₀`, where `a` is the
+Duhamel average of `F ∘ v` over the backward cone, and bounds `|a|` by `‖duhamelOperator‖ M`. So
+`|v| < B + 1` for `0 ≤ t < T`, with `T` small, and there `F ∘ v = f ∘ v`: the cutoff is gone.
 -/
 
 @[expose] public noncomputable section
 
-open Set Filter MeasureTheory BoundedContinuousFunction PDE.Analysis PDE.Common WaveEquation
+open Set MeasureTheory BoundedContinuousFunction PDE.Analysis PDE.Common WaveEquation
 open WaveEquation.SmallData.Classical.LocalPower
 open PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical
-open PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.SignCondition
-open scoped Topology unitInterval
+open scoped unitInterval
 
 namespace PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower
 
@@ -106,9 +115,61 @@ theorem exists_c2_cone_trajectory_of_lipschitz {f : ℝ → ℝ} (hf : ContDiff 
     exact (duhamelOperator (N (ψ (A p)))).norm_coe_le_norm vertex |>.trans
       ((duhamelOperator.le_opNorm _).trans (mul_le_mul_of_nonneg_left hn (norm_nonneg _)))
 
+/-- **Integral trajectories of a `C²` reaction.** For `f ∈ C²` and `B ≥ 0` there is a time
+`0 < T ≤ 1` such that every `C²` free field `H` on `ℝ × ℝ³` with `|H| ≤ B` on the slab
+`0 ≤ t ≤ 1` has `C²` functions `v`, `a` on `|t| < T` with `v = H + t² a` there, and with
+`|v| < B + 1` and `a (t, x) = ∫₀¹ (1 - s) · (mean over |ω| = 1 of f (v (t s, x + t (1 - s) ω))) ds`
+for `0 ≤ t < T`. -/
+theorem exists_c2_cone_trajectory {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {B : ℝ} (hB : 0 ≤ B) :
+    ∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧
+      ∀ H : ℝ × ℝ^3 → ℝ, ContDiff ℝ 2 H → (∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 1 → |H p| ≤ B) →
+        ∃ v a : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ 2 v {p | |p.1| < T} ∧
+      ContDiffOn ℝ 2 a {p | |p.1| < T} ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → v p = H p + p.1 ^ 2 * a p) ∧
+      (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → |v p| < B + 1) ∧
+      ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → a p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction,
+        f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3))))
+        ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3) := by
+  obtain ⟨F, C, hF, hFc, hLip, hmatch⟩ :=
+    ContDiff.exists_lipschitzWith_compactSupport_eqOn_closedBall (m := 2) hf (by norm_num) 0
+      (add_pos_of_nonneg_of_pos hB one_pos)
+  obtain ⟨M, hM⟩ := hF.continuous.bounded_above_of_compact_support hFc
+  have hM0 : 0 ≤ M := (norm_nonneg (F 0)).trans (hM 0)
+  obtain ⟨T₀, hT₀, htrajectory⟩ := exists_c2_cone_trajectory_of_lipschitz hF hLip
+  -- A time `T ≤ T₀` with `T (K + 1) ≤ 1`, where `K` bounds the remainder `a`.
+  set K : ℝ := ‖duhamelOperator‖ * M
+  have hK : 0 ≤ K := mul_nonneg duhamelOperator.opNorm_nonneg hM0
+  have hK1 : 0 < K + 1 := add_pos_of_nonneg_of_pos hK one_pos
+  obtain ⟨T, hT, hTT, hTK⟩ : ∃ T : ℝ, 0 < T ∧ T ≤ T₀ ∧ T * (K + 1) ≤ 1 :=
+    ⟨min T₀ (1 / (K + 1)), lt_min hT₀ (one_div_pos.mpr hK1), min_le_left _ _,
+      (le_div_iff₀ hK1).mp (min_le_right _ _)⟩
+  have hT1 : T ≤ 1 := by cas using [mul_nonneg hT.le hK, hTK, hT]
+  refine ⟨T, hT, hT1, fun H hH hbound ↦ ?_⟩
+  obtain ⟨v, a, hv, ha, heq, hrem, habound⟩ := htrajectory H hH
+  have hlt {p : ℝ × ℝ^3} (hp : p.1 ∈ Ico 0 T) : |p.1| < T₀ := by
+    rw [abs_of_nonneg hp.1]
+    exact hp.2.trans_le hTT
+  have hva (p : ℝ × ℝ^3) (hp : p.1 ∈ Ico 0 T) : |v p| < B + 1 := by
+    have hn : |a p| ≤ K :=
+      habound M hM0 (fun z ↦ by simpa only [Real.norm_eq_abs] using hM z) p (hlt hp)
+    have hsq : p.1 ^ 2 * K ≤ p.1 * K := by
+      cas using [hp.1, hK, hp.2.le.trans hT1, mul_nonneg hp.1 hK]
+    rw [heq p (hlt hp)]
+    refine (abs_add_le _ _).trans_lt ?_
+    rw [abs_mul, abs_of_nonneg (sq_nonneg p.1)]
+    cas using [hbound p ⟨hp.1, hp.2.le.trans hT1⟩, mul_le_mul_of_nonneg_left hn (sq_nonneg p.1),
+      hsq, mul_le_mul_of_nonneg_right hp.2.le hK, hTK, hT]
+  refine ⟨v, a, hv.mono fun _ hp ↦ hp.trans_le hTT, ha.mono fun _ hp ↦ hp.trans_le hTT,
+    fun p hp ↦ heq p (hp.trans_le hTT), hva, fun p hp ↦ ?_⟩
+  rw [hrem p (hlt hp)]
+  congr 1 with s
+  congr 3 with ω
+  refine hmatch ?_
+  rw [mem_closedBall_zero_iff, Real.norm_eq_abs]
+  exact (hva _ ⟨mul_nonneg hp.1 s.2.1, (mul_le_of_le_one_right hp.1 s.2.2).trans_lt hp.2⟩).le
 
 /-- Every signed real power above two admits a C² integral trajectory
-from a bounded C² free field. The cutoff is absent from the conclusion. -/
+from a bounded C² free field: the case `f = -Real.signedPower r` of
+`exists_c2_cone_trajectory`. -/
 theorem exists_c2_signedPower_cone_trajectory {r : ℝ} (hr : 2 < r) {B : ℝ} (hB : 0 ≤ B) :
     ∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧
       ∀ H : ℝ × ℝ^3 → ℝ, ContDiff ℝ 2 H → (∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 1 → |H p| ≤ B) →
@@ -117,112 +178,7 @@ theorem exists_c2_signedPower_cone_trajectory {r : ℝ} (hr : 2 < r) {B : ℝ} (
       (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → |v p| < B + 1) ∧
       ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → a p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction,
         -Real.signedPower r (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3))))
-        ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3) := by
-  have hs (z : ℝ) : 0 ≤ z * Real.signedPower r z := by
-    unfold Real.signedPower
-    nlinarith [mul_nonneg (Real.rpow_nonneg (abs_nonneg z) (r - 1)) (sq_nonneg z)]
-  obtain ⟨f, C, hf, hfc, hLip, hmatch, _⟩ := exists_sign_preserving_lipschitz_reaction
-      (m := 2) (contDiff_two_signedPower hr) (by norm_num) hs
-      (show 0 < B + 2 by linarith)
-  obtain ⟨M, hM⟩ := hf.continuous.bounded_above_of_compact_support hfc
-  have hM0 : 0 ≤ M := (norm_nonneg (f 0)).trans (hM 0)
-  obtain ⟨T₀, hT₀, htrajectory⟩ := exists_c2_cone_trajectory_of_lipschitz hf.neg hLip.neg
-  have hc : Continuous (fun t : ℝ ↦ t ^ 2 * (‖duhamelOperator‖ * M)) := by fun_prop
-  have hnear : ∀ᶠ t : ℝ in 𝓝 0, t ^ 2 * (‖duhamelOperator‖ * M) < 1 :=
-    hc.continuousAt.eventually (gt_mem_nhds (by norm_num))
-  obtain ⟨δ, hδ, hd⟩ := Metric.mem_nhds_iff.mp hnear
-  let T := min T₀ (min δ 1)
-  have hT : 0 < T := lt_min hT₀ (lt_min hδ zero_lt_one)
-  have hTT : T ≤ T₀ := min_le_left _ _
-  have hTδ : T ≤ δ := (min_le_right _ _).trans (min_le_left _ _)
-  have hT1 : T ≤ 1 := (min_le_right _ _).trans (min_le_right _ _)
-  refine ⟨T, hT, hT1, fun H hH hbound ↦ ?_⟩
-  obtain ⟨v, a, hv, ha, heq, hrem, habound⟩ := htrajectory H hH
-  have hva (p : ℝ × ℝ^3) (hp : p.1 ∈ Ico 0 T) : |v p| < B + 1 := by
-    have hpt : |p.1| < T := by
-      simpa only [abs_of_nonneg hp.1] using hp.2
-    have hn : |a p| ≤ ‖duhamelOperator‖ * M := habound M hM0
-      (fun z ↦ by simpa only [abs_neg, Real.norm_eq_abs] using hM z) p (hpt.trans_le hTT)
-    have hsmall : p.1 ^ 2 * (‖duhamelOperator‖ * M) < 1 := hd (by
-      simpa only [Metric.mem_ball, dist_zero_right, Real.norm_eq_abs] using hpt.trans_le hTδ)
-    rw [heq p (hpt.trans_le hTT)]
-    refine (abs_add_le _ _).trans_lt ?_
-    rw [abs_mul, abs_of_nonneg (sq_nonneg p.1)]
-    linarith [hbound p ⟨hp.1, hp.2.le.trans hT1⟩, mul_le_mul_of_nonneg_left hn (sq_nonneg p.1)]
-  refine ⟨v, a, hv.mono (fun _ hp ↦ hp.trans_le hTT), ha.mono (fun _ hp ↦ hp.trans_le hTT),
-    fun p hp ↦ heq p (hp.trans_le hTT), hva, ?_⟩
-  intro p hp
-  rw [hrem p (by simpa only [abs_of_nonneg hp.1] using hp.2.trans_le hTT)]
-  congr 1 with s
-  congr 3 with ω
-  have hq : (physicalPoint p (rim s ω)).1 ∈ Ico 0 T := ⟨mul_nonneg hp.1 s.2.1,
-      (mul_le_mul_of_nonneg_left s.2.2 hp.1).trans_lt (by simpa using hp.2)⟩
-  have hbq := hva (physicalPoint p (rim s ω)) hq
-  have hm := hmatch (show v (physicalPoint p (rim s ω)) ∈ Metric.closedBall 0 (B + 2) by
-    rw [Metric.mem_closedBall, dist_zero_right, Real.norm_eq_abs]
-    linarith)
-  exact congrArg Neg.neg hm
-
-/-- Arbitrary compact C³ displacement and C² velocity produce a C²
-signed-power integral trajectory for exponents above two, with both ordinary
-Cauchy traces. Only the finite scalar C² regularity is used. -/
-theorem exists_c2_signedPower_trajectory_of_compact_data {r : ℝ} (hr : 2 < r) {g h : ℝ^3 → ℝ}
-    (hg : ContDiff ℝ 3 g) (hh : ContDiff ℝ 2 h) (hgs : HasCompactSupport g)
-    (hhs : HasCompactSupport h) :
-    ∃ T : ℝ, 0 < T ∧ ∃ v a : ℝ × ℝ^3 → ℝ,
-      ContDiffOn ℝ 2 v {p | |p.1| < T} ∧
-      ContDiffOn ℝ 2 a {p | |p.1| < T} ∧
-      (∀ x : ℝ^3, v (0, x) = g x) ∧
-      (∀ x : ℝ^3, HasDerivAt (fun t ↦ v (t, x)) (h x) 0) ∧
-      (∀ p : ℝ × ℝ^3, |p.1| < T →
-        v p = cauchyFreeField g h p + p.1 ^ 2 * a p) ∧
-      ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T →
-        a p = ∫ s : I, (1 - (s : ℝ)) *
-          ((∫ ω : Direction,
-            -Real.signedPower r
-              (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3))))
-              ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3) := by
-  have hH : ContDiff ℝ 2 (cauchyFreeField g h) :=
-    (contDiff_two_kirchhoffFormula hg hh).comp (contDiff_timeSpaceCons_uncurry 3)
-  obtain ⟨Rg, _, hgR⟩ := hgs.exists_pos_le_norm
-  obtain ⟨Rh, _, hhR⟩ := hhs.exists_pos_le_norm
-  let R := max Rg Rh
-  have hsupport (t : ℝ) (ht : t ∈ Icc 0 1) (x : ℝ^3) (hx : x ∉ Metric.closedBall 0 (R + 1)) :
-      spaceTimeUncurry (kirchhoffFormula g h) (timeSpaceCons t x) = 0 := by
-    apply WaveEquation.SmallData.kirchhoffFormula_hasForwardSupport
-      (hg.of_le (by norm_num)) hh.continuous (fun y hy ↦ hgR y ((le_max_left _ _).trans hy.le))
-      (fun y hy ↦ hhR y ((le_max_right _ _).trans hy.le)) t ht.1 x
-    have hx' : R + 1 < ‖x‖ := by
-      simpa only [Metric.mem_closedBall, dist_zero_right, not_le] using hx
-    linarith [ht.2]
-  have hHc : Continuous (spaceTimeUncurry (kirchhoffFormula g h)) := by
-    have heq : spaceTimeUncurry (kirchhoffFormula g h) =
-        cauchyFreeField g h ∘ timeSpaceContinuousLinearEquiv 3 := by
-      funext z; simp [cauchyFreeField, timeSpaceContinuousLinearEquiv_apply]
-    rw [heq]
-    exact hH.continuous.comp (timeSpaceContinuousLinearEquiv 3).continuous
-  obtain ⟨B, hB, hbound⟩ := exists_bound_of_compact_slab hHc
-    (isCompact_closedBall (0 : ℝ^3) (R + 1)) hsupport
-  obtain ⟨T, hT, _, htrajectory⟩ := exists_c2_signedPower_cone_trajectory hr hB
-  obtain ⟨v, a, hv, ha, heq, _, hrem⟩ :=
-    htrajectory (cauchyFreeField g h) hH (fun p hp ↦ hbound p.1 hp p.2)
-  refine ⟨T, hT, v, a, hv, ha, ?_, ?_, heq, hrem⟩
-  · intro x
-    simpa only [zero_pow (by norm_num : 2 ≠ 0), zero_mul, add_zero,
-      cauchyFreeField_initial_position] using heq (0, x) (by simpa using hT)
-  · intro x
-    have hnear : {p : ℝ × ℝ^3 | |p.1| < T} ∈ 𝓝 (0, x) :=
-      (isOpen_lt continuous_fst.abs continuous_const).mem_nhds (by simpa using hT)
-    have hac : ContDiffAt ℝ 1 (fun t : ℝ ↦ a (t, x)) 0 :=
-      ((ha.of_le (by norm_num)).contDiffAt hnear).comp 0 (contDiffAt_id.prodMk contDiffAt_const)
-    have hd := (hasDerivAt_cauchyFreeField_initial_velocity (hg.of_le (by norm_num))
-      (hh.of_le (by norm_num)) x).fun_add (((hasDerivAt_id (0 : ℝ)).fun_pow 2).fun_mul
-        (hac.differentiableAt one_ne_zero).hasDerivAt)
-    have htrace : HasDerivAt
-        (fun t : ℝ ↦ cauchyFreeField g h (t, x) + t ^ 2 * a (t, x)) (h x) 0 := by
-      simpa using hd
-    apply htrace.congr_of_eventuallyEq
-    filter_upwards [(continuous_id.prodMk continuous_const).continuousAt.eventually hnear] with t ht
-    exact heq (t, x) ht
+        ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3) :=
+  exists_c2_cone_trajectory (contDiff_two_signedPower hr).neg hB
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower

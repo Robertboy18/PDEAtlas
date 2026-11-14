@@ -9,7 +9,7 @@ module
 public import PDE.Hyperbolic.NonlinearWave.SmallData.StraussCritical.Kato
 public import PDE.Hyperbolic.NonlinearWave.SmallData.StraussCritical.MassGrowth
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Inequality
-import CAS.ExactTactic
+public import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.Exponent
 
 /-!
 # Critical Strauss nonexistence for the three-dimensional wave
@@ -92,17 +92,6 @@ theorem not_global_cauchy_solution_three_of_strauss_equality {u : ℝ^4 → ℝ}
         change massCoefficient 3 p * (R + t) ^ (-(3 : ℝ) * (p - 1)) *
           |F t| ^ p ≤ _ at hi
         simpa only [C, q, neg_mul, abs_of_pos (hFpos t ht)] using hi
-
-/-- The positive three-dimensional Strauss root is strictly greater than two. -/
-theorem two_lt_one_add_sqrt_two : (2 : ℝ) < 1 + Real.sqrt 2 := by
-  have hs := Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 2)
-  have hn := Real.sqrt_nonneg 2
-  nlinarith only [hs, hn]
-
-/-- The positive Strauss root satisfies the precise reciprocal-density identity. -/
-theorem one_add_sqrt_two_strauss_equality :
-    (1 + Real.sqrt 2) * ((1 + Real.sqrt 2) - 2) = 1 := by
-  cas
 
 /-- The three-dimensional wave cannot persist globally at `p=1+√2`. -/
 theorem not_global_cauchy_solution_three_at_strauss {u : ℝ^4 → ℝ} {h : ℝ^3 → ℝ} {R : ℝ}

@@ -134,6 +134,26 @@ theorem semilinearWaveSpatialEnergy_eq_integral_components (V : ℝ → ℝ) (u 
                 (n := n) V u t x) := by
       rw [integral_add hgradient hpotential]
 
+/-- **The equation at the end times.** Let `f` be continuous, `u` be `C²` and `S > 0`. When
+`□u + f(u) = 0` at `(t, x)` for all `0 < t < S`, the equation holds at `(0, x)` and at `(S, x)`
+as well, by continuity. -/
+theorem waveOperator_add_eq_zero_of_mem_Icc {f : ℝ → ℝ} (hf : Continuous f)
+    {u : ℝ^(n + 1) → ℝ} (hu : ContDiff ℝ 2 u) {S : ℝ} (hS : 0 < S) {x : ℝ^n}
+    (hwave : ∀ t ∈ Set.Ioo 0 S,
+      waveOperator u (PDE.Common.timeSpaceCons t x) + f (u (PDE.Common.timeSpaceCons t x)) = 0)
+    {t : ℝ} (ht : t ∈ Set.Icc 0 S) :
+    waveOperator u (PDE.Common.timeSpaceCons t x) + f (u (PDE.Common.timeSpaceCons t x)) = 0 := by
+  have hc : Continuous (fun r : ℝ ↦
+      waveOperator u (PDE.Common.timeSpaceCons r x) + f (u (PDE.Common.timeSpaceCons r x))) :=
+    ((continuous_waveOperator_of_contDiff_two hu).add (hf.comp hu.continuous)).comp
+      ((PDE.Common.contDiff_timeSpaceCons_uncurry n (m := 1)).continuous.comp
+        (continuous_id.prodMk continuous_const))
+  have hcl := (show Set.EqOn (fun r : ℝ ↦
+    waveOperator u (PDE.Common.timeSpaceCons r x) + f (u (PDE.Common.timeSpaceCons r x)))
+    (fun _ ↦ 0) (Set.Ioo 0 S) from hwave).closure hc continuous_const
+  rw [closure_Ioo hS.ne] at hcl
+  exact hcl ht
+
 /-- An equation `□u + f(u) = 0` that holds at all positive times extends by continuity to time
 zero when `u` is `C²` and `f` is continuous. -/
 theorem waveOperator_add_eq_zero_of_nonneg {f : ℝ → ℝ} {u : ℝ^(n + 1) → ℝ}
@@ -141,18 +161,9 @@ theorem waveOperator_add_eq_zero_of_nonneg {f : ℝ → ℝ} {u : ℝ^(n + 1) �
     (hwave : ∀ t, 0 < t → ∀ x,
       waveOperator u (PDE.Common.timeSpaceCons t x) + f (u (PDE.Common.timeSpaceCons t x)) = 0)
     {t : ℝ} (ht : 0 ≤ t) (x : ℝ^n) :
-    waveOperator u (PDE.Common.timeSpaceCons t x) + f (u (PDE.Common.timeSpaceCons t x)) = 0 := by
-  have hc : Continuous (fun r : ℝ ↦
-      waveOperator u (PDE.Common.timeSpaceCons r x) + f (u (PDE.Common.timeSpaceCons r x))) :=
-    ((continuous_waveOperator_of_contDiff_two hu).add (hf.comp hu.continuous)).comp
-      ((PDE.Common.contDiff_timeSpaceCons_uncurry n (m := 1)).continuous.comp
-        (continuous_id.prodMk continuous_const))
-  have he : Set.EqOn (fun r : ℝ ↦
-      waveOperator u (PDE.Common.timeSpaceCons r x) + f (u (PDE.Common.timeSpaceCons r x)))
-      (fun _ ↦ 0) (Set.Ioi 0) := fun r hr ↦ hwave r hr x
-  have hcl := he.closure hc continuous_const
-  rw [closure_Ioi] at hcl
-  exact hcl ht
+    waveOperator u (PDE.Common.timeSpaceCons t x) + f (u (PDE.Common.timeSpaceCons t x)) = 0 :=
+  waveOperator_add_eq_zero_of_mem_Icc hf hu (ht.trans_lt (lt_add_one t))
+    (fun r hr ↦ hwave r hr.1 x) ⟨ht, (lt_add_one t).le⟩
 
 /-- A semilinear wave equation with continuous reaction `deriv V` that holds at all positive
 times also holds at time zero. -/

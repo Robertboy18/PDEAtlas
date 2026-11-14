@@ -11,6 +11,7 @@ public import Mathlib.MeasureTheory.Integral.IntervalIntegral.DistLEIntegral
 public import PDE.Analysis.MeasureTheory.Lp.Continuous
 public import PDE.Analysis.MeasureTheory.Lp.WeightedL2
 import CAS.IntegrationTactic
+import PDE.Analysis.MeasureTheory.Lp.SquareIntegral
 
 /-!
 # Interval estimates from derivative energy
@@ -20,6 +21,9 @@ increments and midpoint remainders. Interior differentiability suffices for the
 midpoint estimate, so the derivative may be singular at either endpoint.
 An affine model uses the energy of `deriv g - r`, retaining cancellation with
 any chosen slope `r`. Splitting at the midpoint gives the factor `(b - a)² / 8`.
+
+The estimates start from the Cauchy–Schwarz inequality on an interval,
+`sq_integral_le_mul_integral_sq`: `(∫ₐᵇ q)² ≤ (b - a) ∫ₐᵇ q²`.
 -/
 
 @[expose] public section
@@ -29,6 +33,18 @@ noncomputable section
 open MeasureTheory Set
 
 namespace PDE.Analysis
+
+/-- The Cauchy–Schwarz inequality on an interval: `(∫ₐᵇ q)² ≤ (b - a) ∫ₐᵇ q²`, the case of the
+Lebesgue measure on `(a, b]` of `MeasureTheory.sq_integral_le_measureReal_mul_integral_sq`. -/
+theorem sq_integral_le_mul_integral_sq {q : ℝ → ℝ} {a b : ℝ} (hab : a ≤ b)
+    (hq : IntervalIntegrable q volume a b)
+    (hq2 : IntervalIntegrable (fun x ↦ q x ^ 2) volume a b) :
+    (∫ x in a..b, q x) ^ 2 ≤ (b - a) * ∫ x in a..b, q x ^ 2 := by
+  rw [intervalIntegrable_iff_integrableOn_Ioc_of_le hab] at hq hq2
+  have h := sq_integral_le_measureReal_mul_integral_sq
+    ((memLp_two_iff_integrable_sq hq.aestronglyMeasurable).2 hq2)
+  rwa [measureReal_restrict_apply_univ, Real.volume_real_Ioc_of_le hab,
+    ← intervalIntegral.integral_of_le hab, ← intervalIntegral.integral_of_le hab] at h
 
 /-- Cauchy–Schwarz bounds a displacement by the interval's derivative energy. -/
 theorem sub_sq_le_length_mul_integral_deriv_sq {g : ℝ → ℝ} {a b : ℝ}
@@ -41,17 +57,15 @@ theorem sub_sq_le_length_mul_integral_deriv_sq {g : ℝ → ℝ} {a b : ℝ}
       (he.integrable (by norm_num)).abs
   have hdistance := norm_sub_le_integral_of_norm_deriv_le_of_le hab hc hd
     (Filter.Eventually.of_forall fun _ _ ↦ le_rfl) hi
-  have hone : MemLp (fun _ : ℝ ↦ (1 : ℝ)) 2 (volume.restrict (Ioc a b)) :=
-    memLp_const 1
-  have hcs := integral_abs_mul_le_sqrt_integral_sq he hone
-  simp only [mul_one, one_pow] at hcs
-  rw [integral_const, Measure.real, Measure.restrict_apply_univ, Real.volume_Ioc,
-    ENNReal.toReal_ofReal (sub_nonneg.mpr hab), smul_eq_mul, mul_one] at hcs
-  simp only [Real.norm_eq_abs, intervalIntegral.integral_of_le hab] at hdistance
-  have hs := (sq_le_sq₀ (abs_nonneg _) (by positivity)).2 (hdistance.trans hcs)
-  rw [sq_abs, mul_pow, Real.sq_sqrt (integral_nonneg fun _ ↦ sq_nonneg _),
-    Real.sq_sqrt (sub_nonneg.mpr hab)] at hs
-  simpa only [intervalIntegral.integral_of_le hab, mul_comm] using hs
+  have hi2 : IntervalIntegrable (fun x ↦ |deriv g x| ^ 2) volume a b := by
+    simpa only [sq_abs] using
+      (intervalIntegrable_iff_integrableOn_Ioc_of_le hab).2 he.integrable_sq
+  have hcs := sq_integral_le_mul_integral_sq hab hi hi2
+  simp only [sq_abs] at hcs
+  simp only [Real.norm_eq_abs] at hdistance
+  calc (g b - g a) ^ 2 = |g b - g a| ^ 2 := (sq_abs _).symm
+    _ ≤ (∫ x in a..b, |deriv g x|) ^ 2 := pow_le_pow_left₀ (abs_nonneg _) hdistance 2
+    _ ≤ (b - a) * ∫ x in a..b, deriv g x ^ 2 := hcs
 
 /-- Anchoring at the right endpoint costs half the squared interval length.
 No regularity at the left endpoint is needed. -/

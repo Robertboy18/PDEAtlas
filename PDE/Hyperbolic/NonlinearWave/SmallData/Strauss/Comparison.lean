@@ -59,7 +59,7 @@ theorem kirchhoffPotential_le_semilinear {u : ℝ^4 → ℝ} {h : ℝ^3 → ℝ}
     (hzero : ∀ x : ℝ^3, u (timeSpaceCons 0 x) = 0)
     (hinitial : ∀ x : ℝ^3, (∂[0] u) (timeSpaceCons 0 x) = h x) {t : ℝ} (ht : 0 ≤ t) (x : ℝ^3) :
     kirchhoffPotential h (timeSpaceCons t x) ≤ u (timeSpaceCons t x) := by
-  rw [eq_kirchhoffPotential_add_duhamel hu ((contDiff_two_abs_rpow hp).comp hu)
+  rw [eq_kirchhoffPotential_add_duhamel hu ((contDiff_two_abs_rpow hp.le).comp hu)
     hh hwave hzero hinitial ht x]
   exact le_add_of_nonneg_right (oddDuhamelSolution_zero_nonneg
     (fun _ _ _ ↦ Real.rpow_nonneg (abs_nonneg _) _) ht x)

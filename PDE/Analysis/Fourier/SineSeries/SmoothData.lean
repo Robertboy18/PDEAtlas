@@ -8,6 +8,7 @@ module
 
 public import PDE.Analysis.Fourier.SineSeries.Reconstruction
 import Mathlib.Analysis.PSeries
+import PDE.Analysis.Calculus.Periodic
 
 /-!
 # Sine reconstruction for smooth periodic data
@@ -54,9 +55,7 @@ theorem summable_fourierCoeff_of_contDiff_two (f : C(AddCircle (2 : ℝ), ℂ))
   have hper : Function.Periodic F 2 := by
     intro x
     simp only [F, AddCircle.coe_add_period]
-  have hper' : Function.Periodic (deriv F) 2 := by
-    intro x
-    rw [← deriv_comp_add_const F 2 x, show (fun y ↦ F (y + 2)) = F from funext hper]
+  have hper' : Function.Periodic (deriv F) 2 := hper.deriv
   obtain ⟨M, hM⟩ := isCompact_Icc.exists_bound_of_continuousOn
     (hF'.continuous_deriv_one.continuousOn (s := Icc (0 : ℝ) 2))
   have hcoeff (n : ℤ) : fourierCoeff f n =

@@ -12,7 +12,7 @@ Evans's *Partial Differential Equations*, second edition, and has modules for ev
 chapters 2 to 12 of the book: the four linear equations, first-order equations, Sobolev spaces,
 elliptic and evolution equations, the calculus of variations, Hamilton–Jacobi equations,
 conservation laws and nonlinear waves. Beyond the book it covers incompressible fluid mechanics. It
-has about 1.08 million lines of Lean and 36,000 theorems.
+has about 1.09 million lines of Lean and 36,000 theorems.
 
 * [Blueprint](https://robertboy18.github.io/PDEAtlas/): the book that goes with the library, with
   statements, proof ideas, worked examples and figures linked to the Lean declarations, and a map of
@@ -103,14 +103,14 @@ library module imports.
 
 - Lean's kernel checks every proof. No proof uses `sorry`, and every declaration in the library
   rests only on Lean's three standard axioms, `propext`, `Classical.choice` and `Quot.sound`: we
-  checked all 99,811 of them, the examples included.
+  checked all 100,409 of them, the examples included.
 - The library builds with Mathlib's standard set of linters, and warnings are errors.
 - Every theorem states all of its hypotheses, regularity included. This matters in Lean, where
   `fderiv` is zero at points where a function is not differentiable, so an equation written with
   derivatives is the classical PDE only together with the regularity hypotheses our solution
   classes carry.
-- Every one of the 6,329 library modules starts with a doc that says what it proves and where its
-  statements differ from their source, and 1,831 of them have a References section that cites the
+- Every one of the 6,354 library modules starts with a doc that says what it proves and where its
+  statements differ from their source, and 1,839 of them have a References section that cites the
   results they formalize.
 - By default the kernel also checks the numerical certificates, instead of trusting compiled code.
 

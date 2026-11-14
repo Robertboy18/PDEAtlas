@@ -10,11 +10,15 @@ import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Loca
 import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.IntegralAgreement
 
 /-!
-# Local classical waves with the reaction `|u|^{3/2} u`
+# Local classical waves with a reaction of finite regularity
 
 For the reaction `signedPower (5/2) u = |u|^{3/2} u` on `ℝ³`, compactly supported data
 `g ∈ C³`, `h ∈ C²` give a `C²` solution of `□u + |u|^{3/2} u = 0` on a time interval
 `[0, T)` (`exists_classical_signedPower_of_compact_data`).
+
+The general theorem `exists_classical_of_compact_data` asks only that the reaction is `C²`. The
+last two examples are reactions that the signed powers do not reach: the focusing cubic `-u³`,
+for which `z f(z) ≤ 0`, and `cos u`, which does not vanish at zero.
 -/
 
 open Set PDE.Common WaveEquation
@@ -41,3 +45,17 @@ example {g h : ℝ^3 → ℝ} (hg : ContDiff ℝ 3 g) (hh : ContDiff ℝ 2 h)
   · intro x
     simpa only [hsol.velocity] using
       PDE.hasDerivAt_timeSpaceCons u 0 x (hu.differentiable (by norm_num) _)
+
+/-- The focusing cubic `□u = u³`: a reaction with `z f(z) ≤ 0`. -/
+example {g h : ℝ^3 → ℝ} (hg : ContDiff ℝ 3 g) (hh : ContDiff ℝ 2 h)
+    (hgs : HasCompactSupport g) (hhs : HasCompactSupport h) :
+    ∃ T : ℝ, ∃ u : ℝ^4 → ℝ, ContDiff ℝ 2 u ∧
+      SmallData.Classical.IsSolutionBefore (fun z ↦ -z ^ 3) g h T u :=
+  exists_classical_of_compact_data (by fun_prop) hg hh hgs hhs
+
+/-- The reaction `cos u`, which does not vanish at zero. -/
+example {g h : ℝ^3 → ℝ} (hg : ContDiff ℝ 3 g) (hh : ContDiff ℝ 2 h)
+    (hgs : HasCompactSupport g) (hhs : HasCompactSupport h) :
+    ∃ T : ℝ, ∃ u : ℝ^4 → ℝ, ContDiff ℝ 2 u ∧
+      SmallData.Classical.IsSolutionBefore Real.cos g h T u :=
+  exists_classical_of_compact_data Real.contDiff_cos hg hh hgs hhs

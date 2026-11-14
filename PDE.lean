@@ -365,6 +365,7 @@ public import PDE.Analysis.Calculus.ParametricIntegral.RightDerivative
 public import PDE.Analysis.Calculus.ParametricIntervalRegularity
 public import PDE.Analysis.Calculus.ParametricIntervalRegularity.Derivatives
 public import PDE.Analysis.Calculus.Parity
+public import PDE.Analysis.Calculus.Parity.Primitive
 public import PDE.Analysis.Calculus.PartialGradient
 public import PDE.Analysis.Calculus.PartialRegularity
 public import PDE.Analysis.Calculus.PivotChainRule
@@ -471,6 +472,7 @@ public import PDE.Analysis.Calculus.Transport.Characteristics
 public import PDE.Analysis.Calculus.Transport.Differentiation
 public import PDE.Analysis.Calculus.Transport.FirstContact
 public import PDE.Analysis.Calculus.Transport.InvariantRectangle
+public import PDE.Analysis.Calculus.Transport.MinimumPrinciple
 public import PDE.Analysis.Calculus.Trigonometric.LinearPhase
 public import PDE.Analysis.Calculus.Truncation
 public import PDE.Analysis.Calculus.UniformClosure
@@ -515,6 +517,7 @@ public import PDE.Analysis.Convex.Subdifferential.Translation
 public import PDE.Analysis.Convolution.AlmostEverywhereContinuous
 public import PDE.Analysis.Convolution.CompactKernels
 public import PDE.Analysis.Convolution.DerivativeBounds
+public import PDE.Analysis.Convolution.ExponentialWeight
 public import PDE.Analysis.Convolution.FractionalEnergy
 public import PDE.Analysis.Convolution.FractionalEnergy.Dilation
 public import PDE.Analysis.Convolution.FractionalEnergy.HeightIntegral
@@ -875,16 +878,20 @@ public import PDE.Analysis.Fourier.HilbertTransform.Parametric.Derivative
 public import PDE.Analysis.Fourier.HilbertTransform.Parametric.Smooth
 public import PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Calculus
 public import PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Continuity
+public import PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz
 public import PDE.Analysis.Fourier.HilbertTransform.QuotientBounds
 public import PDE.Analysis.Fourier.HilbertTransform.QuotientBounds.Even
 public import PDE.Analysis.Fourier.HilbertTransform.RealL2
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair
+public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Derivative
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Dilation
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Limit
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Parity
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson
+public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrimitiveBounds
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrincipalValue
+public import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrincipalValue.LocallyLipschitz
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Reflection
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Sobolev
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Sobolev.ClassicalDerivative
@@ -895,17 +902,21 @@ public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Sobolev.SecondOrder
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Sobolev.Weak
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Sobolev.WeakProductBound
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.TimeDerivative
+public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Translation
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.VelocityIdentification
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.WeakDerivative
 public import PDE.Analysis.Fourier.HilbertTransform.Reflection
 public import PDE.Analysis.Fourier.HilbertTransform.Regularity
 public import PDE.Analysis.Fourier.HilbertTransform.Scaling
 public import PDE.Analysis.Fourier.HilbertTransform.Sobolev
+public import PDE.Analysis.Fourier.HilbertTransform.Translation
 public import PDE.Analysis.Fourier.HilbertTransform.Velocity
 public import PDE.Analysis.Fourier.HilbertTransform.WeakDerivative
 public import PDE.Analysis.Fourier.HilbertTransform.WeakDerivative.RealLine
 public import PDE.Analysis.Fourier.HilbertTransform.WeightedCancellation
 public import PDE.Analysis.Fourier.HilbertTransform.WeightedCancellation.OriginJet
+public import PDE.Analysis.Fourier.HilbertTransform.Periodic.LogSinePotential
+public import PDE.Analysis.Fourier.HilbertTransform.Periodic.Multiplier
 public import PDE.Analysis.Fourier.L1Reconstruction
 public import PDE.Analysis.Fourier.L1Reconstruction.Parametric
 public import PDE.Analysis.Fourier.L2Convolution
@@ -913,6 +924,7 @@ public import PDE.Analysis.Fourier.L2ConvolutionDistribution
 public import PDE.Analysis.Fourier.L2Multiplier
 public import PDE.Analysis.Fourier.L2Reconstruction
 public import PDE.Analysis.Fourier.LaplacianEnergy
+public import PDE.Analysis.Fourier.PeriodicConvolution
 public import PDE.Analysis.Fourier.MatrixSymbol.DifferentialIdentity
 public import PDE.Analysis.Fourier.MatrixSymbol.Multiplier
 public import PDE.Analysis.Fourier.MatrixSymbol.Regularity
@@ -988,6 +1000,7 @@ public import PDE.Analysis.Integration.ApproximateIdentity.LebesguePoint
 public import PDE.Analysis.Integration.ApproximateIdentity.PoissonBound
 public import PDE.Analysis.Integration.Axisymmetric
 public import PDE.Analysis.Integration.AffinePowerMoments
+public import PDE.Analysis.Integration.BoundedIntegrand
 public import PDE.Analysis.Integration.BumpMoments.Finite
 public import PDE.Analysis.Integration.BumpMoments.Interval
 public import PDE.Analysis.Integration.BumpMoments.NormalizedPulse.Basic
@@ -1016,6 +1029,7 @@ public import PDE.Analysis.Integration.DilationL2
 public import PDE.Analysis.Integration.EndpointFlux
 public import PDE.Analysis.Integration.FiniteMeasureLp
 public import PDE.Analysis.Integration.FourPlusOne
+public import PDE.Analysis.Integration.HalfLineInequality
 public import PDE.Analysis.Integration.FractionalIntegral.HalfOrder.Estimate
 public import PDE.Analysis.Integration.FractionalIntegral.HalfOrder.Kernel
 public import PDE.Analysis.Integration.HessianEnergy
@@ -1043,6 +1057,8 @@ public import PDE.Analysis.Integration.Primitive.WeakPairing
 public import PDE.Analysis.Integration.PrincipalValue
 public import PDE.Analysis.Integration.PuncturedDivergence
 public import PDE.Analysis.Integration.QuadrantDivergence
+public import PDE.Analysis.Integration.Radial
+public import PDE.Analysis.Integration.Radial.Profile
 public import PDE.Analysis.Integration.RadialMean
 public import PDE.Analysis.Integration.RadialSquareFlux.Translated
 public import PDE.Analysis.Integration.Rectangle.Balance
@@ -1239,6 +1255,7 @@ public import PDE.Analysis.MeasureTheory.Lp.SignedPower
 public import PDE.Analysis.MeasureTheory.Lp.SliceCurve
 public import PDE.Analysis.MeasureTheory.Lp.SmoothNonnegative
 public import PDE.Analysis.MeasureTheory.Lp.SpaceTimeContinuity
+public import PDE.Analysis.MeasureTheory.Lp.SquareIntegral
 public import PDE.Analysis.MeasureTheory.Lp.Star
 public import PDE.Analysis.MeasureTheory.Lp.Submodule
 public import PDE.Analysis.MeasureTheory.Lp.Superposition
@@ -1311,6 +1328,7 @@ public import PDE.Analysis.Normed.PiLp.CompareExp
 public import PDE.Analysis.Normed.PiLp.CoordinateProjection
 public import PDE.Analysis.Normed.PiLp.Coordinatewise
 public import PDE.Analysis.Normed.Reflexivity
+public import PDE.Analysis.Normed.Group.CompactSupport
 public import PDE.Analysis.ODE.Characteristics.Integral
 public import PDE.Analysis.ODE.Characteristics.Scalar
 public import PDE.Analysis.ODE.Flow.Basic
@@ -1420,6 +1438,7 @@ public import PDE.Analysis.Scalar.RationalRounding
 public import PDE.Analysis.Scalar.Semiconcavity
 public import PDE.Analysis.Scalar.Semiconcavity.Lipschitz
 public import PDE.Analysis.Scalar.SmallParameter
+public import PDE.Analysis.SpecialFunctions.Exponential.FlatDerivative
 public import PDE.Analysis.SpecialFunctions.Exponential.Flatness
 public import PDE.Analysis.SpecialFunctions.Exponential.PolynomialBound
 public import CAS.Analysis.SpecialFunctions.Trigonometric.MultipleAngle
@@ -1687,6 +1706,7 @@ public import PDE.Analysis.Calculus.Radial.ArctanBounds
 public import PDE.Analysis.Calculus.Radial.AngularHessianIntegrability
 public import PDE.Analysis.Calculus.Hessian.MemLp
 public import PDE.Analysis.Calculus.HolderComposition
+public import PDE.Analysis.Calculus.Periodic
 public import PDE.Analysis.SpecialFunctions.Trigonometric.TrigPoly2Interpolation
 public import PDE.Analysis.SpecialFunctions.Trigonometric.TrigPoly2Multiplier
 public import PDE.Analysis.SpecialFunctions.Trigonometric.TrigPoly2CellsApriori
@@ -2751,6 +2771,7 @@ public import PDE.Fluid.DeGregorio.Iteration.WeakH2Transport
 public import PDE.Fluid.DeGregorio.Iteration.WeakJacobianIntegrand
 public import PDE.Fluid.DeGregorio.Model
 public import PDE.Fluid.DeGregorio.Reflection
+public import PDE.Fluid.DeGregorio.Translation
 public import PDE.Fluid.DeGregorio.Regularity.Joint
 public import PDE.Fluid.DeGregorio.Regularity.Persistence
 public import PDE.Fluid.DeGregorio.Uniqueness
@@ -3766,6 +3787,7 @@ public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persisten
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.SmoothData
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.SmoothLocalExistence
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.SmoothMaximalExistence
+public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.UnboundedWave
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.SmoothData
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Composition
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.EllipticDomain
@@ -3888,6 +3910,7 @@ public import PDE.Hyperbolic.NonlinearWave.Morawetz.QuinticCap
 public import PDE.Hyperbolic.NonlinearWave.Morawetz.Slices
 public import PDE.Hyperbolic.NonlinearWave.Morawetz.TruncatedCone
 public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.CompactData.GlobalObstruction
+public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.CompactData.Lifespan
 public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.Concavity
 public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.GlobalObstruction
 public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.Lifespan
@@ -3920,6 +3943,7 @@ public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.NormBlowup.SmallD
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.SmallData
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Inequality
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Nonexistence
+public import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.Exponent
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.SmallData
 public import PDE.Hyperbolic.NonlinearWave.SmallData.StraussCritical.Classical
 public import PDE.Hyperbolic.NonlinearWave.SmallData.StraussCritical.SmallData
@@ -4314,6 +4338,7 @@ public import PDE.Solution.Singularity.FiniteTime.Comparison.Concavity.HalfLine
 public import PDE.Solution.Singularity.FiniteTime.Comparison.Concavity.LeftEndpoint
 public import PDE.Solution.Singularity.FiniteTime.Comparison.Concavity.RightEndpoint
 public import PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticGrowth
+public import PDE.Solution.Singularity.FiniteTime.Comparison.QuadraticSystem
 public import PDE.Solution.Singularity.FiniteTime.KellerSegel.Classical
 public import PDE.Solution.Singularity.FiniteTime.KellerSegel.Similarity.Abnormal3D
 public import PDE.Solution.Singularity.FiniteTime.KellerSegel.Similarity.Parabolic
