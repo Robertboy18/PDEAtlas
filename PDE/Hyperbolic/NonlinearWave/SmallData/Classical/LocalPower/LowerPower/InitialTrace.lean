@@ -6,7 +6,7 @@ Authors: LeanPDE Team
 
 module
 
-public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.LowerPower.Cone
+public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.ConeSolution
 public import PDE.Analysis.Calculus.SphericalMean.Regularity
 
 /-!

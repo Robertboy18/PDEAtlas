@@ -131,7 +131,7 @@ private theorem fderiv_phaseFunction_spatial (F : SpaceTime k → ℝ → SpaceT
   (congrArg (· dx) (hF.hasFDerivAt.comp x ((hasFDerivAt_prodMk_right (𝕜 := ℝ) p (z, x)).comp x
     (hasFDerivAt_prodMk_right (𝕜 := ℝ) z x))).fderiv).symm
 
-/-- The phase-space momentum derivative agrees with LeanPDE's `momentumGradient`. -/
+/-- The phase-space momentum derivative agrees with PDEAtlas's `momentumGradient`. -/
 theorem characteristicDp_eq_DpF (F : SpaceTime k → ℝ → SpaceTime k → ℝ)
     (hF : Differentiable ℝ (phaseFunction (n := k + 1) F)) (q : (SpaceTime k × (ℝ × SpaceTime k))) :
     characteristicDp F q = momentumGradient (n := k + 1) F q.1 q.2.1 q.2.2 := by
@@ -140,7 +140,7 @@ theorem characteristicDp_eq_DpF (F : SpaceTime k → ℝ → SpaceTime k → ℝ
   exact (fderiv_phaseFunction_momentum F p z x _ (hF (p, (z, x)))).trans
     (PDE.fderiv_apply_single_one_eq_gradient_apply (fun q ↦ F q z x) p i)
 
-/-- The phase-space height derivative agrees with LeanPDE's `valueDerivative`. -/
+/-- The phase-space height derivative agrees with PDEAtlas's `valueDerivative`. -/
 theorem characteristicDz_eq_DzF (F : SpaceTime k → ℝ → SpaceTime k → ℝ)
     (hF : Differentiable ℝ (phaseFunction (n := k + 1) F)) (q : (SpaceTime k × (ℝ × SpaceTime k))) :
     characteristicDz F q = valueDerivative (n := k + 1) F q.1 q.2.1 q.2.2 := by
@@ -148,7 +148,7 @@ theorem characteristicDz_eq_DzF (F : SpaceTime k → ℝ → SpaceTime k → ℝ
   simpa [characteristicDz, heightDirection, valueDerivative, fderiv_eq_smul_deriv] using
     fderiv_phaseFunction_height F p z 1 x (hF (p, (z, x)))
 
-/-- The phase-space spatial derivative agrees with LeanPDE's `positionGradient`. -/
+/-- The phase-space spatial derivative agrees with PDEAtlas's `positionGradient`. -/
 theorem characteristicDx_eq_DxF (F : SpaceTime k → ℝ → SpaceTime k → ℝ)
     (hF : Differentiable ℝ (phaseFunction (n := k + 1) F)) (q : (SpaceTime k × (ℝ × SpaceTime k))) :
     characteristicDx F q = positionGradient (n := k + 1) F q.1 q.2.1 q.2.2 := by

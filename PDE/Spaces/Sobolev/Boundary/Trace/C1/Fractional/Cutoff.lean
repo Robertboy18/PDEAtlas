@@ -31,18 +31,6 @@ open scoped ENNReal Sobolev
 variable {m : ℕ} {Ω : Set (ℝ^(m + 1))}
 variable [hΩ : Boundary.C1ExtensionAtlas (m + 1) Ω]
 
-/-- Physicalization carries any flat representative to its chartwise surface representative. -/
-theorem chartPhysicalization_apply_ae_of_ae (p : ℝ≥0∞) [Fact (1 ≤ p)]
-    (i : Fin hΩ.N) {g : Lp ℝ p (flatSurfaceMeasure (n := m))}
-    {f : ℝ^(m + 1) → ℝ}
-    (hg : (g : ℝ^(m + 1) → ℝ) =ᵐ[flatSurfaceMeasure (n := m)] f) :
-    (chartPhysicalization p i g : ℝ^(m + 1) → ℝ) =ᵐ[surfaceMeasure Ω]
-      (chartBoundaryPatch i).indicator (fun x ↦ f (hΩ.chart i x)) := by
-  have hcomp := (measurePreserving_chart_boundaryPatch i).quasiMeasurePreserving.ae
-    ((Measure.absolutelyContinuous_of_le_smul (chartPushedSurfaceMeasure_le i)).ae_eq hg)
-  exact (chartPhysicalization_apply_ae p i g).trans
-    ((ae_eq_restrict_iff_indicator_ae_eq (measurableSet_chartBoundaryPatch i)).mp hcomp)
-
 /-- On the flat hyperplane, localized coordinates are the partitioned inverse-chart pullback. -/
 theorem liftLp_localizedBoundaryCoordinates_apply_ae (p : ℝ≥0∞) [Fact (1 ≤ p)]
     (i : Fin hΩ.N) (g : Lp ℝ p (surfaceMeasure Ω)) :

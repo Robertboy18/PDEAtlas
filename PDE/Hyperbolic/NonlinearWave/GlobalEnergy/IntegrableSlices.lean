@@ -37,31 +37,13 @@ theorem reaction_zero_of_compact_slices {n : ℕ} [Fact (0 < n)] {f : ℝ → �
     (hs : ∀ t : I, HasCompactSupport (fun x : ℝ^n ↦ u (timeSpaceCons t x)))
     (hwave : ∀ t ∈ I, ∀ x, waveOperator u (timeSpaceCons t x) + f (u (timeSpaceCons t x)) = 0) :
     f 0 = 0 := by
-  let : BaireSpace I := hI.baireSpace
-  let : Nonempty I := hIn.to_subtype
-  obtain ⟨a, R, hR⟩ := (dense_locally_uniform_spatial_support hu hs).nonempty
-  have hR' := (eventually_nhds_subtype_iff I a
-    (fun s ↦ ∀ x : ℝ^n, (R : ℝ) < ‖x‖ → u (timeSpaceCons s x) = 0)).mp hR
-  rw [hI.nhdsWithin_eq a.property] at hR'
-  change ∀ᶠ s : ℝ in 𝓝 (a : ℝ), ∀ x : ℝ^n, (R : ℝ) < ‖x‖ → u (timeSpaceCons s x) = 0 at hR'
-  have hgerm (x : ℝ^n) (hx : (R : ℝ) < ‖x‖) :
-      u =ᶠ[𝓝 (timeSpaceCons a x)] fun _ ↦ 0 := by
-    have hproj : Tendsto (fun p : ℝ^(n + 1) ↦ p 0) (𝓝 (timeSpaceCons (a : ℝ) x)) (𝓝 (a : ℝ)) :=
-      (show Continuous (fun p : ℝ^(n + 1) ↦ p 0) from
-        (EuclideanSpace.proj 0).continuous).continuousAt
-    have ht : ∀ᶠ p : ℝ^(n + 1) in 𝓝 (timeSpaceCons a x),
-        ∀ y : ℝ^n, (R : ℝ) < ‖y‖ → u (timeSpaceCons (p 0) y) = 0 :=
-      hproj.eventually (p := fun s ↦ ∀ y : ℝ^n, (R : ℝ) < ‖y‖ → u (timeSpaceCons s y) = 0) hR'
-    have hx' : ∀ᶠ p in 𝓝 (timeSpaceCons a x), (R : ℝ) < ‖spatialPart p‖ :=
-      ((spatialPartCLM n).continuous.norm.continuousAt).eventually (lt_mem_nhds hx)
-    filter_upwards [ht, hx'] with p hp hpx
-    simpa only [timeSpaceCons_spatialPart] using hp (spatialPart p) hpx
-  have hpos (x : ℝ^n) (hx : (R : ℝ) < ‖x‖) : u (timeSpaceCons a x) = 0 := (hgerm x hx).eq_of_nhds
+  obtain ⟨a, ha, R, -, hgerm⟩ := exists_eventuallyEq_zero_of_compact_slices hI hIn hu hs
   let : Nontrivial (ℝ^n) := Module.nontrivial_of_finrank_pos (R := ℝ)
     (by simpa only [finrank_euclideanSpace_fin] using (Fact.out : 0 < n))
-  obtain ⟨x, hx⟩ := NormedSpace.exists_lt_norm ℝ (ℝ^n) (R : ℝ)
-  have he := hwave a a.property x
-  rwa [waveOperator_congr_nhds (hgerm x hx), waveOperator_const, hpos x hx, zero_add] at he
+  obtain ⟨x, hx⟩ := NormedSpace.exists_lt_norm ℝ (ℝ^n) R
+  have he := hwave a ha x
+  rwa [waveOperator_congr_nhds (hgerm x hx), waveOperator_const, (hgerm x hx).eq_of_nhds,
+    zero_add] at he
 
 /-- Every positive-time energy slice is integrable for a normalized C¹ potential
 and a C³ solution with separate compact displacement slices. -/

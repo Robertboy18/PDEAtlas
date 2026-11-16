@@ -29,7 +29,7 @@ building blocks for the incompressibility predicate and vector Laplacian.
 Spacetime is `ℝ^(n + 1)`: coordinate `0` is time and coordinate `i.succ` is the `i`-th spatial
 coordinate. Viscosity-specific operators are in `PDE.Fluid.NavierStokes.Operators`.
 
-All operators are built from LeanPDE's totalized coordinate derivative `partialDeriv`, so each
+All operators are built from PDEAtlas's totalized coordinate derivative `partialDeriv`, so each
 definition has a value everywhere and carries no regularity of its own; lemmas that need the
 classical meaning of a derivative state the differentiability hypotheses explicitly. The
 material derivative and the incompressibility constraint are set up as in Majda and Bertozzi

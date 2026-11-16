@@ -7,6 +7,7 @@ module
 
 public import PDE.Elliptic.PotentialTheory.FiveDimensional.NewtonianHessianTail
 import CAS.ExactTactic
+import PDE.Analysis.Integration.Radial
 
 /-!
 # Local cancellation for the Newtonian Hessian
@@ -36,44 +37,15 @@ theorem integral_ball_norm_rpow_neg_four_five
     (R : ℝ) (hR : 0 < R) :
     (∫ X in Metric.ball (0 : ℝ^5) R, ‖X‖ ^ (-4 : ℝ)) =
       (8 * Real.pi ^ 2 / 3) * R := by
-  let f : ℝ → ℝ := (Set.Iio R).indicator (fun r ↦ r ^ (-4 : ℝ))
-  have hpolar := integral_fun_norm_addHaar (E := ℝ^5) (volume : Measure (ℝ^5)) f
-  have hleft : (∫ X : ℝ^5, f ‖X‖) =
-      ∫ X in Metric.ball (0 : ℝ^5) R, ‖X‖ ^ (-4 : ℝ) := by
-    rw [← integral_indicator measurableSet_ball]
-    apply integral_congr_ae
-    filter_upwards [] with X
-    simp only [f, Set.indicator, Set.mem_Iio, Metric.mem_ball, dist_zero_right]
-  have hrad :
-      (∫ r in Set.Ioi (0 : ℝ),
-        r ^ (Module.finrank ℝ (ℝ^5) - 1) • f r) = R := by
-    calc
-      _ = ∫ r in Set.Ioi (0 : ℝ), (Set.Iio R).indicator (fun _ ↦ (1 : ℝ)) r := by
-        apply setIntegral_congr_fun measurableSet_Ioi
-        intro r hr
-        have hrpos : 0 < r := hr
-        have hp : r ^ (4 : ℕ) * r ^ (-4 : ℝ) = 1 := by
-          simpa only [Real.rpow_ofNat, show (4 : ℝ) + -4 = 0 by norm_num,
-            Real.rpow_zero] using (Real.rpow_add hrpos 4 (-4)).symm
-        by_cases hrR : r < R
-        · simpa only [f, Set.indicator_of_mem (s := Set.Iio R) hrR,
-            finrank_euclideanSpace_fin, smul_eq_mul] using hp
-        · simp [f, hrR]
-      _ = ∫ _r in Set.Ioo (0 : ℝ) R, (1 : ℝ) := by
-        rw [setIntegral_indicator measurableSet_Iio]
-        rfl
-      _ = R := by
-        simp [MeasureTheory.measureReal_def, hR.le]
-  have hvol :
-      (volume : Measure (ℝ^5)).real (Metric.ball (0 : ℝ^5) 1) =
-        8 * Real.pi ^ 2 / 15 := by
-    simpa only [PDE.Analysis.ballVolume, MeasureTheory.measureReal_def,
-      one_pow, mul_one, PDE.Analysis.unitBallVolume_five] using
-      PDE.Analysis.ballVolume_eq_unitBallVolume_mul_pow 5 1 zero_le_one
-  rw [hleft, hrad, hvol] at hpolar
-  calc
-    _ = (Module.finrank ℝ (ℝ^5)) • (8 * Real.pi ^ 2 / 15) • R := hpolar
-    _ = _ := by simp only [finrank_euclideanSpace_fin, nsmul_eq_mul, smul_eq_mul]; cas
+  have hrad : (∫ r in (0 : ℝ)..R, r ^ (5 - 1) * r ^ (-4 : ℝ)) = R := by
+    rw [intervalIntegral.integral_congr_ae (g := fun _ ↦ (1 : ℝ)) (.of_forall fun r hr ↦ ?_)]
+    · simp
+    · rw [Set.uIoc_of_le hR.le] at hr
+      simpa only [Real.rpow_ofNat, show (4 : ℝ) + -4 = 0 by norm_num, Real.rpow_zero] using
+        (Real.rpow_add hr.1 4 (-4)).symm
+  rw [PDE.Analysis.integral_ball_radial 5 (fun r ↦ r ^ (-4 : ℝ)) hR.le, hrad,
+    PDE.Analysis.unitSphereArea_eq, PDE.Analysis.unitBallVolume_five]
+  cas
 
 /-- A local Lipschitz bound at the pole makes the centered classical Hessian
 integrable. No absolute integrability of the uncentered kernel is asserted. -/

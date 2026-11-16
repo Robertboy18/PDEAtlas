@@ -141,6 +141,12 @@ theorem mul_deriv_oddPowerPotential_le
   nlinarith [mul_nonneg (Nat.cast_nonneg k)
     (mul_nonneg hlinear (sq_nonneg z))]
 
+/-- The factor `2 (k + 1)` of the growth bound `mul_deriv_oddPowerPotential_le` exceeds `2` for
+a nonlinear odd power, that is for `k > 0`. -/
+theorem two_lt_oddPower_growth_factor {k : ℕ} (hk : 0 < k) : 2 < 2 * (k + 1 : ℝ) := by
+  have : 0 < (k : ℝ) := by exact_mod_cast hk
+  linarith
+
 /-- On `[-R, R]`, an odd-power polynomial is Lipschitz with the bound obtained
 from its largest possible derivative magnitude on that interval.
 

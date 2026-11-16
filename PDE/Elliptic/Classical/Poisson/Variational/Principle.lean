@@ -30,7 +30,7 @@ open domain suffices.
 
 Evans integrates by parts once and bounds `Du · Dw` by the Cauchy inequality to get `I[u] ≤ I[w]`,
 his (48); for the converse, he differentiates `τ ↦ I[u + τv]` at `τ = 0`. We integrate the first
-variation by parts with LeanPDE's zero-boundary identity
+variation by parts with PDEAtlas's zero-boundary identity
 `integral_sum_partialDeriv_mul_eq_neg_laplacian` (`integral_firstVariation_eq_residual`), which
 needs zero boundary values but not compact support. In `classicalEnergy_le_of_poisson`, the exact
 expansion `classicalEnergy_add_mul` at `t = 1`, whose quadratic term is nonnegative, takes the

@@ -32,10 +32,13 @@ Theorem 2, with shock speed `speed k (s, q)`, and `R k (s, q)` along the rarefac
 branch of `R k` lies in `R_k^+(q)` and the negative branch of `S k` in `S_k^-(q)`. The joined
 map, `S k` for negative and `R k` for positive strength, then parametrizes the curve `T_k(q)`
 of §11.2.4 near `q`, and its strict derivative at zero strength is the `C¹` property of
-`T_k(z₀)` stated there. `exists_local_elementary_wave_family` gives these curves for every
-family under the hypotheses of §11.2.4, Theorem 4, with the derivative `r_k` at zero strength
-that step 3 of its proof uses; for a linearly degenerate family the wave curve is `R k`, as
-`T_k(z₀) = R_k(z₀)` there.
+`T_k(z₀)` stated there. `exists_local_elementary_wave_family_with_shock_speed_deriv` gives these
+curves for every family under the hypotheses of §11.2.4, Theorem 4, with the derivative `r_k` at
+zero strength that step 3 of its proof uses; for a linearly degenerate family the wave curve is
+`R k`, as `T_k(z₀) = R_k(z₀)` there. It keeps the derivative `Dλ_k · r_k / 2` of every shock
+speed at zero strength, from which `RiemannSolver.EntropyFamily` derives the entropy dissipation
+of the shock branches. `exists_local_elementary_wave_family` is the same statement without that
+derivative.
 
 ## References
 
@@ -142,9 +145,12 @@ open Classical in
 nonlinear or linearly degenerate has a local elementary wave family.
 The shock and flow carriers are retained, with their regularity and exact
 equations, for constructing uniformly bounded self-similar fans. No wave
-curves, admissibility inequalities, or smooth eigenframe are inputs. -/
-theorem exists_local_elementary_wave_family {m : ℕ} {flux : ℝ^m → ℝ^m} (hflux : ContDiff ℝ 2 flux)
-    (hhyper : ∀ q, IsStrictlyHyperbolicAt flux q)
+curves, admissibility inequalities, or smooth eigenframe are inputs.
+
+The last conjunct keeps the derivative of every shock speed at zero strength: it is half the
+derivative of the characteristic speed along its eigenvector, (31) of Evans, §11.2.3. -/
+theorem exists_local_elementary_wave_family_with_shock_speed_deriv {m : ℕ} {flux : ℝ^m → ℝ^m}
+    (hflux : ContDiff ℝ 2 flux) (hhyper : ∀ q, IsStrictlyHyperbolicAt flux q)
     (hfamilies : ∀ k, IsGenuinelyNonlinearFamily flux k ∨ IsLinearlyDegenerateFamily flux k)
     (q₀ : ℝ^m) :
     ∃ fields : Fin m → CharacteristicField flux,
@@ -171,7 +177,9 @@ theorem exists_local_elementary_wave_family {m : ℕ} {flux : ℝ^m → ℝ^m} (
           HasDerivAt (fun t ↦ R k (t, p.2))
             ((fields k).rightEigenvector (R k p)) p.1) ∧
         (∀ k, IsGenuinelyNonlinearFamily flux k →
-          0 < fderiv ℝ (fields k).speed q₀ ((fields k).rightEigenvector q₀)) := by
+          0 < fderiv ℝ (fields k).speed q₀ ((fields k).rightEigenvector q₀)) ∧
+        (∀ k, HasDerivAt (fun s ↦ speed k (s, q₀)) ((1 / 2 : ℝ) *
+          fderiv ℝ (fields k).speed q₀ ((fields k).rightEigenvector q₀)) 0) := by
   classical
   obtain ⟨r, eig, S, speed, R, hreg, hspec, hzero, hflow, _hcompress, horient⟩ :=
     exists_joint_shock_rarefaction hflux (hhyper q₀)
@@ -185,6 +193,10 @@ theorem exists_local_elementary_wave_family {m : ℕ} {flux : ℝ^m → ℝ^m} (
       0 < fderiv ℝ (fields k).speed q₀ ((fields k).rightEigenvector q₀) := by
     rw [(heig k).fderiv_eq, hr.self_of_nhds k]
     exact lt_of_le_of_ne (horient k) (hgn.fderiv_ne_zero_of_eigenframe hspec).symm
+  have hhalf (k : Fin m) : HasDerivAt (fun s ↦ speed k (s, q₀)) ((1 / 2 : ℝ) *
+        fderiv ℝ (fields k).speed q₀ ((fields k).rightEigenvector q₀)) 0 := by
+    rw [(heig k).fderiv_eq, hr.self_of_nhds k]
+    exact (hzero.self_of_nhds k).2.2.2.2.2.2
   have hz : ∀ᶠ q in 𝓝 q₀, ∀ k, S k (0, q) = q ∧ R k (0, q) = q ∧
         speed k (0, q) = (fields k).speed q := by
     filter_upwards [hzero, eventually_all.mpr heig] with q hq heq
@@ -230,13 +242,9 @@ theorem exists_local_elementary_wave_family {m : ℕ} {flux : ℝ^m → ℝ^m} (
       have htanR : HasDerivAt (fun s ↦ R k (s, q₀))
           ((fields k).rightEigenvector q₀) 0 := by
         simpa only [(hz.self_of_nhds k).2.1] using (hflowC k).self_of_nhds
-      have hhalf : HasDerivAt (fun s ↦ speed k (s, q₀)) ((1 / 2 : ℝ) *
-            fderiv ℝ (fields k).speed q₀ ((fields k).rightEigenvector q₀)) 0 := by
-        rw [(heig k).fderiv_eq, hr.self_of_nhds k]
-        exact (hzero.self_of_nhds k).2.2.2.2.2.2
       simpa only [T, ite_eq_left hgn] using eventually_isElementaryConnection_joined (heigReg k)
           (hreg k).2.2.1 (hreg k).2.2.2.2.1 (hreg k).2.2.2.1
-          (hz.mono fun _ h ↦ h k) htanS htanR hhalf (hpositive k hgn)
+          (hz.mono fun _ h ↦ h k) htanS htanR (hhalf k) (hpositive k hgn)
           (hflow.mono fun _ h ↦ (h k).1) (hflowC k) (hsep.mono fun _ h ↦ h k)
     · have hld := (isLinearlyDegenerateFamily_iff hhyper k (fields k)
         (hcanonical k)).mp ((hfamilies k).resolve_left hgn)
@@ -255,8 +263,51 @@ theorem exists_local_elementary_wave_family {m : ℕ} {flux : ℝ^m → ℝ^m} (
   refine ⟨fields, hcanonical, states, hopen, hq₀, W, hW, b,
     fun k ↦ (hb k).trans (hr.self_of_nhds k).symm, S, speed, R,
     fun k ↦ ⟨(hreg k).2.2.1, (hreg k).2.2.2.1, (hreg k).2.2.2.2.1,
-      (hTreg k).congr_of_eventuallyEq (hWT.mono fun _ h ↦ h k)⟩, hz, ?_, hpositive⟩
+      (hTreg k).congr_of_eventuallyEq (hWT.mono fun _ h ↦ h k)⟩, hz, ?_, hpositive, hhalf⟩
   filter_upwards [hWT, hflow, eventually_all.mpr hflowC] with p hp hFp hCp
   exact fun k ↦ ⟨hp k, (hFp k).1, hCp k⟩
+
+open Classical in
+/-- A `C²` strictly hyperbolic flux whose ordered families are genuinely
+nonlinear or linearly degenerate has a local elementary wave family.
+The shock and flow carriers are retained, with their regularity and exact
+equations, for constructing uniformly bounded self-similar fans. No wave
+curves, admissibility inequalities, or smooth eigenframe are inputs. This is
+`exists_local_elementary_wave_family_with_shock_speed_deriv` without the derivative of the
+shock speeds. -/
+theorem exists_local_elementary_wave_family {m : ℕ} {flux : ℝ^m → ℝ^m} (hflux : ContDiff ℝ 2 flux)
+    (hhyper : ∀ q, IsStrictlyHyperbolicAt flux q)
+    (hfamilies : ∀ k, IsGenuinelyNonlinearFamily flux k ∨ IsLinearlyDegenerateFamily flux k)
+    (q₀ : ℝ^m) :
+    ∃ fields : Fin m → CharacteristicField flux,
+      (∀ k, (fields k).speed = characteristicSpeed flux k) ∧
+      ∃ states : Set (ℝ^m), IsOpen states ∧ q₀ ∈ states ∧
+      ∃ W : LocalWaveFamily flux fields states, W.IsElementary ∧
+      ∃ b : Module.Basis (Fin m) ℝ (ℝ^m),
+        (∀ k, b k = (fields k).rightEigenvector q₀) ∧
+      ∃ S : Fin m → ℝ × ℝ^m → ℝ^m,
+      ∃ speed : Fin m → ℝ × ℝ^m → ℝ,
+      ∃ R : Fin m → ℝ × ℝ^m → ℝ^m,
+        (∀ k, ContDiffAt ℝ 1 (S k) (0, q₀) ∧
+          ContDiffAt ℝ 1 (speed k) (0, q₀) ∧
+          ContDiffAt ℝ 1 (R k) (0, q₀) ∧
+          ContDiffAt ℝ 1 (fun p : ℝ × ℝ^m ↦ W.curve k p.1 p.2) (0, q₀)) ∧
+        (∀ᶠ q in 𝓝 q₀, ∀ k,
+          S k (0, q) = q ∧ R k (0, q) = q ∧
+            speed k (0, q) = (fields k).speed q) ∧
+        (∀ᶠ p in 𝓝 ((0 : ℝ), q₀), ∀ k,
+          W.curve k p.1 p.2 =
+            (if IsGenuinelyNonlinearFamily flux k then
+              if p.1 ≤ 0 then S k p else R k p else R k p) ∧
+          RankineHugoniot flux p.2 (S k p) (speed k p) ∧
+          HasDerivAt (fun t ↦ R k (t, p.2))
+            ((fields k).rightEigenvector (R k p)) p.1) ∧
+        (∀ k, IsGenuinelyNonlinearFamily flux k →
+          0 < fderiv ℝ (fields k).speed q₀ ((fields k).rightEigenvector q₀)) := by
+  obtain ⟨fields, hcanonical, states, hopen, hq₀, W, hW, b, hb, S, speed, R, hreg, hz, hcurve,
+    hpositive, -⟩ := exists_local_elementary_wave_family_with_shock_speed_deriv hflux hhyper
+      hfamilies q₀
+  exact ⟨fields, hcanonical, states, hopen, hq₀, W, hW, b, hb, S, speed, R, hreg, hz, hcurve,
+    hpositive⟩
 
 end PDE.Hyperbolic.ConservationLaw.System

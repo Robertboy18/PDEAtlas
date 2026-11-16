@@ -76,20 +76,8 @@ theorem sum_cosineRuleWeight_mul_cos_two_mul {P k : ℕ} (hP : 0 < P) (hk : k �
 theorem sum_cosineRuleWeight_mul_cos_int {P : ℕ} (hP : 0 < P) (μ : ℕ → ℝ) {u : ℤ}
     (hu : Even u) (h : u.natAbs ≤ 2 * P) :
     ∑ n : Fin (P + 1), cosineRuleWeight P μ n * Real.cos (u * (n * Real.pi / (2 * P))) =
-      cosineRuleLaurentMoment μ u := by
-  obtain ⟨k, rfl⟩ := hu
-  have hk : (k + k).natAbs / 2 = k.natAbs := by omega
-  have hc : ∀ x : ℝ, Real.cos (((k + k : ℤ) : ℝ) * x) = Real.cos (2 * (k.natAbs : ℕ) * x) := by
-    intro x
-    rcases Int.natAbs_eq k with h | h
-    · rw [show ((k + k : ℤ) : ℝ) = 2 * ((k.natAbs : ℤ) : ℝ) by rw [← h]; push_cast; ring]
-      norm_cast
-    · rw [show ((k + k : ℤ) : ℝ) = -(2 * ((k.natAbs : ℤ) : ℝ)) by
-        conv_lhs => rw [h]
-        push_cast; ring, neg_mul, Real.cos_neg]
-      norm_cast
-  rw [sum_congr rfl fun n _ ↦ by rw [hc], sum_cosineRuleWeight_mul_cos_two_mul hP (by omega),
-    cosineRuleLaurentMoment, hk]
+      cosineRuleLaurentMoment μ u :=
+  sum_mul_cos_int_of_cos_two_mul (fun _ hk ↦ sum_cosineRuleWeight_mul_cos_two_mul hP hk μ) hu h
 
 private theorem sum_reflect_moment' {T : ℕ} (ν : ℤ → ℝ) (ψ : ℕ → ℝ) (s : ℝ)
     (hψ : ∀ j < 2 * T + 1, ψ (2 * T - j) = s * ψ j) (i : ℕ) :

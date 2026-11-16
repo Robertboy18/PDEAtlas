@@ -17,7 +17,7 @@ public import PDE.Notation.Divergence
 Advection, divergence, and the coordinate Laplacian on `ℝ^n`.
 
 Scalar gradients use Mathlib's `gradient` directly. The theorem
-`gradient_apply_eq_partialDeriv` identifies its coordinates with LeanPDE's
+`gradient_apply_eq_partialDeriv` identifies its coordinates with PDEAtlas's
 `partialDeriv`, so no second gradient definition is needed.
 
 Use `open scoped Gradient Laplacian` for `∇ f x` and `Δ f x`.
@@ -59,7 +59,7 @@ open scoped Gradient Laplacian RealInnerProductSpace
 
 namespace PDE
 
-/-- The `i`th coordinate of Mathlib's gradient is LeanPDE's `i`th partial derivative.
+/-- The `i`th coordinate of Mathlib's gradient is PDEAtlas's `i`th partial derivative.
 
 Both sides are total expressions built from `fderiv`. Reading them as classical derivatives
 requires the usual differentiability hypothesis. -/

@@ -6,4 +6,4 @@ Moshe Marcus and Victor J. Mizel, "Absolute continuity on tracks and mappings of
 DOI: https://doi.org/10.1007/BF00251378
 Publisher record: https://link.springer.com/article/10.1007/BF00251378
 
-LeanPDE cites the printed pagination of the journal article.
+PDEAtlas cites the printed pagination of the journal article.

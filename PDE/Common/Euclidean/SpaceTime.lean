@@ -12,7 +12,7 @@ public import Mathlib.Topology.Algebra.Module.Equiv.Prod
 /-!
 # Product coordinates for Euclidean spacetime
 
-LeanPDE's canonical `SpaceTime n` stores time in coordinate zero. It is continuously linearly
+PDEAtlas's canonical `SpaceTime n` stores time in coordinate zero. It is continuously linearly
 equivalent to the products `ℝ^n × ℝ` and `ℝ × ℝ^n`, and curried fields `ℝ^n → ℝ → E`
 correspond to fields on `SpaceTime n`.
 

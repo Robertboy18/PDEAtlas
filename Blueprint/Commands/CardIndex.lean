@@ -80,10 +80,10 @@ def CardIndexData.toDataJson (data : CardIndexData) : Json :=
 /-- Decode a card index payload previously serialized with `toJson`. -/
 private def decodeCardIndex (encoded : String) : CardIndexData :=
   match Json.parse encoded with
-  | .error error => panic! s!"LeanPDE card index JSON is malformed: {error}"
+  | .error error => panic! s!"PDEAtlas card index JSON is malformed: {error}"
   | .ok value =>
     match fromJson? value with
-    | .error error => panic! s!"LeanPDE card index data is malformed: {error}"
+    | .error error => panic! s!"PDEAtlas card index data is malformed: {error}"
     | .ok payload => payload
 
 /-- Lower-case kind word of a node. -/
@@ -155,12 +155,12 @@ private def mkCardIndexBlock : PartElabM (TSyntax `term) := do
   let ledger ←
     match LeanPDE.Ledger.decodeLedger LeanPDE.CasLedger.json with
     | .ok ledger => pure ledger
-    | .error error => throwError "LeanPDE computation ledger data is malformed: {error}"
+    | .error error => throwError "PDEAtlas computation ledger data is malformed: {error}"
   let state := Informal.Environment.informalExt.getState (← getEnv)
   let checked := LeanPDE.TextbookMap.ledgerDeclarations ledger
   let payload : CardIndexData := { cards := collectCards state checked }
   if payload.cards.isEmpty then
-    throwError "LeanPDE card index found no registered Blueprint nodes"
+    throwError "PDEAtlas card index found no registered Blueprint nodes"
   let payloadJson := Json.compress (toJson payload)
   ``(Verso.Doc.Block.other
     (LeanPDE.CardIndex.Block.cardIndex (decodeCardIndex $(quote payloadJson))) #[])

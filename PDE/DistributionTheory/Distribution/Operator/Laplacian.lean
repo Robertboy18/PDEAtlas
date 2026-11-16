@@ -13,7 +13,7 @@ public import PDE.DistributionTheory.Distribution.Operator.Notation
 
 Mathlib's canonical Laplacian on scalar distributions is the transpose of the
 test-function Laplacian, and we compute it on Dirac masses. We also define `-Δ`,
-the sign convention used by LeanPDE's fundamental solutions.
+the sign convention used by PDEAtlas's fundamental solutions.
 -/
 
 @[expose] public section

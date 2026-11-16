@@ -8,6 +8,7 @@ module
 
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.PDEAmplitude
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.CompactSlab
+import PDE.Analysis.Normed.Group.CompactSupport
 import PDE.Hyperbolic.NonlinearWave.FinitePropagation.QuadraticLowerBound
 import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.FreeWave
 
@@ -137,11 +138,7 @@ theorem exists_uniform_amplitude_bound_of_compact_data {p : ℝ} (hp : 1 < p) (h
       (∀ t ∈ Ioo 0 S, ∀ x,
         waveOperator u (timeSpaceCons t x) + Real.signedPower p (u (timeSpaceCons t x)) = 0) →
       ∀ t ∈ Ioc 0 S, ∀ x, |u (timeSpaceCons t x)| ≤ B := by
-  obtain ⟨Rg, _, hgR⟩ := hgs.exists_pos_le_norm
-  obtain ⟨Rh, _, hhR⟩ := hhs.exists_pos_le_norm
-  let R := max Rg Rh
-  have hgR' (x : ℝ^3) (hx : R < ‖x‖) : g x = 0 := hgR x ((le_max_left _ _).trans hx.le)
-  have hhR' (x : ℝ^3) (hx : R < ‖x‖) : h x = 0 := hhR x ((le_max_right _ _).trans hx.le)
+  obtain ⟨R, -, hgR, hhR⟩ := hgs.exists_common_radius hhs
   obtain ⟨G, hG⟩ := hg.continuous.bounded_above_of_compact_support hgs
   have hG0 : 0 ≤ G := (norm_nonneg (g 0)).trans (hG 0)
   let v := spaceTimeUncurry (kirchhoffFormula g h)
@@ -151,7 +148,7 @@ theorem exists_uniform_amplitude_bound_of_compact_data {p : ℝ} (hp : 1 < p) (h
   have hvK : ∀ t ∈ Icc 0 T, ∀ x ∉ K, v (timeSpaceCons t x) = 0 := by
     intro t ht x hx
     apply WaveEquation.SmallData.kirchhoffFormula_hasForwardSupport
-      (hg.of_le (by norm_num)) hh.continuous hgR' hhR' t ht.1 x
+      (hg.of_le (by norm_num)) hh.continuous hgR hhR t ht.1 x
     have hx' : R + T < ‖x‖ := by
       simpa only [K, mem_closedBall, dist_zero_right, not_le] using hx
     linarith [ht.2]
@@ -167,7 +164,7 @@ theorem exists_uniform_amplitude_bound_of_compact_data {p : ℝ} (hp : 1 < p) (h
   intro S u hS hST hu hposition hinitial hwave
   have hu2 : ContDiff ℝ 2 u := hu.of_le (by norm_num)
   have hs := eq_zero_of_initial_support hp.le hu2 hS hwave
-    (fun x hx ↦ (hposition x).trans (hgR' x hx)) (fun x hx ↦ (hinitial x).trans (hhR' x hx))
+    (fun x hx ↦ (hposition x).trans (hgR x hx)) (fun x hx ↦ (hinitial x).trans (hhR x hx))
   have huK : ∀ t ∈ Icc 0 S, ∀ x ∉ K, u (timeSpaceCons t x) = 0 := by
     intro t ht x hx
     apply hs t ht x

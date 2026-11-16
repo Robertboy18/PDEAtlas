@@ -168,6 +168,31 @@ theorem abs_halfPlaneVelocityGradient_sub_le (hα : 0 < α) (hα1 : α < 1)
         · nlinarith [sq_nonneg (α - 1 / 2)]
     _ = 211 / (α * (1 - α)) * M * ‖x - x'‖ ^ α := by ring
 
+/-- The step shared by the two size bounds below. If both half-plane singular integrals are
+bounded at `x` by `π T + 20 B + 15 L`, with `|f x| ≤ B` and `B, L ≥ 0`, then every entry of the
+gradient formulas is bounded at `x` by `T + 8 B + 5 L`. -/
+private theorem abs_halfPlaneVelocityGradient_le_of_singularIntegral_le {T L : ℝ} {x : ℝ^2}
+    (hB0 : 0 ≤ B) (hL0 : 0 ≤ L) (hfx : |f x| ≤ B)
+    (hH : ∀ j : Fin 2, |halfPlaneSingularIntegral (hessianKernel 0 j) f x| ≤
+      Real.pi * T + 20 * B + 15 * L) (i k : Fin 2) :
+    |halfPlaneVelocityGradient f i k x| ≤ T + 8 * B + 5 * L := by
+  obtain ⟨j, a, b, ha, hb, hrep⟩ := halfPlaneVelocityGradient_eq_combination i k
+  have hH := hH j
+  rw [hrep f x]
+  have hpi := Real.pi_gt_three
+  have hpi0 := Real.pi_pos
+  calc |a * halfPlaneSingularIntegral (hessianKernel 0 j) f x + b * f x|
+      ≤ |a| * |halfPlaneSingularIntegral (hessianKernel 0 j) f x| + |b| * |f x| := by
+        rw [← abs_mul, ← abs_mul]; exact abs_add_le _ _
+    _ ≤ 1 / Real.pi * (Real.pi * T + 20 * B + 15 * L) + 1 / 2 * B := by gcongr
+    _ = T + (20 / Real.pi + 1 / 2) * B + 15 / Real.pi * L := by
+        have h : 1 / Real.pi * (Real.pi * T) = T := by field_simp
+        linear_combination h
+    _ ≤ T + 8 * B + 5 * L := by
+        gcongr
+        · rw [div_add' _ _ _ hpi0.ne', div_le_iff₀ hpi0]; linarith
+        · rw [div_le_iff₀ hpi0]; linarith
+
 /-- **Size of the gradient formulas.** With `|f| ≤ B` on the closed upper half-plane,
 `|∂ᵢuₖ(x)| ≤ 50M/α + 8B + 5‖E‖₁` in the open upper half-plane. -/
 theorem abs_halfPlaneVelocityGradient_le (hα : 0 < α) (hα1 : α ≤ 1)
@@ -175,29 +200,11 @@ theorem abs_halfPlaneVelocityGradient_le (hα : 0 < α) (hα1 : α ≤ 1)
     (hE : Integrable (evenReflection f)) (hB : ∀ y, 0 ≤ y 1 → |f y| ≤ B)
     (i k : Fin 2) {x : ℝ^2} (hx : x ∈ HalfSpace.upper 2) :
     |halfPlaneVelocityGradient f i k x| ≤
-      50 * M / α + 8 * B + 5 * ∫ y, |evenReflection f y| := by
-  obtain ⟨j, a, b, ha, hb, hrep⟩ := halfPlaneVelocityGradient_eq_combination i k
-  have hH := abs_halfPlaneSingularIntegral_le (isSingularKernel_hessianKernel 0 j)
-    (hasLineCancellation_hessianKernel 0 j) hα hα1 hM hE hB hx
-  have hB0 : 0 ≤ B := (abs_nonneg _).trans (hB 0 le_rfl)
-  have hL0 : 0 ≤ ∫ y, |evenReflection f y| := integral_nonneg fun y ↦ abs_nonneg _
-  have hfx := hB x hx.le
-  rw [hrep f x]
-  have hpi := Real.pi_gt_three
-  have hpi0 := Real.pi_pos
-  calc |a * halfPlaneSingularIntegral (hessianKernel 0 j) f x + b * f x|
-      ≤ |a| * |halfPlaneSingularIntegral (hessianKernel 0 j) f x| + |b| * |f x| := by
-        rw [← abs_mul, ← abs_mul]; exact abs_add_le _ _
-    _ ≤ 1 / Real.pi * (5 * (10 * Real.pi * M / α + 4 * B +
-          3 * ∫ y, |evenReflection f y|)) + 1 / 2 * B := by gcongr
-    _ = 50 * M / α + (20 / Real.pi + 1 / 2) * B +
-          15 / Real.pi * ∫ y, |evenReflection f y| := by
-        field_simp
-        ring
-    _ ≤ 50 * M / α + 8 * B + 5 * ∫ y, |evenReflection f y| := by
-        gcongr
-        · rw [div_add' _ _ _ hpi0.ne', div_le_iff₀ hpi0]; linarith
-        · rw [div_le_iff₀ hpi0]; linarith
+      50 * M / α + 8 * B + 5 * ∫ y, |evenReflection f y| :=
+  abs_halfPlaneVelocityGradient_le_of_singularIntegral_le ((abs_nonneg _).trans (hB 0 le_rfl))
+    (integral_nonneg fun y ↦ abs_nonneg _) (hB x hx.le)
+    (fun j ↦ (abs_halfPlaneSingularIntegral_le (isSingularKernel_hessianKernel 0 j)
+      (hasLineCancellation_hessianKernel 0 j) hα hα1 hM hE hB hx).trans_eq (by ring)) i k
 
 /-- **Kato-type bound of the gradient formulas.** With `|f| ≤ B` on the closed upper
 half-plane, `|∂ᵢuₖ(x)| ≤ (50/α)(1 + B log(2 + M)) + 8B + 5‖E‖₁` in the open upper half-plane. -/
@@ -206,30 +213,11 @@ theorem abs_halfPlaneVelocityGradient_le_log (hα : 0 < α) (hα1 : α ≤ 1)
     (hE : Integrable (evenReflection f)) (hB : ∀ y, 0 ≤ y 1 → |f y| ≤ B)
     (i k : Fin 2) {x : ℝ^2} (hx : x ∈ HalfSpace.upper 2) :
     |halfPlaneVelocityGradient f i k x| ≤
-      50 / α * (1 + B * Real.log (2 + M)) + 8 * B + 5 * ∫ y, |evenReflection f y| := by
-  obtain ⟨j, a, b, ha, hb, hrep⟩ := halfPlaneVelocityGradient_eq_combination i k
-  have hH := abs_halfPlaneSingularIntegral_le_log (isSingularKernel_hessianKernel 0 j)
-    (hasLineCancellation_hessianKernel 0 j) hα hα1 hM hE hB hx
-  have hB0 : 0 ≤ B := (abs_nonneg _).trans (hB 0 le_rfl)
-  have hL0 : 0 ≤ ∫ y, |evenReflection f y| := integral_nonneg fun y ↦ abs_nonneg _
-  have hfx := hB x hx.le
-  rw [hrep f x]
-  have hpi := Real.pi_gt_three
-  have hpi0 := Real.pi_pos
-  calc |a * halfPlaneSingularIntegral (hessianKernel 0 j) f x + b * f x|
-      ≤ |a| * |halfPlaneSingularIntegral (hessianKernel 0 j) f x| + |b| * |f x| := by
-        rw [← abs_mul, ← abs_mul]; exact abs_add_le _ _
-    _ ≤ 1 / Real.pi * (10 * Real.pi * 5 / α * (1 + B * Real.log (2 + M)) + 4 * 5 * B +
-          3 * 5 * ∫ y, |evenReflection f y|) + 1 / 2 * B := by gcongr
-    _ = 50 / α * (1 + B * Real.log (2 + M)) + (20 / Real.pi + 1 / 2) * B +
-          15 / Real.pi * ∫ y, |evenReflection f y| := by
-        field_simp
-        ring
-    _ ≤ 50 / α * (1 + B * Real.log (2 + M)) + 8 * B +
-          5 * ∫ y, |evenReflection f y| := by
-        gcongr
-        · rw [div_add' _ _ _ hpi0.ne', div_le_iff₀ hpi0]; linarith
-        · rw [div_le_iff₀ hpi0]; linarith
+      50 / α * (1 + B * Real.log (2 + M)) + 8 * B + 5 * ∫ y, |evenReflection f y| :=
+  abs_halfPlaneVelocityGradient_le_of_singularIntegral_le ((abs_nonneg _).trans (hB 0 le_rfl))
+    (integral_nonneg fun y ↦ abs_nonneg _) (hB x hx.le)
+    (fun j ↦ (abs_halfPlaneSingularIntegral_le_log (isSingularKernel_hessianKernel 0 j)
+      (hasLineCancellation_hessianKernel 0 j) hα hα1 hM hE hB hx).trans_eq (by ring)) i k
 
 end Estimates
 

@@ -54,41 +54,45 @@ theorem isClosed_setOf_ae_comp_eq (F : X → ℝ^3 → ℝ^3)
   simp only [Function.comp_def, hyall] at h1
   exact tendsto_nhds_unique h1 ((N.continuous.tendsto _).comp hy)
 
-/-- Even axisymmetry is a closed condition along a family that is sequentially continuous
-into `L²`. -/
-theorem isClosed_setOf_isEvenAxisymmetric (F : X → ℝ^3 → ℝ^3)
+/-- The condition shared by the two sectors is closed along a family that is sequentially
+continuous into `L²`: invariance under every rotation about the axis, together with
+`σ u(σ y) = N u(y)` almost everywhere for the equatorial reflection `σ` and a continuous linear
+map `N`. The even sector is `N = 1` and the odd sector is `N = -1`. -/
+private theorem isClosed_setOf_axisymmetric_reflection (F : X → ℝ^3 → ℝ^3)
     (hF : ∀ (x : ℕ → X) (a : X), Tendsto x atTop (𝓝 a) →
-      Tendsto (fun k ↦ eLpNorm (F (x k) - F a) 2 volume) atTop (𝓝 0)) :
-    IsClosed {x | IsEvenAxisymmetric (F x)} := by
+      Tendsto (fun k ↦ eLpNorm (F (x k) - F a) 2 volume) atTop (𝓝 0))
+    (N : ℝ^3 →L[ℝ] ℝ^3) :
+    IsClosed {x | (∀ θ : ℝ,
+        (fun y ↦ axialRotation θ (F x ((axialRotation θ).symm y))) =ᵐ[volume] F x) ∧
+      (fun y ↦ equatorialReflection (F x (equatorialReflection y))) =ᵐ[volume]
+        fun y ↦ N (F x y)} := by
   have h := (isClosed_iInter fun θ : ℝ ↦ isClosed_setOf_ae_comp_eq F hF
       (axialRotation θ).toContinuousLinearEquiv.toContinuousLinearMap
       (ContinuousLinearMap.id ℝ _) _
       (axialRotation θ).symm.measurePreserving.quasiMeasurePreserving).inter
     (isClosed_setOf_ae_comp_eq F hF
       equatorialReflection.toContinuousLinearEquiv.toContinuousLinearMap
-      (ContinuousLinearMap.id ℝ _) _ measurePreserving_equatorialReflection.quasiMeasurePreserving)
+      N _ measurePreserving_equatorialReflection.quasiMeasurePreserving)
   convert h using 1
   ext x
   simp only [Set.mem_ofPred_eq, Set.mem_inter_iff, Set.mem_iInter]
   exact Iff.rfl
+
+/-- Even axisymmetry is a closed condition along a family that is sequentially continuous
+into `L²`. -/
+theorem isClosed_setOf_isEvenAxisymmetric (F : X → ℝ^3 → ℝ^3)
+    (hF : ∀ (x : ℕ → X) (a : X), Tendsto x atTop (𝓝 a) →
+      Tendsto (fun k ↦ eLpNorm (F (x k) - F a) 2 volume) atTop (𝓝 0)) :
+    IsClosed {x | IsEvenAxisymmetric (F x)} :=
+  isClosed_setOf_axisymmetric_reflection F hF (ContinuousLinearMap.id ℝ _)
 
 /-- Odd axisymmetry is a closed condition along a family that is sequentially continuous
 into `L²`. -/
 theorem isClosed_setOf_isOddAxisymmetric (F : X → ℝ^3 → ℝ^3)
     (hF : ∀ (x : ℕ → X) (a : X), Tendsto x atTop (𝓝 a) →
       Tendsto (fun k ↦ eLpNorm (F (x k) - F a) 2 volume) atTop (𝓝 0)) :
-    IsClosed {x | IsOddAxisymmetric (F x)} := by
-  have h := (isClosed_iInter fun θ : ℝ ↦ isClosed_setOf_ae_comp_eq F hF
-      (axialRotation θ).toContinuousLinearEquiv.toContinuousLinearMap
-      (ContinuousLinearMap.id ℝ _) _
-      (axialRotation θ).symm.measurePreserving.quasiMeasurePreserving).inter
-    (isClosed_setOf_ae_comp_eq F hF
-      equatorialReflection.toContinuousLinearEquiv.toContinuousLinearMap
-      (-ContinuousLinearMap.id ℝ _) _ measurePreserving_equatorialReflection.quasiMeasurePreserving)
-  convert h using 1
-  ext x
-  simp only [Set.mem_ofPred_eq, Set.mem_inter_iff, Set.mem_iInter]
-  exact Iff.rfl
+    IsClosed {x | IsOddAxisymmetric (F x)} :=
+  isClosed_setOf_axisymmetric_reflection F hF (-ContinuousLinearMap.id ℝ _)
 
 omit [SequentialSpace X] in
 /-- Sequential continuity into `L²` of a family given by a continuous map into an `L²` space,

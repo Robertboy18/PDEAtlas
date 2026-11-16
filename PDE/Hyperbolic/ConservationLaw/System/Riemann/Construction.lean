@@ -10,19 +10,21 @@ public import PDE.Hyperbolic.ConservationLaw.System.Riemann.ElementaryChain
 public import PDE.Hyperbolic.ConservationLaw.System.Riemann.WeakSolution
 import PDE.Hyperbolic.ConservationLaw.System.Rarefaction.Fan
 import PDE.Hyperbolic.ConservationLaw.System.PlanarShock
+import PDE.Hyperbolic.ConservationLaw.System.RiemannSolver.Construction
 
 /-!
 # Weak Riemann solutions from local wave curves
 
 The characteristic construction supplies shock curves and integral
 curves. Their local regularity gives bounded weak elementary waves in fixed
-speed intervals. Local strength inversion keeps all prefix states inside the
-same construction neighborhoods; separated-wave gluing then constructs the
-weak solution from the flux and characteristic-family hypotheses.
+speed intervals (`eventually_exists_bounded_weak_wave`).
 
-`exists_local_riemann_wave_decomposition` follows the proof of Evans, §11.2.4, Theorem 4: the
-states `state k` are the `z_k` of (44)-(45), each joined to the next by a wave of family `k`,
-and the speed windows `(lo k, hi k)` are ordered and disjoint, as in step 4 of that proof.
+`exists_local_riemann_wave_decomposition` is the conclusion of the proof of Evans, §11.2.4,
+Theorem 4: the states `state k` are the `z_k` of (44)-(45), each joined to the next by a wave of
+family `k`, and the speed windows `(lo k, hi k)` are ordered and disjoint, as in step 4 of that
+proof. It is `exists_local_riemann_elementary_decomposition` of `RiemannSolver.Construction`
+without the identification of each wave with the shock, contact or rarefaction of its
+connection; the construction itself is in `RiemannSolver.EntropyConstruction`.
 `exists_local_riemann_weak_solution` is Theorem 4 for the weak equation on `t > 0`;
 `exists_local_riemann_initialValue_solution` adds the Riemann datum as initial trace.
 
@@ -174,67 +176,13 @@ theorem exists_local_riemann_wave_decomposition {m : ℕ} {flux : ℝ^m → ℝ^
         (∀ p : ℝ^2, 0 < p 0 → p 1 < -M * p 0 → u p = left) ∧
         (∀ p : ℝ^2, 0 < p 0 → M * p 0 ≤ p 1 → u p = right) ∧
         (∀ p, u p = left + ∑ k : Fin m, (wave k p - state k)) := by
-  classical
-  obtain ⟨fields, hcanonical, states, _hopen, hleft, W, hW, basis, hbasis,
-    S, speed, R, hreg, hzero, hequations, hpositive⟩ :=
-    exists_local_elementary_wave_family hflux hhyper hfamilies left
-  let eig (k : Fin m) := (fields k).speed left
-  have horder : StrictMono eig := by
-    simpa only [eig, hcanonical] using (characteristicSpeed_spec (hhyper left)).1
-  have hsep : ∀ᶠ ε in 𝓝 (0 : ℝ), ∀ i j : Fin m,
-      i < j → eig i + ε < eig j - ε := eventually_all.mpr fun i ↦ eventually_all.mpr fun j ↦ by
-    by_cases hij : i < j
-    · exact ((continuousAt_const.add continuousAt_id).eventually_lt
-        (continuousAt_const.sub continuousAt_id) (show eig i + (0 : ℝ) < eig j - 0 by
-          simpa only [add_zero, sub_zero] using horder hij)).mono fun _ h _ ↦ h
-    · exact Eventually.of_forall fun _ h ↦ (hij h).elim
-  have hpos : ∀ᶠ ε in 𝓝[>] (0 : ℝ), 0 < ε := self_mem_nhdsWithin
-  obtain ⟨η, hη, hsepη⟩ := (hpos.and (hsep.filter_mono nhdsWithin_le_nhds)).exists
-  let lo (k : Fin m) := eig k - η
-  let hi (k : Fin m) := eig k + η
-  have hwaves (k : Fin m) :=
-    eventually_exists_bounded_weak_wave (hflux.of_le (by norm_num)) (fields k)
-      (IsGenuinelyNonlinearFamily flux k) (T := fun p ↦ W.curve k p.1 p.2)
-      (hcanonical k ▸ contDiffAt_characteristicSpeed hflux (hhyper left) k)
-      (hreg k).1 (hreg k).2.2.1 (hreg k).2.1 (hzero.mono fun _ h ↦ h k)
-      (hequations.mono fun _ h ↦ (h k).1) (hequations.mono fun _ h ↦ (h k).2.1)
-      (hequations.mono fun _ h ↦ (h k).2.2) (hpositive k)
-      (fun hgn ↦ (isLinearlyDegenerateFamily_iff hhyper k (fields k)
-        (hcanonical k)).mp ((hfamilies k).resolve_left hgn))
-      (lo := lo k) (hi := hi k) ⟨sub_lt_self _ hη, lt_add_of_pos_right _ hη⟩
-  have hb : ∀ k, (fields k).rightEigenvector left = basis k := fun k ↦ (hbasis k).symm
-  obtain ⟨δ, hδ, hδball⟩ := eventually_nhds_iff_ball.mp
-    ((W.eventually_localRiemann_steps left hleft basis hb (eventually_all.mpr hwaves)).and
-      ((W.localRiemannHomeomorph left hleft basis hb).open_target.mem_nhds
-        (W.left_mem_localRiemannHomeomorph_target left hleft basis hb)))
-  let M := η + ∑ k : Fin m, |eig k|
-  have hsum (k : Fin m) : |eig k| ≤ ∑ j : Fin m, |eig j| :=
-    Finset.single_le_sum (fun j _ ↦ abs_nonneg (eig j)) (Finset.mem_univ k)
-  have hlo (k : Fin m) : -M ≤ lo k := by
-    simp only [M, lo]; linarith [hsum k, neg_abs_le (eig k)]
-  have hhi (k : Fin m) : hi k ≤ M := by
-    simp only [M, hi]; linarith [hsum k, le_abs_self (eig k)]
-  refine ⟨δ, ‖left‖ + 1, M, hδ, by positivity,
-    add_nonneg hη.le (Finset.sum_nonneg fun _ _ ↦ abs_nonneg _), fun right hright ↦ ?_⟩
-  obtain ⟨hw, ht⟩ := hδball right (by simpa only [mem_ball, dist_eq_norm] using hright)
-  choose wave hweak hmeas hbound hscale hwl hwr using hw
-  let state := W.localRiemannState left hleft basis hb right
-  have hlast : state m = right := W.localRiemannState_eq_right left hleft basis hb ht
-  have hfirst : state 0 = left := W.localRiemannState_zero left hleft basis hb right
-  have hwright (k : Fin m) (p : ℝ^2) (hp : 0 < p 0) (hx : hi k * p 0 ≤ p 1) :
-      wave k p = state (k + 1) := (hwr k p hp hx).trans (W.intermediateState_succ left
-      (W.localRiemannStrength left hleft basis hb right) k).symm
-  obtain ⟨u, hu, hmu, hbu, hsu, hlu, hru, hformula⟩ :=
-    exists_weakSolution_of_separated_waves state wave lo hi
-      (K := ‖left‖ + 1) (by rw [hfirst]; exact (lt_add_one ‖left‖).le)
-      (fun i j hij ↦ (hsepη i j hij).le) hweak hmeas hbound hscale hwl hwright
-  refine ⟨fields, state, lo, hi, wave, u, hcanonical, hfirst, hlast,
-    W.isElementaryConnection_localRiemannState hW left hleft basis hb right,
-    fun k ↦ show eig k - η < eig k + η by linarith, hsepη, fun k ↦ ⟨hlo k, hhi k⟩,
-    fun k ↦ ⟨hweak k, hmeas k, hbound k, hscale k, hwl k, hwright k⟩, hu, hmu, hbu, hsu,
-    fun p hp hx ↦ (hlu (-M) hlo p hp hx).trans hfirst,
-    fun p hp hx ↦ (hru M hhi p hp hx).trans hlast,
-    fun p ↦ (hformula p).trans (by rw [hfirst])⟩
+  obtain ⟨δ, K, M, hδ, hK, hM, hsolve⟩ :=
+    exists_local_riemann_elementary_decomposition hflux hhyper hfamilies left
+  refine ⟨δ, K, M, hδ, hK, hM, fun right hright ↦ ?_⟩
+  obtain ⟨fields, state, lo, hi, wave, u, hcanonical, hfirst, hlast, hchain, hwindow, hsep, hcone,
+    hwaves, hrest⟩ := hsolve right hright
+  exact ⟨fields, state, lo, hi, wave, u, hcanonical, hfirst, hlast, hchain, hwindow, hsep, hcone,
+    fun k ↦ (hwaves k).2, hrest⟩
 
 /-- A `C²` strictly hyperbolic system with genuinely nonlinear or linearly
 degenerate characteristic families admits bounded self-similar weak solutions

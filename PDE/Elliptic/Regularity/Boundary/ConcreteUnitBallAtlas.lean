@@ -521,6 +521,28 @@ private theorem globalHeight_at_boundaryProjection
     _ = GraphChart.sphereHeight n x := by
       simp [GraphChart.sphereHeight, GraphChart.sphereRadicand]
 
+/-- For a point whose swapped tangential part has norm below `r < 1`, membership in
+the unit ball says that `|xᵢ|` lies below the global height `g`, which agrees with
+the sphere height on the tangential cylinder of radius `r`. Both signed charts
+flatten the ball through this equivalence. -/
+private theorem mem_domain_iff_abs_lt_globalHeight
+    (i : Fin n) {r : ℝ} (hr : r < 1) {g : ℝ^n → ℝ}
+    (hEq :
+      Set.EqOn g (GraphChart.sphereHeight n)
+        (GraphChart.tangentialCylinder n r))
+    (x : ℝ^n)
+    (htan : ‖HalfSpace.boundaryProjection n (coordinateSwap n i x)‖ < r) :
+    x ∈ domain n ↔
+      |x i| < g (HalfSpace.boundaryProjection n (coordinateSwap n i x)) := by
+  calc
+    x ∈ domain n ↔ coordinateSwap n i x ∈ domain n := by
+      simp only [domain, mem_ball, dist_zero_right, coordinateSwap_norm]
+    _ ↔ |coordinateSwap n i x (lastIndex (n := n))| <
+          GraphChart.sphereHeight n (coordinateSwap n i x) :=
+      mem_domain_iff_abs_normal_lt_sphereHeight n _ (htan.trans hr)
+    _ ↔ |x i| < g (HalfSpace.boundaryProjection n (coordinateSwap n i x)) := by
+      rw [coordinateSwap_apply_normal, globalHeight_at_boundaryProjection n hEq htan]
+
 /-- On a positive quantitative source, the conjugated graph chart flattens
 the unit ball exactly to the upper half-space. -/
 private theorem positiveChart_mem_iff_upper
@@ -533,31 +555,9 @@ private theorem positiveChart_mem_iff_upper
     (x ∈ domain n ↔
       positiveChart n i r g (hg.of_le (by norm_num)) x ∈
         SobolevSpace.HalfSpace.upper n) := by
-  let y := coordinateSwap n i x
-  have htan : ‖HalfSpace.boundaryProjection n y‖ < r := hx.1.2
-  have htan_one : ‖HalfSpace.boundaryProjection n y‖ < 1 :=
-    htan.trans hr
-  have hheight :
-      g (HalfSpace.boundaryProjection n y) =
-        GraphChart.sphereHeight n y :=
-    globalHeight_at_boundaryProjection n hEq htan
-  calc
-    x ∈ domain n ↔ y ∈ domain n := by
-      simp only [domain, mem_ball, dist_zero_right, y, coordinateSwap_norm]
-    _ ↔ |y (lastIndex (n := n))| < GraphChart.sphereHeight n y :=
-      mem_domain_iff_abs_normal_lt_sphereHeight n y htan_one
-    _ ↔ x i < GraphChart.sphereHeight n y := by
-      rw [coordinateSwap_apply_normal, abs_of_pos hx.1.1]
-    _ ↔ x i < g (HalfSpace.boundaryProjection n y) := by
-      rw [hheight]
-    _ ↔ GraphChart.positiveMap n g y ∈
-          SobolevSpace.HalfSpace.upper n := by
-      symm
-      simpa only [coordinateSwap_apply_normal, y] using
-        GraphChart.positiveMap_mem_upper_iff n g y
-    _ ↔ positiveChart n i r g (hg.of_le (by norm_num)) x ∈
-          SobolevSpace.HalfSpace.upper n := by
-      rfl
+  rw [mem_domain_iff_abs_lt_globalHeight n i hr hEq x hx.1.2, abs_of_pos hx.1.1,
+    ← coordinateSwap_apply_normal n i x]
+  exact (GraphChart.positiveMap_mem_upper_iff n g (coordinateSwap n i x)).symm
 
 /-- On a negative quantitative source, the conjugated graph chart flattens
 the unit ball exactly to the upper half-space. -/
@@ -571,31 +571,9 @@ private theorem negativeChart_mem_iff_upper
     (x ∈ domain n ↔
       negativeChart n i r g (hg.of_le (by norm_num)) x ∈
         SobolevSpace.HalfSpace.upper n) := by
-  let y := coordinateSwap n i x
-  have htan : ‖HalfSpace.boundaryProjection n y‖ < r := hx.1.2
-  have htan_one : ‖HalfSpace.boundaryProjection n y‖ < 1 :=
-    htan.trans hr
-  have hheight :
-      g (HalfSpace.boundaryProjection n y) =
-        GraphChart.sphereHeight n y :=
-    globalHeight_at_boundaryProjection n hEq htan
-  calc
-    x ∈ domain n ↔ y ∈ domain n := by
-      simp only [domain, mem_ball, dist_zero_right, y, coordinateSwap_norm]
-    _ ↔ |y (lastIndex (n := n))| < GraphChart.sphereHeight n y :=
-      mem_domain_iff_abs_normal_lt_sphereHeight n y htan_one
-    _ ↔ -x i < GraphChart.sphereHeight n y := by
-      rw [coordinateSwap_apply_normal, abs_of_neg hx.1.1]
-    _ ↔ -x i < g (HalfSpace.boundaryProjection n y) := by
-      rw [hheight]
-    _ ↔ GraphChart.negativeMap n g y ∈
-          SobolevSpace.HalfSpace.upper n := by
-      symm
-      simpa only [coordinateSwap_apply_normal, y] using
-        GraphChart.negativeMap_mem_upper_iff n g y
-    _ ↔ negativeChart n i r g (hg.of_le (by norm_num)) x ∈
-          SobolevSpace.HalfSpace.upper n := by
-      rfl
+  rw [mem_domain_iff_abs_lt_globalHeight n i hr hEq x hx.1.2, abs_of_neg hx.1.1,
+    ← coordinateSwap_apply_normal n i x]
+  exact (GraphChart.negativeMap_mem_upper_iff n g (coordinateSwap n i x)).symm
 
 /-!
 ## Finite chart family and operational atlas

@@ -112,6 +112,18 @@ theorem exists_vorticity_eq_zero (h : IsSolutionOn sol I) {t : ℝ} (ht : t ∈ 
   obtain ⟨R, hR⟩ := h.support t t (by simpa using ht)
   exact ⟨R, fun x hx hxR ↦ (hR t ⟨le_rfl, le_rfl⟩ x hx hxR).1⟩
 
+/-- The stream function of a solution is determined on the closed half-plane by the vorticity
+there: if the vorticities of two solutions agree on the closed half-plane at a time, so do their
+stream functions. -/
+theorem streamFunction_eq_of_vorticity_eq {sol' : VorticityStreamFields} {I' : Set ℝ}
+    (h : IsSolutionOn sol I) (h' : IsSolutionOn sol' I') {t : ℝ} (ht : t ∈ I) (ht' : t ∈ I')
+    (hω : ∀ x : ℝ^2, 0 ≤ x 1 → sol.vorticity x t = sol'.vorticity x t) {x : ℝ^2}
+    (hx : 0 ≤ x 1) : sol.streamFunction x t = sol'.streamFunction x t := by
+  have hG : halfSpaceGreenPotential (fun y ↦ sol.vorticity y t) =
+      halfSpaceGreenPotential (fun y ↦ sol'.vorticity y t) :=
+    halfSpaceGreenPotential_congr fun y hy ↦ hω y (le_of_lt hy)
+  rw [h.stream t ht x hx, h'.stream t ht' x hx, hG]
+
 /-- Every time slice of the vorticity is globally `C¹`. -/
 theorem contDiff_vorticity (h : IsSolutionOn sol I) {t : ℝ} (ht : t ∈ I) :
     ContDiff ℝ 1 (fun x ↦ sol.vorticity x t) :=

@@ -10,6 +10,7 @@ public import PDE.Hyperbolic.Models.Wave.Regularization.Approximation
 public import PDE.Hyperbolic.Models.Wave.Regularization.Regularity
 public import PDE.Hyperbolic.Models.Wave.Regularization.Residual
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.IntegralSupportData
+import PDE.Analysis.Normed.Group.CompactSupport
 import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.FreeWave
 
 /-!
@@ -43,14 +44,12 @@ theorem IsIntegralTrajectoryBefore.exists_compact_support_pos_strip {r b L S : �
     (hgs : HasCompactSupport g) (hhs : HasCompactSupport h) {u : ℝ × ℝ^3 → ℝ}
     (hu : IsIntegralTrajectoryBefore r b (cauchyFreeField g h) L u) (hSL : S < L) :
     ∃ K : Set (ℝ^3), IsCompact K ∧ ∀ t ∈ Ioo 0 S, ∀ x ∉ K, u (t, x) = 0 := by
-  obtain ⟨Rg, _, hgR⟩ := hgs.exists_pos_le_norm
-  obtain ⟨Rh, _, hhR⟩ := hhs.exists_pos_le_norm
+  obtain ⟨R, -, hgR, hhR⟩ := hgs.exists_common_radius hhs
   have hHs (p : ℝ × ℝ^3) (hp : 0 ≤ p.1)
-      (hx : max Rg Rh + p.1 < ‖p.2‖) : cauchyFreeField g h p = 0 := by
+      (hx : R + p.1 < ‖p.2‖) : cauchyFreeField g h p = 0 := by
     exact WaveEquation.SmallData.kirchhoffFormula_hasForwardSupport
-      (hg.of_le (by norm_num)) hh.continuous (fun y hy ↦ hgR y ((le_max_left _ _).trans hy.le))
-      (fun y hy ↦ hhR y ((le_max_right _ _).trans hy.le)) p.1 hp p.2 hx
-  refine ⟨Metric.closedBall 0 (max Rg Rh + S), isCompact_closedBall _ _, ?_⟩
+      (hg.of_le (by norm_num)) hh.continuous hgR hhR p.1 hp p.2 hx
+  refine ⟨Metric.closedBall 0 (R + S), isCompact_closedBall _ _, ?_⟩
   intro t ht x hx
   apply image_eq_zero_of_notMem_tsupport (f := fun y : ℝ^3 ↦ u (t, y))
   exact fun hxt ↦ hx (hu.tsupport_subset_closedBall hr hb

@@ -291,39 +291,38 @@ theorem spacetimeAxisymmetricVorticity_eq_vorticityFromCoefficients
       sub_neg_eq_add] <;>
     ring
 
+/-- Multiplying a squared-cylindrical lift by a transverse Cartesian coordinate `xᵢ` (`i = 0` or
+`i = 1`) turns the scalar Cartesian Laplacian into the radial-four coefficient. -/
+theorem laplacian_coordinate_mul_squaredCylindricalLift
+    {F : ℝ^2 → ℝ} (hF : ContDiff ℝ (⊤ : ℕ∞) F) {i : Fin 3} (hi : i ≠ 2) (x : ℝ^3) :
+    laplacian (fun y ↦ y i * squaredCylindricalLift F y) x =
+      x i * meridionalVorticityCoefficient F (squaredCylindricalMap x) := by
+  rw [PDE.laplacian_coordinate_mul i (squaredCylindricalLift F) x
+    ((contDiff_squaredCylindricalLift hF).of_le
+      (WithTop.coe_le_coe.mpr le_top) |>.contDiffAt)]
+  rw [laplacian_squaredCylindricalLift hF]
+  rw [partialDeriv_squaredCylindricalLift_of_ne_two
+    (hF.of_le (WithTop.coe_le_coe.mpr le_top)) hi]
+  unfold meridionalVorticityCoefficient cylindricalRadiusSq
+  rw [squaredCylindricalMap_apply_zero]
+  unfold cylindricalRadiusSq
+  ring
+
 /-- Multiplying a squared-cylindrical lift by the first Cartesian coordinate
 turns the scalar Cartesian Laplacian into the radial-four coefficient. -/
 theorem laplacian_coordinate_zero_mul_squaredCylindricalLift
     {F : ℝ^2 → ℝ} (hF : ContDiff ℝ (⊤ : ℕ∞) F) (x : ℝ^3) :
     laplacian (fun y ↦ y 0 * squaredCylindricalLift F y) x =
-      x 0 * meridionalVorticityCoefficient F (squaredCylindricalMap x) := by
-  rw [PDE.laplacian_coordinate_mul 0 (squaredCylindricalLift F) x
-    ((contDiff_squaredCylindricalLift hF).of_le
-      (WithTop.coe_le_coe.mpr le_top) |>.contDiffAt)]
-  rw [laplacian_squaredCylindricalLift hF]
-  rw [partialDeriv_zero_squaredCylindricalLift
-    (hF.of_le (WithTop.coe_le_coe.mpr le_top))]
-  unfold meridionalVorticityCoefficient cylindricalRadiusSq
-  rw [squaredCylindricalMap_apply_zero]
-  unfold cylindricalRadiusSq
-  ring
+      x 0 * meridionalVorticityCoefficient F (squaredCylindricalMap x) :=
+  laplacian_coordinate_mul_squaredCylindricalLift hF (by decide) x
 
 /-- Multiplying a squared-cylindrical lift by the second Cartesian coordinate
 turns the scalar Cartesian Laplacian into the radial-four coefficient. -/
 theorem laplacian_coordinate_one_mul_squaredCylindricalLift
     {F : ℝ^2 → ℝ} (hF : ContDiff ℝ (⊤ : ℕ∞) F) (x : ℝ^3) :
     laplacian (fun y ↦ y 1 * squaredCylindricalLift F y) x =
-      x 1 * meridionalVorticityCoefficient F (squaredCylindricalMap x) := by
-  rw [PDE.laplacian_coordinate_mul 1 (squaredCylindricalLift F) x
-    ((contDiff_squaredCylindricalLift hF).of_le
-      (WithTop.coe_le_coe.mpr le_top) |>.contDiffAt)]
-  rw [laplacian_squaredCylindricalLift hF]
-  rw [partialDeriv_one_squaredCylindricalLift
-    (hF.of_le (WithTop.coe_le_coe.mpr le_top))]
-  unfold meridionalVorticityCoefficient cylindricalRadiusSq
-  rw [squaredCylindricalMap_apply_zero]
-  unfold cylindricalRadiusSq
-  ring
+      x 1 * meridionalVorticityCoefficient F (squaredCylindricalMap x) :=
+  laplacian_coordinate_mul_squaredCylindricalLift hF (by decide) x
 
 /-! ## Vector Laplacian of the reconstructed vorticity -/
 

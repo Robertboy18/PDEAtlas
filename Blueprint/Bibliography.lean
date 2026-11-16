@@ -564,7 +564,7 @@ def georgePdeZulip2024 : Verso.Genre.Manual.Bibliography.Citable := .article
       "Formalization.20of.20PDEs.20in.20Lean.3F.html"
   }
 
-/-- The inclusion engine and dyadic family at LeanPDE's pinned Mathlib revision. -/
+/-- The inclusion engine and dyadic family at PDEAtlas's pinned Mathlib revision. -/
 @[bib "mathlib-inclusion-2026"]
 def mathlibInclusion2026 : Verso.Genre.Manual.Bibliography.Citable := .article
   { title := inlines!"inclusion: Extensible enclosure computation in Mathlib"

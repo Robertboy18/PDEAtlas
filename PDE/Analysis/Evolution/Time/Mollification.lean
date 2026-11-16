@@ -89,7 +89,7 @@ def timeMollify
       ((PiLp.equivOfUnique 2 ℝ (fun _ : Fin 1 ↦ ℝ)).symm t)
 
 /-- The canonical time regularization used by the parabolic theory.  It uses
-LeanPDE's normalized standard one-dimensional mollifier. -/
+PDEAtlas's normalized standard one-dimensional mollifier. -/
 def regularizeTime (ε : ℝ) (f : ℝ → X) : ℝ → X :=
   timeMollify (SobolevSpace.Approximation.standardMollifier 1) ε f
 

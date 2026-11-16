@@ -8,6 +8,7 @@ module
 
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.IntegralLifespanData
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.IntegralSupport
+import PDE.Analysis.Normed.Group.CompactSupport
 import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.FreeWave
 
 /-!
@@ -62,13 +63,9 @@ theorem IsGlobalIntegralTrajectory.tsupport_subset_closedBall {r b R S : ℝ} (h
 private theorem exists_positive_radius_cauchyFreeField {g h : ℝ^3 → ℝ} (hg : ContDiff ℝ 1 g)
     (hh : Continuous h) (hgs : HasCompactSupport g) (hhs : HasCompactSupport h) :
     ∃ R : ℝ, 0 < R ∧ ∀ p : ℝ × ℝ^3, 0 ≤ p.1 → R + p.1 < ‖p.2‖ → cauchyFreeField g h p = 0 := by
-  obtain ⟨Rg, hRg, hgR⟩ := hgs.exists_pos_le_norm
-  obtain ⟨Rh, _, hhR⟩ := hhs.exists_pos_le_norm
-  refine ⟨max Rg Rh, hRg.trans_le (le_max_left _ _), ?_⟩
-  intro p hp hx
-  exact WaveEquation.SmallData.kirchhoffFormula_hasForwardSupport hg hh
-    (fun y hy ↦ hgR y ((le_max_left _ _).trans hy.le))
-    (fun y hy ↦ hhR y ((le_max_right _ _).trans hy.le)) p.1 hp p.2 hx
+  obtain ⟨R, hR, hgR, hhR⟩ := hgs.exists_common_radius hhs
+  exact ⟨R, hR, fun p hp hx ↦
+    WaveEquation.SmallData.kirchhoffFormula_hasForwardSupport hg hh hgR hhR p.1 hp p.2 hx⟩
 
 /-- Arbitrary compact C³/C² data construct a C¹ signed-power solution with
 speed-one propagation throughout its lifespan. Both ordinary Cauchy

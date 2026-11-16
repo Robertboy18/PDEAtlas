@@ -19,8 +19,9 @@ import PDE.LinearAlgebra.QuotientProjection
 
 The selected correction already produces an injective complete orbit and an open
 state neighborhood containing its gate point. We retain these witnesses through
-response transport and cancellation. They belong to the same orbit and the same
-correction family, chosen before the tolerance.
+response transport (`exists_selected_retained_branch_responses_with_isolation`) and
+cancellation. They belong to the same orbit and the same correction family, chosen before
+the tolerance.
 
 The outgoing interval of definition is `[0, H]`. On its intersection with the phase
 interval, the extended outgoing branch has the same speed germ as the corrected
@@ -138,131 +139,6 @@ theorem exists_retained_selected_rank_strip
   exact ⟨hD, hdetPhase, D, hDeq ▸ hD⟩
 
 end RetainedRank
-
-/-- Apply the selected correction to the two retained physical branches.
-The fundamental solutions on the original time domains are constructed before target and
-tolerance.
-The outgoing response realizes the target, and the full incoming Hessian is zero.
-Global strict hyperbolicity and every canonical genuinely nonlinear family are
-inherited from the selected correction theorem. The same injective orbit and its
-gate membership are retained before the signed target and tolerance. The
-basis at the gate is carried along with its equality to the selected eigenvector
-family, so the later rank theorems use the same basis. -/
-theorem exists_selected_retained_branch_responses_with_isolation {δ A B H tAnchor tStar : ℝ}
-    {c : Fin 3 → ℝ} {b : (Fin 3 → ℝ) × ℝ → ℝ} {Ψ : ℝ × ((ℝ × (Fin 3 → ℝ)) × (ℝ × ℝ)) → ℝ^3}
-    {T : ((ℝ × (Fin 3 → ℝ)) × (ℝ × ℝ)) → ℝ} {N : Set ((ℝ × (Fin 3 → ℝ)) × (ℝ × ℝ))} (hδ : 0 < δ)
-    (hδsmall : δ < 1 / 4) (hAB : A ^ 2 < B ^ 2) (hb : ContDiff ℝ ∞ b)
-    (hbsupport : tsupport (fun y ↦ b (c, y)) ⊆ Ioo (205 : ℝ) (2051 / 10)) (hΨ : ContDiff ℝ ∞ Ψ)
-    (hselected : ((δ, c), (0, 0)) ∈ N) (hinitial : ∀ θ, Ψ (0, θ) = (!₂[0, θ.2.2, 1] : ℝ^3))
-    (hode : ∀ θ ∈ N, ∀ s ∈ Icc (0 : ℝ) H, HasDerivAt (fun u ↦ Ψ (u, θ))
-      (concreteGatedFlux θ.1.1 (clockFeedback A B) (fun y ↦ b (θ.1.2, y)) (Ψ (s, θ)) - θ.2.1 •
-      Ψ (s, θ)) s)
-    (hevent : ∀ θ ∈ N, T θ ∈ Ioo (0 : ℝ) H ∧ Ψ (T θ, θ) 1 = 0) (i j : Fin 3) (hij : i ≠ j) :
-    let θ0 := ((δ, c), ((0 : ℝ), (0 : ℝ)))
-    let e := T θ0
-    let b0 : ℝ → ℝ := fun y ↦ b (c, y)
-    let f := concreteGatedFlux δ (clockFeedback A B) b0
-    let γ : ℝ → ℝ^3 := fun t ↦ Ψ (t, θ0)
-    let W := prescribedClockFullVariation Ψ (δ, c) (1, 0)
-    let rStar := GatedFlux.rightEigenvector (fastLogCosh δ) MiddleClock.g cutoff
-      (clockFeedback A B) b0 (γ tStar)
-    tStar ∈ Ioo (0 : ℝ) e →
-    205 < γ tStar 1 → 2 < γ tStar 2 → (γ tStar 2) ^ 2 < A ^ 2 →
-    0 < γ e 2 → γ e 0 / γ e 2 = 1 →
-    Matrix.det ![⇑(deriv γ tStar), ⇑(rStar i), ⇑(W tStar)] ≠ 0 →
-    Matrix.det ![⇑(deriv γ tStar), ⇑(rStar j), ⇑(W tStar)] ≠ 0 →
-    (∃ a : Fin 3 → ℝ, (∀ k, a k ≠ 0) ∧ deriv γ tStar = ∑ k, a k • rStar k) →
-    ∀ (S : Evolution.FundamentalSolution
-      (fun t ↦ fderiv ℝ f (γ t)) tAnchor (Icc (0 : ℝ) e))
-      (L : (ℝ^3) →L[ℝ] (ℝ^2)),
-      LinearMap.ker L.toLinearMap = Submodule.span ℝ ({f (γ e)} : Set (ℝ^3)) →
-      ∃ (q : ℝ → ℝ^3) (J : Set ℝ) (U : Set (ℝ^3)),
-        IsViscousProfile f 0 0 0 q ∧ ContDiff ℝ ∞ q ∧
-        (∀ t, HasDerivAt q (f (q t)) t) ∧ EqOn q γ (Icc (0 : ℝ) H) ∧
-        EqOn (fun t ↦ retainedOutgoingBranch Ψ (δ, c) t 0) q (Icc (0 : ℝ) H) ∧
-        EqOn (fun t ↦ retainedIncomingBranch Ψ (δ, c) e t 0) q
-          (Icc (e + e - H) (e + e)) ∧
-        IsOpen J ∧ J ⊆ Ioo (0 : ℝ) e ∧ IsOpen U ∧ q ⁻¹' U ⊆ J ∧
-        Function.Injective q ∧ q tStar ∈ U ∧
-        ∃ rGate : Module.Basis (Fin 3) ℝ (ℝ^3),
-        (∀ k, rGate k = rStar k) ∧
-        ∃ (Sout : Evolution.FundamentalSolution
-          (fun t ↦ fderiv ℝ f (q t)) 0 (Icc (0 : ℝ) H))
-          (Sin : Evolution.FundamentalSolution
-            (fun t ↦ fderiv ℝ f (q t)) (e + e) (Icc (e + e - H) (e + e))),
-          (∀ t ∈ Icc (0 : ℝ) e, Sout.propagator e t = S.propagator e t) ∧
-          ∀ target : ℝ^2, ∀ η : ℝ, 0 < η → ∃ P : ℝ^3 → ℝ^3,
-            ContDiff ℝ ∞ P ∧ HasCompactSupport P ∧ tsupport P ⊆ U ∧
-            (∀ t, P (q t) = 0 ∧ fderiv ℝ P (q t) = 0) ∧
-            (∫ t in (0 : ℝ)..e, L (Sout.propagator e t
-              (fderiv ℝ (fderiv ℝ P) (q t)
-                (deriv (retainedOutgoingBranch Ψ (δ, c) t) 0)
-                (deriv (retainedOutgoingBranch Ψ (δ, c) t) 0)))) = target ∧
-            (∀ t ∈ Icc e (e + e), fderiv ℝ (fderiv ℝ P) (q t) = 0) ∧
-            (∫ t in (e + e)..e, L (Sin.propagator e t
-              (fderiv ℝ (fderiv ℝ P) (q t)
-                (deriv (retainedIncomingBranch Ψ (δ, c) e t) 0)
-                (deriv (retainedIncomingBranch Ψ (δ, c) e t) 0)))) = 0 ∧
-            (∀ x, ‖P x‖ < η ∧ ‖fderiv ℝ P x‖ < η) ∧
-            (∀ x, IsStrictlyHyperbolicAt (f + P) x) ∧
-            ∀ k, IsGenuinelyNonlinearFamily (f + P) k := by
-  intro θ0 e b0 f γ W rStar htStar hy hzInner hzOuter hz hρ hi hj hexp S L hL
-  obtain ⟨V, r, J, q, U, l, u, χ, hV, htV, hrStar, hsmooth, hdual, hspectral,
-      hcoordinates, hJ, htJ, hJV, hprofile, hqSmooth, hqODE, hqγ, hreflected,
-      hinjective, hqne, hU, hl0, hlt, htu, hue, hinnerJ, hinnerU, hisolate,
-      hrevU, hχ, hχcompact, hχsupport, hχnonneg, hχintegral, hfamily⟩ :=
-    exists_selected_clock_neutral_integrated_correction
-      hδ hδsmall hAB hb hbsupport hΨ hselected hinitial hode hevent i j hij
-      htStar hy hzInner hzOuter hz hρ hi hj hexp S L hL
-  have he : e ∈ Ioo (0 : ℝ) H := (hevent θ0 hselected).1
-  have hJinner : J ⊆ Ioo (0 : ℝ) e := fun _ ht ↦ (hJV ht).2
-  have hf : ContDiff ℝ ∞ f := contDiff_concreteGatedFlux δ (contDiff_clockFeedback A B)
-    (hb.comp (contDiff_const.prodMk contDiff_id))
-  have hγODE (t : ℝ) (ht : t ∈ Icc (0 : ℝ) H) : HasDerivAt γ (f (γ t)) t := by
-    simpa only [γ, f, b0, θ0, zero_smul, sub_zero] using hode θ0 hselected t ht
-  have hbase := retained_branches_base_eq hqγ hreflected
-  -- Extend the incoming base identification to its interval of definition.
-  have hinODE (t : ℝ) (ht : t ∈ Icc (e + e - H) (e + e)) :
-      HasDerivAt (fun s ↦ retainedIncomingBranch Ψ (δ, c) e s 0)
-        (f (retainedIncomingBranch Ψ (δ, c) e t 0)) t := by
-    have hD := GatedFlux.reversal.hasFDerivAt.comp_hasDerivAt t
-      (HasDerivAt.comp_const_sub (e + e) t (hγODE (e + e - t) ⟨by linarith [ht.2],
-        by linarith [ht.1]⟩))
-    have hReversal : f (GatedFlux.reversal (γ (e + e - t))) =
-        -GatedFlux.reversal (f (γ (e + e - t))) := by
-      simpa only [f, concreteGatedFlux, neg_zero, zero_smul, sub_zero] using!
-        (GatedFlux.flux_sub_smul_reversal (fastLogCosh δ) MiddleClock.g cutoff
-          (clockFeedback A B) b0 MiddleClock.g_neg 0 (γ (e + e - t)))
-    have hD' : HasDerivAt (fun s ↦ GatedFlux.reversal (γ (e + e - s)))
-        (f (GatedFlux.reversal (γ (e + e - t)))) t := by
-      rw [hReversal]
-      simpa only [Function.comp_def, map_neg] using! hD
-    simpa only [retainedIncomingBranch, neg_zero, mul_zero, γ, θ0] using hD'
-  have hinNative := retainedIncomingBranch_base_eq_on_native_interval hf he hqODE hinODE
-    (hbase.2 (show e ∈ Icc e (e + e) from ⟨le_rfl, by linarith [he.1]⟩))
-  -- Existence uses only continuity on each compact interval of definition.
-  have hcoeff : ContDiff ℝ ∞ (fun t ↦ fderiv ℝ f (q t)) :=
-    (hf.fderiv_right (by simp)).comp hqSmooth
-  let Sout : Evolution.FundamentalSolution (fun t ↦ fderiv ℝ f (q t)) 0 (Icc (0 : ℝ) H) :=
-    Evolution.fundamentalSolutionIcc hcoeff.continuous.continuousOn
-      ⟨0, ⟨le_rfl, he.1.le.trans he.2.le⟩⟩
-  let Sin : Evolution.FundamentalSolution
-      (fun t ↦ fderiv ℝ f (q t)) (e + e) (Icc (e + e - H) (e + e)) :=
-    Evolution.fundamentalSolutionIcc hcoeff.continuous.continuousOn
-      ⟨e + e, ⟨by linarith [he.1, he.2], le_rfl⟩⟩
-  refine ⟨q, J, U, hprofile, hqSmooth, hqODE, hqγ, hbase.1, hinNative, hJ, hJinner, hU,
-    hisolate, hinjective, hqγ ⟨htStar.1.le, (htStar.2.trans he.2).le⟩ ▸ hinnerU ⟨hlt.le, htu.le⟩,
-    r tStar, hrStar, Sout, Sin,
-    fun t ht ↦ Evolution.FundamentalSolution.propagator_eq_of_orbit_eqOn he.1.le he.2.le hqγ S
-      Sout ht, fun target η hη ↦ ?_⟩
-  obtain ⟨P, hP, hPc, hsupport, hPjets, -, -, -, hIntegralGamma, hsmall, hhyper, hgn⟩ :=
-    hfamily target η hη
-  exact ⟨P, hP, hPc, hsupport, (fun t ↦ ⟨(hPjets t).1, (hPjets t).2.1⟩),
-    (retainedOutgoingBranch_response_eq hΨ he.1.le he.2.le hqγ S Sout P L).trans hIntegralGamma,
-    fun t ht ↦ fderiv_of_notMem_tsupport ℝ fun hp ↦ not_lt_of_ge ht.1
-      (hJinner (hisolate (hsupport (tsupport_fderiv_subset ℝ hp)))).2,
-    retainedIncomingBranch_response_eq_zero he.1.le hJinner hisolate hsupport Sin L,
-    hsmall, hhyper, hgn⟩
 
 /-- Cancel the moving second mismatch for one retained selected flux.
 

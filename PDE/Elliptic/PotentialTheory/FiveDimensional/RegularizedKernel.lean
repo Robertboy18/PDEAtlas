@@ -12,6 +12,7 @@ public import PDE.Spaces.Sobolev.Approximation.Density.ClassicalDerivatives
 public import Mathlib.Analysis.SpecialFunctions.Pow.Integral
 public import Mathlib.MeasureTheory.Integral.PeakFunction
 import CAS.ExactTactic
+import PDE.Analysis.Integration.Radial
 
 /-!
 # Smooth regularization of the five-dimensional Newtonian kernel
@@ -234,18 +235,10 @@ theorem fiveDimensionalRegularizedTraceDensity_unitMass :
     (∫ X : ℝ^5,
       (15 / (8 * Real.pi ^ 2)) *
         (‖X‖ ^ 2 + 1) ^ (-(7 / 2 : ℝ))) = 1 := by
-  have hrad : (∫ r : ℝ in Set.Ioi 0, r ^ (Module.finrank ℝ ℝ^5 - 1) •
-      (r ^ 2 + 1) ^ (-(7 / 2 : ℝ))) = 1 / 5 := by
-    simpa [add_comm, smul_eq_mul] using integral_Ioi_fiveDimensionalRegularizedMass
-  have harea : (Module.finrank ℝ ℝ^5 : ℝ) * (volume : Measure ℝ^5).real (Metric.ball 0 1) =
-      8 * Real.pi ^ 2 / 3 := by
-    rw [← Measure.toSphere_real_apply_univ]
-    have := PDE.Analysis.unitSphereArea_eq 5
-    rw [PDE.Analysis.unitSphereArea, PDE.Analysis.unitBallVolume_five] at this
-    rw [measureReal_def, this]
-    ring
-  rw [integral_const_mul, integral_fun_norm_addHaar volume fun r ↦ (r ^ 2 + 1) ^ (-(7 / 2 : ℝ)),
-    hrad, nsmul_eq_mul, smul_eq_mul, ← mul_assoc (Module.finrank ℝ ℝ^5 : ℝ), harea]
+  have hrad : (∫ r : ℝ in Set.Ioi 0, r ^ (5 - 1) * (r ^ 2 + 1) ^ (-(7 / 2 : ℝ))) = 1 / 5 := by
+    simpa [add_comm] using integral_Ioi_fiveDimensionalRegularizedMass
+  rw [integral_const_mul, PDE.Analysis.integral_radial 5 fun r ↦ (r ^ 2 + 1) ^ (-(7 / 2 : ℝ)),
+    hrad, PDE.Analysis.unitSphereArea_eq, PDE.Analysis.unitBallVolume_five]
   field_simp [Real.pi_ne_zero]
   ring
 

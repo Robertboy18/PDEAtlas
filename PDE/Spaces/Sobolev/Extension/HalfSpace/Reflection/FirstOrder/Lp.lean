@@ -284,14 +284,15 @@ theorem oddExtendLp_apply_ae (u : DerivLp n p ℝ^n₊) :
   simpa [oddExtendLp,
     SobolevSpace.Extension.Lp.extensionByZero] using hdiff
 
-/-- Transfer a concrete upper-half-space representative through even `Lp`
-reflection. -/
-theorem evenExtendLp_apply_ae_of_ae_eq (u : DerivLp n p ℝ^n₊)
+omit [Fact (1 ≤ p)] in
+/-- A representative of an upper-half-space `L^p` class may be exchanged for an almost
+everywhere equal function, in the upper indicator and, after reflection, in the lower one. -/
+private theorem indicator_upper_lower_congr_of_ae_eq (u : DerivLp n p ℝ^n₊)
     (f : ℝ^n → ℝ)
     (hu : (u : ℝ^n → ℝ) =ᵐ[domainMeasure n ℝ^n₊] f) :
-    ((evenExtendLp (n := n) (p := p) u : DerivLp n p Set.univ) :
-        ℝ^n → ℝ) =ᵐ[volume]
-      fun x ↦ ℝ^n₊.indicator f x +
+    ∀ᵐ x ∂(volume : Measure (ℝ^n)),
+      ℝ^n₊.indicator (fun y ↦ (u : ℝ^n → ℝ) y) x = ℝ^n₊.indicator f x ∧
+      ℝ^n₋.indicator (fun y ↦ (u : ℝ^n → ℝ) (SobolevSpace.HalfSpace.reflect n y)) x =
         ℝ^n₋.indicator (fun y ↦ f (SobolevSpace.HalfSpace.reflect n y)) x := by
   have huVolume : ∀ᵐ x ∂(volume : Measure (ℝ^n)), x ∈ ℝ^n₊ →
       (u : ℝ^n → ℝ) x = f x := by
@@ -305,11 +306,23 @@ theorem evenExtendLp_apply_ae_of_ae_eq (u : DerivLp n p ℝ^n₊)
         f (SobolevSpace.HalfSpace.reflect n x) := by
     simpa [domainMeasure] using
       (MeasureTheory.ae_restrict_iff' (measurableSet_lower (n := n))).1 hreflect
+  filter_upwards [huVolume, hreflectVolume] with x hux hrefx
+  constructor
+  · by_cases hxU : x ∈ ℝ^n₊ <;> simp [hxU, hux]
+  · by_cases hxL : x ∈ ℝ^n₋ <;> simp [hxL, hrefx]
+
+/-- Transfer a concrete upper-half-space representative through even `Lp`
+reflection. -/
+theorem evenExtendLp_apply_ae_of_ae_eq (u : DerivLp n p ℝ^n₊)
+    (f : ℝ^n → ℝ)
+    (hu : (u : ℝ^n → ℝ) =ᵐ[domainMeasure n ℝ^n₊] f) :
+    ((evenExtendLp (n := n) (p := p) u : DerivLp n p Set.univ) :
+        ℝ^n → ℝ) =ᵐ[volume]
+      fun x ↦ ℝ^n₊.indicator f x +
+        ℝ^n₋.indicator (fun y ↦ f (SobolevSpace.HalfSpace.reflect n y)) x := by
   filter_upwards [evenExtendLp_apply_ae (n := n) (p := p) u,
-    huVolume, hreflectVolume] with x hext hux hrefx
-  rw [hext]
-  by_cases hxU : x ∈ ℝ^n₊ <;> by_cases hxL : x ∈ ℝ^n₋ <;>
-    simp [hxU, hxL, hux, hrefx]
+    indicator_upper_lower_congr_of_ae_eq (n := n) (p := p) u f hu] with x hext h
+  exact hext.trans (congrArg₂ (· + ·) h.1 h.2)
 
 /-- Transfer a concrete upper-half-space representative through odd `Lp`
 reflection. -/
@@ -320,23 +333,25 @@ theorem oddExtendLp_apply_ae_of_ae_eq (u : DerivLp n p ℝ^n₊)
         ℝ^n → ℝ) =ᵐ[volume]
       fun x ↦ ℝ^n₊.indicator f x -
         ℝ^n₋.indicator (fun y ↦ f (SobolevSpace.HalfSpace.reflect n y)) x := by
-  have huVolume : ∀ᵐ x ∂(volume : Measure (ℝ^n)), x ∈ ℝ^n₊ →
-      (u : ℝ^n → ℝ) x = f x := by
-    simpa [domainMeasure] using
-      (MeasureTheory.ae_restrict_iff' (measurableSet_upper (n := n))).1 hu
-  have hreflect :=
-    (SobolevSpace.HalfSpace.measurePreserving_reflect_restrict_lower
-      (n := n)).quasiMeasurePreserving.ae_eq_comp hu
-  have hreflectVolume : ∀ᵐ x ∂(volume : Measure (ℝ^n)), x ∈ ℝ^n₋ →
-      (u : ℝ^n → ℝ) (SobolevSpace.HalfSpace.reflect n x) =
-        f (SobolevSpace.HalfSpace.reflect n x) := by
-    simpa [domainMeasure] using
-      (MeasureTheory.ae_restrict_iff' (measurableSet_lower (n := n))).1 hreflect
   filter_upwards [oddExtendLp_apply_ae (n := n) (p := p) u,
-    huVolume, hreflectVolume] with x hext hux hrefx
-  rw [hext]
-  by_cases hxU : x ∈ ℝ^n₊ <;> by_cases hxL : x ∈ ℝ^n₋ <;>
-    simp [hxU, hxL, hux, hrefx]
+    indicator_upper_lower_congr_of_ae_eq (n := n) (p := p) u f hu] with x hext h
+  exact hext.trans (congrArg₂ (· - ·) h.1 h.2)
+
+omit [Fact (1 ≤ p)] in
+/-- Off the boundary hyperplane, which is a null set, the sum of an upper and a lower indicator
+is the piecewise function that selects by the sign of the normal coordinate. -/
+private theorem indicator_upper_add_indicator_lower_ae (a b : ℝ^n → ℝ) :
+    (fun x ↦ ℝ^n₊.indicator a x + ℝ^n₋.indicator b x) =ᵐ[volume]
+      fun x ↦ if x (PDE.Common.lastIndex (n := n)) < 0 then b x else a x := by
+  have haxis : ∀ᵐ x ∂(volume : Measure (ℝ^n)), x ∉ boundary n := by
+    rw [MeasureTheory.ae_iff]
+    simpa using volume_boundary n
+  filter_upwards [haxis] with x hxb
+  have hne : x (PDE.Common.lastIndex (n := n)) ≠ 0 := by
+    simpa [boundary] using hxb
+  rcases lt_or_gt_of_ne hne with hneg | hpos
+  · simp [upper, lower, hneg, not_lt.mpr hneg.le]
+  · simp [upper, lower, hpos, not_lt.mpr hpos.le]
 
 /-- Literal piecewise representative of an even `Lp` reflection.  Its value
 on the reflecting hyperplane is irrelevant and is removed by the hyperplane
@@ -347,18 +362,10 @@ theorem evenExtendLp_apply_ae_piecewise_of_ae_eq (u : DerivLp n p ℝ^n₊)
     ((evenExtendLp (n := n) (p := p) u : DerivLp n p Set.univ) :
         ℝ^n → ℝ) =ᵐ[volume]
       fun x ↦ if x (PDE.Common.lastIndex (n := n)) < 0 then
-        f (SobolevSpace.HalfSpace.reflect n x) else f x := by
-  have haxis : ∀ᵐ x ∂(volume : Measure (ℝ^n)), x ∉ boundary n := by
-    rw [MeasureTheory.ae_iff]
-    simpa using volume_boundary n
-  filter_upwards [evenExtendLp_apply_ae_of_ae_eq
-    (n := n) (p := p) u f hu, haxis] with x hx hxb
-  rw [hx]
-  have hne : x (PDE.Common.lastIndex (n := n)) ≠ 0 := by
-    simpa [boundary] using hxb
-  rcases lt_or_gt_of_ne hne with hneg | hpos
-  · simp [upper, lower, hneg, not_lt.mpr hneg.le]
-  · simp [upper, lower, hpos, not_lt.mpr hpos.le]
+        f (SobolevSpace.HalfSpace.reflect n x) else f x :=
+  (evenExtendLp_apply_ae_of_ae_eq (n := n) (p := p) u f hu).trans
+    (indicator_upper_add_indicator_lower_ae (n := n) f
+      fun y ↦ f (SobolevSpace.HalfSpace.reflect n y))
 
 /-- Literal piecewise representative of an odd `Lp` reflection. -/
 theorem oddExtendLp_apply_ae_piecewise_of_ae_eq (u : DerivLp n p ℝ^n₊)
@@ -368,17 +375,10 @@ theorem oddExtendLp_apply_ae_piecewise_of_ae_eq (u : DerivLp n p ℝ^n₊)
         ℝ^n → ℝ) =ᵐ[volume]
       fun x ↦ if x (PDE.Common.lastIndex (n := n)) < 0 then
         -f (SobolevSpace.HalfSpace.reflect n x) else f x := by
-  have haxis : ∀ᵐ x ∂(volume : Measure (ℝ^n)), x ∉ boundary n := by
-    rw [MeasureTheory.ae_iff]
-    simpa using volume_boundary n
-  filter_upwards [oddExtendLp_apply_ae_of_ae_eq
-    (n := n) (p := p) u f hu, haxis] with x hx hxb
-  rw [hx]
-  have hne : x (PDE.Common.lastIndex (n := n)) ≠ 0 := by
-    simpa [boundary] using hxb
-  rcases lt_or_gt_of_ne hne with hneg | hpos
-  · simp [upper, lower, hneg, not_lt.mpr hneg.le]
-  · simp [upper, lower, hpos, not_lt.mpr hpos.le]
+  refine (oddExtendLp_apply_ae_of_ae_eq (n := n) (p := p) u f hu).trans ?_
+  simpa only [Set.indicator_neg, ← sub_eq_add_neg] using
+    indicator_upper_add_indicator_lower_ae (n := n) f
+      fun y ↦ -f (SobolevSpace.HalfSpace.reflect n y)
 
 /-- Restricting an even reflection back to the upper half-space recovers the
 original `Lᵖ` class. -/
@@ -542,28 +542,10 @@ theorem norm_evenExtendLp (u : DerivLp n 2 ℝ^n₊) :
 theorem norm_oddExtendLp_sq (u : DerivLp n 2 ℝ^n₊) :
     ‖oddExtendLp (n := n) (p := (2 : ℝ≥0∞)) u‖ ^ 2 =
       2 * ‖u‖ ^ 2 := by
-  let v := pullbackLower (n := n) (p := (2 : ℝ≥0∞)) u
-  have horth := inner_embedUpper_embedLower_eq_zero (n := n) u v
-  calc
-    ‖oddExtendLp (n := n) (p := (2 : ℝ≥0∞)) u‖ ^ 2 =
-        ‖embedUpper (n := n) (p := (2 : ℝ≥0∞)) u -
-          embedLower (n := n) (p := (2 : ℝ≥0∞)) v‖ ^ 2 := by
-            rfl
-    _ = ‖embedUpper (n := n) (p := (2 : ℝ≥0∞)) u‖ ^ 2 +
-        ‖embedLower (n := n) (p := (2 : ℝ≥0∞)) v‖ ^ 2 :=
-      by simpa [pow_two] using norm_sub_sq_eq_norm_sq_add_norm_sq_real horth
-    _ = ‖u‖ ^ 2 + ‖v‖ ^ 2 := by
-      rw [show ‖embedUpper (n := n) (p := (2 : ℝ≥0∞)) u‖ = ‖u‖ by
-          exact SobolevSpace.Extension.Lp.norm_zeroExtendLp
-            (n := n) (p := (2 : ℝ≥0∞)) (measurableSet_upper (n := n)) u,
-        show ‖embedLower (n := n) (p := (2 : ℝ≥0∞)) v‖ = ‖v‖ by
-          exact SobolevSpace.Extension.Lp.norm_zeroExtendLp
-            (n := n) (p := (2 : ℝ≥0∞)) (measurableSet_lower (n := n)) v]
-    _ = 2 * ‖u‖ ^ 2 := by
-      have hvnorm : ‖v‖ = ‖u‖ := by
-        exact (pullbackLower (n := n) (p := (2 : ℝ≥0∞))).norm_map u
-      rw [hvnorm]
-      ring
+  rw [← norm_evenExtendLp_sq (n := n) u]
+  exact congrArg (· ^ 2) (norm_sub_eq_norm_add ((real_inner_comm _ _).trans
+    (inner_embedUpper_embedLower_eq_zero (n := n) u
+      (pullbackLower (n := n) (p := (2 : ℝ≥0∞)) u))))
 
 /-- Every scalar odd reflection multiplies the `L²` norm by `√2`. -/
 theorem norm_oddExtendLp (u : DerivLp n 2 ℝ^n₊) :

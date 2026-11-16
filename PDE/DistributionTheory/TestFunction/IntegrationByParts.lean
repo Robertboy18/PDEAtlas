@@ -25,7 +25,7 @@ parts formula of Evans, Appendix C.2, Theorem 2, without its boundary term; it i
 Fréchet derivatives in an arbitrary direction
 (`integral_smul_fderiv_eq_neg_fderiv_smul_of_integrable`); here it is specialized to the
 coordinate directions `eᵢ` and to the `partialDeriv` and `laplacian` notation used throughout
-LeanPDE. Iterating once gives the formal self-adjointness of the Laplacian, which is Green's
+PDEAtlas. Iterating once gives the formal self-adjointness of the Laplacian, which is Green's
 formula (iii) of Appendix C.2, Theorem 3, without boundary terms.
 The vector-valued statement is kept so that scalar conservation laws and finite-dimensional
 systems share one weak formulation. The vector-valued formula uses Mathlib's Bochner integral,
@@ -217,7 +217,7 @@ theorem integrable_laplacian (φ : 𝓓(U, ℝ)) :
     φ.hasCompactSupport_laplacian
 
 /-- Mathlib's bundled test-function Laplacian agrees pointwise with the
-classical Euclidean Laplacian used by LeanPDE. -/
+classical Euclidean Laplacian used by PDEAtlas. -/
 @[simp]
 theorem laplacianCLM_apply_eq_laplacian
     (φ : 𝓓(U, ℝ)) (x : ℝ^n) :

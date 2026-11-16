@@ -10,6 +10,7 @@ public import Mathlib.MeasureTheory.Integral.Prod
 public import Mathlib.MeasureTheory.Function.LpSeminorm.LpNorm
 import Mathlib.MeasureTheory.Function.L2Space
 import PDE.Analysis.MeasureTheory.LpNorm
+import PDE.Analysis.MeasureTheory.Lp.SquareIntegral
 
 /-!
 # Integrating a uniformly bounded family of L2 functions
@@ -58,22 +59,7 @@ theorem memLp_integral_of_uniform_bound
   have hG : Integrable G ν := hsq.integral_prod_right
   have hdom : ∀ᵐ x ∂ν, I x ^ 2 ≤ η.real Set.univ * G x := by
     filter_upwards [hsq.prod_left_ae, hF.prodMk_right] with x hx hxm
-    have ht : MemLp (fun t ↦ F (t, x)) 2 η :=
-      (memLp_two_iff_integrable_sq hxm).2 hx
-    have h1 : MemLp (fun _ : T ↦ (1 : ℝ)) 2 η := memLp_const 1
-    have hcs : |I x| ≤
-        lpNorm (fun t ↦ F (t, x)) 2 η * lpNorm (fun _ : T ↦ (1 : ℝ)) 2 η := by
-      simpa only [I, mul_one] using
-        abs_integral_mul_le_lpNorm_two_mul_lpNorm_two ht h1
-    calc
-      I x ^ 2 = |I x| ^ 2 := (sq_abs _).symm
-      _ ≤ (lpNorm (fun t ↦ F (t, x)) 2 η *
-          lpNorm (fun _ : T ↦ (1 : ℝ)) 2 η) ^ 2 :=
-        pow_le_pow_left₀ (abs_nonneg _) hcs 2
-      _ = η.real Set.univ * G x := by
-        rw [mul_pow, ← ht.integral_sq_eq_lpNorm_sq, ← h1.integral_sq_eq_lpNorm_sq]
-        simp only [one_pow, integral_const, smul_eq_mul, mul_one, G]
-        exact mul_comm _ _
+    exact sq_integral_le_measureReal_mul_integral_sq ((memLp_two_iff_integrable_sq hxm).2 hx)
   have hIint : Integrable (fun x ↦ I x ^ 2) ν := by
     apply (hG.const_mul (η.real Set.univ)).mono' (hI.pow 2)
     filter_upwards [hdom] with x hx

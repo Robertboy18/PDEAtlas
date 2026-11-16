@@ -8,6 +8,7 @@ module
 
 public import PDE.Analysis.Topology.Order.FirstZero
 public import PDE.Hyperbolic.Models.Wave.Duhamel.CauchyTrace
+import PDE.Analysis.Normed.Group.CompactSupport
 import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.FreeWave
 import CAS.ExactTactic
 
@@ -209,15 +210,11 @@ theorem exists_pos_uniform_tail_of_compact_cauchy_three {u : ℝ^4 → ℝ} {f :
   have htime : ∀ᶠ r : ℝ in 𝓝[>] 0, r < d := nhdsWithin_le_nhds (gt_mem_nhds hd.1)
   obtain ⟨δ, ⟨hδsmall, hδd⟩, hδ⟩ := ((hright.and htime).and eventually_mem_nhdsWithin).exists
   have hδpos : 0 < δ := hδ
-  obtain ⟨Rg, _, hgR⟩ := hgc.exists_pos_le_norm
-  obtain ⟨Rh, _, hhR⟩ := hhc.exists_pos_le_norm
-  let R := max Rg Rh
+  obtain ⟨R, -, hgR, hhR⟩ := hgc.exists_common_radius hhc
   refine ⟨δ, hδpos, R + δ, ?_⟩
   intro t ht x hx
   have hzero := SmallData.kirchhoffFormula_hasForwardSupport
-    (hg.of_le (by norm_num)) hh.continuous
-    (fun y hy ↦ hgR y (le_of_lt ((le_max_left Rg Rh).trans_lt hy)))
-    (fun y hy ↦ hhR y (le_of_lt ((le_max_right Rg Rh).trans_lt hy))) t ht.1 x
+    (hg.of_le (by norm_num)) hh.continuous hgR hhR t ht.1 x
     (by linarith [ht.2] : R + t < ‖x‖)
   have he := herr t ⟨ht.1, ht.2.trans hδd.le⟩ x
   change kirchhoffFormula g h x t = 0 at hzero

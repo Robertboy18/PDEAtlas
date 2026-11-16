@@ -13,7 +13,7 @@ public import PDE.FDeriv.PartialDeriv
 # Coordinate derivatives of Schwartz functions
 
 Coordinate differentiation preserves Schwartz space through Mathlib's bundled
-directional derivative. Coercing the result to a function agrees with LeanPDE's
+directional derivative. Coercing the result to a function agrees with PDEAtlas's
 classical coordinate derivative, so the same notation supports both operations.
 -/
 

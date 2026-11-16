@@ -12,7 +12,7 @@ public import Mathlib.Analysis.Distribution.Support
 # Translation of tempered distributions
 
 Translation on tempered distributions is the transpose of translation on Schwartz
-functions. The convention agrees with LeanPDE's translation on function spaces: translation by
+functions. The convention agrees with PDEAtlas's translation on function spaces: translation by
 `a` corresponds to `u(x + a)` for a regular distribution induced by a function `u`.
 -/
 

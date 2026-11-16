@@ -175,10 +175,10 @@ def decodeMap (encoded : String) : Except String MapData := do
 /-- Decode a map block payload previously serialized with `toJson`. -/
 private def decodeMapBlock (encoded : String) : MapBlockData :=
   match Json.parse encoded with
-  | .error error => panic! s!"LeanPDE textbook map JSON is malformed: {error}"
+  | .error error => panic! s!"PDEAtlas textbook map JSON is malformed: {error}"
   | .ok value =>
     match fromJson? value with
-    | .error error => panic! s!"LeanPDE textbook map data is malformed: {error}"
+    | .error error => panic! s!"PDEAtlas textbook map data is malformed: {error}"
     | .ok payload => payload
 
 /-- Lean declarations of every production `cas`, `cega` or `#cas` call site. -/
@@ -696,11 +696,11 @@ private def mkMapBlock (scope : String) : PartElabM (TSyntax `term) := do
   let map ←
     match decodeMap LeanPDE.TextbookMapData.json with
     | .ok map => pure map
-    | .error error => throwError "LeanPDE textbook map data is malformed: {error}"
+    | .error error => throwError "PDEAtlas textbook map data is malformed: {error}"
   let ledger ←
     match LeanPDE.Ledger.decodeLedger LeanPDE.CasLedger.json with
     | .ok ledger => pure ledger
-    | .error error => throwError "LeanPDE computation ledger data is malformed: {error}"
+    | .error error => throwError "PDEAtlas computation ledger data is malformed: {error}"
   let state := Informal.Environment.informalExt.getState (← getEnv)
   let checked := ledgerDeclarations ledger
   let documents := map.documents.map (enrichDocument state checked)
@@ -715,7 +715,7 @@ private def mkMapBlock (scope : String) : PartElabM (TSyntax `term) := do
       location.cards.foldl (init := acc) fun acc card ↦
         if card.known then acc else acc.push card.card.label
   unless unknown.isEmpty do
-    throwError "LeanPDE textbook map cites cards that are not registered Blueprint nodes: {unknown}"
+    throwError "The textbook map cites cards that are not registered Blueprint nodes: {unknown}"
   let payload : MapBlockData := { scope, summary := map.summary, documents }
   let payloadJson := Json.compress (toJson payload)
   ``(Verso.Doc.Block.other

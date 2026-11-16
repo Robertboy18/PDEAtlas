@@ -117,14 +117,10 @@ theorem partialDerivWithin_partialDerivWithin_fun_sub (i j : Fin n) (hs : Unique
     partialDerivWithin j (partialDerivWithin i (fun y ↦ f y - g y) s) s x =
       partialDerivWithin j (partialDerivWithin i f s) s x -
         partialDerivWithin j (partialDerivWithin i g s) s x := by
-  have h1 : EqOn (partialDerivWithin i (fun y ↦ f y - g y) s)
-      (fun y ↦ partialDerivWithin i f s y - partialDerivWithin i g s y) s := fun y hy ↦
-    partialDerivWithin_fun_sub i (hs y hy) ((hf.differentiableOn (by norm_num)) y hy)
-      ((hg.differentiableOn (by norm_num)) y hy)
-  rw [partialDerivWithin_congr j h1 hx]
-  exact partialDerivWithin_fun_sub j (hs x hx)
-    (((hf.partialDerivWithin (m := 1) i hs (by norm_num)).differentiableOn one_ne_zero) x hx)
-    (((hg.partialDerivWithin (m := 1) i hs (by norm_num)).differentiableOn one_ne_zero) x hx)
+  have h := partialDerivWithin_partialDerivWithin_fun_add (f := fun y ↦ f y - g y) i j hs hx
+    (hf.sub hg) hg
+  simp only [sub_add_cancel] at h
+  exact eq_sub_of_add_eq h.symm
 
 /-- For a function `C²` on the whole space, two partial derivatives within a set with unique
 derivatives are the ordinary ones at points of the set. -/

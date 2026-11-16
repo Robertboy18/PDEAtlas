@@ -187,6 +187,29 @@ theorem spatialDirichletIntegrand_eval_eq_list_sum_partialDeriv_mul {n : Nat}
       change Verified.Expr.eval p (spatialDirichletRaw rest u v) = _ at ih
       rw [ih]
 
+/-- A weak residual integrand `w v + ∇ₓu · ∇ₓv - f v` with any time term `w` evaluates to
+`w v + ∑ ∂ᵢu ∂ᵢv - f v`, the sum over the named spatial coordinates. -/
+private theorem eval_normalize_mul_add_spatialDirichlet_sub {n : Nat}
+    (spatial : List (Verified.Expr.SymVar n)) (w u f v : Verified.Expr (Fin n)) (p : ℝ^n)
+    (hu : u.ValidAt p) (hv : v.ValidAt p) :
+    (Verified.Expr.Alg.normalize
+        (w * v + spatialDirichletIntegrand spatial u v - f * v)).eval p =
+      w.eval p * v.eval p +
+      (spatial.map fun coord ↦
+        (∂[coord.idx] (fun q : ℝ^n ↦ u.eval q)) p *
+          (∂[coord.idx] (fun q : ℝ^n ↦ v.eval q)) p).sum -
+      f.eval p * v.eval p := by
+  change
+    Verified.Expr.eval (fun k : Fin n ↦ p k)
+        (Verified.Expr.Alg.normalize
+          (w * v + spatialDirichletIntegrand spatial u v - f * v)) = _
+  rw [Verified.Expr.Alg.eval_normalize]
+  change
+    w.eval p * v.eval p + (spatialDirichletIntegrand spatial u v).eval p -
+      f.eval p * v.eval p = _
+  rw [spatialDirichletIntegrand_eval_eq_list_sum_partialDeriv_mul
+    (spatial := spatial) (u := u) (v := v) (p := p) hu hv]
+
 /-- Symbolic weak heat-equation residual integrand
 `u_t v + ∇ₓu · ∇ₓv - f v`.
 
@@ -215,32 +238,8 @@ theorem heatWeakResidualIntegrand_eval_eq_time_mul_add_spatial_sum_sub {n : Nat}
           (∂[coord.idx] (fun q : ℝ^n ↦ v.eval q)) p).sum -
       f.eval p * v.eval p := by
   unfold heatWeakResidualIntegrand
-  change
-    Verified.Expr.eval (fun k : Fin n ↦ p k)
-        (Verified.Expr.Alg.normalize
-          (Verified.Expr.closedPartial t.idx u * v +
-            spatialDirichletIntegrand spatial u v - f * v)) =
-      (∂[t.idx] (fun q : ℝ^n ↦ u.eval q)) p *
-        v.eval p +
-      (spatial.map fun coord ↦
-        (∂[coord.idx] (fun q : ℝ^n ↦ u.eval q)) p *
-          (∂[coord.idx] (fun q : ℝ^n ↦ v.eval q)) p).sum -
-      f.eval p * v.eval p
-  rw [Verified.Expr.Alg.eval_normalize]
-  change
-    Verified.Expr.eval (fun k : Fin n ↦ p k) (Verified.Expr.closedPartial t.idx u) *
-        v.eval p +
-      (spatialDirichletIntegrand spatial u v).eval p - f.eval p * v.eval p =
-      (∂[t.idx] (fun q : ℝ^n ↦ u.eval q)) p *
-        v.eval p +
-      (spatial.map fun coord ↦
-        (∂[coord.idx] (fun q : ℝ^n ↦ u.eval q)) p *
-          (∂[coord.idx] (fun q : ℝ^n ↦ v.eval q)) p).sum -
-      f.eval p * v.eval p
-  rw [Verified.Expr.closedPartial_eval_eq_partialDeriv
-    (expr := u) (x := p) (i := t.idx) hu]
-  rw [spatialDirichletIntegrand_eval_eq_list_sum_partialDeriv_mul
-    (spatial := spatial) (u := u) (v := v) (p := p) hu hv]
+  rw [eval_normalize_mul_add_spatialDirichlet_sub spatial _ u f v p hu hv,
+    Verified.Expr.closedPartial_eval_eq_partialDeriv (expr := u) (x := p) (i := t.idx) hu]
 
 /-- Symbolic weak wave-equation residual integrand
 `u_tt v + ∇ₓu · ∇ₓv - f v`.
@@ -272,35 +271,9 @@ theorem waveWeakResidualIntegrand_eval_eq_time2_mul_add_spatial_sum_sub {n : Nat
           (∂[coord.idx] (fun q : ℝ^n ↦ v.eval q)) p).sum -
       f.eval p * v.eval p := by
   unfold waveWeakResidualIntegrand
-  change
-    Verified.Expr.eval (fun k : Fin n ↦ p k)
-        (Verified.Expr.Alg.normalize
-          (Verified.Expr.closedPartial t.idx (Verified.Expr.closedPartial t.idx u) * v +
-            spatialDirichletIntegrand spatial u v - f * v)) =
-      (∂[t.idx]
-          (fun q : ℝ^n ↦ (Verified.Expr.closedPartial t.idx u).eval q)) p *
-        v.eval p +
-      (spatial.map fun coord ↦
-        (∂[coord.idx] (fun q : ℝ^n ↦ u.eval q)) p *
-          (∂[coord.idx] (fun q : ℝ^n ↦ v.eval q)) p).sum -
-      f.eval p * v.eval p
-  rw [Verified.Expr.Alg.eval_normalize]
-  change
-    Verified.Expr.eval (fun k : Fin n ↦ p k)
-        (Verified.Expr.closedPartial t.idx (Verified.Expr.closedPartial t.idx u)) *
-        v.eval p +
-      (spatialDirichletIntegrand spatial u v).eval p - f.eval p * v.eval p =
-      (∂[t.idx]
-          (fun q : ℝ^n ↦ (Verified.Expr.closedPartial t.idx u).eval q)) p *
-        v.eval p +
-      (spatial.map fun coord ↦
-        (∂[coord.idx] (fun q : ℝ^n ↦ u.eval q)) p *
-          (∂[coord.idx] (fun q : ℝ^n ↦ v.eval q)) p).sum -
-      f.eval p * v.eval p
-  rw [Verified.Expr.closedPartial_eval_eq_partialDeriv
-    (expr := Verified.Expr.closedPartial t.idx u) (x := p) (i := t.idx) hdt]
-  rw [spatialDirichletIntegrand_eval_eq_list_sum_partialDeriv_mul
-    (spatial := spatial) (u := u) (v := v) (p := p) hu hv]
+  rw [eval_normalize_mul_add_spatialDirichlet_sub spatial _ u f v p hu hv,
+    Verified.Expr.closedPartial_eval_eq_partialDeriv
+      (expr := Verified.Expr.closedPartial t.idx u) (x := p) (i := t.idx) hdt]
 
 /-- Symbolic modified Helmholtz weak-form residual integrand `∇u · ∇v + κ u v - f v`.
 

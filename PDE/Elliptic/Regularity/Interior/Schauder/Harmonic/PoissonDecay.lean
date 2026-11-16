@@ -92,25 +92,9 @@ theorem meanSquare_gradient_oscillation_le_of_dirichlet_eq_divergence
       _ ≤ _ := mul_le_mul_of_nonneg_left
         ((Finset.single_le_sum (fun j _ ↦ sq_nonneg ‖derivCoordCLM j w‖)
           (Finset.mem_univ i)).trans henergy) (inv_nonneg.mpr measureReal_nonneg)
-  have hrR' : r ≤ R := hrR.trans (by linarith)
-  have herrSmall := (setAverage_norm_sq_le_of_radius_le hr hrR' (hd.sub he)).trans
-    (mul_le_mul_of_nonneg_left herror (pow_nonneg (div_nonneg hR.le hr.le) n))
-  have hcompare := setAverage_oscillation_sq_le_comparison
-    (hd.mono_measure (Measure.restrict_mono (ball_subset_ball hrR') le_rfl))
-    (he.mono_measure (Measure.restrict_mono (ball_subset_ball hrR') le_rfl))
-  have hdecay := meanSquare_gradient_oscillation_le_of_dirichlet_eq_zero
-    H hw hr hrR i (⨍ y in ball z R, d y)
-  have houter := setAverage_norm_sub_sq_le he hd
-    (⨍ y in ball z R, d y)
-  simp only [norm_sub_rev (e _) (d _)] at houter
-  have hscaled := mul_le_mul_of_nonneg_left houter
-    (sq_nonneg ((((2 : ℝ) ^ (2 * n + 3) * n) * (r / R))))
-  change (⨍ x in ball z r, ‖e x - ⨍ y in ball z r, e y‖ ^ 2) ≤ _ at hdecay
-  change (⨍ x in ball z r, ‖d x - ⨍ y in ball z r, d y‖ ^ 2) ≤ _
-  have hscaledError := mul_le_mul_of_nonneg_left herror
-    (sq_nonneg ((((2 : ℝ) ^ (2 * n + 3) * n) * (r / R))))
-  simp only [Pi.sub_apply] at herrSmall
-  dsimp only [d, e] at herrSmall hcompare hscaled hdecay hscaledError ⊢
-  nlinarith only [herrSmall, hcompare, hscaled, hdecay, hscaledError]
+  exact setAverage_oscillation_sq_le_of_comparison_decay hr (hrR.trans (by linarith)) hd he
+    (sq_nonneg _) herror
+    (meanSquare_gradient_oscillation_le_of_dirichlet_eq_zero H hw hr hrR i
+      (⨍ y in ball z R, d y))
 
 end SobolevSpace.GraphSpace

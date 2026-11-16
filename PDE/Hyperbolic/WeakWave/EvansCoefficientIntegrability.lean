@@ -103,6 +103,20 @@ theorem integrable_bounded_operator_pairing {μ : Measure ℝ} {C : ℝ → V �
   filter_upwards [hbound] with t ht
   simpa only [Real.norm_eq_abs, mul_assoc] using ht
 
+/-- A pairing that is integrable over `(a, b]` with the `L²` class of Evans's backward primitive
+is interval integrable over `[a, σ]` with the primitive itself: the class and the primitive agree
+almost everywhere on `(a, b]`, and `(a, σ] ⊆ (a, b]`. -/
+private theorem intervalIntegrable_of_backwardTimePrimitiveLp {F : ℝ → V → ℝ}
+    (u : Lp V 2 (volume.restrict (Set.Ioc a b))) (hab : a ≤ b) {σ : ℝ} (hσ : σ ∈ Set.Icc a b)
+    (h : Integrable (fun t ↦ F t (backwardTimePrimitiveLp u hab σ hσ t))
+      (volume.restrict (Set.Ioc a b))) :
+    IntervalIntegrable (fun t ↦ F t (backwardTimePrimitive (fun r ↦ u r) σ t)) volume a σ := by
+  rw [intervalIntegrable_iff_integrableOn_Ioc_of_le hσ.1]
+  refine (h.congr ?_).mono_measure
+    ((volume : Measure ℝ).restrict_mono_set fun t ht ↦ ⟨ht.1, ht.2.trans hσ.2⟩)
+  filter_upwards [backwardTimePrimitiveLp_apply_ae u hab σ hσ] with t ht
+  rw [ht]
+
 /-- The quadratic coefficient-derivative pairing with Evans's backward
 primitive is interval integrable. -/
 theorem intervalIntegrable_quadratic_backwardTimePrimitive {C : ℝ → V →L[ℝ] StrongDual ℝ V}
@@ -111,27 +125,10 @@ theorem intervalIntegrable_quadratic_backwardTimePrimitive {C : ℝ → V →L[�
     (hbound : ∀ t ∈ Set.Icc a b, ∀ x : V, |C t x x| ≤ L * ‖x‖ ^ 2) {σ : ℝ} (hσ : σ ∈ Set.Icc a b) :
     IntervalIntegrable (fun t ↦ C t (backwardTimePrimitive (fun r ↦ u r) σ t)
       (backwardTimePrimitive (fun r ↦ u r) σ t)) volume a σ := by
-  let μab := volume.restrict (Set.Ioc a b)
-  let v : Lp V 2 μab := backwardTimePrimitiveLp u hab σ hσ
-  have hboundAE :
-      ∀ᵐ t ∂μab, |C t (v t) (v t)| ≤ L * ‖v t‖ ^ 2 := by
-    filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
-    exact hbound t ⟨ht.1.le, ht.2⟩ (v t)
-  have hvIntegrable : Integrable (fun t ↦ C t (v t) (v t)) μab :=
-    integrable_quadratic_operator_pairing v hC L hboundAE
-  have hvCoe : ((v : ℝ → V) =ᵐ[μab] backwardTimePrimitive (fun r ↦ u r) σ) :=
-    backwardTimePrimitiveLp_apply_ae u hab σ hσ
-  have hactual : Integrable (fun t ↦ C t (backwardTimePrimitive (fun r ↦ u r) σ t)
-            (backwardTimePrimitive (fun r ↦ u r) σ t))
-        μab := by
-    apply hvIntegrable.congr
-    filter_upwards [hvCoe] with t ht
-    rw [ht]
-  rw [intervalIntegrable_iff_integrableOn_Ioc_of_le hσ.1]
-  exact hactual.mono_measure <|
-    (volume : Measure ℝ).restrict_mono_set <| by
-      intro t ht
-      exact ⟨ht.1, ht.2.trans hσ.2⟩
+  refine intervalIntegrable_of_backwardTimePrimitiveLp (F := fun t w ↦ C t w w) u hab hσ
+    (integrable_quadratic_operator_pairing _ hC L ?_)
+  filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
+  exact hbound t ⟨ht.1.le, ht.2⟩ _
 
 /-- A uniformly bounded principal form paired with an `L²` trajectory and
 its backward primitive is interval integrable. -/
@@ -142,26 +139,10 @@ theorem intervalIntegrable_bounded_backwardTimePrimitive {C : ℝ → V →L[ℝ
     (hσ : σ ∈ Set.Icc a b) :
     IntervalIntegrable (fun t ↦ C t (u t) (backwardTimePrimitive (fun r ↦ u r) σ t)) volume a
     σ := by
-  let μab := volume.restrict (Set.Ioc a b)
-  let v : Lp V 2 μab := backwardTimePrimitiveLp u hab σ hσ
-  have hboundAE :
-      ∀ᵐ t ∂μab, |C t (u t) (v t)| ≤ L * ‖u t‖ * ‖v t‖ := by
-    filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
-    exact hbound t ⟨ht.1.le, ht.2⟩ (u t) (v t)
-  have hvIntegrable : Integrable (fun t ↦ C t (u t) (v t)) μab :=
-    integrable_bounded_operator_pairing u v hC L hboundAE
-  have hvCoe : ((v : ℝ → V) =ᵐ[μab] backwardTimePrimitive (fun r ↦ u r) σ) :=
-    backwardTimePrimitiveLp_apply_ae u hab σ hσ
-  have hactual : Integrable (fun t ↦ C t (u t) (backwardTimePrimitive (fun r ↦ u r) σ t))
-        μab := by
-    apply hvIntegrable.congr
-    filter_upwards [hvCoe] with t ht
-    rw [ht]
-  rw [intervalIntegrable_iff_integrableOn_Ioc_of_le hσ.1]
-  exact hactual.mono_measure <|
-    (volume : Measure ℝ).restrict_mono_set <| by
-      intro t ht
-      exact ⟨ht.1, ht.2.trans hσ.2⟩
+  refine intervalIntegrable_of_backwardTimePrimitiveLp (F := fun t w ↦ C t (u t) w) u hab hσ
+    (integrable_bounded_operator_pairing u _ hC L ?_)
+  filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
+  exact hbound t ⟨ht.1.le, ht.2⟩ _ _
 
 /-- A lower-order form bounded on `H × V` is integrable against the
 energy-space trajectory and its backward primitive. -/
@@ -181,23 +162,10 @@ theorem intervalIntegrable_pivotBounded_backwardTimePrimitive {C : ℝ → V →
   have hmajorant : Integrable
         (fun t ↦ L * (‖T.inclusion (u t)‖ * ‖v t‖)) μab := by
     simpa only [Pi.mul_apply] using hproduct.const_mul L
-  have hboundAE : ∀ᵐ t ∂μab, ‖C t (u t) (v t)‖ ≤
-          L * (‖T.inclusion (u t)‖ * ‖v t‖) := by
-    filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
-    simpa only [Real.norm_eq_abs, mul_assoc] using hbound t ⟨ht.1.le, ht.2⟩ (u t) (v t)
-  have hvIntegrable : Integrable (fun t ↦ C t (u t) (v t)) μab := hmajorant.mono' hmeas hboundAE
-  have hvCoe : ((v : ℝ → V) =ᵐ[μab] backwardTimePrimitive (fun r ↦ u r) σ) :=
-    backwardTimePrimitiveLp_apply_ae u hab σ hσ
-  have hactual : Integrable (fun t ↦ C t (u t) (backwardTimePrimitive (fun r ↦ u r) σ t))
-        μab := by
-    apply hvIntegrable.congr
-    filter_upwards [hvCoe] with t ht
-    rw [ht]
-  rw [intervalIntegrable_iff_integrableOn_Ioc_of_le hσ.1]
-  exact hactual.mono_measure <|
-    (volume : Measure ℝ).restrict_mono_set <| by
-      intro t ht
-      exact ⟨ht.1, ht.2.trans hσ.2⟩
+  refine intervalIntegrable_of_backwardTimePrimitiveLp (F := fun t w ↦ C t (u t) w) u hab hσ
+    (hmajorant.mono' hmeas ?_)
+  filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
+  simpa only [Real.norm_eq_abs, mul_assoc] using hbound t ⟨ht.1.le, ht.2⟩ (u t) (v t)
 
 /-- The full operator pairing in a homogeneous weak wave is integrable.
 
@@ -213,26 +181,15 @@ theorem intervalIntegrable_operator_backwardTimePrimitive_of_homogeneous [Comple
     σ := by
   let μab := volume.restrict (Set.Ioc a b)
   let v : Lp V 2 μab := backwardTimePrimitiveLp u h.interval_nonempty.le σ hσ
-  have haccelerationPairing : Integrable (fun t ↦ acceleration t (v t)) μab :=
-    integrable_dual_pairing acceleration v
-  have hvCoe : ((v : ℝ → V) =ᵐ[μab] backwardTimePrimitive (fun r ↦ u r) σ) :=
-    backwardTimePrimitiveLp_apply_ae u h.interval_nonempty.le σ hσ
   have hzero : (((0 : Lp (StrongDual ℝ V) 2 μab) : ℝ → StrongDual ℝ V) =ᵐ[μab] 0) :=
     Lp.coeFn_zero (StrongDual ℝ V) 2 μab
-  have hoperatorPairing : Integrable (fun t ↦ B t (u t) (backwardTimePrimitive (fun r ↦ u r) σ t))
-        μab := by
-    apply haccelerationPairing.neg.congr
-    filter_upwards [h.equationAE, hvCoe, hzero] with t heq hv hz
-    have heqZero : acceleration t + B t (u t) = 0 := by
-      simpa only [hz, Pi.zero_apply] using heq
-    have hB : B t (u t) = -acceleration t := eq_neg_of_add_eq_zero_right heqZero
-    change -(acceleration t (v t)) = B t (u t) (backwardTimePrimitive (fun r ↦ u r) σ t)
-    rw [hB, ← hv, neg_apply]
-  rw [intervalIntegrable_iff_integrableOn_Ioc_of_le hσ.1]
-  exact hoperatorPairing.mono_measure <|
-    (volume : Measure ℝ).restrict_mono_set <| by
-      intro t ht
-      exact ⟨ht.1, ht.2.trans hσ.2⟩
+  refine intervalIntegrable_of_backwardTimePrimitiveLp (F := fun t w ↦ B t (u t) w) u
+    h.interval_nonempty.le hσ ((integrable_dual_pairing acceleration v).neg.congr ?_)
+  filter_upwards [h.equationAE, hzero] with t heq hz
+  have heqZero : acceleration t + B t (u t) = 0 := by
+    simpa only [hz, Pi.zero_apply] using heq
+  change -(acceleration t (v t)) = B t (u t) (v t)
+  rw [eq_neg_of_add_eq_zero_right heqZero, neg_apply]
 
 /-- Integrability of the principal pairing follows from the homogeneous
 weak equation and an integrable lower-order pairing.

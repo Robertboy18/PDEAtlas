@@ -138,6 +138,32 @@ theorem eq_retarded_ball_of_power_solution {p : ℝ} {u : ℝ^4 → ℝ} {g h : 
   rw [hint, mul_neg, ← sub_eq_add_neg] at he
   exact he
 
+/-- **Centering the retarded source integral.** For every function `φ : ℝ → ℝ`, every field `u`,
+every center `c` and every `T`, the inverse-distance integral of `φ ∘ retardedTrace u c T` over
+the ball of radius `T` about `c` equals the integral of `φ (w x) / ‖x‖` over the centered ball,
+for every `w` that agrees almost everywhere on that ball with the centered trace
+`x ↦ u (T - ‖x‖, c + x)`. Translation and changes on null sets preserve the integral. No
+regularity or integrability is assumed. -/
+theorem integral_retardedTrace_div_norm_eq_centered (φ : ℝ → ℝ) (u : ℝ^4 → ℝ) (c : ℝ^3) (T : ℝ)
+    {w : ℝ^3 → ℝ} (hw : w =ᵐ[volume.restrict (ball (0 : ℝ^3) T)] fun x ↦
+      u (timeSpaceCons (T - ‖x‖) (c + x))) :
+    (∫ y in ball c T, φ (retardedTrace u c T y) / ‖y - c‖) =
+      ∫ x in ball (0 : ℝ^3) T, φ (w x) / ‖x‖ := by
+  have hpre : (fun x : ℝ^3 ↦ c + x) ⁻¹' ball c T = ball 0 T := by
+    ext x
+    simp only [mem_preimage, mem_ball, dist_eq_norm, add_sub_cancel_left, sub_zero]
+  have hm : MeasurePreserving (fun x : ℝ^3 ↦ c + x)
+      (volume.restrict (ball 0 T)) (volume.restrict (ball c T)) := by
+    have hm := (measurePreserving_add_left (volume : Measure (ℝ^3)) c).restrict_preimage
+      (s := ball c T) measurableSet_ball
+    rwa [hpre] at hm
+  have hint := hm.integral_comp (Homeomorph.addLeft c).measurableEmbedding
+    (fun y ↦ φ (retardedTrace u c T y) / ‖y - c‖)
+  simp only [retardedTrace, Function.comp_apply, backwardConeGraph, add_sub_cancel_left] at hint
+  simp only [retardedTrace, Function.comp_apply, backwardConeGraph]
+  rw [← hint]
+  exact (integral_congr_ae (hw.mono fun x hx ↦ by rw [hx])).symm
+
 /-- The nonlinear representation uses any H¹ representative of the centered
 trace. Translation and changes on null sets preserve the source integral. -/
 theorem eq_centered_retarded_ball_of_power_solution {p : ℝ} {u : ℝ^4 → ℝ} {g h : ℝ^3 → ℝ}
@@ -152,25 +178,7 @@ theorem eq_centered_retarded_ball_of_power_solution {p : ℝ} {u : ℝ^4 → ℝ
     u (timeSpaceCons T c) = spaceTimeUncurry (kirchhoffFormula g h) (timeSpaceCons T c) -
       (1 / (4 * Real.pi)) * ∫ x in ball (0 : ℝ^3) T, Real.signedPower p (baseRepresentative U x) /
       ‖x‖ := by
-  have he := eq_retarded_ball_of_power_solution hu hg hh hposition hinitial c hT hwave
-  have hpre : (fun x : ℝ^3 ↦ c + x) ⁻¹' ball c T = ball 0 T := by
-    ext x
-    simp only [mem_preimage, mem_ball, dist_eq_norm, add_sub_cancel_left, sub_zero]
-  have hm : MeasurePreserving (fun x : ℝ^3 ↦ c + x)
-      (volume.restrict (ball 0 T)) (volume.restrict (ball c T)) := by
-    have hm := (measurePreserving_add_left (volume : Measure (ℝ^3)) c).restrict_preimage
-      (s := ball c T) measurableSet_ball
-    rwa [hpre] at hm
-  have hint := hm.integral_comp (Homeomorph.addLeft c).measurableEmbedding
-    (fun y ↦ Real.signedPower p (retardedTrace u c T y) / ‖y - c‖)
-  simp only [retardedTrace, Function.comp_apply, backwardConeGraph, add_sub_cancel_left] at hint
-  have hrep : (∫ x in ball (0 : ℝ^3) T, Real.signedPower p (baseRepresentative U x) / ‖x‖) =
-      ∫ x in ball (0 : ℝ^3) T, Real.signedPower p (u (timeSpaceCons (T - ‖x‖) (c + x))) / ‖x‖ :=
-    integral_congr_ae (hbase.mono fun x hx ↦ by
-      dsimp only
-      rw [hx])
-  simp only [retardedTrace, Function.comp_apply, backwardConeGraph] at he
-  rw [← hint, ← hrep] at he
-  exact he
+  rw [← integral_retardedTrace_div_norm_eq_centered (Real.signedPower p) u c T hbase]
+  exact eq_retarded_ball_of_power_solution hu hg hh hposition hinitial c hT hwave
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical

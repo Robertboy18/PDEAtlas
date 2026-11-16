@@ -151,40 +151,18 @@ theorem exists_uniform_support_on_Icc_of_compact_slices_of_quadratic_lower_bound
     (hs : ∀ t, 0 ≤ t → HasCompactSupport (fun x : ℝ^n ↦ u (timeSpaceCons t x))) {T : ℝ}
     (hT : 0 ≤ T) :
     ∃ R : ℝ, 0 ≤ R ∧ ∀ t ∈ Icc 0 T, ∀ x : ℝ^n, R < ‖x‖ → u (timeSpaceCons t x) = 0 := by
-  let I := Ioo (0 : ℝ) (T + 1)
-  have hI : IsOpen I := isOpen_Ioo
-  let : BaireSpace I := hI.baireSpace
-  let : Nonempty I := ⟨⟨(T + 1) / 2, by constructor <;> linarith⟩⟩
-  have hc (x : ℝ^n) : Continuous (fun t : I ↦ u (timeSpaceCons t x)) :=
+  have hc (x : ℝ^n) : Continuous (fun t : Ioo (0 : ℝ) (T + 1) ↦ u (timeSpaceCons t x)) :=
     hu.continuous.comp ((contDiff_timeSpaceCons_uncurry n (m := 1)).continuous.comp
       (continuous_subtype_val.prodMk continuous_const))
-  obtain ⟨a, R, hR⟩ :=
-    (dense_locally_uniform_spatial_support hc (fun t ↦ hs t t.property.1.le)).nonempty
-  have hR' := (eventually_nhds_subtype_iff I a
-    (fun s ↦ ∀ x : ℝ^n, (R : ℝ) < ‖x‖ → u (timeSpaceCons s x) = 0)).mp hR
-  rw [hI.nhdsWithin_eq a.property] at hR'
-  change ∀ᶠ s : ℝ in 𝓝 (a : ℝ), ∀ x : ℝ^n, (R : ℝ) < ‖x‖ → u (timeSpaceCons s x) = 0 at hR'
-  have hgerm (x : ℝ^n) (hx : (R : ℝ) < ‖x‖) :
-      u =ᶠ[𝓝 (timeSpaceCons a x)] fun _ ↦ 0 := by
-    have hproj : Tendsto (fun p : ℝ^(n + 1) ↦ p 0) (𝓝 (timeSpaceCons (a : ℝ) x)) (𝓝 (a : ℝ)) :=
-      (show Continuous (fun p : ℝ^(n + 1) ↦ p 0) from
-        (EuclideanSpace.proj 0).continuous).continuousAt
-    have ht : ∀ᶠ p : ℝ^(n + 1) in 𝓝 (timeSpaceCons a x),
-        ∀ y : ℝ^n, (R : ℝ) < ‖y‖ → u (timeSpaceCons (p 0) y) = 0 :=
-      hproj.eventually (p := fun s ↦ ∀ y : ℝ^n, (R : ℝ) < ‖y‖ → u (timeSpaceCons s y) = 0) hR'
-    have hx' : ∀ᶠ p in 𝓝 (timeSpaceCons a x), (R : ℝ) < ‖spatialPart p‖ :=
-      ((spatialPartCLM n).continuous.norm.continuousAt).eventually (lt_mem_nhds hx)
-    filter_upwards [ht, hx'] with p hp hpx
-    simpa only [timeSpaceCons_spatialPart] using hp (spatialPart p) hpx
-  have hpos (x : ℝ^n) (hx : (R : ℝ) < ‖x‖) : u (timeSpaceCons a x) = 0 := (hgerm x hx).eq_of_nhds
-  have hvel (x : ℝ^n) (hx : (R : ℝ) < ‖x‖) : (∂[0] u) (timeSpaceCons a x) = 0 := by
+  obtain ⟨a, ha, R, hR, hgerm⟩ := exists_eventuallyEq_zero_of_compact_slices isOpen_Ioo
+    ⟨(T + 1) / 2, by constructor <;> linarith⟩ hc (fun t ↦ hs t t.property.1.le)
+  have hpos (x : ℝ^n) (hx : R < ‖x‖) : u (timeSpaceCons a x) = 0 := (hgerm x hx).eq_of_nhds
+  have hvel (x : ℝ^n) (hx : R < ‖x‖) : (∂[0] u) (timeSpaceCons a x) = 0 := by
     rw [PDE.partialDeriv_congr_nhds 0 (hgerm x hx)]
     exact PDE.partialDeriv_const 0
-  refine ⟨(R : ℝ) + (T + 1), by positivity, ?_⟩
-  intro t ht x hx
+  refine ⟨R + (T + 1), by linarith, fun t ht x hx ↦ ?_⟩
   exact eq_zero_on_Icc_of_cauchySupport_of_quadratic_lower_bound hV hVzero hbound hu
-    ⟨a.property.1.le, a.property.2.le⟩
-    (fun s hsI y ↦ hwave s hsI.1 y) hpos hvel t ⟨ht.1, by linarith [ht.2]⟩ x
+    ⟨ha.1.le, ha.2.le⟩ (fun s hsI y ↦ hwave s hsI.1 y) hpos hvel t ⟨ht.1, by linarith [ht.2]⟩ x
     (by simpa only [sub_zero] using hx)
 
 /-- Compact Cauchy support propagates at speed one across a finite strip.

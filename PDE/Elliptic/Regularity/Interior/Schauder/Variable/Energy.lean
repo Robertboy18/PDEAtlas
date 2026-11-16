@@ -77,32 +77,12 @@ theorem exists_gradient_mean_energy_of_holder_coefficients
       (⨍ x in ball z r, ‖wkpCoordinateCLM (singleDerivIndex n i) u x‖ ^ 2) ≤
       4 * C * (⨍ x in ball z R, ‖wkpCoordinateCLM (singleDerivIndex n i) u x‖ ^ 2) +
         (2 * (R / r) ^ n + 4 * C) * E := by
-    let d : ℝ^n → ℝ := wkpCoordinateCLM (singleDerivIndex n i) u
-    let e : ℝ^n → ℝ := wkpCoordinateCLM (singleDerivIndex n i) H
-    have hd : MemLp d 2 (volume.restrict (ball z R)) := Lp.memLp _
-    have he : MemLp e 2 (volume.restrict (ball z R)) := Lp.memLp _
-    have herror : (⨍ x in ball z R, ‖d x - e x‖ ^ 2) ≤ E := herr i
-    have hrR' : r ≤ R := by linarith
-    have herrSmall := (setAverage_norm_sq_le_of_radius_le hr hrR' (hd.sub he)).trans
-      (mul_le_mul_of_nonneg_left herror (pow_nonneg (div_nonneg hR.le hr.le) n))
-    have hcompare := setAverage_norm_sub_sq_le
-      (hd.mono_measure (Measure.restrict_mono (ball_subset_ball hrR') le_rfl))
-      (he.mono_measure (Measure.restrict_mono (ball_subset_ball hrR') le_rfl)) 0
-    have hcomparison := hdecay z R hR b (fun j k ↦ A j k z) hb hbΛ hbEll
-      H hhom i r hr hrR
-    have houter := setAverage_norm_sub_sq_le he hd 0
-    have hreverse : (⨍ x in ball z R, ‖e x - d x‖ ^ 2) =
-        ⨍ x in ball z R, ‖d x - e x‖ ^ 2 := by
-      congr 1
-      funext x
-      rw [norm_sub_rev]
-    rw [hreverse] at houter
-    have hscaled := mul_le_mul_of_nonneg_left houter hC.le
-    have hscaledError := mul_le_mul_of_nonneg_left herror hC.le
-    simp only [Pi.sub_apply] at herrSmall
-    simp only [sub_zero] at hcompare hscaled
-    dsimp only [d, e] at herrSmall hcompare hscaled hcomparison hscaledError
-    nlinarith only [herrSmall, hcompare, hscaled, hcomparison, hscaledError]
+    simpa only [sub_zero] using
+      setAverage_norm_sub_sq_le_of_comparison_decay (c := 0) (c' := 0) hr
+        (by linarith : r ≤ R) (Lp.memLp (wkpCoordinateCLM (singleDerivIndex n i) u))
+        (Lp.memLp (wkpCoordinateCLM (singleDerivIndex n i) H)) hC.le (herr i)
+        (by simpa only [sub_zero] using
+          hdecay z R hR b (fun j k ↦ A j k z) hb hbΛ hbEll H hhom i r hr hrR)
   have hsum := Finset.sum_le_sum (fun i (_ : i ∈ Finset.univ) ↦ hcoordinate i)
   simp only [Finset.sum_add_distrib, ← Finset.mul_sum, Finset.sum_const,
     Finset.card_fin, nsmul_eq_mul] at hsum

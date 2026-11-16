@@ -56,7 +56,7 @@ theorem secondPartialDeriv_mul (i j : Fin n)
   cas
 
 /-- The local product formula `Δ(fg)=gΔf+2∑ᵢ∂ᵢf∂ᵢg+fΔg`
-for LeanPDE's native coordinate Laplacian. -/
+for PDEAtlas's native coordinate Laplacian. -/
 theorem laplacian_mul {f g : ℝ^n → ℝ} {x : ℝ^n}
     (hf : ContDiffAt ℝ 2 f x) (hg : ContDiffAt ℝ 2 g x) :
     laplacian (fun y ↦ f y * g y) x =

@@ -13,7 +13,9 @@ public import PDE.FDeriv.SpaceTime
 
 Compact support at each time does not itself give locally uniform compact support
 at every time. Continuity and Baire category do give a dense set of times with a
-common spatial support on a time neighborhood. Evans, §12.1.1, assumes compact support in
+common spatial support on a time neighborhood (`dense_locally_uniform_spatial_support`), and so
+one time at which the field vanishes near every point outside a ball
+(`exists_eventuallyEq_zero_of_compact_slices`). Evans, §12.1.1, assumes compact support in
 space at each time and differentiates the energy directly; this step, followed by finite
 propagation, supplies the common support that justifies the differentiation.
 
@@ -54,5 +56,36 @@ theorem dense_locally_uniform_spatial_support {n : ℕ} {I : Set ℝ} [BaireSpac
   refine (dense_iUnion_interior_of_closed hclosed hcover).mono fun t ht ↦ ?_
   obtain ⟨R, ht⟩ := mem_iUnion.mp ht
   exact ⟨R, mem_of_superset (isOpen_interior.mem_nhds ht) interior_subset⟩
+
+/-- **A time with a common exterior zero set.** Let `I` be a nonempty open set of times. If `u`
+is continuous in time on `I` at every spatial point and every time slice over `I` has compact
+support, then there are a time `a ∈ I` and a radius `R ≥ 0` such that `u` vanishes in a
+space-time neighbourhood of every point `(a, x)` with `R < ‖x‖`. So the Cauchy data of `u` of
+every order vanish outside the ball of radius `R` at the time `a`. This is the Baire category
+step of `dense_locally_uniform_spatial_support` at one time. -/
+theorem exists_eventuallyEq_zero_of_compact_slices {n : ℕ} {I : Set ℝ} (hI : IsOpen I)
+    (hIn : I.Nonempty) {u : ℝ^(n + 1) → ℝ}
+    (hu : ∀ x : ℝ^n, Continuous (fun t : I ↦ u (timeSpaceCons t x)))
+    (hs : ∀ t : I, HasCompactSupport (fun x : ℝ^n ↦ u (timeSpaceCons t x))) :
+    ∃ a ∈ I, ∃ R : ℝ, 0 ≤ R ∧
+      ∀ x : ℝ^n, R < ‖x‖ → u =ᶠ[𝓝 (timeSpaceCons a x)] fun _ ↦ 0 := by
+  let : BaireSpace I := hI.baireSpace
+  let : Nonempty I := hIn.to_subtype
+  obtain ⟨a, R, hR⟩ := (dense_locally_uniform_spatial_support hu hs).nonempty
+  have hR' := (eventually_nhds_subtype_iff I a
+    (fun s ↦ ∀ x : ℝ^n, (R : ℝ) < ‖x‖ → u (timeSpaceCons s x) = 0)).mp hR
+  rw [hI.nhdsWithin_eq a.property] at hR'
+  change ∀ᶠ s : ℝ in 𝓝 (a : ℝ), ∀ x : ℝ^n, (R : ℝ) < ‖x‖ → u (timeSpaceCons s x) = 0 at hR'
+  refine ⟨a, a.property, R, R.cast_nonneg, fun x hx ↦ ?_⟩
+  have hproj : Tendsto (fun p : ℝ^(n + 1) ↦ p 0) (𝓝 (timeSpaceCons (a : ℝ) x)) (𝓝 (a : ℝ)) :=
+    (show Continuous (fun p : ℝ^(n + 1) ↦ p 0) from
+      (EuclideanSpace.proj 0).continuous).continuousAt
+  have ht : ∀ᶠ p : ℝ^(n + 1) in 𝓝 (timeSpaceCons a x),
+      ∀ y : ℝ^n, (R : ℝ) < ‖y‖ → u (timeSpaceCons (p 0) y) = 0 :=
+    hproj.eventually (p := fun s ↦ ∀ y : ℝ^n, (R : ℝ) < ‖y‖ → u (timeSpaceCons s y) = 0) hR'
+  have hx' : ∀ᶠ p in 𝓝 (timeSpaceCons a x), (R : ℝ) < ‖spatialPart p‖ :=
+    ((spatialPartCLM n).continuous.norm.continuousAt).eventually (lt_mem_nhds hx)
+  filter_upwards [ht, hx'] with p hp hpx
+  simpa only [timeSpaceCons_spatialPart] using hp (spatialPart p) hpx
 
 end WaveEquation

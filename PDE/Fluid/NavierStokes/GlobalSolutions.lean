@@ -103,15 +103,9 @@ theorem GlobalSmoothSolution.pressurePoissonResidual_eq_zero
     {n : ℕ} {nse : Problem n} (sol : GlobalSmoothSolution nse)
     {x : ℝ^(n + 1)} (hx : x ∈ PDE.Common.positiveTimeDomain) :
     IncompressibleFlow.pressurePoissonResidual
-      n sol.u sol.p nse.forcing x = 0 := by
-  change 0 < x 0 at hx
-  let T := x 0 + 1
-  have hT : 0 < T := by
-    dsimp [T]
-    linarith
-  have hxT : x ∈ IncompressibleFlow.finiteTimeDomain n T := by
-    exact ⟨hx, by simp [T]⟩
-  exact SmoothSolution.pressurePoissonResidual_eq_zero
-    (IncompressibleFlow.GlobalClassicalSolution.toFiniteTime sol T hT) hxT
+      n sol.u sol.p nse.forcing x = 0 :=
+  SmoothSolution.pressurePoissonResidual_eq_zero
+    (IncompressibleFlow.GlobalClassicalSolution.toFiniteTime sol (x 0 + 1) (add_pos hx one_pos))
+    ⟨hx, lt_add_one (x 0)⟩
 
 end NavierStokes

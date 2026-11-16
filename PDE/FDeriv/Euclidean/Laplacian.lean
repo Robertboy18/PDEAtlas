@@ -19,7 +19,7 @@ import Mathlib.Analysis.Calculus.FDeriv.Norm
 /-!
 # Iterated-coordinate Euclidean Laplacian calculus
 
-LeanPDE's `laplacian f x = ∑ᵢ ∂ᵢ∂ᵢ f x` is built from iterated coordinate
+PDEAtlas's `laplacian f x = ∑ᵢ ∂ᵢ∂ᵢ f x` is built from iterated coordinate
 derivatives. It depends only on the germ of `f` at `x` (`PDE.FDeriv.Laplacian.Congruence`,
 imported here). The coordinate derivatives of `‖x‖` and `‖x‖²` give the two radial formulas
 

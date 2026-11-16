@@ -312,40 +312,10 @@ theorem localPhysicalTrace_classical_apply_ae
       ℝ^(m + 1) → ℝ) =ᵐ[Boundary.Geometry.SurfaceMeasure.surfaceMeasure Ω]
       (chartBoundaryPatch (m := m) (Ω := Ω) i).indicator
         (fun x ↦ (hΩ.boundaryCutoff i).toFun x * φ.1.toFun x) := by
-  let A := chartBoundaryPatch (m := m) (Ω := Ω) i
-  let μ := Boundary.Geometry.SurfaceMeasure.surfaceMeasure Ω
-  let ρ := chartPushedSurfaceMeasure (m := m) (Ω := Ω) i
-  let u := globalTestFunctionToDomainW1pLinear
-    (m := m) (Ω := Ω) (2 : ℝ≥0∞) φ
-  let g := localFlatTrace (m := m) (Ω := Ω) i u
-  let q := flattenedClassicalPiece (m := m) (Ω := Ω) i φ
-  have hAmeas : MeasurableSet A :=
-    measurableSet_chartBoundaryPatch (m := m) (Ω := Ω) i
-  have hle : ρ ≤
-      (chartSurfaceBound (m := m) (Ω := Ω) i : ℝ≥0∞) •
-        Boundary.Geometry.SurfaceMeasure.flatSurfaceMeasure (n := m) :=
-    chartPushedSurfaceMeasure_le (m := m) (Ω := Ω) i
-  have hflat : (g : ℝ^(m + 1) → ℝ) =ᵐ[
-      Boundary.Geometry.SurfaceMeasure.flatSurfaceMeasure (n := m)] q := by
-    simpa [g, q, u] using
-      localFlatTrace_classical_apply_ae (m := m) (Ω := Ω) i φ
-  have hflatρ : (g : ℝ^(m + 1) → ℝ) =ᵐ[ρ] q :=
-    (Measure.absolutelyContinuous_of_le_smul hle).ae_eq hflat
-  have hmp : MeasurePreserving (hΩ.chart i) (μ.restrict A) ρ :=
-    measurePreserving_chart_boundaryPatch (m := m) (Ω := Ω) i
-  have hcomp := hmp.quasiMeasurePreserving.ae hflatρ
-  have hrestrict :
-      (fun x ↦ g (hΩ.chart i x)) =ᵐ[μ.restrict A]
-        fun x ↦ (hΩ.boundaryCutoff i).toFun x * φ.1.toFun x := by
-    filter_upwards [hcomp, MeasureTheory.ae_restrict_mem hAmeas] with x hx hxA
-    rw [hx]
-    exact flattenedClassicalPiece_chart_apply
-      (m := m) (Ω := Ω) i φ hxA
-  have hind : A.indicator (fun x ↦ g (hΩ.chart i x)) =ᵐ[μ]
-      A.indicator (fun x ↦ (hΩ.boundaryCutoff i).toFun x * φ.1.toFun x) :=
-    (ae_eq_restrict_iff_indicator_ae_eq hAmeas).mp hrestrict
-  exact (localPhysicalTrace_apply_ae (m := m) (Ω := Ω) i u).trans
-    (by simpa [A, μ, g] using hind)
+  have h := chartPhysicalization_apply_ae_of_ae 2 i
+    (localFlatTrace_classical_apply_ae (m := m) (Ω := Ω) i φ)
+  rwa [Set.indicator_congr (s := chartBoundaryPatch (m := m) (Ω := Ω) i) fun x hx ↦
+    flattenedClassicalPiece_chart_apply (m := m) (Ω := Ω) i φ hx] at h
 
 /-- Explicit bound for one physical localized trace. -/
 theorem norm_localPhysicalTrace_le

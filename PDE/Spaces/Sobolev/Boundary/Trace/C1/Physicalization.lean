@@ -37,8 +37,9 @@ and finite-dimensionality of the target are not needed.
   the pushed-forward surface measure is bounded by a finite multiple of flat surface measure.
 * `chartBoundaryPatch`, `measurePreserving_chart_boundaryPatch`: the physical boundary patch and
   the chart as a measure-preserving map on it.
-* `chartPhysicalization`, `chartPhysicalization_apply_ae`, `norm_chartPhysicalization_apply_le`:
-  the transport operator, its representative formula, and its norm bound.
+* `chartPhysicalization`, `chartPhysicalization_apply_ae`, `chartPhysicalization_apply_ae_of_ae`,
+  `norm_chartPhysicalization_apply_le`: the transport operator, its representative formula (for
+  the class itself and for any almost everywhere equal flat function), and its norm bound.
 
 ## References
 
@@ -289,6 +290,32 @@ theorem chartPhysicalization_apply_ae
       (measurableSet_chartBoundaryPatch (m := m) (Ω := Ω) i) (C (D g))
   simpa [chartPhysicalization, A, μ, ρ, ν, D, C] using
     hzero.trans hindicator
+
+/-- Physicalization carries any flat representative to its chartwise surface representative:
+if `g = f` almost everywhere for the flat surface measure, then `chartPhysicalization p i g` is
+almost everywhere `f ∘ chart i` on the physical patch and zero off it. -/
+theorem chartPhysicalization_apply_ae_of_ae
+    {F : Type*} [NormedAddCommGroup F] [NormedSpace ℝ F]
+    {m : ℕ} {Ω : Set (ℝ^(m + 1))}
+    [hΩ : Boundary.C1ExtensionAtlas (m + 1) Ω]
+    (p : ℝ≥0∞) [Fact (1 ≤ p)] (i : Fin hΩ.N)
+    {g : MeasureTheory.Lp F p
+      (Boundary.Geometry.SurfaceMeasure.flatSurfaceMeasure (n := m))}
+    {f : ℝ^(m + 1) → F}
+    (hg : (g : ℝ^(m + 1) → F)
+      =ᵐ[Boundary.Geometry.SurfaceMeasure.flatSurfaceMeasure (n := m)] f) :
+    (chartPhysicalization (m := m) (Ω := Ω) p i g :
+      ℝ^(m + 1) → F) =ᵐ[
+        Boundary.Geometry.SurfaceMeasure.surfaceMeasure Ω]
+      (chartBoundaryPatch (m := m) (Ω := Ω) i).indicator
+        (fun x ↦ f (hΩ.chart i x)) := by
+  have hcomp :=
+    (measurePreserving_chart_boundaryPatch (m := m) (Ω := Ω) i).quasiMeasurePreserving.ae
+      ((Measure.absolutelyContinuous_of_le_smul
+        (chartPushedSurfaceMeasure_le (m := m) (Ω := Ω) i)).ae_eq hg)
+  exact (chartPhysicalization_apply_ae p i g).trans
+    ((ae_eq_restrict_iff_indicator_ae_eq
+      (measurableSet_chartBoundaryPatch (m := m) (Ω := Ω) i)).mp hcomp)
 
 /-- The chart physicalization norm is controlled solely by the
 surface-measure distortion of the chart. -/

@@ -150,46 +150,44 @@ theorem orthonormalBasisOneI_repr_symm_coordinateReflection_one (z : ℝ^2) :
   · rw [orthonormalBasisOneI_repr_symm_im, conj_im, orthonormalBasisOneI_repr_symm_im,
       PDE.Common.coordinateReflection_apply_same]
 
-/-- `K₂(z) = Re (1 / (2 w²))` with `w = z₀ + i z₁`. -/
-theorem hessianKernel_zero_zero_eq_re (z : ℝ^2) :
-    hessianKernel 0 0 z = (1 / (2 * (Complex.orthonormalBasisOneI.repr.symm z) ^ 2)).re := by
+/-- `1 / (2 w²) = K₂(z) - i K₁(z)` with `w = z₀ + i z₁`: the two kernels are the real part
+and minus the imaginary part of one function of the complex coordinate. -/
+private theorem one_div_two_mul_sq_repr_symm (z : ℝ^2) :
+    1 / (2 * (Complex.orthonormalBasisOneI.repr.symm z) ^ 2) =
+      (⟨hessianKernel 0 0 z, -hessianKernel 0 1 z⟩ : ℂ) := by
   have hre := orthonormalBasisOneI_repr_symm_re z
   have him := orthonormalBasisOneI_repr_symm_im z
   set w := Complex.orthonormalBasisOneI.repr.symm z
-  rw [hessianKernel_zero_zero, one_div, Complex.inv_re, Complex.normSq_apply]
   have h2 : (2 * w ^ 2).re = 2 * (z 0 ^ 2 - z 1 ^ 2) := by
     simp [sq, hre, him]
   have h2' : (2 * w ^ 2).im = 4 * (z 0 * z 1) := by
     simp [sq, hre, him]; ring
   have hden : 2 * (z 0 ^ 2 - z 1 ^ 2) * (2 * (z 0 ^ 2 - z 1 ^ 2)) +
       4 * (z 0 * z 1) * (4 * (z 0 * z 1)) = 4 * (z 0 ^ 2 + z 1 ^ 2) ^ 2 := by ring
-  rw [h2, h2', hden, show ‖z‖ ^ 4 = (‖z‖ ^ 2) ^ 2 by ring, EuclideanSpace.norm_sq_fin_two]
-  by_cases h0 : z 0 ^ 2 + z 1 ^ 2 = 0
-  · have ha : z 0 = 0 := by nlinarith [sq_nonneg (z 0), sq_nonneg (z 1)]
-    have hb : z 1 = 0 := by nlinarith [sq_nonneg (z 0), sq_nonneg (z 1)]
-    simp [ha, hb]
-  · field_simp
-    ring
+  have hn : ‖z‖ ^ 4 = (z 0 ^ 2 + z 1 ^ 2) ^ 2 := by
+    rw [show ‖z‖ ^ 4 = (‖z‖ ^ 2) ^ 2 by ring, EuclideanSpace.norm_sq_fin_two]
+  apply Complex.ext
+  · rw [one_div, Complex.inv_re, Complex.normSq_apply, h2, h2', hden,
+      hessianKernel_zero_zero, hn]
+    by_cases h0 : z 0 ^ 2 + z 1 ^ 2 = 0
+    · simp [h0]
+    · field_simp
+      ring
+  · rw [one_div, Complex.inv_im, Complex.normSq_apply, h2, h2', hden,
+      hessianKernel_zero_one, hn]
+    by_cases h0 : z 0 ^ 2 + z 1 ^ 2 = 0
+    · simp [h0]
+    · field_simp
+
+/-- `K₂(z) = Re (1 / (2 w²))` with `w = z₀ + i z₁`. -/
+theorem hessianKernel_zero_zero_eq_re (z : ℝ^2) :
+    hessianKernel 0 0 z = (1 / (2 * (Complex.orthonormalBasisOneI.repr.symm z) ^ 2)).re := by
+  rw [one_div_two_mul_sq_repr_symm]
 
 /-- `K₁(z) = -Im (1 / (2 w²))` with `w = z₀ + i z₁`. -/
 theorem hessianKernel_zero_one_eq_neg_im (z : ℝ^2) :
     hessianKernel 0 1 z = -(1 / (2 * (Complex.orthonormalBasisOneI.repr.symm z) ^ 2)).im := by
-  have hre := orthonormalBasisOneI_repr_symm_re z
-  have him := orthonormalBasisOneI_repr_symm_im z
-  set w := Complex.orthonormalBasisOneI.repr.symm z
-  rw [hessianKernel_zero_one, one_div, Complex.inv_im, Complex.normSq_apply]
-  have h2 : (2 * w ^ 2).re = 2 * (z 0 ^ 2 - z 1 ^ 2) := by
-    simp [sq, hre, him]
-  have h2' : (2 * w ^ 2).im = 4 * (z 0 * z 1) := by
-    simp [sq, hre, him]; ring
-  have hden : 2 * (z 0 ^ 2 - z 1 ^ 2) * (2 * (z 0 ^ 2 - z 1 ^ 2)) +
-      4 * (z 0 * z 1) * (4 * (z 0 * z 1)) = 4 * (z 0 ^ 2 + z 1 ^ 2) ^ 2 := by ring
-  rw [h2, h2', hden, show ‖z‖ ^ 4 = (‖z‖ ^ 2) ^ 2 by ring, EuclideanSpace.norm_sq_fin_two]
-  by_cases h0 : z 0 ^ 2 + z 1 ^ 2 = 0
-  · have ha : z 0 = 0 := by nlinarith [sq_nonneg (z 0), sq_nonneg (z 1)]
-    have hb : z 1 = 0 := by nlinarith [sq_nonneg (z 0), sq_nonneg (z 1)]
-    simp [ha, hb]
-  · field_simp
+  rw [one_div_two_mul_sq_repr_symm, neg_neg]
 
 /-- The Hessian kernels are bounded by `1 / (2 |z|²)`. -/
 theorem abs_hessianKernel_le (i j : Fin 2) (z : ℝ^2) :

@@ -67,24 +67,38 @@ namespace WaveEquation
 
 variable {n : ℕ}
 
-private theorem exists_common_abs_bound_on_closed_backwardCone {u v : ℝ^(n + 1) → ℝ}
+/-- Two continuous fields have a common bound on a backward cone: the cone lies in a compact
+cylinder. -/
+private theorem exists_common_abs_bound_on_backwardCone {u v : ℝ^(n + 1) → ℝ}
     (hu : Continuous u) (hv : Continuous v) (c : ℝ^n) (a T : ℝ) :
     ∃ R : ℝ, 0 ≤ R ∧
-      (∀ t ∈ Set.Icc a T, ∀ x ∈ Metric.closedBall c (T - t),
+      (∀ t ∈ Set.Ico a T, ∀ x ∈ Metric.ball c (T - t),
         |u (PDE.Common.timeSpaceCons (n := n) t x)| ≤ R) ∧
-      ∀ t ∈ Set.Icc a T, ∀ x ∈ Metric.closedBall c (T - t),
+      ∀ t ∈ Set.Ico a T, ∀ x ∈ Metric.ball c (T - t),
         |v (PDE.Common.timeSpaceCons (n := n) t x)| ≤ R := by
   obtain ⟨Ru, hRu, huBound⟩ := PDE.Common.exists_norm_le_on_timeSpaceCylinder u hu a T c (T - a)
   obtain ⟨Rv, hRv, hvBound⟩ := PDE.Common.exists_norm_le_on_timeSpaceCylinder v hv a T c (T - a)
-  refine ⟨max Ru Rv, hRu.trans (le_max_left _ _), ?_, ?_⟩
-  · intro t ht x hx
-    have hxCylinder : x ∈ Metric.closedBall c (T - a) :=
-      Metric.closedBall_subset_closedBall (by linarith [ht.1]) hx
-    simpa only [Real.norm_eq_abs] using (huBound t ht x hxCylinder).trans (le_max_left _ _)
-  · intro t ht x hx
-    have hxCylinder : x ∈ Metric.closedBall c (T - a) :=
-      Metric.closedBall_subset_closedBall (by linarith [ht.1]) hx
-    simpa only [Real.norm_eq_abs] using (hvBound t ht x hxCylinder).trans (le_max_right _ _)
+  have hcylinder {t : ℝ} (ht : t ∈ Set.Ico a T) {x : ℝ^n} (hx : x ∈ Metric.ball c (T - t)) :
+      x ∈ Metric.closedBall c (T - a) :=
+    Metric.closedBall_subset_closedBall (by linarith [ht.1]) (Metric.ball_subset_closedBall hx)
+  exact ⟨max Ru Rv, hRu.trans (le_max_left _ _),
+    fun t ht x hx ↦ by
+      simpa only [Real.norm_eq_abs] using
+        (huBound t (Set.Ico_subset_Icc_self ht) x (hcylinder ht hx)).trans (le_max_left _ _),
+    fun t ht x hx ↦ by
+      simpa only [Real.norm_eq_abs] using
+        (hvBound t (Set.Ico_subset_Icc_self ht) x (hcylinder ht hx)).trans (le_max_right _ _)⟩
+
+/-- At a point where a field `u` solves the odd-power equation and `|u| ≤ R`, it solves the
+semilinear equation `□u + f(u) = 0` for every `f` that agrees with the odd-power polynomial on
+`[-R, R]`. This replaces the polynomial by a globally Lipschitz reaction on a bounded range. -/
+private theorem waveOperator_add_eq_zero_of_oddPower_of_abs_le {linear nonlinear R : ℝ} {k : ℕ}
+    {f : ℝ → ℝ} (hEq : Set.EqOn (oddPowerPolynomial linear nonlinear k) f (Set.Icc (-R) R))
+    {u : ℝ^(n + 1) → ℝ} {p : ℝ^(n + 1)}
+    (hwave : waveOperator (n := n) u p + linear * u p + nonlinear * (u p) ^ (2 * k + 1) = 0)
+    (hbound : |u p| ≤ R) : waveOperator (n := n) u p + f (u p) = 0 := by
+  rw [← hEq (abs_le.mp hbound)]
+  simpa only [oddPowerPolynomial, add_assoc] using hwave
 
 /-- Two classical odd-power waves that satisfy a common absolute-value bound
 and have equal Cauchy data on a closed base ball agree throughout the
@@ -109,21 +123,12 @@ theorem eq_on_closed_backwardCone_of_eq_cauchyData_oddPower_of_abs_le [Fact (0 <
     ∀ t ∈ Set.Icc a T, ∀ x ∈ Metric.closedBall c (T - t), u (PDE.Common.timeSpaceCons (n := n) t
       x) = v (PDE.Common.timeSpaceCons (n := n) t x) := by
   obtain ⟨f, hf, hEq⟩ := (lipschitzOnWith_oddPowerPolynomial linear nonlinear k hR).extend_real
-  apply eq_on_closed_backwardCone_of_eq_cauchyData_semilinear (n := n) hf hu hv c
-  · intro t ht x hx
-    let p := PDE.Common.timeSpaceCons (n := n) t x
-    change waveOperator (n := n) u p + f (u p) = 0
-    have huMem : u p ∈ Set.Icc (-R) R := abs_le.mp (huBound t ht x hx)
-    rw [← hEq huMem]
-    simpa only [oddPowerPolynomial, add_assoc] using huwave t ht x hx
-  · intro t ht x hx
-    let p := PDE.Common.timeSpaceCons (n := n) t x
-    change waveOperator (n := n) v p + f (v p) = 0
-    have hvMem : v p ∈ Set.Icc (-R) R := abs_le.mp (hvBound t ht x hx)
-    rw [← hEq hvMem]
-    simpa only [oddPowerPolynomial, add_assoc] using hvwave t ht x hx
-  · exact hposition
-  · exact hvelocity
+  exact eq_on_closed_backwardCone_of_eq_cauchyData_semilinear (n := n) hf hu hv c
+    (fun t ht x hx ↦ waveOperator_add_eq_zero_of_oddPower_of_abs_le hEq (huwave t ht x hx)
+      (huBound t ht x hx))
+    (fun t ht x hx ↦ waveOperator_add_eq_zero_of_oddPower_of_abs_le hEq (hvwave t ht x hx)
+      (hvBound t ht x hx))
+    hposition hvelocity
 
 /-- Two classical odd-power waves that satisfy a common absolute-value bound
 and have equal Cauchy data on an open base ball agree throughout the
@@ -148,21 +153,12 @@ theorem eq_on_open_backwardCone_of_eq_cauchyData_oddPower_of_abs_le [Fact (0 < n
     ∀ t ∈ Set.Ico a T, ∀ x ∈ Metric.ball c (T - t), u (PDE.Common.timeSpaceCons (n := n) t x) =
       v (PDE.Common.timeSpaceCons (n := n) t x) := by
   obtain ⟨f, hf, hEq⟩ := (lipschitzOnWith_oddPowerPolynomial linear nonlinear k hR).extend_real
-  apply eq_on_open_backwardCone_of_eq_cauchyData_semilinear (n := n) hf hu hv c
-  · intro t ht x hx
-    let p := PDE.Common.timeSpaceCons (n := n) t x
-    change waveOperator (n := n) u p + f (u p) = 0
-    have huMem : u p ∈ Set.Icc (-R) R := abs_le.mp (huBound t ht x hx)
-    rw [← hEq huMem]
-    simpa only [oddPowerPolynomial, add_assoc] using huwave t ht x hx
-  · intro t ht x hx
-    let p := PDE.Common.timeSpaceCons (n := n) t x
-    change waveOperator (n := n) v p + f (v p) = 0
-    have hvMem : v p ∈ Set.Icc (-R) R := abs_le.mp (hvBound t ht x hx)
-    rw [← hEq hvMem]
-    simpa only [oddPowerPolynomial, add_assoc] using hvwave t ht x hx
-  · exact hposition
-  · exact hvelocity
+  exact eq_on_open_backwardCone_of_eq_cauchyData_semilinear (n := n) hf hu hv c
+    (fun t ht x hx ↦ waveOperator_add_eq_zero_of_oddPower_of_abs_le hEq (huwave t ht x hx)
+      (huBound t ht x hx))
+    (fun t ht x hx ↦ waveOperator_add_eq_zero_of_oddPower_of_abs_le hEq (hvwave t ht x hx)
+      (hvBound t ht x hx))
+    hposition hvelocity
 
 /-- Two classical odd-power waves with equal Cauchy data on a closed base ball
 agree throughout the corresponding closed backward cone.
@@ -183,16 +179,10 @@ theorem eq_on_closed_backwardCone_of_eq_cauchyData_oddPower [Fact (0 < n)] {line
       (PDE.Common.timeSpaceCons (n := n) a x) = (∂[0] v) (PDE.Common.timeSpaceCons (n := n) a x)) :
     ∀ t ∈ Set.Icc a T, ∀ x ∈ Metric.closedBall c (T - t), u (PDE.Common.timeSpaceCons (n := n) t
       x) = v (PDE.Common.timeSpaceCons (n := n) t x) := by
-  obtain ⟨R, hR, huBound, hvBound⟩ := exists_common_abs_bound_on_closed_backwardCone
+  obtain ⟨R, hR, huBound, hvBound⟩ := exists_common_abs_bound_on_backwardCone
       hu.continuous hv.continuous c a T
-  apply eq_on_closed_backwardCone_of_eq_cauchyData_oddPower_of_abs_le
-    (n := n) k hR hu hv c huwave hvwave
-  · intro t ht x hx
-    exact huBound t (Set.Ico_subset_Icc_self ht) x (Metric.ball_subset_closedBall hx)
-  · intro t ht x hx
-    exact hvBound t (Set.Ico_subset_Icc_self ht) x (Metric.ball_subset_closedBall hx)
-  · exact hposition
-  · exact hvelocity
+  exact eq_on_closed_backwardCone_of_eq_cauchyData_oddPower_of_abs_le (n := n) k hR hu hv c
+    huwave hvwave huBound hvBound hposition hvelocity
 
 /-- Two classical odd-power waves with equal Cauchy data on an open base ball
 agree throughout the corresponding open backward cone.
@@ -213,15 +203,9 @@ theorem eq_on_open_backwardCone_of_eq_cauchyData_oddPower [Fact (0 < n)] {linear
       (∂[0] v) (PDE.Common.timeSpaceCons (n := n) a x)) :
     ∀ t ∈ Set.Ico a T, ∀ x ∈ Metric.ball c (T - t), u (PDE.Common.timeSpaceCons (n := n) t x) =
       v (PDE.Common.timeSpaceCons (n := n) t x) := by
-  obtain ⟨R, hR, huBound, hvBound⟩ := exists_common_abs_bound_on_closed_backwardCone
+  obtain ⟨R, hR, huBound, hvBound⟩ := exists_common_abs_bound_on_backwardCone
       hu.continuous hv.continuous c a T
-  apply eq_on_open_backwardCone_of_eq_cauchyData_oddPower_of_abs_le
-    (n := n) k hR hu hv c huwave hvwave
-  · intro t ht x hx
-    exact huBound t (Set.Ico_subset_Icc_self ht) x (Metric.ball_subset_closedBall hx)
-  · intro t ht x hx
-    exact hvBound t (Set.Ico_subset_Icc_self ht) x (Metric.ball_subset_closedBall hx)
-  · exact hposition
-  · exact hvelocity
+  exact eq_on_open_backwardCone_of_eq_cauchyData_oddPower_of_abs_le (n := n) k hR hu hv c
+    huwave hvwave huBound hvBound hposition hvelocity
 
 end WaveEquation

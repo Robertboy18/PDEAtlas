@@ -14,7 +14,7 @@ public import PDE.Symbolic.ClosedForm.Differential.Equation
 /-!
 # A quadratic solution of Poisson's equation
 
-The potential `u(x, y) = x² + y²` satisfies `Δu = 4`. LeanPDE writes Poisson's equation as
+The potential `u(x, y) = x² + y²` satisfies `Δu = 4`. PDEAtlas writes Poisson's equation as
 `-Δu = f`, so `u` solves the symbolic Poisson equation with constant source `f = -4`. We
 check the identity at each level of the symbolic pipeline: the compiled residual for
 `-Δu = -4` vanishes (closed by `cas`), the analytic residual vanishes, the Euclidean `laplacian`

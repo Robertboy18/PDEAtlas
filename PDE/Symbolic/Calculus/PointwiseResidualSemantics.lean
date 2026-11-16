@@ -52,7 +52,7 @@ theorem advectionIntegrand_eval_eq_sum_mul_partialDeriv {n : Nat}
   rw [Verified.Expr.closedPartial_eval_eq_partialDeriv
     (expr := u) (x := x) (i := i) hu]
 
-/-- Symbolic advection evaluates to LeanPDE's analytic advection operator.
+/-- Symbolic advection evaluates to PDEAtlas's analytic advection operator.
 
 This formulation hides the coordinate sum behind `advectiveDerivative`. -/
 theorem advectionIntegrand_eval_eq_advectiveDerivative {n : Nat}

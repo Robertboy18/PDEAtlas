@@ -17,7 +17,7 @@ import Mathlib.MeasureTheory.Function.SpecialFunctions.Basic
 
 The Euclidean heat kernel is jointly
 measurable in space and time, including its zero extension to nonpositive
-time. Composing with LeanPDE's continuous spacetime projections gives
+time. Composing with PDEAtlas's continuous spacetime projections gives
 measurability of the shifted kernel and Watson weight.
 
 ## Main results

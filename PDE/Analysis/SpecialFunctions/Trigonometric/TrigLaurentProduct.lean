@@ -15,7 +15,10 @@ coefficients, `laurentConv T S φ ψ`, on the window `T + S`, when the second fa
 symmetry of its kind: a cosine series times a symmetric cosine series is a cosine series, a
 cosine series times an antisymmetric sine series is a sine series, a sine series times a
 symmetric cosine series is a sine series and a sine series times an antisymmetric sine series is
-minus a cosine series (`laurentCos_mul_laurentCos` and its companions). A series on the window
+minus a cosine series (`laurentCos_mul_laurentCos` and its companions). The four are one
+statement, `sum_mul_sum_eq_sum_laurentConv`: a product-to-sum rule
+`f x * g y = (F (x + y) + ε F (x - y)) / 2` with a sign `ε` and a second factor of reflection
+sign `ε`. A series on the window
 `T` is also a series on every larger window, its coefficients shifted (`laurentCos_widen`,
 `laurentSin_widen`). Convolutions and shifts keep symmetry, antisymmetry and the parity of the
 frequencies (`IsLaurentSymm.conv` and its companions, `HasLaurentParity.conv`).
@@ -74,120 +77,80 @@ private theorem sum_reflect (S : ℕ) (ψ : ℕ → ℝ) (g : ℝ → ℝ) :
   push_cast
   ring
 
-private theorem sum_reflect_symm {S : ℕ} {ψ : ℕ → ℝ} (hψ : IsLaurentSymm S ψ) (g : ℝ → ℝ) :
-    ∑ j ∈ range (2 * S + 1), ψ j * g ((j : ℝ) - S) =
-      ∑ j ∈ range (2 * S + 1), ψ j * g (-((j : ℝ) - S)) := by
-  rw [sum_reflect]
-  exact sum_congr rfl fun j hj ↦ by rw [hψ j (mem_range.mp hj)]
-
-private theorem sum_reflect_anti {S : ℕ} {ψ : ℕ → ℝ} (hψ : IsLaurentAnti S ψ) (g : ℝ → ℝ) :
-    ∑ j ∈ range (2 * S + 1), ψ j * g ((j : ℝ) - S) =
-      -∑ j ∈ range (2 * S + 1), ψ j * g (-((j : ℝ) - S)) := by
-  rw [sum_reflect, ← sum_neg_distrib]
-  exact sum_congr rfl fun j hj ↦ by rw [hψ j (mem_range.mp hj)]; ring
-
 private theorem freq_add (T S i j : ℕ) (θ : ℝ) :
     (((i : ℝ) - T) * θ) + (((j : ℝ) - S) * θ) = (((i + j : ℕ) : ℝ) - (T + S : ℕ)) * θ := by
   push_cast; ring
 
+/-- **The product of two series in exponential coefficients.** Let
+`f x * g y = (F (x + y) + ε * F (x - y)) / 2` for all real `x`, `y`, with a sign `ε`
+(`ε * ε = 1`), and let the coefficients `ψ` of the second factor have the reflection sign `ε`:
+`ψ (2S - j) = ε * ψ j` for `j ≤ 2S`. Then the product of `∑_{i ≤ 2T} φ_i f ((i - T) θ)` and
+`∑_{j ≤ 2S} ψ_j g ((j - S) θ)` is the series `∑_{k ≤ 2(T + S)} c_k F ((k - (T + S)) θ)` of the
+convolution `c = laurentConv T S φ ψ`. -/
+theorem sum_mul_sum_eq_sum_laurentConv {f g F : ℝ → ℝ} {ε : ℝ} (hε : ε * ε = 1)
+    (hfg : ∀ x y, f x * g y = (F (x + y) + ε * F (x - y)) / 2)
+    {T S : ℕ} (φ : ℕ → ℝ) {ψ : ℕ → ℝ} (hψ : ∀ j < 2 * S + 1, ψ (2 * S - j) = ε * ψ j)
+    (θ : ℝ) :
+    (∑ i ∈ range (2 * T + 1), φ i * f (((i : ℝ) - T) * θ)) *
+        ∑ j ∈ range (2 * S + 1), ψ j * g (((j : ℝ) - S) * θ) =
+      ∑ k ∈ range (2 * (T + S) + 1),
+        laurentConv T S φ ψ k * F (((k : ℝ) - (T + S : ℕ)) * θ) := by
+  rw [sum_conv_eq T S φ ψ fun k ↦ F (((k : ℝ) - (T + S : ℕ)) * θ), sum_mul]
+  refine sum_congr rfl fun i _ ↦ ?_
+  have h : ∑ j ∈ range (2 * S + 1), ψ j * F (((i : ℝ) - T) * θ - ((j : ℝ) - S) * θ) =
+      ε * ∑ j ∈ range (2 * S + 1), ψ j * F (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ) := by
+    rw [sum_reflect S ψ fun b ↦ F (((i : ℝ) - T) * θ - b * θ), mul_sum]
+    refine sum_congr rfl fun j hj ↦ ?_
+    rw [hψ j (mem_range.mp hj)]
+    ring_nf
+  have e : ∀ j ∈ range (2 * S + 1),
+      φ i * f (((i : ℝ) - T) * θ) * (ψ j * g (((j : ℝ) - S) * θ)) =
+        φ i / 2 * (ψ j * F (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ)) +
+          φ i * ε / 2 * (ψ j * F (((i : ℝ) - T) * θ - ((j : ℝ) - S) * θ)) := fun j _ ↦ by
+    rw [mul_mul_mul_comm, hfg]
+    ring
+  have key : ∑ j ∈ range (2 * S + 1),
+      φ i * f (((i : ℝ) - T) * θ) * (ψ j * g (((j : ℝ) - S) * θ)) =
+        φ i * ∑ j ∈ range (2 * S + 1), ψ j * F (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ) := by
+    rw [sum_congr rfl e, sum_add_distrib, ← mul_sum, ← mul_sum, h]
+    generalize ∑ j ∈ range (2 * S + 1), ψ j * F (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ) = A
+    linear_combination (φ i / 2 * A) * hε
+  rw [mul_sum, key, mul_sum]
+  exact sum_congr rfl fun j _ ↦ by rw [freq_add]; ring
+
 /-- A cosine series times a symmetric cosine series. -/
 theorem laurentCos_mul_laurentCos {T S : ℕ} (φ : ℕ → ℝ) {ψ : ℕ → ℝ} (hψ : IsLaurentSymm S ψ)
     (θ : ℝ) :
-    laurentCos T φ θ * laurentCos S ψ θ = laurentCos (T + S) (laurentConv T S φ ψ) θ := by
-  unfold laurentCos
-  rw [sum_conv_eq T S φ ψ fun k ↦ Real.cos (((k : ℝ) - (T + S : ℕ)) * θ), sum_mul]
-  refine sum_congr rfl fun i _ ↦ ?_
-  rw [mul_sum]
-  have h := sum_reflect_symm hψ fun b ↦ Real.cos (((i : ℝ) - T) * θ - b * θ)
-  have e : ∀ j ∈ range (2 * S + 1), φ i * Real.cos (((i : ℝ) - T) * θ) *
-      (ψ j * Real.cos (((j : ℝ) - S) * θ)) = φ i * (ψ j * Real.cos ((((i : ℝ) - T) * θ) +
-        ((j : ℝ) - S) * θ)) / 2 + φ i * (ψ j * Real.cos ((((i : ℝ) - T) * θ) -
-        ((j : ℝ) - S) * θ)) / 2 := fun j _ ↦ by
-    rw [Real.cos_add, Real.cos_sub]; ring
-  rw [sum_congr rfl e, sum_add_distrib, ← sum_div, ← sum_div, ← mul_sum, ← mul_sum]
-  have h' : ∑ j ∈ range (2 * S + 1), ψ j * Real.cos (((i : ℝ) - T) * θ - ((j : ℝ) - S) * θ) =
-      ∑ j ∈ range (2 * S + 1), ψ j * Real.cos (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ) := by
-    rw [h]
-    exact sum_congr rfl fun j _ ↦ by ring_nf
-  rw [h', ← add_div, ← two_mul, mul_div_cancel_left₀ _ (two_ne_zero), mul_sum]
-  exact sum_congr rfl fun j _ ↦ by rw [freq_add]; ring
+    laurentCos T φ θ * laurentCos S ψ θ = laurentCos (T + S) (laurentConv T S φ ψ) θ :=
+  sum_mul_sum_eq_sum_laurentConv (f := Real.cos) (g := Real.cos) (F := Real.cos) (one_mul 1)
+    (fun x y ↦ by rw [Real.cos_add, Real.cos_sub]; ring) φ
+    (fun j hj ↦ by rw [hψ j hj, one_mul]) θ
 
 /-- A cosine series times an antisymmetric sine series. -/
 theorem laurentCos_mul_laurentSin {T S : ℕ} (φ : ℕ → ℝ) {ψ : ℕ → ℝ} (hψ : IsLaurentAnti S ψ)
     (θ : ℝ) :
-    laurentCos T φ θ * laurentSin S ψ θ = laurentSin (T + S) (laurentConv T S φ ψ) θ := by
-  unfold laurentCos laurentSin
-  rw [sum_conv_eq T S φ ψ fun k ↦ Real.sin (((k : ℝ) - (T + S : ℕ)) * θ), sum_mul]
-  refine sum_congr rfl fun i _ ↦ ?_
-  rw [mul_sum]
-  have h := sum_reflect_anti hψ fun b ↦ Real.sin (((i : ℝ) - T) * θ - b * θ)
-  have e : ∀ j ∈ range (2 * S + 1), φ i * Real.cos (((i : ℝ) - T) * θ) *
-      (ψ j * Real.sin (((j : ℝ) - S) * θ)) = φ i * (ψ j * Real.sin ((((i : ℝ) - T) * θ) +
-        ((j : ℝ) - S) * θ)) / 2 - φ i * (ψ j * Real.sin ((((i : ℝ) - T) * θ) -
-        ((j : ℝ) - S) * θ)) / 2 := fun j _ ↦ by
-    rw [Real.sin_add, Real.sin_sub]; ring
-  rw [sum_congr rfl e, sum_sub_distrib, ← sum_div, ← sum_div, ← mul_sum, ← mul_sum]
-  have h' : ∑ j ∈ range (2 * S + 1), ψ j * Real.sin (((i : ℝ) - T) * θ - ((j : ℝ) - S) * θ) =
-      -∑ j ∈ range (2 * S + 1), ψ j * Real.sin (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ) := by
-    rw [h]
-    congr 1
-    exact sum_congr rfl fun j _ ↦ by ring_nf
-  have hY : ∑ j ∈ range (2 * S + 1), φ i * ψ j *
-      Real.sin ((((i + j : ℕ) : ℝ) - (T + S : ℕ)) * θ) = φ i * ∑ j ∈ range (2 * S + 1),
-        ψ j * Real.sin (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ) := by
-    rw [mul_sum]; exact sum_congr rfl fun j _ ↦ by rw [freq_add]; ring
-  rw [h', hY]
-  ring
+    laurentCos T φ θ * laurentSin S ψ θ = laurentSin (T + S) (laurentConv T S φ ψ) θ :=
+  sum_mul_sum_eq_sum_laurentConv (f := Real.cos) (g := Real.sin) (F := Real.sin) (ε := -1)
+    (by norm_num) (fun x y ↦ by rw [Real.sin_add, Real.sin_sub]; ring) φ
+    (fun j hj ↦ by rw [hψ j hj, neg_one_mul]) θ
 
 /-- A sine series times a symmetric cosine series. -/
 theorem laurentSin_mul_laurentCos {T S : ℕ} (φ : ℕ → ℝ) {ψ : ℕ → ℝ} (hψ : IsLaurentSymm S ψ)
     (θ : ℝ) :
-    laurentSin T φ θ * laurentCos S ψ θ = laurentSin (T + S) (laurentConv T S φ ψ) θ := by
-  unfold laurentCos laurentSin
-  rw [sum_conv_eq T S φ ψ fun k ↦ Real.sin (((k : ℝ) - (T + S : ℕ)) * θ), sum_mul]
-  refine sum_congr rfl fun i _ ↦ ?_
-  rw [mul_sum]
-  have h := sum_reflect_symm hψ fun b ↦ Real.sin (((i : ℝ) - T) * θ - b * θ)
-  have e : ∀ j ∈ range (2 * S + 1), φ i * Real.sin (((i : ℝ) - T) * θ) *
-      (ψ j * Real.cos (((j : ℝ) - S) * θ)) = φ i * (ψ j * Real.sin ((((i : ℝ) - T) * θ) +
-        ((j : ℝ) - S) * θ)) / 2 + φ i * (ψ j * Real.sin ((((i : ℝ) - T) * θ) -
-        ((j : ℝ) - S) * θ)) / 2 := fun j _ ↦ by
-    rw [Real.sin_add, Real.sin_sub]; ring
-  rw [sum_congr rfl e, sum_add_distrib, ← sum_div, ← sum_div, ← mul_sum, ← mul_sum]
-  have h' : ∑ j ∈ range (2 * S + 1), ψ j * Real.sin (((i : ℝ) - T) * θ - ((j : ℝ) - S) * θ) =
-      ∑ j ∈ range (2 * S + 1), ψ j * Real.sin (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ) := by
-    rw [h]
-    exact sum_congr rfl fun j _ ↦ by ring_nf
-  rw [h', ← add_div, ← two_mul, mul_div_cancel_left₀ _ two_ne_zero, mul_sum]
-  exact sum_congr rfl fun j _ ↦ by rw [freq_add]; ring
+    laurentSin T φ θ * laurentCos S ψ θ = laurentSin (T + S) (laurentConv T S φ ψ) θ :=
+  sum_mul_sum_eq_sum_laurentConv (f := Real.sin) (g := Real.cos) (F := Real.sin) (one_mul 1)
+    (fun x y ↦ by rw [Real.sin_add, Real.sin_sub]; ring) φ
+    (fun j hj ↦ by rw [hψ j hj, one_mul]) θ
 
 /-- A sine series times an antisymmetric sine series. -/
 theorem laurentSin_mul_laurentSin {T S : ℕ} (φ : ℕ → ℝ) {ψ : ℕ → ℝ} (hψ : IsLaurentAnti S ψ)
     (θ : ℝ) :
     laurentSin T φ θ * laurentSin S ψ θ = -laurentCos (T + S) (laurentConv T S φ ψ) θ := by
   unfold laurentCos laurentSin
-  rw [sum_conv_eq T S φ ψ fun k ↦ Real.cos (((k : ℝ) - (T + S : ℕ)) * θ), sum_mul,
-    ← sum_neg_distrib]
-  refine sum_congr rfl fun i _ ↦ ?_
-  rw [mul_sum]
-  have h := sum_reflect_anti hψ fun b ↦ Real.cos (((i : ℝ) - T) * θ - b * θ)
-  have e : ∀ j ∈ range (2 * S + 1), φ i * Real.sin (((i : ℝ) - T) * θ) *
-      (ψ j * Real.sin (((j : ℝ) - S) * θ)) = φ i * (ψ j * Real.cos ((((i : ℝ) - T) * θ) -
-        ((j : ℝ) - S) * θ)) / 2 - φ i * (ψ j * Real.cos ((((i : ℝ) - T) * θ) +
-        ((j : ℝ) - S) * θ)) / 2 := fun j _ ↦ by
-    rw [Real.cos_add, Real.cos_sub]; ring
-  rw [sum_congr rfl e, sum_sub_distrib, ← sum_div, ← sum_div, ← mul_sum, ← mul_sum]
-  have h' : ∑ j ∈ range (2 * S + 1), ψ j * Real.cos (((i : ℝ) - T) * θ - ((j : ℝ) - S) * θ) =
-      -∑ j ∈ range (2 * S + 1), ψ j * Real.cos (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ) := by
-    rw [h]
-    congr 1
-    exact sum_congr rfl fun j _ ↦ by ring_nf
-  have hY : ∑ j ∈ range (2 * S + 1), φ i * ψ j *
-      Real.cos ((((i + j : ℕ) : ℝ) - (T + S : ℕ)) * θ) = φ i * ∑ j ∈ range (2 * S + 1),
-        ψ j * Real.cos (((i : ℝ) - T) * θ + ((j : ℝ) - S) * θ) := by
-    rw [mul_sum]; exact sum_congr rfl fun j _ ↦ by rw [freq_add]; ring
-  rw [h', hY]
-  ring
+  rw [sum_mul_sum_eq_sum_laurentConv (f := Real.sin) (g := Real.sin) (F := fun x ↦ -Real.cos x)
+    (ε := -1) (by norm_num) (fun x y ↦ by rw [Real.cos_add, Real.cos_sub]; ring) φ
+    (fun j hj ↦ by rw [hψ j hj, neg_one_mul]) θ]
+  simp only [mul_neg, sum_neg_distrib]
 
 /-- A cosine series on a larger window. -/
 theorem laurentCos_widen (T d : ℕ) (φ : ℕ → ℝ) (θ : ℝ) :

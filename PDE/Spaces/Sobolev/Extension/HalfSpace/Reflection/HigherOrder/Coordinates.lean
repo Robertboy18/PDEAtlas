@@ -407,6 +407,69 @@ empty derivative word. -/
   simpa only [derivIndexOfList_nil] using oddReflectAmbient_apply_derivIndexOfList
     (n := n) (m := m) U [] (Nat.zero_le m)
 
+/-- One weak derivative step for a parity-selected reflection of the coordinate family. Let `P`
+be a predicate on the normal multiplicity that changes with every normal derivative
+(`P (c + 1) ↔ ¬ P c`), and reflect the coordinate of a word `α` evenly when `P` holds at its
+normal multiplicity and oddly otherwise. If every source slice that is reflected oddly lies in
+`H¹₀`, then the reflected coordinate of `α ++ [i]` is the weak `i`-th derivative of the reflected
+coordinate of `α`: ordinary even reflection supplies the step for an evenly reflected source,
+and the `H¹₀` hypothesis excludes an interface delta for an oddly reflected one. `P = Even` is
+the even reflection of the base function and `P = (¬ Even ·)` the odd one. -/
+private theorem parityReflectListCoordinate_step
+    (U : W^{m,2}(ℝ^n₊)) (P : ℕ → Prop) [DecidablePred P] (hP : ∀ c, P (c + 1) ↔ ¬ P c)
+    (htrace : ∀ (α : List (Fin n)) (hα : α.length < m),
+      ¬ P (α.count (PDE.Common.lastIndex (n := n))) →
+        derivativeSlice (n := n) (Ω := ℝ^n₊) α hα U ∈
+          (h10SubmoduleOn (n := n) (Ω := ℝ^n₊)).toSubmodule)
+    (α : List (Fin n)) (hα : α.length < m) (i : Fin n) :
+    HasWeakDerivativeOn (n := n) (Set.univ : Set (ℝ^n)) [i]
+      ((if P (α.count (PDE.Common.lastIndex (n := n))) then
+          _root_.SobolevSpace.HalfSpace.evenExtendLp n 2 (coordinateAtList n m U α hα.le)
+        else _root_.SobolevSpace.HalfSpace.oddExtendLp n 2 (coordinateAtList n m U α hα.le) :
+          DerivLp n 2 Set.univ) : ℝ^n → ℝ)
+      ((if P ((α ++ [i]).count (PDE.Common.lastIndex (n := n))) then
+          _root_.SobolevSpace.HalfSpace.evenExtendLp n 2
+            (coordinateAtList n m U (α ++ [i]) (by simpa [List.length_append] using hα))
+        else _root_.SobolevSpace.HalfSpace.oddExtendLp n 2
+            (coordinateAtList n m U (α ++ [i]) (by simpa [List.length_append] using hα)) :
+          DerivLp n 2 Set.univ) : ℝ^n → ℝ) := by
+  let hαi : (α ++ [i]).length ≤ m := by
+    simpa [List.length_append] using hα
+  have hlocal : HasWeakDerivativeOn (n := n) ℝ^n₊ [i]
+      (coordinateAtList (n := n) (m := m) U α (Nat.le_of_lt hα) : ℝ^n → ℝ)
+      (coordinateAtList (n := n) (m := m) U (α ++ [i]) hαi : ℝ^n → ℝ) :=
+    coordinateAtList_hasWeakDerivative_append_single
+      (n := n) (m := m) U α hα i
+  by_cases hc : P (α.count (PDE.Common.lastIndex (n := n)))
+  · by_cases hi : i = PDE.Common.lastIndex (n := n)
+    · subst i
+      simpa [hc, hP, List.count_append, hαi] using
+        (Extension.GraphSpace.HalfSpace.hasWeakDerivativeOn_univ_evenExtend_of_upper_last
+          (n := n) (p := (2 : ℝ≥0∞))
+          (coordinateAtList (n := n) (m := m) U α (Nat.le_of_lt hα))
+          (coordinateAtList (n := n) (m := m) U
+            (α ++ [PDE.Common.lastIndex (n := n)]) hαi) hlocal)
+    · simpa [hc, List.count_append, hi, hαi] using
+        (Extension.GraphSpace.HalfSpace.hasWeakDerivativeOn_univ_evenExtend_of_upper_ne_last
+          (n := n) (p := (2 : ℝ≥0∞)) i hi
+          (coordinateAtList (n := n) (m := m) U α (Nat.le_of_lt hα))
+          (coordinateAtList (n := n) (m := m) U (α ++ [i]) hαi) hlocal)
+  · let sliceH10 : H¹₀(ℝ^n₊) :=
+      ⟨derivativeSlice (n := n) (Ω := ℝ^n₊) α hα U, htrace α hα hc⟩
+    have hglobal :=
+      (ZeroTraceOdd.oddExtendH10 (n := n) sliceH10).property
+        (singleDerivIndex (n := n) i)
+    by_cases hi : i = PDE.Common.lastIndex (n := n)
+    · subst i
+      simpa [hc, hP, List.count_append, hαi, sliceH10,
+        ZeroTraceOdd.oddExtendH10_apply_coe, ZeroTraceOdd.oddExtendAmbient_apply,
+        ZeroTraceOdd.oddExtendLpAt, derivativeSlice_apply_coe,
+        derivativeSliceAmbient_apply, derivativeSliceIndex, coordinateAtList] using hglobal
+    · simpa [hc, List.count_append, hαi, sliceH10,
+        ZeroTraceOdd.oddExtendH10_apply_coe, ZeroTraceOdd.oddExtendAmbient_apply,
+        ZeroTraceOdd.oddExtendLpAt, derivativeSlice_apply_coe,
+        derivativeSliceAmbient_apply, derivativeSliceIndex, coordinateAtList, hi] using hglobal
+
 /-- One weak derivative step for the parity-reflected coordinate family.
 
 When the source coordinate has even normal multiplicity, ordinary even
@@ -424,47 +487,9 @@ theorem evenReflectListCoordinate_step
       (evenReflectListCoordinate (n := n) (m := m) U α (Nat.le_of_lt hα) :
         ℝ^n → ℝ)
       (evenReflectListCoordinate (n := n) (m := m) U (α ++ [i]) (by
-        simpa [List.length_append] using hα) : ℝ^n → ℝ) := by
-  classical
-  let hαi : (α ++ [i]).length ≤ m := by
-    simpa [List.length_append] using hα
-  have hlocal : HasWeakDerivativeOn (n := n) ℝ^n₊ [i]
-      (coordinateAtList (n := n) (m := m) U α (Nat.le_of_lt hα) : ℝ^n → ℝ)
-      (coordinateAtList (n := n) (m := m) U (α ++ [i]) hαi : ℝ^n → ℝ) :=
-    coordinateAtList_hasWeakDerivative_append_single
-      (n := n) (m := m) U α hα i
-  by_cases heven : Even
-      (α.count (PDE.Common.lastIndex (n := n)))
-  · by_cases hi : i = PDE.Common.lastIndex (n := n)
-    · subst i
-      simpa [evenReflectListCoordinate, heven, Nat.even_add_one,
-        List.count_append, hαi] using
-        (Extension.GraphSpace.HalfSpace.hasWeakDerivativeOn_univ_evenExtend_of_upper_last
-          (n := n) (p := (2 : ℝ≥0∞))
-          (coordinateAtList (n := n) (m := m) U α (Nat.le_of_lt hα))
-          (coordinateAtList (n := n) (m := m) U
-            (α ++ [PDE.Common.lastIndex (n := n)]) hαi) hlocal)
-    · simpa [evenReflectListCoordinate, heven, List.count_append, hi, hαi] using
-        (Extension.GraphSpace.HalfSpace.hasWeakDerivativeOn_univ_evenExtend_of_upper_ne_last
-          (n := n) (p := (2 : ℝ≥0∞)) i hi
-          (coordinateAtList (n := n) (m := m) U α (Nat.le_of_lt hα))
-          (coordinateAtList (n := n) (m := m) U (α ++ [i]) hαi) hlocal)
-  · let sliceH10 : H¹₀(ℝ^n₊) :=
-      ⟨derivativeSlice (n := n) (Ω := ℝ^n₊) α hα U, htrace α hα heven⟩
-    have hglobal :=
-      (ZeroTraceOdd.oddExtendH10 (n := n) sliceH10).property
-        (singleDerivIndex (n := n) i)
-    by_cases hi : i = PDE.Common.lastIndex (n := n)
-    · subst i
-      simpa [evenReflectListCoordinate, heven, Nat.even_add_one,
-        List.count_append, hαi, sliceH10,
-        ZeroTraceOdd.oddExtendH10_apply_coe, ZeroTraceOdd.oddExtendAmbient_apply,
-        ZeroTraceOdd.oddExtendLpAt, derivativeSlice_apply_coe,
-        derivativeSliceAmbient_apply, derivativeSliceIndex, coordinateAtList] using hglobal
-    · simpa [evenReflectListCoordinate, heven, List.count_append, hαi, sliceH10,
-        ZeroTraceOdd.oddExtendH10_apply_coe, ZeroTraceOdd.oddExtendAmbient_apply,
-        ZeroTraceOdd.oddExtendLpAt, derivativeSlice_apply_coe,
-        derivativeSliceAmbient_apply, derivativeSliceIndex, coordinateAtList, hi] using hglobal
+        simpa [List.length_append] using hα) : ℝ^n → ℝ) :=
+  parityReflectListCoordinate_step (n := n) (m := m) U Even (fun _ ↦ Nat.even_add_one)
+    htrace α hα i
 
 /-- One weak derivative step for the odd base parity.  Here even-normal source
 coordinates are reflected oddly, so exactly those `H¹` slices require zero
@@ -481,46 +506,9 @@ theorem oddReflectListCoordinate_step
         ℝ^n → ℝ)
       (oddReflectListCoordinate (n := n) (m := m) U (α ++ [i]) (by
         simpa [List.length_append] using hα) : ℝ^n → ℝ) := by
-  classical
-  let hαi : (α ++ [i]).length ≤ m := by
-    simpa [List.length_append] using hα
-  have hlocal : HasWeakDerivativeOn (n := n) ℝ^n₊ [i]
-      (coordinateAtList (n := n) (m := m) U α (Nat.le_of_lt hα) : ℝ^n → ℝ)
-      (coordinateAtList (n := n) (m := m) U (α ++ [i]) hαi : ℝ^n → ℝ) :=
-    coordinateAtList_hasWeakDerivative_append_single
-      (n := n) (m := m) U α hα i
-  by_cases heven : Even
-      (α.count (PDE.Common.lastIndex (n := n)))
-  · let sliceH10 : H¹₀(ℝ^n₊) :=
-      ⟨derivativeSlice (n := n) (Ω := ℝ^n₊) α hα U, htrace α hα heven⟩
-    have hglobal :=
-      (ZeroTraceOdd.oddExtendH10 (n := n) sliceH10).property
-        (singleDerivIndex (n := n) i)
-    by_cases hi : i = PDE.Common.lastIndex (n := n)
-    · subst i
-      simpa [oddReflectListCoordinate, heven, Nat.even_add_one,
-        List.count_append, hαi, sliceH10,
-        ZeroTraceOdd.oddExtendH10_apply_coe, ZeroTraceOdd.oddExtendAmbient_apply,
-        ZeroTraceOdd.oddExtendLpAt, derivativeSlice_apply_coe,
-        derivativeSliceAmbient_apply, derivativeSliceIndex, coordinateAtList] using hglobal
-    · simpa [oddReflectListCoordinate, heven, List.count_append, hαi, sliceH10,
-        ZeroTraceOdd.oddExtendH10_apply_coe, ZeroTraceOdd.oddExtendAmbient_apply,
-        ZeroTraceOdd.oddExtendLpAt, derivativeSlice_apply_coe,
-        derivativeSliceAmbient_apply, derivativeSliceIndex, coordinateAtList, hi] using hglobal
-  · by_cases hi : i = PDE.Common.lastIndex (n := n)
-    · subst i
-      simpa [oddReflectListCoordinate, heven, Nat.even_add_one,
-        List.count_append, hαi] using
-        (Extension.GraphSpace.HalfSpace.hasWeakDerivativeOn_univ_evenExtend_of_upper_last
-          (n := n) (p := (2 : ℝ≥0∞))
-          (coordinateAtList (n := n) (m := m) U α (Nat.le_of_lt hα))
-          (coordinateAtList (n := n) (m := m) U
-            (α ++ [PDE.Common.lastIndex (n := n)]) hαi) hlocal)
-    · simpa [oddReflectListCoordinate, heven, List.count_append, hi, hαi] using
-        (Extension.GraphSpace.HalfSpace.hasWeakDerivativeOn_univ_evenExtend_of_upper_ne_last
-          (n := n) (p := (2 : ℝ≥0∞)) i hi
-          (coordinateAtList (n := n) (m := m) U α (Nat.le_of_lt hα))
-          (coordinateAtList (n := n) (m := m) U (α ++ [i]) hαi) hlocal)
+  simpa only [oddReflectListCoordinate, ite_not] using
+    parityReflectListCoordinate_step (n := n) (m := m) U (fun c ↦ ¬ Even c)
+      (fun c ↦ by rw [Nat.even_add_one]) (fun α hα h ↦ htrace α hα (not_not.mp h)) α hα i
 
 end HigherOrderReflection
 end GraphSpace

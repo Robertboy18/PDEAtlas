@@ -172,7 +172,7 @@ def findFigure (encoded : String) (id : String) :
 /-- Decode one figure previously serialized at the call site. -/
 private def decodeOne (encoded : String) : Figure :=
   match Json.parse encoded with
-  | .error error => panic! s!"LeanPDE figure JSON is malformed: {error}"
+  | .error error => panic! s!"PDEAtlas figure JSON is malformed: {error}"
   | .ok value => decodeFigure value
 
 /-- Shared figure layout, with fallback colours for rendering outside the book's stylesheet. -/
@@ -481,7 +481,7 @@ private def mkFigureBlock (id : String) : PartElabM (TSyntax `term) := do
   let (found, ids) ←
     match findFigure LeanPDE.FiguresData.json id with
     | .ok result => pure result
-    | .error error => throwError "LeanPDE figure data is malformed: {error}"
+    | .error error => throwError "PDEAtlas figure data is malformed: {error}"
   let some value := found
     | throwError "leanpde_figure: unknown figure {id}; known figures: {ids}"
   ``(Verso.Doc.Block.other

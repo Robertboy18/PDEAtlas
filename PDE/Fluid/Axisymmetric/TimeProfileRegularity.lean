@@ -186,7 +186,7 @@ theorem classical_dr_axisRegularPullback_eq_zero
   simp [hx]
 
 /-- Every axis-regular profile has zero classical radial derivative on the
-axis: each time slice is even under the radial reflection, so LeanPDE's
+axis: each time slice is even under the radial reflection, so PDEAtlas's
 `IsEvenUnderCoordinateReflection.partialDeriv_eq_zero` applies on the reflecting
 hyperplane `r = 0`. -/
 theorem IsAxisRegularTimeProfile.classical_dr_eq_zero

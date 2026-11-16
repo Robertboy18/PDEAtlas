@@ -26,11 +26,12 @@ after a time at which `P` is positive. The mirror-image statements hold backward
 held on an entire past half-line. These are the versions needed for a solution that is known
 to exist up to `t₀` and whose mass is decreasing there.
 
-The proofs are by time reflection. Setting `Ĩ(t) = I(-t)` and `P̃(t) = -P(-t)` gives
-`Ĩ' = P̃`, `P̃² = P²`, and `P̃'(t) = P'(-t)`, so the concavity inequality keeps exactly the same
-form for `(Ĩ, P̃)` on the reflected interval, and the forward theorems apply verbatim. As in
-the forward file, `I` and `P` are arbitrary real functions and the inequality is a hypothesis;
-no PDE enters.
+The strict bounds and the half-line statement are proved by time reflection. Setting
+`Ĩ(t) = I(-t)` and `P̃(t) = -P(-t)` gives `Ĩ' = P̃`, `P̃² = P²`, and `P̃'(t) = P'(-t)`, so the
+concavity inequality keeps exactly the same form for `(Ĩ, P̃)` on the reflected interval, and
+the forward theorems apply verbatim. The non-strict bounds on `(T, t₀]` follow from the strict
+ones on every closed interval `[S, t₀]` with `T < S`. As in the forward file, `I` and `P` are
+arbitrary real functions and the inequality is a hypothesis; no PDE enters.
 
 ## Main results
 
@@ -78,6 +79,24 @@ private theorem hasDerivAt_reflectedMomentum
     neg_one_smul, neg_neg] using
     hP.hasDerivAt.neg.scomp t (hasDerivAt_neg t)
 
+/-- The concavity inequality for `(I, P)` at `-t` is the concavity inequality for the reflected
+pair at `t`: the square of the momentum is unchanged and the reflected momentum has derivative
+`P'(-t)`. -/
+private theorem reflected_concavity {I P : ℝ → ℝ} {a b t : ℝ}
+    (hP : DifferentiableAt ℝ P (-t))
+    (h : (1 + a) * P (-t) ^ 2 ≤ I (-t) * (deriv P (-t) - b)) :
+    (1 + a) * reflectedMomentum P t ^ 2 ≤
+      reflectedMass I t * (deriv (reflectedMomentum P) t - b) := by
+  rw [(hasDerivAt_reflectedMomentum hP).deriv]
+  simpa only [reflectedMass, reflectedMomentum, Function.comp_apply, Pi.neg_apply, neg_sq] using h
+
+/-- A strict bound `h < S` at every time `S` of `(T, c]` gives the non-strict bound `h ≤ T`.
+This passes from closed intervals `[S, t₀]` to the half-open interval `(T, t₀]`. -/
+private theorem le_of_forall_mem_Ioc_lt {c T h : ℝ} (hc : T < c) (H : ∀ S ∈ Ioc T c, h < S) :
+    h ≤ T :=
+  le_of_forall_gt_imp_ge_of_dense fun S hS ↦
+    (le_total S c).elim (fun hSc ↦ (H S ⟨hS, hSc⟩).le) fun hcS ↦ (H c ⟨hc, le_rfl⟩).le.trans hcS
+
 /-- If the concavity inequality holds on `[T, t₀]` and `P(t₀) < 0`, then
 the left endpoint lies strictly after the backward Riccati horizon
 
@@ -96,40 +115,21 @@ theorem riccati_horizon_lt_left_endpoint
     (hconcavity : ∀ t ∈ Ioo T t₀,
       (1 + a) * P t ^ 2 ≤ I t * (deriv P t - b)) :
     t₀ - (a * (-P t₀ / I t₀))⁻¹ < T := by
-  have hreflectedMass :
-      ∀ t ∈ Icc (-t₀) (-T),
-        HasDerivAt (reflectedMass I) (reflectedMomentum P t) t := by
-    intro t ht
-    apply hasDerivAt_reflectedMass
-    exact hI (-t) (by constructor <;> linarith [ht.1, ht.2])
-  have hreflectedMomentum :
-      ∀ t ∈ Icc (-t₀) (-T),
-        DifferentiableAt ℝ (reflectedMomentum P) t := by
-    intro t ht
-    exact (hasDerivAt_reflectedMomentum
-      (hP (-t) (by constructor <;> linarith [ht.1, ht.2]))).differentiableAt
+  have hmem {t : ℝ} (ht : t ∈ Icc (-t₀) (-T)) : -t ∈ Icc T t₀ :=
+    ⟨le_neg.mp ht.2, neg_le.mp ht.1⟩
   have hendpoint :=
-    right_endpoint_lt_riccati_horizon
-      (I := reflectedMass I) (P := reflectedMomentum P)
+    right_endpoint_lt_riccati_horizon (I := reflectedMass I) (P := reflectedMomentum P)
       (t₀ := -t₀) (T := -T) ha hb
-      hreflectedMass hreflectedMomentum (by
-        simpa only [reflectedMass, Function.comp_apply, neg_neg] using hI₀) (by
-        simpa only [reflectedMomentum, Function.comp_apply, Pi.neg_apply,
-          neg_neg] using neg_pos.mpr hP₀)
-      (fun t ht ↦ by
-        exact hpos (-t) (by constructor <;> linarith [ht.1, ht.2]))
-      (fun t ht ↦ by
-        have htime : -t ∈ Ioo T t₀ := by
-          constructor <;> linarith [ht.1, ht.2]
-        have horiginal := hconcavity (-t) htime
-        have hderiv :=
-          (hasDerivAt_reflectedMomentum
-            (hP (-t) (Ioo_subset_Icc_self htime))).deriv
-        rw [hderiv]
-        simpa only [reflectedMass, reflectedMomentum, Function.comp_apply,
-          Pi.neg_apply, neg_sq] using horiginal)
-  simp only [reflectedMass, reflectedMomentum, Function.comp_apply,
-    Pi.neg_apply, neg_neg] at hendpoint
+      (fun t ht ↦ hasDerivAt_reflectedMass (hI (-t) (hmem ht)))
+      (fun t ht ↦ (hasDerivAt_reflectedMomentum (hP (-t) (hmem ht))).differentiableAt)
+      (by simpa only [reflectedMass, Function.comp_apply, neg_neg] using hI₀)
+      (by simpa only [reflectedMomentum, Function.comp_apply, Pi.neg_apply, neg_neg] using
+        neg_pos.mpr hP₀)
+      (fun t ht ↦ hpos (-t) (hmem ht))
+      (fun t ht ↦ reflected_concavity (hP (-t) (hmem (Ioo_subset_Icc_self ht)))
+        (hconcavity (-t) ⟨lt_neg.mp ht.2, neg_lt.mp ht.1⟩))
+  simp only [reflectedMass, reflectedMomentum, Function.comp_apply, Pi.neg_apply, neg_neg]
+    at hendpoint
   linarith
 
 /-- On a half-open past lifespan `(T, t₀]`, negative momentum at `t₀`
@@ -137,8 +137,8 @@ gives the non-strict backward Riccati bound
 
 `t₀ - (a (-P(t₀) / I(t₀)))⁻¹ ≤ T`.
 
-Time reflection turns `(T, t₀]` into the forward interval `[-t₀, -T)`, so
-this follows from `right_endpoint_le_riccati_horizon`. -/
+Every closed interval `[S, t₀]` with `T < S` satisfies the strict bound
+`riccati_horizon_lt_left_endpoint`, and the horizon does not depend on `S`. -/
 theorem riccati_horizon_le_left_endpoint
     {I P : ℝ → ℝ} {a b T t₀ : ℝ}
     (ha : 0 < a) (hb : 0 ≤ b)
@@ -149,48 +149,22 @@ theorem riccati_horizon_le_left_endpoint
     (hconcavity : ∀ t ∈ Ioo T t₀,
       (1 + a) * P t ^ 2 ≤ I t * (deriv P t - b)) :
     t₀ - (a * (-P t₀ / I t₀))⁻¹ ≤ T := by
-  have hreflectedMass :
-      ∀ t ∈ Ico (-t₀) (-T),
-        HasDerivAt (reflectedMass I) (reflectedMomentum P t) t := by
-    intro t ht
-    apply hasDerivAt_reflectedMass
-    exact hI (-t) (by constructor <;> linarith [ht.1, ht.2])
-  have hreflectedMomentum :
-      ∀ t ∈ Ico (-t₀) (-T),
-        DifferentiableAt ℝ (reflectedMomentum P) t := by
-    intro t ht
-    exact (hasDerivAt_reflectedMomentum
-      (hP (-t) (by constructor <;> linarith [ht.1, ht.2]))).differentiableAt
-  have hendpoint :=
-    right_endpoint_le_riccati_horizon
-      (I := reflectedMass I) (P := reflectedMomentum P)
-      (t₀ := -t₀) (T := -T) ha hb
-      hreflectedMass hreflectedMomentum (by
-        simpa only [reflectedMass, Function.comp_apply, neg_neg] using hI₀) (by
-        simpa only [reflectedMomentum, Function.comp_apply, Pi.neg_apply,
-          neg_neg] using neg_pos.mpr hP₀)
-      (fun t ht ↦ by
-        exact hpos (-t) (by constructor <;> linarith [ht.1, ht.2]))
-      (fun t ht ↦ by
-        have htime : -t ∈ Ioo T t₀ := by
-          constructor <;> linarith [ht.1, ht.2]
-        have horiginal := hconcavity (-t) htime
-        have hderiv :=
-          (hasDerivAt_reflectedMomentum
-            (hP (-t) ⟨htime.1, htime.2.le⟩)).deriv
-        rw [hderiv]
-        simpa only [reflectedMass, reflectedMomentum, Function.comp_apply,
-          Pi.neg_apply, neg_sq] using horiginal)
-  simp only [reflectedMass, reflectedMomentum, Function.comp_apply,
-    Pi.neg_apply, neg_neg] at hendpoint
-  linarith
+  rcases le_or_gt t₀ T with hT | hT
+  · exact (sub_le_self t₀ (inv_nonneg.mpr
+      (mul_nonneg ha.le (div_nonneg (neg_nonneg.mpr hP₀.le) hI₀.le)))).trans hT
+  · exact le_of_forall_mem_Ioc_lt hT fun _ hS ↦
+      riccati_horizon_lt_left_endpoint ha hb
+        (fun t ht ↦ hI t ⟨hS.1.trans_le ht.1, ht.2⟩) (fun t ht ↦ hP t ⟨hS.1.trans_le ht.1, ht.2⟩)
+        hI₀ hP₀ (fun t ht ↦ hpos t ⟨hS.1.trans_le ht.1, ht.2⟩)
+        (fun t ht ↦ hconcavity t ⟨hS.1.trans ht.1, ht.2⟩)
 
 /-- If `P(t₀) ≤ 0`, positive forcing makes the momentum strictly negative
 at every earlier shifted time `t₀ - δ`. On `[T, t₀]` this gives
 
 `t₀ - δ - (a (-P(t₀ - δ) / I(t₀ - δ)))⁻¹ < T`
 
-whenever `δ > 0` and `T ≤ t₀ - δ`. -/
+whenever `δ > 0` and `T ≤ t₀ - δ`. This is
+`right_endpoint_lt_shifted_riccati_horizon` applied after reflecting time. -/
 theorem shifted_riccati_horizon_lt_left_endpoint
     {I P : ℝ → ℝ} {a b T t₀ δ : ℝ}
     (ha : 0 < a) (hb : 0 < b) (hδ : 0 < δ)
@@ -204,41 +178,21 @@ theorem shifted_riccati_horizon_lt_left_endpoint
     t₀ - δ -
         (a * (-P (t₀ - δ) / I (t₀ - δ)))⁻¹ <
       T := by
-  have hreflectedMass :
-      ∀ t ∈ Icc (-t₀) (-T),
-        HasDerivAt (reflectedMass I) (reflectedMomentum P t) t := by
-    intro t ht
-    apply hasDerivAt_reflectedMass
-    exact hI (-t) (by constructor <;> linarith [ht.1, ht.2])
-  have hreflectedMomentum :
-      ∀ t ∈ Icc (-t₀) (-T),
-        DifferentiableAt ℝ (reflectedMomentum P) t := by
-    intro t ht
-    exact (hasDerivAt_reflectedMomentum
-      (hP (-t) (by constructor <;> linarith [ht.1, ht.2]))).differentiableAt
+  have hmem {t : ℝ} (ht : t ∈ Icc (-t₀) (-T)) : -t ∈ Icc T t₀ :=
+    ⟨le_neg.mp ht.2, neg_le.mp ht.1⟩
   have hendpoint :=
-    right_endpoint_lt_shifted_riccati_horizon
-      (I := reflectedMass I) (P := reflectedMomentum P)
+    right_endpoint_lt_shifted_riccati_horizon (I := reflectedMass I) (P := reflectedMomentum P)
       (t₀ := -t₀) (T := -T) ha hb hδ (by linarith)
-      hreflectedMass hreflectedMomentum
-      (by
-        simpa only [reflectedMomentum, Function.comp_apply, Pi.neg_apply,
-          neg_neg] using neg_nonneg.mpr hP₀)
-      (fun t ht ↦ by
-        exact hpos (-t) (by constructor <;> linarith [ht.1, ht.2]))
-      (fun t ht ↦ by
-        have htime : -t ∈ Ioo T t₀ := by
-          constructor <;> linarith [ht.1, ht.2]
-        have horiginal := hconcavity (-t) htime
-        have hderiv :=
-          (hasDerivAt_reflectedMomentum
-            (hP (-t) (Ioo_subset_Icc_self htime))).deriv
-        rw [hderiv]
-        simpa only [reflectedMass, reflectedMomentum, Function.comp_apply,
-          Pi.neg_apply, neg_sq] using horiginal)
+      (fun t ht ↦ hasDerivAt_reflectedMass (hI (-t) (hmem ht)))
+      (fun t ht ↦ (hasDerivAt_reflectedMomentum (hP (-t) (hmem ht))).differentiableAt)
+      (by simpa only [reflectedMomentum, Function.comp_apply, Pi.neg_apply, neg_neg] using
+        neg_nonneg.mpr hP₀)
+      (fun t ht ↦ hpos (-t) (hmem ht))
+      (fun t ht ↦ reflected_concavity (hP (-t) (hmem (Ioo_subset_Icc_self ht)))
+        (hconcavity (-t) ⟨lt_neg.mp ht.2, neg_lt.mp ht.1⟩))
   have htime : -(-t₀ + δ) = t₀ - δ := by ring
-  simp only [reflectedMass, reflectedMomentum, Function.comp_apply,
-    Pi.neg_apply, htime] at hendpoint
+  simp only [reflectedMass, reflectedMomentum, Function.comp_apply, Pi.neg_apply, htime]
+    at hendpoint
   linarith
 
 /-- On `(T, t₀]`, nonpositive momentum at `t₀` gives the shifted bound
@@ -246,7 +200,9 @@ theorem shifted_riccati_horizon_lt_left_endpoint
 `t₀ - δ - (a (-P(t₀ - δ) / I(t₀ - δ)))⁻¹ ≤ T`
 
 whenever `δ > 0` and `T < t₀ - δ`. This is the maximal-past-lifespan
-counterpart of `shifted_riccati_horizon_lt_left_endpoint`. -/
+counterpart of `shifted_riccati_horizon_lt_left_endpoint`: every closed interval
+`[S, t₀]` with `T < S ≤ t₀ - δ` satisfies that strict bound, and the shifted
+horizon does not depend on `S`. -/
 theorem shifted_riccati_horizon_le_left_endpoint
     {I P : ℝ → ℝ} {a b T t₀ δ : ℝ}
     (ha : 0 < a) (hb : 0 < b) (hδ : 0 < δ)
@@ -259,43 +215,12 @@ theorem shifted_riccati_horizon_le_left_endpoint
       (1 + a) * P t ^ 2 ≤ I t * (deriv P t - b)) :
     t₀ - δ -
         (a * (-P (t₀ - δ) / I (t₀ - δ)))⁻¹ ≤
-      T := by
-  have hreflectedMass :
-      ∀ t ∈ Ico (-t₀) (-T),
-        HasDerivAt (reflectedMass I) (reflectedMomentum P t) t := by
-    intro t ht
-    apply hasDerivAt_reflectedMass
-    exact hI (-t) (by constructor <;> linarith [ht.1, ht.2])
-  have hreflectedMomentum :
-      ∀ t ∈ Ico (-t₀) (-T),
-        DifferentiableAt ℝ (reflectedMomentum P) t := by
-    intro t ht
-    exact (hasDerivAt_reflectedMomentum
-      (hP (-t) (by constructor <;> linarith [ht.1, ht.2]))).differentiableAt
-  have hendpoint :=
-    right_endpoint_le_shifted_riccati_horizon
-      (I := reflectedMass I) (P := reflectedMomentum P)
-      (t₀ := -t₀) (T := -T) ha hb hδ (by linarith)
-      hreflectedMass hreflectedMomentum
-      (by
-        simpa only [reflectedMomentum, Function.comp_apply, Pi.neg_apply,
-          neg_neg] using neg_nonneg.mpr hP₀)
-      (fun t ht ↦ by
-        exact hpos (-t) (by constructor <;> linarith [ht.1, ht.2]))
-      (fun t ht ↦ by
-        have htime : -t ∈ Ioo T t₀ := by
-          constructor <;> linarith [ht.1, ht.2]
-        have horiginal := hconcavity (-t) htime
-        have hderiv :=
-          (hasDerivAt_reflectedMomentum
-            (hP (-t) ⟨htime.1, htime.2.le⟩)).deriv
-        rw [hderiv]
-        simpa only [reflectedMass, reflectedMomentum, Function.comp_apply,
-          Pi.neg_apply, neg_sq] using horiginal)
-  have htime : -(-t₀ + δ) = t₀ - δ := by ring
-  simp only [reflectedMass, reflectedMomentum, Function.comp_apply,
-    Pi.neg_apply, htime] at hendpoint
-  linarith
+      T :=
+  le_of_forall_mem_Ioc_lt hshift fun _ hS ↦
+    shifted_riccati_horizon_lt_left_endpoint ha hb hδ hS.2
+      (fun t ht ↦ hI t ⟨hS.1.trans_le ht.1, ht.2⟩) (fun t ht ↦ hP t ⟨hS.1.trans_le ht.1, ht.2⟩)
+      hP₀ (fun t ht ↦ hpos t ⟨hS.1.trans_le ht.1, ht.2⟩)
+      (fun t ht ↦ hconcavity t ⟨hS.1.trans ht.1, ht.2⟩)
 
 /-- A positive mass and its momentum cannot satisfy the concavity inequality
 
@@ -315,36 +240,12 @@ theorem not_concavity_inequality_on_Iic
     (hP : ∀ t, t ≤ t₀ → DifferentiableAt ℝ P t)
     (hpos : ∀ t, t ≤ t₀ → 0 < I t) :
     ¬ ∀ t, t ≤ t₀ →
-      (1 + a) * P t ^ 2 ≤ I t * (deriv P t - b) := by
-  intro hconcavity
-  have hreflectedMass :
-      ∀ t, -t₀ ≤ t →
-        HasDerivAt (reflectedMass I) (reflectedMomentum P t) t := by
-    intro t ht
-    have htime : -t ≤ t₀ := by linarith
-    exact hasDerivAt_reflectedMass (hI (-t) htime)
-  have hreflectedMomentum :
-      ∀ t, -t₀ ≤ t →
-        HasDerivAt (reflectedMomentum P) (deriv P (-t)) t := by
-    intro t ht
-    have htime : -t ≤ t₀ := by linarith
-    exact hasDerivAt_reflectedMomentum (hP (-t) htime)
-  apply
-    (not_concavity_inequality_on_Ici
-      (I := reflectedMass I) (P := reflectedMomentum P)
-      (t₀ := -t₀) ha hb hreflectedMass
-      (fun t ht ↦ (hreflectedMomentum t ht).differentiableAt)
-      (fun t ht ↦ by
-        have htime : -t ≤ t₀ := by linarith
-        exact hpos (-t) htime))
-  intro t ht
-  have htime : -t ≤ t₀ := by linarith
-  have horiginal := hconcavity (-t) htime
-  have hderiv :
-      deriv (reflectedMomentum P) t = deriv P (-t) :=
-    (hreflectedMomentum t ht).deriv
-  rw [hderiv]
-  simpa only [reflectedMass, reflectedMomentum, Function.comp_apply,
-    Pi.neg_apply, neg_sq] using horiginal
+      (1 + a) * P t ^ 2 ≤ I t * (deriv P t - b) := fun hconcavity ↦
+  not_concavity_inequality_on_Ici (I := reflectedMass I) (P := reflectedMomentum P)
+    (t₀ := -t₀) ha hb
+    (fun t ht ↦ hasDerivAt_reflectedMass (hI (-t) (neg_le.mp ht)))
+    (fun t ht ↦ (hasDerivAt_reflectedMomentum (hP (-t) (neg_le.mp ht))).differentiableAt)
+    (fun t ht ↦ hpos (-t) (neg_le.mp ht))
+    fun t ht ↦ reflected_concavity (hP (-t) (neg_le.mp ht)) (hconcavity (-t) (neg_le.mp ht))
 
 end PDE.Solution.Singularity.FiniteTime.Concavity

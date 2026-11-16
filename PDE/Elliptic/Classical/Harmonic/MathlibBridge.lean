@@ -12,15 +12,15 @@ public import Mathlib.Analysis.InnerProductSpace.Harmonic.Basic
 /-!
 # Bridge to Mathlib harmonic functions
 
-LeanPDE's `LaplacianEquation.IsHarmonicPDE` uses the coordinate Laplacian and permits
+PDEAtlas's `LaplacianEquation.IsHarmonicPDE` uses the coordinate Laplacian and permits
 relative `C²` regularity on an arbitrary set. Mathlib's
 `InnerProductSpace.HarmonicOnNhd` uses the canonical inner-product-space Laplacian
 and requires harmonicity in a neighborhood of every point.
 
-Mathlib harmonicity therefore always implies LeanPDE harmonicity. The converse is
+Mathlib harmonicity therefore always implies PDEAtlas harmonicity. The converse is
 valid on open sets, where relative regularity and pointwise vanishing promote to
 neighborhood statements. These equivalences let the classical elliptic theory use
-Mathlib's harmonic functions while keeping LeanPDE's predicate on arbitrary sets.
+Mathlib's harmonic functions while keeping PDEAtlas's predicate on arbitrary sets.
 -/
 
 @[expose] public section
@@ -29,7 +29,7 @@ open PDE (laplacian)
 
 namespace InnerProductSpace
 
-/-- Mathlib harmonicity implies LeanPDE's coordinate formulation on any set. -/
+/-- Mathlib harmonicity implies PDEAtlas's coordinate formulation on any set. -/
 theorem HarmonicOnNhd.isHarmonicPDE {n : ℕ}
     {u : ℝ^n → ℝ} {U : Set (ℝ^n)}
     (hu : HarmonicOnNhd u U) :
@@ -43,7 +43,7 @@ end InnerProductSpace
 
 namespace LaplacianEquation
 
-/-- On an open set, LeanPDE harmonicity gives Mathlib harmonicity in a neighborhood. -/
+/-- On an open set, PDEAtlas harmonicity gives Mathlib harmonicity in a neighborhood. -/
 theorem IsHarmonicPDE.harmonicOnNhd {n : ℕ}
     {u : ℝ^n → ℝ} {U : Set (ℝ^n)}
     (hu : IsHarmonicPDE n u U) (hU : IsOpen U) :
@@ -62,7 +62,7 @@ theorem IsHarmonicPDE.harmonicOnNhd {n : ℕ}
     _ = 0 := hyLaplacian
     _ = (0 : ℝ^n → ℝ) y := rfl
 
-/-- On an open set, LeanPDE and Mathlib harmonicity are equivalent. -/
+/-- On an open set, PDEAtlas and Mathlib harmonicity are equivalent. -/
 theorem isHarmonicPDE_iff_harmonicOnNhd {n : ℕ}
     {u : ℝ^n → ℝ} {U : Set (ℝ^n)} (hU : IsOpen U) :
     IsHarmonicPDE n u U ↔ InnerProductSpace.HarmonicOnNhd u U :=

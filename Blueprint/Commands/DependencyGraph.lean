@@ -15,7 +15,7 @@ import Blueprint.Chapters.Variational
 import VersoBlueprint.Commands.Graph
 
 /-!
-# LeanPDE dependency graph
+# PDEAtlas dependency graph
 
 This module loads every mathematical chapter and renders all registered
 Blueprint statements in one graph block.
@@ -44,11 +44,11 @@ private def decodeGraphBlockData (encoded : String) :
     Informal.Commands.GraphBlockData :=
   match Json.parse encoded with
   | .error error =>
-      panic! s!"LeanPDE dependency graph JSON is malformed: {error}"
+      panic! s!"PDEAtlas dependency graph JSON is malformed: {error}"
   | .ok value =>
       match fromJson? value with
       | .error error =>
-          panic! s!"LeanPDE dependency graph data is malformed: {error}"
+          panic! s!"PDEAtlas dependency graph data is malformed: {error}"
       | .ok graphData => graphData
 
 /-- Node labels longer than this many characters break at the segment boundary. -/
@@ -79,7 +79,7 @@ def displayLabels (labels : Array Name) : Array String :=
   labels.zipWith (fun label s ↦
     if counts.getD s 0 > 1 then displayLabelFor label 3 else s) short
 
-/-- Render the complete LeanPDE Blueprint dependency graph. -/
+/-- Render the complete PDEAtlas Blueprint dependency graph. -/
 private def mkDependencyGraphBlock : PartElabM (TSyntax `term) := do
   Informal.Environment.reportImportedConflicts
   let state := Informal.Environment.informalExt.getState (← getEnv)

@@ -9,6 +9,7 @@ module
 public import PDE.Analysis.Calculus.SignedPower.Deriv
 public import PDE.Hyperbolic.Models.Wave.Operator
 import PDE.Analysis.Calculus.LocalExtension.ForwardBand
+import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.Basic
 import PDE.FDeriv.SpaceTime
 import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
 import Mathlib.Analysis.Calculus.ImplicitFunction.ProdDomain
@@ -86,16 +87,9 @@ theorem not_contDiff_four_quadratic_wave_of_coordinate_datum {g : ℝ^3 → ℝ}
       (contDiff_partialDeriv_of_succ (m := 3) hu)
   have hf : ContDiff ℝ 2 (waveOperator u) := (hsecond 0).sub (ContDiff.sum fun i _ ↦ hsecond i.succ)
   have hz (x : ℝ^3) : waveOperator u (timeSpaceCons 0 x) + Real.signedPower 2 (g x) = 0 := by
-    have hc : Continuous (fun t ↦ waveOperator u (timeSpaceCons t x) +
-        Real.signedPower 2 (u (timeSpaceCons t x))) := (hf.continuous.add
-        ((Real.contDiff_one_signedPower (by norm_num : (1 : ℝ) ≤ 2)).continuous.comp
-          hu.continuous)).comp ((contDiff_timeSpaceCons_uncurry 3 (m := 1)).continuous.comp
-          (continuous_id.prodMk continuous_const))
-    have he : EqOn (fun t ↦ waveOperator u (timeSpaceCons t x) +
-        Real.signedPower 2 (u (timeSpaceCons t x))) (fun _ ↦ 0) (Ioo 0 T) := fun t ht ↦ hwave t ht x
-    have he0 := he.closure hc continuous_const
-    rw [closure_Ioo hT.ne] at he0
-    simpa only [hposition] using he0 (show (0 : ℝ) ∈ Icc 0 T from ⟨le_rfl, hT.le⟩)
+    simpa only [hposition] using waveOperator_add_eq_zero_of_mem_Icc
+      (Real.contDiff_one_signedPower (by norm_num : (1 : ℝ) ≤ 2)).continuous
+      (hu.of_le (by norm_num)) hT (fun t ht ↦ hwave t ht x) (left_mem_Icc.mpr hT.le)
   let e : ℝ^3 := EuclideanSpace.single 0 1
   let c (r : ℝ) := timeSpaceCons 0 (r • e)
   have hcs : ContDiff ℝ 2 c := (contDiff_timeSpaceCons_spatial 3 0 (m := 2)).comp

@@ -177,6 +177,21 @@ theorem gradientKernel_zero_eq_neg_re (z : ℝ^2) :
 private theorem inv_conj (u : ℂ) : 1 / conj u = conj (1 / u) := by
   simp only [one_div, map_inv₀]
 
+/-- `1 / (X - -conj Y) = -conj (1 / (-conj X - Y))`: the pole `Y` reflected in the imaginary
+axis. -/
+private theorem one_div_sub_neg_conj (X Y : ℂ) :
+    1 / (X - -conj Y) = -conj (1 / (-conj X - Y)) := by
+  rw [← inv_conj, map_sub, map_neg, Complex.conj_conj,
+    show -X - conj Y = -(X - -conj Y) by ring, one_div_neg_eq_neg_one_div, neg_neg]
+
+/-- `1 / (X - conj Y) = conj (1 / (conj X - Y))`: the pole `Y` reflected in the real axis. -/
+private theorem one_div_sub_conj (X Y : ℂ) : 1 / (X - conj Y) = conj (1 / (conj X - Y)) := by
+  rw [← inv_conj, map_sub, Complex.conj_conj]
+
+/-- `1 / (X + Y) = -(1 / (-X - Y))`: the pole `Y` reflected in the origin. -/
+private theorem one_div_add_eq_neg (X Y : ℂ) : 1 / (X + Y) = -(1 / (-X - Y)) := by
+  rw [show -X - Y = -(X + Y) by ring, one_div_neg_eq_neg_one_div, neg_neg]
+
 /-- The complex form of the symmetrized kernel `g₁ₛ`, with `f(w) = 1/(w - Y)`. -/
 theorem symmetrizedKernel_gradientKernel_one_eq (x y : ℝ^2) :
     symmetrizedKernel (gradientKernel 1) x y = 1 / (2 * Real.pi) *
@@ -186,14 +201,8 @@ theorem symmetrizedKernel_gradientKernel_one_eq (x y : ℝ^2) :
   simp only [gradientKernel_one_eq_im, map_sub, map_add,
     orthonormalBasisOneI_repr_symm_coordinateReflection_zero,
     orthonormalBasisOneI_repr_symm_coordinateReflection_one]
-  have e2 : 1 / (𝔠 x - -conj (𝔠 y)) = -conj (1 / (-conj (𝔠 x) - 𝔠 y)) := by
-    rw [← inv_conj, map_sub, map_neg, Complex.conj_conj,
-      show -𝔠 x - conj (𝔠 y) = -(𝔠 x - -conj (𝔠 y)) by ring, one_div_neg_eq_neg_one_div, neg_neg]
-  have e3 : 1 / (𝔠 x - conj (𝔠 y)) = conj (1 / (conj (𝔠 x) - 𝔠 y)) := by
-    rw [← inv_conj, map_sub, Complex.conj_conj]
-  have e4 : 1 / (𝔠 x + 𝔠 y) = -(1 / (-𝔠 x - 𝔠 y)) := by
-    rw [show -𝔠 x - 𝔠 y = -(𝔠 x + 𝔠 y) by ring, one_div_neg_eq_neg_one_div, neg_neg]
-  rw [e2, e3, e4]
+  rw [one_div_sub_neg_conj (𝔠 x) (𝔠 y), one_div_sub_conj (𝔠 x) (𝔠 y),
+    one_div_add_eq_neg (𝔠 x) (𝔠 y)]
   simp only [sub_im, add_im, neg_im, conj_im]
   ring
 
@@ -206,14 +215,8 @@ theorem symmetrizedKernel_gradientKernel_zero_eq (x y : ℝ^2) :
   simp only [gradientKernel_zero_eq_neg_re, map_sub, map_add,
     orthonormalBasisOneI_repr_symm_coordinateReflection_zero,
     orthonormalBasisOneI_repr_symm_coordinateReflection_one]
-  have e2 : 1 / (𝔠 x - -conj (𝔠 y)) = -conj (1 / (-conj (𝔠 x) - 𝔠 y)) := by
-    rw [← inv_conj, map_sub, map_neg, Complex.conj_conj,
-      show -𝔠 x - conj (𝔠 y) = -(𝔠 x - -conj (𝔠 y)) by ring, one_div_neg_eq_neg_one_div, neg_neg]
-  have e3 : 1 / (𝔠 x - conj (𝔠 y)) = conj (1 / (conj (𝔠 x) - 𝔠 y)) := by
-    rw [← inv_conj, map_sub, Complex.conj_conj]
-  have e4 : 1 / (𝔠 x + 𝔠 y) = -(1 / (-𝔠 x - 𝔠 y)) := by
-    rw [show -𝔠 x - 𝔠 y = -(𝔠 x + 𝔠 y) by ring, one_div_neg_eq_neg_one_div, neg_neg]
-  rw [e2, e3, e4]
+  rw [one_div_sub_neg_conj (𝔠 x) (𝔠 y), one_div_sub_conj (𝔠 x) (𝔠 y),
+    one_div_add_eq_neg (𝔠 x) (𝔠 y)]
   simp only [sub_re, neg_re, conj_re]
   ring
 
@@ -232,14 +235,8 @@ theorem evenOddKernel_gradientKernel_one_eq (x y : ℝ^2) :
   simp only [gradientKernel_one_eq_im, map_sub, map_add,
     orthonormalBasisOneI_repr_symm_coordinateReflection_zero,
     orthonormalBasisOneI_repr_symm_coordinateReflection_one]
-  have e2 : 1 / (𝔠 x - -conj (𝔠 y)) = -conj (1 / (-conj (𝔠 x) - 𝔠 y)) := by
-    rw [← inv_conj, map_sub, map_neg, Complex.conj_conj,
-      show -𝔠 x - conj (𝔠 y) = -(𝔠 x - -conj (𝔠 y)) by ring, one_div_neg_eq_neg_one_div, neg_neg]
-  have e3 : 1 / (𝔠 x - conj (𝔠 y)) = conj (1 / (conj (𝔠 x) - 𝔠 y)) := by
-    rw [← inv_conj, map_sub, Complex.conj_conj]
-  have e4 : 1 / (𝔠 x + 𝔠 y) = -(1 / (-𝔠 x - 𝔠 y)) := by
-    rw [show -𝔠 x - 𝔠 y = -(𝔠 x + 𝔠 y) by ring, one_div_neg_eq_neg_one_div, neg_neg]
-  rw [e2, e3, e4]
+  rw [one_div_sub_neg_conj (𝔠 x) (𝔠 y), one_div_sub_conj (𝔠 x) (𝔠 y),
+    one_div_add_eq_neg (𝔠 x) (𝔠 y)]
   simp only [add_im, neg_im, conj_im]
   ring
 
@@ -253,14 +250,8 @@ theorem evenOddKernel_gradientKernel_zero_eq (x y : ℝ^2) :
   simp only [gradientKernel_zero_eq_neg_re, map_sub, map_add,
     orthonormalBasisOneI_repr_symm_coordinateReflection_zero,
     orthonormalBasisOneI_repr_symm_coordinateReflection_one]
-  have e2 : 1 / (𝔠 x - -conj (𝔠 y)) = -conj (1 / (-conj (𝔠 x) - 𝔠 y)) := by
-    rw [← inv_conj, map_sub, map_neg, Complex.conj_conj,
-      show -𝔠 x - conj (𝔠 y) = -(𝔠 x - -conj (𝔠 y)) by ring, one_div_neg_eq_neg_one_div, neg_neg]
-  have e3 : 1 / (𝔠 x - conj (𝔠 y)) = conj (1 / (conj (𝔠 x) - 𝔠 y)) := by
-    rw [← inv_conj, map_sub, Complex.conj_conj]
-  have e4 : 1 / (𝔠 x + 𝔠 y) = -(1 / (-𝔠 x - 𝔠 y)) := by
-    rw [show -𝔠 x - 𝔠 y = -(𝔠 x + 𝔠 y) by ring, one_div_neg_eq_neg_one_div, neg_neg]
-  rw [e2, e3, e4]
+  rw [one_div_sub_neg_conj (𝔠 x) (𝔠 y), one_div_sub_conj (𝔠 x) (𝔠 y),
+    one_div_add_eq_neg (𝔠 x) (𝔠 y)]
   simp only [sub_re, add_re, neg_re, conj_re]
   ring
 
@@ -853,43 +844,21 @@ theorem abs_halfPlaneVelocity_one_add_le (x : ℝ^2) :
 theorem halfPlaneVelocity_zero_sub_isBigO :
     (fun x ↦ halfPlaneVelocity ω x 0 -
         (-(4 / Real.pi) * ∫ y in quadrant, hessianKernel 0 1 y * ω y) * x 0) =O[𝓝 0]
-      fun x ↦ ‖x‖ ^ 3 := by
-  set C₁ := 32 / Real.pi * (2 * Real.pi * M + ∫ y, |oddHalfSpaceExtension ω y|)
-  refine Asymptotics.IsBigO.of_bound (|C₁| + 28 * |M|) ?_
-  filter_upwards [Metric.ball_mem_nhds (0 : ℝ^2) one_pos] with x hx
-  have hlt : ‖x‖ < 1 := by simpa using hx
-  have h := abs_halfPlaneVelocity_zero_sub_le hω hc hodd hM x
-  rw [Real.norm_eq_abs, norm_pow, norm_norm]
-  have h4 : ‖x‖ ^ 4 ≤ ‖x‖ ^ 3 := by
-    rw [pow_succ]; exact mul_le_of_le_one_right (by positivity) hlt.le
-  calc _ ≤ C₁ * ‖x‖ ^ 3 + 28 * M * ‖x‖ ^ 4 := h
-    _ ≤ |C₁| * ‖x‖ ^ 3 + 28 * |M| * ‖x‖ ^ 3 := by
-        gcongr
-        · exact le_abs_self _
-        · nlinarith [abs_nonneg M, le_abs_self M, pow_nonneg (norm_nonneg x) 3,
-            pow_nonneg (norm_nonneg x) 4]
-    _ = (|C₁| + 28 * |M|) * ‖x‖ ^ 3 := by ring
+      fun x ↦ ‖x‖ ^ 3 :=
+  (Asymptotics.IsBigO.of_norm_le fun x ↦ (Real.norm_eq_abs _).trans_le
+    (abs_halfPlaneVelocity_zero_sub_le hω hc hodd hM x)).trans
+    (((Asymptotics.isBigO_refl _ _).const_mul_left _).add
+      ((Asymptotics.isLittleO_norm_pow_norm_pow (by norm_num)).isBigO.const_mul_left _))
 
 /-- **`ṽ = O(|x|³)` at the origin.** -/
 theorem halfPlaneVelocity_one_add_isBigO :
     (fun x ↦ halfPlaneVelocity ω x 1 +
         (-(4 / Real.pi) * ∫ y in quadrant, hessianKernel 0 1 y * ω y) * x 1) =O[𝓝 0]
-      fun x ↦ ‖x‖ ^ 3 := by
-  set C₁ := 32 / Real.pi * (2 * Real.pi * M + ∫ y, |oddHalfSpaceExtension ω y|)
-  refine Asymptotics.IsBigO.of_bound (|C₁| + 28 * |M|) ?_
-  filter_upwards [Metric.ball_mem_nhds (0 : ℝ^2) one_pos] with x hx
-  have hlt : ‖x‖ < 1 := by simpa using hx
-  have h := abs_halfPlaneVelocity_one_add_le hω hc hodd hM x
-  rw [Real.norm_eq_abs, norm_pow, norm_norm]
-  have h4 : ‖x‖ ^ 4 ≤ ‖x‖ ^ 3 := by
-    rw [pow_succ]; exact mul_le_of_le_one_right (by positivity) hlt.le
-  calc _ ≤ C₁ * ‖x‖ ^ 3 + 28 * M * ‖x‖ ^ 4 := h
-    _ ≤ |C₁| * ‖x‖ ^ 3 + 28 * |M| * ‖x‖ ^ 3 := by
-        gcongr
-        · exact le_abs_self _
-        · nlinarith [abs_nonneg M, le_abs_self M, pow_nonneg (norm_nonneg x) 3,
-            pow_nonneg (norm_nonneg x) 4]
-    _ = (|C₁| + 28 * |M|) * ‖x‖ ^ 3 := by ring
+      fun x ↦ ‖x‖ ^ 3 :=
+  (Asymptotics.IsBigO.of_norm_le fun x ↦ (Real.norm_eq_abs _).trans_le
+    (abs_halfPlaneVelocity_one_add_le hω hc hodd hM x)).trans
+    (((Asymptotics.isBigO_refl _ _).const_mul_left _).add
+      ((Asymptotics.isLittleO_norm_pow_norm_pow (by norm_num)).isBigO.const_mul_left _))
 
 end Expansion
 

@@ -9,13 +9,15 @@ module
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Sobolev.ContinuousRepresentative
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrincipalValue
 public import PDE.Spaces.Sobolev.Calculus.Slicing.LineRepresentative.ContinuousDerivative
+import PDE.Analysis.Fourier.HilbertTransform.RealPair.Derivative
 
 /-!
 # Classical derivatives of the Hilbert velocity
 
 Weak differentiation identifies the second classical derivative of the normalized
 Hilbert velocity almost everywhere. The input need only be compact and Lipschitz:
-corners at the support endpoints are permitted.
+corners at the support endpoints are permitted. This is a case of
+`IsHilbertPair.deriv_of_weak`, the derivative of a Hilbert pair in weak form.
 -/
 
 @[expose] public section
@@ -32,15 +34,11 @@ almost-everywhere classical vorticity derivative, including for compact
 Lipschitz inputs with endpoint slope jumps. -/
 theorem isHilbertPair_deriv_deriv_hilbertPVVelocity_of_lipschitzWith_compactSupport
     {q : ℝ → ℝ} {K : ℝ≥0} (hq : LipschitzWith K q) (hc : HasCompactSupport q) :
-    IsHilbertPair (deriv q) (deriv (deriv (hilbertPVVelocity q))) := by
-  have hp := isHilbertPair_deriv_hilbertPVVelocity_of_lipschitzWith_compactSupport hq hc
-  obtain ⟨w, hw, hd⟩ := hp.exists_hasWeakTimeDerivativeOn
+    IsHilbertPair (deriv q) (deriv (deriv (hilbertPVVelocity q))) :=
+  (isHilbertPair_deriv_hilbertPVVelocity_of_lipschitzWith_compactSupport hq hc).deriv_of_weak
     (Calculus.memLp_deriv_of_lipschitzWith_compactSupport hq hc 2)
     (Calculus.hasWeakTimeDerivativeOn_of_lipschitzWith_compactSupport hq hc)
-  have hu := contDiff_one_hilbertPVVelocity_of_lipschitzWith_compactSupport hq hc
-  apply hw.congr_ae Filter.EventuallyEq.rfl
-  filter_upwards [hd.ae_hasDerivAt_of_continuous (hu.continuous_deriv le_rfl)] with x hx
-  exact hx.deriv.symm
+    ((contDiff_one_hilbertPVVelocity_of_lipschitzWith_compactSupport hq hc).continuous_deriv le_rfl)
 
 /-- Additivity of the normalized velocity for compact Lipschitz inputs. -/
 theorem hilbertPVVelocity_add_of_lipschitzWith_compactSupport

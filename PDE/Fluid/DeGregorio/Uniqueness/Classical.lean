@@ -114,7 +114,7 @@ theorem contDiff_one_velocity (h : IsClassicalSolutionFrom w₀ T fields) {t : �
     one_ne_zero
   exact contDiff_one_hilbertPVVelocity_of_lipschitzWith_compactSupport hK hs
 
-/-- A solution on `[0, T)` is classical in LeanPDE's sense on every set of positive times. -/
+/-- A solution on `[0, T)` is classical in PDEAtlas's sense on every set of positive times. -/
 theorem isClassicalSolutionOn (h : IsClassicalSolutionFrom w₀ T fields) {s : Set ℝ}
     (hs : s ⊆ Ioo 0 T) : IsClassicalSolutionOn 1 fields s where
   regularity :=

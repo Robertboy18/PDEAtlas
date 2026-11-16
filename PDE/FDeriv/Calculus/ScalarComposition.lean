@@ -14,7 +14,7 @@ public import PDE.FDeriv.Calculus
 The second-order chain rule gives
 `Δ(g ∘ u) = g'(u) Δu + g''(u) ‖∇u‖²`.
 Both regularity hypotheses are local to the point where the identity is evaluated.
-The gradient is Mathlib's gradient; the Laplacian is LeanPDE's coordinate Laplacian.
+The gradient is Mathlib's gradient; the Laplacian is PDEAtlas's coordinate Laplacian.
 -/
 
 @[expose] public section

@@ -20,7 +20,7 @@ superlevel set, which is open. Its closure is the set where `Γ(x-y,t-s) ≥ r�
 the pole (`closure_heatBall_eq_insert_pole` in `MeanValue.Closure`).
 
 The weight in Watson's heat-ball mean-value formula is
-`|x-y|² / (t-s)²`.  Spacetime points use LeanPDE's canonical time-first
+`|x-y|² / (t-s)²`.  Spacetime points use PDEAtlas's canonical time-first
 coordinate convention through `PDE.time` and `PDE.Common.spatialPart`.
 
 ## References

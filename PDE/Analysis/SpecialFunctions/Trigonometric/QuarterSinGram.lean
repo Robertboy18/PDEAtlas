@@ -14,7 +14,8 @@ public import CAS.Analysis.SpecialFunctions.Trigonometric.CosineQuadrature
 The sine rule on `[0, π/2]` with nodes `θ_n = nπ/(2P)` gives the moments
 `∑_n w_n cos (2kθ_n) = μ_k = 1 / (1 - 4k²)` for `k ≤ P` (`sum_quarterSinWeight_mul_cos`); for an
 even integer `u` with `|u| ≤ 2P` the node sum of `cos (uθ)` is `ν_u = μ_{|u|/2}`
-(`quarterSinLaurentMoment`, `sum_quarterSinWeight_mul_cos_int`).
+(`quarterSinLaurentMoment`, `sum_quarterSinWeight_mul_cos_int`). The passage from `cos (2kθ)` to
+`cos (uθ)` holds for every rule on these nodes (`sum_mul_cos_int_of_cos_two_mul`).
 
 A cosine series is written with symmetric coefficients `φ_i` at the frequencies `i - T`,
 `i ≤ 2T` (`φ (2T - i) = φ i`), a sine series with antisymmetric ones. When the frequencies of
@@ -39,11 +40,13 @@ open Finset
 /-- The node sum `ν_u = μ_{|u|/2}` of `cos (uθ)`, `μ_k = 1 / (1 - 4k²)`, for even `u`. -/
 def quarterSinLaurentMoment (u : ℤ) : ℝ := 1 / (1 - 4 * ((u.natAbs / 2 : ℕ) : ℝ) ^ 2)
 
-/-- The sine rule integrates `cos (uθ)` for even `u` with `|u| ≤ 2P`. -/
-theorem sum_quarterSinWeight_mul_cos_int {P : ℕ} (hP : 0 < P) {u : ℤ} (hu : Even u)
-    (h : u.natAbs ≤ 2 * P) :
-    ∑ n : Fin (P + 1), quarterSinWeight P n * Real.cos (u * (n * Real.pi / (2 * P))) =
-      quarterSinLaurentMoment u := by
+/-- A rule with weights `w` on the nodes `θ_n = nπ/(2P)` that gives `∑_n w_n cos (2kθ_n) = μ_k`
+for every `k ≤ P` gives `∑_n w_n cos (uθ_n) = μ_{|u|/2}` for every even integer `u` with
+`|u| ≤ 2P`. -/
+theorem sum_mul_cos_int_of_cos_two_mul {P : ℕ} {w μ : ℕ → ℝ}
+    (hw : ∀ k ≤ P, ∑ n : Fin (P + 1), w n * Real.cos (2 * k * (n * Real.pi / (2 * P))) = μ k)
+    {u : ℤ} (hu : Even u) (h : u.natAbs ≤ 2 * P) :
+    ∑ n : Fin (P + 1), w n * Real.cos (u * (n * Real.pi / (2 * P))) = μ (u.natAbs / 2) := by
   obtain ⟨k, rfl⟩ := hu
   have hk : (k + k).natAbs / 2 = k.natAbs := by omega
   have hc : ∀ x : ℝ, Real.cos (((k + k : ℤ) : ℝ) * x) = Real.cos (2 * (k.natAbs : ℕ) * x) := by
@@ -55,8 +58,15 @@ theorem sum_quarterSinWeight_mul_cos_int {P : ℕ} (hP : 0 < P) {u : ℤ} (hu : 
         conv_lhs => rw [h]
         push_cast; ring, neg_mul, Real.cos_neg]
       norm_cast
-  rw [sum_congr rfl fun n _ ↦ by rw [hc], sum_quarterSinWeight_mul_cos hP (by omega),
-    quarterSinLaurentMoment, hk]
+  rw [sum_congr rfl fun n _ ↦ by rw [hc], hw _ (by omega), hk]
+
+/-- The sine rule integrates `cos (uθ)` for even `u` with `|u| ≤ 2P`. -/
+theorem sum_quarterSinWeight_mul_cos_int {P : ℕ} (hP : 0 < P) {u : ℤ} (hu : Even u)
+    (h : u.natAbs ≤ 2 * P) :
+    ∑ n : Fin (P + 1), quarterSinWeight P n * Real.cos (u * (n * Real.pi / (2 * P))) =
+      quarterSinLaurentMoment u :=
+  sum_mul_cos_int_of_cos_two_mul (μ := fun k ↦ 1 / (1 - 4 * (k : ℝ) ^ 2))
+    (fun _ hk ↦ sum_quarterSinWeight_mul_cos hP hk) hu h
 
 /-- If `i` and `j` have the same parity, then `(i + j) - 2T` and `i - j` are even integers. -/
 theorem even_int_of_mod {T r i j : ℕ} (hi : i % 2 = r) (hj : j % 2 = r) :

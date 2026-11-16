@@ -701,24 +701,10 @@ theorem sum_integral_mixedIteratedDeriv2D_evenReflection_sq
       2 * ∑ q ∈ Finset.range (m + 1), ∑ ell ∈ Finset.range (m + 1 - q),
         ∫ z : ℝ, ∫ r : ℝ in Set.Ioi 0,
           mixedIteratedDeriv2D q ell f r z ^ 2 := by
-  calc
-    (∑ q ∈ Finset.range (m + 1), ∑ ell ∈ Finset.range (m + 1 - q),
-      ∫ z : ℝ, ∫ r : ℝ,
-        mixedIteratedDeriv2D q ell (evenReflection2D f) r z ^ 2) =
-        ∑ q ∈ Finset.range (m + 1), ∑ ell ∈ Finset.range (m + 1 - q),
-          2 * ∫ z : ℝ, ∫ r : ℝ in Set.Ioi 0,
-            mixedIteratedDeriv2D q ell f r z ^ 2 := by
-      apply Finset.sum_congr rfl
-      intro q hq
-      apply Finset.sum_congr rfl
-      intro ell hell
-      simpa [evenReflection2D] using
-        (integral_mixedIteratedDeriv2D_evenReflection_sq_mul_evenWeight
-          q ell f (fun _ _ ↦ 1))
-    _ = 2 * ∑ q ∈ Finset.range (m + 1), ∑ ell ∈ Finset.range (m + 1 - q),
-        ∫ z : ℝ, ∫ r : ℝ in Set.Ioi 0,
-          mixedIteratedDeriv2D q ell f r z ^ 2 := by
-      simp_rw [← Finset.mul_sum]
+  simp_rw [Finset.mul_sum]
+  exact Finset.sum_congr rfl fun q _ ↦ Finset.sum_congr rfl fun ell _ ↦ by
+    simpa [evenReflection2D] using
+      integral_mixedIteratedDeriv2D_evenReflection_sq_mul_evenWeight q ell f (fun _ _ ↦ 1)
 
 /-- The identity `sum_integral_mixedIteratedDeriv2D_evenReflection_sq` with the odd reflection of
 `f` in place of the even one. -/
@@ -730,24 +716,10 @@ theorem sum_integral_mixedIteratedDeriv2D_oddReflection_sq
       2 * ∑ q ∈ Finset.range (m + 1), ∑ ell ∈ Finset.range (m + 1 - q),
         ∫ z : ℝ, ∫ r : ℝ in Set.Ioi 0,
           mixedIteratedDeriv2D q ell f r z ^ 2 := by
-  calc
-    (∑ q ∈ Finset.range (m + 1), ∑ ell ∈ Finset.range (m + 1 - q),
-      ∫ z : ℝ, ∫ r : ℝ,
-        mixedIteratedDeriv2D q ell (oddReflection2D f) r z ^ 2) =
-        ∑ q ∈ Finset.range (m + 1), ∑ ell ∈ Finset.range (m + 1 - q),
-          2 * ∫ z : ℝ, ∫ r : ℝ in Set.Ioi 0,
-            mixedIteratedDeriv2D q ell f r z ^ 2 := by
-      apply Finset.sum_congr rfl
-      intro q hq
-      apply Finset.sum_congr rfl
-      intro ell hell
-      simpa [evenReflection2D] using
-        (integral_mixedIteratedDeriv2D_oddReflection_sq_mul_evenWeight
-          q ell f (fun _ _ ↦ 1))
-    _ = 2 * ∑ q ∈ Finset.range (m + 1), ∑ ell ∈ Finset.range (m + 1 - q),
-        ∫ z : ℝ, ∫ r : ℝ in Set.Ioi 0,
-          mixedIteratedDeriv2D q ell f r z ^ 2 := by
-      simp_rw [← Finset.mul_sum]
+  simp_rw [Finset.mul_sum]
+  exact Finset.sum_congr rfl fun q _ ↦ Finset.sum_congr rfl fun ell _ ↦ by
+    simpa [evenReflection2D] using
+      integral_mixedIteratedDeriv2D_oddReflection_sq_mul_evenWeight q ell f (fun _ _ ↦ 1)
 
 /-- For every `f`, the iterated integral over the plane of the square of the even reflection
 `f (|r|, z)` is twice the iterated integral of `f²` over `r > 0`. It is the identity of squared `L²`

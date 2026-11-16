@@ -400,10 +400,6 @@ theorem SatisfiesRescaledScalarEquationsOn.reflectTimeZero {F : VorticityStreamF
     {cl cω cθ : ℝ → ℝ} (hreg : HasClassicalVorticityStreamRegularityOn F (Ici 0))
     (h : SatisfiesRescaledScalarEquationsOn F cl cω cθ upperHalfPlane (Ici 0)) :
     SatisfiesRescaledScalarEquationsOn F.reflectTimeZero cl cω cθ upperHalfPlane (Ici 0) := by
-  have hωd : DifferentiableOn ℝ (uncurry F.vorticity) (univ ×ˢ Ici 0) :=
-    hreg.vorticity_contDiffOn.differentiableOn (by norm_num)
-  have hθd : DifferentiableOn ℝ (uncurry F.temperature) (univ ×ˢ Ici 0) :=
-    hreg.temperature_contDiffOn.differentiableOn (by norm_num)
   have hω (τ : ℝ) (hτ : 0 ≤ τ) :
       (fun y ↦ F.reflectTimeZero.vorticity y τ) = fun y ↦ F.vorticity y τ :=
     funext fun y ↦ F.reflectTimeZero_vorticity hτ y
@@ -415,12 +411,12 @@ theorem SatisfiesRescaledScalarEquationsOn.reflectTimeZero {F : VorticityStreamF
   refine ⟨fun τ hτ x hx ↦ ?_, fun τ hτ x hx ↦ ?_⟩
   · have hd : deriv (fun s ↦ F.reflectTimeZero.vorticity x s) τ =
         deriv (fun s ↦ F.vorticity x s) τ :=
-      PDE.Analysis.deriv_reflectTimeZero hωd hτ (hreg.vorticity_differentiableAt_time hτ)
+      PDE.Analysis.deriv_reflectTimeZero hτ (hreg.vorticity_differentiableAt_time hτ)
     rw [hd, hu, hω τ hτ, hθ τ hτ, F.reflectTimeZero_vorticity hτ]
     exact h.1 hτ hx
   · have hd : deriv (fun s ↦ F.reflectTimeZero.temperature x s) τ =
         deriv (fun s ↦ F.temperature x s) τ :=
-      PDE.Analysis.deriv_reflectTimeZero hθd hτ (hreg.temperature_differentiableAt_time hτ)
+      PDE.Analysis.deriv_reflectTimeZero hτ (hreg.temperature_differentiableAt_time hτ)
     rw [hd, hu, hθ τ hτ, F.reflectTimeZero_temperature hτ]
     exact h.2 hτ hx
 

@@ -5,5 +5,5 @@ Institute Millennium Prize Problem.
 
 Official source: https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf
 
-LeanPDE page references use the pagination of the official six-page document.
+PDEAtlas page references use the pagination of the official six-page document.
 The paper itself is not redistributed by this repository.

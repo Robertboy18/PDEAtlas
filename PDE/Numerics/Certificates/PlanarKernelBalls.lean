@@ -165,9 +165,7 @@ theorem kernelOneRange_sound (bits : ℕ) {a b c d : ℚ} (hab : a ≤ b) (hcd :
     (h0 : 0 < a ∨ b < 0 ∨ 0 < c ∨ d < 0) :
     (kernelOneRange bits a b c d).MemReal
       (cornerSum (fun u v ↦ -Real.log (u ^ 2 + v ^ 2) / 4) a b c d) := by
-  have h0' : (0 : ℝ) < a ∨ (b : ℝ) < 0 ∨ (0 : ℝ) < c ∨ (d : ℝ) < 0 := by
-    rcases h0 with h | h | h | h <;> [left; (right; left); (right; right; left);
-      (right; right; right)] <;> exact_mod_cast h
+  have h0' : (0 : ℝ) < a ∨ (b : ℝ) < 0 ∨ (0 : ℝ) < c ∨ (d : ℝ) < 0 := by exact_mod_cast h0
   rw [cornerSum_log_eq_neg_log_crossRatio (by exact_mod_cast hab) (by exact_mod_cast hcd) h0',
     show -Real.log (crossRatio (a : ℝ) b c d) / 4 =
       ((-1 / 4 : ℚ) : ℝ) * Real.log (crossRatio (a : ℝ) b c d) by push_cast; ring,
@@ -199,9 +197,7 @@ theorem integral_rectangle_hessianKernel_zero_one_mem {a b c d : ℚ} (hab : a �
     (h : IntervalBalls.checkBoundsCertain P (lo, hi) (kernelOneBall P bits a b c d) = true) :
     (lo : ℝ) ≤ ∫ y in coordinateRectangle a b c d, hessianKernel 0 1 y ∧
       ∫ y in coordinateRectangle a b c d, hessianKernel 0 1 y ≤ hi := by
-  have h0' : (0 : ℝ) < a ∨ (b : ℝ) < 0 ∨ (0 : ℝ) < c ∨ (d : ℝ) < 0 := by
-    rcases h0 with h | h | h | h <;> [left; (right; left); (right; right; left);
-      (right; right; right)] <;> exact_mod_cast h
+  have h0' : (0 : ℝ) < a ∨ (b : ℝ) < 0 ∨ (0 : ℝ) < c ∨ (d : ℝ) < 0 := by exact_mod_cast h0
   rw [integral_rectangle_hessianKernel_zero_one_eq_cornerSum (by exact_mod_cast hab)
     (by exact_mod_cast hcd) h0']
   exact mem_of_check (kernelOneBall_encloses P bits a b c d)
@@ -443,9 +439,7 @@ theorem integral_rectangle_hessianKernel_zero_zero_mem {a b c d : ℚ} (hab : a 
     (h : IntervalBalls.checkBoundsCertain P (lo, hi) (kernelTwoBall P bits a b c d) = true) :
     (lo : ℝ) ≤ ∫ y in coordinateRectangle a b c d, hessianKernel 0 0 y ∧
       ∫ y in coordinateRectangle a b c d, hessianKernel 0 0 y ≤ hi := by
-  have h0' : (0 : ℝ) < a ∨ (b : ℝ) < 0 ∨ (0 : ℝ) < c ∨ (d : ℝ) < 0 := by
-    rcases h0 with h | h | h | h <;> [left; (right; left); (right; right; left);
-      (right; right; right)] <;> exact_mod_cast h
+  have h0' : (0 : ℝ) < a ∨ (b : ℝ) < 0 ∨ (0 : ℝ) < c ∨ (d : ℝ) < 0 := by exact_mod_cast h0
   rw [integral_rectangle_hessianKernel_zero_zero_eq_cornerSum (by exact_mod_cast hab)
     (by exact_mod_cast hcd) h0']
   exact mem_of_check (kernelTwoBall_encloses P bits a b c d)

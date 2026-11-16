@@ -36,41 +36,11 @@ section IntegratedEvolution
 
 variable {T : GelfandTriple (V := V) (H := H)}
 
-/-- Two-time form of the weak evolution equation. Once the
-time derivative is represented by a `V*` primitive, the pointwise equation
-`u_t + B u = ell` integrates to the expected pivot-pairing identity. -/
-theorem gelfandWeakEvolution_integral_identity
-    (B : V →L[ℝ] StrongDual ℝ V) (ell g : ℝ → StrongDual ℝ V)
-    (u : ℝ → V) {a b s t : ℝ}
-    (hderiv : HasIntegratedDualDerivativeOn T
-      (fun r ↦ T.inclusion (u r)) g a b)
-    (hs : s ∈ uIcc a b) (ht : t ∈ uIcc a b)
-    (heq : ∀ r ∈ uIcc s t,
-      SatisfiesGelfandWeakEvolutionAt B (ell r) (u r) (g r))
-    (v : V)
-    (hB : IntervalIntegrable (fun r ↦ B (u r) v) volume s t) :
-    inner ℝ (T.inclusion (u t)) (T.inclusion v) -
-        inner ℝ (T.inclusion (u s)) (T.inclusion v) +
-        ∫ r in s..t, B (u r) v =
-      ∫ r in s..t, ell r v := by
-  have hstInt := hderiv.intervalIntegrable.mono_set (uIcc_subset_uIcc hs ht)
-  have hgPair : IntervalIntegrable (fun r ↦ g r v) volume s t := ⟨
-    (ContinuousLinearMap.apply ℝ ℝ v).integrable_comp hstInt.1,
-    (ContinuousLinearMap.apply ℝ ℝ v).integrable_comp hstInt.2⟩
-  have hsum :
-      (∫ r in s..t, g r v) + ∫ r in s..t, B (u r) v =
-        ∫ r in s..t, ell r v := by
-    rw [← intervalIntegral.integral_add hgPair hB]
-    apply intervalIntegral.integral_congr
-    intro r hr
-    exact heq r hr v
-  rw [hderiv.pairing_sub_eq_integral v hs ht]
-  exact hsum
-
 /-- Two-time form of the weak evolution equation for a time-dependent bilinear
-form. This is the nonautonomous version used by Galerkin limits with
-coefficients `B(t)`: integrating `u_t + B(t)u = ell(t)` between two times
-gives the expected pivot-pairing identity for each fixed test vector. -/
+form. Once the time derivative is represented by a `V*` primitive, integrating
+`u_t + B(t)u = ell(t)` between two times gives the expected pivot-pairing identity
+for each fixed test vector. This is the form used by Galerkin limits with
+coefficients `B(t)`. -/
 theorem gelfandWeakEvolution_integral_identity_timeDependent
     (B : ℝ → V →L[ℝ] StrongDual ℝ V) (ell g : ℝ → StrongDual ℝ V)
     (u : ℝ → V) {a b s t : ℝ}
@@ -98,6 +68,25 @@ theorem gelfandWeakEvolution_integral_identity_timeDependent
     exact heq r hr v
   rw [hderiv.pairing_sub_eq_integral v hs ht]
   exact hsum
+
+/-- Two-time form of the weak evolution equation for a bilinear form `B` that does not depend
+on time: `u_t + B u = ell` integrates to the pivot-pairing identity. It is
+`gelfandWeakEvolution_integral_identity_timeDependent` at the constant family `fun _ ↦ B`. -/
+theorem gelfandWeakEvolution_integral_identity
+    (B : V →L[ℝ] StrongDual ℝ V) (ell g : ℝ → StrongDual ℝ V)
+    (u : ℝ → V) {a b s t : ℝ}
+    (hderiv : HasIntegratedDualDerivativeOn T
+      (fun r ↦ T.inclusion (u r)) g a b)
+    (hs : s ∈ uIcc a b) (ht : t ∈ uIcc a b)
+    (heq : ∀ r ∈ uIcc s t,
+      SatisfiesGelfandWeakEvolutionAt B (ell r) (u r) (g r))
+    (v : V)
+    (hB : IntervalIntegrable (fun r ↦ B (u r) v) volume s t) :
+    inner ℝ (T.inclusion (u t)) (T.inclusion v) -
+        inner ℝ (T.inclusion (u s)) (T.inclusion v) +
+        ∫ r in s..t, B (u r) v =
+      ∫ r in s..t, ell r v :=
+  gelfandWeakEvolution_integral_identity_timeDependent (fun _ ↦ B) ell g u hderiv hs ht heq v hB
 
 end IntegratedEvolution
 

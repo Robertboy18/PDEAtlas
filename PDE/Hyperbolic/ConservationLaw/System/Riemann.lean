@@ -27,8 +27,9 @@ uniqueness, openness, and continuity of the local parameterization.
 
 This is the inverse-function-theorem step for a `LocalWaveFamily`.
 `WaveCurve.Construction` constructs that family from the flux hypotheses;
-`Riemann.Construction` and `Riemann.InitialValue` assemble its elementary waves
-and prove the initial weak equation and strong trace.
+`RiemannSolver.EntropyConstruction` assembles its elementary waves;
+`Riemann.Construction` states the resulting weak solution, and `Riemann.InitialValue` proves
+its initial weak equation and strong trace.
 
 ## References
 

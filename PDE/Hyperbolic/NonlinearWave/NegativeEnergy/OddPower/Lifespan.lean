@@ -62,12 +62,6 @@ namespace WaveEquation
 
 variable {n : ℕ}
 
-/-- The growth exponent `2 (k + 1)` of a nonlinear odd power exceeds `2`. -/
-private theorem two_lt_oddPower_growth_factor {k : ℕ} (hk : 0 < k) :
-    2 < 2 * (k + 1 : ℝ) := by
-  have : 0 < (k : ℝ) := by exact_mod_cast hk
-  linarith
-
 /-- The Riccati coefficient `(Λ - 2) / 4` for `Λ = 2 (k + 1)`. -/
 private theorem oddPower_riccati_coefficient (k : ℕ) :
     (2 * (k + 1 : ℝ) - 2) / 4 = (k : ℝ) / 2 := by

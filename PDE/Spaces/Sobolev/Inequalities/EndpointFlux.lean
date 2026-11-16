@@ -9,6 +9,7 @@ module
 public import PDE.Analysis.MeasureTheory.Lp.WeightedL2
 public import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
 import PDE.Analysis.MeasureTheory.Lp.Continuous
+import PDE.Analysis.MeasureTheory.Lp.SquareIntegral
 import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 import Mathlib.MeasureTheory.Function.L2Space
 
@@ -42,25 +43,15 @@ theorem sub_sq_div_le_integral_right
   have hs : Ioo x b ⊆ Ioo a b := Ioo_subset_Ioo hx.1.le le_rfl
   have hq : MemLp f' 2 (volume.restrict (Ioo x b)) :=
     hmem.mono_measure (Measure.restrict_mono hs le_rfl)
-  have hone : MemLp (fun _ : ℝ ↦ (1 : ℝ)) 2 (volume.restrict (Ioo x b)) :=
-    memLp_const 1
   have hFTC := intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le hx.2.le
     (hc.mono (Icc_subset_Icc hx.1.le le_rfl)) (fun y hy ↦ hd y (hs hy))
     ((intervalIntegrable_iff_integrableOn_Ioo_of_le hx.2.le).mpr
       (hq.integrable (by norm_num)))
   rw [intervalIntegral.integral_of_le hx.2.le, integral_Ioc_eq_integral_Ioo] at hFTC
-  have hlength : (∫ _ in Ioo x b, (1 : ℝ) ^ 2) = b - x := by
-    rw [← integral_Ioc_eq_integral_Ioo, ← intervalIntegral.integral_of_le hx.2.le]
-    simp
-  have hcs := (abs_integral_le_integral_abs
-    (f := fun y ↦ f' y * 1) (μ := volume.restrict (Ioo x b))).trans
-    (integral_abs_mul_le_sqrt_integral_sq hq hone)
-  simp only [mul_one, hFTC, hlength] at hcs
-  have hsq := (sq_le_sq₀ (abs_nonneg _)
-    (mul_nonneg (Real.sqrt_nonneg _) (Real.sqrt_nonneg _))).mpr hcs
-  rw [sq_abs, mul_pow, Real.sq_sqrt (integral_nonneg fun _ ↦ sq_nonneg _),
-    Real.sq_sqrt (sub_nonneg.mpr hx.2.le), sub_sq_comm] at hsq
-  exact (div_le_iff₀ (sub_pos.mpr hx.2)).mpr hsq
+  have hcs := sq_integral_le_measureReal_mul_integral_sq hq
+  rw [hFTC, measureReal_restrict_apply_univ, Real.volume_real_Ioo_of_le hx.2.le,
+    sub_sq_comm] at hcs
+  exact (div_le_iff₀ (sub_pos.mpr hx.2)).mpr (hcs.trans_eq (mul_comm _ _))
 
 /-- Finite derivative energy makes the simple-pole endpoint flux vanish.
 The derivative need only exist in the open interval. -/

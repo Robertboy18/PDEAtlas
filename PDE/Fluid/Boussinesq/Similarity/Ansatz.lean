@@ -13,7 +13,7 @@ public import PDE.Representations.Similarity.Pointwise
 # Backward self-similar Boussinesq ansatz
 
 The exact power-law ansatz is centered at the origin and normalized to a candidate singular time
-`T = 1`. It reuses LeanPDE's equation-independent backward similarity transformation.
+`T = 1`. It reuses PDEAtlas's equation-independent backward similarity transformation.
 
 For scaling exponent `λ`, the physical fields are
 
@@ -100,7 +100,7 @@ noncomputable def selfSimilarAnsatz
   pressure := backwardSelfSimilarAnsatz profile.pressureProfile
     (-2 * profile.scalingExponent) (1 + profile.scalingExponent) 1 0
 
-/-- Component formula in terms of LeanPDE's total backward power scale. -/
+/-- Component formula in terms of PDEAtlas's total backward power scale. -/
 theorem selfSimilarAnsatz_velocity_apply_eq_backwardPowerScale
     (profile : SelfSimilarProfile) (x : ℝ^2) (t : ℝ) (i : Fin 2) :
     (selfSimilarAnsatz profile).velocity x t i =
@@ -108,7 +108,7 @@ theorem selfSimilarAnsatz_velocity_apply_eq_backwardPowerScale
         profile.velocityProfile (selfSimilarCoords profile x t) i := by
   rfl
 
-/-- Temperature formula in terms of LeanPDE's total backward power scale. -/
+/-- Temperature formula in terms of PDEAtlas's total backward power scale. -/
 theorem selfSimilarAnsatz_temperature_apply_eq_backwardPowerScale
     (profile : SelfSimilarProfile) (x : ℝ^2) (t : ℝ) :
     (selfSimilarAnsatz profile).temperature x t =
@@ -116,7 +116,7 @@ theorem selfSimilarAnsatz_temperature_apply_eq_backwardPowerScale
         profile.temperatureProfile (selfSimilarCoords profile x t) := by
   rfl
 
-/-- Pressure formula in terms of LeanPDE's total backward power scale. -/
+/-- Pressure formula in terms of PDEAtlas's total backward power scale. -/
 theorem selfSimilarAnsatz_pressure_apply_eq_backwardPowerScale
     (profile : SelfSimilarProfile) (x : ℝ^2) (t : ℝ) :
     (selfSimilarAnsatz profile).pressure x t =

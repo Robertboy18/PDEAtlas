@@ -333,44 +333,20 @@ theorem abs_partialDeriv_zero_partialDeriv_zero_le (x : ℝ^2) :
 theorem partialDeriv_one_partialDeriv_zero_sub_isBigO :
     (fun x ↦ (∂[(1 : Fin 2)] (∂[(0 : Fin 2)] (halfSpaceGreenPotential ω))) x -
         (∂[(1 : Fin 2)] (∂[(0 : Fin 2)] (halfSpaceGreenPotential ω))) 0) =O[𝓝 0]
-      fun x ↦ ‖x‖ ^ 2 := by
-  set C₁ := 16 / Real.pi * (2 * Real.pi * M +
-    ∫ y, |oddHalfSpaceExtension (∂[(0 : Fin 2)] ω) y|)
-  refine Asymptotics.IsBigO.of_bound (|C₁| + 16 * |M|) ?_
-  filter_upwards [Metric.ball_mem_nhds (0 : ℝ^2) one_pos] with x hx
-  have hlt : ‖x‖ < 1 := by simpa using hx
-  have h := abs_partialDeriv_one_partialDeriv_zero_sub_le hω hc hodd hM x
-  rw [Real.norm_eq_abs, norm_pow, norm_norm]
-  have h3 : ‖x‖ ^ 3 ≤ ‖x‖ ^ 2 := by
-    rw [pow_succ]; exact mul_le_of_le_one_right (by positivity) hlt.le
-  calc _ ≤ C₁ * ‖x‖ ^ 2 + 16 * M * ‖x‖ ^ 3 := h
-    _ ≤ |C₁| * ‖x‖ ^ 2 + 16 * |M| * ‖x‖ ^ 2 := by
-        gcongr
-        · exact le_abs_self _
-        · nlinarith [abs_nonneg M, le_abs_self M, pow_nonneg (norm_nonneg x) 2,
-            pow_nonneg (norm_nonneg x) 3]
-    _ = (|C₁| + 16 * |M|) * ‖x‖ ^ 2 := by ring
+      fun x ↦ ‖x‖ ^ 2 :=
+  (Asymptotics.IsBigO.of_norm_le fun x ↦ (Real.norm_eq_abs _).trans_le
+    (abs_partialDeriv_one_partialDeriv_zero_sub_le hω hc hodd hM x)).trans
+    (((Asymptotics.isBigO_refl _ _).const_mul_left _).add
+      ((Asymptotics.isLittleO_norm_pow_norm_pow (by norm_num)).isBigO.const_mul_left _))
 
 /-- **`ṽ_x = O(|x|²)` at the origin.** -/
 theorem partialDeriv_zero_partialDeriv_zero_isBigO :
     (∂[(0 : Fin 2)] (∂[(0 : Fin 2)] (halfSpaceGreenPotential ω))) =O[𝓝 0]
-      fun x ↦ ‖x‖ ^ 2 := by
-  set C₁ := 16 / Real.pi * (2 * Real.pi * M +
-    ∫ y, |oddHalfSpaceExtension (∂[(0 : Fin 2)] ω) y|)
-  refine Asymptotics.IsBigO.of_bound (|C₁| + 16 * |M|) ?_
-  filter_upwards [Metric.ball_mem_nhds (0 : ℝ^2) one_pos] with x hx
-  have hlt : ‖x‖ < 1 := by simpa using hx
-  have h := abs_partialDeriv_zero_partialDeriv_zero_le hω hc hodd hM x
-  rw [Real.norm_eq_abs, norm_pow, norm_norm]
-  have h3 : ‖x‖ ^ 3 ≤ ‖x‖ ^ 2 := by
-    rw [pow_succ]; exact mul_le_of_le_one_right (by positivity) hlt.le
-  calc _ ≤ C₁ * ‖x‖ ^ 2 + 16 * M * ‖x‖ ^ 3 := h
-    _ ≤ |C₁| * ‖x‖ ^ 2 + 16 * |M| * ‖x‖ ^ 2 := by
-        gcongr
-        · exact le_abs_self _
-        · nlinarith [abs_nonneg M, le_abs_self M, pow_nonneg (norm_nonneg x) 2,
-            pow_nonneg (norm_nonneg x) 3]
-    _ = (|C₁| + 16 * |M|) * ‖x‖ ^ 2 := by ring
+      fun x ↦ ‖x‖ ^ 2 :=
+  (Asymptotics.IsBigO.of_norm_le fun x ↦ (Real.norm_eq_abs _).trans_le
+    (abs_partialDeriv_zero_partialDeriv_zero_le hω hc hodd hM x)).trans
+    (((Asymptotics.isBigO_refl _ _).const_mul_left _).add
+      ((Asymptotics.isLittleO_norm_pow_norm_pow (by norm_num)).isBigO.const_mul_left _))
 
 end Gradient
 

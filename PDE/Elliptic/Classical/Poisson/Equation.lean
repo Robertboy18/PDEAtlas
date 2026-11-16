@@ -15,7 +15,7 @@ import PDE.FDeriv.Calculus
 # Poisson equation
 
 We define `poissonEquation`, the whole-space `LinearPDE` for Poisson's equation `-Δu = f`,
-with the sign convention of Evans's equation (2) in §2.2. The Laplacian `Δ` is LeanPDE's totalized
+with the sign convention of Evans's equation (2) in §2.2. The Laplacian `Δ` is PDEAtlas's totalized
 iterated-coordinate expression, which agrees with Mathlib's canonical Laplacian on `C²` fields.
 We identify the formal residual with the pointwise expression and record the corresponding
 superposition, scaling, subtraction, and linear-combination rules.

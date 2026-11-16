@@ -262,12 +262,8 @@ theorem IsSolutionOn.canonical_eq {I' : Set ℝ} (h : IsSolutionOn sol I)
     (HalfPlane.canonical sol).vorticity x t = (HalfPlane.canonical sol').vorticity x t ∧
       (HalfPlane.canonical sol).temperature x t = (HalfPlane.canonical sol').temperature x t ∧
       (HalfPlane.canonical sol).streamFunction x t =
-        (HalfPlane.canonical sol').streamFunction x t := by
-  have hG : halfSpaceGreenPotential (fun y ↦ sol.vorticity y t) =
-      halfSpaceGreenPotential (fun y ↦ sol'.vorticity y t) :=
-    halfSpaceGreenPotential_congr fun y hy ↦ (heq y (le_of_lt hy)).1
-  refine canonical_eq_of_eqOn (fun y hy ↦ (heq y hy).1) (fun y hy ↦ (heq y hy).2)
-    (fun y hy ↦ ?_) x
-  rw [h.stream t ht y hy, h'.stream t ht' y hy, hG]
+        (HalfPlane.canonical sol').streamFunction x t :=
+  canonical_eq_of_eqOn (fun y hy ↦ (heq y hy).1) (fun y hy ↦ (heq y hy).2)
+    (fun _ hy ↦ h.streamFunction_eq_of_vorticity_eq h' ht ht' (fun y hy ↦ (heq y hy).1) hy) x
 
 end Boussinesq.HalfPlane

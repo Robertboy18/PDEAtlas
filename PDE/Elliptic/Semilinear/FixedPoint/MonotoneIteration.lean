@@ -71,20 +71,10 @@ theorem isLeast_semilinear_weak_solution_Icc_of_tendsto_iterate
     IsLeast
       {w | w ∈ Icc lower upper ∧ ∀ v, B w v + N w v = ell v}
       u := by
-  have hleast :=
+  simpa only [isFixedPt_semilinearPicardMap_iff] using
     PDE.OrderInterval.isLeast_fixedPoint_Icc_of_tendsto_iterate
-      (semilinearPicardMap B hB N ell) hmono
-      hlowerupper hlower hupper
+      (semilinearPicardMap B hB N ell) hmono hlowerupper hlower hupper
       (continuous_semilinearPicardMap B hB N hN ell).continuousAt hu
-  refine ⟨⟨hleast.1.1, ?_⟩, ?_⟩
-  · exact
-      (isFixedPt_semilinearPicardMap_iff B hB N ell u).mp
-        hleast.1.2
-  · intro w hw
-    apply hleast.2
-    exact
-      ⟨hw.1,
-        (isFixedPt_semilinearPicardMap_iff B hB N ell w).mpr hw.2⟩
 
 /-- The limit of the upper Picard iterates is the greatest semilinear weak
 solution in the invariant interval. -/
@@ -103,20 +93,10 @@ theorem isGreatest_semilinear_weak_solution_Icc_of_tendsto_iterate
     IsGreatest
       {w | w ∈ Icc lower upper ∧ ∀ v, B w v + N w v = ell v}
       u := by
-  have hgreatest :=
+  simpa only [isFixedPt_semilinearPicardMap_iff] using
     PDE.OrderInterval.isGreatest_fixedPoint_Icc_of_tendsto_iterate
-      (semilinearPicardMap B hB N ell) hmono
-      hlowerupper hlower hupper
+      (semilinearPicardMap B hB N ell) hmono hlowerupper hlower hupper
       (continuous_semilinearPicardMap B hB N hN ell).continuousAt hu
-  refine ⟨⟨hgreatest.1.1, ?_⟩, ?_⟩
-  · exact
-      (isFixedPt_semilinearPicardMap_iff B hB N ell u).mp
-        hgreatest.1.2
-  · intro w hw
-    apply hgreatest.2
-    exact
-      ⟨hw.1,
-        (isFixedPt_semilinearPicardMap_iff B hB N ell w).mpr hw.2⟩
 
 /-- Compactness of the lower Picard orbit produces the least semilinear weak
 solution in the invariant interval. -/

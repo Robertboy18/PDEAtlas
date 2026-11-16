@@ -127,6 +127,39 @@ theorem intervalTruncationOnOfExtension_base_ae
   rw [hxlocal, hxcentered, hxagree]
   simp [PDE.Analysis.Calculus.centeredIntervalTruncation]
 
+/-- Transfer of a formula for a derivative coordinate from the whole-space centered truncation
+to the domain truncation. If the `i`th derivative coordinate of the centered truncation of the
+extension `E U` is almost everywhere `F (E U) (∂ᵢ (E U))` for some `F : ℝ → ℝ → ℝ`, then the
+`i`th derivative coordinate of `intervalTruncationOnOfExtension` is almost everywhere
+`F U (∂ᵢ U)` on `Ω`: restoring the constant does not change a derivative coordinate, and the
+coordinates of `E U` agree with those of `U` almost everywhere on `Ω`. -/
+private theorem intervalTruncationOnOfExtension_derivative_ae_of_centered
+    (hΩ : IsOpen Ω) (E : Extension.GraphSpace.Operator n 1 p Ω)
+    (hp_top : p ≠ ∞) {a b : ℝ} (hab : a ≤ b)
+    (U : W^{1,p}(Ω)) (i : Fin n) (F : ℝ → ℝ → ℝ)
+    (hcentered :
+      ((centeredIntervalTruncation hp_top hab (E.toContinuousLinearMap U) :
+          WkpAmbientOn n 1 p Set.univ) (singleDerivIndex n i) : ℝ^n → ℝ)
+        =ᵐ[domainMeasure n Set.univ] fun x ↦
+          F (((E.toContinuousLinearMap U : WkpAmbientOn n 1 p Set.univ)
+              (baseIndex n 1) : ℝ^n → ℝ) x)
+            (((E.toContinuousLinearMap U : WkpAmbientOn n 1 p Set.univ)
+              (singleDerivIndex n i) : ℝ^n → ℝ) x)) :
+    ((intervalTruncationOnOfExtension hΩ E hp_top hab U : WkpAmbientOn n 1 p Ω)
+        (singleDerivIndex n i) : ℝ^n → ℝ)
+      =ᵐ[domainMeasure n Ω] fun x ↦
+        F (((U : WkpAmbientOn n 1 p Ω) (baseIndex n 1) : ℝ^n → ℝ) x)
+          (((U : WkpAmbientOn n 1 p Ω) (singleDerivIndex n i) : ℝ^n → ℝ) x) := by
+  have hlocal := restrictAndRestoreConstant_derivative_ae (n := n) (p := p) (Ω := Ω) hΩ
+    (centeredIntervalTruncation hp_top hab (E.toContinuousLinearMap U))
+    (PDE.Analysis.Calculus.intervalTruncation a b 0) i
+  have hmeasure : domainMeasure n Ω ≤ domainMeasure n Set.univ := by
+    simpa [domainMeasure] using
+      (Measure.restrict_le_self : (volume : Measure (ℝ^n)).restrict Ω ≤ volume)
+  filter_upwards [hlocal, hcentered.filter_mono (ae_mono hmeasure), E.agree_ae U,
+    extension_coordinate_ae hΩ E U (singleDerivIndex n i)] with x hxlocal hxcentered hxagree hxE
+  exact hxlocal.trans (hxcentered.trans (by rw [hxagree, hxE]))
+
 /-- The derivative coordinate of `intervalTruncationOnOfExtension` is the
 sign-difference multiplier times the original derivative. -/
 theorem intervalTruncationOnOfExtension_derivative_ae
@@ -146,37 +179,10 @@ theorem intervalTruncationOnOfExtension_derivative_ae
                 (baseIndex n 1) : DerivLp n p Ω) : ℝ^n → ℝ) x) - b) : ℝ)) /
               2) *
             ((((U : WkpAmbientOn n 1 p Ω)
-              (singleDerivIndex n i) : DerivLp n p Ω) : ℝ^n → ℝ) x) := by
-  let EU := E.toContinuousLinearMap U
-  let V : W^{1,p}(ℝ^n) :=
-    centeredIntervalTruncation hp_top hab EU
-  have hlocal :=
-    restrictAndRestoreConstant_derivative_ae
-      (n := n) (p := p) (Ω := Ω) hΩ V
-      (PDE.Analysis.Calculus.intervalTruncation a b 0) i
-  have hcentered :=
-    centeredIntervalTruncation_derivative_ae hp_top hab EU i
-  have hmeasure :
-      domainMeasure n Ω ≤ domainMeasure n Set.univ := by
-    simpa [domainMeasure] using
-      (Measure.restrict_le_self :
-        (volume : Measure (ℝ^n)).restrict Ω ≤ volume)
-  have hcenteredΩ := hcentered.filter_mono (ae_mono hmeasure)
-  have hagree := E.agree_ae U
-  have hEcoord :=
-    extension_coordinate_ae hΩ E U (singleDerivIndex n i)
-  filter_upwards [hlocal, hcenteredΩ, hagree, hEcoord] with
-      x hxlocal hxcentered hxagree hxEcoord
-  change
-    ((((intervalTruncationOnOfExtension hΩ E hp_top hab U :
-      WkpAmbientOn n 1 p Ω)
-      (singleDerivIndex n i) : DerivLp n p Ω) : ℝ^n → ℝ)) x = _
-  change
-    ((((restrictAndRestoreConstant hΩ V
-      (PDE.Analysis.Calculus.intervalTruncation a b 0) :
-        WkpAmbientOn n 1 p Ω) (singleDerivIndex n i) :
-          DerivLp n p Ω) : ℝ^n → ℝ) x) = _
-  rw [hxlocal, hxcentered, hxagree, hxEcoord]
+              (singleDerivIndex n i) : DerivLp n p Ω) : ℝ^n → ℝ) x) :=
+  intervalTruncationOnOfExtension_derivative_ae_of_centered hΩ E hp_top hab U i
+    (fun s d ↦ ((SignType.sign (s - a) : ℝ) - (SignType.sign (s - b) : ℝ)) / 2 * d)
+    (centeredIntervalTruncation_derivative_ae hp_top hab (E.toContinuousLinearMap U) i)
 
 /-- The derivative of domain interval truncation is the original derivative
 on the open interval and zero outside it, almost everywhere. -/
@@ -196,37 +202,10 @@ theorem intervalTruncationOnOfExtension_derivative_indicator_ae
                 (baseIndex n 1) : DerivLp n p Ω) : ℝ^n → ℝ) x) < b then
             ((((U : WkpAmbientOn n 1 p Ω)
               (singleDerivIndex n i) : DerivLp n p Ω) : ℝ^n → ℝ) x)
-          else 0 := by
-  let EU := E.toContinuousLinearMap U
-  let V : W^{1,p}(ℝ^n) :=
-    centeredIntervalTruncation hp_top hab EU
-  have hlocal :=
-    restrictAndRestoreConstant_derivative_ae
-      (n := n) (p := p) (Ω := Ω) hΩ V
-      (PDE.Analysis.Calculus.intervalTruncation a b 0) i
-  have hcentered :=
-    centeredIntervalTruncation_derivative_indicator_ae hp_top hab EU i
-  have hmeasure :
-      domainMeasure n Ω ≤ domainMeasure n Set.univ := by
-    simpa [domainMeasure] using
-      (Measure.restrict_le_self :
-        (volume : Measure (ℝ^n)).restrict Ω ≤ volume)
-  have hcenteredΩ := hcentered.filter_mono (ae_mono hmeasure)
-  have hagree := E.agree_ae U
-  have hEcoord :=
-    extension_coordinate_ae hΩ E U (singleDerivIndex n i)
-  filter_upwards [hlocal, hcenteredΩ, hagree, hEcoord] with
-      x hxlocal hxcentered hxagree hxEcoord
-  change
-    ((((intervalTruncationOnOfExtension hΩ E hp_top hab U :
-      WkpAmbientOn n 1 p Ω)
-      (singleDerivIndex n i) : DerivLp n p Ω) : ℝ^n → ℝ)) x = _
-  change
-    ((((restrictAndRestoreConstant hΩ V
-      (PDE.Analysis.Calculus.intervalTruncation a b 0) :
-        WkpAmbientOn n 1 p Ω) (singleDerivIndex n i) :
-          DerivLp n p Ω) : ℝ^n → ℝ) x) = _
-  rw [hxlocal, hxcentered, hxagree, hxEcoord]
+          else 0 :=
+  intervalTruncationOnOfExtension_derivative_ae_of_centered hΩ E hp_top hab U i
+    (fun s d ↦ if a < s ∧ s < b then d else 0)
+    (centeredIntervalTruncation_derivative_indicator_ae hp_top hab (E.toContinuousLinearMap U) i)
 
 /-- Interval truncation obeys the weak Sobolev chain rule on every
 finite-measure open domain admitting a first-order extension operator, for

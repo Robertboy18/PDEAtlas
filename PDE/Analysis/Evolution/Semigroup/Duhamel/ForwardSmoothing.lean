@@ -7,6 +7,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Analysis.Evolution.Semigroup.Duhamel.AncientSmoothing
+import PDE.Analysis.Integration.BoundedIntegrand
 
 /-!
 # Forward Duhamel integrals with square-root singularities
@@ -254,17 +255,13 @@ def forwardDuhamel (K : ℝ → F →L[ℝ] E) (f : ℝ → F) (t : ℝ) : E :=
 
 omit [NormedSpace ℝ E] in
 /-- A forward integrand that is continuous inside `(0, t)` and dominated by an integrable
-function is integrable on `[0, t]`. -/
+function is integrable on `[0, t]`: the case `a = 0` of
+`PDE.Analysis.intervalIntegrable_of_continuousOn_Ioo_of_norm_le`. -/
 theorem intervalIntegrable_of_continuousOn_Ioo {G : ℝ → E} {t : ℝ} (ht : 0 ≤ t)
     (hcont : ContinuousOn G (Ioo 0 t)) {g : ℝ → ℝ} (hg : IntervalIntegrable g volume 0 t)
     (hbound : ∀ s ∈ Ioo 0 t, ‖G s‖ ≤ g s) :
-    IntervalIntegrable G volume 0 t := by
-  refine hg.mono_fun ?_ ?_
-  · rw [uIoc_of_le ht, ← Measure.restrict_congr_set Ioo_ae_eq_Ioc]
-    exact hcont.aestronglyMeasurable measurableSet_Ioo
-  · rw [uIoc_of_le ht, ← Measure.restrict_congr_set Ioo_ae_eq_Ioc]
-    filter_upwards [ae_restrict_mem measurableSet_Ioo] with s hs
-    exact (hbound s hs).trans ((le_abs_self _).trans_eq (Real.norm_eq_abs _).symm)
+    IntervalIntegrable G volume 0 t :=
+  intervalIntegrable_of_continuousOn_Ioo_of_norm_le ht hcont hg hbound
 
 variable {K : ℝ → F →L[ℝ] E} {f : ℝ → F} {M D ω : ℝ}
 

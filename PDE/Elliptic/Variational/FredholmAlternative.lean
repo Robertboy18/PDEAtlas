@@ -111,7 +111,7 @@ theorem isCompactOperator_massFormCLM_of_bounded
   isCompactOperator_massFormCLM
     (baseCoordCLM.isCompactOperator_of_bounded hΩmeas hΩbounded)
 
-/-- Evans §6.2.3, Theorem 4 (i), for LeanPDE's full divergence-form weak problem: if the form
+/-- Evans §6.2.3, Theorem 4 (i), for PDEAtlas's full divergence-form weak problem: if the form
 shifted by `lambda` times the mass form is coercive and the mass operator is compact, then
 exactly one of two statements holds. Either the homogeneous Dirichlet problem has a nonzero weak
 solution, or every `H⁻¹` forcing has a unique weak solution.

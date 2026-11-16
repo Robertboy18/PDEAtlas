@@ -45,7 +45,9 @@ We compute both sides one Cartesian component at a time. Each component of the r
 vorticity is a sum of lifted profiles, some multiplied by `x₀`, `x₁` or `s = r²`. The Cartesian
 material derivative of a profile lifted from `(t, s, z)` is the lift of the reduced material
 derivative (`scalarMaterialDerivative_spacetimeSquaredCylindricalLift`), that of `s` is `-2 s ∂_z Ψ`
-(`scalarMaterialDerivative_cylindricalRadiusSq`), and the product rule gives
+(`scalarMaterialDerivative_cylindricalRadiusSq`), and the product rule, stated once for a
+coordinate times a lifted profile
+(`scalarMaterialDerivative_coordinate_mul_spacetimeSquaredCylindricalLift`), gives
 `materialDerivative_vorticityFromCoefficients_apply_*`. The velocity gradient comes from one
 squared-radius chain rule (`partialDeriv_spacetimeAxisymmetricVelocity_apply`), which gives the
 stretching terms. In the difference we commute the reduced material derivative with `∂_s` and `∂_z`
@@ -294,6 +296,32 @@ theorem scalarMaterialDerivative_cylindricalRadiusSq
   rw [hq]
   simp [S, PDE.partialDeriv_coord]
 
+/-- A Cartesian spacetime coordinate times a lifted `C¹` profile is `C¹`. -/
+private theorem contDiff_coordinate_mul_spacetimeSquaredCylindricalLift {F : SpaceTime 2 → ℝ}
+    (hF : ContDiff ℝ 1 F) (k : Fin 4) :
+    ContDiff ℝ 1 fun y : SpaceTime 3 ↦ y k * spacetimeSquaredCylindricalLift F y := by
+  have hcoord : ContDiff ℝ 1 (fun y : SpaceTime 3 ↦ y k) := by
+    simpa only [EuclideanSpace.coe_proj] using (EuclideanSpace.proj (𝕜 := ℝ) k).contDiff
+  exact hcoord.mul (contDiff_spacetimeSquaredCylindricalLift hF)
+
+/-- **Product rule for a coordinate times a lifted profile.** For a `C¹` profile `F` in
+`(t, s, z)` and a spatial Cartesian coordinate `xᵢ`, the Cartesian material derivative of
+`xᵢ F(t, s, z)` under the reconstructed velocity `u` is `uᵢ F + xᵢ D_t F`, with the reduced
+material derivative `D_t F` on the right. -/
+theorem scalarMaterialDerivative_coordinate_mul_spacetimeSquaredCylindricalLift
+    {U Ψ F : SpaceTime 2 → ℝ} (hΨ : ContDiff ℝ 2 Ψ) (hF : ContDiff ℝ 1 F) (i : Fin 3)
+    (t : ℝ) (x : ℝ^3) :
+    IncompressibleFlow.scalarMaterialDerivative 3 (spacetimeAxisymmetricVelocity U Ψ)
+        (fun y ↦ y i.succ * spacetimeSquaredCylindricalLift F y) (timeSpaceCons t x) =
+      spacetimeAxisymmetricVelocity U Ψ (timeSpaceCons t x) i *
+          F (timeSpaceCons t (squaredCylindricalMap x)) +
+        x i * squaredRadiusMaterialDerivative Ψ F (timeSpaceCons t (squaredCylindricalMap x)) := by
+  rw [IncompressibleFlow.scalarMaterialDerivative_spatialCoordinate_mul _ _ i
+      ((contDiff_spacetimeSquaredCylindricalLift hF).differentiable one_ne_zero).differentiableAt,
+    scalarMaterialDerivative_spacetimeSquaredCylindricalLift hΨ hF, timeSpaceCons_succ,
+    spacetimeSquaredCylindricalLift_timeSpaceCons]
+  rfl
+
 /-- Material derivative of the first Cartesian component of the reconstructed
 vorticity. -/
 theorem materialDerivative_vorticityFromCoefficients_apply_zero
@@ -316,63 +344,23 @@ theorem materialDerivative_vorticityFromCoefficients_apply_zero
           Ω (timeSpaceCons t (squaredCylindricalMap x)) -
         x 1 * squaredRadiusMaterialDerivative Ψ Ω
           (timeSpaceCons t (squaredCylindricalMap x)) := by
-  let u := spacetimeAxisymmetricVelocity U Ψ
-  let UZ := spacetimeSquaredCylindricalLift (∂[(2 : Fin 3)] U)
-  let OL := spacetimeSquaredCylindricalLift Ω
-  have hUZ : ContDiff ℝ 1 UZ :=
-    contDiff_spacetimeSquaredCylindricalLift
-      (PDE.contDiff_partialDeriv_of_succ (m := 1) hU)
-  have hOL : ContDiff ℝ 1 OL :=
-    contDiff_spacetimeSquaredCylindricalLift hΩ
-  have hcoord1 : ContDiff ℝ 1
-      (fun xt : SpaceTime 3 ↦ xt 1) := by
-    simpa only [EuclideanSpace.coe_proj] using
-      (EuclideanSpace.proj (𝕜 := ℝ) (1 : Fin 4)).contDiff
-  have hcoord2 : ContDiff ℝ 1
-      (fun xt : SpaceTime 3 ↦ xt 2) := by
-    simpa only [EuclideanSpace.coe_proj] using
-      (EuclideanSpace.proj (𝕜 := ℝ) (2 : Fin 4)).contDiff
+  have hUZ : ContDiff ℝ 1 (∂[(2 : Fin 3)] U) := PDE.contDiff_partialDeriv_of_succ (m := 1) hU
   have hcomponent :
       (fun xt ↦ spacetimeAxisymmetricVorticityFromCoefficients U Ω xt 0) =
-        fun xt ↦ -(xt 1 * UZ xt) - xt 2 * OL xt := by
+        fun xt ↦
+          -(xt (Fin.succ (0 : Fin 3)) * spacetimeSquaredCylindricalLift (∂[(2 : Fin 3)] U) xt) -
+            xt (Fin.succ (1 : Fin 3)) * spacetimeSquaredCylindricalLift Ω xt := by
     funext xt
-    simp [spacetimeAxisymmetricVorticityFromCoefficients,
-      UZ, OL, cartesianVector]
-  rw [IncompressibleFlow.materialDerivative_apply_eq_scalarMaterialDerivative]
-  rw [hcomponent]
-  rw [IncompressibleFlow.scalarMaterialDerivative_sub u _
-      ((hcoord1.mul hUZ).neg.differentiable (by simp)).differentiableAt
-      ((hcoord2.mul hOL).differentiable (by simp)).differentiableAt,
-    IncompressibleFlow.scalarMaterialDerivative_neg]
-  change
-    -IncompressibleFlow.scalarMaterialDerivative 3 u
-        (fun y ↦ y (Fin.succ (0 : Fin 3)) * UZ y) (timeSpaceCons t x) -
-      IncompressibleFlow.scalarMaterialDerivative 3 u
-        (fun y ↦ y (Fin.succ (1 : Fin 3)) * OL y) (timeSpaceCons t x) = _
-  rw [
-    IncompressibleFlow.scalarMaterialDerivative_spatialCoordinate_mul
-      u _ (0 : Fin 3)
-      (hUZ.differentiable (by simp)).differentiableAt,
-    IncompressibleFlow.scalarMaterialDerivative_spatialCoordinate_mul
-      u _ (1 : Fin 3)
-      (hOL.differentiable (by simp)).differentiableAt]
-  rw [scalarMaterialDerivative_spacetimeSquaredCylindricalLift
-      (hΨ.of_le (by norm_num))
-      ((PDE.contDiff_partialDeriv_of_succ (m := 1) hU).of_le
-        (by norm_num)),
-    scalarMaterialDerivative_spacetimeSquaredCylindricalLift
-      (hΨ.of_le (by norm_num))
-      (hΩ.of_le (by norm_num))]
-  dsimp only [u, UZ, OL]
-  simp only [spacetimeSquaredCylindricalLift_timeSpaceCons,
-    squaredCylindricalLift, profileSlice, Fin.isValue, Nat.reduceAdd,
-    Fin.succ_zero_eq_one, neg_add_rev,
-    Fin.succ_one_eq_two, spacetimeAxisymmetricVelocity_timeSpaceCons,
-    axisymmetricVelocity_apply_zero, neg_mul, neg_sub, sub_neg_eq_add,
-    axisymmetricVelocity_apply_one]
-  have hcoordZero : timeSpaceCons t x (1 : Fin 4) = x 0 := rfl
-  have hcoordOne : timeSpaceCons t x (2 : Fin 4) = x 1 := rfl
-  rw [hcoordZero, hcoordOne]
+    simp [spacetimeAxisymmetricVorticityFromCoefficients, cartesianVector]
+  rw [IncompressibleFlow.materialDerivative_apply_eq_scalarMaterialDerivative, hcomponent,
+    IncompressibleFlow.scalarMaterialDerivative_sub _ _
+      ((contDiff_coordinate_mul_spacetimeSquaredCylindricalLift hUZ (Fin.succ (0 : Fin 3))).neg
+        |>.differentiable (by simp)).differentiableAt
+      ((contDiff_coordinate_mul_spacetimeSquaredCylindricalLift hΩ (Fin.succ (1 : Fin 3)))
+        |>.differentiable (by simp)).differentiableAt,
+    IncompressibleFlow.scalarMaterialDerivative_neg,
+    scalarMaterialDerivative_coordinate_mul_spacetimeSquaredCylindricalLift hΨ hUZ,
+    scalarMaterialDerivative_coordinate_mul_spacetimeSquaredCylindricalLift hΨ hΩ]
   ring
 
 /-- Material derivative of the second Cartesian component of the reconstructed
@@ -397,63 +385,23 @@ theorem materialDerivative_vorticityFromCoefficients_apply_one
           Ω (timeSpaceCons t (squaredCylindricalMap x)) +
         x 0 * squaredRadiusMaterialDerivative Ψ Ω
           (timeSpaceCons t (squaredCylindricalMap x)) := by
-  let u := spacetimeAxisymmetricVelocity U Ψ
-  let UZ := spacetimeSquaredCylindricalLift (∂[(2 : Fin 3)] U)
-  let OL := spacetimeSquaredCylindricalLift Ω
-  have hUZ : ContDiff ℝ 1 UZ :=
-    contDiff_spacetimeSquaredCylindricalLift
-      (PDE.contDiff_partialDeriv_of_succ (m := 1) hU)
-  have hOL : ContDiff ℝ 1 OL :=
-    contDiff_spacetimeSquaredCylindricalLift hΩ
-  have hcoord1 : ContDiff ℝ 1
-      (fun xt : SpaceTime 3 ↦ xt 1) := by
-    simpa only [EuclideanSpace.coe_proj] using
-      (EuclideanSpace.proj (𝕜 := ℝ) (1 : Fin 4)).contDiff
-  have hcoord2 : ContDiff ℝ 1
-      (fun xt : SpaceTime 3 ↦ xt 2) := by
-    simpa only [EuclideanSpace.coe_proj] using
-      (EuclideanSpace.proj (𝕜 := ℝ) (2 : Fin 4)).contDiff
+  have hUZ : ContDiff ℝ 1 (∂[(2 : Fin 3)] U) := PDE.contDiff_partialDeriv_of_succ (m := 1) hU
   have hcomponent :
       (fun xt ↦ spacetimeAxisymmetricVorticityFromCoefficients U Ω xt 1) =
-        fun xt ↦ -(xt 2 * UZ xt) + xt 1 * OL xt := by
+        fun xt ↦
+          -(xt (Fin.succ (1 : Fin 3)) * spacetimeSquaredCylindricalLift (∂[(2 : Fin 3)] U) xt) +
+            xt (Fin.succ (0 : Fin 3)) * spacetimeSquaredCylindricalLift Ω xt := by
     funext xt
-    simp [spacetimeAxisymmetricVorticityFromCoefficients,
-      UZ, OL, cartesianVector]
-  rw [IncompressibleFlow.materialDerivative_apply_eq_scalarMaterialDerivative]
-  rw [hcomponent]
-  rw [IncompressibleFlow.scalarMaterialDerivative_add u _
-      ((hcoord2.mul hUZ).neg.differentiable (by simp)).differentiableAt
-      ((hcoord1.mul hOL).differentiable (by simp)).differentiableAt,
-    IncompressibleFlow.scalarMaterialDerivative_neg]
-  change
-    -IncompressibleFlow.scalarMaterialDerivative 3 u
-        (fun y ↦ y (Fin.succ (1 : Fin 3)) * UZ y) (timeSpaceCons t x) +
-      IncompressibleFlow.scalarMaterialDerivative 3 u
-        (fun y ↦ y (Fin.succ (0 : Fin 3)) * OL y) (timeSpaceCons t x) = _
-  rw [
-    IncompressibleFlow.scalarMaterialDerivative_spatialCoordinate_mul
-      u _ (1 : Fin 3)
-      (hUZ.differentiable (by simp)).differentiableAt,
-    IncompressibleFlow.scalarMaterialDerivative_spatialCoordinate_mul
-      u _ (0 : Fin 3)
-      (hOL.differentiable (by simp)).differentiableAt]
-  rw [scalarMaterialDerivative_spacetimeSquaredCylindricalLift
-      (hΨ.of_le (by norm_num))
-      ((PDE.contDiff_partialDeriv_of_succ (m := 1) hU).of_le
-        (by norm_num)),
-    scalarMaterialDerivative_spacetimeSquaredCylindricalLift
-      (hΨ.of_le (by norm_num))
-      (hΩ.of_le (by norm_num))]
-  dsimp only [u, UZ, OL]
-  simp only [spacetimeSquaredCylindricalLift_timeSpaceCons,
-    squaredCylindricalLift, profileSlice, Fin.isValue, Nat.reduceAdd,
-    Fin.succ_one_eq_two, neg_add_rev,
-    Fin.succ_zero_eq_one, spacetimeAxisymmetricVelocity_timeSpaceCons,
-    axisymmetricVelocity_apply_one, neg_mul, neg_neg,
-    axisymmetricVelocity_apply_zero]
-  have hcoordZero : timeSpaceCons t x (1 : Fin 4) = x 0 := rfl
-  have hcoordOne : timeSpaceCons t x (2 : Fin 4) = x 1 := rfl
-  rw [hcoordZero, hcoordOne]
+    simp [spacetimeAxisymmetricVorticityFromCoefficients, cartesianVector]
+  rw [IncompressibleFlow.materialDerivative_apply_eq_scalarMaterialDerivative, hcomponent,
+    IncompressibleFlow.scalarMaterialDerivative_add _ _
+      ((contDiff_coordinate_mul_spacetimeSquaredCylindricalLift hUZ (Fin.succ (1 : Fin 3))).neg
+        |>.differentiable (by simp)).differentiableAt
+      ((contDiff_coordinate_mul_spacetimeSquaredCylindricalLift hΩ (Fin.succ (0 : Fin 3)))
+        |>.differentiable (by simp)).differentiableAt,
+    IncompressibleFlow.scalarMaterialDerivative_neg,
+    scalarMaterialDerivative_coordinate_mul_spacetimeSquaredCylindricalLift hΨ hUZ,
+    scalarMaterialDerivative_coordinate_mul_spacetimeSquaredCylindricalLift hΨ hΩ]
   ring
 
 /-- Material derivative of the axial Cartesian component of the reconstructed

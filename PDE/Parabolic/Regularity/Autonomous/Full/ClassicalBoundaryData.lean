@@ -85,6 +85,33 @@ private theorem exists_classical_principal_realization
     rw [heq x hx]
     exact hElliptic x hx
 
+omit [Fact (0 < n)] in
+/-- The full divergence form with classical coefficients is the autonomous principal
+operator of the `W^{1,∞}` realization of `a` plus the pivot image of the lower-order
+operator of `b` and `c`. -/
+private theorem fullDivergenceForm_classical_eq
+    (hopen : IsOpen Ω) (hbounded : Bornology.IsBounded Ω)
+    (a : ℝ^n → Fin n → Fin n → ℝ)
+    (ha : ∀ i j, ContDiffUpToBoundary 1 (fun x ↦ a x i j) Ω)
+    (b : Fin n → ℝ^n → ℝ) (c : ℝ^n → ℝ)
+    (hb : ∀ i, ContDiffUpToBoundary 0 (b i) Ω)
+    (hc : ContDiffUpToBoundary 0 c Ω) :
+    fullDivergenceForm
+        (multiplicationCoefficientOperator (fun i j ↦ (ha i j).toLp hopen hbounded ∞))
+        (fun i ↦ mulLpLeft ((hb i).toLp hopen hbounded ∞))
+        (mulLpLeft (hc.toLp hopen hbounded ∞)) =
+      autonomousDivergenceFormOperator
+          (fun i j ↦ (ha i j).toWkpSpaceOn hopen hbounded ∞) +
+        (h10L2GelfandTriple hopen).pivotToDual.comp
+          (lowerOrderOperator (fun i ↦ mulLpLeft ((hb i).toLp hopen hbounded ∞))
+            (mulLpLeft (hc.toLp hopen hbounded ∞))) := by
+  have hcoeff : coefficientBase (fun i j ↦ (ha i j).toWkpSpaceOn hopen hbounded ∞) =
+      fun i j ↦ (ha i j).toLp hopen hbounded ∞ := by
+    funext i j
+    exact (ha i j).toWkpSpaceOn_base_eq_toLp hopen hbounded ∞
+  rw [fullDivergenceForm_eq_principal_add_pivot_comp hopen]
+  simp only [autonomousDivergenceFormOperator, hcoeff]
+
 /-- Every weak solution of the full classical autonomous equation has the
 first improved estimate. The hypotheses are only the boundary geometry and
 classical coefficients, and the constant is chosen before the solution data. -/
@@ -129,23 +156,12 @@ theorem exists_improved_regularity_of_contDiffUpToBoundary
   have hreal := exists_classical_principal_realization hopen hbounded hgraph a ha
     haSymm alpha hElliptic
   obtain ⟨atlas, aext, hrep, hext, hsymm, hell⟩ := hreal
-  have hcoeff : coefficientBase A = fun i j ↦ (ha i j).toLp hopen hbounded ∞ := by
-    funext i j
-    exact (ha i j).toWkpSpaceOn_base_eq_toLp hopen hbounded ∞
-  have hform : fullDivergenceForm
-      (multiplicationCoefficientOperator (fun i j ↦ (ha i j).toLp hopen hbounded ∞))
-      (fun i ↦ mulLpLeft ((hb i).toLp hopen hbounded ∞))
-      (mulLpLeft (hc.toLp hopen hbounded ∞)) =
-      autonomousDivergenceFormOperator A +
-        (h10L2GelfandTriple hopen).pivotToDual.comp R := by
-    rw [fullDivergenceForm_eq_principal_add_pivot_comp hopen]
-    simp only [autonomousDivergenceFormOperator, hcoeff, R]
   have hreg := exists_full_form_improved_regularity ht atlas A aext hrep hext
     hsymm alpha halpha hell R
   obtain ⟨K, hK, hreg⟩ := hreg
   refine ⟨K, hK, ?_⟩
   intro f g u hu
-  rw [hform] at hu
+  rw [fullDivergenceForm_classical_eq hopen hbounded a ha b c hb hc] at hu
   exact hreg f g u hu
 
 /-- With an `H² ∩ H¹₀` initial datum and forcing with an `L²` weak time
@@ -204,23 +220,12 @@ theorem exists_higher_regularity_of_contDiffUpToBoundary
   have hreal := exists_classical_principal_realization hopen hbounded hgraph a ha
     haSymm alpha hElliptic
   obtain ⟨atlas, aext, hrep, hext, hsymm, hell⟩ := hreal
-  have hcoeff : coefficientBase A = fun i j ↦ (ha i j).toLp hopen hbounded ∞ := by
-    funext i j
-    exact (ha i j).toWkpSpaceOn_base_eq_toLp hopen hbounded ∞
-  have hform : fullDivergenceForm
-      (multiplicationCoefficientOperator (fun i j ↦ (ha i j).toLp hopen hbounded ∞))
-      (fun i ↦ mulLpLeft ((hb i).toLp hopen hbounded ∞))
-      (mulLpLeft (hc.toLp hopen hbounded ∞)) =
-      autonomousDivergenceFormOperator A +
-        (h10L2GelfandTriple hopen).pivotToDual.comp R := by
-    rw [fullDivergenceForm_eq_principal_add_pivot_comp hopen]
-    simp only [autonomousDivergenceFormOperator, hcoeff, R]
   have hreg := exists_full_form_higher_regularity ht atlas A aext hrep hext
     hsymm alpha halpha hell R
   obtain ⟨K, hK, hreg⟩ := hreg
   refine ⟨K, hK, ?_⟩
   intro f df g G u hG hf hu
-  rw [hform] at hu
+  rw [fullDivergenceForm_classical_eq hopen hbounded a ha b c hb hc] at hu
   exact hreg f df g G u hG hf hu
 
 end PDE.Parabolic.DivergenceFormHeat.AutonomousRegularity

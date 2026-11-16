@@ -23,7 +23,9 @@ with zero integral. Strict monotonicity forces equality of the gradients almost
 everywhere. Bounded-domain Poincaré then gives equality in the full Sobolev space.
 
 Uniqueness holds for every finite `p ≥ 1` and needs no hemicontinuity or coercive
-lower bound. For `1 < p < ∞`, the existence theorem in `FiniteExponent.Existence` supplies
+lower bound, so every solution is the only one
+(`existsUnique_weak_solution_of_exists_of_strictMonotone_wkpGradientFlux`). For
+`1 < p < ∞`, the existence theorem in `FiniteExponent.Existence` supplies
 a solution under its additional hypotheses. The resulting `ExistsUnique`
 statements allow arbitrary continuous dual loads or conjugate-`Lq` forcing.
 -/
@@ -153,6 +155,40 @@ theorem eq_of_strictMonotone_wkpGradientFlux
         rw [integral_sub hIu hIv, hu w, hv w, sub_self]
   exact heq.le
 
+/-- A flux that is strictly monotone almost everywhere is monotone almost everywhere. -/
+private theorem ae_monotone_of_ae_strictMonotone {a : ℝ^n → ℝ^n → ℝ^n}
+    (hstrict : ∀ᵐ x ∂μ, ∀ z w, z ≠ w →
+      0 < inner ℝ (a x z - a x w) (z - w)) :
+    ∀ᵐ x ∂μ, ∀ z w, 0 ≤ inner ℝ (a x z - a x w) (z - w) := by
+  filter_upwards [hstrict] with x hx z w
+  by_cases hzw : z = w
+  · simp only [hzw, sub_self, inner_zero_left, le_refl]
+  · exact (hx z w hzw).le
+
+/-- Strict monotonicity turns existence into unique existence: for a measurable
+flux that is strictly monotone almost everywhere and has conjugate power growth,
+on a bounded domain in positive dimension, a zero-boundary weak solution for a
+load `ℓ` is the only one. The load is any real function on `W₀^{1,p}(Ω)`; it need
+not be linear or continuous, and `p ≥ 1` suffices. -/
+theorem existsUnique_weak_solution_of_exists_of_strictMonotone_wkpGradientFlux
+    (hp : 1 ≤ p) (a : ℝ^n → ℝ^n → ℝ^n) {h : ℝ^n → ℝ} {C : ℝ}
+    (hmeas : Measurable (Function.uncurry a)) (hh : MemLp h q μ)
+    (hgrowth : ∀ᵐ x ∂μ, ∀ z, ‖a x z‖ ≤ h x + C * ‖z‖ ^ ((p : ℝ) - 1))
+    (hn : 0 < n) (hΩ : Bornology.IsBounded Ω)
+    (hstrict : ∀ᵐ x ∂μ, ∀ z w, z ≠ w →
+      0 < inner ℝ (a x z - a x w) (z - w))
+    {ℓ : V → ℝ}
+    (hex : ∃ u : V, ∀ v : V,
+      (∫ x, inner ℝ (a x (∇ (u : W^{1,p}(Ω)) x)) (∇ (v : W^{1,p}(Ω)) x) ∂μ) = ℓ v) :
+    ∃! u : V, ∀ v : V,
+      (∫ x, inner ℝ (a x (∇ (u : W^{1,p}(Ω)) x)) (∇ (v : W^{1,p}(Ω)) x) ∂μ) = ℓ v := by
+  obtain ⟨u, hu⟩ := hex
+  refine ⟨u, hu, fun v hv ↦ Subtype.ext ?_⟩
+  exact eq_of_strictMonotone_wkpGradientFlux hp a hmeas hh hgrowth hn hΩ
+    hstrict ℓ (v : W^{1,p}(Ω)) (u : W^{1,p}(Ω))
+    ((wkp0SubmoduleOn (n := n) (k := 1) (p := (p : ℝ≥0∞))
+      (Ω := Ω)).toSubmodule.sub_mem v.property u.property) hv hu
+
 /-- A strictly monotone flux with conjugate power growth, right hemicontinuity,
 and a positive `p`-power pairing lower bound has exactly one zero-boundary weak
 solution for each continuous dual load when `1 < p < ∞`.
@@ -173,21 +209,11 @@ theorem existsUnique_weak_solution_of_strictMonotone_wkpGradientFlux
     (hlower : ∀ᵐ x ∂μ, ∀ z, c * ‖z‖ ^ (p : ℝ) - b x ≤ inner ℝ (a x z) z)
     (ℓ : StrongDual ℝ V) :
     ∃! u : V, ∀ v : V,
-      (∫ x, inner ℝ (a x (∇ (u : W^{1,p}(Ω)) x)) (∇ (v : W^{1,p}(Ω)) x) ∂μ) = ℓ v := by
-  have hmono : ∀ᵐ x ∂μ, ∀ z w, 0 ≤ inner ℝ (a x z - a x w) (z - w) := by
-    filter_upwards [hstrict] with x hx
-    intro z w
-    by_cases hzw : z = w
-    · simp only [hzw, sub_self, inner_zero_left, le_refl]
-    · exact (hx z w hzw).le
-  obtain ⟨u, hu⟩ := exists_weak_solution_of_monotone_wkpGradientFlux
-    hp a hmeas hh hgrowth hn hΩ hmono hhemi hc hb hlower ℓ
-  refine ⟨u, hu, fun v hv ↦ ?_⟩
-  apply Subtype.ext
-  exact eq_of_strictMonotone_wkpGradientFlux hp.le a hmeas hh hgrowth hn hΩ
-    hstrict (fun z ↦ ℓ z) (v : W^{1,p}(Ω)) (u : W^{1,p}(Ω))
-    ((wkp0SubmoduleOn (n := n) (k := 1) (p := (p : ℝ≥0∞))
-      (Ω := Ω)).toSubmodule.sub_mem v.property u.property) hv hu
+      (∫ x, inner ℝ (a x (∇ (u : W^{1,p}(Ω)) x)) (∇ (v : W^{1,p}(Ω)) x) ∂μ) = ℓ v :=
+  existsUnique_weak_solution_of_exists_of_strictMonotone_wkpGradientFlux hp.le a hmeas hh
+    hgrowth hn hΩ hstrict
+    (exists_weak_solution_of_monotone_wkpGradientFlux hp a hmeas hh hgrowth hn hΩ
+      (ae_monotone_of_ae_strictMonotone hstrict) hhemi hc hb hlower ℓ)
 
 /-- Forcing in the conjugate `Lq` space gives exactly one weak solution of
 `-div a(x, Du) = f` with zero Sobolev boundary data, under strict flux
@@ -210,21 +236,10 @@ theorem existsUnique_weak_solution_of_strictMonotone_wkpGradientFlux_of_memLp
     {f : ℝ^n → ℝ} (hf : MemLp f q μ) :
     ∃! u : V, ∀ v : V,
       (∫ x, inner ℝ (a x (∇ (u : W^{1,p}(Ω)) x)) (∇ (v : W^{1,p}(Ω)) x) ∂μ) =
-        ∫ x, f x * wkpBaseCoordinateCLM (v : W^{1,p}(Ω)) x ∂μ := by
-  have hmono : ∀ᵐ x ∂μ, ∀ z w, 0 ≤ inner ℝ (a x z - a x w) (z - w) := by
-    filter_upwards [hstrict] with x hx
-    intro z w
-    by_cases hzw : z = w
-    · simp only [hzw, sub_self, inner_zero_left, le_refl]
-    · exact (hx z w hzw).le
-  obtain ⟨u, hu⟩ := exists_weak_solution_of_monotone_wkpGradientFlux_of_memLp
-    hp a hmeas hh hgrowth hn hΩ hmono hhemi hc hb hlower hf
-  refine ⟨u, hu, fun v hv ↦ ?_⟩
-  apply Subtype.ext
-  exact eq_of_strictMonotone_wkpGradientFlux hp.le a hmeas hh hgrowth hn hΩ
-    hstrict (fun z : V ↦ ∫ x, f x * wkpBaseCoordinateCLM (z : W^{1,p}(Ω)) x ∂μ)
-    (v : W^{1,p}(Ω)) (u : W^{1,p}(Ω))
-    ((wkp0SubmoduleOn (n := n) (k := 1) (p := (p : ℝ≥0∞))
-      (Ω := Ω)).toSubmodule.sub_mem v.property u.property) hv hu
+        ∫ x, f x * wkpBaseCoordinateCLM (v : W^{1,p}(Ω)) x ∂μ :=
+  existsUnique_weak_solution_of_exists_of_strictMonotone_wkpGradientFlux hp.le a hmeas hh
+    hgrowth hn hΩ hstrict
+    (exists_weak_solution_of_monotone_wkpGradientFlux_of_memLp hp a hmeas hh hgrowth hn hΩ
+      (ae_monotone_of_ae_strictMonotone hstrict) hhemi hc hb hlower hf)
 
 end SobolevSpace.GraphSpace

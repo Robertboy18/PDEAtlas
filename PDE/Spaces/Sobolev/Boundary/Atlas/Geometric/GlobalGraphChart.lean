@@ -79,25 +79,27 @@ theorem positiveMap_involutive (g : ℝ^n → ℝ) :
     simp
   · simp [positiveMap_apply_of_ne, hi]
 
-/-- A `C^m` graph height induces a `C^m` positive-side flattening map. -/
-theorem positiveMap_contDiff (m : ℕ∞) {g : ℝ^n → ℝ}
-    (hg : ContDiff ℝ m g) :
-    ContDiff ℝ m (positiveMap n g) := by
-  rw [show positiveMap n g =
+/-- Replacing the normal coordinate of a point `x` by `h x`, for a `C^m` function `h`, and
+keeping the tangential coordinates, is a `C^m` map. -/
+private theorem contDiff_toLp_update_normal (m : ℕ∞) {h : ℝ^n → ℝ} (hh : ContDiff ℝ m h) :
+    ContDiff ℝ m fun x : ℝ^n ↦
+      (WithLp.toLp 2 fun i ↦ if i = lastIndex (n := n) then h x else x i : ℝ^n) := by
+  rw [show (fun x : ℝ^n ↦
+      (WithLp.toLp 2 fun i ↦ if i = lastIndex (n := n) then h x else x i : ℝ^n)) =
       (EuclideanSpace.equiv (Fin n) ℝ).symm ∘
-        (fun x : ℝ^n ↦ fun i ↦
-          if i = lastIndex (n := n) then
-            g (boundaryProjection n x) - x (lastIndex (n := n))
-          else x i) by
-    funext x
-    rfl]
+        (fun x : ℝ^n ↦ fun i ↦ if i = lastIndex (n := n) then h x else x i) from rfl]
   refine (EuclideanSpace.equiv (Fin n) ℝ).symm.contDiff.comp (contDiff_pi' fun i ↦ ?_)
   by_cases hi : i = lastIndex (n := n)
   · subst i
-    simpa using
-      (hg.comp (contDiff_boundaryProjection n m)).sub
-        (EuclideanSpace.proj (𝕜 := ℝ) (lastIndex (n := n))).contDiff
+    simpa using hh
   · simpa [hi] using (EuclideanSpace.proj (𝕜 := ℝ) i).contDiff
+
+/-- A `C^m` graph height induces a `C^m` positive-side flattening map. -/
+theorem positiveMap_contDiff (m : ℕ∞) {g : ℝ^n → ℝ}
+    (hg : ContDiff ℝ m g) :
+    ContDiff ℝ m (positiveMap n g) :=
+  contDiff_toLp_update_normal n m ((hg.comp (contDiff_boundaryProjection n m)).sub
+    (EuclideanSpace.proj (𝕜 := ℝ) (lastIndex (n := n))).contDiff)
 
 /-- The positive-side flattening as a global homeomorphism. -/
 def positiveHomeomorph (g : ℝ^n → ℝ) (hg : ContDiff ℝ 1 g) :
@@ -204,42 +206,17 @@ theorem negativeMapInverse_rightInverse (g : ℝ^n → ℝ) :
 /-- A `C^m` graph height induces a `C^m` negative-side flattening map. -/
 theorem negativeMap_contDiff (m : ℕ∞) {g : ℝ^n → ℝ}
     (hg : ContDiff ℝ m g) :
-    ContDiff ℝ m (negativeMap n g) := by
-  rw [show negativeMap n g =
-      (EuclideanSpace.equiv (Fin n) ℝ).symm ∘
-        (fun x : ℝ^n ↦ fun i ↦
-          if i = lastIndex (n := n) then
-            g (boundaryProjection n x) + x (lastIndex (n := n))
-          else x i) by
-    funext x
-    rfl]
-  refine (EuclideanSpace.equiv (Fin n) ℝ).symm.contDiff.comp (contDiff_pi' fun i ↦ ?_)
-  by_cases hi : i = lastIndex (n := n)
-  · subst i
-    simpa using
-      (hg.comp (contDiff_boundaryProjection n m)).add
-        (EuclideanSpace.proj (𝕜 := ℝ) (lastIndex (n := n))).contDiff
-  · simpa [hi] using (EuclideanSpace.proj (𝕜 := ℝ) i).contDiff
+    ContDiff ℝ m (negativeMap n g) :=
+  contDiff_toLp_update_normal n m ((hg.comp (contDiff_boundaryProjection n m)).add
+    (EuclideanSpace.proj (𝕜 := ℝ) (lastIndex (n := n))).contDiff)
 
 /-- A `C^m` graph height induces a `C^m` inverse negative-side map. -/
 theorem negativeMapInverse_contDiff (m : ℕ∞) {g : ℝ^n → ℝ}
     (hg : ContDiff ℝ m g) :
-    ContDiff ℝ m (negativeMapInverse n g) := by
-  rw [show negativeMapInverse n g =
-      (EuclideanSpace.equiv (Fin n) ℝ).symm ∘
-        (fun y : ℝ^n ↦ fun i ↦
-          if i = lastIndex (n := n) then
-            y (lastIndex (n := n)) - g (boundaryProjection n y)
-          else y i) by
-    funext y
-    rfl]
-  refine (EuclideanSpace.equiv (Fin n) ℝ).symm.contDiff.comp (contDiff_pi' fun i ↦ ?_)
-  by_cases hi : i = lastIndex (n := n)
-  · subst i
-    simpa using
-      (EuclideanSpace.proj (𝕜 := ℝ) (lastIndex (n := n))).contDiff.sub
-        (hg.comp (contDiff_boundaryProjection n m))
-  · simpa [hi] using (EuclideanSpace.proj (𝕜 := ℝ) i).contDiff
+    ContDiff ℝ m (negativeMapInverse n g) :=
+  contDiff_toLp_update_normal n m
+    ((EuclideanSpace.proj (𝕜 := ℝ) (lastIndex (n := n))).contDiff.sub
+      (hg.comp (contDiff_boundaryProjection n m)))
 
 /-- The negative-side flattening as a global homeomorphism. -/
 def negativeHomeomorph (g : ℝ^n → ℝ) (hg : ContDiff ℝ 1 g) :

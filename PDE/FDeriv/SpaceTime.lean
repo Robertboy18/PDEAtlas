@@ -13,7 +13,7 @@ public import PDE.FDeriv.PartialDeriv
 /-!
 # Calculus for Euclidean spacetime slices
 
-LeanPDE stores a spacetime point of `ℝ^(n + 1)` with time in coordinate `0` and space in the
+PDEAtlas stores a spacetime point of `ℝ^(n + 1)` with time in coordinate `0` and space in the
 remaining `n` coordinates (`timeSpaceCons t x`), and also works with the product convention
 `ℝ^n × ℝ` through `joinSpaceTime` and `spaceTimeUncurry`. Evolution equations are most naturally
 stated slice by slice: `∂ₜ u` is the derivative of the time trace `s ↦ u (timeSpaceCons s x)`, and

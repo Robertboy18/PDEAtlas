@@ -9,7 +9,7 @@ module
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson
 public import PDE.Analysis.Fourier.HilbertTransform.PrincipalValue
 import PDE.Analysis.Fourier.HilbertTransform.RealPair.Derivative
-import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrincipalValue.LocallyLipschitz
+import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrincipalValue
 import CAS.ExactTactic
 
 /-!

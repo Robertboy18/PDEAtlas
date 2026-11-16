@@ -6,7 +6,7 @@ Cambridge Texts in Applied Mathematics, Cambridge University Press, 2001.
 Official source:
 https://doi.org/10.1017/CBO9780511613203
 
-LeanPDE cites Chapter 1 for the continuum equations, material derivative,
+PDEAtlas cites Chapter 1 for the continuum equations, material derivative,
 incompressibility, and the Euler and Navier–Stokes equations. The vorticity
 and Bernoulli cards cite Chapters 1–2.
 

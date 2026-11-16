@@ -499,13 +499,9 @@ theorem IsSolutionOn.canonicalOf_eq {I' : Set ℝ} (h : IsSolutionOn sol I)
       (HalfPlane.canonicalOf k sol).temperature x t =
         (HalfPlane.canonicalOf k sol').temperature x t ∧
       (HalfPlane.canonicalOf k sol).streamFunction x t =
-        (HalfPlane.canonicalOf k sol').streamFunction x t := by
-  have hG : halfSpaceGreenPotential (fun y ↦ sol.vorticity y t) =
-      halfSpaceGreenPotential (fun y ↦ sol'.vorticity y t) :=
-    halfSpaceGreenPotential_congr fun y hy ↦ (heq y (le_of_lt hy)).1
-  refine canonicalOf_eq_of_eqOn (fun y hy ↦ (heq y hy).1) (fun y hy ↦ (heq y hy).2)
-    (fun y hy ↦ ?_) x
-  rw [h.stream t ht y hy, h'.stream t ht' y hy, hG]
+        (HalfPlane.canonicalOf k sol').streamFunction x t :=
+  canonicalOf_eq_of_eqOn (fun y hy ↦ (heq y hy).1) (fun y hy ↦ (heq y hy).2)
+    (fun _ hy ↦ h.streamFunction_eq_of_vorticity_eq h' ht ht' (fun y hy ↦ (heq y hy).1) hy) x
 
 /-! ### Regularity of the representatives -/
 

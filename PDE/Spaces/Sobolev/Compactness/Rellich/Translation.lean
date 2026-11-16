@@ -38,8 +38,11 @@ translation defect for each fixed `h`.
   `translateLp_lpSMul` (compatibility with multiplication by an `L^∞`
   coefficient), and `continuous_translateLp` for `p ≠ ∞`.
 * `norm_translateL2_sub_sq_eq_integral`: `‖τ_h u - u‖² = ∫ |u(x+h) - u(x)|²`.
-* `integral_pairwise_eq_integral_withinCellTranslations`: the shear formula for
-  one cell.
+* `setIntegral_pair_eq_integral_withinCellTranslations`,
+  `integrable_integral_withinCellTranslations_of_integrableOn`: the shear formula for one cell
+  and any integrand that is integrable on the cell pair, and the integrability of its outer
+  integrand; `integral_pairwise_eq_integral_withinCellTranslations` is the case
+  `(f x - f y)²` with `f ∈ L²`.
 * `sum_integral_gridCellTranslations_le_norm_translateL2_sub_sq`,
   `sum_gridCell_pairwise_le_integral_norm_translateL2_sub_sq`: the grid
   oscillation bounds.
@@ -206,10 +209,57 @@ theorem integrable_translation_sub_sq (h : ℝ^n)
     (MeasureTheory.Lp.memLp (translateLp 2 h f - f)).integrable_sq.congr
       ((translateLp_sub_apply_ae (n := n) 2 h f).fun_comp (· ^ 2))
 
+/-- **The shear formula on one cell.** For a measurable set `s` and a function `G` that is
+integrable on `s ×ˢ s`, the pair integral over the cell is an integral over translation vectors:
+`∫_s ∫_s G (x, y) dy dx = ∫ ∫ 𝟙_{s × s} (x, x + h) G (x, x + h) dx dh`. The shear
+`(x, h) ↦ (x, x + h)` preserves product Lebesgue measure, so this is an exact change of
+variables. -/
+theorem setIntegral_pair_eq_integral_withinCellTranslations
+    {s : Set (ℝ^n)} (hs : MeasurableSet s) {G : ℝ^n × ℝ^n → ℝ}
+    (hG : IntegrableOn G (s ×ˢ s)
+      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume)) :
+    (∫ x in s, ∫ y in s, G (x, y)) =
+      ∫ h : ℝ^n, ∫ x : ℝ^n, (s ×ˢ s).indicator G (x, x + h) := by
+  let shear : ℝ^n × ℝ^n → ℝ^n × ℝ^n := fun p ↦ (p.1, p.1 + p.2)
+  have hpres : MeasurePreserving shear
+      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume)
+      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
+    simpa [shear] using MeasureTheory.measurePreserving_prod_add
+      (MeasureTheory.volume : Measure (ℝ^n)) (MeasureTheory.volume : Measure (ℝ^n))
+  calc
+    (∫ x in s, ∫ y in s, G (x, y)) =
+        ∫ p : ℝ^n × ℝ^n, (s ×ˢ s).indicator G p
+          ∂((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
+      rw [MeasureTheory.integral_indicator (hs.prod hs), MeasureTheory.setIntegral_prod _ hG]
+    _ = ∫ p : ℝ^n × ℝ^n, ((s ×ˢ s).indicator G) (shear p)
+          ∂((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) :=
+      (hpres.integral_comp (MeasurableEquiv.shearAddRight (ℝ^n)).measurableEmbedding _).symm
+    _ = _ := by
+      with_reducible_and_instances
+        simpa [Function.comp_def, shear] using MeasureTheory.integral_prod_symm
+          (((s ×ˢ s).indicator G) ∘ shear)
+          (hpres.integrable_comp_of_integrable (hG.integrable_indicator (hs.prod hs)))
+
+/-- The outer integrand of the shear formula,
+`h ↦ ∫ 𝟙_{s × s} (x, x + h) G (x, x + h) dx`, is integrable in the translation vector `h`
+when `G` is integrable on `s ×ˢ s`. -/
+theorem integrable_integral_withinCellTranslations_of_integrableOn
+    {s : Set (ℝ^n)} (hs : MeasurableSet s) {G : ℝ^n × ℝ^n → ℝ}
+    (hG : IntegrableOn G (s ×ˢ s)
+      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume)) :
+    Integrable (fun h : ℝ^n ↦ ∫ x : ℝ^n, (s ×ˢ s).indicator G (x, x + h))
+      MeasureTheory.volume := by
+  have hpres : MeasurePreserving (fun p : ℝ^n × ℝ^n ↦ (p.1, p.1 + p.2))
+      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume)
+      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
+    simpa using MeasureTheory.measurePreserving_prod_add
+      (MeasureTheory.volume : Measure (ℝ^n)) (MeasureTheory.volume : Measure (ℝ^n))
+  simpa [Function.comp_def] using (hpres.integrable_comp_of_integrable
+    (hG.integrable_indicator (hs.prod hs))).integral_prod_right
+
 /-- Pairwise oscillation on one measurable finite-volume cell, rewritten in
-translation coordinates `(x,h) ↦ (x,x+h)`.  The shear is Lebesgue
-measure-preserving, so this is an exact change of variables rather than an
-analytic estimate. -/
+translation coordinates `(x,h) ↦ (x,x+h)`: the case `G (x, y) = (f x - f y)²` of
+`setIntegral_pair_eq_integral_withinCellTranslations`, for `f ∈ L²`. -/
 theorem integral_pairwise_eq_integral_withinCellTranslations
     (s : Set (ℝ^n)) (hs : MeasurableSet s)
     (hfinite : (MeasureTheory.volume : Measure (ℝ^n)) s ≠ ∞)
@@ -218,32 +268,11 @@ theorem integral_pairwise_eq_integral_withinCellTranslations
       ∫ h : ℝ^n, ∫ x : ℝ^n,
         (s ×ˢ s).indicator
           (fun p : ℝ^n × ℝ^n ↦ (f p.1 - f p.2) ^ 2)
-          (x, x + h) := by
-  let G : ℝ^n × ℝ^n → ℝ := fun p ↦ (f p.1 - f p.2) ^ 2
-  have hGon : IntegrableOn G (s ×ˢ s)
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
-    simpa [G, domainMeasure] using L2_integrableOn_pairwise_sub_sq
-      (μ := domainMeasure n Set.univ) s (by simpa [domainMeasure] using hfinite) f
-  -- the shear `(x, h) ↦ (x, x + h)` preserves the product measure
-  let shear : ℝ^n × ℝ^n → ℝ^n × ℝ^n := fun p ↦ (p.1, p.1 + p.2)
-  have hpres : MeasurePreserving shear
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume)
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
-    simpa [shear] using MeasureTheory.measurePreserving_prod_add
-      (MeasureTheory.volume : Measure (ℝ^n)) (MeasureTheory.volume : Measure (ℝ^n))
-  calc
-    (∫ x in s, ∫ y in s, (f x - f y) ^ 2) =
-        ∫ p : ℝ^n × ℝ^n, (s ×ˢ s).indicator G p
-          ∂((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
-      rw [MeasureTheory.integral_indicator (hs.prod hs), MeasureTheory.setIntegral_prod _ hGon]
-    _ = ∫ p : ℝ^n × ℝ^n, ((s ×ˢ s).indicator G) (shear p)
-          ∂((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) :=
-      (hpres.integral_comp (MeasurableEquiv.shearAddRight (ℝ^n)).measurableEmbedding _).symm
-    _ = _ := by
-      with_reducible_and_instances
-        simpa [Function.comp_def, shear] using MeasureTheory.integral_prod_symm
-          (((s ×ˢ s).indicator G) ∘ shear)
-          (hpres.integrable_comp_of_integrable (hGon.integrable_indicator (hs.prod hs)))
+          (x, x + h) :=
+  setIntegral_pair_eq_integral_withinCellTranslations
+    (G := fun p : ℝ^n × ℝ^n ↦ (f p.1 - f p.2) ^ 2) hs (by
+      simpa [domainMeasure] using L2_integrableOn_pairwise_sub_sq
+        (μ := domainMeasure n Set.univ) s (by simpa [domainMeasure] using hfinite) f)
 
 /-- The outer translation integral appearing in the one-cell shear formula
 is integrable. -/
@@ -254,18 +283,10 @@ theorem integrable_integral_withinCellTranslations
     Integrable (fun h : ℝ^n ↦ ∫ x : ℝ^n,
       (s ×ˢ s).indicator
         (fun p : ℝ^n × ℝ^n ↦ (f p.1 - f p.2) ^ 2)
-        (x, x + h)) MeasureTheory.volume := by
-  have hGon : IntegrableOn (fun p : ℝ^n × ℝ^n ↦ (f p.1 - f p.2) ^ 2) (s ×ˢ s)
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
+        (x, x + h)) MeasureTheory.volume :=
+  integrable_integral_withinCellTranslations_of_integrableOn hs (by
     simpa [domainMeasure] using L2_integrableOn_pairwise_sub_sq
-      (μ := domainMeasure n Set.univ) s (by simpa [domainMeasure] using hfinite) f
-  have hpres : MeasurePreserving (fun p : ℝ^n × ℝ^n ↦ (p.1, p.1 + p.2))
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume)
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
-    simpa using MeasureTheory.measurePreserving_prod_add
-      (MeasureTheory.volume : Measure (ℝ^n)) (MeasureTheory.volume : Measure (ℝ^n))
-  simpa [Function.comp_def] using (hpres.integrable_comp_of_integrable
-    (hGon.integrable_indicator (hs.prod hs))).integral_prod_right
+      (μ := domainMeasure n Set.univ) s (by simpa [domainMeasure] using hfinite) f)
 
 /-- For a fixed shift, the sum of within-cell oscillations over pairwise
 disjoint regular grid cells is bounded by the full `L²` translation defect. -/

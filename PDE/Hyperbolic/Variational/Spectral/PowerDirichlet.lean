@@ -152,62 +152,6 @@ private theorem powerWave_conservation (a : Fin n → Fin n → DerivLp n ∞ Ω
   exact power_energy_maximalMildSolution (V := H¹₀(Ω)) (μ := domainMeasure n Ω) S B hBsymm henergy
     (baseCoordCLM (n := n) (Ω := Ω)) hkin hr N hN hNae x ht hlt
 
-/-- A locally Lipschitz realization of the power source gives maximal weak waves
-with conserved nonlinear energy. Bounds on each energy ball give the finite-lifetime
-norm blowup alternative. All conclusions use the same Dirichlet semigroup. -/
-private theorem exists_powerWave_of_source (hn : 0 < n) (hΩopen : IsOpen Ω)
-    (hΩbounded : Bornology.IsBounded Ω) (hΩne : Ω.Nonempty) (a : Fin n → Fin n → DerivLp n ∞ Ω)
-    {alpha : ℝ} (ha : AEUniformlyElliptic (n := n) (Ω := Ω) a alpha)
-    (hsymm : AESymmetricCoefficient (n := n) (Ω := Ω) a) {r : ℝ} (hr : 1 ≤ r)
-    (N : C(H¹₀(Ω) × L2, L2)) (hN : LocallyLipschitz N)
-    (hNae : ∀ z : H¹₀(Ω) × L2, (N z : ℝ^n → ℝ) =ᵐ[domainMeasure n Ω] fun y ↦
-      Real.signedPower r (baseCoordCLM z.1 y))
-    (hNballs : ∀ R : ℝ, 0 ≤ R → ∃ L : NNReal,
-      LipschitzOnWith L N (Metric.closedBall (0 : H¹₀(Ω) × L2) R)) :
-    let B := variableCoeffForm (n := n) (Ω := Ω)
-      (multiplicationCoefficientOperator (n := n) (Ω := Ω) a)
-    let T := h10L2GelfandTriple hΩopen
-    ∃ S : StronglyContinuousSemigroup (H¹₀(Ω) × L2),
-      (∀ (t : NNReal) (z : H¹₀(Ω) × L2),
-        autonomousWaveEnergy B (S t z) = autonomousWaveEnergy B z) ∧
-      (∃ C : ℝ, 0 < C ∧ ∀ t : NNReal, ‖S t‖ ≤ C) ∧
-      ∀ x : H¹₀(Ω) × L2,
-        let F := (ContinuousMap.const (H¹₀(Ω) × L2) (0 : H¹₀(Ω))).prodMk N
-        let hF : LocallyLipschitz F := (LocallyLipschitz.const (0 : H¹₀(Ω))).prodMk hN
-        let u := S.maximalMildSolution hF x
-        0 < S.mildLifespan F x ∧ u 0 = x ∧
-        ContinuousOn u {t : ℝ | 0 ≤ t ∧ ENNReal.ofReal t < S.mildLifespan F x} ∧
-        (∀ t : ℝ, 0 ≤ t → ENNReal.ofReal t < S.mildLifespan F x →
-          u t = S t.toNNReal x + S.duhamel (fun s ↦ ((0 : H¹₀(Ω)), N (u s))) t) ∧
-        (∀ τ : NNReal, 0 < τ → (τ : ℝ≥0∞) < S.mildLifespan F x →
-          ∃ (ell : Lp (StrongDual ℝ H¹₀(Ω)) 2 (volume.restrict (Ioc 0 (τ : ℝ))))
-            (q : Lp H¹₀(Ω) 2 (volume.restrict (Ioc 0 (τ : ℝ))))
-            (p : Lp L2 2 (volume.restrict (Ioc 0 (τ : ℝ))))
-            (acc : Lp (StrongDual ℝ H¹₀(Ω)) 2 (volume.restrict (Ioc 0 (τ : ℝ)))),
-            (ell : ℝ → StrongDual ℝ H¹₀(Ω)) =ᵐ[volume.restrict (Ioc 0 (τ : ℝ))]
-              (fun t ↦ T.pivotToDual (N (u t))) ∧
-            (q : ℝ → H¹₀(Ω)) =ᵐ[volume.restrict (Ioc 0 (τ : ℝ))] (fun t ↦ (u t).1) ∧
-            (p : ℝ → L2) =ᵐ[volume.restrict (Ioc 0 (τ : ℝ))] (fun t ↦ (u t).2) ∧
-            (acc : ℝ → StrongDual ℝ H¹₀(Ω)) =ᵐ[volume.restrict (Ioc 0 (τ : ℝ))]
-              (fun t ↦ T.pivotToDual (N (u t)) - B (u t).1) ∧
-            IsGelfandWeakWaveSolution T (fun _ ↦ B) ell q p acc x.1 x.2) ∧
-        (S.mildLifespan F x ≠ ∞ →
-          ∀ R : ℝ, ∃ ε : ℝ, 0 < ε ∧
-            ∀ t ∈ Ico 0 (S.mildLifespan F x).toReal,
-              (S.mildLifespan F x).toReal - t < ε → R < ‖u t‖) ∧
-        (∀ t : ℝ, 0 ≤ t → ENNReal.ofReal t < S.mildLifespan F x →
-          (1 / 2 : ℝ) * autonomousWaveEnergy B (u t) -
-              (∫ y, |baseCoordCLM (u t).1 y| ^ (r + 1) ∂domainMeasure n Ω) / (r + 1) =
-            (1 / 2 : ℝ) * autonomousWaveEnergy B x -
-              (∫ y, |baseCoordCLM x.1 y| ^ (r + 1) ∂domainMeasure n Ω) / (r + 1)) := by
-  obtain ⟨S, hS⟩ := exists_maximal_semilinear_dirichlet_weakWave (n := n) (Ω := Ω)
-    hn hΩopen hΩbounded hΩne a ha hsymm
-  refine ⟨S, hS.1, hS.2.1, fun x ↦ ?_⟩
-  -- Project the weak-wave clauses without constructing nested elimination motives.
-  have h := hS.2.2.2 N hN x
-  exact ⟨h.1, h.2.1, h.2.2.1, h.2.2.2.1, h.2.2.2.2.1, h.2.2.2.2.2 fun R hR ↦ hNballs R hR.le,
-    fun t ht hlt ↦ powerWave_conservation a hsymm S hS.1 hS.2.2.1 hr N hN hNae x ht hlt⟩
-
 /-- Maximal Dirichlet waves with the concrete scalar source
 `|u|^(r-1) u`, in the energy-to-`L²` Sobolev range.
 
@@ -274,9 +218,13 @@ theorem exists_maximal_power_dirichlet_weakWave (hn : 0 < n) (hΩopen : IsOpen �
               (∫ y, |baseCoordCLM x.1 y| ^ (r + 1) ∂domainMeasure n Ω) / (r + 1)) := by
   have : IsFiniteMeasure (domainMeasure n Ω) := isFiniteMeasure_domainMeasure_of_isBounded hΩbounded
   obtain ⟨N, hNae, hNballs, hN⟩ := exists_powerSource hn hΩopen.measurableSet hr hrange
-  obtain ⟨S, hS⟩ := exists_powerWave_of_source (n := n) (Ω := Ω)
-    hn hΩopen hΩbounded hΩne a ha hsymm hr N hN hNae hNballs
-  exact ⟨S, N, hN, hNae, hNballs, hS⟩
+  obtain ⟨S, hS⟩ := exists_maximal_semilinear_dirichlet_weakWave (n := n) (Ω := Ω)
+    hn hΩopen hΩbounded hΩne a ha hsymm
+  refine ⟨S, N, hN, hNae, hNballs, hS.1, hS.2.1, fun x ↦ ?_⟩
+  -- Project the weak-wave clauses without constructing nested elimination motives.
+  have h := hS.2.2.2 N hN x
+  exact ⟨h.1, h.2.1, h.2.2.1, h.2.2.2.1, h.2.2.2.2.1, h.2.2.2.2.2 fun R hR ↦ hNballs R hR.le,
+    fun t ht hlt ↦ powerWave_conservation a hsymm S hS.1 hS.2.2.1 hr N hN hNae x ht hlt⟩
 
 section Defocusing
 

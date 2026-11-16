@@ -20,7 +20,7 @@ The heat profile `v(t, x) = exp(t + x)` has unit-viscosity Cole–Hopf transform
 in the text. The profile, transformed velocity, and residuals are represented by
 `Verified.Expr (Fin 2)`. Exact symbolic certificates, checked by the `cas` tactic of SymLean, our
 computer algebra system for Lean, prove the reflected identities, and the analytic evaluation of
-`Verified.Expr` identifies the reflected derivative with LeanPDE's ordinary Euclidean partial
+`Verified.Expr` identifies the reflected derivative with PDEAtlas's ordinary Euclidean partial
 derivative.
 
 The final theorem, `coleHopfExpTransform_solves_unit_burgers`, is stated using the ordinary

@@ -7,6 +7,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.TrajectoryWeakEquation
+import PDE.Analysis.Normed.Group.CompactSupport
 import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.CompactData
 import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.RetardedRestart
 import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.FreeWave
@@ -110,14 +111,11 @@ theorem exists_supported_signedPower_weak_trajectory_of_compact_data {r : ℝ} (
   have hg2 : ContDiff ℝ 2 g := hg.of_le (by norm_num)
   have hh1 : ContDiff ℝ 1 h := hh.of_le (by norm_num)
   have hH := contDiff_one_cauchyFreeField hg2 hh1
-  obtain ⟨Rg, _, hgR⟩ := hgs.exists_pos_le_norm
-  obtain ⟨Rh, _, hhR⟩ := hhs.exists_pos_le_norm
-  let R := max Rg Rh
+  obtain ⟨R, -, hgR, hhR⟩ := hgs.exists_common_radius hhs
   have hsupport (p : ℝ × ℝ^3) (hp : 0 ≤ p.1) (hx : R + p.1 < ‖p.2‖) :
       cauchyFreeField g h p = 0 := by
     exact WaveEquation.SmallData.kirchhoffFormula_hasForwardSupport
-      (hg.of_le (by norm_num)) hh.continuous (fun y hy ↦ hgR y ((le_max_left _ _).trans hy.le))
-      (fun y hy ↦ hhR y ((le_max_right _ _).trans hy.le)) p.1 hp p.2 hx
+      (hg.of_le (by norm_num)) hh.continuous hgR hhR p.1 hp p.2 hx
   have hHc : Continuous (spaceTimeUncurry (kirchhoffFormula g h)) := by
     have he : spaceTimeUncurry (kirchhoffFormula g h) =
         cauchyFreeField g h ∘ timeSpaceContinuousLinearEquiv 3 := by

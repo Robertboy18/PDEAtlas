@@ -229,40 +229,35 @@ theorem start_lt_start (hF : F.IsOrdered) {i j : ℕ} (hij : i < j) (hj : j ≤ 
 
 /-! ### The field on a block -/
 
+omit [AddCommGroup E] [Module ℝ E] in
+/-- The blocks of an ordered field are disjoint: a time of the block `[sₘ, sₘ₊₁)` lies in no
+other block `[sₘ', sₘ'₊₁)`, `m' < count`. -/
+theorem not_mem_block_of_ne (hF : F.IsOrdered) {m m' : ℕ} (hm : m < F.count)
+    (hm' : m' < F.count) (hne : m' ≠ m) {t : ℝ}
+    (ht : t ∈ Ico (F.start m) (F.start (m + 1))) :
+    ¬(F.start m' ≤ t ∧ t < F.start (m' + 1)) := by
+  rintro ⟨h₁, h₂⟩
+  rcases lt_or_gt_of_ne hne with h | h
+  · have := start_le_start hF (show m' + 1 ≤ m by omega) hm.le
+    linarith [ht.1]
+  · have := start_le_start hF (show m + 1 ≤ m' by omega) hm'.le
+    linarith [ht.2]
+
 /-- On `[sₘ, sₘ₊₁)` the field is the polynomial of block `m`. -/
 theorem value_eq (hF : F.IsOrdered) {m : ℕ} (hm : m < F.count) {t : ℝ}
     (ht : t ∈ Ico (F.start m) (F.start (m + 1))) : F.value t = F.blockValue m t := by
-  rw [value, Finset.sum_eq_single m]
-  · exact ite_eq_left ht
-  · intro m' hm' hne
-    rw [ite_eq_right]
-    rintro ⟨h₁, h₂⟩
-    rcases lt_or_gt_of_ne hne with h | h
-    · have := start_le_start hF (show m' + 1 ≤ m by omega) hm.le
-      linarith [ht.1]
-    · have := start_le_start hF (show m + 1 ≤ m' by omega)
-        (Finset.mem_range.1 hm').le
-      linarith [ht.2]
-  · intro h
-    exact absurd (Finset.mem_range.2 hm) h
+  rw [value, Finset.sum_eq_single_of_mem m (Finset.mem_range.2 hm) fun m' hm' hne ↦
+    ite_eq_right (not_mem_block_of_ne hF hm (Finset.mem_range.1 hm') hne ht)]
+  exact ite_eq_left ht
 
 /-- On the open block `(sₘ, sₘ₊₁)` the piecewise time derivative is the derivative of the polynomial
 of block `m`. -/
 theorem timeDeriv_eq (hF : F.IsOrdered) {m : ℕ} (hm : m < F.count) {t : ℝ}
     (ht : t ∈ Ioo (F.start m) (F.start (m + 1))) : F.timeDeriv t = F.blockDeriv m t := by
-  rw [timeDeriv, Finset.sum_eq_single m]
-  · exact ite_eq_left ht
-  · intro m' hm' hne
-    rw [ite_eq_right]
-    rintro ⟨h₁, h₂⟩
-    rcases lt_or_gt_of_ne hne with h | h
-    · have := start_le_start hF (show m' + 1 ≤ m by omega) hm.le
-      linarith [ht.1]
-    · have := start_le_start hF (show m + 1 ≤ m' by omega)
-        (Finset.mem_range.1 hm').le
-      linarith [ht.2]
-  · intro h
-    exact absurd (Finset.mem_range.2 hm) h
+  rw [timeDeriv, Finset.sum_eq_single_of_mem m (Finset.mem_range.2 hm) fun m' hm' hne ↦
+    ite_eq_right fun h ↦ not_mem_block_of_ne hF hm (Finset.mem_range.1 hm') hne
+      (Ioo_subset_Ico_self ht) ⟨h.1.le, h.2⟩]
+  exact ite_eq_left ht
 
 /-- The field vanishes from the stopping time `T` on. -/
 theorem value_eq_zero_of_stop_le (hF : F.IsOrdered) {t : ℝ} (ht : F.stop ≤ t) :

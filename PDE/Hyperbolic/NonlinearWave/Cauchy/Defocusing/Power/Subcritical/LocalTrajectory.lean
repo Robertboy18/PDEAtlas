@@ -10,6 +10,7 @@ public import PDE.Analysis.Calculus.SignedPower.Deriv
 public import
   PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.WeakCoupling.Trajectory
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.SignCondition.Truncation
+import PDE.Analysis.Normed.Group.CompactSupport
 import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.CompactData
 import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.FreeWave
 import CAS.ExactTactic
@@ -136,14 +137,11 @@ theorem exists_signedPower_trajectory_of_compact_data {r : ℝ} (hr : 1 ≤ r) {
               (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3))))
               ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3) := by
   have hH := contDiff_one_cauchyFreeField hg hh
-  obtain ⟨Rg, _, hgR⟩ := hgs.exists_pos_le_norm
-  obtain ⟨Rh, _, hhR⟩ := hhs.exists_pos_le_norm
-  let R := max Rg Rh
+  obtain ⟨R, -, hgR, hhR⟩ := hgs.exists_common_radius hhs
   have hsupport (t : ℝ) (ht : t ∈ Icc 0 1) (x : ℝ^3) (hx : x ∉ Metric.closedBall 0 (R + 1)) :
       spaceTimeUncurry (kirchhoffFormula g h) (timeSpaceCons t x) = 0 := by
     apply WaveEquation.SmallData.kirchhoffFormula_hasForwardSupport
-      (hg.of_le (by norm_num)) hh.continuous (fun y hy ↦ hgR y ((le_max_left _ _).trans hy.le))
-      (fun y hy ↦ hhR y ((le_max_right _ _).trans hy.le)) t ht.1 x
+      (hg.of_le (by norm_num)) hh.continuous hgR hhR t ht.1 x
     have hx' : R + 1 < ‖x‖ := by
       simpa only [Metric.mem_closedBall, dist_zero_right, not_le] using hx
     linarith [ht.2]

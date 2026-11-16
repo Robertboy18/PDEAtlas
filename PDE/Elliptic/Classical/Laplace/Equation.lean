@@ -13,7 +13,7 @@ import PDE.FDeriv.Calculus
 /-!
 # The Euclidean Laplace equation
 
-We write LeanPDE's iterated-coordinate Laplacian as a second-order `LinearPDE`. The
+We write PDEAtlas's iterated-coordinate Laplacian as a second-order `LinearPDE`. The
 jet-trace identities connect the concrete totalized expression to the finite-order locality
 that `LinearPDE` requires. Its classical interpretation requires `C²` regularity; under that
 hypothesis it agrees with Mathlib's canonical Laplacian.

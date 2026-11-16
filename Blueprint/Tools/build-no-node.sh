@@ -6,9 +6,10 @@
 #   * the textbook map is not regenerated: the committed
 #     `Blueprint/Generated/TextbookMapData.lean` is compiled as it is;
 #   * `optimize-site.mjs` does not run: the pages keep Verso's own shell, without
-#     the logo, the theme button, the section rail, the "Proof map" actions, the
-#     page descriptions, the Introduction notebook, the learning features and the
-#     typeset figure labels, and they load Marked from its CDN;
+#     the theme button, the section rail, the "Proof map" actions, the page
+#     descriptions, the Introduction notebook, the learning features and the
+#     typeset figure labels, and they load Marked from its CDN. Of that shell,
+#     `add-wordmark.py` supplies the wordmark in the sidebar title and the top bar;
 #   * `defer-heavy-blocks.mjs` does not run: the proof and hover payloads stay
 #     inside the pages, which are several megabytes each.
 # The libraries, the renderer and the pre-rendered dependency atlas are those of
@@ -110,5 +111,8 @@ python3 "$tools_root/build-dependency-atlas.py" \
 mkdir -p "$site_dir/-verso-data/leanpde-brand"
 cp "$repo_root/Blueprint/Assets/Brand/"{logo-light.webp,logo-dark.webp,favicon.png} \
   "$site_dir/-verso-data/leanpde-brand/"
+
+# The wordmark in the two titles of every page: the sidebar title and the top bar.
+python3 "$tools_root/add-wordmark.py" "$site_dir"
 
 printf 'Blueprint generated without the Node.js steps at %s\n' "$site_dir"

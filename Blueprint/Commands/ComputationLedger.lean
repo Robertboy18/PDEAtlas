@@ -132,7 +132,7 @@ public meta def casCount : RoleExpanderOf CountArgs
     let ledger ←
       match decodeLedger LeanPDE.CasLedger.json with
       | .ok ledger => pure ledger
-      | .error error => throwError "LeanPDE computation ledger data is malformed: {error}"
+      | .error error => throwError "PDEAtlas computation ledger data is malformed: {error}"
     let some count := countFor ledger key
       | throwError "casCount does not know the figure {key}"
     ``(Verso.Doc.Inline.text $(quote (toString count)))
@@ -141,10 +141,10 @@ public meta def casCount : RoleExpanderOf CountArgs
 /-- Decode a ledger table payload previously serialized with `toJson`. -/
 private def decodeLedgerBlock (encoded : String) : LedgerBlockData :=
   match Json.parse encoded with
-  | .error error => panic! s!"LeanPDE computation ledger JSON is malformed: {error}"
+  | .error error => panic! s!"PDEAtlas computation ledger JSON is malformed: {error}"
   | .ok value =>
     match fromJson? value with
-    | .error error => panic! s!"LeanPDE computation ledger data is malformed: {error}"
+    | .error error => panic! s!"PDEAtlas computation ledger data is malformed: {error}"
     | .ok payload => payload
 
 /-- The Blueprint card owning a declaration, when one exists. -/
@@ -541,7 +541,7 @@ private def mkLedgerBlock (scope : String) : PartElabM (TSyntax `term) := do
   let ledger ←
     match decodeLedger LeanPDE.CasLedger.json with
     | .ok ledger => pure ledger
-    | .error error => throwError "LeanPDE computation ledger data is malformed: {error}"
+    | .error error => throwError "PDEAtlas computation ledger data is malformed: {error}"
   let state := Informal.Environment.informalExt.getState (← getEnv)
   let rows := ledger.rows.filter (·.scope == scope) |>.map fun row ↦
     { row, card := (row.decl.bind (·.fullName)).bind (cardFor state) : RenderedRow }

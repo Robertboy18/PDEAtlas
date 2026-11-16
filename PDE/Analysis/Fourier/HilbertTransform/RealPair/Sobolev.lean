@@ -8,6 +8,7 @@ module
 
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrincipalValue
 public import PDE.Spaces.Sobolev.Inequalities.Morrey.FiniteExponent.OneDimensional.UniformBound
+import PDE.Analysis.Fourier.HilbertTransform.RealPair.Derivative
 
 /-!
 # Classical Sobolev bounds for real Hilbert pairs
@@ -130,13 +131,13 @@ theorem IsHilbertPair.abs_boundary_normalization_le_L2
       rw [div_mul_eq_mul_div]
 
 /-- Differentiating a Hilbert pair with `C²` compactly supported vorticity and continuous
-velocity gives the Hilbert pair of the derivatives. -/
+velocity gives the Hilbert pair of the derivatives. This is the case of `IsHilbertPair.deriv`
+with compact support. -/
 theorem IsHilbertPair.deriv_of_contDiff_two {f h : ℝ → ℝ}
     (hpair : IsHilbertPair f h) (hh : Continuous h)
     (hf : ContDiff ℝ 2 f) (hsupp : HasCompactSupport f) :
-    IsHilbertPair (deriv f) (deriv h) := by
-  rw [hpair.eq_hilbertPV hh (hf.of_le (by norm_num)) hsupp,
-    deriv_hilbertPV_of_contDiff_two_compactSupport hf hsupp]
-  exact IsHilbertPair.of_contDiff_one_compactSupport hf.deriv' hsupp.deriv
+    IsHilbertPair (deriv f) (deriv h) :=
+  hpair.deriv (hf.of_le (by norm_num))
+    ((hf.deriv' (n := 1)).continuous.memLp_of_hasCompactSupport hsupp.deriv) hh
 
 end PDE.Analysis

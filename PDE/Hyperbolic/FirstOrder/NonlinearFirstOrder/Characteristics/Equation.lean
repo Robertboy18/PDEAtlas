@@ -15,7 +15,7 @@ import Mathlib.Tactic.Positivity.Finset
 # Nonlinear first-order equations
 
 Equations of the form `F(Du, u, x) = 0`, their residual and classical solution predicates,
-and their translation to LeanPDE's `PDEProblem`. The equation is (1) of Evans, §3.2.1, with
+and their translation to PDEAtlas's `PDEProblem`. The equation is (1) of Evans, §3.2.1, with
 the same variables `F(p, z, x)`.
 
 ## References

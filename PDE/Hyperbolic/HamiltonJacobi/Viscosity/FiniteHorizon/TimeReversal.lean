@@ -85,18 +85,21 @@ theorem bounded_uniformContinuousOn_timeReflection {T : ℝ} {u : E × ℝ → �
   rintro _ ⟨z, hz, rfl⟩
   exact ⟨timeReflection T z, (timeReflection_mem_closedTimeSlab T z).2 hz, rfl⟩
 
+/-- Time reflection is continuous at the reflected point, with limit the point itself. -/
+private theorem tendsto_timeReflection (T : ℝ) (z : E × ℝ) :
+    Tendsto (timeReflection T) (𝓝 (timeReflection T z)) (𝓝 z) := by
+  have hc := (isometry_timeReflection T).continuous.continuousAt (x := timeReflection T z)
+  change Tendsto (timeReflection T) (𝓝 (timeReflection T z))
+    (𝓝 (timeReflection T (timeReflection T z))) at hc
+  simpa only [timeReflection_timeReflection] using hc
+
 /-- An upper contact reflects to an upper contact at the reflected point. -/
 theorem isLocalMaxOn_comp_timeReflection {T : ℝ} {f : E × ℝ → ℝ} {z : E × ℝ}
     (hf : IsLocalMaxOn f (openTimeSlab T) z) (hz : z ∈ openTimeSlab T) :
     IsLocalMaxOn (f ∘ timeReflection T) (openTimeSlab T) (timeReflection T z) := by
   apply IsLocalMax.isLocalMaxOn
-  have hc : Tendsto (timeReflection T) (𝓝 (timeReflection T z)) (𝓝 z) := by
-    have hc := (isometry_timeReflection T).continuous.continuousAt (x := timeReflection T z)
-    change Tendsto (timeReflection T) (𝓝 (timeReflection T z))
-      (𝓝 (timeReflection T (timeReflection T z))) at hc
-    simpa only [timeReflection_timeReflection] using hc
-  have hh : ∀ᶠ w in 𝓝 z, f w ≤ f z := hf.isLocalMax ((isOpen_openTimeSlab T).mem_nhds hz)
-  have hn := hc.eventually hh
+  have hn := (tendsto_timeReflection T z).eventually
+    (hf.isLocalMax ((isOpen_openTimeSlab T).mem_nhds hz))
   change ∀ᶠ w in 𝓝 (timeReflection T z), f (timeReflection T w) ≤
     f (timeReflection T (timeReflection T z))
   simpa only [timeReflection_timeReflection] using hn
@@ -106,13 +109,8 @@ theorem isLocalMinOn_comp_timeReflection {T : ℝ} {f : E × ℝ → ℝ} {z : E
     (hf : IsLocalMinOn f (openTimeSlab T) z) (hz : z ∈ openTimeSlab T) :
     IsLocalMinOn (f ∘ timeReflection T) (openTimeSlab T) (timeReflection T z) := by
   apply IsLocalMin.isLocalMinOn
-  have hc : Tendsto (timeReflection T) (𝓝 (timeReflection T z)) (𝓝 z) := by
-    have hc := (isometry_timeReflection T).continuous.continuousAt (x := timeReflection T z)
-    change Tendsto (timeReflection T) (𝓝 (timeReflection T z))
-      (𝓝 (timeReflection T (timeReflection T z))) at hc
-    simpa only [timeReflection_timeReflection] using hc
-  have hh : ∀ᶠ w in 𝓝 z, f z ≤ f w := hf.isLocalMin ((isOpen_openTimeSlab T).mem_nhds hz)
-  have hn := hc.eventually hh
+  have hn := (tendsto_timeReflection T z).eventually
+    (hf.isLocalMin ((isOpen_openTimeSlab T).mem_nhds hz))
   change ∀ᶠ w in 𝓝 (timeReflection T z), f (timeReflection T (timeReflection T z)) ≤
     f (timeReflection T w)
   simpa only [timeReflection_timeReflection] using hn
@@ -149,6 +147,53 @@ theorem gradient_comp_timeReflection (T : ℝ) (φ : E × ℝ → ℝ) (z : E ×
       ∇ (fun x ↦ φ (x, (timeReflection T z).2)) (timeReflection T z).1 :=
   rfl
 
+/-- **Transport of touching tests under time reflection.** Let `P` be a class of tests and `K`
+a kind of contact, both stable under composition with the reflection of the slab, and let every
+test in `P` be differentiable at its contact point. If every test `φ` of `u` satisfies the jet
+condition `J (∂ₜφ) (∇ₓφ) x` at its contact points `(x, t)`, then every test of
+`u ∘ timeReflection T` satisfies `J (-∂ₜφ) (∇ₓφ) x`: reflection keeps the spatial gradient and
+reverses the time derivative. -/
+private theorem tests_comp_timeReflection {T : ℝ} {P K : (E × ℝ → ℝ) → E × ℝ → Prop}
+    {J : ℝ → E → E → Prop}
+    (hP : ∀ φ z, z ∈ openTimeSlab T → P φ z →
+      P (φ ∘ timeReflection T) (timeReflection T z) ∧ DifferentiableAt ℝ φ z)
+    (hK : ∀ f z, z ∈ openTimeSlab T → K f z → K (f ∘ timeReflection T) (timeReflection T z))
+    {u : E × ℝ → ℝ}
+    (hu : ∀ z ∈ openTimeSlab T, ∀ φ : E × ℝ → ℝ, P φ z → K (fun y ↦ u y - φ y) z →
+      J (fderiv ℝ φ z (0, 1)) (∇ (fun x ↦ φ (x, z.2)) z.1) z.1) :
+    ∀ z ∈ openTimeSlab T, ∀ φ : E × ℝ → ℝ, P φ z →
+      K (fun y ↦ (u ∘ timeReflection T) y - φ y) z →
+      J (-fderiv ℝ φ z (0, 1)) (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 := by
+  intro z hz φ hφ hcontact
+  obtain ⟨hψ, hd⟩ := hP φ z hz hφ
+  have htest : K (fun y ↦ u y - (φ ∘ timeReflection T) y) (timeReflection T z) := by
+    simpa only [Function.comp_def, timeReflection_timeReflection] using hK _ z hz hcontact
+  have h := hu (timeReflection T z) ((timeReflection_mem_openTimeSlab T z).2 hz)
+    (φ ∘ timeReflection T) hψ htest
+  have hd' : DifferentiableAt ℝ φ (timeReflection T (timeReflection T z)) := by
+    simpa only [timeReflection_timeReflection] using hd
+  rw [fderiv_comp_timeReflection_time hd', gradient_comp_timeReflection,
+    timeReflection_timeReflection] at h
+  exact h
+
+omit [CompleteSpace E] in
+/-- Tests that are `C¹` at their contact point are stable under time reflection. -/
+private theorem contDiffAt_test_timeReflection {T : ℝ} (φ : E × ℝ → ℝ) (z : E × ℝ)
+    (_hz : z ∈ openTimeSlab T) (hφ : ContDiffAt ℝ 1 φ z) :
+    ContDiffAt ℝ 1 (φ ∘ timeReflection T) (timeReflection T z) ∧ DifferentiableAt ℝ φ z :=
+  ⟨ContDiffAt.comp (timeReflection T z)
+      (by simpa only [timeReflection_timeReflection] using hφ)
+      ((contDiff_timeReflection T).contDiffAt.of_le (by simp)), hφ.differentiableAt_one⟩
+
+omit [CompleteSpace E] in
+/-- Tests that are smooth on the open slab are stable under time reflection. -/
+private theorem contDiffOn_test_timeReflection {T : ℝ} (φ : E × ℝ → ℝ) (z : E × ℝ)
+    (hz : z ∈ openTimeSlab T) (hφ : ContDiffOn ℝ ∞ φ (openTimeSlab T)) :
+    ContDiffOn ℝ ∞ (φ ∘ timeReflection T) (openTimeSlab T) ∧ DifferentiableAt ℝ φ z :=
+  ⟨hφ.comp (contDiff_timeReflection T).contDiffOn
+      (fun w hw ↦ (timeReflection_mem_openTimeSlab T w).2 hw),
+    (hφ.contDiffAt ((isOpen_openTimeSlab T).mem_nhds hz)).differentiableAt (by simp)⟩
+
 /-- Forward subsolution tests are exactly terminal upper tests with the reversed sign. -/
 theorem isSpatialViscositySubsolution_timeReflection_iff (H : E → E → ℝ) (T : ℝ) (u : E × ℝ → ℝ) :
     IsSpatialViscositySubsolution (fun p x ↦ -H p x) (openTimeSlab T)
@@ -158,33 +203,16 @@ theorem isSpatialViscositySubsolution_timeReflection_iff (H : E → E → ℝ) (
           0 ≤ fderiv ℝ φ z (0, 1) + H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 := by
   constructor
   · intro hu z hz φ hφ hcontact
-    have hφ' : ContDiffAt ℝ 1 φ (timeReflection T (timeReflection T z)) := by
-      simpa only [timeReflection_timeReflection] using hφ
-    have hψ := hφ'.comp (timeReflection T z)
-      ((contDiff_timeReflection T).contDiffAt.of_le (by simp))
-    have htest : IsLocalMaxOn (fun y ↦ (u ∘ timeReflection T) y - (φ ∘ timeReflection T) y)
-        (openTimeSlab T) (timeReflection T z) := isLocalMaxOn_comp_timeReflection hcontact hz
-    have h := hu.2 (timeReflection T z) ((timeReflection_mem_openTimeSlab T z).2 hz)
-      (φ ∘ timeReflection T) hψ htest
-    rw [fderiv_comp_timeReflection_time hφ'.differentiableAt_one,
-      gradient_comp_timeReflection, timeReflection_timeReflection] at h
-    change -fderiv ℝ φ z (0, 1) + -H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 ≤ 0 at h
+    have h := tests_comp_timeReflection (K := fun f z ↦ IsLocalMaxOn f (openTimeSlab T) z)
+      (J := fun a p x ↦ a + -H p x ≤ 0) contDiffAt_test_timeReflection
+      (fun _ _ hz hf ↦ isLocalMaxOn_comp_timeReflection hf hz) hu.2 z hz φ hφ
+      (by simpa only [Function.comp_def, timeReflection_timeReflection] using hcontact)
     linarith only [h]
   · intro hu
     refine ⟨isOpen_openTimeSlab T, fun z hz φ hφ hcontact ↦ ?_⟩
-    have hφ' : ContDiffAt ℝ 1 φ (timeReflection T (timeReflection T z)) := by
-      simpa only [timeReflection_timeReflection] using hφ
-    have hψ := hφ'.comp (timeReflection T z)
-      ((contDiff_timeReflection T).contDiffAt.of_le (by simp))
-    have htest : IsLocalMaxOn (fun y ↦ u y - (φ ∘ timeReflection T) y)
-        (openTimeSlab T) (timeReflection T z) := by
-      simpa only [Function.comp_def, timeReflection_timeReflection] using
-        isLocalMaxOn_comp_timeReflection hcontact hz
-    have h := hu (timeReflection T z) ((timeReflection_mem_openTimeSlab T z).2 hz)
-      (φ ∘ timeReflection T) hψ htest
-    rw [fderiv_comp_timeReflection_time hφ'.differentiableAt_one,
-      gradient_comp_timeReflection, timeReflection_timeReflection] at h
-    change 0 ≤ -fderiv ℝ φ z (0, 1) + H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 at h
+    have h := tests_comp_timeReflection (K := fun f z ↦ IsLocalMaxOn f (openTimeSlab T) z)
+      (J := fun a p x ↦ 0 ≤ a + H p x) contDiffAt_test_timeReflection
+      (fun _ _ hz hf ↦ isLocalMaxOn_comp_timeReflection hf hz) hu z hz φ hφ hcontact
     linarith only [h]
 
 /-- Forward supersolution tests are exactly terminal lower tests with the reversed sign. -/
@@ -196,33 +224,16 @@ theorem isSpatialViscositySupersolution_timeReflection_iff (H : E → E → ℝ)
           fderiv ℝ φ z (0, 1) + H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 ≤ 0 := by
   constructor
   · intro hu z hz φ hφ hcontact
-    have hφ' : ContDiffAt ℝ 1 φ (timeReflection T (timeReflection T z)) := by
-      simpa only [timeReflection_timeReflection] using hφ
-    have hψ := hφ'.comp (timeReflection T z)
-      ((contDiff_timeReflection T).contDiffAt.of_le (by simp))
-    have htest : IsLocalMinOn (fun y ↦ (u ∘ timeReflection T) y - (φ ∘ timeReflection T) y)
-        (openTimeSlab T) (timeReflection T z) := isLocalMinOn_comp_timeReflection hcontact hz
-    have h := hu.2 (timeReflection T z) ((timeReflection_mem_openTimeSlab T z).2 hz)
-      (φ ∘ timeReflection T) hψ htest
-    rw [fderiv_comp_timeReflection_time hφ'.differentiableAt_one,
-      gradient_comp_timeReflection, timeReflection_timeReflection] at h
-    change 0 ≤ -fderiv ℝ φ z (0, 1) + -H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 at h
+    have h := tests_comp_timeReflection (K := fun f z ↦ IsLocalMinOn f (openTimeSlab T) z)
+      (J := fun a p x ↦ 0 ≤ a + -H p x) contDiffAt_test_timeReflection
+      (fun _ _ hz hf ↦ isLocalMinOn_comp_timeReflection hf hz) hu.2 z hz φ hφ
+      (by simpa only [Function.comp_def, timeReflection_timeReflection] using hcontact)
     linarith only [h]
   · intro hu
     refine ⟨isOpen_openTimeSlab T, fun z hz φ hφ hcontact ↦ ?_⟩
-    have hφ' : ContDiffAt ℝ 1 φ (timeReflection T (timeReflection T z)) := by
-      simpa only [timeReflection_timeReflection] using hφ
-    have hψ := hφ'.comp (timeReflection T z)
-      ((contDiff_timeReflection T).contDiffAt.of_le (by simp))
-    have htest : IsLocalMinOn (fun y ↦ u y - (φ ∘ timeReflection T) y)
-        (openTimeSlab T) (timeReflection T z) := by
-      simpa only [Function.comp_def, timeReflection_timeReflection] using
-        isLocalMinOn_comp_timeReflection hcontact hz
-    have h := hu (timeReflection T z) ((timeReflection_mem_openTimeSlab T z).2 hz)
-      (φ ∘ timeReflection T) hψ htest
-    rw [fderiv_comp_timeReflection_time hφ'.differentiableAt_one,
-      gradient_comp_timeReflection, timeReflection_timeReflection] at h
-    change -fderiv ℝ φ z (0, 1) + H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 ≤ 0 at h
+    have h := tests_comp_timeReflection (K := fun f z ↦ IsLocalMinOn f (openTimeSlab T) z)
+      (J := fun a p x ↦ a + H p x ≤ 0) contDiffAt_test_timeReflection
+      (fun _ _ hz hf ↦ isLocalMinOn_comp_timeReflection hf hz) hu z hz φ hφ hcontact
     linarith only [h]
 
 /-- Terminal smooth upper tests become forward smooth subsolution tests after reflection.
@@ -235,20 +246,10 @@ theorem smooth_subsolution_tests_timeReflection {H : E → E → ℝ} {T : ℝ} 
       IsLocalMaxOn (fun y ↦ (u ∘ timeReflection T) y - φ y) (openTimeSlab T) z →
       fderiv ℝ φ z (0, 1) - H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 ≤ 0 := by
   intro z hz φ hφ hcontact
-  have hψ := hφ.comp (contDiff_timeReflection T).contDiffOn
-    (fun w hw ↦ (timeReflection_mem_openTimeSlab T w).2 hw)
-  have htest : IsLocalMaxOn (fun y ↦ u y - (φ ∘ timeReflection T) y)
-      (openTimeSlab T) (timeReflection T z) := by
-    simpa only [Function.comp_def, timeReflection_timeReflection] using
-      isLocalMaxOn_comp_timeReflection hcontact hz
-  have h := hu (timeReflection T z) ((timeReflection_mem_openTimeSlab T z).2 hz)
-    (φ ∘ timeReflection T) hψ htest
-  have hd : DifferentiableAt ℝ φ (timeReflection T (timeReflection T z)) := by
-    simpa only [timeReflection_timeReflection] using
-      (hφ.contDiffAt ((isOpen_openTimeSlab T).mem_nhds hz)).differentiableAt (by simp)
-  rw [fderiv_comp_timeReflection_time hd, gradient_comp_timeReflection,
-    timeReflection_timeReflection] at h
-  change 0 ≤ -fderiv ℝ φ z (0, 1) + H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 at h
+  have h := tests_comp_timeReflection (P := fun φ _ ↦ ContDiffOn ℝ ∞ φ (openTimeSlab T))
+    (K := fun f z ↦ IsLocalMaxOn f (openTimeSlab T) z) (J := fun a p x ↦ 0 ≤ a + H p x)
+    contDiffOn_test_timeReflection (fun _ _ hz hf ↦ isLocalMaxOn_comp_timeReflection hf hz)
+    hu z hz φ hφ hcontact
   linarith only [h]
 
 /-- Terminal smooth lower tests become forward smooth supersolution tests after reflection. -/
@@ -260,20 +261,10 @@ theorem smooth_supersolution_tests_timeReflection {H : E → E → ℝ} {T : ℝ
       IsLocalMinOn (fun y ↦ (u ∘ timeReflection T) y - φ y) (openTimeSlab T) z → 0 ≤
       fderiv ℝ φ z (0, 1) - H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 := by
   intro z hz φ hφ hcontact
-  have hψ := hφ.comp (contDiff_timeReflection T).contDiffOn
-    (fun w hw ↦ (timeReflection_mem_openTimeSlab T w).2 hw)
-  have htest : IsLocalMinOn (fun y ↦ u y - (φ ∘ timeReflection T) y)
-      (openTimeSlab T) (timeReflection T z) := by
-    simpa only [Function.comp_def, timeReflection_timeReflection] using
-      isLocalMinOn_comp_timeReflection hcontact hz
-  have h := hu (timeReflection T z) ((timeReflection_mem_openTimeSlab T z).2 hz)
-    (φ ∘ timeReflection T) hψ htest
-  have hd : DifferentiableAt ℝ φ (timeReflection T (timeReflection T z)) := by
-    simpa only [timeReflection_timeReflection] using
-      (hφ.contDiffAt ((isOpen_openTimeSlab T).mem_nhds hz)).differentiableAt (by simp)
-  rw [fderiv_comp_timeReflection_time hd, gradient_comp_timeReflection,
-    timeReflection_timeReflection] at h
-  change -fderiv ℝ φ z (0, 1) + H (∇ (fun x ↦ φ (x, z.2)) z.1) z.1 ≤ 0 at h
+  have h := tests_comp_timeReflection (P := fun φ _ ↦ ContDiffOn ℝ ∞ φ (openTimeSlab T))
+    (K := fun f z ↦ IsLocalMinOn f (openTimeSlab T) z) (J := fun a p x ↦ a + H p x ≤ 0)
+    contDiffOn_test_timeReflection (fun _ _ hz hf ↦ isLocalMinOn_comp_timeReflection hf hz)
+    hu z hz φ hφ hcontact
   linarith only [h]
 
 /-- Terminal uniqueness in the smooth-test class on a single finite slab.

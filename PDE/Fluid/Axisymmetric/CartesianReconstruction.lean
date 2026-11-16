@@ -58,9 +58,11 @@ divergence-free axisymmetric velocity on all of `ℝ^3`, including the axis.
 
 The lift `squaredCylindricalLift Φ` is `Φ` composed with the polynomial map `squaredCylindricalMap`,
 `x ↦ (x₁² + x₂², x₃)`, so it is as smooth as `Φ` (`contDiff_squaredCylindricalLift`). By the chain
-rule its derivative is `2 xᵢ ∂_s Φ` in the two transverse directions and `∂_z Φ` in the axial one
-(`partialDeriv_zero_squaredCylindricalLift`, `partialDeriv_one_squaredCylindricalLift`,
-`partialDeriv_two_squaredCylindricalLift`), with no division by the radius. Each velocity component
+rule, stated once for every direction (`partialDeriv_squaredCylindricalLift`), its derivative is
+`2 xᵢ ∂_s Φ` in the two transverse directions (`partialDeriv_squaredCylindricalLift_of_ne_two`,
+with the cases `partialDeriv_zero_squaredCylindricalLift` and
+`partialDeriv_one_squaredCylindricalLift`) and `∂_z Φ` in the axial one
+(`partialDeriv_two_squaredCylindricalLift`), with no division by the radius. Each velocity component
 is a polynomial in `x` times lifts of `U`, `Ψ` and the first derivatives of `Ψ`. The regularity
 statements follow, and the divergence of the meridional field cancels after one exchange of `∂_s`
 and `∂_z` (`spatialFieldDivergence_meridionalVelocity_eq_zero`). The lifts are invariant under
@@ -213,64 +215,66 @@ private theorem partialDeriv_comp_euclidean {n m : ℕ}
   congr 1
   exact PDE.partialDeriv_apply i j hΦ
 
-/-- Derivative of a squared-radius lift in the first transverse direction. -/
-theorem partialDeriv_zero_squaredCylindricalLift {Φ : ℝ^2 → ℝ}
-    (hΦ : ContDiff ℝ 1 Φ) (x : ℝ^3) :
-    (∂[(0 : Fin 3)] (squaredCylindricalLift Φ)) x =
-      2 * x 0 * (∂[(0 : Fin 2)] Φ) (squaredCylindricalMap x) := by
+/-- In each transverse direction `i` (`i = 0` or `i = 1`) the squared cylindrical radius
+`x₀² + x₁²` has coordinate derivative `2 xᵢ`. -/
+theorem partialDeriv_cylindricalRadiusSq_of_ne_two {i : Fin 3} (hi : i ≠ 2) (x : ℝ^3) :
+    (∂[i] cylindricalRadiusSq) x = 2 * x i := by
+  fin_cases i
+  · exact partialDeriv_zero_cylindricalRadiusSq x
+  · exact partialDeriv_one_cylindricalRadiusSq x
+  · exact absurd rfl hi
+
+/-- **Chain rule for a squared-radius lift** of a `C¹` profile `Φ`, in every Cartesian direction
+`i`: the derivative of `Φ (x₀² + x₁², x₂)` is `∂_s Φ` times the derivative of `s = x₀² + x₁²`, plus
+`∂_z Φ` when `i` is the axial direction. -/
+theorem partialDeriv_squaredCylindricalLift {Φ : ℝ^2 → ℝ} (hΦ : ContDiff ℝ 1 Φ) (i : Fin 3)
+    (x : ℝ^3) :
+    (∂[i] (squaredCylindricalLift Φ)) x =
+      (∂[(0 : Fin 2)] Φ) (squaredCylindricalMap x) * (∂[i] cylindricalRadiusSq) x +
+        (∂[(1 : Fin 2)] Φ) (squaredCylindricalMap x) * if i = 2 then 1 else 0 := by
   calc
     _ = ∑ j : Fin 2,
         (∂[j] Φ) (squaredCylindricalMap x) *
-          (∂[(0 : Fin 3)]
-            (fun y ↦ squaredCylindricalMap y j)) x :=
-      partialDeriv_comp_euclidean 0 Φ squaredCylindricalMap x
+          (∂[i] (fun y ↦ squaredCylindricalMap y j)) x :=
+      partialDeriv_comp_euclidean i Φ squaredCylindricalMap x
         (hΦ.differentiable one_ne_zero).differentiableAt
         (contDiff_squaredCylindricalMap.differentiable (by simp)).differentiableAt
     _ = _ := by
       simp only [Fin.sum_univ_two, squaredCylindricalMap_apply_zero,
         squaredCylindricalMap_apply_one]
-      rw [partialDeriv_zero_cylindricalRadiusSq]
       simp [axialCoordinate, PDE.partialDeriv_coord]
-      ring
+
+/-- Derivative of the squared-radius lift of a `C¹` profile in a transverse direction `i`
+(`i = 0` or `i = 1`): it is `2 xᵢ ∂_s Φ`. -/
+theorem partialDeriv_squaredCylindricalLift_of_ne_two {Φ : ℝ^2 → ℝ} (hΦ : ContDiff ℝ 1 Φ)
+    {i : Fin 3} (hi : i ≠ 2) (x : ℝ^3) :
+    (∂[i] (squaredCylindricalLift Φ)) x =
+      2 * x i * (∂[(0 : Fin 2)] Φ) (squaredCylindricalMap x) := by
+  rw [partialDeriv_squaredCylindricalLift hΦ, partialDeriv_cylindricalRadiusSq_of_ne_two hi,
+    ite_eq_right hi, mul_zero, add_zero]
+  ring
+
+/-- Derivative of a squared-radius lift in the first transverse direction. -/
+theorem partialDeriv_zero_squaredCylindricalLift {Φ : ℝ^2 → ℝ}
+    (hΦ : ContDiff ℝ 1 Φ) (x : ℝ^3) :
+    (∂[(0 : Fin 3)] (squaredCylindricalLift Φ)) x =
+      2 * x 0 * (∂[(0 : Fin 2)] Φ) (squaredCylindricalMap x) :=
+  partialDeriv_squaredCylindricalLift_of_ne_two hΦ (by decide) x
 
 /-- Derivative of a squared-radius lift in the second transverse direction. -/
 theorem partialDeriv_one_squaredCylindricalLift {Φ : ℝ^2 → ℝ}
     (hΦ : ContDiff ℝ 1 Φ) (x : ℝ^3) :
     (∂[(1 : Fin 3)] (squaredCylindricalLift Φ)) x =
-      2 * x 1 * (∂[(0 : Fin 2)] Φ) (squaredCylindricalMap x) := by
-  calc
-    _ = ∑ j : Fin 2,
-        (∂[j] Φ) (squaredCylindricalMap x) *
-          (∂[(1 : Fin 3)]
-            (fun y ↦ squaredCylindricalMap y j)) x :=
-      partialDeriv_comp_euclidean 1 Φ squaredCylindricalMap x
-        (hΦ.differentiable one_ne_zero).differentiableAt
-        (contDiff_squaredCylindricalMap.differentiable (by simp)).differentiableAt
-    _ = _ := by
-      simp only [Fin.sum_univ_two, squaredCylindricalMap_apply_zero,
-        squaredCylindricalMap_apply_one]
-      rw [partialDeriv_one_cylindricalRadiusSq]
-      simp [axialCoordinate, PDE.partialDeriv_coord]
-      ring
+      2 * x 1 * (∂[(0 : Fin 2)] Φ) (squaredCylindricalMap x) :=
+  partialDeriv_squaredCylindricalLift_of_ne_two hΦ (by decide) x
 
 /-- Derivative of a squared-radius lift in the axial direction. -/
 theorem partialDeriv_two_squaredCylindricalLift {Φ : ℝ^2 → ℝ}
     (hΦ : ContDiff ℝ 1 Φ) (x : ℝ^3) :
     (∂[(2 : Fin 3)] (squaredCylindricalLift Φ)) x =
       (∂[(1 : Fin 2)] Φ) (squaredCylindricalMap x) := by
-  calc
-    _ = ∑ j : Fin 2,
-        (∂[j] Φ) (squaredCylindricalMap x) *
-          (∂[(2 : Fin 3)]
-            (fun y ↦ squaredCylindricalMap y j)) x :=
-      partialDeriv_comp_euclidean 2 Φ squaredCylindricalMap x
-        (hΦ.differentiable one_ne_zero).differentiableAt
-        (contDiff_squaredCylindricalMap.differentiable (by simp)).differentiableAt
-    _ = _ := by
-      simp only [Fin.sum_univ_two, squaredCylindricalMap_apply_zero,
-        squaredCylindricalMap_apply_one]
-      rw [partialDeriv_two_cylindricalRadiusSq]
-      simp [axialCoordinate, PDE.partialDeriv_coord]
+  rw [partialDeriv_squaredCylindricalLift hΦ, partialDeriv_two_cylindricalRadiusSq, ite_eq_left rfl,
+    mul_zero, zero_add, mul_one]
 
 /-- Package three scalar components as a Cartesian vector. -/
 def cartesianVector (a b c : ℝ) : ℝ^3 :=

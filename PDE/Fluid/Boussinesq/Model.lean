@@ -27,7 +27,7 @@ whole-space predicate carries no boundary condition.
 The sign in this primitive-variable model is upward buoyancy.
 `VorticityStream.PrimitiveBridge` shows that the clockwise-vorticity equation of Chen–Hou, with
 source `partialDeriv 0 theta`, corresponds to coefficient `-1` in the primitive momentum equation
-under LeanPDE's clockwise curl convention, using
+under PDEAtlas's clockwise curl convention, using
 `SatisfiesMomentumEquationWithBuoyancyCoefficientOn`.
 
 ## References

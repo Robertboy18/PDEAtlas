@@ -65,7 +65,7 @@ end LaplacianEquation
 
 namespace InnerProductSpace
 
-/-- A Mathlib harmonic function has LeanPDE's spherical mean-value property.
+/-- A Mathlib harmonic function has PDEAtlas's spherical mean-value property.
 
 This is the Mathlib-native entry point to the Evans mean-value theorem. -/
 theorem HarmonicOnNhd.hasSphereMeanValueProperty {n : ℕ} [Fact (0 < n)]

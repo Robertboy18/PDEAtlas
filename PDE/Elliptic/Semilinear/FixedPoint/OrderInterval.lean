@@ -51,15 +51,9 @@ theorem exists_least_semilinear_weak_solution_Icc
       (∀ v, B u v + N u v = ell v) ∧
         ∀ w ∈ Set.Icc lower upper,
           (∀ v, B w v + N w v = ell v) → u ≤ w := by
-  let T : V → V := semilinearPicardMap B hB N ell
-  obtain ⟨u, huIcc, hufixed, hleast⟩ :=
+  simpa only [isFixedPt_semilinearPicardMap_iff] using
     PDE.OrderInterval.exists_least_fixed_point_Icc
-      T hmono lower upper hlowerupper hlower hupper
-  refine ⟨u, huIcc, ?_, ?_⟩
-  · exact (isFixedPt_semilinearPicardMap_iff B hB N ell u).1 hufixed
-  · intro w hwIcc hw
-    apply hleast w hwIcc
-    exact (isFixedPt_semilinearPicardMap_iff B hB N ell w).2 hw
+      (semilinearPicardMap B hB N ell) hmono lower upper hlowerupper hlower hupper
 
 /-- A monotone Picard map on a conditionally complete lattice has a greatest
 semilinear weak solution between ordered invariant barriers. -/
@@ -75,14 +69,8 @@ theorem exists_greatest_semilinear_weak_solution_Icc
       (∀ v, B u v + N u v = ell v) ∧
         ∀ w ∈ Set.Icc lower upper,
           (∀ v, B w v + N w v = ell v) → w ≤ u := by
-  let T : V → V := semilinearPicardMap B hB N ell
-  obtain ⟨u, huIcc, hufixed, hgreatest⟩ :=
+  simpa only [isFixedPt_semilinearPicardMap_iff] using
     PDE.OrderInterval.exists_greatest_fixed_point_Icc
-      T hmono lower upper hlowerupper hlower hupper
-  refine ⟨u, huIcc, ?_, ?_⟩
-  · exact (isFixedPt_semilinearPicardMap_iff B hB N ell u).1 hufixed
-  · intro w hwIcc hw
-    apply hgreatest w hwIcc
-    exact (isFixedPt_semilinearPicardMap_iff B hB N ell w).2 hw
+      (semilinearPicardMap B hB N ell) hmono lower upper hlowerupper hlower hupper
 
 end SobolevSpace.Weak

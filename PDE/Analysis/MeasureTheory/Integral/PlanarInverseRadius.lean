@@ -8,6 +8,7 @@ module
 
 public import PDE.Analysis.Geometry.EuclideanBall
 import Mathlib.Analysis.SpecialFunctions.Pow.Integral
+import PDE.Analysis.Integration.Radial
 import CAS.ExactTactic
 
 /-!
@@ -42,35 +43,13 @@ namespace MeasureTheory
 /-- The inverse-radius singularity has mass `2πρ` on a planar disk. -/
 theorem integral_ball_norm_inv_two (ρ : ℝ) (hρ : 0 < ρ) :
     (∫ z in Metric.ball (0 : ℝ^2) ρ, ‖z‖⁻¹) = 2 * Real.pi * ρ := by
-  let f : ℝ → ℝ := (Iio ρ).indicator (fun r ↦ r⁻¹)
-  have hpolar := integral_fun_norm_addHaar (E := ℝ^2) (volume : Measure (ℝ^2)) f
-  have hleft : (∫ z : ℝ^2, f ‖z‖) =
-      ∫ z in Metric.ball (0 : ℝ^2) ρ, ‖z‖⁻¹ := by
-    rw [← integral_indicator measurableSet_ball]
-    apply integral_congr_ae
-    filter_upwards [] with z
-    simp only [f, Set.indicator, mem_Iio, Metric.mem_ball, dist_zero_right]
-  have hrad :
-      (∫ r in Ioi (0 : ℝ), r ^ (Module.finrank ℝ (ℝ^2) - 1) • f r) = ρ := by
-    calc
-      _ = ∫ r in Ioi (0 : ℝ), (Iio ρ).indicator (fun _ ↦ (1 : ℝ)) r := by
-        apply setIntegral_congr_fun measurableSet_Ioi
-        intro r hr
-        by_cases hrρ : r < ρ
-        · simp [f, hrρ, ne_of_gt hr]
-        · simp [f, hrρ]
-      _ = ∫ _r in Ioo (0 : ℝ) ρ, (1 : ℝ) := by
-        rw [setIntegral_indicator measurableSet_Iio]
-        rfl
-      _ = ρ := by simp [measureReal_def, hρ.le]
-  have hvol : (volume : Measure (ℝ^2)).real (Metric.ball (0 : ℝ^2) 1) =
-      Real.pi := by
-    simpa only [PDE.Analysis.ballVolume, measureReal_def, one_pow, mul_one,
-      PDE.Analysis.unitBallVolume_two] using
-      PDE.Analysis.ballVolume_eq_unitBallVolume_mul_pow 2 1 zero_le_one
-  rw [hleft, hrad, hvol] at hpolar
-  simpa only [finrank_euclideanSpace_fin, nsmul_eq_mul, smul_eq_mul,
-    Nat.cast_ofNat, mul_assoc] using hpolar
+  have hrad : (∫ r in (0 : ℝ)..ρ, r ^ (2 - 1) * r⁻¹) = ρ := by
+    rw [intervalIntegral.integral_congr_ae (g := fun _ ↦ (1 : ℝ)) (.of_forall fun r hr ↦ ?_)]
+    · simp
+    · rw [uIoc_of_le hρ.le] at hr
+      simp [hr.1.ne']
+  rw [PDE.Analysis.integral_ball_radial 2 (fun r ↦ r⁻¹) hρ.le, hrad,
+    PDE.Analysis.unitSphereArea_two]
 
 /-- Inverse radius is integrable on every planar disk centered at its pole. -/
 theorem integrableOn_ball_norm_inv_two (ρ : ℝ) :

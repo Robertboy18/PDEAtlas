@@ -19,7 +19,7 @@ Convexity is required only in the gradient variable.
 
 The density is evaluated on the base-coordinate and gradient maps. On open sets these
 are the usual weak Sobolev coordinates. For arbitrary sets the statement
-concerns LeanPDE's weak-derivative graph space. No boundedness or boundary
+concerns PDEAtlas's weak-derivative graph space. No boundedness or boundary
 regularity of the domain is required for this convergence statement.
 -/
 

@@ -8,35 +8,53 @@ module
 
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.RetardedOverlap
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.RetardedRestart
+import PDE.Analysis.Calculus.LocalExtension.TimeBand
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
 
 /-!
-# Constructed continuation of bounded C¹ signed-power integral trajectories
+# Constructed continuation of bounded signed-power integral trajectories
 
 A bounded trajectory before a finite terminal time extends past that time.
 The proof constructs a uniformly long future cone solution at a nearby anchor,
 identifies both branches by bounded cone uniqueness, and glues inside the
 open overlap.
 
-This is a continuation theorem for C¹ integral trajectories.
+`exists_signedPower_integral_extension` proves this once, for every finite
+order `m ≥ 1` and every exponent `r ≥ 1` such that the signed power is of
+class `C^m` and the cone construction is available at order `m`. The
+continuation theorem for C¹ integral trajectories, for every `r ≥ 1`, is the
+case `exists_signedPower_integral_extension_of_bounded`.
 -/
 
 @[expose] public noncomputable section
 
-open Set Filter PDE.Analysis PDE.Common WaveEquation
+open Set Filter MeasureTheory PDE.Analysis PDE.Common WaveEquation
 open WaveEquation.SmallData.Classical.LocalPower
-open scoped Topology
+open scoped Topology unitInterval
 
 namespace PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical
 
-/-- A bounded C¹ signed-power integral trajectory before a finite time has a
-bounded C¹ integral extension beyond it, preserving the entire old trajectory.
-The new amplitude bound is supplied by the constructed future branch. The
-construction uses no bound on derivatives and no terminal trace. -/
-theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
-    (hr : 1 ≤ r) (hb : 0 < b) (hL : 0 < L) (hB : 0 ≤ B) (hM : 0 ≤ M)
+/-- **Continuation of bounded signed-power integral trajectories, for every order.** Let
+`m ≥ 1` and `r ≥ 1` be such that the signed power `Real.signedPower r` is of class `C^m` and
+the cone construction for the reaction `-Real.signedPower r` is available at order `m`
+(`hcone`, the hypothesis of `exists_future_of_bounded_history`). Then a bounded `C^m`
+signed-power integral trajectory before a finite time has a bounded `C^m` integral extension
+beyond it, preserving the entire old trajectory. The new amplitude bound is supplied by the
+constructed future branch. The construction uses no bound on derivatives and no terminal
+trace. -/
+theorem exists_signedPower_integral_extension {m : ℕ} (hm : 1 ≤ m) {r b L B M : ℝ}
+    (hr : 1 ≤ r) (hrm : ContDiff ℝ m (Real.signedPower r))
+    (hcone : ∀ A : ℝ, 0 ≤ A → ∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧
+      ∀ G : ℝ × ℝ^3 → ℝ, ContDiff ℝ m G → (∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 1 → |G p| ≤ A) →
+        ∃ v c : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ m v {p | |p.1| < T} ∧
+      ContDiffOn ℝ m c {p | |p.1| < T} ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → v p = G p + p.1 ^ 2 * c p) ∧
+      (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → |v p| < A + 1) ∧
+      ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → c p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction,
+        -Real.signedPower r (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3))))
+        ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3))
+    (hb : 0 < b) (hL : 0 < L) (hB : 0 ≤ B) (hM : 0 ≤ M)
     {u H : ℝ × ℝ^3 → ℝ}
-    (hu : ContDiffOn ℝ 1 u {p | -b < p.1 ∧ p.1 < L}) (hH : ContDiff ℝ 1 H)
+    (hu : ContDiffOn ℝ m u {p | -b < p.1 ∧ p.1 < L}) (hH : ContDiff ℝ m H)
     (hHB : ∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 (L + 1) → |H p| ≤ B)
     (huB : ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L → |u p| ≤ M)
     (hue : ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L →
@@ -44,18 +62,19 @@ theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
         (fun z : ℝ^4 ↦ -Real.signedPower r (u (timeSpaceContinuousLinearEquiv 3 z)))
         (timeSpaceCons p.1 p.2)) :
     ∃ L' M' : ℝ, L < L' ∧ 0 ≤ M' ∧ ∃ w : ℝ × ℝ^3 → ℝ,
-      ContDiffOn ℝ 1 w {p | -b < p.1 ∧ p.1 < L'} ∧
+      ContDiffOn ℝ m w {p | -b < p.1 ∧ p.1 < L'} ∧
       EqOn w u {p | -b < p.1 ∧ p.1 < L} ∧
       (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L' → |w p| ≤ M') ∧
       ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L' →
         w p = H p + oddDuhamelSolution 0
           (fun z : ℝ^4 ↦ -Real.signedPower r (w (timeSpaceContinuousLinearEquiv 3 z)))
           (timeSpaceCons p.1 p.2) := by
+  have hm1 : (1 : WithTop ℕ∞) ≤ m := by exact_mod_cast hm
   let A := B + L * (L + 1) * M ^ r
   let C := max M (A + 1)
   have hC : 0 ≤ C := hM.trans (le_max_left _ _)
-  obtain ⟨T, hT, _, hconstruct⟩ := exists_signedPower_future_of_bounded_history hr
-    hB (Real.rpow_nonneg hM r) hL.le
+  obtain ⟨T, hT, _, hconstruct⟩ := exists_future_of_bounded_history hm
+    (f := fun y ↦ -Real.signedPower r y) hcone hB (Real.rpow_nonneg hM r) hL.le
   have hc : Continuous (fun t : ℝ ↦
       t ^ 2 * ‖duhamelOperator‖ * ((2 * r) * (2 * C) ^ (r - 1))) := by fun_prop
   have hnear : ∀ᶠ t : ℝ in 𝓝 0,
@@ -71,9 +90,15 @@ theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
   have ha : 0 ≤ a := by dsimp only [a]; linarith
   have haL : a < L := by dsimp only [a]; linarith
   have haS : δ / 2 ≤ a + b := by dsimp only [a]; linarith
-  obtain ⟨U, hU, hUeq⟩ := exists_contDiff_representative_on_initial_band hb hu haL
+  have hu' : ContDiffOn ℝ ((m : ℕ∞) : WithTop ℕ∞) u {p | -b < p.1 ∧ p.1 < L} := by
+    exact_mod_cast hu
+  obtain ⟨U, hU', hUevent⟩ := hu'.exists_contDiff_eventuallyEq_on_band
+    (ContinuousLinearMap.fst ℝ ℝ (ℝ^3)) (s := 0) (by linarith) haL
+  have hU : ContDiff ℝ m U := by exact_mod_cast hU'
+  have hUeq (p : ℝ × ℝ^3) (hp : p.1 ∈ Icc 0 a) : U p = u p :=
+    ((hUevent p hp).self_of_nhds).symm
   let F : ℝ × ℝ^3 → ℝ := fun p ↦ -Real.signedPower r (U p)
-  have hF : ContDiff ℝ 1 F := ((Real.contDiff_one_signedPower hr).comp hU).neg
+  have hF : ContDiff ℝ m F := (hrm.comp hU).neg
   have hFpast (s : ℝ) (hs : s ∈ Icc 0 a) (x : ℝ^3) :
       F (s, x) = -Real.signedPower r (u (s, x)) := by
     rw [← hUeq (s, x) hs]
@@ -85,7 +110,7 @@ theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
   have hmatch (p : ℝ × ℝ^3) (hp : p.1 ∈ Ico 0 (δ / 2)) :
       u (a + p.1, p.2) = v p := by
     apply eq_on_restart_overlap hr hb hC ha (by dsimp only [a]; linarith)
-      (by linarith) haS hu hv hH hF hFpast
+      (by linarith) haS (hu.of_le hm1) (hv.of_le hm1) (hH.of_le hm1) (hF.of_le hm1) hFpast
       (fun q hq ↦ (huB q hq).trans (le_max_left _ _))
       (fun q hq ↦ (hvB q hq).le.trans (le_max_right _ _)) hue hve hp
     apply hsmall
@@ -108,7 +133,7 @@ theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
     · simpa only [add_sub_cancel] using
         hmatch (p.1 - a, p.2) ⟨sub_nonneg.mpr hp, by dsimp only [c] at hpc; linarith⟩
     · rfl
-  have hw : ContDiffOn ℝ 1 w {p | -b < p.1 ∧ p.1 < a + T} := by
+  have hw : ContDiffOn ℝ m w {p | -b < p.1 ∧ p.1 < a + T} := by
     intro p hp
     apply ContDiffAt.contDiffWithinAt
     by_cases hpl : p.1 < L
@@ -118,7 +143,7 @@ theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
       exact hwold q hq
     · have hpa : a < p.1 := haL.trans_le (le_of_not_gt hpl)
       have hpt : |p.1 - a| < T := by rw [abs_of_pos (sub_pos.mpr hpa)]; linarith [hp.2]
-      have hvp : ContDiffAt ℝ 1 v (p.1 - a, p.2) := hv.contDiffAt
+      have hvp : ContDiffAt ℝ m v (p.1 - a, p.2) := hv.contDiffAt
         ((isOpen_lt continuous_fst.abs continuous_const).mem_nhds hpt)
       apply (hvp.comp p ((contDiffAt_fst.sub contDiffAt_const).prodMk
         contDiffAt_snd)).congr_of_eventuallyEq
@@ -145,10 +170,10 @@ theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
     have he := hve (p.1 - a, p.2) ⟨hpa, hpt⟩
     rw [add_sub_cancel] at he
     rw [hwfuture p (by linarith)]
-    have hW : ContDiffOn ℝ 1 (fun q ↦ -Real.signedPower r (w q))
+    have hW : ContDiffOn ℝ m (fun q ↦ -Real.signedPower r (w q))
         {q | -b < q.1 ∧ q.1 < a + T} :=
-      ((Real.contDiff_one_signedPower hr).comp_contDiffOn hw).neg
-    have hsplit := retarded_eq_history_add_shift_of_contDiffOn hb hW ha hpa
+      (hrm.comp_contDiffOn hw).neg
+    have hsplit := retarded_eq_history_add_shift_of_contDiffOn hb (hW.of_le hm1) ha hpa
       (by simpa only [add_sub_cancel] using hp.2) p.2
     rw [add_sub_cancel] at hsplit
     have hhist : retardedHistory a F (p.1 - a, p.2) =
@@ -164,5 +189,32 @@ theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
         (G := fun q ↦ -Real.signedPower r (w (a + q.1, q.2))) (p.1 - a, p.2) hpa fun s hs x ↦ ?_
       rw [hwfuture (a + s, x) (by linarith [hs.1]), add_sub_cancel_left]
     rw [he, hhist, hfuture, add_assoc, ← hsplit]
+
+/-- A bounded C¹ signed-power integral trajectory before a finite time has a
+bounded C¹ integral extension beyond it, preserving the entire old trajectory.
+The new amplitude bound is supplied by the constructed future branch. The
+construction uses no bound on derivatives and no terminal trace. This is
+`exists_signedPower_integral_extension` at order one, with the cone construction
+`exists_signedPower_cone_trajectory`. -/
+theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
+    (hr : 1 ≤ r) (hb : 0 < b) (hL : 0 < L) (hB : 0 ≤ B) (hM : 0 ≤ M)
+    {u H : ℝ × ℝ^3 → ℝ}
+    (hu : ContDiffOn ℝ 1 u {p | -b < p.1 ∧ p.1 < L}) (hH : ContDiff ℝ 1 H)
+    (hHB : ∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 (L + 1) → |H p| ≤ B)
+    (huB : ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L → |u p| ≤ M)
+    (hue : ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L →
+      u p = H p + oddDuhamelSolution 0
+        (fun z : ℝ^4 ↦ -Real.signedPower r (u (timeSpaceContinuousLinearEquiv 3 z)))
+        (timeSpaceCons p.1 p.2)) :
+    ∃ L' M' : ℝ, L < L' ∧ 0 ≤ M' ∧ ∃ w : ℝ × ℝ^3 → ℝ,
+      ContDiffOn ℝ 1 w {p | -b < p.1 ∧ p.1 < L'} ∧
+      EqOn w u {p | -b < p.1 ∧ p.1 < L} ∧
+      (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L' → |w p| ≤ M') ∧
+      ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L' →
+        w p = H p + oddDuhamelSolution 0
+          (fun z : ℝ^4 ↦ -Real.signedPower r (w (timeSpaceContinuousLinearEquiv 3 z)))
+          (timeSpaceCons p.1 p.2) :=
+  exists_signedPower_integral_extension (m := 1) le_rfl hr (Real.contDiff_one_signedPower hr)
+    (fun _ hA ↦ exists_signedPower_cone_trajectory hr hA) hb hL hB hM hu hH hHB huB hue
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical

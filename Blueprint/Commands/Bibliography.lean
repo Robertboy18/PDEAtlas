@@ -7,10 +7,10 @@ Authors: LeanPDE Team
 import VersoBlueprint.Commands.Bibliography
 
 /-!
-# LeanPDE bibliography command
+# PDEAtlas bibliography command
 
 Verso Blueprint's stock bibliography is unnumbered and titled "Blueprint
-Bibliography". LeanPDE presents it as the final numbered chapter, so this
+Bibliography". PDEAtlas presents it as the final numbered chapter, so this
 command changes the part metadata and wraps the stock block in one that
 differs from it in two ways.
 
@@ -25,7 +25,7 @@ form the site shell uses for its own link to the landing page.
 
 The wrapper also carries the PDF metadata. Verso's TeX preamble loads
 `hyperref` and inserts the preamble items contributed by the blocks a document
-contains, and the bibliography is the one LeanPDE block that every render of
+contains, and the bibliography is the one PDEAtlas block that every render of
 the book contains exactly once. The title and authors repeat the `#docs`
 header of `Blueprint.lean` and must be kept in step with it.
 -/
@@ -37,7 +37,7 @@ open Lean
 /-- The `hyperref` metadata of the PDF rendering: title, authors, and a numbered
 outline that opens at the chapter level. -/
 def leanPDEPdfMetadataPreamble : String :=
-  "\\hypersetup{pdftitle={LeanPDE}," ++
+  "\\hypersetup{pdftitle={PDEAtlas}," ++
     "pdfauthor={Robert Joseph George and Anima Anandkumar}," ++
     "pdfsubject={Partial differential equations and verified computation in Lean}," ++
     "bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1}"
@@ -59,7 +59,7 @@ partial def linkCitationFragmentsToRoot : Verso.Output.Html → Verso.Output.Htm
   | html => html
 
 open Verso Doc Genre Manual in
-/-- The stock bibliography block under a LeanPDE name, so that it can be
+/-- The stock bibliography block under a name of its own, so that it can be
 rendered by the descriptor below. -/
 def Block.leanPDEBibliography (biblio : BibliographyData) : Block where
   data := toJson biblio

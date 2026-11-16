@@ -9,6 +9,7 @@ module
 public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.CompactData.Domination
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Mass
 public import PDE.Analysis.Calculus.SpaceTime.ForwardDerivative
+import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.InitialData
 
 /-!
 # Energy at the initial boundary of a forward wave
@@ -60,33 +61,18 @@ theorem forwardEnergyDensity_eq {V : ℝ → ℝ} {u : ℝ^(n + 1) → ℝ} {t :
     PDE.partialDeriv]
 
 /-- Initial displacement and right velocity determine the forward energy density.
-No ordinary derivative across negative time is used. -/
+No ordinary derivative across negative time is used. The density is that of
+`forwardSemilinearWaveEnergyDensity` with the squared gradient written as a sum, so this is
+`forwardSemilinearWaveEnergyDensity_initial_of_contDiffOn_band`. -/
 theorem forwardEnergyDensity_initial {V : ℝ → ℝ} {u : ℝ^(n + 1) → ℝ} {g h : ℝ^n → ℝ}
     (hu : ContDiffOn ℝ 1 u {p | 0 ≤ p 0}) (hpos : ∀ x, u (timeSpaceCons 0 x) = g x)
     (hvel : ∀ x, derivWithin (fun t ↦ u (timeSpaceCons t x)) (Ici 0) 0 = h x) (x : ℝ^n) :
     forwardEnergyDensity V u 0 x =
       (1 / 2 : ℝ) * ((h x) ^ 2 + ∑ i : Fin n, ((∂[i] g) x) ^ 2) + V (g x) := by
-  let D := fderivWithin ℝ u {p | 0 ≤ p 0} (timeSpaceCons 0 x)
-  have hD : HasFDerivWithinAt u D {p | 0 ≤ p 0} (timeSpaceCons 0 x) :=
-    (hu.differentiableOn_one _ (by simp)).hasFDerivWithinAt
-  have ht : D (EuclideanSpace.single 0 1) = h x := by
-    have hd := hD.comp_hasDerivWithinAt 0 (hasDerivAt_timeSpaceCons_time n 0 x).hasDerivWithinAt
-      (show MapsTo (fun t ↦ timeSpaceCons t x) (Ici 0) {p | 0 ≤ p 0} from
-        fun t ht ↦ by simpa using ht)
-    exact (hd.derivWithin (uniqueDiffWithinAt_Ici 0)).symm.trans (hvel x)
-  have hs : D.comp (embedWithTimeZeroCLM n) = fderiv ℝ g x := by
-    have hd := hD.comp_hasFDerivAt x (hasFDerivAt_timeSpaceCons_spatial n 0 x)
-      (Eventually.of_forall fun y ↦
-        (show (0 : ℝ) ≤ (timeSpaceCons 0 y) 0 by simp))
-    exact (hd.congr_of_eventuallyEq (Eventually.of_forall fun y ↦ (hpos y).symm)).fderiv.symm
-  have hsi (i : Fin n) : D (EuclideanSpace.single i.succ 1) = (∂[i] g) x := by
-    have he := congrArg (fun L : ℝ^n →L[ℝ] ℝ ↦ L (EuclideanSpace.single i 1)) hs
-    simpa [PDE.partialDeriv] using he
-  unfold forwardEnergyDensity forwardDifferential
-  rw [max_self]
-  change (1 / 2 : ℝ) * ((D (EuclideanSpace.single 0 1)) ^ 2 +
-    ∑ i : Fin n, (D (EuclideanSpace.single i.succ 1)) ^ 2) + V (u (timeSpaceCons 0 x)) = _
-  simp only [ht, hsi, hpos]
+  have hband := forwardSemilinearWaveEnergyDensity_initial_of_contDiffOn_band (V := V)
+    zero_lt_one (hu.mono fun _ hp ↦ hp.1) hpos hvel x
+  simpa only [forwardSemilinearWaveEnergyDensity, forwardEnergyDensity,
+    EuclideanSpace.real_norm_sq_eq] using hband
 
 /-- The total energy tends to the Cauchy-data energy from the right.
 Compact support is propagated by the field. -/

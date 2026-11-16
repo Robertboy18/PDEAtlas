@@ -23,7 +23,7 @@ import Blueprint.Chapters.Symbolic
 import Blueprint.Chapters.DependencyAtlas
 
 /-!
-# LeanPDE: the book and its opening page
+# PDEAtlas: the book and its opening page
 
 This module assembles the book. The overview introduces the library through
 its contributions, authors, and history. Twelve chapters develop the mathematics,
@@ -602,6 +602,16 @@ html[data-theme="dark"] .leanpde-wordmark .leanpde-logo-light {
 
 html[data-theme="dark"] .leanpde-wordmark .leanpde-logo-dark {
   display: block;
+}
+
+/* The whole wordmark as one image, which carries the name. Its height follows
+   the font size of its place; a sidebar narrower than the image scales it down. */
+.leanpde-wordmark > img {
+  width: auto;
+  height: 1.28em;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
 }
 
 #toc .leanpde-wordmark {
@@ -3399,7 +3409,7 @@ private def dependencyGraphPageSetup : JS := r##"
       svg.removeAttribute("height");
       svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
       svg.setAttribute("role", "img");
-      svg.setAttribute("aria-label", "LeanPDE statement dependency graph: " + entry.label);
+      svg.setAttribute("aria-label", "PDEAtlas statement dependency graph: " + entry.label);
       svg.querySelectorAll("a").forEach(function (link) {
         var href = link.getAttribute("href") || link.getAttributeNS(XLINK_NS, "href");
         if (!href) return;

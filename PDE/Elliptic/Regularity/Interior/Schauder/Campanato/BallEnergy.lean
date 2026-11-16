@@ -16,6 +16,12 @@ public import Mathlib.MeasureTheory.Measure.Haar.InnerProductSpace
 Nonnegativity bounds the integral on a smaller ball by the outer integral.
 The normalization costs precisely the volume ratio `(R/r)^n`. The minimizing
 property of the average gives the same bound for quadratic mean oscillation.
+
+The comparison step of Campanato's method is proved once, for arbitrary centers
+(`setAverage_norm_sub_sq_le_of_comparison_decay`) and for oscillations
+(`setAverage_oscillation_sq_le_of_comparison_decay`): a decay estimate for a
+comparison field `e` passes to a field `d` up to the mean-square error of `d - e`
+on the outer ball.
 -/
 
 @[expose] public noncomputable section
@@ -66,5 +72,56 @@ theorem setAverage_oscillation_sq_le_of_radius_le
     (hf.mono_measure (Measure.restrict_mono (ball_subset_ball hrR) le_rfl))
     (⨍ y in ball z R, f y)).trans ?_
   exact setAverage_norm_sq_le_of_radius_le hr hrR (hf.sub (memLp_const _))
+
+/-- **Comparison step for mean-square decay.** Let `0 < r ≤ R`, `κ ≥ 0`, and let `d`
+and `e` be square integrable on `ball z R` with mean-square error
+`⨍_{B_R} |d - e|² ≤ E`. If the mean-square deviation of `e` from `c'` on `ball z r`
+is at most `κ` times its deviation from `c` on `ball z R`, then the deviation of
+`d` from `c'` on `ball z r` is at most `4 κ` times its deviation from `c` on
+`ball z R`, plus `(2 (R / r) ^ n + 4 κ) E`. The centers `c` and `c'` are arbitrary
+real numbers. -/
+theorem setAverage_norm_sub_sq_le_of_comparison_decay
+    {z : ℝ^n} {r R : ℝ} (hr : 0 < r) (hrR : r ≤ R)
+    {d e : ℝ^n → ℝ} (hd : MemLp d 2 (volume.restrict (ball z R)))
+    (he : MemLp e 2 (volume.restrict (ball z R)))
+    {κ E : ℝ} (hκ : 0 ≤ κ) {c c' : ℝ}
+    (herror : (⨍ x in ball z R, ‖d x - e x‖ ^ 2) ≤ E)
+    (hdecay : (⨍ x in ball z r, ‖e x - c'‖ ^ 2) ≤
+      κ * ⨍ x in ball z R, ‖e x - c‖ ^ 2) :
+    (⨍ x in ball z r, ‖d x - c'‖ ^ 2) ≤
+      4 * κ * (⨍ x in ball z R, ‖d x - c‖ ^ 2) + (2 * (R / r) ^ n + 4 * κ) * E := by
+  have hsmall := (setAverage_norm_sq_le_of_radius_le hr hrR (hd.sub he)).trans
+    (mul_le_mul_of_nonneg_left herror
+      (pow_nonneg (div_nonneg (hr.trans_le hrR).le hr.le) n))
+  have hinner := setAverage_norm_sub_sq_le
+    (hd.mono_measure (Measure.restrict_mono (ball_subset_ball hrR) le_rfl))
+    (he.mono_measure (Measure.restrict_mono (ball_subset_ball hrR) le_rfl)) c'
+  have houter := setAverage_norm_sub_sq_le he hd c
+  simp only [norm_sub_rev (e _) (d _)] at houter
+  have hscaled := mul_le_mul_of_nonneg_left houter hκ
+  have hscaledError := mul_le_mul_of_nonneg_left herror hκ
+  simp only [Pi.sub_apply] at hsmall
+  nlinarith only [hsmall, hinner, hscaled, hdecay, hscaledError]
+
+/-- **Comparison step for quadratic oscillation decay.** Let `0 < r ≤ R`, `κ ≥ 0`,
+and let `d` and `e` be square integrable on `ball z R` with
+`⨍_{B_R} |d - e|² ≤ E`. If the mean-square oscillation of `e` on `ball z r` is at
+most `κ` times its mean-square deviation on `ball z R` from the average of `d`
+there, then the oscillation of `d` on `ball z r` is at most `4 κ` times its
+oscillation on `ball z R`, plus `(2 (R / r) ^ n + 4 κ) E`. -/
+theorem setAverage_oscillation_sq_le_of_comparison_decay
+    {z : ℝ^n} {r R : ℝ} (hr : 0 < r) (hrR : r ≤ R)
+    {d e : ℝ^n → ℝ} (hd : MemLp d 2 (volume.restrict (ball z R)))
+    (he : MemLp e 2 (volume.restrict (ball z R)))
+    {κ E : ℝ} (hκ : 0 ≤ κ)
+    (herror : (⨍ x in ball z R, ‖d x - e x‖ ^ 2) ≤ E)
+    (hdecay : (⨍ x in ball z r, ‖e x - ⨍ y in ball z r, e y‖ ^ 2) ≤
+      κ * ⨍ x in ball z R, ‖e x - ⨍ y in ball z R, d y‖ ^ 2) :
+    (⨍ x in ball z r, ‖d x - ⨍ y in ball z r, d y‖ ^ 2) ≤
+      4 * κ * (⨍ x in ball z R, ‖d x - ⨍ y in ball z R, d y‖ ^ 2) +
+        (2 * (R / r) ^ n + 4 * κ) * E :=
+  (setAverage_norm_sub_average_sq_le
+    (hd.mono_measure (Measure.restrict_mono (ball_subset_ball hrR) le_rfl)) _).trans
+    (setAverage_norm_sub_sq_le_of_comparison_decay hr hrR hd he hκ herror hdecay)
 
 end PDE.Elliptic.Regularity.Campanato

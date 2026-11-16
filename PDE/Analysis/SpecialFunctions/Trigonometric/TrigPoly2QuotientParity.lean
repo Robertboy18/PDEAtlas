@@ -25,8 +25,10 @@ value of a derivative: `q (β, 0) = ∂_θ p (β, 0)` for `q sin θ = p`
 
 For two families of tables with equal parities, componentwise, about `0` and `π/2` in each
 variable, the products are even in both variables, so the trapezoid rule in `β` and the sine
-rule in `θ` integrate `(∑_c p_c q_c) sin θ` over `[0, π/2]²` exactly
-(`integral_integral_sum_mul_mul_sin_eq_rule`), the bilinear form of
+rule in `θ` integrate `(∑_c p_c q_c) sin θ` over `[0, π/2]²` exactly. The tables `p_c` and `q_c`
+may have different degrees: the product has the sum of the degrees, so the trapezoid rule in `β`
+needs `(Mβ + Nβ) / 2 < 2N` (`integral_integral_sum_mul_mul_sin_eq_rule_of_le`). For tables of
+one degree this is `integral_integral_sum_mul_mul_sin_eq_rule`, the bilinear form of
 `integral_integral_sum_sq_mul_sin_eq_rule`.
 -/
 
@@ -241,11 +243,13 @@ theorem isEvenAtθ_mul_of_parity {a : ℝ} {p : TrigPoly2 Mβ Mθ R} {q : TrigPo
   obtain ⟨e, hp, hq⟩ := h
   exact parityAtθ_true_iff.mp (hp.mul hq (by cases e <;> rfl))
 
-/-- **Exact rule for products.** For families `p`, `q` of tables with componentwise equal
-parities about `0` and `π/2` in each variable, the trapezoid rule in `β` with `Mβ < 2N` and the
-sine rule in `θ` with `Mθ ≤ P` integrate `(∑_c p_c q_c) sin θ` over `[0, π/2]²`. -/
-theorem integral_integral_sum_mul_mul_sin_eq_rule {ι : Type*} (s : Finset ι)
-    (p q : ι → TrigPoly2 Mβ Mθ R) {N P : ℕ} (hN : Mβ < 2 * N) (hP : 0 < P) (hMP : Mθ ≤ P)
+/-- **Exact rule for products of tables of different degrees.** For families `p`, `q` of tables
+with componentwise equal parities about `0` and `π/2` in each variable, the product `p_c q_c` has
+the sum of the degrees, so the trapezoid rule in `β` with `(Mβ + Nβ) / 2 < 2N` and the sine rule
+in `θ` with `(Mθ + Nθ) / 2 ≤ P` integrate `(∑_c p_c q_c) sin θ` over `[0, π/2]²`. -/
+theorem integral_integral_sum_mul_mul_sin_eq_rule_of_le {ι : Type*} (s : Finset ι)
+    (p : ι → TrigPoly2 Mβ Mθ R) (q : ι → TrigPoly2 Nβ Nθ R) {N P : ℕ}
+    (hN : (Mβ + Nβ) / 2 < 2 * N) (hP : 0 < P) (hMP : (Mθ + Nθ) / 2 ≤ P)
     (hβ0 : ∀ c ∈ s, ∃ e, ParityAtβ 0 e (p c) ∧ ParityAtβ 0 e (q c))
     (hβπ : ∀ c ∈ s, ∃ e, ParityAtβ (Real.pi / 2) e (p c) ∧ ParityAtβ (Real.pi / 2) e (q c))
     (hθ0 : ∀ c ∈ s, ∃ e, ParityAtθ 0 e (p c) ∧ ParityAtθ 0 e (q c))
@@ -261,10 +265,27 @@ theorem integral_integral_sum_mul_mul_sin_eq_rule {ι : Type*} (s : Finset ι)
   refine integral_integral_mul_sin_eq_rule (f := fun β θ ↦ ∑ c ∈ s, ((p c).mul (q c)).eval β θ)
     hN hP hMP (fun θ ↦ IsEvenCosineSeries.sum s fun c hc ↦ ?_)
     (fun β ↦ IsEvenCosineSeries.sum s fun c hc ↦ ?_)
-  · exact (isEvenCosineSeries_β (isEvenAtβ_mul_of_parity (hβ0 c hc))
-      (isEvenAtβ_mul_of_parity (hβπ c hc)) θ).mono (by omega)
-  · exact (isEvenCosineSeries_θ (isEvenAtθ_mul_of_parity (hθ0 c hc))
-      (isEvenAtθ_mul_of_parity (hθπ c hc)) β).mono (by omega)
+  · exact isEvenCosineSeries_β (isEvenAtβ_mul_of_parity (hβ0 c hc))
+      (isEvenAtβ_mul_of_parity (hβπ c hc)) θ
+  · exact isEvenCosineSeries_θ (isEvenAtθ_mul_of_parity (hθ0 c hc))
+      (isEvenAtθ_mul_of_parity (hθπ c hc)) β
+
+/-- **Exact rule for products.** For families `p`, `q` of tables with componentwise equal
+parities about `0` and `π/2` in each variable, the trapezoid rule in `β` with `Mβ < 2N` and the
+sine rule in `θ` with `Mθ ≤ P` integrate `(∑_c p_c q_c) sin θ` over `[0, π/2]²`. This is
+`integral_integral_sum_mul_mul_sin_eq_rule_of_le` for tables of one degree. -/
+theorem integral_integral_sum_mul_mul_sin_eq_rule {ι : Type*} (s : Finset ι)
+    (p q : ι → TrigPoly2 Mβ Mθ R) {N P : ℕ} (hN : Mβ < 2 * N) (hP : 0 < P) (hMP : Mθ ≤ P)
+    (hβ0 : ∀ c ∈ s, ∃ e, ParityAtβ 0 e (p c) ∧ ParityAtβ 0 e (q c))
+    (hβπ : ∀ c ∈ s, ∃ e, ParityAtβ (Real.pi / 2) e (p c) ∧ ParityAtβ (Real.pi / 2) e (q c))
+    (hθ0 : ∀ c ∈ s, ∃ e, ParityAtθ 0 e (p c) ∧ ParityAtθ 0 e (q c))
+    (hθπ : ∀ c ∈ s, ∃ e, ParityAtθ (Real.pi / 2) e (p c) ∧ ParityAtθ (Real.pi / 2) e (q c)) :
+    ∫ β in (0 : ℝ)..(Real.pi / 2), ∫ θ in (0 : ℝ)..(Real.pi / 2),
+        (∑ c ∈ s, (p c).eval β θ * (q c).eval β θ) * Real.sin θ =
+      ∑ j : Fin (N + 1), ∑ n : Fin (P + 1), quarterTrapezoidWeight N j * quarterSinWeight P n *
+        ∑ c ∈ s, (p c).eval (j * Real.pi / (2 * N)) (n * Real.pi / (2 * P)) *
+          (q c).eval (j * Real.pi / (2 * N)) (n * Real.pi / (2 * P)) :=
+  integral_integral_sum_mul_mul_sin_eq_rule_of_le s p q (by omega) hP (by omega) hβ0 hβπ hθ0 hθπ
 
 /-- A table even in `β` about `0` has cosine sections: `p (β, θ) = ∑_k a_k(θ) cos (kβ)`. -/
 theorem eval_eq_sum_cos_of_isEvenAtβ_zero {p : TrigPoly2 Mβ Mθ R} (hp : p.IsEvenAtβ 0)

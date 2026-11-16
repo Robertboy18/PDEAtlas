@@ -124,10 +124,10 @@ def decodePlots (encoded : String) : Except String PlotData := do
 /-- Decode one plot previously serialized with `toJson`. -/
 private def decodeFamily (encoded : String) : Family :=
   match Json.parse encoded with
-  | .error error => panic! s!"LeanPDE certified plot JSON is malformed: {error}"
+  | .error error => panic! s!"PDEAtlas certified plot JSON is malformed: {error}"
   | .ok value =>
     match fromJson? value with
-    | .error error => panic! s!"LeanPDE certified plot data is malformed: {error}"
+    | .error error => panic! s!"PDEAtlas certified plot data is malformed: {error}"
     | .ok payload => payload
 
 /-- The page anchor of a theorem's row in the listing. -/
@@ -432,7 +432,7 @@ private def mkPlotBlock (id : String) : PartElabM (TSyntax `term) := do
   let data ←
     match decodePlots LeanPDE.CertifiedPlotsData.json with
     | .ok data => pure data
-    | .error error => throwError "LeanPDE certified plot data is malformed: {error}"
+    | .error error => throwError "PDEAtlas certified plot data is malformed: {error}"
   let some family := data.families.find? (·.id == id)
     | throwError "leanpde_certified_plot: unknown plot {id}; known plots: {data.families.map (·.id)}"
   let payloadJson := Json.compress (toJson family)

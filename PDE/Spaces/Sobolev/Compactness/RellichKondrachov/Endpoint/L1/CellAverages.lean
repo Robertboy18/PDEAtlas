@@ -411,7 +411,8 @@ theorem norm_translateL1_sub_eq_integral
   simpa [domainMeasure, Real.norm_eq_abs] using
     MeasureTheory.integral_congr_ae ((translateL1_sub_ae_eq h f).fun_comp fun z ↦ ‖z‖)
 
-/-- One-cell pairwise `L¹` oscillation in translation coordinates. -/
+/-- One-cell pairwise `L¹` oscillation in translation coordinates: the case
+`G (x, y) = |f x - f y|` of `Rellich.setIntegral_pair_eq_integral_withinCellTranslations`. -/
 theorem integral_pairwise_abs_eq_withinCellTranslations
     (s : Set (ℝ^n)) (hs : MeasurableSet s)
     (hfinite : (MeasureTheory.volume : Measure (ℝ^n)) s ≠ ∞)
@@ -420,32 +421,11 @@ theorem integral_pairwise_abs_eq_withinCellTranslations
       ∫ h : ℝ^n, ∫ x : ℝ^n,
         (s ×ˢ s).indicator
           (fun p : ℝ^n × ℝ^n ↦ |f p.1 - f p.2|)
-          (x, x + h) := by
-  let G : ℝ^n × ℝ^n → ℝ := fun p ↦ |f p.1 - f p.2|
-  have hGon : IntegrableOn G (s ×ˢ s)
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
-    simpa [G, domainMeasure] using
-      integrableOn_pairwise_abs_sub (n := n) s (by simpa [domainMeasure] using hfinite) f
-  -- the shear `(x, h) ↦ (x, x + h)` preserves the product measure
-  let shear : ℝ^n × ℝ^n → ℝ^n × ℝ^n := fun p ↦ (p.1, p.1 + p.2)
-  have hpres : MeasurePreserving shear
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume)
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
-    simpa [shear] using MeasureTheory.measurePreserving_prod_add
-      (MeasureTheory.volume : Measure (ℝ^n)) (MeasureTheory.volume : Measure (ℝ^n))
-  calc
-    (∫ x in s, ∫ y in s, |f x - f y|) =
-        ∫ p : ℝ^n × ℝ^n, (s ×ˢ s).indicator G p
-          ∂((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
-      rw [MeasureTheory.integral_indicator (hs.prod hs), MeasureTheory.setIntegral_prod _ hGon]
-    _ = ∫ p : ℝ^n × ℝ^n, ((s ×ˢ s).indicator G) (shear p)
-          ∂((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) :=
-      (hpres.integral_comp (MeasurableEquiv.shearAddRight (ℝ^n)).measurableEmbedding _).symm
-    _ = _ := by
-      with_reducible_and_instances
-        simpa [Function.comp_def, shear] using MeasureTheory.integral_prod_symm
-          (((s ×ˢ s).indicator G) ∘ shear)
-          (hpres.integrable_comp_of_integrable (hGon.integrable_indicator (hs.prod hs)))
+          (x, x + h) :=
+  Rellich.setIntegral_pair_eq_integral_withinCellTranslations
+    (G := fun p : ℝ^n × ℝ^n ↦ |f p.1 - f p.2|) hs (by
+      simpa [domainMeasure] using
+        integrableOn_pairwise_abs_sub (n := n) s (by simpa [domainMeasure] using hfinite) f)
 
 /-- The outer integrand of the shear formula
 `integral_pairwise_abs_eq_withinCellTranslations`, namely
@@ -458,18 +438,10 @@ theorem integrable_integral_withinCellTranslations_abs
     Integrable (fun h : ℝ^n ↦ ∫ x : ℝ^n,
       (s ×ˢ s).indicator
         (fun p : ℝ^n × ℝ^n ↦ |f p.1 - f p.2|)
-        (x, x + h)) MeasureTheory.volume := by
-  have hGon : IntegrableOn (fun p : ℝ^n × ℝ^n ↦ |f p.1 - f p.2|) (s ×ˢ s)
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
+        (x, x + h)) MeasureTheory.volume :=
+  Rellich.integrable_integral_withinCellTranslations_of_integrableOn hs (by
     simpa [domainMeasure] using
-      integrableOn_pairwise_abs_sub (n := n) s (by simpa [domainMeasure] using hfinite) f
-  have hpres : MeasurePreserving (fun p : ℝ^n × ℝ^n ↦ (p.1, p.1 + p.2))
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume)
-      ((MeasureTheory.volume : Measure (ℝ^n)).prod MeasureTheory.volume) := by
-    simpa using MeasureTheory.measurePreserving_prod_add
-      (MeasureTheory.volume : Measure (ℝ^n)) (MeasureTheory.volume : Measure (ℝ^n))
-  simpa [Function.comp_def] using (hpres.integrable_comp_of_integrable
-    (hGon.integrable_indicator (hs.prod hs))).integral_prod_right
+      integrableOn_pairwise_abs_sub (n := n) s (by simpa [domainMeasure] using hfinite) f)
 
 /-- At a fixed shift, disjoint within-cell oscillations are bounded by the
 global `L¹` translation defect. -/

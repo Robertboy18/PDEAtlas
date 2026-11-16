@@ -8,8 +8,8 @@ module
 
 public import PDE.Analysis.Scalar.OddPower
 public import PDE.Hyperbolic.NonlinearWave.DominatedData
+import PDE.Hyperbolic.NonlinearWave.DefocusingPower.Conservation
 import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.Bounds
-import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.Conservation
 import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.GlobalObstruction
 
 /-!
@@ -105,22 +105,15 @@ theorem not_global_forward_oddPower_of_negative_conserved_energy {massSq couplin
       (oddPowerPotential massSq coupling k) u t₀)
     (henergyNeg : semilinearWaveSpatialEnergy (n := n) (oddPowerPotential massSq coupling k) u
       t₀ < 0) :
-    False := by
-  apply not_global_forward_semilinearWave_of_negative_conserved_energy
-    (V := oddPowerPotential massSq coupling k) (Λ := (2 * (k + 1) : ℝ)) (t₀ := t₀)
+    False :=
+  not_global_forward_semilinearWave_of_negative_conserved_energy (Λ := 2 * (k + 1 : ℝ))
     (oddPowerPotential_zero massSq coupling k)
     ((contDiff_oddPowerPotential massSq coupling k).of_le (by simp)) hu
-  · have hkReal : 0 < (k : ℝ) := by
-      exact_mod_cast hk
-    norm_num
-    linarith
-  · exact mul_deriv_oddPowerPotential_le coupling k hmassSq
-  · intro t ht x
-    simpa only [semilinearWaveOperator, deriv_oddPowerPotential,
-      oddPowerPolynomial, add_assoc] using hwave t ht x
-  · exact hD
-  · exact henergyConserved
-  · exact henergyNeg
+    (two_lt_oddPower_growth_factor hk) (mul_deriv_oddPowerPotential_le coupling k hmassSq)
+    (fun t ht x ↦ by
+      simpa only [semilinearWaveOperator, deriv_oddPowerPotential, oddPowerPolynomial,
+        add_assoc] using hwave t ht x)
+    hD henergyConserved henergyNeg
 
 /-- An odd-power semilinear wave with nonnegative mass coefficient cannot
 retain negative conserved energy while continuing classically for all past
@@ -141,30 +134,39 @@ theorem not_global_backward_oddPower_of_negative_conserved_energy {massSq coupli
       (oddPowerPotential massSq coupling k) u t₀)
     (henergyNeg : semilinearWaveSpatialEnergy (n := n) (oddPowerPotential massSq coupling k) u
       t₀ < 0) :
-    False := by
-  apply not_global_backward_semilinearWave_of_negative_conserved_energy
-    (V := oddPowerPotential massSq coupling k) (Λ := (2 * (k + 1) : ℝ)) (t₀ := t₀)
+    False :=
+  not_global_backward_semilinearWave_of_negative_conserved_energy (Λ := 2 * (k + 1 : ℝ))
     (oddPowerPotential_zero massSq coupling k)
     ((contDiff_oddPowerPotential massSq coupling k).of_le (by simp)) hu
-  · have hkReal : 0 < (k : ℝ) := by
-      exact_mod_cast hk
-    norm_num
-    linarith
-  · exact mul_deriv_oddPowerPotential_le coupling k hmassSq
-  · intro t ht x
-    simpa only [semilinearWaveOperator, deriv_oddPowerPotential,
-      oddPowerPolynomial, add_assoc] using hwave t ht x
-  · exact hD
-  · exact henergyConserved
-  · exact henergyNeg
+    (two_lt_oddPower_growth_factor hk) (mul_deriv_oddPowerPotential_le coupling k hmassSq)
+    (fun t ht x ↦ by
+      simpa only [semilinearWaveOperator, deriv_oddPowerPotential, oddPowerPolynomial,
+        add_assoc] using hwave t ht x)
+    hD henergyConserved henergyNeg
+
+/-- A `C²` odd-power wave conserves its energy on an order-connected set of times on which the
+equation and the domination data of the energy hold: the energy at every time of the set is the
+energy at a reference time `t₀` of the set. -/
+private theorem oddPowerSpatialEnergy_eq_reference {massSq coupling : ℝ} {k : ℕ}
+    {u : ℝ^(n + 1) → ℝ} {times : Set ℝ} {t₀ : ℝ} (htimes : times.OrdConnected) (ht₀ : t₀ ∈ times)
+    (hu : ContDiff ℝ 2 u)
+    (hwave : ∀ t ∈ times, ∀ x : ℝ^n, waveOperator (n := n) u
+      (PDE.Common.timeSpaceCons (n := n) t x) + massSq * u (PDE.Common.timeSpaceCons (n := n) t x) +
+      coupling * (u (PDE.Common.timeSpaceCons (n := n) t x)) ^ (2 * k + 1) = 0)
+    (hE : DominatedEnergyData (oddPowerPotential massSq coupling k) u times) :
+    ∀ t ∈ times, semilinearWaveSpatialEnergy (n := n) (oddPowerPotential massSq coupling k) u t =
+      semilinearWaveSpatialEnergy (n := n) (oddPowerPotential massSq coupling k) u t₀ :=
+  fun _ ht ↦ oddPowerSpatialEnergy_eq_of_wave_on_ordConnected massSq coupling k htimes ht ht₀
+    (fun _ _ ↦ Eventually.of_forall fun _ _ ↦ hu.contDiffAt) hwave hE.energy_integrable
+    hE.mem_nhds hE.dominated hE.bound_integrable hE.flux_compact_support
 
 /-- Negative initial energy prevents a classical odd-power wave from
 continuing for all future times under the explicit hypotheses needed to
 derive energy conservation.
 
-This theorem first obtains conservation from the local energy identity and
-then applies
-`not_global_forward_oddPower_of_negative_conserved_energy`. -/
+The energy is conserved on the order-connected set `[t₀, ∞)`
+(`oddPowerSpatialEnergy_eq_of_wave_on_ordConnected`); then
+`not_global_forward_oddPower_of_negative_conserved_energy` applies. -/
 theorem not_global_forward_oddPower_of_negative_energy {massSq coupling : ℝ} {k : ℕ}
     {u : ℝ^(n + 1) → ℝ} {t₀ : ℝ} (hmassSq : 0 ≤ massSq) (hk : 0 < k) (hu : ContDiff ℝ 2 u)
     (hwave : ∀ t, t₀ ≤ t → ∀ x : ℝ^n, waveOperator (n := n) u
@@ -174,36 +176,17 @@ theorem not_global_forward_oddPower_of_negative_energy {massSq coupling : ℝ} {
     (hE : DominatedEnergyData (oddPowerPotential massSq coupling k) u (Ici t₀))
     (henergyNeg : semilinearWaveSpatialEnergy (n := n) (oddPowerPotential massSq coupling k) u
       t₀ < 0) :
-    False := by
-  apply not_global_forward_oddPower_of_negative_conserved_energy hmassSq hk hu hwave hD
-      (henergyNeg := henergyNeg)
-  intro t ht
-  have hsubset : uIcc t₀ t ⊆ Ici t₀ := by
-    intro r hr
-    rw [uIcc_of_le ht] at hr
-    exact hr.1
-  let E := hE.mono hsubset
-  symm
-  apply semilinearWaveSpatialEnergy_eq_of_wave_on_uIcc
-    ((contDiff_oddPowerPotential massSq coupling k).of_le (by simp))
-    (fun _ _ ↦ Eventually.of_forall fun _ _ ↦ hu.contDiffAt)
-  · intro r hr x
-    simpa only [semilinearWaveOperator, deriv_oddPowerPotential,
-      oddPowerPolynomial, add_assoc] using hwave r (hsubset hr) x
-  · exact E.energy_integrable
-  · exact E.mem_nhds
-  · exact E.dominated
-  · exact E.bound_integrable
-  · exact E.flux_compact_support
+    False :=
+  not_global_forward_oddPower_of_negative_conserved_energy hmassSq hk hu hwave hD
+    (oddPowerSpatialEnergy_eq_reference ordConnected_Ici self_mem_Ici hu hwave hE) henergyNeg
 
 /-- Negative initial energy prevents a classical odd-power wave from
 continuing for all past times under the explicit hypotheses needed to derive
 energy conservation.
 
-The local energy identity is applied on each closed interval `[t, t₀]`, after
-which
-`not_global_backward_oddPower_of_negative_conserved_energy`
-provides the continuation contradiction. -/
+The energy is conserved on the order-connected set `(-∞, t₀]`
+(`oddPowerSpatialEnergy_eq_of_wave_on_ordConnected`); then
+`not_global_backward_oddPower_of_negative_conserved_energy` applies. -/
 theorem not_global_backward_oddPower_of_negative_energy {massSq coupling : ℝ} {k : ℕ}
     {u : ℝ^(n + 1) → ℝ} {t₀ : ℝ} (hmassSq : 0 ≤ massSq) (hk : 0 < k) (hu : ContDiff ℝ 2 u)
     (hwave : ∀ t, t ≤ t₀ → ∀ x : ℝ^n, waveOperator (n := n) u
@@ -213,26 +196,8 @@ theorem not_global_backward_oddPower_of_negative_energy {massSq coupling : ℝ} 
     (hE : DominatedEnergyData (oddPowerPotential massSq coupling k) u (Iic t₀))
     (henergyNeg : semilinearWaveSpatialEnergy (n := n) (oddPowerPotential massSq coupling k) u
       t₀ < 0) :
-    False := by
-  apply not_global_backward_oddPower_of_negative_conserved_energy hmassSq hk hu hwave hD
-      (henergyNeg := henergyNeg)
-  intro t ht
-  have hsubset : uIcc t₀ t ⊆ Iic t₀ := by
-    intro r hr
-    rw [uIcc_of_ge ht] at hr
-    exact hr.2
-  let E := hE.mono hsubset
-  symm
-  apply semilinearWaveSpatialEnergy_eq_of_wave_on_uIcc
-    ((contDiff_oddPowerPotential massSq coupling k).of_le (by simp))
-    (fun _ _ ↦ Eventually.of_forall fun _ _ ↦ hu.contDiffAt)
-  · intro r hr x
-    simpa only [semilinearWaveOperator, deriv_oddPowerPotential,
-      oddPowerPolynomial, add_assoc] using hwave r (hsubset hr) x
-  · exact E.energy_integrable
-  · exact E.mem_nhds
-  · exact E.dominated
-  · exact E.bound_integrable
-  · exact E.flux_compact_support
+    False :=
+  not_global_backward_oddPower_of_negative_conserved_energy hmassSq hk hu hwave hD
+    (oddPowerSpatialEnergy_eq_reference ordConnected_Iic self_mem_Iic hu hwave hE) henergyNeg
 
 end WaveEquation

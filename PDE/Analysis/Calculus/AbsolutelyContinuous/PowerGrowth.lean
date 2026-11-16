@@ -226,35 +226,6 @@ theorem one_sub_exp_lt_mul_rpow_of_ae_damped_power_le_deriv
   have hmul := mul_lt_mul_of_pos_left h hlambda
   rwa [heq] at hmul
 
-/-- If trajectories with a fixed positive initial value exist on every finite
-interval, production cannot exceed damping at that initial value. The curves on
-different intervals need not be identified. -/
-theorem le_mul_rpow_of_global_damped_power_trajectories
-    {m c p lambda : ℝ} (hm : 0 < m) (hc : 0 ≤ c) (hp : 1 < p)
-    (hlambda : 0 < lambda)
-    (hglobal : ∀ T : ℝ, 0 < T → ∃ y : ℝ → ℝ,
-      AbsolutelyContinuousOnInterval y 0 T ∧ y 0 = m ∧
-      (∀ᵐ t ∂volume.restrict (Ioc 0 T), 0 ≤ y t) ∧
-      (∀ᵐ t ∂volume.restrict (Ioc 0 T),
-        c * y t ^ p ≤ deriv y t + lambda * y t)) :
-    c ≤ lambda * m ^ (1 - p) := by
-  have hexp : Filter.Tendsto
-      (fun T : ℝ ↦ Real.exp (-(lambda * T) * (p - 1))) Filter.atTop
-      (nhds 0) := by
-    simp_rw [neg_mul]
-    exact Real.tendsto_exp_neg_atTop_nhds_zero.comp
-      ((Filter.tendsto_id.const_mul_atTop hlambda).atTop_mul_const (sub_pos.mpr hp))
-  have hlim : Filter.Tendsto
-      (fun T : ℝ ↦ c * (1 - Real.exp (-(lambda * T) * (p - 1))))
-      Filter.atTop (nhds c) := by
-    simpa using ((tendsto_const_nhds (x := (1 : ℝ))).sub hexp).const_mul c
-  apply le_of_tendsto hlim
-  filter_upwards [Filter.eventually_gt_atTop (0 : ℝ)] with T hT
-  obtain ⟨y, hy, hzero, hn, hd⟩ := hglobal T hT
-  have h := one_sub_exp_lt_mul_rpow_of_ae_damped_power_le_deriv hT.le hc hp hlambda
-    hy (hzero.symm ▸ hm) hn hd
-  simpa only [sub_zero, hzero] using h.le
-
 /-- The sharp moment bound survives localization away from the initial time.
 Only continuity, rather than absolute continuity or a derivative trace, is needed
 at zero. -/
@@ -294,14 +265,16 @@ theorem one_sub_exp_le_mul_rpow_of_local_ae_damped_power_le_deriv
     (ae_restrict_of_ae_restrict_of_subset (Ioc_subset_Ioc (hε k).1.le le_rfl) hnonneg)
     (ae_restrict_of_ae_restrict_of_subset (Ioc_subset_Ioc (hε k).1.le le_rfl) hgrowth)).le
 
-/-- Global existence of curves locally absolutely continuous at positive times
-already gives the sharp initial-moment restriction. No derivative at zero is assumed. -/
-theorem le_mul_rpow_of_global_local_damped_power_trajectories
+/-- If, on every finite interval `[0, T]`, there is a curve that is continuous on `[0, T]`,
+absolutely continuous on `[a, T]` for every `0 < a ≤ T`, starts at a value at least `m > 0` and
+satisfies `c y ^ p ≤ y' + λ y` almost everywhere, then `c ≤ λ m ^ (1 - p)`. No derivative at
+zero is assumed, and the curves on different intervals need not be identified. -/
+theorem le_mul_rpow_of_global_local_damped_power_trajectories_le
     {m c p lambda : ℝ} (hm : 0 < m) (hc : 0 ≤ c) (hp : 1 < p)
     (hlambda : 0 < lambda)
     (hglobal : ∀ T : ℝ, 0 < T → ∃ y : ℝ → ℝ,
       ContinuousOn y (Icc 0 T) ∧
-      (∀ a ∈ Ioc 0 T, AbsolutelyContinuousOnInterval y a T) ∧ y 0 = m ∧
+      (∀ a ∈ Ioc 0 T, AbsolutelyContinuousOnInterval y a T) ∧ m ≤ y 0 ∧
       (∀ᵐ t ∂volume.restrict (Ioc 0 T), 0 ≤ y t) ∧
       (∀ᵐ t ∂volume.restrict (Ioc 0 T),
         c * y t ^ p ≤ deriv y t + lambda * y t)) :
@@ -319,8 +292,48 @@ theorem le_mul_rpow_of_global_local_damped_power_trajectories
   filter_upwards [Filter.eventually_gt_atTop (0 : ℝ)] with T hT
   obtain ⟨y, hy, hlocal, hzero, hn, hd⟩ := hglobal T hT
   have h := one_sub_exp_le_mul_rpow_of_local_ae_damped_power_le_deriv hT hc hp hlambda
-    hy hlocal (hzero.symm ▸ hm) hn hd
-  simpa only [hzero] using h
+    hy hlocal (hm.trans_le hzero) hn hd
+  exact h.trans (mul_le_mul_of_nonneg_left
+    (Real.rpow_le_rpow_of_nonpos hm hzero (by linarith)) hlambda.le)
+
+/-- Global existence of curves locally absolutely continuous at positive times
+already gives the sharp initial-moment restriction. No derivative at zero is assumed. This is
+`le_mul_rpow_of_global_local_damped_power_trajectories_le` for curves that start at `m`. -/
+theorem le_mul_rpow_of_global_local_damped_power_trajectories
+    {m c p lambda : ℝ} (hm : 0 < m) (hc : 0 ≤ c) (hp : 1 < p)
+    (hlambda : 0 < lambda)
+    (hglobal : ∀ T : ℝ, 0 < T → ∃ y : ℝ → ℝ,
+      ContinuousOn y (Icc 0 T) ∧
+      (∀ a ∈ Ioc 0 T, AbsolutelyContinuousOnInterval y a T) ∧ y 0 = m ∧
+      (∀ᵐ t ∂volume.restrict (Ioc 0 T), 0 ≤ y t) ∧
+      (∀ᵐ t ∂volume.restrict (Ioc 0 T),
+        c * y t ^ p ≤ deriv y t + lambda * y t)) :
+    c ≤ lambda * m ^ (1 - p) :=
+  le_mul_rpow_of_global_local_damped_power_trajectories_le hm hc hp hlambda fun T hT ↦
+    let ⟨y, hy, hlocal, hzero, hn, hd⟩ := hglobal T hT
+    ⟨y, hy, hlocal, hzero.ge, hn, hd⟩
+
+/-- If trajectories with a fixed positive initial value exist on every finite
+interval, production cannot exceed damping at that initial value. The curves on
+different intervals need not be identified. A curve absolutely continuous on `[0, T]` is
+continuous there and absolutely continuous on every `[a, T]`, so this is a case of
+`le_mul_rpow_of_global_local_damped_power_trajectories_le`. -/
+theorem le_mul_rpow_of_global_damped_power_trajectories
+    {m c p lambda : ℝ} (hm : 0 < m) (hc : 0 ≤ c) (hp : 1 < p)
+    (hlambda : 0 < lambda)
+    (hglobal : ∀ T : ℝ, 0 < T → ∃ y : ℝ → ℝ,
+      AbsolutelyContinuousOnInterval y 0 T ∧ y 0 = m ∧
+      (∀ᵐ t ∂volume.restrict (Ioc 0 T), 0 ≤ y t) ∧
+      (∀ᵐ t ∂volume.restrict (Ioc 0 T),
+        c * y t ^ p ≤ deriv y t + lambda * y t)) :
+    c ≤ lambda * m ^ (1 - p) :=
+  le_mul_rpow_of_global_local_damped_power_trajectories_le hm hc hp hlambda fun T hT ↦
+    let ⟨y, hy, hzero, hn, hd⟩ := hglobal T hT
+    ⟨y, by simpa only [uIcc_of_le hT.le] using hy.continuousOn,
+      fun a ha ↦ hy.mono (by
+        rw [uIcc_of_le ha.2, uIcc_of_le hT.le]
+        exact Icc_subset_Icc_left ha.1.le),
+      hzero.ge, hn, hd⟩
 
 /-- An interior derivative pointing strictly upward at a level prevents a
 continuous curve from crossing below that level. No derivative at zero is needed. -/
@@ -352,34 +365,5 @@ theorem le_of_continuousOn_deriv_pos_at_level
       exact neg_lt_zero.mpr (hlevel x ⟨(hε j).1.trans_le hx.1, hx.2.trans ht.2⟩
         (neg_inj.mp heq))) (right_mem_Icc.mpr (hε j).2)
   exact neg_le_neg_iff.mp hf
-
-/-- The global local moment bound also applies when the initial moments merely
-have a common positive lower bound. -/
-theorem le_mul_rpow_of_global_local_damped_power_trajectories_le
-    {m c p lambda : ℝ} (hm : 0 < m) (hc : 0 ≤ c) (hp : 1 < p)
-    (hlambda : 0 < lambda)
-    (hglobal : ∀ T : ℝ, 0 < T → ∃ y : ℝ → ℝ,
-      ContinuousOn y (Icc 0 T) ∧
-      (∀ a ∈ Ioc 0 T, AbsolutelyContinuousOnInterval y a T) ∧ m ≤ y 0 ∧
-      (∀ᵐ t ∂volume.restrict (Ioc 0 T), 0 ≤ y t) ∧
-      (∀ᵐ t ∂volume.restrict (Ioc 0 T),
-        c * y t ^ p ≤ deriv y t + lambda * y t)) :
-    c ≤ lambda * m ^ (1 - p) := by
-  have hexp : Filter.Tendsto
-      (fun T : ℝ ↦ Real.exp (-(lambda * T) * (p - 1))) Filter.atTop (nhds 0) := by
-    simp_rw [neg_mul]
-    exact Real.tendsto_exp_neg_atTop_nhds_zero.comp
-      ((Filter.tendsto_id.const_mul_atTop hlambda).atTop_mul_const (sub_pos.mpr hp))
-  have hlim : Filter.Tendsto
-      (fun T : ℝ ↦ c * (1 - Real.exp (-(lambda * T) * (p - 1))))
-      Filter.atTop (nhds c) := by
-    simpa using ((tendsto_const_nhds (x := (1 : ℝ))).sub hexp).const_mul c
-  apply le_of_tendsto hlim
-  filter_upwards [Filter.eventually_gt_atTop (0 : ℝ)] with T hT
-  obtain ⟨y, hy, hlocal, hzero, hn, hd⟩ := hglobal T hT
-  have h := one_sub_exp_le_mul_rpow_of_local_ae_damped_power_le_deriv hT hc hp hlambda
-    hy hlocal (hm.trans_le hzero) hn hd
-  exact h.trans (mul_le_mul_of_nonneg_left
-    (Real.rpow_le_rpow_of_nonpos hm hzero (by linarith)) hlambda.le)
 
 end PDE.Analysis

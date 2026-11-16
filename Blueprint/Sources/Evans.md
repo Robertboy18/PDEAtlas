@@ -76,7 +76,7 @@ The cards `fluid.euler.potential_flow` and `fluid.euler.potential_solution`
 cite §4.4.2, *Potential functions*. That passage assumes a velocity potential
 and a force potential, reduces incompressibility to spatial harmonicity, and
 recovers the pressure from the time derivative of the potential and the
-kinetic energy. LeanPDE proves this reduction in every spatial dimension and
+kinetic energy. PDEAtlas proves this reduction in every spatial dimension and
 builds a global smooth solution from a given smooth harmonic potential. The passage
 is on printed page 208 of the second edition, with the harmonicity condition (15)
 and the pressure identity (16).
@@ -120,7 +120,7 @@ homogenization is Example 5 of §4.5.4, printed pages 229–232; the corrector p
 
 For the half-space Poisson formula, Theorem 14 of §2.2.4(b) is on printed
 page 37; the mass-one identity (34) and boundedness argument are on page 38.
-Finite propagation is Theorem 8 of §7.2.4, printed pages 416–417. LeanPDE's
+Finite propagation is Theorem 8 of §7.2.4, printed pages 416–417. PDEAtlas's
 incoming-wave example records why compact optical sublevels matter on an
 unbounded domain. The fixed-slab viscous energy estimate follows §7.3.2(c),
 Theorem 2, equation (17), printed page 426, with its proof on pages 426–427.

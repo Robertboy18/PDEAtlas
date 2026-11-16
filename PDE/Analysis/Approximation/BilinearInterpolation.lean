@@ -64,46 +64,6 @@ def bilinearInterpolant (f : ℝ → ℝ → ℝ) (a b c d x y : ℝ) : ℝ :=
     (linearInterpolant c d (f a c) (f a d) y)
     (linearInterpolant c d (f b c) (f b d) y) x
 
-/-- Bounds `Mx` and `My` on the pure second derivatives give the error bound
-`Mx (b - a)² / 8 + My (d - c)² / 8` for the bilinear cell interpolant.
-The derivative fields are proved classical derivatives on the interiors of their slices. -/
-theorem abs_sub_bilinearInterpolant_le
-    {f fx fxx fy fyy : ℝ → ℝ → ℝ} {a b c d x y Mx My : ℝ}
-    (hab : a < b) (hcd : c < d)
-    (hcontX : ∀ v ∈ Set.Icc c d, ContinuousOn (fun u ↦ f u v) (Set.Icc a b))
-    (hderivX : ∀ v ∈ Set.Icc c d, ∀ u ∈ Set.Ioo a b,
-      HasDerivAt (fun z ↦ f z v) (fx u v) u)
-    (hderivXX : ∀ v ∈ Set.Icc c d, ∀ u ∈ Set.Ioo a b,
-      HasDerivAt (fun z ↦ fx z v) (fxx u v) u)
-    (hboundX : ∀ v ∈ Set.Icc c d, ∀ u ∈ Set.Ioo a b, |fxx u v| ≤ Mx)
-    (hcontY : ∀ u ∈ Set.Icc a b, ContinuousOn (f u) (Set.Icc c d))
-    (hderivY : ∀ u ∈ Set.Icc a b, ∀ v ∈ Set.Ioo c d, HasDerivAt (f u) (fy u v) v)
-    (hderivYY : ∀ u ∈ Set.Icc a b, ∀ v ∈ Set.Ioo c d,
-      HasDerivAt (fy u) (fyy u v) v)
-    (hboundY : ∀ u ∈ Set.Icc a b, ∀ v ∈ Set.Ioo c d, |fyy u v| ≤ My)
-    (hx : x ∈ Set.Icc a b) (hy : y ∈ Set.Icc c d) :
-    |f x y - bilinearInterpolant f a b c d x y| ≤
-      Mx * (b - a) ^ 2 / 8 + My * (d - c) ^ 2 / 8 := by
-  have hrow : |f x y - linearInterpolant a b (f a y) (f b y) x| ≤
-      Mx * (b - a) ^ 2 / 8 :=
-    abs_sub_linearInterpolant_le_uniform hab (hcontX y hy)
-      (hderivX y hy) (hderivXX y hy) (hboundX y hy) hx
-  have hcolumn (u : ℝ) (hu : u ∈ Set.Icc a b) :
-      |f u y - linearInterpolant c d (f u c) (f u d) y| ≤ My * (d - c) ^ 2 / 8 :=
-    abs_sub_linearInterpolant_le_uniform hcd (hcontY u hu)
-      (hderivY u hu) (hderivYY u hu) (hboundY u hu) hy
-  have hcombination := abs_linearInterpolant_le hab hx
-    (hcolumn a ⟨le_rfl, hab.le⟩) (hcolumn b ⟨hab.le, le_rfl⟩)
-  have hid : f x y - bilinearInterpolant f a b c d x y =
-      (f x y - linearInterpolant a b (f a y) (f b y) x) +
-        linearInterpolant a b
-          (f a y - linearInterpolant c d (f a c) (f a d) y)
-          (f b y - linearInterpolant c d (f b c) (f b d) y) x := by
-    unfold bilinearInterpolant linearInterpolant
-    ring
-  rw [hid]
-  exact (abs_add_le _ _).trans (add_le_add hrow hcombination)
-
 /-- The pointwise error envelope of bilinear interpolation:
 `|f - If| ≤ Mx (x - a) (b - x) / 2 + My (y - c) (d - y) / 2`. Integrating it over the cell gives
 the trapezoid bound for `∫ |f|` (Chen and Hou, Part II, (4.13) in the proof of Lemma 4.2). -/
@@ -141,6 +101,36 @@ theorem abs_sub_bilinearInterpolant_le_envelope
     ring
   rw [hid]
   exact (abs_add_le _ _).trans (add_le_add hrow hcombination)
+
+/-- Bounds `Mx` and `My` on the pure second derivatives give the error bound
+`Mx (b - a)² / 8 + My (d - c)² / 8` for the bilinear cell interpolant.
+The derivative fields are proved classical derivatives on the interiors of their slices.
+It is the maximum over the cell of the envelope `abs_sub_bilinearInterpolant_le_envelope`. -/
+theorem abs_sub_bilinearInterpolant_le
+    {f fx fxx fy fyy : ℝ → ℝ → ℝ} {a b c d x y Mx My : ℝ}
+    (hab : a < b) (hcd : c < d)
+    (hcontX : ∀ v ∈ Set.Icc c d, ContinuousOn (fun u ↦ f u v) (Set.Icc a b))
+    (hderivX : ∀ v ∈ Set.Icc c d, ∀ u ∈ Set.Ioo a b,
+      HasDerivAt (fun z ↦ f z v) (fx u v) u)
+    (hderivXX : ∀ v ∈ Set.Icc c d, ∀ u ∈ Set.Ioo a b,
+      HasDerivAt (fun z ↦ fx z v) (fxx u v) u)
+    (hboundX : ∀ v ∈ Set.Icc c d, ∀ u ∈ Set.Ioo a b, |fxx u v| ≤ Mx)
+    (hcontY : ∀ u ∈ Set.Icc a b, ContinuousOn (f u) (Set.Icc c d))
+    (hderivY : ∀ u ∈ Set.Icc a b, ∀ v ∈ Set.Ioo c d, HasDerivAt (f u) (fy u v) v)
+    (hderivYY : ∀ u ∈ Set.Icc a b, ∀ v ∈ Set.Ioo c d,
+      HasDerivAt (fy u) (fyy u v) v)
+    (hboundY : ∀ u ∈ Set.Icc a b, ∀ v ∈ Set.Ioo c d, |fyy u v| ≤ My)
+    (hx : x ∈ Set.Icc a b) (hy : y ∈ Set.Icc c d) :
+    |f x y - bilinearInterpolant f a b c d x y| ≤
+      Mx * (b - a) ^ 2 / 8 + My * (d - c) ^ 2 / 8 := by
+  have hMx : 0 ≤ Mx := (abs_nonneg _).trans
+    (hboundX y hy ((a + b) / 2) ⟨by linarith, by linarith⟩)
+  have hMy : 0 ≤ My := (abs_nonneg _).trans
+    (hboundY x hx ((c + d) / 2) ⟨by linarith, by linarith⟩)
+  refine (abs_sub_bilinearInterpolant_le_envelope hab hcd hcontX hderivX hderivXX hboundX
+    hcontY hderivY hderivYY hboundY hx hy).trans ?_
+  nlinarith [mul_nonneg hMx (sq_nonneg (2 * x - a - b)),
+    mul_nonneg hMy (sq_nonneg (2 * y - c - d))]
 
 /-- A common bound on all four vertex values bounds the bilinear interpolant. -/
 theorem abs_bilinearInterpolant_le {f : ℝ → ℝ → ℝ} {a b c d x y B : ℝ}

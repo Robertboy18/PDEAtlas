@@ -13,19 +13,23 @@ public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.Formul
 /-!
 # Constructing a future branch from a prescribed retarded history
 
-A bounded C¹ past source gives a future signed-power integral trajectory on a
-uniform interval. The interval depends on amplitude and elapsed-time bounds,
-not bounds on derivatives of the history. The future branch has the same
-initial position and velocity as the free field with that history included.
+A bounded past source gives a future integral trajectory on a uniform
+interval. The interval depends on amplitude and elapsed-time bounds, not
+bounds on derivatives of the history. The future branch has the same initial
+position and velocity as the free field with that history included.
 
-This constructs the future branch.
+`exists_future_of_bounded_history` proves this once, for every finite order
+`m ≥ 1` and every reaction for which the cone construction is available at
+that order: the restart only changes the free field of the cone problem, by
+the retarded history. The C¹ signed powers of exponent at least one are the
+case `exists_signedPower_future_of_bounded_history`.
 -/
 
 @[expose] public noncomputable section
 
-open Set Filter PDE.Analysis PDE.Common WaveEquation
+open Set Filter MeasureTheory PDE.Analysis PDE.Common WaveEquation
 open WaveEquation.SmallData.Classical.LocalPower
-open scoped Topology
+open scoped Topology unitInterval
 
 namespace PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical
 
@@ -54,9 +58,70 @@ theorem cauchy_traces_of_quadratic_remainder {H v c : ℝ × ℝ^3 → ℝ} (hH 
     filter_upwards [(continuous_id.prodMk continuous_const).continuousAt.eventually hnear]
       with t ht using heq (t, x) ht
 
+/-- **Restart with a retarded history, for every order and every reaction.** Let `m ≥ 1` and
+let `f : ℝ → ℝ` be a reaction for which the cone construction is available at order `m`
+(`hcone`): for every amplitude `A ≥ 0` there is a time `0 < T ≤ 1` such that every free field `G`
+of class `C^m` with `|G| ≤ A` for `0 ≤ t ≤ 1` has a solution `v = G + t² c` of the normalized
+cone equation of `f` on `|t| < T`, with `v` and `c` of class `C^m` and `|v| < A + 1` for
+`0 ≤ t < T`. Then amplitude bounds on the free wave and on a prescribed past source of class
+`C^m` construct a future branch of class `C^m` on one common time interval for all histories
+and anchor times. The integral in the conclusion is the physical Duhamel field. -/
+theorem exists_future_of_bounded_history {m : ℕ} (hm : 1 ≤ m) {f : ℝ → ℝ}
+    (hcone : ∀ A : ℝ, 0 ≤ A → ∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧
+      ∀ G : ℝ × ℝ^3 → ℝ, ContDiff ℝ m G → (∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 1 → |G p| ≤ A) →
+        ∃ v c : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ m v {p | |p.1| < T} ∧
+      ContDiffOn ℝ m c {p | |p.1| < T} ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → v p = G p + p.1 ^ 2 * c p) ∧
+      (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → |v p| < A + 1) ∧
+      ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → c p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction,
+        f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3))))
+        ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3))
+    {B M L : ℝ} (hB : 0 ≤ B) (hM : 0 ≤ M) (hL : 0 ≤ L) :
+    ∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧ ∀ a ∈ Icc 0 L,
+      ∀ H : ℝ × ℝ^3 → ℝ, ContDiff ℝ m H →
+        (∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 (L + 1) → |H p| ≤ B) →
+      ∀ F : ℝ × ℝ^3 → ℝ, ContDiff ℝ m F →
+        (∀ s ∈ Icc 0 a, ∀ x : ℝ^3, |F (s, x)| ≤ M) →
+      ∃ v : ℝ × ℝ^3 → ℝ,
+        ContDiffOn ℝ m v {p | |p.1| < T} ∧
+        (∀ x : ℝ^3, v (0, x) = H (a, x) + retardedHistory a F (0, x)) ∧
+        (∀ x : ℝ^3, HasDerivAt (fun t ↦ v (t, x))
+          (deriv (fun t ↦ H (a + t, x) + retardedHistory a F (t, x)) 0) 0) ∧
+        (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → |v p| < B + L * (L + 1) * M + 1) ∧
+        ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T →
+          v p = H (a + p.1, p.2) + retardedHistory a F p +
+            oddDuhamelSolution 0
+              (fun z : ℝ^4 ↦ f (v (timeSpaceContinuousLinearEquiv 3 z)))
+              (timeSpaceCons p.1 p.2) := by
+  have hm1 : (1 : WithTop ℕ∞) ≤ m := by exact_mod_cast hm
+  let A := B + L * (L + 1) * M
+  have hA : 0 ≤ A := by positivity
+  obtain ⟨T, hT, hT1, hconstruct⟩ := hcone A hA
+  refine ⟨T, hT, hT1, fun a ha H hH hHB F hF hFB ↦ ?_⟩
+  let G : ℝ × ℝ^3 → ℝ := fun p ↦ H (a + p.1, p.2) + retardedHistory a F p
+  have hG : ContDiff ℝ m G := (hH.comp ((contDiff_const.add contDiff_fst).prodMk contDiff_snd)).add
+      (contDiff_retardedHistory hF a)
+  have hGB (p : ℝ × ℝ^3) (hp : p.1 ∈ Icc 0 1) : |G p| ≤ A := by
+    have hhistory := norm_retardedHistory_le ha.1 hFB hp
+    have hmul : a * (a + 1) * M ≤ L * (L + 1) * M := by
+      gcongr <;> linarith [ha.1, ha.2]
+    exact (abs_add_le _ _).trans (add_le_add
+      (hHB (a + p.1, p.2) ⟨add_nonneg ha.1 hp.1, add_le_add ha.2 hp.2⟩) (hhistory.trans hmul))
+  obtain ⟨v, c, hv, hc, heq, hb, hint⟩ := hconstruct G hG hGB
+  obtain ⟨hg, hh⟩ := cauchy_traces_of_quadratic_remainder (hG.of_le hm1) hT (hc.of_le hm1) heq
+  refine ⟨v, hv, ?_, hh, hb, ?_⟩
+  · intro x
+    simpa only [G, add_zero] using hg x
+  · intro p hp
+    rw [heq p (by simpa only [abs_of_nonneg hp.1] using hp.2), hint p hp,
+      oddDuhamelSolution_zero_eq_normalized _ _ hp.1]
+    simp only [G, timeSpaceContinuousLinearEquiv_apply]
+    rfl
+
 /-- Amplitude bounds on the free wave and prescribed past source construct a
 future branch on one common time interval for all histories and anchor times.
-The integral in the conclusion is the physical Duhamel field. -/
+The integral in the conclusion is the physical Duhamel field. This is
+`exists_future_of_bounded_history` at order one, with the cone construction
+`exists_signedPower_cone_trajectory`. -/
 theorem exists_signedPower_future_of_bounded_history {r : ℝ} (hr : 1 ≤ r)
     {B M L : ℝ} (hB : 0 ≤ B) (hM : 0 ≤ M) (hL : 0 ≤ L) :
     ∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧ ∀ a ∈ Icc 0 L,
@@ -74,29 +139,8 @@ theorem exists_signedPower_future_of_bounded_history {r : ℝ} (hr : 1 ≤ r)
           v p = H (a + p.1, p.2) + retardedHistory a F p +
             oddDuhamelSolution 0
               (fun z : ℝ^4 ↦ -Real.signedPower r (v (timeSpaceContinuousLinearEquiv 3 z)))
-              (timeSpaceCons p.1 p.2) := by
-  let A := B + L * (L + 1) * M
-  have hA : 0 ≤ A := by positivity
-  obtain ⟨T, hT, hT1, hconstruct⟩ := exists_signedPower_cone_trajectory hr hA
-  refine ⟨T, hT, hT1, fun a ha H hH hHB F hF hFB ↦ ?_⟩
-  let G : ℝ × ℝ^3 → ℝ := fun p ↦ H (a + p.1, p.2) + retardedHistory a F p
-  have hG : ContDiff ℝ 1 G := (hH.comp ((contDiff_const.add contDiff_fst).prodMk contDiff_snd)).add
-      (contDiff_one_retardedHistory hF a)
-  have hGB (p : ℝ × ℝ^3) (hp : p.1 ∈ Icc 0 1) : |G p| ≤ A := by
-    have hhistory := norm_retardedHistory_le ha.1 hFB hp
-    have hmul : a * (a + 1) * M ≤ L * (L + 1) * M := by
-      gcongr <;> linarith [ha.1, ha.2]
-    exact (abs_add_le _ _).trans (add_le_add
-      (hHB (a + p.1, p.2) ⟨add_nonneg ha.1 hp.1, add_le_add ha.2 hp.2⟩) (hhistory.trans hmul))
-  obtain ⟨v, c, hv, hc, heq, hb, hint⟩ := hconstruct G hG hGB
-  obtain ⟨hg, hh⟩ := cauchy_traces_of_quadratic_remainder hG hT hc heq
-  refine ⟨v, hv, ?_, hh, hb, ?_⟩
-  · intro x
-    simpa only [G, add_zero] using hg x
-  · intro p hp
-    rw [heq p (by simpa only [abs_of_nonneg hp.1] using hp.2), hint p hp,
-      oddDuhamelSolution_zero_eq_normalized _ _ hp.1]
-    simp only [G, timeSpaceContinuousLinearEquiv_apply]
-    rfl
+              (timeSpaceCons p.1 p.2) :=
+  exists_future_of_bounded_history (m := 1) le_rfl (f := fun y ↦ -Real.signedPower r y)
+    (fun _ hA ↦ exists_signedPower_cone_trajectory hr hA) hB hM hL
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical

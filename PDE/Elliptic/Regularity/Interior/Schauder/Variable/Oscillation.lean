@@ -73,37 +73,9 @@ theorem exists_gradient_oscillation_of_holder_coefficients
   obtain ⟨b, w, hb, hbEll, hbΛ, hhom, herr⟩ :=
     exists_frozen_comparison_with_mean_error Fact.out z hR a A hA hrep hα hΛ hAz hell
       u F f hf hF hu
-  let H : H¹(ball z R) := u - (w : H¹(ball z R))
-  let d : ℝ^n → ℝ := wkpCoordinateCLM (singleDerivIndex n i) u
-  let e : ℝ^n → ℝ := wkpCoordinateCLM (singleDerivIndex n i) H
-  let E : ℝ := (2 * n * (M * R ^ (γ : ℝ)) ^ 2 +
-    2 * (n : ℝ) ^ 2 * (K * R ^ (γ : ℝ)) ^ 2 *
-      ((volume.real (ball z R))⁻¹ *
-        ∑ j, ‖wkpCoordinateCLM (singleDerivIndex n j) u‖ ^ 2)) / α ^ 2
-  have hd : MemLp d 2 (volume.restrict (ball z R)) := Lp.memLp _
-  have he : MemLp e 2 (volume.restrict (ball z R)) := Lp.memLp _
-  have herror : (⨍ x in ball z R, ‖d x - e x‖ ^ 2) ≤ E := herr i
-  have hrR' : r ≤ R := by linarith
-  have herrSmall := (setAverage_norm_sq_le_of_radius_le hr hrR' (hd.sub he)).trans
-    (mul_le_mul_of_nonneg_left herror (pow_nonneg (div_nonneg hR.le hr.le) n))
-  have hcompare := setAverage_oscillation_sq_le_comparison
-    (hd.mono_measure (Measure.restrict_mono (ball_subset_ball hrR') le_rfl))
-    (he.mono_measure (Measure.restrict_mono (ball_subset_ball hrR') le_rfl))
-  have hcomparison := hdecay z R hR b (fun j k ↦ A j k z) hb hbΛ hbEll
-    H hhom i (⨍ y in ball z R, d y) r hr hrR
-  have houter := setAverage_norm_sub_sq_le he hd
-    (⨍ y in ball z R, d y)
-  have hreverse : (⨍ x in ball z R, ‖e x - d x‖ ^ 2) =
-      ⨍ x in ball z R, ‖d x - e x‖ ^ 2 := by
-    congr 1
-    funext x
-    rw [norm_sub_rev]
-  rw [hreverse] at houter
-  have hscaled := mul_le_mul_of_nonneg_left houter (mul_nonneg hC.le (sq_nonneg (r / R)))
-  have hscaledError := mul_le_mul_of_nonneg_left herror
-    (mul_nonneg hC.le (sq_nonneg (r / R)))
-  simp only [Pi.sub_apply] at herrSmall
-  dsimp only [d, e, E] at herrSmall hcompare hscaled hcomparison hscaledError ⊢
-  nlinarith only [herrSmall, hcompare, hscaled, hcomparison, hscaledError]
+  refine (setAverage_oscillation_sq_le_of_comparison_decay hr (by linarith) (Lp.memLp _)
+    (Lp.memLp _) (mul_nonneg hC.le (sq_nonneg (r / R))) (herr i)
+    (hdecay z R hR b (fun j k ↦ A j k z) hb hbΛ hbEll _ hhom i _ r hr hrR)).trans_eq ?_
+  ring
 
 end SobolevSpace.GraphSpace

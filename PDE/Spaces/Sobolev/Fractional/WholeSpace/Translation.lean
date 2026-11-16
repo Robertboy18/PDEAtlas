@@ -25,8 +25,9 @@ transform on the real line uses the case `X = ℝ`.
 Mathlib supplies translation as `Lp.compMeasurePreserving`, the corresponding identity for
 ordinary Fourier integrals, and density of Schwartz functions in `L²`. We combine those results
 here: the identity is checked on Schwartz functions and extended to `L²` by continuity of both
-sides. On `ℝ^n` the sign is positive because `PDE.Analysis.translateL2 ℂ (-h) u` represents
-`u (· + h)`.
+sides. With the shared translation the sign is positive because
+`PDE.Analysis.translateL2 ℂ (-h) u` represents `u (· + h)`
+(`PDE.Analysis.translateL2_neg_eq`).
 
 ## Main results
 
@@ -36,8 +37,8 @@ sides. On `ℝ^n` the sign is positive because `PDE.Analysis.translateL2 ℂ (-h
   transform of `u (· + h)`, written with Mathlib's `Lp.compMeasurePreserving`, is
   `charMulL2 h (𝓕 u)`.
 * `PDE.Analysis.translateL2` (from `PDE.Analysis.Lp.Translation`): the shared translation
-  `u (· - y)` as a linear isometry of `L²(ℝ^n; F)`.
-* `SobolevSpace.Fractional.fourier_translateL2`: on `L²(ℝ^n; F)`,
+  `u (· - y)` as a linear isometry of `L²(X; F)`.
+* `SobolevSpace.Fractional.fourier_translateL2`: on `L²(X; F)`,
   `𝓕 ∘ translateL2 ℂ (-h) = charMulL2 h ∘ 𝓕`.
 * `SobolevSpace.Fractional.coeFn_fourier_translateL2_sub`,
   `SobolevSpace.Fractional.norm_translateL2_sub`: the Fourier transform of the
@@ -55,7 +56,7 @@ sides. On `ℝ^n` the sign is positive because `PDE.Analysis.translateL2 ℂ (-h
 @[expose] public section
 
 open MeasureTheory Real
-open PDE.Analysis (translateL2 translateL2_ae_eq)
+open PDE.Analysis (translateL2 translateL2_neg_eq)
 open scoped BesselPotentialSpace ENNReal FourierTransform RealInnerProductSpace SchwartzMap
 
 namespace SobolevSpace.Fractional
@@ -227,45 +228,32 @@ theorem fourier_compMeasurePreserving_add_right (h : X) (u : Lp F 2 (volume : Me
         (Lp.fourierTransformₗᵢ X F).continuous
   · exact fourier_compMeasurePreserving_add_right_toLp h
 
-/-! ## Translation on `ℝ^n` -/
-
-variable {n : ℕ}
-
-omit [CompleteSpace F] in
-private theorem translateL2_neg_eq (h : ℝ^n) (u : Lp F 2 (volume : Measure (ℝ^n))) :
-    translateL2 ℂ (-h) u =
-      Lp.compMeasurePreserving (· + h) (measurePreserving_add_right volume h) u := by
-  refine Lp.ext_iff.2 ?_
-  filter_upwards [
-    translateL2_ae_eq ℂ (-h) u,
-    Lp.coeFn_compMeasurePreserving u (measurePreserving_add_right volume h)
-  ] with x htranslate hcomp
-  rw [htranslate, hcomp, Function.comp_apply, sub_neg_eq_add]
+/-! ## The same identity for the shared translation `translateL2` -/
 
 /-- The Fourier transform turns translation into multiplication by a
-character on `L²(ℝ^n; F)`. -/
-theorem fourier_translateL2 (h : ℝ^n) (u : Lp F 2 (volume : Measure (ℝ^n))) :
+character on `L²(X; F)`. -/
+theorem fourier_translateL2 (h : X) (u : Lp F 2 (volume : Measure X)) :
     𝓕 (translateL2 ℂ (-h) u) = charMulL2 h (𝓕 u) := by
   rw [translateL2_neg_eq]
   exact fourier_compMeasurePreserving_add_right h u
 
 /-- Pointwise almost-everywhere form of `fourier_translateL2`. -/
-theorem coeFn_fourier_translateL2 (h : ℝ^n) (u : Lp F 2 (volume : Measure (ℝ^n))) :
-    ((𝓕 (translateL2 ℂ (-h) u) : Lp F 2 (volume : Measure (ℝ^n))) : ℝ^n → F) =ᵐ[volume]
+theorem coeFn_fourier_translateL2 (h : X) (u : Lp F 2 (volume : Measure X)) :
+    ((𝓕 (translateL2 ℂ (-h) u) : Lp F 2 (volume : Measure X)) : X → F) =ᵐ[volume]
       fun ξ ↦ fourierCharFn h ξ •
-        ((𝓕 u : Lp F 2 (volume : Measure (ℝ^n))) : ℝ^n → F) ξ := by
+        ((𝓕 u : Lp F 2 (volume : Measure X)) : X → F) ξ := by
   rw [fourier_translateL2]
   exact coeFn_charMulL2 h (𝓕 u)
 
 /-- The Fourier transform of `u (· + h) - u`. -/
-theorem coeFn_fourier_translateL2_sub (h : ℝ^n) (u : Lp F 2 (volume : Measure (ℝ^n))) :
-    ((𝓕 (translateL2 ℂ (-h) u - u) : Lp F 2 (volume : Measure (ℝ^n))) : ℝ^n → F) =ᵐ[volume]
+theorem coeFn_fourier_translateL2_sub (h : X) (u : Lp F 2 (volume : Measure X)) :
+    ((𝓕 (translateL2 ℂ (-h) u - u) : Lp F 2 (volume : Measure X)) : X → F) =ᵐ[volume]
       fun ξ ↦ (fourierCharFn h ξ - 1) •
-        ((𝓕 u : Lp F 2 (volume : Measure (ℝ^n))) : ℝ^n → F) ξ := by
+        ((𝓕 u : Lp F 2 (volume : Measure X)) : X → F) ξ := by
   have hmap :
-      (𝓕 (translateL2 ℂ (-h) u - u) : Lp F 2 (volume : Measure (ℝ^n))) =
+      (𝓕 (translateL2 ℂ (-h) u - u) : Lp F 2 (volume : Measure X)) =
         𝓕 (translateL2 ℂ (-h) u) - 𝓕 u :=
-    (Lp.fourierTransformₗᵢ (ℝ^n) F).map_sub _ _
+    (Lp.fourierTransformₗᵢ X F).map_sub _ _
   rw [hmap]
   filter_upwards [
     Lp.coeFn_sub (𝓕 (translateL2 ℂ (-h) u)) (𝓕 u),
@@ -274,9 +262,9 @@ theorem coeFn_fourier_translateL2_sub (h : ℝ^n) (u : Lp F 2 (volume : Measure 
   rw [hsub, Pi.sub_apply, htranslate, sub_smul, one_smul]
 
 /-- Plancherel for the translated difference. -/
-theorem norm_translateL2_sub (h : ℝ^n) (u : Lp F 2 (volume : Measure (ℝ^n))) :
+theorem norm_translateL2_sub (h : X) (u : Lp F 2 (volume : Measure X)) :
     ‖translateL2 ℂ (-h) u - u‖ =
-      ‖(𝓕 (translateL2 ℂ (-h) u - u) : Lp F 2 (volume : Measure (ℝ^n)))‖ :=
+      ‖(𝓕 (translateL2 ℂ (-h) u - u) : Lp F 2 (volume : Measure X))‖ :=
   (Lp.norm_fourier_eq _).symm
 
 end SobolevSpace.Fractional

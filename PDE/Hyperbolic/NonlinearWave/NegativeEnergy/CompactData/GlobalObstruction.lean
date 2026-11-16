@@ -9,6 +9,7 @@ module
 public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.CompactData.ForwardEnergy
 public import PDE.Hyperbolic.NonlinearWave.FinitePropagation.ForwardUniqueness
 public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.GlobalObstruction
+import PDE.Analysis.Normed.Group.CompactSupport
 
 /-!
 # Compact-data negative-energy obstruction
@@ -76,11 +77,7 @@ theorem not_global_forward_semilinearWave_of_compact_negative_energy [Fact (0 < 
     (hpos : ∀ x, u (timeSpaceCons 0 x) = g x)
     (hvel : ∀ x, derivWithin (fun t ↦ u (timeSpaceCons t x)) (Ici 0) 0 = h x) :
     False := by
-  obtain ⟨Rg, _, hg⟩ := hgcompact.exists_pos_le_norm
-  obtain ⟨Rh, _, hh⟩ := hhcompact.exists_pos_le_norm
-  let R := max Rg Rh
-  have hgR (x : ℝ^n) (hx : R < ‖x‖) : g x = 0 := hg x ((le_max_left Rg Rh).trans hx.le)
-  have hhR (x : ℝ^n) (hx : R < ‖x‖) : h x = 0 := hh x ((le_max_right Rg Rh).trans hx.le)
+  obtain ⟨R, -, hgR, hhR⟩ := hgcompact.exists_common_radius hhcompact
   have hV₁ : ContDiff ℝ 1 V := hV.of_le (by norm_num)
   have hf : LocallyLipschitz (deriv V) := hV.deriv'.locallyLipschitz
   have hs := hasForwardSupport_of_cauchyData hf

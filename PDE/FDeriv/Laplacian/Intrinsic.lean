@@ -15,7 +15,7 @@ public import PDE.FDeriv.PartialDeriv
 Coordinate partials commute with `Δ` at a C³ point. Projection of a vector
 Laplacian equals the Laplacian of the projected component at a C² point.
 These statements concern Mathlib's intrinsic `Δ`, so callers need no conversion
-to LeanPDE's coordinate Laplacian.
+to PDEAtlas's coordinate Laplacian.
 
 The proofs use the directional commutator of `PDE.Analysis.Calculus.Laplacian` and Mathlib's
 theorem for

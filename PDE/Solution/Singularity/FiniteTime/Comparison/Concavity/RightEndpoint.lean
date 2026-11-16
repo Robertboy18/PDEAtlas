@@ -72,6 +72,13 @@ open Set
 
 namespace PDE.Solution.Singularity.FiniteTime.Concavity
 
+/-- A strict bound `S < h` at every time `S` of `[c, T)` gives the non-strict bound `T ≤ h`.
+This passes from closed intervals `[t₀, S]` to the half-open interval `[t₀, T)`. -/
+private theorem le_of_forall_mem_Ico_lt {c T h : ℝ} (hc : c < T) (H : ∀ S ∈ Ico c T, S < h) :
+    T ≤ h :=
+  le_of_forall_lt_imp_le_of_dense fun S hS ↦
+    (le_total c S).elim (fun hcS ↦ (H S ⟨hcS, hS⟩).le) fun hSc ↦ hSc.trans (H c ⟨le_rfl, hc⟩).le
+
 /-- If the concavity inequality holds on `[t₀, T]` and `P(t₀) > 0`, then
 `T` lies strictly before the Riccati horizon of the logarithmic derivative
 `P / I`.
@@ -112,9 +119,9 @@ theorem right_endpoint_lt_riccati_horizon
 /-- If the concavity inequality holds on the half-open interval `[t₀, T)`,
 then `T` is at most the Riccati horizon determined by `P(t₀) / I(t₀)`.
 
-This is the endpoint form suited to maximal existence intervals. If the
-horizon were strictly before `T`, an intermediate closed endpoint would
-contradict `right_endpoint_lt_riccati_horizon`. -/
+This is the endpoint form suited to maximal existence intervals. Every
+closed interval `[t₀, S]` with `S < T` satisfies the strict bound
+`right_endpoint_lt_riccati_horizon`, and the horizon does not depend on `S`. -/
 theorem right_endpoint_le_riccati_horizon
     {I P : ℝ → ℝ} {a b t₀ T : ℝ}
     (ha : 0 < a) (hb : 0 ≤ b)
@@ -125,31 +132,14 @@ theorem right_endpoint_le_riccati_horizon
     (hconcavity : ∀ t ∈ Ioo t₀ T,
       (1 + a) * P t ^ 2 ≤ I t * (deriv P t - b)) :
     T ≤ t₀ + (a * (P t₀ / I t₀))⁻¹ := by
-  let horizon := t₀ + (a * (P t₀ / I t₀))⁻¹
-  have ht₀Horizon : t₀ < horizon := by
-    exact lt_add_of_pos_right t₀
-      (inv_pos.mpr (mul_pos ha (div_pos hP₀ hI₀)))
-  change T ≤ horizon
-  by_contra hbound
-  have hHorizonT : horizon < T := lt_of_not_ge hbound
-  let S := (horizon + T) / 2
-  have hHorizonS : horizon < S := by
-    dsimp only [S]
-    linarith
-  have hST : S < T := by
-    dsimp only [S]
-    linarith
-  have hclosedBound :=
-    right_endpoint_lt_riccati_horizon
-      (I := I) (P := P) (a := a) (b := b) (t₀ := t₀) (T := S)
-      ha hb
-      (fun t ht ↦ hI t ⟨ht.1, ht.2.trans_lt hST⟩)
-      (fun t ht ↦ hP t ⟨ht.1, ht.2.trans_lt hST⟩)
-      hI₀ hP₀
-      (fun t ht ↦ hpos t ⟨ht.1, ht.2.trans_lt hST⟩)
-      (fun t ht ↦ hconcavity t ⟨ht.1, ht.2.trans hST⟩)
-  change S < horizon at hclosedBound
-  exact (not_lt_of_ge hHorizonS.le) hclosedBound
+  rcases le_or_gt T t₀ with hT | hT
+  · exact hT.trans (le_add_of_nonneg_right
+      (inv_nonneg.mpr (mul_nonneg ha.le (div_nonneg hP₀.le hI₀.le))))
+  · exact le_of_forall_mem_Ico_lt hT fun _ hS ↦
+      right_endpoint_lt_riccati_horizon ha hb
+        (fun t ht ↦ hI t ⟨ht.1, ht.2.trans_lt hS.2⟩) (fun t ht ↦ hP t ⟨ht.1, ht.2.trans_lt hS.2⟩)
+        hI₀ hP₀ (fun t ht ↦ hpos t ⟨ht.1, ht.2.trans_lt hS.2⟩)
+        (fun t ht ↦ hconcavity t ⟨ht.1, ht.2.trans hS.2⟩)
 
 /-- Positive forcing makes the momentum strictly positive after every
 positive time increment, provided the concavity inequality holds in between.
@@ -238,8 +228,9 @@ forcing give the shifted non-strict Riccati lifespan bound
 `T ≤ t₀ + δ + (a P(t₀ + δ) / I(t₀ + δ))⁻¹`.
 
 The strict inclusion `t₀ + δ < T` places the shifted base time inside the
-available interval. Positive forcing makes the momentum strictly positive
-there, after which `right_endpoint_le_riccati_horizon` applies. -/
+available interval. Every closed interval `[t₀, S]` with `t₀ + δ ≤ S < T`
+satisfies the strict bound `right_endpoint_lt_shifted_riccati_horizon`, and the
+shifted horizon does not depend on `S`. -/
 theorem right_endpoint_le_shifted_riccati_horizon
     {I P : ℝ → ℝ} {a b t₀ T δ : ℝ}
     (ha : 0 < a) (hb : 0 < b) (hδ : 0 < δ)
@@ -252,26 +243,11 @@ theorem right_endpoint_le_shifted_riccati_horizon
       (1 + a) * P t ^ 2 ≤ I t * (deriv P t - b)) :
     T ≤
       t₀ + δ +
-        (a * (P (t₀ + δ) / I (t₀ + δ)))⁻¹ := by
-  have ht₀shift : t₀ < t₀ + δ := lt_add_of_pos_right t₀ hδ
-  have hPShift : 0 < P (t₀ + δ) := by
-    apply momentum_pos_at_add ha.le hb hδ
-      (fun t ht ↦ hP t ⟨ht.1, ht.2.trans_lt hshift⟩) hP₀
-    · intro t ht
-      exact hpos t ⟨ht.1, ht.2.trans_lt hshift⟩
-    · intro t ht
-      exact hconcavity t ⟨ht.1, ht.2.trans hshift⟩
-  apply right_endpoint_le_riccati_horizon
-    (I := I) (P := P) (t₀ := t₀ + δ) ha hb.le
-  · intro t ht
-    exact hI t ⟨ht₀shift.le.trans ht.1, ht.2⟩
-  · intro t ht
-    exact hP t ⟨ht₀shift.le.trans ht.1, ht.2⟩
-  · exact hpos (t₀ + δ) ⟨ht₀shift.le, hshift⟩
-  · exact hPShift
-  · intro t ht
-    exact hpos t ⟨ht₀shift.le.trans ht.1, ht.2⟩
-  · intro t ht
-    exact hconcavity t ⟨ht₀shift.trans ht.1, ht.2⟩
+        (a * (P (t₀ + δ) / I (t₀ + δ)))⁻¹ :=
+  le_of_forall_mem_Ico_lt hshift fun _ hS ↦
+    right_endpoint_lt_shifted_riccati_horizon ha hb hδ hS.1
+      (fun t ht ↦ hI t ⟨ht.1, ht.2.trans_lt hS.2⟩) (fun t ht ↦ hP t ⟨ht.1, ht.2.trans_lt hS.2⟩)
+      hP₀ (fun t ht ↦ hpos t ⟨ht.1, ht.2.trans_lt hS.2⟩)
+      (fun t ht ↦ hconcavity t ⟨ht.1, ht.2.trans hS.2⟩)
 
 end PDE.Solution.Singularity.FiniteTime.Concavity

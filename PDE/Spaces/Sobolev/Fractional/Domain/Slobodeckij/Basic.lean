@@ -27,6 +27,10 @@ The predicate is defined for every real order and every exponent. Its usual inte
 as fractional Sobolev regularity requires `0 < s < 1` and `1 ≤ p`. Almost-everywhere
 classes and the complete graph norm are constructed in `Slobodeckij.Graph`.
 
+The Gagliardo integral is lower semicontinuous under almost everywhere convergence
+(`lintegral_enorm_sub_rpow_div_le_liminf`, by Fatou's lemma), for every positive power and
+every distance exponent.
+
 The difference vanishes on the diagonal, including in dimension zero. All algebraic laws
 hold even when the distance power is zero, using totalized real inversion. Domains need
 not be open or bounded; measurability of the domain is required only where stated.
@@ -212,5 +216,54 @@ theorem memGagliardo_of_eqOn_zero (hΩ : MeasurableSet Ω) (u : ℝ^n → F)
     filter_upwards [ae_restrict_mem hΩ] with x hx
     exact hu x hx
   exact memGagliardo_zero.congr_ae hzero.symm
+
+/-! ## Lower semicontinuity of the Gagliardo integral -/
+
+open Filter Topology in
+/-- **Fatou's lemma for the Gagliardo integrand.** Let `f j`, `g : ℝ^n → F` take values in a
+normed group, each `f j` almost everywhere strongly measurable, with `f j → g` almost
+everywhere. Then for `p > 0` and every real `a`,
+`∬ ‖g x - g y‖ₑ ^ p / ‖x - y‖ ^ a ≤ liminf_j ∬ ‖f j x - f j y‖ₑ ^ p / ‖x - y‖ ^ a`. -/
+theorem lintegral_enorm_sub_rpow_div_le_liminf {F : Type*} [NormedAddCommGroup F]
+    (n : ℕ) {p a : ℝ} (hp : 0 < p)
+    {f : ℕ → ℝ^n → F} {g : ℝ^n → F}
+    (hf : ∀ j, AEStronglyMeasurable (f j) (volume : Measure (ℝ^n)))
+    (hfg : ∀ᵐ x ∂(volume : Measure (ℝ^n)), Tendsto (fun j ↦ f j x) atTop (𝓝 (g x))) :
+    (∫⁻ z : ℝ^n × ℝ^n,
+      ‖g z.1 - g z.2‖ₑ ^ p / (ENNReal.ofReal ‖z.1 - z.2‖) ^ a
+      ∂((volume : Measure (ℝ^n)).prod volume)) ≤
+    atTop.liminf (fun j ↦
+      ∫⁻ z : ℝ^n × ℝ^n,
+        ‖f j z.1 - f j z.2‖ₑ ^ p / (ENNReal.ofReal ‖z.1 - z.2‖) ^ a
+        ∂((volume : Measure (ℝ^n)).prod volume)) := by
+  let E (v : ℝ^n → F) (z : ℝ^n × ℝ^n) :=
+    ‖v z.1 - v z.2‖ₑ ^ p / (ENNReal.ofReal ‖z.1 - z.2‖) ^ a
+  have hmeas (j : ℕ) :
+      AEMeasurable (E (f j)) ((volume : Measure (ℝ^n)).prod volume) := by
+    have hd := ((hf j).comp_quasiMeasurePreserving
+      (Measure.quasiMeasurePreserving_fst (μ := volume) (ν := volume))).sub
+        ((hf j).comp_quasiMeasurePreserving
+          (Measure.quasiMeasurePreserving_snd (μ := volume) (ν := volume)))
+    exact (hd.enorm.pow_const p).div
+      (((measurable_fst.sub measurable_snd).norm.ennreal_ofReal).pow_const a).aemeasurable
+  have hfst := (Measure.quasiMeasurePreserving_fst
+    (μ := (volume : Measure (ℝ^n))) (ν := (volume : Measure (ℝ^n)))).ae hfg
+  have hsnd := (Measure.quasiMeasurePreserving_snd
+    (μ := (volume : Measure (ℝ^n))) (ν := (volume : Measure (ℝ^n)))).ae hfg
+  have hlim : ∀ᵐ z ∂((volume : Measure (ℝ^n)).prod volume),
+      Tendsto (fun j ↦ E (f j) z) atTop (𝓝 (E g z)) := by
+    filter_upwards [hfst, hsnd] with z hz₁ hz₂
+    by_cases hz : z.1 = z.2
+    · simp [E, hz, ENNReal.zero_rpow_of_pos hp]
+    · apply ENNReal.Tendsto.div_const
+        ((ENNReal.continuous_rpow_const.tendsto _).comp (hz₁.sub hz₂).enorm)
+      exact Or.inr (ENNReal.rpow_pos
+        (ENNReal.ofReal_pos.mpr (norm_pos_iff.mpr (sub_ne_zero.mpr hz)))
+        ENNReal.ofReal_ne_top).ne'
+  calc
+    _ = ∫⁻ z, atTop.liminf (fun j ↦ E (f j) z)
+        ∂((volume : Measure (ℝ^n)).prod volume) :=
+      lintegral_congr_ae (hlim.mono fun z hz ↦ hz.liminf_eq.symm)
+    _ ≤ _ := lintegral_liminf_le' hmeas
 
 end SobolevSpace.Fractional

@@ -884,27 +884,10 @@ theorem iteratedPartialDeriv_sub_of_contDiff
     (fun x ↦ iteratedPartialDeriv (n := n) indices (f - g) x) =
       fun x ↦ iteratedPartialDeriv (n := n) indices f x -
         iteratedPartialDeriv (n := n) indices g x := by
-  induction indices generalizing f g with
-  | nil =>
-      funext x
-      simp [iteratedPartialDeriv]
-  | cons i rest ih =>
-      have hfrest : ContDiff ℝ 1
-          (fun x ↦ iteratedPartialDeriv (n := n) rest f x) := by
-        simpa using contDiff_iteratedPartialDeriv_of_le
-          (n := n) hf rest (by simp)
-      have hgrest : ContDiff ℝ 1
-          (fun x ↦ iteratedPartialDeriv (n := n) rest g x) := by
-        simpa using contDiff_iteratedPartialDeriv_of_le
-          (n := n) hg rest (by simp)
-      have hftail : ContDiff ℝ rest.length f := hf.of_le (by simp)
-      have hgtail : ContDiff ℝ rest.length g := hg.of_le (by simp)
-      funext x
-      simp only [iteratedPartialDeriv]
-      rw [ih hftail hgtail]
-      exact partialDeriv_sub
-        (hfrest.differentiable one_ne_zero).differentiableAt
-        (hgrest.differentiable one_ne_zero).differentiableAt
+  have h := iteratedPartialDeriv_add_of_contDiff (n := n) (f := f - g) indices (hf.sub hg) hg
+  rw [sub_add_cancel] at h
+  funext x
+  exact eq_sub_of_add_eq (congrFun h x).symm
 
 /-- A constant scalar can be pulled through every iterated coordinate
 derivative. This identity needs no regularity hypothesis because Mathlib's

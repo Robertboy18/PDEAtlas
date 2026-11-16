@@ -49,28 +49,14 @@ theorem evenReflectListCoordinate_hasWeakDerivative
     HasWeakDerivativeOn (n := n) (Set.univ : Set (ℝ^n)) α
       (evenReflectListCoordinate (n := n) (m := m) U [] (Nat.zero_le m) :
         ℝ^n → ℝ)
-      (evenReflectListCoordinate (n := n) (m := m) U α hα : ℝ^n → ℝ) := by
-  let D : List (Fin n) → ℝ^n → ℝ := fun β ↦
-    if hβ : β.length ≤ m then
-      (evenReflectListCoordinate (n := n) (m := m) U β hβ : ℝ^n → ℝ)
-    else 0
-  have hD0 : LocallyIntegrableOn (D [])
-      (Set.univ : Set (ℝ^n)) volume := by
-    simpa [D] using memLp_locallyIntegrableOn_domain
+      (evenReflectListCoordinate (n := n) (m := m) U α hα : ℝ^n → ℝ) :=
+  hasWeakDerivativeOn_of_word_step n m
+    (fun β hβ ↦ (evenReflectListCoordinate (n := n) (m := m) U β hβ : ℝ^n → ℝ))
+    (memLp_locallyIntegrableOn_domain
       (MeasureTheory.Lp.memLp
         (evenReflectListCoordinate (n := n) (m := m) U [] (Nat.zero_le m)))
-      (by norm_num : (1 : ℝ≥0∞) ≤ 2)
-  have hstep : ∀ (β : List (Fin n)) (i : Fin n), β.length < m →
-      HasWeakDerivativeOn (n := n) (Set.univ : Set (ℝ^n)) [i]
-        (D β) (D (β ++ [i])) := by
-    intro β i hβ
-    have hβLe : β.length ≤ m := Nat.le_of_lt hβ
-    have hβiLe : (β ++ [i]).length ≤ m := by
-      simpa [List.length_append] using hβ
-    simpa [D, hβ, hβLe, hβiLe] using
-      evenReflectListCoordinate_step (n := n) (m := m) U htrace β hβ i
-  simpa [D, hα] using hasWeakDerivativeOn_of_append_single_chain_order
-    (n := n) (Ω := (Set.univ : Set (ℝ^n))) m D hD0 hstep α hα
+      (by norm_num : (1 : ℝ≥0∞) ≤ 2))
+    (fun β hβ i ↦ evenReflectListCoordinate_step (n := n) (m := m) U htrace β hβ i) α hα
 
 /-- The coordinatewise even-reflection bundle satisfies all global weak
 derivative identities under exactly the zero-trace hypotheses for odd-normal

@@ -6,6 +6,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Spaces.Sobolev.Boundary.Trace.HalfSpace.FiniteExponentCompletion
+import PDE.Spaces.Sobolev.Fractional.Domain.Slobodeckij.Basic
 
 /-!
 # Fractional trace bounds by smooth approximation
@@ -14,6 +15,8 @@ A uniform nonnegative Gagliardo estimate on globally compactly supported smooth 
 passes to the finite-exponent half-space trace. Boundary `Lᵖ` convergence gives an
 almost-everywhere convergent subsequence, and Fatou preserves the coordinate derivative
 energy and its constant. No fractional space or lifting is used.
+
+The Fatou step is `SobolevSpace.Fractional.lintegral_enorm_sub_rpow_div_le_liminf`.
 -/
 
 @[expose] public section
@@ -49,44 +52,6 @@ private theorem coordinate_enorm_rpow_eq_lintegral
     exact (lintegral_rpow_enorm_eq_rpow_eLpNorm' hp).symm
   exact hnorm.trans (lintegral_congr_ae (hv.mono fun x hx ↦
     congrArg (fun t : ℝ ↦ ‖t‖ₑ ^ p) hx))
-
-private theorem lintegral_sub_rpow_div_le_liminf
-    (n : ℕ) {p a : ℝ} (hp : 0 < p)
-    {f : ℕ → ℝ^n → ℝ} {g : ℝ^n → ℝ}
-    (hf : ∀ j, AEStronglyMeasurable (f j) (volume : Measure (ℝ^n)))
-    (hfg : ∀ᵐ x ∂(volume : Measure (ℝ^n)), Tendsto (fun j ↦ f j x) atTop (𝓝 (g x))) :
-    (∫⁻ z : ℝ^n × ℝ^n,
-      ‖g z.1 - g z.2‖ₑ ^ p / (ENNReal.ofReal ‖z.1 - z.2‖) ^ a
-      ∂((volume : Measure (ℝ^n)).prod volume)) ≤
-    atTop.liminf (fun j ↦
-      ∫⁻ z : ℝ^n × ℝ^n,
-        ‖f j z.1 - f j z.2‖ₑ ^ p / (ENNReal.ofReal ‖z.1 - z.2‖) ^ a
-        ∂((volume : Measure (ℝ^n)).prod volume)) := by
-  let F (v : ℝ^n → ℝ) (z : ℝ^n × ℝ^n) :=
-    ‖v z.1 - v z.2‖ₑ ^ p / (ENNReal.ofReal ‖z.1 - z.2‖) ^ a
-  have hmeas (j : ℕ) :
-      AEMeasurable (F (f j)) ((volume : Measure (ℝ^n)).prod volume) := by
-    exact (((hf j).aemeasurable.comp_fst.sub (hf j).aemeasurable.comp_snd).enorm.pow_const p).div
-      (((measurable_fst.sub measurable_snd).norm.ennreal_ofReal).pow_const a).aemeasurable
-  have hfst := (Measure.quasiMeasurePreserving_fst
-    (μ := (volume : Measure (ℝ^n))) (ν := (volume : Measure (ℝ^n)))).ae hfg
-  have hsnd := (Measure.quasiMeasurePreserving_snd
-    (μ := (volume : Measure (ℝ^n))) (ν := (volume : Measure (ℝ^n)))).ae hfg
-  have hlim : ∀ᵐ z ∂((volume : Measure (ℝ^n)).prod volume),
-      Tendsto (fun j ↦ F (f j) z) atTop (𝓝 (F g z)) := by
-    filter_upwards [hfst, hsnd] with z hz₁ hz₂
-    by_cases hz : z.1 = z.2
-    · simp [F, hz, ENNReal.zero_rpow_of_pos hp]
-    · apply ENNReal.Tendsto.div_const
-        ((ENNReal.continuous_rpow_const.tendsto _).comp (hz₁.sub hz₂).enorm)
-      exact Or.inr (ENNReal.rpow_pos
-        (ENNReal.ofReal_pos.mpr (norm_pos_iff.mpr (sub_ne_zero.mpr hz)))
-        ENNReal.ofReal_ne_top).ne'
-  calc
-    _ = ∫⁻ z, atTop.liminf (fun j ↦ F (f j) z)
-        ∂((volume : Measure (ℝ^n)).prod volume) :=
-      lintegral_congr_ae (hlim.mono fun z hz ↦ hz.liminf_eq.symm)
-    _ ≤ _ := lintegral_liminf_le' hmeas
 
 /-- A uniform smooth fractional trace estimate passes to the completed `W¹ᵖ` trace.
 
@@ -158,7 +123,7 @@ theorem lintegral_traceLp_sub_rpow_div_le_of_smooth
       (hcorelim.comp hns.tendsto_atTop)).enorm.ennrpow_const p
   calc
     energy (T u) ≤ atTop.liminf (fun j ↦ energy (T (core (φ (ns j))))) :=
-      lintegral_sub_rpow_div_le_liminf n (zero_lt_one.trans hp)
+      Fractional.lintegral_enorm_sub_rpow_div_le_liminf n (zero_lt_one.trans hp)
         (fun j ↦ Lp.aestronglyMeasurable _) hlim
     _ ≤ atTop.liminf (fun j ↦ bound (core (φ (ns j)))) :=
       Filter.liminf_le_liminf (Eventually.of_forall fun j ↦ hbound (φ (ns j)))

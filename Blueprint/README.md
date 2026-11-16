@@ -1,7 +1,7 @@
-# LeanPDE Blueprint
+# PDEAtlas Blueprint
 
 The Blueprint contains the mathematical exposition, theorem statements, proof
-ideas, and references for LeanPDE. The chapters follow selected material from
+ideas, and references for PDEAtlas. The chapters follow selected material from
 Evans's *Partial Differential Equations*, second edition, with additional fluid
 mechanics and verified computation.
 
@@ -35,7 +35,14 @@ SymLean's README explains the two profiles under
 An optional first argument selects another output directory under `_out/`.
 To make source references link to a public checkout, set
 `LEANPDE_PUBLIC_REPOSITORY_URL` before building. The build records the current
-commit unless `LEANPDE_SOURCE_REVISION` is supplied explicitly.
+commit unless `LEANPDE_SOURCE_REVISION` is supplied explicitly. The links from
+declarations to their sources are fixed earlier, when the chapters are compiled
+(see [Publishing on GitHub Pages](#publishing-on-github-pages)).
+
+`Tools/optimize-site.mjs`, the post-processor of this build, was written for
+the former title of the book: it looks for the heading text `LeanPDE` on every
+page, stops when a page does not have it, and composes the former logo. Until
+it follows the new title, render the site with the script below.
 
 On a machine without Node.js:
 
@@ -47,11 +54,14 @@ This writes `_out/site-no-node/html-multi` with the same libraries, renderer and
 dependency atlas, and leaves out the three Node.js steps. It compiles the
 committed textbook map without regenerating it, and it does not run the two
 post-processors described [below](#generated-data-and-assets). The pages
-therefore keep Verso's own shell: the logo, the theme button, the section rail,
-the "Proof map" actions, the Introduction notebook, the learning features and
-the typeset figure labels are absent, and the proof panels stay inside the
-pages. The script does not download the Mathlib cache. Set `LEANPDE_LAKE` to run
-every Lake call, and the renderer, through a launcher of your own.
+therefore keep Verso's own shell: the theme button, the section rail, the
+"Proof map" actions, the Introduction notebook, the learning features and the
+typeset figure labels are absent, and the proof panels stay inside the pages.
+`Tools/add-wordmark.py` puts the wordmark into the sidebar title and the top
+bar of every page that carries the title of the book; Verso's `find/` redirect
+page keeps its own title. The script does not download the Mathlib cache. Set
+`LEANPDE_LAKE` to run every Lake call, and the renderer, through a launcher of
+your own.
 
 ## Publishing on GitHub Pages
 
@@ -70,6 +80,21 @@ and in the HTML cache), names every source by its path in the repository, and
 has an empty `.nojekyll`. The script stops if a file over 100 MB, or an
 absolute path of the checkout, of a dependency or of your home directory, is
 left. Pass `_out/site-no-node/html-multi` for a site built without Node.js.
+
+The link from a declaration to its source is fixed when its chapter is
+compiled, not when the site is rendered. VersoBlueprint takes the repository
+from the `origin` remote of the checkout and the revision from its current
+commit, and it finds the source file through `LEAN_SRC_PATH`, which the build
+scripts set for the chapter build. A chapter that was compiled earlier, by a
+plain `lake build Blueprint`, or in a checkout whose `origin` is another
+repository keeps what it got then: an older commit, no link, or the other
+repository. Lake does not recompile it for that. For a site whose links name
+the published commit, compile the chapters afresh in a checkout of the public
+repository at that commit. `LEANPDE_PUBLIC_REPOSITORY_URL` and
+`LEANPDE_SOURCE_REVISION` do not change these compiled links. They set the
+links of the tables that the Blueprint commands render themselves (the
+computation ledger, the textbook map and the certified plots) and, in the
+build with Node.js, the repository link of the site shell.
 
 ## Chapters
 

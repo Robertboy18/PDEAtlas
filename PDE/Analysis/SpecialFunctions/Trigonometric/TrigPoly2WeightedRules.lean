@@ -11,9 +11,10 @@ public import PDE.Analysis.SpecialFunctions.Trigonometric.TrigPoly2QuotientParit
 /-!
 # Exact rules for products of tables of different degrees, with the weight `cos β`
 
-The quadrant rules for `∫₀^{π/2}∫₀^{π/2} (∑_c p_c q_c) sin θ` hold for tables `p_c` and `q_c` of
-different degrees: the product has the sum of the degrees, so the trapezoid rule in `β` needs
-`(Mβ + Nβ) / 2 < 2N` (`integral_integral_sum_mul_mul_sin_eq_rule_of_le`).
+The quadrant rule for `∫₀^{π/2}∫₀^{π/2} (∑_c p_c q_c) sin θ` with tables `p_c` and `q_c` of
+different degrees is `integral_integral_sum_mul_mul_sin_eq_rule_of_le` in
+`PDE.Analysis.SpecialFunctions.Trigonometric.TrigPoly2QuotientParity`. This module adds the
+weight `cos β`.
 
 A product that is odd about `β = π/2` is `cos β` times a product that is even about `0` and about
 `π/2`. Its integral over the quadrant follows from the sine rule after the substitution
@@ -95,30 +96,6 @@ theorem eval_dθ_mul_cos_β {q : TrigPoly2 Nβ Nθ R} {p : TrigPoly2 Mβ Mθ R}
   have hq := (hasDerivAt_eval_θ q β θ).mul_const (Real.cos β)
   rw [show (fun t ↦ q.eval β t * Real.cos β) = p.eval β from funext (h β)] at hq
   exact hq.unique (hasDerivAt_eval_θ p β θ)
-
-/-- **Exact rule for products of tables of different degrees.** -/
-theorem integral_integral_sum_mul_mul_sin_eq_rule_of_le {ι : Type*} (s : Finset ι)
-    (p : ι → TrigPoly2 Mβ Mθ R) (q : ι → TrigPoly2 Nβ Nθ R) {N P : ℕ}
-    (hN : (Mβ + Nβ) / 2 < 2 * N) (hP : 0 < P) (hMP : (Mθ + Nθ) / 2 ≤ P)
-    (hβ0 : ∀ c ∈ s, ∃ e, ParityAtβ 0 e (p c) ∧ ParityAtβ 0 e (q c))
-    (hβπ : ∀ c ∈ s, ∃ e, ParityAtβ (Real.pi / 2) e (p c) ∧ ParityAtβ (Real.pi / 2) e (q c))
-    (hθ0 : ∀ c ∈ s, ∃ e, ParityAtθ 0 e (p c) ∧ ParityAtθ 0 e (q c))
-    (hθπ : ∀ c ∈ s, ∃ e, ParityAtθ (Real.pi / 2) e (p c) ∧ ParityAtθ (Real.pi / 2) e (q c)) :
-    ∫ β in (0 : ℝ)..(Real.pi / 2), ∫ θ in (0 : ℝ)..(Real.pi / 2),
-        (∑ c ∈ s, (p c).eval β θ * (q c).eval β θ) * Real.sin θ =
-      ∑ j : Fin (N + 1), ∑ n : Fin (P + 1), quarterTrapezoidWeight N j * quarterSinWeight P n *
-        ∑ c ∈ s, (p c).eval (j * Real.pi / (2 * N)) (n * Real.pi / (2 * P)) *
-          (q c).eval (j * Real.pi / (2 * N)) (n * Real.pi / (2 * P)) := by
-  have hf : ∀ β θ, ∑ c ∈ s, (p c).eval β θ * (q c).eval β θ =
-      ∑ c ∈ s, ((p c).mul (q c)).eval β θ := fun β θ ↦ by simp only [eval_mul]
-  simp only [hf]
-  refine integral_integral_mul_sin_eq_rule (f := fun β θ ↦ ∑ c ∈ s, ((p c).mul (q c)).eval β θ)
-    hN hP hMP (fun θ ↦ IsEvenCosineSeries.sum s fun c hc ↦ ?_)
-    (fun β ↦ IsEvenCosineSeries.sum s fun c hc ↦ ?_)
-  · exact isEvenCosineSeries_β (isEvenAtβ_mul_of_parity (hβ0 c hc))
-      (isEvenAtβ_mul_of_parity (hβπ c hc)) θ
-  · exact isEvenCosineSeries_θ (isEvenAtθ_mul_of_parity (hθ0 c hc))
-      (isEvenAtθ_mul_of_parity (hθπ c hc)) β
 
 /-- **Exact rule with the weight `cos β`.** For families `p`, `q` with componentwise equal
 parities about `0` and `π/2` in each variable, `∫∫ cos β (∑_c p_c q_c) sin θ` over `[0, π/2]²` is

@@ -7,6 +7,8 @@ Authors: LeanPDE Team
 module
 
 public import Mathlib.Analysis.Calculus.ContDiff.Defs
+import Mathlib.Analysis.Calculus.Deriv.Add
+import Mathlib.Analysis.Calculus.Deriv.Comp
 
 /-!
 # First-order reflection of a time-dependent field across time zero
@@ -28,9 +30,11 @@ two-sided derivatives used by classical solution predicates on `[0, T)`.
 ## Main results
 
 * `hasFDerivAt_reflectTimeZero`: the derivative at a point of the initial slice.
-* `differentiableAt_reflectTimeZero`, `contDiffOn_reflectTimeZero`, `deriv_reflectTimeZero`, and
-  `differentiableAt_reflectTimeZero_of_Ico`, `deriv_reflectTimeZero_of_Ico` for fields given on a
-  finite interval of times `[0, q)`.
+* `differentiableAt_reflectTimeZero`, `contDiffOn_reflectTimeZero`, and
+  `differentiableAt_reflectTimeZero_of_Ico` for fields given on a finite interval of times
+  `[0, q)`.
+* `deriv_reflectTimeZero`: at every `τ ≥ 0` where `f x` is differentiable, the time derivative
+  of the reflection is that of `f x`. No joint regularity is needed for this.
 -/
 
 @[expose] public section
@@ -125,20 +129,31 @@ theorem contDiffOn_reflectTimeZero {n : WithTop ℕ∞}
     ContDiffOn ℝ n (uncurry (reflectTimeZero f)) (univ ×ˢ Ici 0) :=
   hf.congr fun _ hp ↦ reflectTimeZero_of_nonneg f hp.2
 
-/-- At nonnegative times the time derivatives of the reflection are those of `f`. -/
-theorem deriv_reflectTimeZero (hf : DifferentiableOn ℝ (uncurry f) (univ ×ˢ Ici 0)) {x : E}
-    {τ : ℝ} (hτ : 0 ≤ τ) (hx : DifferentiableAt ℝ (f x) τ) :
+omit [NormedAddCommGroup E] [NormedSpace ℝ E] in
+/-- At nonnegative times the time derivatives of the reflection are those of `f`: if `f x` is
+differentiable at `τ ≥ 0`, then `deriv (reflectTimeZero f x) τ = deriv (f x) τ`. Nothing is asked
+of `f` at other points `x`. At `τ = 0` the branch `2 f x 0 - f x (-s)` of the reflection has the
+same derivative from the left. -/
+theorem deriv_reflectTimeZero {x : E} {τ : ℝ} (hτ : 0 ≤ τ) (hx : DifferentiableAt ℝ (f x) τ) :
     deriv (reflectTimeZero f x) τ = deriv (f x) τ := by
-  have hslice : DifferentiableAt ℝ (reflectTimeZero f x) τ := by
-    have h := differentiableAt_reflectTimeZero hf (x := x) hτ
-    have hpath : DifferentiableAt ℝ (fun s : ℝ ↦ (x, s)) τ :=
-      (differentiableAt_const x).prodMk differentiableAt_id
-    exact h.comp τ hpath
-  have h₁ := hslice.hasDerivAt.hasDerivWithinAt (s := Ici τ)
-  have h₂ : HasDerivWithinAt (reflectTimeZero f x) (deriv (f x) τ) (Ici τ) τ :=
-    hx.hasDerivAt.hasDerivWithinAt.congr_of_mem
-      (fun s hs ↦ reflectTimeZero_of_nonneg f (hτ.trans hs)) self_mem_Ici
-  exact (uniqueDiffWithinAt_Ici τ).eq_deriv _ h₁ h₂
+  rcases hτ.eq_or_lt with rfl | hτ
+  · have hd := hx.hasDerivAt
+    have hup : HasDerivWithinAt (reflectTimeZero f x) (deriv (f x) 0) (Ici 0) 0 :=
+      hd.hasDerivWithinAt.congr_of_mem (fun s hs ↦ reflectTimeZero_of_nonneg f hs) self_mem_Ici
+    have hneg : HasDerivAt (fun s : ℝ ↦ f x (-s)) (-deriv (f x) 0) 0 := by
+      have h := HasDerivAt.scomp (0 : ℝ) (by simpa only [neg_zero] using hd)
+        (hasDerivAt_neg (0 : ℝ))
+      simpa only [neg_smul, one_smul, Function.comp_def] using h
+    have hdown : HasDerivWithinAt (reflectTimeZero f x) (deriv (f x) 0) (Iic 0) 0 := by
+      have h := ((hasDerivAt_const (0 : ℝ) ((2 : ℝ) • f x 0)).sub hneg).hasDerivWithinAt
+        (s := Iic 0)
+      rw [zero_sub, neg_neg] at h
+      exact h.congr_of_mem (fun s hs ↦ reflectTimeZero_of_nonpos f hs) self_mem_Iic
+    have h := hup.union hdown
+    rw [Ici_union_Iic, hasDerivWithinAt_univ] at h
+    exact h.deriv
+  · exact Filter.EventuallyEq.deriv_eq (Filter.mem_of_superset (Ioi_mem_nhds hτ)
+      fun s hs ↦ reflectTimeZero_of_nonneg f (le_of_lt hs))
 
 /-- A field differentiable within `E × [0, q)` has a reflection that is differentiable at every
 point with time in `[0, q)`. -/
@@ -157,22 +172,5 @@ theorem differentiableAt_reflectTimeZero_of_Ico {q : ℝ}
       hf.differentiableAt (Filter.mem_of_superset hmem (prod_mono le_rfl Ioo_subset_Ico_self))
     refine hd.congr_of_eventuallyEq (Filter.mem_of_superset hmem fun p hp ↦ ?_)
     exact reflectTimeZero_of_nonneg f (le_of_lt hp.2.1)
-
-/-- At times of `[0, q)` the time derivatives of the reflection of a field differentiable within
-`E × [0, q)` are those of the field. -/
-theorem deriv_reflectTimeZero_of_Ico {q : ℝ}
-    (hf : DifferentiableOn ℝ (uncurry f) (univ ×ˢ Ico 0 q)) {x : E} {τ : ℝ} (hτ : τ ∈ Ico 0 q)
-    (hx : DifferentiableAt ℝ (f x) τ) :
-    deriv (reflectTimeZero f x) τ = deriv (f x) τ := by
-  have hslice : DifferentiableAt ℝ (reflectTimeZero f x) τ := by
-    have h := differentiableAt_reflectTimeZero_of_Ico hf (x := x) hτ
-    have hpath : DifferentiableAt ℝ (fun s : ℝ ↦ (x, s)) τ :=
-      (differentiableAt_const x).prodMk differentiableAt_id
-    exact h.comp τ hpath
-  have h₁ := hslice.hasDerivAt.hasDerivWithinAt (s := Ici τ)
-  have h₂ : HasDerivWithinAt (reflectTimeZero f x) (deriv (f x) τ) (Ici τ) τ :=
-    hx.hasDerivAt.hasDerivWithinAt.congr_of_mem
-      (fun s hs ↦ reflectTimeZero_of_nonneg f (hτ.1.trans hs)) self_mem_Ici
-  exact (uniqueDiffWithinAt_Ici τ).eq_deriv _ h₁ h₂
 
 end PDE.Analysis

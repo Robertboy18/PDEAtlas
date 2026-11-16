@@ -736,6 +736,53 @@ noncomputable def localizedPullbackCLM
       localizedPullbackLp (n := n) (p := p) hE hEsymm hK hKsub u :=
   rfl
 
+omit [Fact (1 ≤ p)] in
+/-- Transfer of the first-order weak chain rule from measurable representatives to arbitrary
+ones. Let `u` and the `du j` lie in `L^p(E.target)` with `du j` the weak `j`-th derivative of
+`u`. If the chain rule holds for every measurable `L^p` pair `v`, `dv` with the same
+weak-derivative relation, then it holds for `u` and `du`: the `AEMeasurable.mk` representatives
+satisfy the hypotheses, and composition with `E` preserves almost-everywhere equality because
+`E` is quasi-measure-preserving. -/
+private theorem hasWeakDerivativeOn_comp_partialHomeomorph_of_measurable
+    {E : OpenPartialHomeomorph (ℝ^n) (ℝ^n)}
+    (hE : ContDiff ℝ 1 (fun x ↦ E x)) (hEsymm : ContDiff ℝ 1 (fun x ↦ E.symm x))
+    {u : ℝ^n → ℝ} (huLp : MeasureTheory.MemLp u p (domainMeasure n E.target))
+    {du : Fin n → ℝ^n → ℝ} (hduLp : ∀ j, MeasureTheory.MemLp (du j) p (domainMeasure n E.target))
+    (hweak : ∀ j, HasWeakDerivativeOn (n := n) E.target [j] u (du j))
+    (hmeasurable : ∀ {v : ℝ^n → ℝ} {dv : Fin n → ℝ^n → ℝ}, Measurable v →
+      MeasureTheory.MemLp v p (domainMeasure n E.target) → (∀ j, Measurable (dv j)) →
+      (∀ j, MeasureTheory.MemLp (dv j) p (domainMeasure n E.target)) →
+      (∀ j, HasWeakDerivativeOn (n := n) E.target [j] v (dv j)) →
+      ∀ i, HasWeakDerivativeOn (n := n) E.source [i] (fun x ↦ v (E x))
+        (fun x ↦ ∑ j : Fin n, dv j (E x) * (∂[i] (fun z ↦ E z)) x j)) :
+    ∀ i, HasWeakDerivativeOn (n := n) E.source [i] (fun x ↦ u (E x))
+      (fun x ↦ ∑ j : Fin n, du j (E x) * (∂[i] (fun z ↦ E z)) x j) := by
+  let μt : Measure (ℝ^n) := domainMeasure n E.target
+  -- measurable representatives on `E.target`
+  let u' : ℝ^n → ℝ := huLp.aemeasurable.mk u
+  have hu_ae : u =ᵐ[μt] u' := huLp.aemeasurable.ae_eq_mk
+  let du' : Fin n → ℝ^n → ℝ := fun j ↦ (hduLp j).aemeasurable.mk (du j)
+  have hdu_ae (j : Fin n) : du j =ᵐ[μt] du' j := (hduLp j).aemeasurable.ae_eq_mk
+  have hmain := hmeasurable huLp.aemeasurable.measurable_mk
+    ((MeasureTheory.memLp_congr_ae (μ := μt) hu_ae).1 huLp)
+    (fun j ↦ (hduLp j).aemeasurable.measurable_mk)
+    (fun j ↦ (MeasureTheory.memLp_congr_ae (μ := μt) (hdu_ae j)).1 (hduLp j))
+    fun j ↦ (SobolevSpace.hasWeakDerivativeOn_congr_ae (n := n) (Ω := E.target)
+      (α := ([j] : List (Fin n))) hu_ae (hdu_ae j)).1 (hweak j)
+  -- pull the a.e. equalities back through `E` and transfer the identity to `u`
+  have hqmp : MeasureTheory.QuasiMeasurePreserving (fun x ↦ E x)
+      (domainMeasure n E.source) (domainMeasure n E.target) :=
+    quasiMeasurePreserving_partialHomeomorph (n := n) (E := E) hE hEsymm
+  intro i
+  have hsum :
+      (fun x ↦ ∑ j : Fin n, du' j (E x) * (∂[i] (fun z ↦ E z)) x j)
+        =ᵐ[domainMeasure n E.source]
+        fun x ↦ ∑ j : Fin n, du j (E x) * (∂[i] (fun z ↦ E z)) x j := by
+    filter_upwards [MeasureTheory.ae_all_iff.2 fun j ↦ hqmp.ae_eq_comp (hdu_ae j)] with x hx
+    exact Finset.sum_congr rfl fun j _ ↦ by rw [show du' j (E x) = du j (E x) from (hx j).symm]
+  exact (SobolevSpace.hasWeakDerivativeOn_congr_ae (n := n) (Ω := E.source)
+    (α := ([i] : List (Fin n))) (hqmp.ae_eq_comp hu_ae).symm hsum).1 (hmain i)
+
 /-- Finite-exponent weak chain rule without global measurability assumptions
 on the chosen representatives. No finite-volume hypothesis is needed. -/
 theorem hasWeakDerivativeOn_comp_partialHomeomorph_W1p_of_memLp
@@ -751,72 +798,10 @@ theorem hasWeakDerivativeOn_comp_partialHomeomorph_W1p_of_memLp
       HasWeakDerivativeOn (n := n) E.source [i] (fun x ↦ u (E x))
         (fun x ↦ ∑ j : Fin n, du j (E x) *
           ((fderiv ℝ (fun x ↦ E x) x)
-            (EuclideanSpace.single i (1 : ℝ))) j) := by
-  classical
-  let μt : Measure (ℝ^n) := domainMeasure n E.target
-  let u' : ℝ^n → ℝ := huLp.aemeasurable.mk u
-  have hu_ae : u =ᵐ[μt] u' := huLp.aemeasurable.ae_eq_mk
-  have hu'_meas : Measurable u' := huLp.aemeasurable.measurable_mk
-  have hu'_Lp : MeasureTheory.MemLp u' p μt :=
-    (MeasureTheory.memLp_congr_ae (μ := μt) hu_ae).1 huLp
-  let du' : Fin n → ℝ^n → ℝ :=
-    fun j ↦ (hduLp j).aemeasurable.mk (du j)
-  have hdu'_meas : ∀ j, Measurable (du' j) :=
-    fun j ↦ (hduLp j).aemeasurable.measurable_mk
-  have hdu'_Lp : ∀ j, MeasureTheory.MemLp (du' j) p μt := by
-    intro j
-    have hAE : du j =ᵐ[μt] du' j :=
-      (hduLp j).aemeasurable.ae_eq_mk
-    exact (MeasureTheory.memLp_congr_ae (μ := μt) hAE).1 (hduLp j)
-  have hweak' : ∀ j, HasWeakDerivativeOn (n := n) E.target [j] u' (du' j) := by
-    intro j
-    have hAEd : du j =ᵐ[μt] du' j :=
-      (hduLp j).aemeasurable.ae_eq_mk
-    exact
-      ((SobolevSpace.hasWeakDerivativeOn_congr_ae
-        (n := n) (Ω := E.target) (α := ([j] : List (Fin n)))
-        (f := u) (g := u') (f' := du j) (g' := du' j) hu_ae hAEd).1 (hweak j))
-  have hmain : ∀ i,
-      HasWeakDerivativeOn (n := n) E.source [i]
-        (fun x ↦ u' (E x))
-        (fun x ↦ ∑ j : Fin n, du' j (E x) *
-          ((fderiv ℝ (fun x ↦ E x) x)
             (EuclideanSpace.single i (1 : ℝ))) j) :=
-    hasWeakDerivativeOn_comp_partialHomeomorph_W1p
-      (n := n) (p := p) μ hp hE hEsymm hu'_meas hu'_Lp
-      hdu'_meas hdu'_Lp hweak'
-  have hqmp : MeasureTheory.QuasiMeasurePreserving (fun x ↦ E x)
-      (domainMeasure n E.source) (domainMeasure n E.target) :=
-    quasiMeasurePreserving_partialHomeomorph (n := n) (E := E) hE hEsymm
-  intro i
-  have hu_comp : (fun x ↦ u' (E x)) =ᵐ[domainMeasure n E.source]
-      fun x ↦ u (E x) := (hqmp.ae_eq_comp hu_ae).symm
-  have hdu_comp : ∀ j,
-      (fun x ↦ du' j (E x)) =ᵐ[domainMeasure n E.source]
-        fun x ↦ du j (E x) := by
-    intro j
-    exact (hqmp.ae_eq_comp ((hduLp j).aemeasurable.ae_eq_mk)).symm
-  have hsum :
-      (fun x ↦ ∑ j : Fin n, du' j (E x) *
-        ((fderiv ℝ (fun x ↦ E x) x)
-          (EuclideanSpace.single i (1 : ℝ))) j) =ᵐ[domainMeasure n E.source]
-      fun x ↦ ∑ j : Fin n, du j (E x) *
-        ((fderiv ℝ (fun x ↦ E x) x)
-          (EuclideanSpace.single i (1 : ℝ))) j := by
-    have hall : ∀ᵐ x ∂domainMeasure n E.source,
-        ∀ j : Fin n, du' j (E x) = du j (E x) :=
-      (MeasureTheory.ae_all_iff.2 hdu_comp)
-    filter_upwards [hall] with x hx
-    simp [hx]
-  exact
-    ((SobolevSpace.hasWeakDerivativeOn_congr_ae
-      (n := n) (Ω := E.source) (α := ([i] : List (Fin n)))
-      (f := fun x ↦ u' (E x)) (g := fun x ↦ u (E x))
-      (f' := fun x ↦ ∑ j : Fin n, du' j (E x) *
-        ((fderiv ℝ (fun x ↦ E x) x) (EuclideanSpace.single i (1 : ℝ))) j)
-      (g' := fun x ↦ ∑ j : Fin n, du j (E x) *
-        ((fderiv ℝ (fun x ↦ E x) x) (EuclideanSpace.single i (1 : ℝ))) j)
-      hu_comp hsum).1 (hmain i))
+  hasWeakDerivativeOn_comp_partialHomeomorph_of_measurable hE hEsymm huLp hduLp hweak
+    fun hv hvLp hdv hdvLp hw ↦ hasWeakDerivativeOn_comp_partialHomeomorph_W1p
+      (n := n) (p := p) μ hp hE hEsymm hv hvLp hdv hdvLp hw
 
 /-- The first-order weak chain rule for every exponent `1 ≤ p ≤ ∞` on a finite-volume target,
 for arbitrary (not necessarily measurable) representatives `u` and `du j`. Measurable
@@ -834,77 +819,10 @@ theorem hasWeakDerivativeOn_comp_partialHomeomorph_W1_of_memLp
     ∀ i,
       HasWeakDerivativeOn (n := n) E.source [i] (fun x ↦ u (E x))
         (fun x ↦ ∑ j : Fin n, du j (E x) *
-          (∂[i] (fun z ↦ E z)) x j) := by
-  classical
-  let μt : Measure (ℝ^n) := domainMeasure n E.target
-  -- replace by measurable representatives on `E.target`
-  let u' : ℝ^n → ℝ := huLp.aemeasurable.mk u
-  have hu_ae : u =ᵐ[μt] u' := huLp.aemeasurable.ae_eq_mk
-  have hu'_meas : Measurable u' := huLp.aemeasurable.measurable_mk
-  have hu'_Lp : MeasureTheory.MemLp u' p μt :=
-    (MeasureTheory.memLp_congr_ae (μ := μt) hu_ae).1 huLp
-  let du' : Fin n → ℝ^n → ℝ := fun j ↦ (hduLp j).aemeasurable.mk (du j)
-  have hdu'_meas : ∀ j, Measurable (du' j) := fun j ↦ (hduLp j).aemeasurable.measurable_mk
-  have hdu'_Lp : ∀ j, MeasureTheory.MemLp (du' j) p μt := by
-    intro j
-    have hAE : (du j) =ᵐ[μt] (du' j) := (hduLp j).aemeasurable.ae_eq_mk
-    exact (MeasureTheory.memLp_congr_ae (μ := μt) hAE).1 (hduLp j)
-  have hweak' : ∀ j, HasWeakDerivativeOn (n := n) E.target [j] u' (du' j) := by
-    intro j
-    have hAEd : du j =ᵐ[μt] du' j := (hduLp j).aemeasurable.ae_eq_mk
-    exact
-      ((SobolevSpace.hasWeakDerivativeOn_congr_ae
-        (n := n) (Ω := E.target) (α := ([j] : List (Fin n)))
-        (f := u) (g := u') (f' := du j) (g' := du' j) hu_ae hAEd).1 (hweak j))
-  -- The measurable representatives satisfy the preceding chain rule.
-  have hmain :
-      ∀ i,
-        HasWeakDerivativeOn (n := n) E.source [i] (fun x ↦ u' (E x))
-          (fun x ↦
-            ∑ j : Fin n, du' j (E x) *
-              ((fderiv ℝ (fun x ↦ E x) x) (EuclideanSpace.single i (1 : ℝ))) j) := by
-    exact
-      hasWeakDerivativeOn_comp_partialHomeomorph_W1 (n := n) (p := p) (μ := μ) (E := E)
-        hE hEsymm hvol_target (u := u') hu'_meas hu'_Lp (du := du') hdu'_meas hdu'_Lp hweak'
-  -- pull back the a.e. equalities through `E` and transfer the identity to `u`
-  have hqmp :
-      MeasureTheory.QuasiMeasurePreserving (fun x ↦ E x)
-        (domainMeasure n E.source) (domainMeasure n E.target) :=
-    quasiMeasurePreserving_partialHomeomorph (n := n) (E := E) hE hEsymm
-  intro i
-  have hu_comp : (fun x ↦ u' (E x)) =ᵐ[domainMeasure n E.source] fun x ↦ u (E x) :=
-    (hqmp.ae_eq_comp hu_ae).symm
-  have hdu_comp : ∀ j,
-      (fun x ↦ du' j (E x)) =ᵐ[domainMeasure n E.source] fun x ↦ du j (E x) := by
-    intro j
-    have hAE : (du j) =ᵐ[μt] (du' j) := (hduLp j).aemeasurable.ae_eq_mk
-    exact (hqmp.ae_eq_comp hAE).symm
-  have hsum :
-      (fun x ↦
-          ∑ j : Fin n, du' j (E x) *
-            ((fderiv ℝ (fun x ↦ E x) x) (EuclideanSpace.single i (1 : ℝ))) j)
-        =ᵐ[domainMeasure n E.source]
-        fun x ↦
-          ∑ j : Fin n, du j (E x) *
-            ((fderiv ℝ (fun x ↦ E x) x) (EuclideanSpace.single i (1 : ℝ))) j := by
-    have hall :
-        ∀ᵐ x ∂ domainMeasure n E.source, ∀ j : Fin n, du' j (E x) = du j (E x) :=
-      (MeasureTheory.ae_all_iff.2 fun j ↦ hdu_comp j)
-    refine hall.mono ?_
-    intro x hx
-    simp [hx]
-  -- replace both `u' ∘ E` and the derivative term by a.e. equal functions
-  exact
-    ((SobolevSpace.hasWeakDerivativeOn_congr_ae
-      (n := n) (Ω := E.source) (α := ([i] : List (Fin n)))
-      (f := fun x ↦ u' (E x)) (g := fun x ↦ u (E x))
-      (f' := fun x ↦
-        ∑ j : Fin n, du' j (E x) *
-          ((fderiv ℝ (fun x ↦ E x) x) (EuclideanSpace.single i (1 : ℝ))) j)
-      (g' := fun x ↦
-        ∑ j : Fin n, du j (E x) *
-          ((fderiv ℝ (fun x ↦ E x) x) (EuclideanSpace.single i (1 : ℝ))) j)
-      hu_comp hsum).1 (hmain i))
+          (∂[i] (fun z ↦ E z)) x j) :=
+  hasWeakDerivativeOn_comp_partialHomeomorph_of_measurable hE hEsymm huLp hduLp hweak
+    fun hv hvLp hdv hdvLp hw ↦ hasWeakDerivativeOn_comp_partialHomeomorph_W1
+      (n := n) (p := p) (μ := μ) hE hEsymm hvol_target hv hvLp hdv hdvLp hw
 
 end WeakChangeOfVariables
 

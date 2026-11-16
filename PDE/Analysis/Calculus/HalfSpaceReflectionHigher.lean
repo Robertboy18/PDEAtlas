@@ -556,31 +556,9 @@ reflection of every order `K ≥ k`. -/
 theorem contDiff_weightedReflectionFun_of_le (i : Fin n) {k K : ℕ} (hk : 1 ≤ k) (hkK : k ≤ K)
     {f : ℝ^n → ℝ} (hf : ContDiffOn ℝ k f {x | 0 ≤ x i}) :
     ContDiff ℝ k (weightedReflectionFun i K f) := by
-  classical
   obtain ⟨m, rfl⟩ : ∃ m, k = m + 1 := ⟨k - 1, by omega⟩
-  let D := fderivWithin ℝ f {x : ℝ^n | 0 ≤ x i}
-  have hD : ContDiffOn ℝ m D {x | 0 ≤ x i} :=
-    hf.fderivWithin (uniqueDiffOn_coordinateHalfSpace i) (by push_cast; exact le_rfl)
-  have hext (j : Fin n) : ∃ G : ℝ^n → ℝ, ContDiff ℝ m G ∧
-      EqOn G (fun x ↦ D x (EuclideanSpace.single j 1)) {x | 0 ≤ x i} :=
-    exists_contDiff_extension_halfSpace i m (hD.clm_apply contDiffOn_const)
-  choose G hG hGeq using hext
-  let L : ℝ^n → (ℝ^n →L[ℝ] ℝ) := fun x ↦ ∑ j, G j x • EuclideanSpace.proj j
-  have hL : ContDiff ℝ m L := ContDiff.sum (fun j _ ↦ (hG j).smul_const _)
-  have hLeq (x : ℝ^n) (hx : 0 ≤ x i) : L x = D x := by
-    ext v
-    have hv : v = ∑ j, v j • EuclideanSpace.single j 1 := by
-      ext j
-      simp [Pi.single_apply]
-    change (∑ j, G j x • EuclideanSpace.proj j) v = D x v
-    conv_rhs => rw [hv]
-    simp only [sum_apply, smul_apply,
-      EuclideanSpace.coe_proj, map_sum, map_smul, smul_eq_mul]
-    exact Finset.sum_congr rfl (fun j _ ↦ by rw [hGeq j hx, mul_comm])
-  have h := contDiff_succ_weightedReflectionFun_of_le i hkK hL (fun x hx ↦ by
-    rw [hLeq x hx]
-    exact (hf.differentiableOn (by simp) x hx).hasFDerivWithinAt)
-  exact_mod_cast h
+  obtain ⟨L, hL, hLf⟩ := exists_contDiff_fderivWithin_halfSpace i hf
+  exact_mod_cast contDiff_succ_weightedReflectionFun_of_le i hkK hL hLf
 
 
 end PDE.Analysis

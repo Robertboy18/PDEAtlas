@@ -7,6 +7,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Hyperbolic.Models.Wave.Kirchhoff.ClassicalSolution
+import PDE.Analysis.Normed.Group.CompactSupport
 import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.FreeWave
 import CAS.ExactTactic
 
@@ -152,13 +153,11 @@ closed forward slab. The bound follows from finite propagation and compactness. 
 theorem exists_bound_cauchyFreeField_of_compact_data {g h : ℝ^3 → ℝ} (hg : ContDiff ℝ 2 g)
     (hh : ContDiff ℝ 1 h) (hgs : HasCompactSupport g) (hhs : HasCompactSupport h) (S : ℝ) :
     ∃ B : ℝ, 0 ≤ B ∧ ∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 S → |cauchyFreeField g h p| ≤ B := by
-  obtain ⟨Rg, _, hgR⟩ := hgs.exists_pos_le_norm
-  obtain ⟨Rh, _, hhR⟩ := hhs.exists_pos_le_norm
+  obtain ⟨R, -, hgR, hhR⟩ := hgs.exists_common_radius hhs
   obtain ⟨B, hB, hbound⟩ := exists_bound_cauchyFreeField_family_of_common_support
     (E := ℝ) (hg.comp contDiff_snd) (hh.comp contDiff_snd)
-    (isCompact_singleton : IsCompact ({0} : Set ℝ)) (R := max Rg Rh)
-    (fun _ _ x hx ↦ hgR x ((le_max_left _ _).trans hx.le))
-    (fun _ _ x hx ↦ hhR x ((le_max_right _ _).trans hx.le)) S
+    (isCompact_singleton : IsCompact ({0} : Set ℝ)) (R := R)
+    (fun _ _ x hx ↦ hgR x hx) (fun _ _ x hx ↦ hhR x hx) S
   exact ⟨B, hB, fun q hq ↦ hbound 0 (mem_singleton 0) q hq⟩
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical

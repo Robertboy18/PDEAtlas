@@ -56,8 +56,9 @@ theorem IsBoundedClassicalWaveBefore.eq {f : ℝ → ℝ} (hf : LocallyLipschitz
     {u v : ℝ^2 → ℝ} (hu : IsBoundedClassicalWaveBefore f g h T u)
     (hv : IsBoundedClassicalWaveBefore f g h T v) :
     ∀ p : ℝ^2, p 0 ∈ Ico 0 T → u p = v p :=
-  eq_on_forward_open_strip_of_eq_cauchyData_locallyLipschitz hf hu.regular hv.regular
-    hu.equation hv.equation (fun x ↦ (hu.position x).trans (hv.position x).symm)
+  SmallData.Classical.eq_on_forward_open_strip_of_eq_cauchyData_locallyLipschitz (n := 1) hf
+    hu.regular hv.regular hu.equation hv.equation
+    (fun x ↦ (hu.position x).trans (hv.position x).symm)
     (fun x ↦ (hu.velocity x).trans (hv.velocity x).symm)
 
 /-- Restriction to a shorter positive interval preserves the classical

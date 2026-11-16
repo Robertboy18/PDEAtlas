@@ -30,7 +30,7 @@ open PDE.CoordinateSystems (meridianR)
 
 namespace AxisymmetricFlow
 
-/-- The concrete classical Laplacian agrees with LeanPDE's axis-extended
+/-- The concrete classical Laplacian agrees with PDEAtlas's axis-extended
 radial-four-plus-axial operator on every time slice. -/
 theorem axisymmetricTimeLaplacian_classical_eq_axisExtended
     (f : TimeProfile) (x : ℝ^2) (t : ℝ) :

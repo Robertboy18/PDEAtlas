@@ -283,15 +283,8 @@ theorem transportIVP_sub {b : ℝ^n} {f₁ f₂ : ℝ^(n + 1) → ℝ} {g₁ g�
     (hdv : ∀ x ∈ transportDomain n, DifferentiableAt ℝ v x) :
     SatisfiesPDEProblem (transportIVP (n := n) b (fun x ↦ f₁ x - f₂ x) (fun x ↦ g₁ x - g₂ x))
       (fun x ↦ u x - v x) := by
-  refine transportIVP.of_residual_initial (n := n) ?_ ?_
-  · intro x hx
-    have hures := transportIVP.residual_eq (n := n) hu hx
-    have hvres := transportIVP.residual_eq (n := n) hv hx
-    rw [transportOperator_sub b (hdu x hx) (hdv x hx), hures, hvres]
-  · intro x hx
-    have huinit := transportIVP.initial_eq (n := n) hu hx
-    have hvinit := transportIVP.initial_eq (n := n) hv hx
-    simp [huinit, hvinit]
+  simpa only [sub_eq_add_neg] using
+    transportIVP_add hu (transportIVP_neg hv) hdu fun x hx ↦ (hdv x hx).neg
 
 /-- Linear combinations of two residual witnesses for the constant-velocity transport IVP.
 

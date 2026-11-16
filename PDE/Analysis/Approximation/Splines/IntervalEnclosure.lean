@@ -18,6 +18,10 @@ constants. Thus repeated knots contribute zero weights, matching Cox–de Boor
 semantics, without asking the interval evaluator to divide by an interval containing
 zero. The only input enclosure is the coordinate box; knot data are identified by
 exact equalities. Derivative expressions describe the polynomial extension.
+
+A successful replay of any expression encloses its value (`eval_enclosed_of_replay`, for every
+sound backend); the statements for a branch, its two derivatives and the basis are this lemma at
+the branch expressions.
 -/
 
 @[expose] public section
@@ -153,6 +157,19 @@ private theorem branchSecondDerivativeExpr_rpowBasesPositive {ι : Type*} (q : �
       simp [branchSecondDerivativeExpr, leftBlendExpr, rightBlendExpr,
         rpowBasesPositive_mkRatConst, branchDerivativeExpr_rpowBasesPositive, ih]
 
+/-- A successful FloatLib replay of an expression, with every variable read from one input
+interval that contains `x`, encloses the value of the expression at `x`, provided the bases of
+its real powers are positive there. This holds for every sound backend. -/
+theorem eval_enclosed_of_replay {α ι : Type*}
+    (B : FloatLib.Numerics.Interval.Backend α) (hB : B.Sound) (expr : Expr ι)
+    (input output : FloatLib.Numerics.Interval α)
+    (hcheck : (expr.toFloatLib (fun _ ↦ 0)).eval? B (fun _ ↦ some input) = some output)
+    {x : ℝ} (hx : input.ContainsReal B.decode x) (hpow : expr.RpowBasesPositive fun _ ↦ x) :
+    output.ContainsReal B.decode (expr.eval fun _ ↦ x) := by
+  have h := FloatLib.Numerics.Interval.Expr.containsReal_eval? _ hB
+    (values := fun _ ↦ x) (fun _ _ hi ↦ (Option.some.inj hi) ▸ hx) hcheck
+  rwa [Expr.eval_toFloatLib _ _ (fun _ ↦ x) _ (fun _ ↦ rfl) hpow] at h
+
 /-- A successful FloatLib replay encloses a basis value on its active cell. -/
 theorem basis_enclosed_of_branch_replay {α : Type*}
     (B : FloatLib.Numerics.Interval.Backend α) (hB : B.Sound)
@@ -164,11 +181,9 @@ theorem basis_enclosed_of_branch_replay {α : Type*}
     {x : ℝ} (hx : input.ContainsReal B.decode x)
     (hcell : x ∈ Set.Ico (knots cell) (knots (cell + 1))) :
     output.ContainsReal B.decode (coxDeBoorBasis knots degree index x) := by
-  have h := FloatLib.Numerics.Interval.Expr.containsReal_eval? _ hB
-    (values := fun _ ↦ x) (fun _ _ hi ↦ (Option.some.inj hi) ▸ hx) hcheck
-  rw [Expr.eval_toFloatLib _ _ (fun _ ↦ x) _ (fun _ ↦ rfl)
-    (branchExpr_rpowBasesPositive q () _ cell degree index),
-    branchExpr_eval q () (fun _ ↦ x) knots hknots] at h
+  have h := eval_enclosed_of_replay B hB _ input output hcheck hx
+    (branchExpr_rpowBasesPositive q () _ cell degree index)
+  rw [branchExpr_eval q () (fun _ ↦ x) knots hknots] at h
   rwa [coxDeBoorBasis_eq_branch knots cell degree index hcell]
 
 /-- Exact rational FloatLib evaluation of a branch encloses its real value. -/
@@ -179,12 +194,9 @@ theorem branch_enclosed_of_rational_replay (q : ℕ → ℚ) (knots : KnotSequen
       (.rational) (fun _ ↦ some input) = some output)
     {x : ℝ} (hx : input.ContainsReal some x) :
     output.ContainsReal some (coxDeBoorBranch knots cell degree index x) := by
-  have h := FloatLib.Numerics.Interval.Expr.containsReal_eval? _
-    (FloatLib.Numerics.Interval.Backend.rational_sound)
-    (values := fun _ ↦ x) (fun _ _ hi ↦ (Option.some.inj hi) ▸ hx) hcheck
-  rw [Expr.eval_toFloatLib _ _ (fun _ ↦ x) _ (fun _ ↦ rfl)
-    (branchExpr_rpowBasesPositive q () _ cell degree index),
-    branchExpr_eval q () (fun _ ↦ x) knots hknots] at h
+  have h := eval_enclosed_of_replay _ FloatLib.Numerics.Interval.Backend.rational_sound _
+    input output hcheck hx (branchExpr_rpowBasesPositive q () _ cell degree index)
+  rw [branchExpr_eval q () (fun _ ↦ x) knots hknots] at h
   exact h
 
 /-- Exact rational FloatLib evaluation encloses the branch's first derivative. -/
@@ -195,12 +207,9 @@ theorem branch_derivative_enclosed_of_rational_replay (q : ℕ → ℚ) (knots :
       (.rational) (fun _ ↦ some input) = some output)
     {x : ℝ} (hx : input.ContainsReal some x) :
     output.ContainsReal some (coxDeBoorBranchDerivative knots cell degree index x) := by
-  have h := FloatLib.Numerics.Interval.Expr.containsReal_eval? _
-    (FloatLib.Numerics.Interval.Backend.rational_sound)
-    (values := fun _ ↦ x) (fun _ _ hi ↦ (Option.some.inj hi) ▸ hx) hcheck
-  rw [Expr.eval_toFloatLib _ _ (fun _ ↦ x) _ (fun _ ↦ rfl)
-    (branchDerivativeExpr_rpowBasesPositive q () _ cell degree index),
-    branchDerivativeExpr_eval q () (fun _ ↦ x) knots hknots] at h
+  have h := eval_enclosed_of_replay _ FloatLib.Numerics.Interval.Backend.rational_sound _
+    input output hcheck hx (branchDerivativeExpr_rpowBasesPositive q () _ cell degree index)
+  rw [branchDerivativeExpr_eval q () (fun _ ↦ x) knots hknots] at h
   exact h
 
 /-- Exact rational FloatLib evaluation encloses the branch's second derivative. -/
@@ -211,12 +220,9 @@ theorem branch_second_derivative_enclosed_of_rational_replay (q : ℕ → ℚ) (
       (.rational) (fun _ ↦ some input) = some output)
     {x : ℝ} (hx : input.ContainsReal some x) :
     output.ContainsReal some (coxDeBoorBranchSecondDerivative knots cell degree index x) := by
-  have h := FloatLib.Numerics.Interval.Expr.containsReal_eval? _
-    (FloatLib.Numerics.Interval.Backend.rational_sound)
-    (values := fun _ ↦ x) (fun _ _ hi ↦ (Option.some.inj hi) ▸ hx) hcheck
-  rw [Expr.eval_toFloatLib _ _ (fun _ ↦ x) _ (fun _ ↦ rfl)
-    (branchSecondDerivativeExpr_rpowBasesPositive q () _ cell degree index),
-    branchSecondDerivativeExpr_eval q () (fun _ ↦ x) knots hknots] at h
+  have h := eval_enclosed_of_replay _ FloatLib.Numerics.Interval.Backend.rational_sound _
+    input output hcheck hx (branchSecondDerivativeExpr_rpowBasesPositive q () _ cell degree index)
+  rw [branchSecondDerivativeExpr_eval q () (fun _ ↦ x) knots hknots] at h
   exact h
 
 /-- Inside an active cell, FloatLib replay encloses the derivative of the basis. -/

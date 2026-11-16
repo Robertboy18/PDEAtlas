@@ -204,17 +204,9 @@ theorem hardy_upperHalfSpace_infDist_lp_of_hasCompactSupport_of_posDim
       (p / (p - 1)) ^ p *
         ∫ x in HalfSpace.upper n,
           |(∂[PDE.Common.lastIndex (n := n)] f) x| ^ p := by
-  cases n with
-  | zero =>
-      exact (Nat.not_lt_zero 0 Fact.out).elim
-  | succ m =>
-      have hlast :
-          PDE.Common.lastIndex (n := m + 1) = Fin.last m := by
-        apply Fin.ext
-        simp [PDE.Common.lastIndex]
-      rw [hlast]
-      exact
-        hardy_upperHalfSpace_infDist_lp_of_hasCompactSupport
-          (n := m) hp hf hcompact hsupport
+  refine (le_of_eq (setIntegral_congr_fun (HalfSpace.measurableSet_upper (n := n))
+    fun x hx ↦ ?_)).trans
+    (hardy_upperHalfSpace_lp_of_hasCompactSupport_of_posDim hp hf hcompact hsupport)
+  simp only [HalfSpace.infDist_frontier_upper_eq_last (n := n) hx]
 
 end SobolevSpace.Hardy

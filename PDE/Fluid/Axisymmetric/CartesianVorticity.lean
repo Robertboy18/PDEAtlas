@@ -84,10 +84,12 @@ private theorem partialDeriv_neg_coord (i j : Fin 3) (x : ℝ^3) :
       if i = j then -1 else 0 := by
   fin_cases i <;> fin_cases j <;> cas
 
-private theorem partialDeriv_one_meridionalVelocity_apply_two
-    {Ψ : ℝ^2 → ℝ} (hΨ : ContDiff ℝ 2 Ψ) (x : ℝ^3) :
-    (∂[(1 : Fin 3)] (fun y ↦ meridionalVelocity Ψ y 2)) x =
-      x 1 * (8 * (∂[(0 : Fin 2)] Ψ) (squaredCylindricalMap x) +
+/-- The derivative of the axial meridional velocity `2Ψ + 2sΨ_s` in a transverse direction `i`
+(`i = 0` or `i = 1`). -/
+private theorem partialDeriv_meridionalVelocity_apply_two
+    {Ψ : ℝ^2 → ℝ} (hΨ : ContDiff ℝ 2 Ψ) {i : Fin 3} (hi : i ≠ 2) (x : ℝ^3) :
+    (∂[i] (fun y ↦ meridionalVelocity Ψ y 2)) x =
+      x i * (8 * (∂[(0 : Fin 2)] Ψ) (squaredCylindricalMap x) +
         4 * cylindricalRadiusSq x * (∂[(0 : Fin 2)]
           (fun q ↦ (∂[(0 : Fin 2)] Ψ) q))
           (squaredCylindricalMap x)) := by
@@ -119,50 +121,9 @@ private theorem partialDeriv_one_meridionalVelocity_apply_two
   rw [PDE.partialDeriv_mul (differentiableAt_const (c := (2 : ℝ))) hψDiff]
   rw [PDE.partialDeriv_mul htwoRadius hψSDiff]
   rw [PDE.partialDeriv_mul (differentiableAt_const (c := (2 : ℝ))) hsDiff]
-  rw [partialDeriv_one_cylindricalRadiusSq]
-  rw [partialDeriv_one_squaredCylindricalLift hΨone]
-  rw [partialDeriv_one_squaredCylindricalLift hΨS]
-  simp [cylindricalRadiusSq, squaredCylindricalLift]
-  ring
-
-private theorem partialDeriv_zero_meridionalVelocity_apply_two
-    {Ψ : ℝ^2 → ℝ} (hΨ : ContDiff ℝ 2 Ψ) (x : ℝ^3) :
-    (∂[(0 : Fin 3)] (fun y ↦ meridionalVelocity Ψ y 2)) x =
-      x 0 * (8 * (∂[(0 : Fin 2)] Ψ) (squaredCylindricalMap x) +
-        4 * cylindricalRadiusSq x * (∂[(0 : Fin 2)]
-          (fun q ↦ (∂[(0 : Fin 2)] Ψ) q))
-          (squaredCylindricalMap x)) := by
-  have hΨone : ContDiff ℝ 1 Ψ := hΨ.of_le (by norm_num)
-  have hΨS : ContDiff ℝ 1 (fun q ↦ (∂[(0 : Fin 2)] Ψ) q) :=
-    PDE.contDiff_partialDeriv_of_succ hΨ
-  have hψDiff : DifferentiableAt ℝ (squaredCylindricalLift Ψ) x :=
-    (contDiff_squaredCylindricalLift hΨone).contDiffAt.differentiableAt_one
-  have hψSDiff : DifferentiableAt ℝ
-      (squaredCylindricalLift
-        (fun q ↦ (∂[(0 : Fin 2)] Ψ) q)) x :=
-    (contDiff_squaredCylindricalLift hΨS).contDiffAt.differentiableAt_one
-  have hsDiff : DifferentiableAt ℝ cylindricalRadiusSq x := by
-    change DifferentiableAt ℝ (fun y : ℝ^3 ↦ y 0 ^ 2 + y 1 ^ 2) x
-    fun_prop
-  have hfirst : DifferentiableAt ℝ
-      (fun y ↦ 2 * squaredCylindricalLift Ψ y) x :=
-    (differentiableAt_const (c := (2 : ℝ))).mul hψDiff
-  have hsecond : DifferentiableAt ℝ
-      (fun y ↦ 2 * cylindricalRadiusSq y *
-        squaredCylindricalLift
-          (fun q ↦ (∂[(0 : Fin 2)] Ψ) q) y) x :=
-    ((differentiableAt_const (c := (2 : ℝ))).mul hsDiff).mul hψSDiff
-  have htwoRadius : DifferentiableAt ℝ
-      (fun y ↦ 2 * cylindricalRadiusSq y) x :=
-    (differentiableAt_const (c := (2 : ℝ))).mul hsDiff
-  simp only [meridionalVelocity_apply_two]
-  rw [PDE.partialDeriv_add hfirst hsecond]
-  rw [PDE.partialDeriv_mul (differentiableAt_const (c := (2 : ℝ))) hψDiff]
-  rw [PDE.partialDeriv_mul htwoRadius hψSDiff]
-  rw [PDE.partialDeriv_mul (differentiableAt_const (c := (2 : ℝ))) hsDiff]
-  rw [partialDeriv_zero_cylindricalRadiusSq]
-  rw [partialDeriv_zero_squaredCylindricalLift hΨone]
-  rw [partialDeriv_zero_squaredCylindricalLift hΨS]
+  rw [partialDeriv_cylindricalRadiusSq_of_ne_two hi]
+  rw [partialDeriv_squaredCylindricalLift_of_ne_two hΨone hi]
+  rw [partialDeriv_squaredCylindricalLift_of_ne_two hΨS hi]
   simp [cylindricalRadiusSq, squaredCylindricalLift]
   ring
 
@@ -180,7 +141,7 @@ theorem spatialCurl_meridionalVelocity_apply_zero
         (fun q ↦ (∂[(1 : Fin 2)] Ψ) q)) x :=
     (contDiff_squaredCylindricalLift hΨZ).contDiffAt.differentiableAt_one
   simp only [spatialCurl_apply_zero, meridionalVelocity_apply_one]
-  rw [partialDeriv_one_meridionalVelocity_apply_two hΨ]
+  rw [partialDeriv_meridionalVelocity_apply_two hΨ (i := 1) (by decide)]
   rw [PDE.partialDeriv_mul (by fun_prop) hψZDiff]
   rw [partialDeriv_two_squaredCylindricalLift hΨZ]
   rw [partialDeriv_neg_coord]
@@ -203,7 +164,7 @@ theorem spatialCurl_meridionalVelocity_apply_one
   simp only [spatialCurl_apply_one, meridionalVelocity_apply_zero]
   rw [PDE.partialDeriv_mul (by fun_prop) hψZDiff]
   rw [partialDeriv_two_squaredCylindricalLift hΨZ]
-  rw [partialDeriv_zero_meridionalVelocity_apply_two hΨ]
+  rw [partialDeriv_meridionalVelocity_apply_two hΨ (i := 0) (by decide)]
   rw [partialDeriv_neg_coord]
   simp [meridionalVorticityCoefficient, squaredCylindricalLift]
   ring

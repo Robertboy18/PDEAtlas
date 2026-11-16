@@ -36,6 +36,8 @@ lines.
 * `iteratedFDeriv_integral_smul_apply`, `enorm_iteratedFDeriv_integral_smul_apply_le`: the same
   in fixed directions, `|∇ⁿ ∫₀ᵗ a(s) G(t - s) ds (x)(v)| ≤ C ∫₀^∞ |∇ⁿ G(τ)(x)(v)| dτ`, for partial
   derivatives.
+* `enorm_integral_smul_le`: `‖∫₀ᵗ a(s) κ(t - s) ds‖ ≤ C ∫₀^∞ ‖κ(τ)‖ dτ` for `|a| ≤ C` on `[0, t]`,
+  the bound behind the two derivative bounds.
 * `enorm_iteratedFDeriv_integral_smul_le`: the bound by `C ∫₀^∞ ‖∇ⁿ G(τ)(x)‖ dτ`, and the forms
   `IsSeparatedAt.contDiffAt_integral_smul`, `IsSeparatedAt.enorm_iteratedFDeriv_integral_smul_le`
   for continuous coefficients.
@@ -74,6 +76,21 @@ theorem integral_smul_eq_sum_smul {g : ℝ → F} {φ : ι → ℝ → ℝ} {v :
   rw [intervalIntegral.integral_congr_ae hae, intervalIntegral.integral_finsetSum
     fun k _ ↦ ⟨(hint k).1.smul_const (v k), (hint k).2.smul_const (v k)⟩]
   exact Finset.sum_congr rfl fun k _ ↦ intervalIntegral.integral_smul_const _ _
+
+omit [CompleteSpace F] in
+/-- **Part I (5.89) for a scalar coefficient.** A bound `|a| ≤ C` on `[0, t]` bounds the response
+`∫₀ᵗ a(s) κ(t - s) ds` of any field `κ` by `C ∫₀^∞ ‖κ(τ)‖ dτ`. This is
+`enorm_responseIntegral_le` for the kernel `τ ↦ toSpanSingleton ℝ (κ τ)`. -/
+theorem enorm_integral_smul_le (κ : ℝ → F) {a : ℝ → ℝ} {t C : ℝ} (ht : 0 ≤ t)
+    (ha : ∀ s ∈ Icc 0 t, |a s| ≤ C) :
+    ‖∫ s in 0..t, a s • κ (t - s)‖ₑ ≤ ENNReal.ofReal C * ∫⁻ τ in Ioi 0, ‖κ τ‖ₑ := by
+  rw [← responseIntegral_toSpanSingleton κ]
+  refine (enorm_responseIntegral_le _ ht (C := C) fun s hs ↦ ?_).trans_eq ?_
+  · rw [Real.norm_eq_abs]
+    exact ha s hs
+  · congr 1
+    refine lintegral_congr fun τ ↦ ?_
+    rw [← ofReal_norm, ← ofReal_norm, ContinuousLinearMap.norm_toSpanSingleton]
 
 variable {G : ℝ → X → F} {φ : ι → ℝ → ℝ} {H : ι → X → F} {K : Set ℝ} {U : Set X} {x : X}
   {a : ℝ → ℝ} {t : ℝ}
@@ -139,14 +156,8 @@ theorem enorm_iteratedFDeriv_integral_smul_le {n : ℕ} {C : ℝ} (ht : 0 ≤ t)
     (ha : ∀ s ∈ Icc 0 t, |a s| ≤ C) :
     ‖iteratedFDeriv ℝ n (fun y ↦ ∫ s in 0..t, a s • G (t - s) y) x‖ₑ ≤
       ENNReal.ofReal C * ∫⁻ τ in Ioi 0, ‖iteratedFDeriv ℝ n (G τ) x‖ₑ := by
-  rw [iteratedFDeriv_integral_smul ht hK hU hG hH hint,
-    ← responseIntegral_toSpanSingleton (fun τ ↦ iteratedFDeriv ℝ n (G τ) x)]
-  refine (enorm_responseIntegral_le _ ht (C := C) fun s hs ↦ ?_).trans_eq ?_
-  · rw [Real.norm_eq_abs]
-    exact ha s hs
-  · congr 1
-    refine lintegral_congr fun τ ↦ ?_
-    rw [← ofReal_norm, ← ofReal_norm, ContinuousLinearMap.norm_toSpanSingleton]
+  rw [iteratedFDeriv_integral_smul ht hK hU hG hH hint]
+  exact enorm_integral_smul_le (fun τ ↦ iteratedFDeriv ℝ n (G τ) x) ht ha
 
 /-- **The derivatives of a separated response in fixed directions** are the responses of the
 derivatives in those directions: `∇ⁿ(∫₀ᵗ a(s) G(t - s) ds)(x)(v) = ∫₀ᵗ a(s) ∇ⁿG(t - s)(x)(v) ds`.
@@ -178,14 +189,8 @@ theorem enorm_iteratedFDeriv_integral_smul_apply_le {n : ℕ} {C : ℝ} (v : Fin
     (ha : ∀ s ∈ Icc 0 t, |a s| ≤ C) :
     ‖iteratedFDeriv ℝ n (fun y ↦ ∫ s in 0..t, a s • G (t - s) y) x v‖ₑ ≤
       ENNReal.ofReal C * ∫⁻ τ in Ioi 0, ‖iteratedFDeriv ℝ n (G τ) x v‖ₑ := by
-  rw [iteratedFDeriv_integral_smul_apply v ht hK hU hG hH hint,
-    ← responseIntegral_toSpanSingleton (fun τ ↦ iteratedFDeriv ℝ n (G τ) x v)]
-  refine (enorm_responseIntegral_le _ ht (C := C) fun s hs ↦ ?_).trans_eq ?_
-  · rw [Real.norm_eq_abs]
-    exact ha s hs
-  · congr 1
-    refine lintegral_congr fun τ ↦ ?_
-    rw [← ofReal_norm, ← ofReal_norm, ContinuousLinearMap.norm_toSpanSingleton]
+  rw [iteratedFDeriv_integral_smul_apply v ht hK hU hG hH hint]
+  exact enorm_integral_smul_le (fun τ ↦ iteratedFDeriv ℝ n (G τ) x v) ht ha
 
 /-- `G` is **separated at `x` to order `n`**: there are finitely many spatial factors `Hₖ`, `Cⁿ`
 at `x`, and time coefficients `φₖ`, integrable on every `[0, T]`, such that

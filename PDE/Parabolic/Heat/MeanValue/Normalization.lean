@@ -27,7 +27,7 @@ computation, so we carry it out. Writing the backward time lag as `τ > 0` and s
 
 `0 < τ < Γ(z,1)^(2/n)`.
 
-The interval is open because LeanPDE defines heat balls by the strict
+The interval is open because PDEAtlas defines heat balls by the strict
 superlevel condition `Γ > r⁻ⁿ`.  Integrating first in `τ` gives
 `(2/n) ‖z‖² Γ(z,1)`; the time-one Gaussian second moment
 `integral_norm_sq_mul_fundamentalSolutionHeat_one` then gives the constant `4`.

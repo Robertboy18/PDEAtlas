@@ -11,14 +11,14 @@ transport, and streamfunction form in equations (2.3a)–(2.3c), and gives the
 dynamic rescaling in equations (2.4)–(2.7). The paper's theorem is about a
 nearly self-similar solution remaining close to an approximate steady profile.
 
-LeanPDE records two deliberately separate formulations. The default primitive
+PDEAtlas records two deliberately separate formulations. The default primitive
 velocity–pressure model uses upward vertical buoyancy on the whole plane. The
 vorticity–streamfunction model follows equations (2.3a)–(2.3c), including the
 paper's clockwise scalar-vorticity sign, upper-half-plane equations, and zero
 streamfunction boundary trace. A checked sign-parametrized curl calculation
 shows that primitive force `κ θ e₂` gives clockwise-vorticity source
 `-κ ∂₁θ`; hence the paper's positive source is the downward choice `κ = -1`.
-Given a streamfunction representation, LeanPDE constructs the corresponding
+Given a streamfunction representation, PDEAtlas constructs the corresponding
 upper-half-plane vorticity–stream solution. It also proves that the zero trace
 gives no normal flow and proves the exact change of variables (2.4)–(2.7) at
 the equation level. Finally, it checks the two origin-trace ODEs following
@@ -26,7 +26,7 @@ the equation level. Finally, it checks the two origin-trace ODEs following
 deduces (2.10) on an open connected time domain.
 
 For any normally odd source whose whole-space logarithmic potential is
-integrable at every field point, LeanPDE proves that the method-of-images
+integrable at every field point, PDEAtlas proves that the method-of-images
 potential is integrable, has zero boundary trace, and equals whole-space
 convolution with the planar fundamental solution. For compactly supported
 `C²` sources it additionally proves the pointwise Poisson equation. The
@@ -50,14 +50,14 @@ numerical remainder. The former has the form
 `χ(r) r^{ᾱ₁} g₁(β)`, with `ᾱ₁ ≈ -1/3`, and is therefore not
 integrable on the plane. Its streamfunction is constructed from
 `χ(r) r^{2+ᾱ₁} f(β)`, where `f` solves the angular Dirichlet problem
-`(-∂²β - (2+ᾱ₁)²)f = g₁`. For this inverse step LeanPDE proves the
+`(-∂²β - (2+ᾱ₁)²)f = g₁`. For this inverse step PDEAtlas proves the
 homogeneous polar identity, the exact cutoff commutator, and the general
 Cartesian-to-polar Laplacian bridge for `C²` pullbacks. Variation of constants
 also constructs the angular Dirichlet solution from a continuous forcing.
 For `-2 < α < 0`, nonresonance on `[0, π/2]` follows from `0 < 2+α < 2`.
 The solution is `C²` and has explicit value and derivative bounds in terms of a
 forcing bound and the sine resonance factor. For a homogeneous streamfunction
-`r^{2+α} f(β)`, LeanPDE also proves the Cartesian gradient formula and its norm
+`r^{2+α} f(β)`, PDEAtlas also proves the Cartesian gradient formula and its norm
 identity. Uniform bounds on `f` and `f'` give an explicit velocity-size bound;
 when `α < 0`, the gradient divided by `r` tends uniformly to zero on any angular
 sector where those bounds hold. These estimates concern the homogeneous
@@ -69,10 +69,10 @@ reflection-stable admissible Dirichlet class transfers tangential vorticity
 parity to the streamfunction.
 
 Section 2.8.1, equations (2.39)–(2.41), retains the initial mismatch and the
-convolved evolution residual of an approximate response. LeanPDE proves the
+convolved evolution residual of an approximate response. PDEAtlas proves the
 general response identity, exact reconstruction after error cancellation, and
 the resulting time-dependent norm bound. Section 2.8.2 corrects derivative
-traces through an exact coefficient ODE; LeanPDE proves this construction for a
+traces through an exact coefficient ODE; PDEAtlas proves this construction for a
 general continuous linear trace map and its right inverse. A general Neumann
 correction also constructs that right inverse from a proposed reconstruction
 whose coordinate residual has operator norm below one. The reconstruction,

@@ -10,13 +10,16 @@ public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FourDimen
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.Amplitude
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.LowEmbedding
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.SpatialSolution
+import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.AffineSource
 
 /-!
 # Global higher Sobolev persistence in dimension four
 
 The global H² energy evolution bounds the source in H² on finite intervals.
-Variation of constants then bounds displacement in H³, which bounds amplitude
-in dimension four. Tame composition and Grönwall bound all higher levels.
+The restricted Duhamel formula then bounds displacement in H³, which bounds amplitude
+in dimension four. Tame composition and Grönwall bound all higher levels. This is the
+criterion `higherSmooth_mildLifespan_eq_top_of_affine_source` with a source bound that
+does not depend on the state.
 The global second-derivative bound is explicit; higher scalar derivatives
 are only bounded on the attained compact value ranges.
 -/
@@ -41,59 +44,12 @@ theorem higherSmooth_mildLifespan_eq_top_four (hk : (4 : ℝ) < 2 * ((k : ℝ) -
     have : (1 : ℝ) < k := by linarith
     have : 1 < k := by exact_mod_cast this
     omega
-  have hq : (4 : ℝ) < 2 * (((k + 1 : ℕ) : ℝ) - 1) := by push_cast; linarith
-  obtain ⟨e, d, Q, he, _, hQ, _⟩ := exists_unique_h2EnergySolution hf hf0
-    (hs.of_le (by simp)) (lowerOrderCLM (by omega : 2 ≤ k + 1) x.1)
-    (lowerOrderCLM (by omega : 1 ≤ k) x.2)
-  have he' : IsEnergySolution hf hf0
-      (lowerOrderCLM (by omega : 1 ≤ k + 1) x.1, wkpBaseCoordinateCLM x.2) e := by
-    have hi :
-        (lowerOrderCLM (by decide : 1 ≤ 2)
-          (lowerOrderCLM (by omega : 2 ≤ k + 1) x.1),
-          (energyTriple 4).inclusion (lowerOrderCLM (by omega : 1 ≤ k) x.2)) =
-        (lowerOrderCLM (by omega : 1 ≤ k + 1) x.1, wkpBaseCoordinateCLM x.2) := by
-      rw [lowerOrderCLM_trans_apply]
-      rfl
-    exact hi ▸ he.toIsEnergySolutionOn
-  let A := boundedSobolevRepresentativeCLM (by norm_num : (4 : ℝ) < 2 * (3 : ℝ))
-  apply (higherLinearSemigroup 4 k).mildLifespan_eq_top_of_finite_time_bounds
-    (fun R _ ↦ exists_lipschitzOn_higherSmoothMap hk hs hf0 R)
-  intro H hH
-  obtain ⟨B₂, hb₂⟩ := isCompact_Icc.bddAbove_image (Q.continuous.norm.continuousOn (s := Icc 0 H))
-  have hB₂ : 0 ≤ B₂ := (norm_nonneg (Q 0)).trans (hb₂ ⟨0, ⟨le_rfl, hH.le⟩, rfl⟩)
-  obtain ⟨C₂, hC₂, hsource₂⟩ :=
-    exists_norm_higherWaveRestriction_source_bound hk hk2 hs hf hf0 hD hsecond hB₂
-  obtain ⟨R₃, hR₃, hbound₃⟩ := exists_norm_higherWaveRestriction_bound hk2 x hH.le hC₂
-  have hB : 0 ≤ ‖A‖ * R₃ := mul_nonneg A.opNorm_nonneg hR₃
-  obtain ⟨C, hC, hsource⟩ := exists_affine_higherSmoothMap_bound hk hq hs hf0 hB
-  obtain ⟨R, _, hR⟩ :=
-    exists_norm_mildSolutionOn_bound_of_affine_source (higherLinearSemigroup 4 k) x hH.le hC
-  refine ⟨R, ?_⟩
-  intro τ hτ V hV
-  have hlow (t : Icc (0 : ℝ) (τ : ℝ)) :
-      lowerOrderCLM (by omega : 2 ≤ k + 1) (V t).1 = Q t := by
-    have hp := congrArg Prod.fst
-      (he'.eq_higherSmooth_mild_projection hk hs hf hf0 x V hV t t.property)
-    erw [IccExtend_val τ.coe_nonneg V t] at hp
-    apply WkpSpaceOn.ext_of_base_ae isOpen_univ
-    change baseRepresentative (lowerOrderCLM (by omega : 2 ≤ k + 1) (V t).1)
-      =ᵐ[domainMeasure 4 univ] baseRepresentative (Q t)
-    have hbase := congrArg baseRepresentative (hp.trans (hQ t t.property.1).1.symm)
-    simp only [baseRepresentative_lowerOrderCLM] at hbase ⊢
-    rw [hbase]
-  have hrestricted : ∀ t, ‖higherWaveRestrictionCLM 4 hk2 (V t)‖ ≤ R₃ :=
-    hbound₃ hτ hV (fun t ↦ hsource₂ _ (by
-      rw [hlow]
-      exact hb₂ ⟨t, ⟨t.property.1, t.property.2.trans hτ⟩, rfl⟩))
-  apply hR hτ hV
-  intro t
-  apply hsource
-  intro y
-  rw [← boundedSobolevRepresentativeCLM_lowerOrderCLM
-    (by norm_num : (4 : ℝ) < 2 * (3 : ℝ)) hq (by omega : 3 ≤ k + 1)]
-  change ‖A (lowerOrderCLM (by omega : 3 ≤ k + 1) (V t).1) y‖ ≤ ‖A‖ * R₃
-  exact ((A _).norm_coe_le_norm y).trans ((A.le_opNorm _).trans (mul_le_mul_of_nonneg_left
-      ((norm_fst_le (higherWaveRestrictionCLM 4 hk2 (V t))).trans (hrestricted t)) A.opNorm_nonneg))
+  refine higherSmooth_mildLifespan_eq_top_of_affine_source (by norm_num) hk hk2 hs hf hf0
+    (fun R hR ↦ ?_) x
+  obtain ⟨C, hC, hbound⟩ :=
+    exists_norm_higherWaveRestriction_source_bound hk hk2 hs hf hf0 hD hsecond hR
+  exact ⟨C, hC, fun z hz ↦ (hbound z hz).trans
+    (le_mul_of_one_le_right hC (le_add_of_nonneg_right (norm_nonneg _)))⟩
 
 /-- The original energy solution has a global higher Sobolev lift in dimension
 four under the separate global bound on the second reaction derivative. -/

@@ -238,34 +238,34 @@ theorem spacetimeSpatialCurl_apply_two
       (xt 0) (PDE.Common.spatialPart xt)
       ((contDiff_euclidean.1 hu 0).differentiable (by norm_num)).differentiableAt]
 
+/-- The two-form residual at the cyclic pair `(k + 1, k + 2)` of indices modulo three equals the
+`k`-th vector-vorticity residual plus the divergence correction. The three components below are
+the cases `k = 0, 1, 2`. -/
+private theorem vorticityFormTransportResidual_apply_cyclic
+    (ν : ℝ) (u : ℝ^4 → ℝ^3) (hu : ContDiff ℝ 1 u) (xt : ℝ^4) (k : Fin 3) :
+    vorticityFormTransportResidual 3 ν u xt (k + 1, k + 2) =
+      vorticityTransportResidual 3 ν u (spacetimeSpatialCurl u) xt k +
+        spatialDivergence 3 u xt * spacetimeSpatialCurl u xt k := by
+  fin_cases k <;>
+  · simp only [Fin.zero_eta, Fin.mk_one, Fin.reduceFinMk, Fin.isValue, Fin.reduceAdd,
+      vorticityFormTransportResidual_apply,
+      scalarMaterialDerivative_apply, vorticityTransportResidual,
+      vorticityStretching, materialDerivative_apply,
+      convectiveDerivative_apply, spatialVectorLaplacian_apply,
+      spatialDivergence_apply, PiLp.sub_apply, PiLp.smul_apply,
+      Fin.sum_univ_three, smul_eq_mul, spacetimeSpatialCurl_apply_zero u hu,
+      spacetimeSpatialCurl_apply_one u hu, spacetimeSpatialCurl_apply_two u hu,
+      spatialVorticityForm_apply]
+    ring
+
 /-- The `(1,2)` two-form residual equals the first vector-vorticity residual
 plus the divergence correction. -/
 theorem vorticityFormTransportResidual_apply_one_two
     (ν : ℝ) (u : ℝ^4 → ℝ^3) (hu : ContDiff ℝ 1 u) (xt : ℝ^4) :
     vorticityFormTransportResidual 3 ν u xt (1, 2) =
       vorticityTransportResidual 3 ν u (spacetimeSpatialCurl u) xt 0 +
-        spatialDivergence 3 u xt * spacetimeSpatialCurl u xt 0 := by
-  have hω0 : (fun y ↦ spacetimeSpatialCurl u y 0) =
-      fun y ↦ spatialVorticityForm 3 u y (1, 2) := by
-    funext y
-    exact spacetimeSpatialCurl_apply_zero u hu y
-  have hω1 : (fun y ↦ spacetimeSpatialCurl u y 1) =
-      fun y ↦ spatialVorticityForm 3 u y (2, 0) := by
-    funext y
-    exact spacetimeSpatialCurl_apply_one u hu y
-  have hω2 : (fun y ↦ spacetimeSpatialCurl u y 2) =
-      fun y ↦ spatialVorticityForm 3 u y (0, 1) := by
-    funext y
-    exact spacetimeSpatialCurl_apply_two u hu y
-  simp only [vorticityFormTransportResidual_apply,
-    scalarMaterialDerivative_apply, vorticityTransportResidual,
-    vorticityStretching, materialDerivative_apply,
-    convectiveDerivative_apply, spatialVectorLaplacian_apply,
-    spatialDivergence_apply, PiLp.sub_apply, PiLp.smul_apply,
-    Fin.sum_univ_three, smul_eq_mul]
-  rw [hω0, congrFun hω0 xt, congrFun hω1 xt, congrFun hω2 xt]
-  simp only [spatialVorticityForm_apply]
-  ring
+        spatialDivergence 3 u xt * spacetimeSpatialCurl u xt 0 :=
+  vorticityFormTransportResidual_apply_cyclic ν u hu xt 0
 
 /-- The `(2,0)` two-form residual equals the second vector-vorticity residual
 plus the divergence correction. -/
@@ -273,28 +273,8 @@ theorem vorticityFormTransportResidual_apply_two_zero
     (ν : ℝ) (u : ℝ^4 → ℝ^3) (hu : ContDiff ℝ 1 u) (xt : ℝ^4) :
     vorticityFormTransportResidual 3 ν u xt (2, 0) =
       vorticityTransportResidual 3 ν u (spacetimeSpatialCurl u) xt 1 +
-        spatialDivergence 3 u xt * spacetimeSpatialCurl u xt 1 := by
-  have hω0 : (fun y ↦ spacetimeSpatialCurl u y 0) =
-      fun y ↦ spatialVorticityForm 3 u y (1, 2) := by
-    funext y
-    exact spacetimeSpatialCurl_apply_zero u hu y
-  have hω1 : (fun y ↦ spacetimeSpatialCurl u y 1) =
-      fun y ↦ spatialVorticityForm 3 u y (2, 0) := by
-    funext y
-    exact spacetimeSpatialCurl_apply_one u hu y
-  have hω2 : (fun y ↦ spacetimeSpatialCurl u y 2) =
-      fun y ↦ spatialVorticityForm 3 u y (0, 1) := by
-    funext y
-    exact spacetimeSpatialCurl_apply_two u hu y
-  simp only [vorticityFormTransportResidual_apply,
-    scalarMaterialDerivative_apply, vorticityTransportResidual,
-    vorticityStretching, materialDerivative_apply,
-    convectiveDerivative_apply, spatialVectorLaplacian_apply,
-    spatialDivergence_apply, PiLp.sub_apply, PiLp.smul_apply,
-    Fin.sum_univ_three, smul_eq_mul]
-  rw [hω1, congrFun hω0 xt, congrFun hω1 xt, congrFun hω2 xt]
-  simp only [spatialVorticityForm_apply]
-  ring
+        spatialDivergence 3 u xt * spacetimeSpatialCurl u xt 1 :=
+  vorticityFormTransportResidual_apply_cyclic ν u hu xt 1
 
 /-- The `(0,1)` two-form residual equals the third vector-vorticity residual
 plus the divergence correction. -/
@@ -302,28 +282,8 @@ theorem vorticityFormTransportResidual_apply_zero_one
     (ν : ℝ) (u : ℝ^4 → ℝ^3) (hu : ContDiff ℝ 1 u) (xt : ℝ^4) :
     vorticityFormTransportResidual 3 ν u xt (0, 1) =
       vorticityTransportResidual 3 ν u (spacetimeSpatialCurl u) xt 2 +
-        spatialDivergence 3 u xt * spacetimeSpatialCurl u xt 2 := by
-  have hω0 : (fun y ↦ spacetimeSpatialCurl u y 0) =
-      fun y ↦ spatialVorticityForm 3 u y (1, 2) := by
-    funext y
-    exact spacetimeSpatialCurl_apply_zero u hu y
-  have hω1 : (fun y ↦ spacetimeSpatialCurl u y 1) =
-      fun y ↦ spatialVorticityForm 3 u y (2, 0) := by
-    funext y
-    exact spacetimeSpatialCurl_apply_one u hu y
-  have hω2 : (fun y ↦ spacetimeSpatialCurl u y 2) =
-      fun y ↦ spatialVorticityForm 3 u y (0, 1) := by
-    funext y
-    exact spacetimeSpatialCurl_apply_two u hu y
-  simp only [vorticityFormTransportResidual_apply,
-    scalarMaterialDerivative_apply, vorticityTransportResidual,
-    vorticityStretching, materialDerivative_apply,
-    convectiveDerivative_apply, spatialVectorLaplacian_apply,
-    spatialDivergence_apply, PiLp.sub_apply, PiLp.smul_apply,
-    Fin.sum_univ_three, smul_eq_mul]
-  rw [hω2, congrFun hω0 xt, congrFun hω1 xt, congrFun hω2 xt]
-  simp only [spatialVorticityForm_apply]
-  ring
+        spatialDivergence 3 u xt * spacetimeSpatialCurl u xt 2 :=
+  vorticityFormTransportResidual_apply_cyclic ν u hu xt 2
 
 /-- Under incompressibility, vanishing of the intrinsic two-form residual
 implies vanishing of the familiar three-dimensional vector residual. -/

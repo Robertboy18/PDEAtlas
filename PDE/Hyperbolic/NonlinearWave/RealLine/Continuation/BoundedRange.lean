@@ -82,7 +82,7 @@ theorem exists_classical_continuation_on_compacts_of_bounded_range {f : ℝ → 
   have hvwave (p : ℝ^2) (hp : 0 ≤ p 0) : waveOperator (n := 1) v p = -F (v p) :=
     waveOperator_nonlinearClassicalSolution hL hF hg hh hp
   have heq : ∀ p : ℝ^2, p 0 ∈ Ico 0 T → u p = v p := by
-    apply eq_on_forward_open_strip_of_eq_cauchyData_locallyLipschitz
+    apply SmallData.Classical.eq_on_forward_open_strip_of_eq_cauchyData_locallyLipschitz (n := 1)
       hL.locallyLipschitz hu hv.contDiffOn
     · intro p hp
       rw [huwave p hp, hEq (u p) ((hbound p hp).trans (le_add_of_nonneg_right zero_le_one))]

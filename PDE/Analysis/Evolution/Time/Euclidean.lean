@@ -32,7 +32,7 @@ namespace PDE.Analysis.Evolution
 variable {X : Type*} [NormedAddCommGroup X]
 
 /-- Pulling a locally integrable Banach-valued function on `ℝ` back to
-LeanPDE's one-dimensional Euclidean space preserves local integrability. -/
+PDEAtlas's one-dimensional Euclidean space preserves local integrability. -/
 theorem locallyIntegrable_comp_oneDimensionalEquiv_symm
     (f : ℝ → X) (hf : LocallyIntegrable f (volume : Measure ℝ)) :
     LocallyIntegrable

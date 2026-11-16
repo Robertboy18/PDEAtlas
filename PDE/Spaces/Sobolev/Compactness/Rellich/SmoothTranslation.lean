@@ -9,10 +9,10 @@ module
 public import PDE.Spaces.Sobolev.Compactness.Rellich.Translation
 public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 public import PDE.Spaces.Sobolev.Variational.Spaces.H1
-import Mathlib.Analysis.Convex.Integral
 import Mathlib.MeasureTheory.Group.Integral
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
 import Mathlib.MeasureTheory.Integral.Prod
+import PDE.Analysis.Integration.DerivativeEnergy
 import PDE.FDeriv.Operators
 import PDE.FDeriv.PartialDeriv.Regularity
 
@@ -121,30 +121,15 @@ theorem testFunction_translation_sub_eq_intervalIntegral
     (a := (0 : ℝ)) (b := 1) (fun t _ ↦ hcomp t) hint
   simpa [γ] using hFTC.symm
 
-/-- Cauchy-Schwarz/Jensen on the unit interval, normalized here by the fact
-that its Lebesgue measure is one. -/
+/-- Cauchy-Schwarz on the unit interval, whose Lebesgue measure is one: the case `a = 0`,
+`b = 1` of `PDE.Analysis.sq_integral_le_mul_integral_sq` for a continuous integrand. -/
 theorem sq_intervalIntegral_le_intervalIntegral_sq
     (g : ℝ → ℝ) (hg : Continuous g) :
     (∫ t in (0 : ℝ)..1, g t) ^ 2 ≤
       ∫ t in (0 : ℝ)..1, (g t) ^ 2 := by
-  have hgInt : IntegrableOn g (Set.Ioc (0 : ℝ) 1) MeasureTheory.volume :=
-    (hg.continuousOn.integrableOn_compact isCompact_Icc).mono_set Set.Ioc_subset_Icc_self
-  have hgSq : Continuous fun t : ℝ ↦ (g t) ^ 2 := hg.pow 2
-  have hgSqInt : IntegrableOn (fun t : ℝ ↦ (g t) ^ 2)
-      (Set.Ioc (0 : ℝ) 1) MeasureTheory.volume :=
-    (hgSq.continuousOn.integrableOn_compact isCompact_Icc).mono_set Set.Ioc_subset_Icc_self
-  have hJ :=
-    (show Even 2 by norm_num).convexOn_pow.map_set_average_le
-      (μ := (MeasureTheory.volume : Measure ℝ))
-      (s := (Set.univ : Set ℝ)) (t := Set.Ioc (0 : ℝ) 1)
-      (f := g) (continuous_pow 2).continuousOn isClosed_univ
-      (by simp [Real.volume_Ioc]) (by simp)
-      (Filter.Eventually.of_forall fun _ ↦ Set.mem_univ _)
-      hgInt (by simpa [Function.comp_def] using hgSqInt)
-  rw [setAverage_eq, setAverage_eq,
-    Real.volume_real_Ioc_of_le (by norm_num : (0 : ℝ) ≤ 1)] at hJ
-  simpa [intervalIntegral.integral_of_le (by norm_num : (0 : ℝ) ≤ 1),
-    Function.comp_def] using hJ
+  simpa only [sub_zero, one_mul] using
+    PDE.Analysis.sq_integral_le_mul_integral_sq zero_le_one (hg.intervalIntegrable 0 1)
+      ((hg.pow 2).intervalIntegrable 0 1)
 
 /-- Pointwise squared translation estimate for a test function, after applying
 Cauchy-Schwarz in the segment parameter. -/

@@ -10,6 +10,7 @@ public import PDE.Analysis.MeasureTheory.Lp.IntegralEnergy
 public import Mathlib.Analysis.Calculus.ContDiff.Comp
 public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 import Mathlib.Analysis.Calculus.Deriv.Prod
+import PDE.Analysis.Calculus.SliceDerivative
 import PDE.Representations.Similarity.Dynamic
 
 /-!
@@ -28,12 +29,12 @@ open scoped Topology
 
 namespace PDE.Analysis.Evolution
 
-/-- A classical function on an open time cylinder has classical spatial slices. -/
+/-- A classical function on an open time cylinder has classical spatial slices: the case of
+`PDE.Analysis.contDiff_slice` for a curried scalar field of class `C¹` on `univ ×ˢ Ioo a b`. -/
 theorem contDiff_slice_of_contDiffOn_cylinder {f : ℝ → ℝ → ℝ} {a b t : ℝ}
     (hf : ContDiffOn ℝ 1 (Function.uncurry f) (univ ×ˢ Ioo a b))
     (ht : t ∈ Ioo a b) : ContDiff ℝ 1 (fun x ↦ f x t) :=
-  contDiffOn_univ.mp <| hf.comp (contDiffOn_id.prodMk contDiffOn_const)
-    (fun x _ ↦ ⟨mem_univ x, ht⟩)
+  contDiff_slice hf ht
 
 /-- Interior joint C¹ regularity makes the time derivative continuous there. -/
 theorem continuousOn_time_deriv_of_contDiffOn_cylinder

@@ -15,8 +15,8 @@ regenerates this file before it builds the Blueprint package, and
 coverage map, the card index and the call-site counts quoted in the computation
 chapter.
 
-Production rows: 1662 call sites in
-620 modules (PDE: 1662 sites in 620 modules). Example rows:
+Production rows: 1661 call sites in
+619 modules (PDE: 1661 sites in 619 modules). Example rows:
 606 call sites in 114 modules.
 -/
 
@@ -32,16 +32,16 @@ def json : String := r####"
   ],
   "summary": {
     "production": {
-      "rows": 1662,
-      "modules": 620,
+      "rows": 1661,
+      "modules": 619,
       "libraries": {
         "PDE": {
-          "rows": 1662,
-          "modules": 620
+          "rows": 1661,
+          "modules": 619
         }
       },
       "tactics": {
-        "cas": 1189,
+        "cas": 1188,
         "cas using": 429,
         "cas_nf using": 1,
         "cega": 29,
@@ -5908,9 +5908,9 @@ def json : String := r####"
     {
       "scope": "production",
       "library": "PDE",
-      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
-      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
-      "line": 97,
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Continuity",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/Continuity.lean",
+      "line": 180,
       "tactic": "cas",
       "form": "cas",
       "statement": "Continuous fun x ↦ hilbertTruncation f x ε",
@@ -5918,16 +5918,16 @@ def json : String := r####"
         "kind": "theorem",
         "name": "continuous_hilbertTruncation",
         "fullName": "PDE.Analysis.continuous_hilbertTruncation",
-        "line": 60,
+        "line": 143,
         "binders": "{f : ℝ → ℝ} (hf : Integrable f) {ε : ℝ} (hε : 0 < ε)"
       }
     },
     {
       "scope": "production",
       "library": "PDE",
-      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
-      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
-      "line": 99,
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Continuity",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/Continuity.lean",
+      "line": 182,
       "tactic": "cas using",
       "form": "cas using [h]",
       "statement": "Continuous fun x ↦ hilbertTruncation f x ε",
@@ -5935,16 +5935,16 @@ def json : String := r####"
         "kind": "theorem",
         "name": "continuous_hilbertTruncation",
         "fullName": "PDE.Analysis.continuous_hilbertTruncation",
-        "line": 60,
+        "line": 143,
         "binders": "{f : ℝ → ℝ} (hf : Integrable f) {ε : ℝ} (hε : 0 < ε)"
       }
     },
     {
       "scope": "production",
       "library": "PDE",
-      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
-      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
-      "line": 100,
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Continuity",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/Continuity.lean",
+      "line": 183,
       "tactic": "cas using",
       "form": "cas using [h]",
       "statement": "Continuous fun x ↦ hilbertTruncation f x ε",
@@ -5952,16 +5952,16 @@ def json : String := r####"
         "kind": "theorem",
         "name": "continuous_hilbertTruncation",
         "fullName": "PDE.Analysis.continuous_hilbertTruncation",
-        "line": 60,
+        "line": 143,
         "binders": "{f : ℝ → ℝ} (hf : Integrable f) {ε : ℝ} (hε : 0 < ε)"
       }
     },
     {
       "scope": "production",
       "library": "PDE",
-      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
-      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
-      "line": 110,
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Continuity",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/Continuity.lean",
+      "line": 193,
       "tactic": "cas using",
       "form": "cas using [hr]",
       "statement": "Continuous (hilbertPV f)",
@@ -5969,16 +5969,16 @@ def json : String := r####"
         "kind": "theorem",
         "name": "continuous_hilbertPV",
         "fullName": "PDE.Analysis.continuous_hilbertPV",
-        "line": 104,
+        "line": 187,
         "binders": "{f : ℝ → ℝ} (hf : Integrable f) (hlip : LocallyLipschitz f)"
       }
     },
     {
       "scope": "production",
       "library": "PDE",
-      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
-      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
-      "line": 116,
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Continuity",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/Continuity.lean",
+      "line": 199,
       "tactic": "cas using",
       "form": "cas using [hx, ht]",
       "statement": "Continuous (hilbertPV f)",
@@ -5986,16 +5986,16 @@ def json : String := r####"
         "kind": "theorem",
         "name": "continuous_hilbertPV",
         "fullName": "PDE.Analysis.continuous_hilbertPV",
-        "line": 104,
+        "line": 187,
         "binders": "{f : ℝ → ℝ} (hf : Integrable f) (hlip : LocallyLipschitz f)"
       }
     },
     {
       "scope": "production",
       "library": "PDE",
-      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
-      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
-      "line": 119,
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Continuity",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/Continuity.lean",
+      "line": 202,
       "tactic": "cas using",
       "form": "cas using [hx, hr]",
       "statement": "Continuous (hilbertPV f)",
@@ -6003,16 +6003,16 @@ def json : String := r####"
         "kind": "theorem",
         "name": "continuous_hilbertPV",
         "fullName": "PDE.Analysis.continuous_hilbertPV",
-        "line": 104,
+        "line": 187,
         "binders": "{f : ℝ → ℝ} (hf : Integrable f) (hlip : LocallyLipschitz f)"
       }
     },
     {
       "scope": "production",
       "library": "PDE",
-      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz",
-      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/LocallyLipschitz.lean",
-      "line": 139,
+      "module": "PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Continuity",
+      "path": "PDE/Analysis/Fourier/HilbertTransform/PrincipalValue/Continuity.lean",
+      "line": 222,
       "tactic": "cas using",
       "form": "cas using [hr, not_lt.mp (show ¬r / 4 < |t| from ht)]",
       "statement": "Continuous (hilbertPV f)",
@@ -6020,7 +6020,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "continuous_hilbertPV",
         "fullName": "PDE.Analysis.continuous_hilbertPV",
-        "line": 104,
+        "line": 187,
         "binders": "{f : ℝ → ℝ} (hf : Integrable f) (hlip : LocallyLipschitz f)"
       }
     },
@@ -6760,7 +6760,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Fourier.HilbertTransform.Translation",
       "path": "PDE/Analysis/Fourier/HilbertTransform/Translation.lean",
-      "line": 52,
+      "line": 54,
       "tactic": "cas",
       "form": "cas",
       "statement": "hilbertMultiplier (charMulL2 a g) = charMulL2 a (hilbertMultiplier g)",
@@ -6768,7 +6768,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "hilbertMultiplier_charMulL2",
         "fullName": null,
-        "line": 46,
+        "line": 48,
         "binders": "(a : ℝ) (g : ComplexL2)"
       }
     },
@@ -8120,7 +8120,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.MeasureTheory.Integral.PlanarInverseRadius",
       "path": "PDE/Analysis/MeasureTheory/Integral/PlanarInverseRadius.lean",
-      "line": 135,
+      "line": 114,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∫ z in Metric.ball (0 : ℝ^2) ρ, ‖h z‖ / ‖z‖) ≤ 2 * Real.pi * M * ρ",
@@ -8128,7 +8128,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integral_norm_div_norm_ball_two_le",
         "fullName": "MeasureTheory.integral_norm_div_norm_ball_two_le",
-        "line": 124,
+        "line": 103,
         "binders": "{h : ℝ^2 → ℝ} (hh : AEStronglyMeasurable h) {ρ M : ℝ} (hρ : 0 < ρ) (hbound : ∀ᵐ z ∂volume.restrict (Metric.ball (0 : ℝ^2) ρ), ‖h z‖ ≤ M)"
       }
     },
@@ -10619,7 +10619,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Elliptic.PotentialTheory.FiveDimensional.NewtonianHessianNear",
       "path": "PDE/Elliptic/PotentialTheory/FiveDimensional/NewtonianHessianNear.lean",
-      "line": 76,
+      "line": 48,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∫ X in Metric.ball (0 : ℝ^5) R, ‖X‖ ^ (-4 : ℝ)) = (8 * Real.pi ^ 2 / 3) * R",
@@ -10627,7 +10627,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integral_ball_norm_rpow_neg_four_five",
         "fullName": "PotentialTheory.integral_ball_norm_rpow_neg_four_five",
-        "line": 35,
+        "line": 36,
         "binders": "(R : ℝ) (hR : 0 < R)"
       }
     },
@@ -10636,7 +10636,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Elliptic.PotentialTheory.FiveDimensional.NewtonianHessianNear",
       "path": "PDE/Elliptic/PotentialTheory/FiveDimensional/NewtonianHessianNear.lean",
-      "line": 132,
+      "line": 104,
       "tactic": "cas",
       "form": "cas",
       "statement": "IntegrableOn (fun X : ℝ^5 ↦ iteratedPartialDeriv (n := 5) [i, j] (fundamentalSolution 5) X * (f X - f 0)) (Metric.ball 0 R) ∧ ‖∫ X in Metric.ball (0 : ℝ^5) R, iteratedPartialDeriv (n := 5) [i, j] (fundamentalSolution 5) X * (f X - f 0)‖ ≤ 6 * L * R",
@@ -10644,7 +10644,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integrableOn_and_norm_integral_fundamentalSolution_five_hessian_sub",
         "fullName": "PotentialTheory.integrableOn_and_norm_integral_fundamentalSolution_five_hessian_sub",
-        "line": 80,
+        "line": 52,
         "binders": "(i j : Fin 5) (f : ℝ^5 → ℝ) (hf : Measurable f) (R L : ℝ) (hR : 0 < R) (hL : 0 ≤ L) (hlip : ∀ X ∈ Metric.ball (0 : ℝ^5) R, |f X - f 0| ≤ L * ‖X‖)"
       }
     },
@@ -10721,7 +10721,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Elliptic.PotentialTheory.FiveDimensional.RegularizedKernel",
       "path": "PDE/Elliptic/PotentialTheory/FiveDimensional/RegularizedKernel.lean",
-      "line": 180,
+      "line": 181,
       "tactic": "cas",
       "form": "cas",
       "statement": "∑ i : Fin 5, iteratedPartialDeriv (n := 5) [i, i] (fiveDimensionalGammaRegularized ε) X = -(15 / (8 * Real.pi ^ 2)) * ε ^ 2 * (‖X‖ ^ 2 + ε ^ 2) ^ (-(7 / 2 : ℝ))",
@@ -10729,7 +10729,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "fiveDimensionalGammaRegularized_hessian_trace",
         "fullName": "PotentialTheory.fiveDimensionalGammaRegularized_hessian_trace",
-        "line": 146,
+        "line": 147,
         "binders": "(ε : ℝ) (hε : ε ≠ 0) (X : ℝ^5)"
       }
     },
@@ -10738,7 +10738,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Elliptic.PotentialTheory.FiveDimensional.RegularizedKernel",
       "path": "PDE/Elliptic/PotentialTheory/FiveDimensional/RegularizedKernel.lean",
-      "line": 197,
+      "line": 198,
       "tactic": "cas",
       "form": "cas",
       "statement": "HasDerivAt (fun y : ℝ ↦ (1 / 5 : ℝ) * y ^ 5 * (1 + y ^ 2) ^ (-(5 / 2 : ℝ))) (x ^ 4 * (1 + x ^ 2) ^ (-(7 / 2 : ℝ))) x",
@@ -10746,7 +10746,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "hasDerivAt_fiveDimensionalRegularizedMassPrimitive",
         "fullName": "PotentialTheory.hasDerivAt_fiveDimensionalRegularizedMassPrimitive",
-        "line": 193,
+        "line": 194,
         "binders": "(x : ℝ)"
       }
     },
@@ -11758,7 +11758,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 181,
+      "line": 183,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∂[(0 : Fin 3)] cylindricalRadiusSq) x = 2 * x 0",
@@ -11766,7 +11766,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "partialDeriv_zero_cylindricalRadiusSq",
         "fullName": "AxisymmetricFlow.partialDeriv_zero_cylindricalRadiusSq",
-        "line": 178,
+        "line": 180,
         "binders": "(x : ℝ^3)"
       }
     },
@@ -11775,7 +11775,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 188,
+      "line": 190,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∂[(1 : Fin 3)] cylindricalRadiusSq) x = 2 * x 1",
@@ -11783,7 +11783,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "partialDeriv_one_cylindricalRadiusSq",
         "fullName": "AxisymmetricFlow.partialDeriv_one_cylindricalRadiusSq",
-        "line": 185,
+        "line": 187,
         "binders": "(x : ℝ^3)"
       }
     },
@@ -11792,7 +11792,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 194,
+      "line": 196,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∂[(2 : Fin 3)] cylindricalRadiusSq) x = 0",
@@ -11800,7 +11800,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "partialDeriv_two_cylindricalRadiusSq",
         "fullName": "AxisymmetricFlow.partialDeriv_two_cylindricalRadiusSq",
-        "line": 191,
+        "line": 193,
         "binders": "(x : ℝ^3)"
       }
     },
@@ -11809,7 +11809,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 494,
+      "line": 498,
       "tactic": "cas",
       "form": "cas",
       "statement": "ContDiff ℝ n (meridionalVelocity Ψ)",
@@ -11817,7 +11817,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "contDiff_meridionalVelocity_of_succ",
         "fullName": "AxisymmetricFlow.contDiff_meridionalVelocity_of_succ",
-        "line": 479,
+        "line": 483,
         "binders": "{n : ℕ∞} {Ψ : ℝ^2 → ℝ} (hΨ : ContDiff ℝ (n + 1) Ψ)"
       }
     },
@@ -11826,7 +11826,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 496,
+      "line": 500,
       "tactic": "cas",
       "form": "cas",
       "statement": "ContDiff ℝ n (meridionalVelocity Ψ)",
@@ -11834,7 +11834,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "contDiff_meridionalVelocity_of_succ",
         "fullName": "AxisymmetricFlow.contDiff_meridionalVelocity_of_succ",
-        "line": 479,
+        "line": 483,
         "binders": "{n : ℕ∞} {Ψ : ℝ^2 → ℝ} (hΨ : ContDiff ℝ (n + 1) Ψ)"
       }
     },
@@ -11843,7 +11843,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 519,
+      "line": 523,
       "tactic": "cas",
       "form": "cas",
       "statement": "ContDiff ℝ n (swirlVelocity U)",
@@ -11851,7 +11851,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "contDiff_swirlVelocity",
         "fullName": "AxisymmetricFlow.contDiff_swirlVelocity",
-        "line": 514,
+        "line": 518,
         "binders": "{n : ℕ∞} {U : ℝ^2 → ℝ} (hU : ContDiff ℝ n U)"
       }
     },
@@ -11860,7 +11860,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 521,
+      "line": 525,
       "tactic": "cas",
       "form": "cas",
       "statement": "ContDiff ℝ n (swirlVelocity U)",
@@ -11868,7 +11868,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "contDiff_swirlVelocity",
         "fullName": "AxisymmetricFlow.contDiff_swirlVelocity",
-        "line": 514,
+        "line": 518,
         "binders": "{n : ℕ∞} {U : ℝ^2 → ℝ} (hU : ContDiff ℝ n U)"
       }
     },
@@ -11877,7 +11877,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 561,
+      "line": 565,
       "tactic": "cas",
       "form": "cas",
       "statement": "∇· (meridionalVelocity Ψ) x = 0",
@@ -11885,7 +11885,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialFieldDivergence_meridionalVelocity_eq_zero",
         "fullName": "AxisymmetricFlow.spatialFieldDivergence_meridionalVelocity_eq_zero",
-        "line": 546,
+        "line": 550,
         "binders": "{Ψ : ℝ^2 → ℝ} (hΨ : ContDiff ℝ 2 Ψ) (x : ℝ^3)"
       }
     },
@@ -11894,7 +11894,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 562,
+      "line": 566,
       "tactic": "cas",
       "form": "cas",
       "statement": "∇· (meridionalVelocity Ψ) x = 0",
@@ -11902,7 +11902,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialFieldDivergence_meridionalVelocity_eq_zero",
         "fullName": "AxisymmetricFlow.spatialFieldDivergence_meridionalVelocity_eq_zero",
-        "line": 546,
+        "line": 550,
         "binders": "{Ψ : ℝ^2 → ℝ} (hΨ : ContDiff ℝ 2 Ψ) (x : ℝ^3)"
       }
     },
@@ -11911,7 +11911,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 593,
+      "line": 597,
       "tactic": "cas",
       "form": "cas",
       "statement": "∇· (swirlVelocity U) x = 0",
@@ -11919,7 +11919,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialFieldDivergence_swirlVelocity_eq_zero",
         "fullName": "AxisymmetricFlow.spatialFieldDivergence_swirlVelocity_eq_zero",
-        "line": 586,
+        "line": 590,
         "binders": "{U : ℝ^2 → ℝ} (hU : ContDiff ℝ 1 U) (x : ℝ^3)"
       }
     },
@@ -11928,7 +11928,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 714,
+      "line": 718,
       "tactic": "cas",
       "form": "cas",
       "statement": "meridionalVelocityOfScalar (squaredCylindricalLift Ψ) = meridionalVelocity Ψ",
@@ -11936,7 +11936,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "meridionalVelocityOfScalar_squaredCylindricalLift",
         "fullName": "AxisymmetricFlow.meridionalVelocityOfScalar_squaredCylindricalLift",
-        "line": 704,
+        "line": 708,
         "binders": "{Ψ : ℝ^2 → ℝ} (hΨ : ContDiff ℝ 1 Ψ)"
       }
     },
@@ -11945,7 +11945,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 770,
+      "line": 774,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∂[(0 : Fin 3)] (meridianLift ψ)) x = x 0 / cylindricalRadius x * (∂[(0 : Fin 2)] ψ) (meridianCoordinates x) ∧ (∂[(1 : Fin 3)] (meridianLift ψ)) x = x 1 / cylindricalRadius x * (∂[(0 : Fin 2)] ψ) (meridianCoordinates x) ∧ (∂[(2 : Fin 3)] (meridianLift ψ)) x = (∂[(1 : Fin 2)] ψ) (meridianCoordinates x)",
@@ -11953,7 +11953,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "partialDeriv_meridianLift_off_axis",
         "fullName": null,
-        "line": 729,
+        "line": 733,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 1 ψ) (x : ℝ^3) (hx : 0 < cylindricalRadius x)"
       }
     },
@@ -11962,7 +11962,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 772,
+      "line": 776,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∂[(0 : Fin 3)] (meridianLift ψ)) x = x 0 / cylindricalRadius x * (∂[(0 : Fin 2)] ψ) (meridianCoordinates x) ∧ (∂[(1 : Fin 3)] (meridianLift ψ)) x = x 1 / cylindricalRadius x * (∂[(0 : Fin 2)] ψ) (meridianCoordinates x) ∧ (∂[(2 : Fin 3)] (meridianLift ψ)) x = (∂[(1 : Fin 2)] ψ) (meridianCoordinates x)",
@@ -11970,7 +11970,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "partialDeriv_meridianLift_off_axis",
         "fullName": null,
-        "line": 729,
+        "line": 733,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 1 ψ) (x : ℝ^3) (hx : 0 < cylindricalRadius x)"
       }
     },
@@ -11979,7 +11979,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 801,
+      "line": 805,
       "tactic": "cas using",
       "form": "cas using hs",
       "statement": "meridionalVelocityOfScalar (meridianLift ψ) x = cartesianVector (-x 0 * (∂[(1 : Fin 2)] ψ) (meridianCoordinates x)) (-x 1 * (∂[(1 : Fin 2)] ψ) (meridianCoordinates x)) (2 * ψ (meridianCoordinates x) + cylindricalRadius x * (∂[(0 : Fin 2)] ψ) (meridianCoordinates x))",
@@ -11987,7 +11987,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "meridionalVelocityOfScalar_meridianLift_off_axis",
         "fullName": "AxisymmetricFlow.meridionalVelocityOfScalar_meridianLift_off_axis",
-        "line": 779,
+        "line": 783,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 1 ψ) (x : ℝ^3) (hx : 0 < cylindricalRadius x)"
       }
     },
@@ -11996,7 +11996,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 802,
+      "line": 806,
       "tactic": "cas using",
       "form": "cas using he",
       "statement": "meridionalVelocityOfScalar (meridianLift ψ) x = cartesianVector (-x 0 * (∂[(1 : Fin 2)] ψ) (meridianCoordinates x)) (-x 1 * (∂[(1 : Fin 2)] ψ) (meridianCoordinates x)) (2 * ψ (meridianCoordinates x) + cylindricalRadius x * (∂[(0 : Fin 2)] ψ) (meridianCoordinates x))",
@@ -12004,7 +12004,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "meridionalVelocityOfScalar_meridianLift_off_axis",
         "fullName": "AxisymmetricFlow.meridionalVelocityOfScalar_meridianLift_off_axis",
-        "line": 779,
+        "line": 783,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 1 ψ) (x : ℝ^3) (hx : 0 < cylindricalRadius x)"
       }
     },
@@ -12013,7 +12013,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 818,
+      "line": 822,
       "tactic": "cas using",
       "form": "cas using hs",
       "statement": "‖meridionalVelocityOfScalar (meridianLift ψ) x‖ ^ 2 = cylindricalRadius x ^ 2 * ((∂[(1 : Fin 2)] ψ) (meridianCoordinates x)) ^ 2 + (2 * ψ (meridianCoordinates x) + cylindricalRadius x * (∂[(0 : Fin 2)] ψ) (meridianCoordinates x)) ^ 2",
@@ -12021,7 +12021,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "norm_sq_meridionalVelocityOfScalar_meridianLift",
         "fullName": "AxisymmetricFlow.norm_sq_meridionalVelocityOfScalar_meridianLift",
-        "line": 807,
+        "line": 811,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 1 ψ) (x : ℝ^3)"
       }
     },
@@ -12030,7 +12030,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 819,
+      "line": 823,
       "tactic": "cas using",
       "form": "cas using hs",
       "statement": "‖meridionalVelocityOfScalar (meridianLift ψ) x‖ ^ 2 = cylindricalRadius x ^ 2 * ((∂[(1 : Fin 2)] ψ) (meridianCoordinates x)) ^ 2 + (2 * ψ (meridianCoordinates x) + cylindricalRadius x * (∂[(0 : Fin 2)] ψ) (meridianCoordinates x)) ^ 2",
@@ -12038,7 +12038,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "norm_sq_meridionalVelocityOfScalar_meridianLift",
         "fullName": "AxisymmetricFlow.norm_sq_meridionalVelocityOfScalar_meridianLift",
-        "line": 807,
+        "line": 811,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 1 ψ) (x : ℝ^3)"
       }
     },
@@ -12047,7 +12047,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 827,
+      "line": 831,
       "tactic": "cas using",
       "form": "cas using hs",
       "statement": "‖meridionalVelocityOfScalar (meridianLift ψ) x‖ ^ 2 = cylindricalRadius x ^ 2 * ((∂[(1 : Fin 2)] ψ) (meridianCoordinates x)) ^ 2 + (2 * ψ (meridianCoordinates x) + cylindricalRadius x * (∂[(0 : Fin 2)] ψ) (meridianCoordinates x)) ^ 2",
@@ -12055,7 +12055,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "norm_sq_meridionalVelocityOfScalar_meridianLift",
         "fullName": "AxisymmetricFlow.norm_sq_meridionalVelocityOfScalar_meridianLift",
-        "line": 807,
+        "line": 811,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 1 ψ) (x : ℝ^3)"
       }
     },
@@ -12064,7 +12064,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 869,
+      "line": 873,
       "tactic": "cas",
       "form": "cas",
       "statement": "∇· (meridionalVelocityOfScalar q) x = 0",
@@ -12072,7 +12072,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialFieldDivergence_meridionalVelocityOfScalar_eq_zero",
         "fullName": "AxisymmetricFlow.spatialFieldDivergence_meridionalVelocityOfScalar_eq_zero",
-        "line": 836,
+        "line": 840,
         "binders": "{q : ℝ^3 → ℝ} (hq : ContDiff ℝ 2 q) (x : ℝ^3)"
       }
     },
@@ -12081,7 +12081,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 889,
+      "line": 893,
       "tactic": "cas",
       "form": "cas",
       "statement": "spatialCurl (fun y : ℝ^3 ↦ cartesianVector (-y 1 * q y) (y 0 * q y) 0) x = meridionalVelocityOfScalar q x",
@@ -12089,7 +12089,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialCurl_azimuthalScalar_eq_meridionalVelocityOfScalar",
         "fullName": "AxisymmetricFlow.spatialCurl_azimuthalScalar_eq_meridionalVelocityOfScalar",
-        "line": 874,
+        "line": 878,
         "binders": "{q : ℝ^3 → ℝ} (hq : ContDiff ℝ 1 q) (x : ℝ^3)"
       }
     },
@@ -12098,7 +12098,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 894,
+      "line": 898,
       "tactic": "cas",
       "form": "cas",
       "statement": "spatialCurl (fun y : ℝ^3 ↦ cartesianVector (-y 1 * q y) (y 0 * q y) 0) x = meridionalVelocityOfScalar q x",
@@ -12106,7 +12106,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialCurl_azimuthalScalar_eq_meridionalVelocityOfScalar",
         "fullName": "AxisymmetricFlow.spatialCurl_azimuthalScalar_eq_meridionalVelocityOfScalar",
-        "line": 874,
+        "line": 878,
         "binders": "{q : ℝ^3 → ℝ} (hq : ContDiff ℝ 1 q) (x : ℝ^3)"
       }
     },
@@ -12115,7 +12115,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 901,
+      "line": 905,
       "tactic": "cas",
       "form": "cas",
       "statement": "spatialCurl (fun y : ℝ^3 ↦ cartesianVector (-y 1 * q y) (y 0 * q y) 0) x = meridionalVelocityOfScalar q x",
@@ -12123,7 +12123,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialCurl_azimuthalScalar_eq_meridionalVelocityOfScalar",
         "fullName": "AxisymmetricFlow.spatialCurl_azimuthalScalar_eq_meridionalVelocityOfScalar",
-        "line": 874,
+        "line": 878,
         "binders": "{q : ℝ^3 → ℝ} (hq : ContDiff ℝ 1 q) (x : ℝ^3)"
       }
     },
@@ -12132,7 +12132,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 959,
+      "line": 963,
       "tactic": "cas",
       "form": "cas",
       "statement": "spatialCurl (meridionalVelocityOfScalar (meridianLift ψ)) x = cartesianVector (x 1 * ((∂[(0 : Fin 2)] (∂[0] ψ)) (meridianCoordinates x) + 3 * (cylindricalRadius x)⁻¹ * (∂[0] ψ) (meridianCoordinates x) + (∂[1] (∂[1] ψ)) (meridianCoordinates x))) (-x 0 * ((∂[(0 : Fin 2)] (∂[0] ψ)) (meridianCoordinates x) + 3 * (cylindricalRadius x)⁻¹ * (∂[0] ψ) (meridianCoordinates x) + (∂[1] (∂[1] ψ)) (meridianCoordinates x))) 0",
@@ -12140,7 +12140,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialCurl_meridionalVelocityOfScalar_meridianLift_off_axis",
         "fullName": "AxisymmetricFlow.spatialCurl_meridionalVelocityOfScalar_meridianLift_off_axis",
-        "line": 907,
+        "line": 911,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 2 ψ) (x : ℝ^3) (hx : 0 < cylindricalRadius x)"
       }
     },
@@ -12149,7 +12149,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 978,
+      "line": 982,
       "tactic": "cas",
       "form": "cas",
       "statement": "spatialCurl (meridionalVelocityOfScalar (meridianLift ψ)) x = cartesianVector (x 1 * ((∂[(0 : Fin 2)] (∂[0] ψ)) (meridianCoordinates x) + 3 * (cylindricalRadius x)⁻¹ * (∂[0] ψ) (meridianCoordinates x) + (∂[1] (∂[1] ψ)) (meridianCoordinates x))) (-x 0 * ((∂[(0 : Fin 2)] (∂[0] ψ)) (meridianCoordinates x) + 3 * (cylindricalRadius x)⁻¹ * (∂[0] ψ) (meridianCoordinates x) + (∂[1] (∂[1] ψ)) (meridianCoordinates x))) 0",
@@ -12157,7 +12157,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialCurl_meridionalVelocityOfScalar_meridianLift_off_axis",
         "fullName": "AxisymmetricFlow.spatialCurl_meridionalVelocityOfScalar_meridianLift_off_axis",
-        "line": 907,
+        "line": 911,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 2 ψ) (x : ℝ^3) (hx : 0 < cylindricalRadius x)"
       }
     },
@@ -12166,7 +12166,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 990,
+      "line": 994,
       "tactic": "cas",
       "form": "cas",
       "statement": "spatialCurl (meridionalVelocityOfScalar (meridianLift ψ)) x = cartesianVector (x 1 * ((∂[(0 : Fin 2)] (∂[0] ψ)) (meridianCoordinates x) + 3 * (cylindricalRadius x)⁻¹ * (∂[0] ψ) (meridianCoordinates x) + (∂[1] (∂[1] ψ)) (meridianCoordinates x))) (-x 0 * ((∂[(0 : Fin 2)] (∂[0] ψ)) (meridianCoordinates x) + 3 * (cylindricalRadius x)⁻¹ * (∂[0] ψ) (meridianCoordinates x) + (∂[1] (∂[1] ψ)) (meridianCoordinates x))) 0",
@@ -12174,7 +12174,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialCurl_meridionalVelocityOfScalar_meridianLift_off_axis",
         "fullName": "AxisymmetricFlow.spatialCurl_meridionalVelocityOfScalar_meridianLift_off_axis",
-        "line": 907,
+        "line": 911,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 2 ψ) (x : ℝ^3) (hx : 0 < cylindricalRadius x)"
       }
     },
@@ -12183,7 +12183,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.CartesianReconstruction",
       "path": "PDE/Fluid/Axisymmetric/CartesianReconstruction.lean",
-      "line": 999,
+      "line": 1003,
       "tactic": "cas",
       "form": "cas",
       "statement": "spatialCurl (meridionalVelocityOfScalar (meridianLift ψ)) x = cartesianVector (x 1 * ((∂[(0 : Fin 2)] (∂[0] ψ)) (meridianCoordinates x) + 3 * (cylindricalRadius x)⁻¹ * (∂[0] ψ) (meridianCoordinates x) + (∂[1] (∂[1] ψ)) (meridianCoordinates x))) (-x 0 * ((∂[(0 : Fin 2)] (∂[0] ψ)) (meridianCoordinates x) + 3 * (cylindricalRadius x)⁻¹ * (∂[0] ψ) (meridianCoordinates x) + (∂[1] (∂[1] ψ)) (meridianCoordinates x))) 0",
@@ -12191,7 +12191,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "spatialCurl_meridionalVelocityOfScalar_meridianLift_off_axis",
         "fullName": "AxisymmetricFlow.spatialCurl_meridionalVelocityOfScalar_meridianLift_off_axis",
-        "line": 907,
+        "line": 911,
         "binders": "{ψ : ℝ^2 → ℝ} (hψ : ContDiff ℝ 2 ψ) (x : ℝ^3) (hx : 0 < cylindricalRadius x)"
       }
     },
@@ -19731,7 +19731,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Hyperbolic.Models.Wave.Kirchhoff.Family",
       "path": "PDE/Hyperbolic/Models/Wave/Kirchhoff/Family.lean",
-      "line": 120,
+      "line": 121,
       "tactic": "cas",
       "form": "cas",
       "statement": "ContDiff ℝ k (fun z : E × (ℝ × ℝ^3) ↦ cauchyFreeField (fun x ↦ g (z.1, x)) (fun x ↦ h (z.1, x)) z.2)",
@@ -19739,7 +19739,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "contDiff_cauchyFreeField_family",
         "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.contDiff_cauchyFreeField_family",
-        "line": 66,
+        "line": 67,
         "binders": "{k : ℕ} {g h : E × ℝ^3 → ℝ} (hg : ContDiff ℝ (k + 1 : ℕ) g) (hh : ContDiff ℝ k h)"
       }
     },
@@ -21465,7 +21465,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Hyperbolic.NonlinearWave.GlobalEnergy.ThreeDimensions.ShortTime",
       "path": "PDE/Hyperbolic/NonlinearWave/GlobalEnergy/ThreeDimensions/ShortTime.lean",
-      "line": 110,
+      "line": 111,
       "tactic": "cas",
       "form": "cas",
       "statement": "∀ t ∈ Icc 0 d, ∀ x, ‖u (timeSpaceCons t x)‖ < M",
@@ -21473,7 +21473,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "norm_lt_of_short_time_semilinearWave_three",
         "fullName": "WaveEquation.norm_lt_of_short_time_semilinearWave_three",
-        "line": 68,
+        "line": 69,
         "binders": "{u : ℝ^4 → ℝ} {f : ℝ → ℝ} {g h : ℝ^3 → ℝ} {a b d G K B A M : ℝ} (hu : ContDiffOn ℝ 4 u {p | a < p 0 ∧ p 0 < b}) (ha : a < 0) (hdb : d < b) (hg : ContDiff ℝ 3 g) (hh : ContDiff ℝ 2 h) (hposition : ∀ x, u (timeSpaceCons 0 x) = g x) (hinitial : ∀ x, (∂[0] u) (timeSpaceCons 0 x) = h x) (hG : ∀ x, ‖g x‖ ≤ G) (hK : ∀ x, ‖fderiv ℝ g x‖ ≤ K) (hB : ∀ x, ‖h x‖ ≤ B) (hA : 0 ≤ A) (hGM : G < M) (hsmall : G + d * (K + B) + d ^ 2 * A / 2 < M) (hf : ∀ z, ‖z‖ ≤ M → ‖f z‖ ≤ A) (hwave : ∀ t ∈ Ioc 0 d, ∀ x, waveOperator u (timeSpaceCons t x) + f (u (timeSpaceCons t x)) = 0)"
       }
     },
@@ -22060,16 +22060,16 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.ConeSolution",
       "path": "PDE/Hyperbolic/NonlinearWave/SmallData/Classical/LocalPower/ConeSolution.lean",
-      "line": 95,
+      "line": 106,
       "tactic": "cas",
       "form": "cas",
-      "statement": "∃ T : ℝ, 0 < T ∧ ∃ v : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ 2 v {p | |p.1| < T} ∧ ∀ p : ℝ × ℝ^3, |p.1| < T → v p = p.1 * unitSphereAverage 3 h p.2 p.1 + p.1 ^ 2 * ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction, f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3)))) ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3)",
+      "statement": "∃ T : ℝ, 0 < T ∧ ∃ v a : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ (k + 1) v {p | |p.1| < T} ∧ ContDiffOn ℝ (k + 1) a {p | |p.1| < T} ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → v p = p.1 * unitSphereAverage 3 h p.2 p.1 + p.1 ^ 2 * a p) ∧ ∀ p : ℝ × ℝ^3, |p.1| < T → a p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction, f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3)))) ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3)",
       "decl": {
         "kind": "theorem",
-        "name": "exists_cone_solution",
-        "fullName": "WaveEquation.SmallData.Classical.LocalPower.exists_cone_solution",
-        "line": 57,
-        "binders": "{f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) (h : ℝ^3 →ᵇ ℝ) (hh : ContDiff ℝ 2 h)"
+        "name": "LowerPower.exists_cone_solution_with_remainder",
+        "fullName": "WaveEquation.SmallData.Classical.LocalPower.LowerPower.exists_cone_solution_with_remainder",
+        "line": 66,
+        "binders": "{k : ℕ} {f : ℝ → ℝ} (hf : ContDiff ℝ (k + 1) f) (h : ℝ^3 →ᵇ ℝ) (hh : ContDiff ℝ (k + 1) h)"
       }
     },
     {
@@ -22121,23 +22121,6 @@ def json : String := r####"
         "fullName": "WaveEquation.SmallData.Classical.LocalPower.freeField_apply",
         "line": 49,
         "binders": "(h : C(ℝ^3, ℝ)) (p : ℝ × ℝ^3) (q : Cone)"
-      }
-    },
-    {
-      "scope": "production",
-      "library": "PDE",
-      "module": "PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.LowerPower.Cone",
-      "path": "PDE/Hyperbolic/NonlinearWave/SmallData/Classical/LocalPower/LowerPower/Cone.lean",
-      "line": 71,
-      "tactic": "cas",
-      "form": "cas",
-      "statement": "∃ T : ℝ, 0 < T ∧ ∃ v a : ℝ × ℝ^3 → ℝ, ContDiffOn ℝ (k + 1) v {p | |p.1| < T} ∧ ContDiffOn ℝ (k + 1) a {p | |p.1| < T} ∧ (∀ p : ℝ × ℝ^3, |p.1| < T → v p = p.1 * unitSphereAverage 3 h p.2 p.1 + p.1 ^ 2 * a p) ∧ ∀ p : ℝ × ℝ^3, |p.1| < T → a p = ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction, f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3)))) ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3)",
-      "decl": {
-        "kind": "theorem",
-        "name": "exists_cone_solution_with_remainder",
-        "fullName": "WaveEquation.SmallData.Classical.LocalPower.LowerPower.exists_cone_solution_with_remainder",
-        "line": 31,
-        "binders": "{k : ℕ} {f : ℝ → ℝ} (hf : ContDiff ℝ (k + 1) f) (h : ℝ^3 →ᵇ ℝ) (hh : ContDiff ℝ (k + 1) h)"
       }
     },
     {
@@ -28316,7 +28299,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Spaces.Sobolev.Weighted.PlanarReflection",
       "path": "PDE/Spaces/Sobolev/Weighted/PlanarReflection.lean",
-      "line": 809,
+      "line": 781,
       "tactic": "cas",
       "form": "cas",
       "statement": "((3 / (2 * Real.sqrt Real.pi)) * Real.sqrt 2 : ℝ) = 3 / Real.sqrt (2 * Real.pi)",
@@ -28324,7 +28307,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "reflectedKInfinity_constant_eq",
         "fullName": "SobolevSpace.Weighted.reflectedKInfinity_constant_eq",
-        "line": 806,
+        "line": 778,
         "binders": ""
       }
     },

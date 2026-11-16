@@ -27,6 +27,8 @@ of time-dependent fields on the whole space.
 ## Main results
 
 * `contDiff_weightedReflectionFun`: `C^k` within `H` gives a global `C^k` extension.
+* `exists_contDiff_fderivWithin_halfSpace`: the derivative within `H` of a function `C^(m+1)`
+  within `H` extends to a global field of class `C^m`.
 * `fderiv_weightedReflectionFun_of_nonneg`, `fderiv_weightedReflectionFun_of_neg`: the first
   derivative.
 * `fderiv_fderiv_weightedReflectionFun_of_nonneg`,
@@ -161,13 +163,13 @@ theorem weightedReflectionFun_of_eq_zero (i : Fin n) (k : ℕ) (f : ℝ^n → �
 
 /-! ### Regularity -/
 
-/-- A function of class `C^k`, `k ≥ 1`, within the closed half-space has a global `C^k` weighted
-reflection. -/
-theorem contDiff_weightedReflectionFun (i : Fin n) {k : ℕ} (hk : 1 ≤ k) {f : ℝ^n → ℝ}
-    (hf : ContDiffOn ℝ k f {x | 0 ≤ x i}) :
-    ContDiff ℝ k (weightedReflectionFun i k f) := by
+/-- A function of class `C^(m+1)` within the closed half-space `{x | 0 ≤ x i}` has a derivative
+within the half-space that extends to a field of class `C^m` on the whole space. -/
+theorem exists_contDiff_fderivWithin_halfSpace (i : Fin n) {m : ℕ} {f : ℝ^n → ℝ}
+    (hf : ContDiffOn ℝ (m + 1 : ℕ) f {x | 0 ≤ x i}) :
+    ∃ L : ℝ^n → (ℝ^n →L[ℝ] ℝ), ContDiff ℝ m L ∧
+      ∀ x, 0 ≤ x i → HasFDerivWithinAt f (L x) {y | 0 ≤ y i} x := by
   classical
-  obtain ⟨m, rfl⟩ : ∃ m, k = m + 1 := ⟨k - 1, by omega⟩
   let D := fderivWithin ℝ f {x : ℝ^n | 0 ≤ x i}
   have hD : ContDiffOn ℝ m D {x | 0 ≤ x i} :=
     hf.fderivWithin (uniqueDiffOn_coordinateHalfSpace i) (by push_cast; exact le_rfl)
@@ -187,10 +189,18 @@ theorem contDiff_weightedReflectionFun (i : Fin n) {k : ℕ} (hk : 1 ≤ k) {f :
     simp only [sum_apply, smul_apply,
       EuclideanSpace.coe_proj, map_sum, map_smul, smul_eq_mul]
     exact Finset.sum_congr rfl (fun j _ ↦ by rw [hGeq j hx, mul_comm])
-  have h := contDiff_succ_weightedReflectionFun i m hL (fun x hx ↦ by
-    rw [hLeq x hx]
-    exact (hf.differentiableOn (by simp) x hx).hasFDerivWithinAt)
-  exact_mod_cast h
+  refine ⟨L, hL, fun x hx ↦ ?_⟩
+  rw [hLeq x hx]
+  exact (hf.differentiableOn (by simp) x hx).hasFDerivWithinAt
+
+/-- A function of class `C^k`, `k ≥ 1`, within the closed half-space has a global `C^k` weighted
+reflection. -/
+theorem contDiff_weightedReflectionFun (i : Fin n) {k : ℕ} (hk : 1 ≤ k) {f : ℝ^n → ℝ}
+    (hf : ContDiffOn ℝ k f {x | 0 ≤ x i}) :
+    ContDiff ℝ k (weightedReflectionFun i k f) := by
+  obtain ⟨m, rfl⟩ : ∃ m, k = m + 1 := ⟨k - 1, by omega⟩
+  obtain ⟨L, hL, hLf⟩ := exists_contDiff_fderivWithin_halfSpace i hf
+  exact_mod_cast contDiff_succ_weightedReflectionFun i m hL hLf
 
 /-- The derivative of the weighted reflection of a `C^k` function, `k ≥ 1`, from its derivative
 within the closed half-space. -/

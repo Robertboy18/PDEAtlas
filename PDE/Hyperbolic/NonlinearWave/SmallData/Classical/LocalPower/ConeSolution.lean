@@ -17,6 +17,12 @@ The implicit function theorem constructs fields on compact normalized cones.
 Uniqueness in its uniform neighborhood identifies restrictions to smaller cones.
 Consequently evaluation at the vertex gives one spacetime field satisfying
 the Kirchhoff integral equation on a uniform time interval.
+
+`LowerPower.exists_cone_solution_with_remainder` does this for every positive finite
+order: a `C^(k+1)` scalar reaction and a bounded `C^(k+1)` velocity give a `C^(k+1)` solution,
+and the integral term, after removing its explicit factor `t²`, has the same regularity. The
+case `k = 0` records information at the initial slice without asserting C² regularity for a
+merely C¹ reaction. `exists_cone_solution` is the case `k = 1` without the remainder.
 -/
 
 @[expose] public noncomputable section
@@ -52,21 +58,26 @@ theorem coneParameter_mem_ball (h : ℝ^3 →ᵇ ℝ) {δ : ℝ} {p : ℝ × ℝ
   exact ⟨by simpa only [coneParameter, Real.norm_eq_abs] using ht.trans_lt hlt,
     (norm_freeField_le h p).trans_lt (hh.trans_lt hlt)⟩
 
-/-- For a C² scalar source and bounded C² velocity, the normalized Kirchhoff
-equation has a jointly C² solution on a uniform open time strip. -/
-theorem exists_cone_solution {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f)
-    (h : ℝ^3 →ᵇ ℝ) (hh : ContDiff ℝ 2 h) :
-    ∃ T : ℝ, 0 < T ∧ ∃ v : ℝ × ℝ^3 → ℝ,
-      ContDiffOn ℝ 2 v {p | |p.1| < T} ∧
+/-- The normalized nonlinear integral equation has a solution and a regular
+remainder for every positive finite differentiability order: for a reaction and a bounded
+velocity of class `C^(k+1)` there are a time `T > 0` and fields `v`, `a` of class `C^(k+1)` on
+`|t| < T` with `v = t * (spherical mean of h) + t² a`, where `a` is the normalized Duhamel
+integral of `f ∘ v`. -/
+theorem LowerPower.exists_cone_solution_with_remainder {k : ℕ} {f : ℝ → ℝ}
+    (hf : ContDiff ℝ (k + 1) f) (h : ℝ^3 →ᵇ ℝ) (hh : ContDiff ℝ (k + 1) h) :
+    ∃ T : ℝ, 0 < T ∧ ∃ v a : ℝ × ℝ^3 → ℝ,
+      ContDiffOn ℝ (k + 1) v {p | |p.1| < T} ∧
+      ContDiffOn ℝ (k + 1) a {p | |p.1| < T} ∧
+      (∀ p : ℝ × ℝ^3, |p.1| < T →
+        v p = p.1 * unitSphereAverage 3 h p.2 p.1 + p.1 ^ 2 * a p) ∧
       ∀ p : ℝ × ℝ^3, |p.1| < T →
-        v p = p.1 * unitSphereAverage 3 h p.2 p.1 +
-          p.1 ^ 2 * ∫ s : I, (1 - (s : ℝ)) *
-            ((∫ ω : Direction,
-              f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3))))
-                ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3) := by
+        a p = ∫ s : I, (1 - (s : ℝ)) *
+          ((∫ ω : Direction,
+            f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3))))
+              ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3) := by
   let N := composeCompact (α := Cone) ⟨f, hf.continuous⟩
   obtain ⟨δ, r, hδ, _, ψ, hψreg, hψsmall, hψeq, hψunique⟩ :=
-    PDE.Analysis.exists_local_integral_solution (k := 1) duhamelOperator
+    PDE.Analysis.exists_local_integral_solution (k := k) duhamelOperator
       (contDiff_composeCompact hf)
   let T := δ / (‖h‖ + 1)
   let A := coneParameter h.toContinuousMap
@@ -98,20 +109,43 @@ theorem exists_cone_solution {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f)
       v (physicalPoint p q) = ψ (A p) q := by
     dsimp only [v]
     rw [hrestrict hp q, restrictCone_apply, descend_vertex_right]
-  refine ⟨T, div_pos hδ (by positivity), v, ?_, ?_⟩
-  · have hAc : ContDiff ℝ 2 A := contDiff_fst.prodMk (contDiff_freeField hh)
-    have hw := hψreg.comp hAc.contDiffOn (fun _ hp ↦ hA hp)
-    exact (evalCLM ℝ vertex : (Cone →ᵇ ℝ) →L[ℝ] ℝ).contDiff.comp_contDiffOn hw
+  let a : ℝ × ℝ^3 → ℝ := fun p ↦ duhamelOperator (N (ψ (A p))) vertex
+  have hAc : ContDiff ℝ (k + 1) A := contDiff_fst.prodMk (contDiff_freeField hh)
+  have hw := hψreg.comp hAc.contDiffOn (fun _ hp ↦ hA hp)
+  have ha := duhamelOperator.contDiff.comp_contDiffOn
+    ((contDiff_composeCompact hf).comp_contDiffOn hw)
+  refine ⟨T, div_pos hδ (by positivity), v, a, ?_, ?_, ?_, ?_⟩
+  · exact (evalCLM ℝ vertex : (Cone →ᵇ ℝ) →L[ℝ] ℝ).contDiff.comp_contDiffOn hw
+  · exact (evalCLM ℝ vertex : (Cone →ᵇ ℝ) →L[ℝ] ℝ).contDiff.comp_contDiffOn ha
   · intro p hp
     have he := congrArg (fun w : Cone →ᵇ ℝ ↦ w vertex) (hψeq _ (hA hp))
-    change v p = freeField h.toContinuousMap p vertex +
-      p.1 ^ 2 * duhamelOperator (N (ψ (A p))) vertex at he
-    rw [he, freeField_apply, duhamelOperator_apply]
+    change v p = freeField h.toContinuousMap p vertex + p.1 ^ 2 * a p at he
+    simpa only [freeField_apply, coe_toContinuousMap, vertex, coneTime, coneSpace, mul_one,
+      smul_zero, add_zero] using he
+  · intro p hp
+    change duhamelOperator (N (ψ (A p))) vertex = _
+    rw [duhamelOperator_apply]
     simp only [N, composeCompact_apply, descend_vertex_left]
-    simp only [vertex, coneTime, coneSpace, mul_one, smul_zero, add_zero, one_pow, one_mul]
-    congr 2
+    simp only [vertex, coneTime, one_pow, one_mul]
     congr 1 with s
     congr 3 with ω
     exact congrArg f (hv hp (rim s ω)).symm
+
+/-- For a C² scalar source and bounded C² velocity, the normalized Kirchhoff
+equation has a jointly C² solution on a uniform open time strip. This is
+`LowerPower.exists_cone_solution_with_remainder` at order two, without its remainder. -/
+theorem exists_cone_solution {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f)
+    (h : ℝ^3 →ᵇ ℝ) (hh : ContDiff ℝ 2 h) :
+    ∃ T : ℝ, 0 < T ∧ ∃ v : ℝ × ℝ^3 → ℝ,
+      ContDiffOn ℝ 2 v {p | |p.1| < T} ∧
+      ∀ p : ℝ × ℝ^3, |p.1| < T →
+        v p = p.1 * unitSphereAverage 3 h p.2 p.1 +
+          p.1 ^ 2 * ∫ s : I, (1 - (s : ℝ)) *
+            ((∫ ω : Direction,
+              f (v (p.1 * (s : ℝ), p.2 + p.1 • ((1 - (s : ℝ)) • (ω : ℝ^3))))
+                ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3) := by
+  obtain ⟨T, hT, v, a, hv, -, heq, hint⟩ :=
+    LowerPower.exists_cone_solution_with_remainder (k := 1) hf h hh
+  exact ⟨T, hT, v, hv, fun p hp ↦ by rw [heq p hp, hint p hp]⟩
 
 end WaveEquation.SmallData.Classical.LocalPower

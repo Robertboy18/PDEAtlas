@@ -20,6 +20,10 @@ global Sobolev space are stated here as closed subspaces of upper-half-space
 For even reflection, the source slices with odd normal multiplicity must
 belong to `H¹₀`.  For odd reflection, the source slices with even normal
 multiplicity must belong to `H¹₀`.
+
+The module also has the lemma that both reflections use to pass from their one-step weak
+derivative recurrences to all derivative words of length at most `m`,
+`hasWeakDerivativeOn_of_word_step`.
 -/
 
 @[expose] public section
@@ -104,6 +108,36 @@ of even-normal zero-trace conditions. -/
           derivativeSlice (n := n) (Ω := ℝ^n₊) α hα U ∈
             (h10SubmoduleOn (n := n) (Ω := ℝ^n₊)).toSubmodule := by
   simp [oddReflectionSubmodule]
+
+/-! ## Weak derivatives from one-step recurrences -/
+
+omit [Fact (0 < n)] in
+/-- Iterated weak derivatives from one-step recurrences, for a family indexed by the derivative
+words of length at most `m`. If `D []` is locally integrable on `Ω` and, for every word `β` of
+length less than `m` and every `i`, `D (β ++ [i])` is the weak `i`-th derivative of `D β` on
+`Ω`, then `D α` is the weak `α`-derivative of `D []` on `Ω` for every word `α` of length at most
+`m`. This is `hasWeakDerivativeOn_of_append_single_chain_order` for a family that is defined
+only on the words of length at most `m`; both reflections use it. -/
+theorem hasWeakDerivativeOn_of_word_step {Ω : Set (ℝ^n)}
+    (D : (α : List (Fin n)) → α.length ≤ m → ℝ^n → ℝ)
+    (hD0 : MeasureTheory.LocallyIntegrableOn (D [] (Nat.zero_le m)) Ω MeasureTheory.volume)
+    (hstep : ∀ (β : List (Fin n)) (hβ : β.length < m) (i : Fin n),
+      HasWeakDerivativeOn (n := n) Ω [i] (D β (Nat.le_of_lt hβ))
+        (D (β ++ [i]) (by simpa [List.length_append] using hβ)))
+    (α : List (Fin n)) (hα : α.length ≤ m) :
+    HasWeakDerivativeOn (n := n) Ω α (D [] (Nat.zero_le m)) (D α hα) := by
+  let D' : List (Fin n) → ℝ^n → ℝ := fun β ↦ if hβ : β.length ≤ m then D β hβ else 0
+  have hD0' : MeasureTheory.LocallyIntegrableOn (D' []) Ω MeasureTheory.volume := by
+    simpa [D'] using hD0
+  have hstep' : ∀ (β : List (Fin n)) (i : Fin n), β.length < m →
+      HasWeakDerivativeOn (n := n) Ω [i] (D' β) (D' (β ++ [i])) := by
+    intro β i hβ
+    have hβLe : β.length ≤ m := Nat.le_of_lt hβ
+    have hβiLe : (β ++ [i]).length ≤ m := by
+      simpa [List.length_append] using hβ
+    simpa [D', hβ, hβLe, hβiLe] using hstep β hβ i
+  simpa [D', hα] using hasWeakDerivativeOn_of_append_single_chain_order
+    (n := n) (Ω := Ω) m D' hD0' hstep' α hα
 
 end HigherOrderReflection
 end GraphSpace

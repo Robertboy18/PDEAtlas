@@ -23,7 +23,7 @@ and a vanishing Laplacian.
 This is the converse to the mean-value property in Evans, §2.2.2, Theorem 3, for continuous
 rather than `C²` functions. Evans argues by contradiction from the formula
 `φ'(r) = (r/n) ⨍_{B(x,r)} Δu` for the sphere average `φ`, which needs `C²` from the start; we
-reuse LeanPDE's Poisson kernel and Mathlib's Tietze extension theorem instead.
+reuse PDEAtlas's Poisson kernel and Mathlib's Tietze extension theorem instead.
 
 ## References
 

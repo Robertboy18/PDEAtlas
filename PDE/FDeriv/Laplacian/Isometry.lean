@@ -15,7 +15,7 @@ import PDE.FDeriv.Calculus
 
 Mathlib's intrinsic Laplacian is unchanged by an orthogonal change of variables:
 transport an orthonormal basis and use the iterated derivative composition theorem.
-LeanPDE's coordinate Laplacian has the same property under local `C²` hypotheses.
+PDEAtlas's coordinate Laplacian has the same property under local `C²` hypotheses.
 Translation invariance then gives the affine version.
 -/
 

@@ -365,7 +365,6 @@ public import PDE.Analysis.Calculus.ParametricIntegral.RightDerivative
 public import PDE.Analysis.Calculus.ParametricIntervalRegularity
 public import PDE.Analysis.Calculus.ParametricIntervalRegularity.Derivatives
 public import PDE.Analysis.Calculus.Parity
-public import PDE.Analysis.Calculus.Parity.Primitive
 public import PDE.Analysis.Calculus.PartialGradient
 public import PDE.Analysis.Calculus.PartialRegularity
 public import PDE.Analysis.Calculus.PivotChainRule
@@ -878,7 +877,6 @@ public import PDE.Analysis.Fourier.HilbertTransform.Parametric.Derivative
 public import PDE.Analysis.Fourier.HilbertTransform.Parametric.Smooth
 public import PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Calculus
 public import PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.Continuity
-public import PDE.Analysis.Fourier.HilbertTransform.PrincipalValue.LocallyLipschitz
 public import PDE.Analysis.Fourier.HilbertTransform.QuotientBounds
 public import PDE.Analysis.Fourier.HilbertTransform.QuotientBounds.Even
 public import PDE.Analysis.Fourier.HilbertTransform.RealL2
@@ -891,7 +889,6 @@ public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Poisson.Derivative
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrimitiveBounds
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrincipalValue
-public import PDE.Analysis.Fourier.HilbertTransform.RealPair.PrincipalValue.LocallyLipschitz
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Reflection
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Sobolev
 public import PDE.Analysis.Fourier.HilbertTransform.RealPair.Sobolev.ClassicalDerivative
@@ -3783,6 +3780,7 @@ public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.General.M
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.LipschitzPersistence.SphericalSource
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.LipschitzPersistence.SphericalTrace
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.LocalReaction.SmoothData
+public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.AffineSource
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.SmoothContinuation
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.SmoothData
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.SmoothLocalExistence
@@ -5401,9 +5399,9 @@ public import CAS.Numerics.MapNormChecks
 public import CAS.Numerics.RotationIteration
 public import CAS.Numerics.ThreeStageRounding
 /-!
-# LeanPDE
+# PDEAtlas
 
-LeanPDE is a library of partial differential equations in Lean 4 and Mathlib. `import PDE` brings
+PDEAtlas is a library of partial differential equations in Lean 4 and Mathlib. `import PDE` brings
 every mathematical module into scope, together with the computer algebra system and the
 certificates of SymLean. The `PDE` library also compiles the examples under `PDE.Examples`,
 which this module does not import. For a smaller import, import the module that contains the

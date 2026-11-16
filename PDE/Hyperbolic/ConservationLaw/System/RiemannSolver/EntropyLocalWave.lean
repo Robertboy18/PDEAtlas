@@ -13,12 +13,41 @@ public import PDE.Hyperbolic.ConservationLaw.System.RiemannSolver.EntropyRarefac
 import PDE.Hyperbolic.ConservationLaw.System.WaveCurve.Compression
 
 /-!
-# Entropy admissible realizations of local elementary transformations
+# Realization of local elementary wave transformations, with entropy
 
-Negative Hugoniot branches use their convex-entropy production estimate.
+A regular elementary transformation with characteristic tangent determines
+a Lax shock on its negative genuinely nonlinear branch. On the
+positive branch, inversion of the characteristic speed produces a fan whose
+values agree with the entire local integral curve. A linearly degenerate
+branch gives the planar contact determined by that same curve. These profiles
+retain the elementary witnesses, and the neighborhood and norm bound are uniform in both
+strength and left state.
+
 The local integral flow gives entropy equality for contacts and, after
-inverting its characteristic speed, for rarefaction fans. These profiles
-retain the elementary witnesses and uniform propagation bounds.
+inverting its characteristic speed, for rarefaction fans. A shock satisfies the convex entropy
+inequalities exactly when its jump dissipates every convex entropy.
+`eventually_exists_bounded_elementary_wave_with_entropy` therefore states the entropy
+inequalities of the constructed wave under that one hypothesis on the negative branch, at each
+strength and left state separately. `eventually_exists_bounded_entropy_elementary_wave` is the
+case where the hypothesis holds near the base point, for example by the convex-entropy
+production estimate of the Hugoniot branch. `eventually_exists_bounded_elementary_wave` in
+`RiemannSolver.LocalWave` is the statement without entropy.
+
+The three cases are the waves that make up `T_k(z₀)` in Evans, §11.2.4: the `k`-shock wave
+(36)-(37) of §11.2.3 on `S_k^-(z₀)`, the centered rarefaction wave of §11.2.2, Theorem 1, on
+`R_k^+(z₀)`, and the contact discontinuity (33)-(34) of §11.2.3 when the pair is linearly
+degenerate, where `R_k(z₀) = S_k(z₀)` by Theorem 3 there. The window `(lo, hi)` around
+`λ_k(q₀)` outside which the wave is constant is the sector
+`λ_k(z₀) - ε < x/t < λ_k(z₀) + ε` of step 4 of the proof of §11.2.4, Theorem 4. The entropy
+inequalities are (29) of §11.4.2.
+
+## References
+
+* L. C. Evans, *Partial Differential Equations*, 2nd ed., Graduate Studies in Mathematics 19,
+  American Mathematical Society, 2010, §11.2.2, Theorem 1; §11.2.3, equations (33)-(37), Theorem 3
+  and the definition of `S_k^-(z₀)`; §11.2.4, the definition of `T_k(z₀)` and step 4 of the
+  proof of Theorem 4; §11.4.2, equations (25)-(29).
+  <https://doi.org/10.1090/gsm/019>
 -/
 
 @[expose] public section
@@ -30,58 +59,66 @@ namespace PDE.Hyperbolic.ConservationLaw.System
 open Filter Metric Set
 open scoped Topology
 
-private theorem exists_bounded_entropy_elementary_discontinuity {m : ℕ} {flux : ℝ^m → ℝ^m}
+private theorem exists_bounded_elementary_discontinuity {m : ℕ} {flux : ℝ^m → ℝ^m}
     {fields : Fin m → CharacteristicField flux} {k : Fin m} {left right : ℝ^m} {σ lo hi K : ℝ}
     (hRH : RankineHugoniot flux left right σ)
-    (hproduction : ∀ E : ConvexEntropyPair flux, E.entropyFlux right - E.entropyFlux left ≤
-      σ * (E.entropy right - E.entropy left))
     (helem : IsElementaryWave fields k left right (planarShock left right σ)) (hlo : lo ≤ σ)
     (hhi : σ ≤ hi) (hleft : ‖left‖ ≤ K) (hright : ‖right‖ ≤ K) :
     ∃ u : ℝ^2 → ℝ^m,
       IsElementaryWave fields k left right u ∧
-      IsEntropyWeakSolution flux forwardHalfSpace u ∧ Measurable u ∧
+      IsWeakSolution flux forwardHalfSpace u ∧ Measurable u ∧
       (∀ p : ℝ^2, 0 < p 0 → ‖u p‖ ≤ K) ∧
       (∀ c : ℝ, 0 < c → ∀ p, u (c • p) = u p) ∧
       (∀ p : ℝ^2, 0 < p 0 → p 1 < lo * p 0 → u p = left) ∧
-      (∀ p : ℝ^2, 0 < p 0 → hi * p 0 ≤ p 1 → u p = right) := by
-  refine ⟨planarShock left right σ, helem,
-    ((isEntropyWeakSolution_planarShock_iff).mpr ⟨hRH, hproduction⟩).mono_domain le_top,
+      (∀ p : ℝ^2, 0 < p 0 → hi * p 0 ≤ p 1 → u p = right) ∧
+      ((∀ E : ConvexEntropyPair flux, E.entropyFlux right - E.entropyFlux left ≤
+          σ * (E.entropy right - E.entropy left)) →
+        SatisfiesEntropyInequality flux forwardHalfSpace u) := by
+  refine ⟨planarShock left right σ, helem, hRH.isWeakSolution_planarShock.mono_domain le_top,
     measurable_planarShock left right σ,
     fun p _ ↦ (norm_planarShock_le_max left right σ p).trans (max_le hleft hright),
     fun _ hc p ↦ planarShock_smul_of_pos hc left right σ p,
     fun p ht hp ↦ planarShock_apply_of_mem (hp.trans_le (mul_le_mul_of_nonneg_right hlo ht.le)),
     fun p ht hp ↦ planarShock_apply_of_not_mem
-      (not_lt.mpr ((mul_le_mul_of_nonneg_right hhi ht.le).trans hp))⟩
+      (not_lt.mpr ((mul_le_mul_of_nonneg_right hhi ht.le).trans hp)),
+    fun hproduction ↦ (((isEntropyWeakSolution_planarShock_iff).mpr
+      ⟨hRH, hproduction⟩).mono_domain le_top).entropy⟩
 
 /-- Realize a local elementary transformation by bounded self-similar weak
-waves satisfying every convex entropy inequality and preserving the precise
-elementary witness. On a genuinely nonlinear
+waves, preserving the precise elementary witness, with the entropy inequalities of each wave
+stated under one hypothesis. On a genuinely nonlinear
 branch the transformation has the positively oriented characteristic tangent
-and agrees with the supplied local flow for positive strengths. -/
-theorem eventually_exists_bounded_entropy_elementary_wave {m : ℕ} {flux : ℝ^m → ℝ^m}
+and agrees with the supplied local flow for positive strengths.
+
+The last conjunct is about the wave `u` built at the strength and left state `p`: if, in the
+genuinely nonlinear case with nonpositive strength, the jump from `p.2` to `T p` has a
+Rankine-Hugoniot speed that dissipates every convex entropy, then `u` satisfies every convex
+entropy inequality. Constant states, rarefaction fans and contacts satisfy them without any
+hypothesis. -/
+theorem eventually_exists_bounded_elementary_wave_with_entropy {m : ℕ} {flux : ℝ^m → ℝ^m}
     (hflux : ContDiff ℝ 1 flux) (fields : Fin m → CharacteristicField flux) (k : Fin m) (gn : Prop)
-    {R T : ℝ × ℝ^m → ℝ^m} {speed : ℝ × ℝ^m → ℝ} {q₀ : ℝ^m} {lo hi : ℝ}
-    (heig : ContDiffAt ℝ 1 (fields k).speed q₀) (hT : ContDiffAt ℝ 1 T (0, q₀))
-    (hR : ContDiffAt ℝ 1 R (0, q₀)) (hTzero : ∀ q, T (0, q) = q)
+    {R T : ℝ × ℝ^m → ℝ^m} {q₀ : ℝ^m} {lo hi : ℝ} (heig : ContDiffAt ℝ 1 (fields k).speed q₀)
+    (hT : ContDiffAt ℝ 1 T (0, q₀)) (hR : ContDiffAt ℝ 1 R (0, q₀)) (hTzero : ∀ q, T (0, q) = q)
     (hRzero : ∀ᶠ q in 𝓝 q₀, R (0, q) = q)
     (htan : HasDerivAt (fun s ↦ T (s, q₀)) ((fields k).rightEigenvector q₀) 0)
     (helementary : ∀ p, IsElementaryConnection fields k p.2 (T p))
     (hbranch : ∀ᶠ p in 𝓝 ((0 : ℝ), q₀), (¬gn ∨ 0 < p.1) → T p = R p)
     (hflow : ∀ᶠ p in 𝓝 ((0 : ℝ), q₀),
       HasDerivAt (fun t ↦ R (t, p.2)) ((fields k).rightEigenvector (R p)) p.1)
-    (hshock : ∀ᶠ p in 𝓝 ((0 : ℝ), q₀), gn → p.1 ≤ 0 → RankineHugoniot flux p.2 (T p) (speed p) ∧
-      ∀ E : ConvexEntropyPair flux, E.entropyFlux (T p) - E.entropyFlux p.2 ≤
-      speed p * (E.entropy (T p) - E.entropy p.2))
     (hpositive : gn → 0 < fderiv ℝ (fields k).speed q₀ ((fields k).rightEigenvector q₀))
     (hdegenerate : ¬gn → (fields k).IsLinearlyDegenerate)
     (hwindow : (fields k).speed q₀ ∈ Ioo lo hi) :
     ∀ᶠ p in 𝓝 ((0 : ℝ), q₀), ∃ u : ℝ^2 → ℝ^m,
       IsElementaryWave fields k p.2 (T p) u ∧
-      IsEntropyWeakSolution flux forwardHalfSpace u ∧ Measurable u ∧
+      IsWeakSolution flux forwardHalfSpace u ∧ Measurable u ∧
       (∀ z : ℝ^2, 0 < z 0 → ‖u z‖ ≤ ‖q₀‖ + 1) ∧
       (∀ c : ℝ, 0 < c → ∀ z, u (c • z) = u z) ∧
       (∀ z : ℝ^2, 0 < z 0 → z 1 < lo * z 0 → u z = p.2) ∧
-      (∀ z : ℝ^2, 0 < z 0 → hi * z 0 ≤ z 1 → u z = T p) := by
+      (∀ z : ℝ^2, 0 < z 0 → hi * z 0 ≤ z 1 → u z = T p) ∧
+      ((gn → p.1 ≤ 0 → ∃ σ : ℝ, RankineHugoniot flux p.2 (T p) σ ∧
+          ∀ E : ConvexEntropyPair flux, E.entropyFlux (T p) - E.entropyFlux p.2 ≤
+            σ * (E.entropy (T p) - E.entropy p.2)) →
+        SatisfiesEntropyInequality flux forwardHalfSpace u) := by
   classical
   let C := fields k
   have hR₀ := hRzero.self_of_nhds
@@ -112,24 +149,26 @@ theorem eventually_exists_bounded_entropy_elementary_wave {m : ℕ} {flux : ℝ^
     have hball {p : ℝ × ℝ^m} (hp : p ∈ ball ((0 : ℝ), q₀) δ) := (hball' hp).1
     have hz : ∀ᶠ p : ℝ × ℝ^m in 𝓝 (0, q₀), R (0, p.2) = p.2 := (continuousAt_snd :
         ContinuousAt (Prod.snd : ℝ × ℝ^m → ℝ^m) (0, q₀)).tendsto.eventually hRzero
-    filter_upwards [hTnorm, hqnorm, hspeedLeft, hspeedRight, hbranch, hz, hshock,
+    filter_upwards [hTnorm, hqnorm, hspeedLeft, hspeedRight, hbranch, hz,
       ball_mem_nhds ((0 : ℝ), q₀) hδT, ball_mem_nhds ((0 : ℝ), q₀) hδR,
-      ball_mem_nhds ((0 : ℝ), q₀) hδ]
-      with p hTp hqp hspeedL hspeedR hbranchp hzp hshockp hpT hpR hpδ
+      ball_mem_nhds ((0 : ℝ), q₀) hδ] with p hTp hqp hspeedL hspeedR hbranchp hzp hpT hpR hpδ
     by_cases hs0 : p.1 = 0
     · rw [show T p = p.2 by rw [show p = (0, p.2) from Prod.ext hs0 rfl, hTzero]]
-      exact ⟨fun _ ↦ p.2, .same p.2, isEntropyWeakSolution_const forwardHalfSpace p.2,
-        measurable_const, fun _ _ ↦ hqp, fun _ _ _ ↦ rfl, fun _ _ _ ↦ rfl, fun _ _ _ ↦ rfl⟩
+      exact ⟨fun _ ↦ p.2, .same p.2, isWeakSolution_const forwardHalfSpace p.2,
+        measurable_const, fun _ _ ↦ hqp, fun _ _ _ ↦ rfl, fun _ _ _ ↦ rfl, fun _ _ _ ↦ rfl,
+        fun _ ↦ (isEntropyWeakSolution_const forwardHalfSpace p.2).entropy⟩
     rw [← ball_prod_same, Real.ball_zero_eq_Ioo] at hpT hpR hpδ
     rcases lt_or_gt_of_ne hs0 with hs | hs
     · have hdecrease : C.speed (T p) < C.speed p.2 := by
         simpa only [hTzero] using hmonoT p.2 hpT.2 hpT.1 ⟨neg_lt_zero.mpr hδT, hδT⟩ hs
       obtain ⟨σ, hσ⟩ := (helementary p).exists_laxShock_of_speed_lt hdecrease
       have hjump : T p ≠ p.2 := fun h ↦ (ne_of_lt hdecrease) (congrArg C.speed h)
-      have hσeq := RankineHugoniot.unique_speed hjump hσ.1 (hshockp hgn hs.le).1
-      exact exists_bounded_entropy_elementary_discontinuity hσ.1
-        (fun E ↦ hσeq.symm ▸ (hshockp hgn hs.le).2 E) (.shock σ hσ)
-        (hspeedR.1.trans hσ.2.1).le (hσ.2.2.1.trans hspeedL.2).le hqp hTp
+      obtain ⟨u, helem, hu, hmu, hbu, hsu, hlu, hru, hentropy⟩ :=
+        exists_bounded_elementary_discontinuity hσ.1 (.shock σ hσ)
+          (hspeedR.1.trans hσ.2.1).le (hσ.2.2.1.trans hspeedL.2).le hqp hTp
+      refine ⟨u, helem, hu, hmu, hbu, hsu, hlu, hru, fun hshock ↦ ?_⟩
+      obtain ⟨σ', hRH', hproduction⟩ := hshock hgn hs.le
+      exact hentropy fun E ↦ (RankineHugoniot.unique_speed hjump hσ.1 hRH').symm ▸ hproduction E
     · have hTR := hbranchp (Or.inr hs)
       have hmem {s : ℝ} (hs' : s ∈ Ioo (-δ) δ) : (s, p.2) ∈ ball ((0 : ℝ), q₀) δ := by
         rw [← ball_prod_same, Real.ball_zero_eq_Ioo]
@@ -175,9 +214,9 @@ theorem eventually_exists_bounded_entropy_elementary_wave {m : ℕ} {flux : ℝ^
           exact (hball (hmem (hθmem hpδ.1 hθ))).2.2.2.1
         · simpa only [one_mul] using
             hru (AffineInterface.interface (C.speed (R p)) t) ht (by simp)
-      refine ⟨u, hTR.symm ▸ helem, ⟨hu, hentropy⟩, hmu, hbu, hsu,
+      refine ⟨u, hTR.symm ▸ helem, hu, hmu, hbu, hsu,
         fun z ht hx ↦ hlu z (hx.trans_le (mul_le_mul_of_nonneg_right hspeedL.1.le ht.le)),
-        fun z ht hx ↦ ?_⟩
+        fun z ht hx ↦ ?_, fun _ ↦ hentropy⟩
       rw [hTR] at hspeedR ⊢
       exact hru z ht ((mul_le_mul_of_nonneg_right hspeedR.2.le ht.le).trans hx)
   · have hld := hdegenerate hgn
@@ -196,7 +235,47 @@ theorem eventually_exists_bounded_entropy_elementary_wave {m : ℕ} {flux : ℝ^
     rw [← ball_prod_same, Real.ball_zero_eq_Ioo] at hp
     obtain ⟨hspeed, hRH⟩ := hcontact p.2 hp.2 p.1 hp.1
     rw [hTR] at hTp ⊢
-    exact exists_bounded_entropy_elementary_discontinuity hRH (fun E ↦ (hep E.toEntropyPair).le)
-      (.contact (C.speed p.2) ⟨hRH, rfl, hspeed.symm⟩) hspeedL.1.le hspeedL.2.le hqp hTp
+    obtain ⟨u, helem, hu, hmu, hbu, hsu, hlu, hru, hentropy⟩ :=
+      exists_bounded_elementary_discontinuity hRH
+        (.contact (C.speed p.2) ⟨hRH, rfl, hspeed.symm⟩) hspeedL.1.le hspeedL.2.le hqp hTp
+    exact ⟨u, helem, hu, hmu, hbu, hsu, hlu, hru, fun _ ↦ hentropy fun E ↦
+      (hep E.toEntropyPair).le⟩
+
+/-- Realize a local elementary transformation by bounded self-similar weak
+waves satisfying every convex entropy inequality and preserving the precise
+elementary witness. On a genuinely nonlinear
+branch the transformation has the positively oriented characteristic tangent
+and agrees with the supplied local flow for positive strengths. This is
+`eventually_exists_bounded_elementary_wave_with_entropy` when the negative branch dissipates
+every convex entropy near the base point. -/
+theorem eventually_exists_bounded_entropy_elementary_wave {m : ℕ} {flux : ℝ^m → ℝ^m}
+    (hflux : ContDiff ℝ 1 flux) (fields : Fin m → CharacteristicField flux) (k : Fin m) (gn : Prop)
+    {R T : ℝ × ℝ^m → ℝ^m} {speed : ℝ × ℝ^m → ℝ} {q₀ : ℝ^m} {lo hi : ℝ}
+    (heig : ContDiffAt ℝ 1 (fields k).speed q₀) (hT : ContDiffAt ℝ 1 T (0, q₀))
+    (hR : ContDiffAt ℝ 1 R (0, q₀)) (hTzero : ∀ q, T (0, q) = q)
+    (hRzero : ∀ᶠ q in 𝓝 q₀, R (0, q) = q)
+    (htan : HasDerivAt (fun s ↦ T (s, q₀)) ((fields k).rightEigenvector q₀) 0)
+    (helementary : ∀ p, IsElementaryConnection fields k p.2 (T p))
+    (hbranch : ∀ᶠ p in 𝓝 ((0 : ℝ), q₀), (¬gn ∨ 0 < p.1) → T p = R p)
+    (hflow : ∀ᶠ p in 𝓝 ((0 : ℝ), q₀),
+      HasDerivAt (fun t ↦ R (t, p.2)) ((fields k).rightEigenvector (R p)) p.1)
+    (hshock : ∀ᶠ p in 𝓝 ((0 : ℝ), q₀), gn → p.1 ≤ 0 → RankineHugoniot flux p.2 (T p) (speed p) ∧
+      ∀ E : ConvexEntropyPair flux, E.entropyFlux (T p) - E.entropyFlux p.2 ≤
+      speed p * (E.entropy (T p) - E.entropy p.2))
+    (hpositive : gn → 0 < fderiv ℝ (fields k).speed q₀ ((fields k).rightEigenvector q₀))
+    (hdegenerate : ¬gn → (fields k).IsLinearlyDegenerate)
+    (hwindow : (fields k).speed q₀ ∈ Ioo lo hi) :
+    ∀ᶠ p in 𝓝 ((0 : ℝ), q₀), ∃ u : ℝ^2 → ℝ^m,
+      IsElementaryWave fields k p.2 (T p) u ∧
+      IsEntropyWeakSolution flux forwardHalfSpace u ∧ Measurable u ∧
+      (∀ z : ℝ^2, 0 < z 0 → ‖u z‖ ≤ ‖q₀‖ + 1) ∧
+      (∀ c : ℝ, 0 < c → ∀ z, u (c • z) = u z) ∧
+      (∀ z : ℝ^2, 0 < z 0 → z 1 < lo * z 0 → u z = p.2) ∧
+      (∀ z : ℝ^2, 0 < z 0 → hi * z 0 ≤ z 1 → u z = T p) := by
+  filter_upwards [eventually_exists_bounded_elementary_wave_with_entropy hflux fields k gn heig hT
+    hR hTzero hRzero htan helementary hbranch hflow hpositive hdegenerate hwindow, hshock]
+    with p hp hshockp
+  obtain ⟨u, helem, hu, hmu, hbu, hsu, hlu, hru, hentropy⟩ := hp
+  exact ⟨u, helem, ⟨hu, hentropy fun hgn hs ↦ ⟨speed p, hshockp hgn hs⟩⟩, hmu, hbu, hsu, hlu, hru⟩
 
 end PDE.Hyperbolic.ConservationLaw.System

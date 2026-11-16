@@ -94,13 +94,9 @@ theorem integral_semilinearWaveTimeDerivativeSq_le_two_mul_referenceEnergy (V : 
     (henergy : semilinearWaveSpatialEnergy (n := n) V u t =
       semilinearWaveSpatialEnergy (n := n) V u t₀) :
     (∫ x : ℝ^n, ((∂[0] u) (PDE.Common.timeSpaceCons (n := n) t x)) ^ 2) ≤
-      2 * semilinearWaveSpatialEnergy (n := n) V u t₀ := by
-  calc
-    (∫ x : ℝ^n, ((∂[0] u) (PDE.Common.timeSpaceCons (n := n) t x)) ^ 2) ≤
-        2 * semilinearWaveSpatialEnergy (n := n) V u t :=
-      integral_semilinearWaveTimeDerivativeSq_le_two_mul_spatialEnergy
-        (n := n) V hVnonneg hu t henergyIntegrable
-    _ = 2 * semilinearWaveSpatialEnergy (n := n) V u t₀ := by rw [henergy]
+      2 * semilinearWaveSpatialEnergy (n := n) V u t₀ :=
+  (integral_semilinearWaveTimeDerivativeSq_le_two_mul_spatialEnergy
+    (n := n) V hVnonneg hu t henergyIntegrable).trans_eq (by rw [henergy])
 
 /-- An energy equality transports the unnormalized squared spatial-gradient
 bound to twice the reference energy. -/
@@ -110,13 +106,8 @@ theorem integral_semilinearWaveGradientSq_le_two_mul_referenceEnergy (V : ℝ �
     (henergy : semilinearWaveSpatialEnergy (n := n) V u t =
       semilinearWaveSpatialEnergy (n := n) V u t₀) :
     (∫ x : ℝ^n, ‖classicalWaveSpatialGradient (n := n) u (PDE.Common.timeSpaceCons (n := n) t x)‖ ^
-      2) ≤ 2 * semilinearWaveSpatialEnergy (n := n) V u t₀ := by
-  calc
-    (∫ x : ℝ^n, ‖classicalWaveSpatialGradient (n := n) u
-          (PDE.Common.timeSpaceCons (n := n) t x)‖ ^ 2) ≤
-        2 * semilinearWaveSpatialEnergy (n := n) V u t :=
-      integral_semilinearWaveGradientSq_le_two_mul_spatialEnergy
-        (n := n) V hVnonneg hu t henergyIntegrable
-    _ = 2 * semilinearWaveSpatialEnergy (n := n) V u t₀ := by rw [henergy]
+      2) ≤ 2 * semilinearWaveSpatialEnergy (n := n) V u t₀ :=
+  (integral_semilinearWaveGradientSq_le_two_mul_spatialEnergy
+    (n := n) V hVnonneg hu t henergyIntegrable).trans_eq (by rw [henergy])
 
 end WaveEquation

@@ -13,9 +13,10 @@ import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
 /-!
 # Retaining a bounded past source when restarting the cone equation
 
-The past part of the retarded integral is a C¹ free field at every later
-anchor. Its bound depends only on the source amplitude and the elapsed time.
-No bound on derivatives of the past source is needed.
+The past part of the retarded integral is a free field at every later anchor,
+of class `C^m` when the past source is, for every finite order `m`
+(`contDiff_retardedHistory`). Its bound depends only on the source amplitude and
+the elapsed time. No bound on derivatives of the past source is needed.
 -/
 
 @[expose] public noncomputable section
@@ -29,24 +30,36 @@ namespace PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical
 def retardedSourceKernel (F : ℝ × ℝ^3 → ℝ) (q : (ℝ × ℝ^3) × ℝ) : ℝ :=
   (q.1.1 - q.2) * unitSphereAverage 3 (fun y ↦ F (q.2, y)) q.1.2 (q.1.1 - q.2)
 
-/-- A C¹ source gives a jointly C¹ spherical kernel, including zero age. -/
-theorem contDiff_one_retardedSourceKernel {F : ℝ × ℝ^3 → ℝ}
-    (hF : ContDiff ℝ 1 F) : ContDiff ℝ 1 (retardedSourceKernel F) := by
-  have hc : ContDiff ℝ 1 (fun z : ((ℝ × ℝ^3) × ℝ) × ℝ^3 ↦
+/-- A source of class `C^m` gives a jointly `C^m` spherical kernel, including zero age, for
+every finite order `m`. -/
+theorem contDiff_retardedSourceKernel {m : ℕ} {F : ℝ × ℝ^3 → ℝ}
+    (hF : ContDiff ℝ m F) : ContDiff ℝ m (retardedSourceKernel F) := by
+  have hc : ContDiff ℝ m (fun z : ((ℝ × ℝ^3) × ℝ) × ℝ^3 ↦
       F (z.1.2, z.1.1.2 + (z.1.1.1 - z.1.2) • z.2)) := hF.comp (contDiff_fst.snd.prodMk
       (contDiff_fst.fst.snd.add ((contDiff_fst.fst.fst.sub contDiff_fst.snd).smul contDiff_snd)))
   exact (contDiff_fst.fst.sub contDiff_snd).mul ((contDiff_integral_compact_parametrization
       (μ := (volume : Measure (ℝ^3)).toSphere) hc continuous_subtype_val).div_const _)
 
+/-- A C¹ source gives a jointly C¹ spherical kernel, including zero age. -/
+theorem contDiff_one_retardedSourceKernel {F : ℝ × ℝ^3 → ℝ}
+    (hF : ContDiff ℝ 1 F) : ContDiff ℝ 1 (retardedSourceKernel F) :=
+  contDiff_retardedSourceKernel (m := 1) hF
+
 /-- All waves emitted before `a`, evaluated at time `a + p.1`. -/
 def retardedHistory (a : ℝ) (F : ℝ × ℝ^3 → ℝ) (p : ℝ × ℝ^3) : ℝ :=
   ∫ s in (0 : ℝ)..a, retardedSourceKernel F ((a + p.1, p.2), s)
 
+/-- The prescribed past of class `C^m` becomes a `C^m` free field for the future cone problem,
+for every finite order `m`. -/
+theorem contDiff_retardedHistory {m : ℕ} {F : ℝ × ℝ^3 → ℝ}
+    (hF : ContDiff ℝ m F) (a : ℝ) : ContDiff ℝ m (retardedHistory a F) :=
+  (contDiff_intervalIntegral (contDiff_retardedSourceKernel hF) 0 a).comp
+    ((contDiff_const.add contDiff_fst).prodMk contDiff_snd)
+
 /-- The prescribed past becomes a C¹ free field for the future cone problem. -/
 theorem contDiff_one_retardedHistory {F : ℝ × ℝ^3 → ℝ}
     (hF : ContDiff ℝ 1 F) (a : ℝ) : ContDiff ℝ 1 (retardedHistory a F) :=
-  (contDiff_intervalIntegral (contDiff_one_retardedSourceKernel hF) 0 a).comp
-    ((contDiff_const.add contDiff_fst).prodMk contDiff_snd)
+  contDiff_retardedHistory (m := 1) hF a
 
 /-- The past contribution is controlled by amplitude alone, uniformly in the
 spatial center and throughout the next unit interval. -/

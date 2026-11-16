@@ -27,7 +27,7 @@ reaches the same backend for these goals.
 
 The computer algebra system itself (`cas`, `cas_nf`, the `#cas` commands, and the `cega`
 certificates) is the separate package SymLean, library `CAS`. The modules under `PDE.Symbolic` add
-LeanPDE's PDE routes to it, and importing `CAS` alone registers none of them.
+PDEAtlas's PDE routes to it, and importing `CAS` alone registers none of them.
 
 ## Implementation notes
 

@@ -60,7 +60,8 @@ theorem exists_least_fixed_point_Icc
     exact S.isLeast_lfp.2 hvfixed'
 
 /-- In a conditionally complete lattice, a monotone self-map of a nonempty
-closed order interval has a greatest fixed point in that interval. -/
+closed order interval has a greatest fixed point in that interval. This is
+`exists_least_fixed_point_Icc` in the dual order. -/
 theorem exists_greatest_fixed_point_Icc
     [ConditionallyCompleteLattice α]
     (T : α → α) (hT : Monotone T)
@@ -69,18 +70,8 @@ theorem exists_greatest_fixed_point_Icc
     ∃ u ∈ Set.Icc lower upper,
       Function.IsFixedPt T u ∧
         ∀ v ∈ Set.Icc lower upper, Function.IsFixedPt T v → v ≤ u := by
-  let : Fact (lower ≤ upper) := ⟨hlowerupper⟩
-  let S := restrictToIcc T hT lower upper hlower hupper
-  let u : Set.Icc lower upper := S.gfp
-  have hufixed : Function.IsFixedPt S u :=
-    S.isFixedPt_gfp
-  refine ⟨u, u.2, ?_, ?_⟩
-  · exact congrArg Subtype.val hufixed
-  · intro v hv hvfixed
-    let v' : Set.Icc lower upper := ⟨v, hv⟩
-    have hvfixed' : Function.IsFixedPt S v' := by
-      apply Subtype.ext
-      exact hvfixed
-    exact S.isGreatest_gfp.2 hvfixed'
+  obtain ⟨u, hu, hfixed, hleast⟩ :=
+    exists_least_fixed_point_Icc (α := αᵒᵈ) T hT.dual upper lower hlowerupper hupper hlower
+  exact ⟨u, ⟨hu.2, hu.1⟩, hfixed, fun v hv hvfixed ↦ hleast v ⟨hv.2, hv.1⟩ hvfixed⟩
 
 end PDE.OrderInterval
