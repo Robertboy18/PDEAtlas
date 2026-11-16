@@ -21,8 +21,7 @@ position and velocity as the free field with that history included.
 `exists_future_of_bounded_history` proves this once, for every finite order
 `m ≥ 1` and every reaction for which the cone construction is available at
 that order: the restart only changes the free field of the cone problem, by
-the retarded history. The C¹ signed powers of exponent at least one are the
-case `exists_signedPower_future_of_bounded_history`.
+the retarded history.
 -/
 
 @[expose] public noncomputable section
@@ -116,31 +115,5 @@ theorem exists_future_of_bounded_history {m : ℕ} (hm : 1 ≤ m) {f : ℝ → �
       oddDuhamelSolution_zero_eq_normalized _ _ hp.1]
     simp only [G, timeSpaceContinuousLinearEquiv_apply]
     rfl
-
-/-- Amplitude bounds on the free wave and prescribed past source construct a
-future branch on one common time interval for all histories and anchor times.
-The integral in the conclusion is the physical Duhamel field. This is
-`exists_future_of_bounded_history` at order one, with the cone construction
-`exists_signedPower_cone_trajectory`. -/
-theorem exists_signedPower_future_of_bounded_history {r : ℝ} (hr : 1 ≤ r)
-    {B M L : ℝ} (hB : 0 ≤ B) (hM : 0 ≤ M) (hL : 0 ≤ L) :
-    ∃ T : ℝ, 0 < T ∧ T ≤ 1 ∧ ∀ a ∈ Icc 0 L,
-      ∀ H : ℝ × ℝ^3 → ℝ, ContDiff ℝ 1 H →
-        (∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 (L + 1) → |H p| ≤ B) →
-      ∀ F : ℝ × ℝ^3 → ℝ, ContDiff ℝ 1 F →
-        (∀ s ∈ Icc 0 a, ∀ x : ℝ^3, |F (s, x)| ≤ M) →
-      ∃ v : ℝ × ℝ^3 → ℝ,
-        ContDiffOn ℝ 1 v {p | |p.1| < T} ∧
-        (∀ x : ℝ^3, v (0, x) = H (a, x) + retardedHistory a F (0, x)) ∧
-        (∀ x : ℝ^3, HasDerivAt (fun t ↦ v (t, x))
-          (deriv (fun t ↦ H (a + t, x) + retardedHistory a F (t, x)) 0) 0) ∧
-        (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T → |v p| < B + L * (L + 1) * M + 1) ∧
-        ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 T →
-          v p = H (a + p.1, p.2) + retardedHistory a F p +
-            oddDuhamelSolution 0
-              (fun z : ℝ^4 ↦ -Real.signedPower r (v (timeSpaceContinuousLinearEquiv 3 z)))
-              (timeSpaceCons p.1 p.2) :=
-  exists_future_of_bounded_history (m := 1) le_rfl (f := fun y ↦ -Real.signedPower r y)
-    (fun _ hA ↦ exists_signedPower_cone_trajectory hr hA) hB hM hL
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical

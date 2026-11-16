@@ -9,11 +9,13 @@ module
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.General.Lipschitz
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.HigherForcing
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.StrongEvolution
+import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.General.SmoothOperator
 
 /-!
 # General smooth reactions preserve higher regularity locally
 
-The Sobolev composition estimate constructs a locally Lipschitz vector field.
+The composition operator is smooth on `Hᵏ` above the Sobolev threshold, so the higher vector
+field is smooth in the state (`contDiff_higherSmoothSource`) and in particular locally Lipschitz.
 Projection commutes with the higher linear semigroup and the forcing, so energy
 uniqueness identifies the local higher trajectory with the global energy
 solution for every smooth globally Lipschitz reaction fixing zero.
@@ -54,15 +56,23 @@ def higherSmoothSource (hk : (n : ℝ) < 2 * ((k : ℝ) - 1))
     higherComposition hk hs hf0
       (lowerOrderCLM (Nat.le_succ k) z.1))
 
-/-- The general smooth reaction gives a locally Lipschitz higher vector field. -/
+/-- The higher source is smooth in the state, for every smooth reaction fixing zero: it is a
+bounded linear map minus the smooth composition operator after a bounded linear map. -/
+theorem contDiff_higherSmoothSource (hk : (n : ℝ) < 2 * ((k : ℝ) - 1))
+    (hs : ContDiff ℝ (⊤ : ℕ∞) f) (hf0 : f 0 = 0) :
+    ContDiff ℝ (⊤ : ℕ∞) (higherSmoothSource hk hs hf0) := by
+  have hq : ContDiff ℝ (⊤ : ℕ∞) (fun z : W^{k + 1,2}(ℝ^n) × W^{k,2}(ℝ^n) ↦
+      lowerOrderCLM (Nat.le_succ k) z.1) :=
+    (ContinuousLinearMap.contDiff (𝕜 := ℝ) (n := (⊤ : ℕ∞)) (E := W^{k + 1,2}(ℝ^n))
+      (F := W^{k,2}(ℝ^n)) (lowerOrderCLM (Nat.le_succ k))).comp contDiff_fst
+  exact contDiff_const.prodMk (hq.sub ((contDiff_higherComposition hk hs hf0).comp hq))
+
+/-- The general smooth reaction gives a locally Lipschitz higher vector field: a smooth map is
+locally Lipschitz. -/
 theorem locallyLipschitz_higherSmoothSource (hk : (n : ℝ) < 2 * ((k : ℝ) - 1))
     (hs : ContDiff ℝ (⊤ : ℕ∞) f) (hf0 : f 0 = 0) :
-    LocallyLipschitz (higherSmoothSource hk hs hf0) := by
-  let Q : (W^{k + 1,2}(ℝ^n) × W^{k,2}(ℝ^n)) →L[ℝ] W^{k,2}(ℝ^n) :=
-    (lowerOrderCLM (Nat.le_succ k)).comp (ContinuousLinearMap.fst ℝ _ _)
-  have hQ : LocallyLipschitz Q := Q.lipschitzWith.locallyLipschitz
-  exact (LocallyLipschitz.const (0 : W^{k + 1,2}(ℝ^n))).prodMk
-    (hQ.sub ((locallyLipschitz_higherComposition hk hs hf0).comp hQ))
+    LocallyLipschitz (higherSmoothSource hk hs hf0) :=
+  ((contDiff_higherSmoothSource hk hs hf0).of_le (by simp)).locallyLipschitz
 
 /-- The higher source as a continuous state map. -/
 def higherSmoothMap (hk : (n : ℝ) < 2 * ((k : ℝ) - 1))

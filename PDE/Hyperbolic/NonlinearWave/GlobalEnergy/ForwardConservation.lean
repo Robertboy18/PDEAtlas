@@ -8,6 +8,7 @@ module
 
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.CompactSlices
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.ForwardBasic
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 import PDE.Spaces.Sobolev.Extension.HalfSpace.Reflection.HigherOrder.ClassicalExtension
 
 /-!
@@ -60,19 +61,9 @@ theorem forwardSemilinearWaveEnergy_eq_of_compact_slices [Fact (0 < n)] {V : ℝ
   obtain ⟨U, hU, heq⟩ := exists_contDiff_extension_halfSpace 0 2 hu
   rw [forwardSemilinearWaveEnergy_eq_of_extension V hU heq ht,
     forwardSemilinearWaveEnergy_eq_of_extension V hU heq le_rfl]
-  apply semilinearWaveSpatialEnergy_eq_of_compact_slices hV hVzero hU _ _ ht
-  · intro s hs' x
-    have hgerm := eventuallyEq_of_eqOn_forward heq
-      (show 0 < (timeSpaceCons s x) 0 by simpa only [mem_ofPred_eq, timeSpaceCons_zero] using hs')
-    unfold semilinearWaveOperator
-    rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-    exact hwave s hs' x
-  · intro s hs'
-    have hslice : (fun x : ℝ^n ↦ U (timeSpaceCons s x)) =
-        (fun x : ℝ^n ↦ u (timeSpaceCons s x)) := by
-      funext x
-      exact heq (by simpa only [mem_ofPred_eq, timeSpaceCons_zero] using hs')
-    rw [hslice]
-    exact hs s hs'
+  exact semilinearWaveSpatialEnergy_eq_of_compact_slices hV hVzero hU
+    (fun s hs' x ↦ (semilinearWaveOperator_congr_nhds V (eventuallyEq_of_eqOn_forward heq
+      (by simpa only [timeSpaceCons_zero] using hs'))).trans (hwave s hs' x))
+    (fun s hs' ↦ slice_eq_of_eqOn_forward heq hs' ▸ hs s hs') ht
 
 end WaveEquation

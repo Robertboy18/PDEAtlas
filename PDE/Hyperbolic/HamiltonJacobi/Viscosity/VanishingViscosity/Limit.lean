@@ -10,6 +10,7 @@ public import PDE.Analysis.Calculus.ContactStability.VanishingPerturbation
 public import PDE.Analysis.Calculus.Laplacian.Slices
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.VanishingViscosity.Classical
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.SmoothTests
+import PDE.Hyperbolic.HamiltonJacobi.Viscosity.Duality
 
 /-!
 # Vanishing viscosity for Hamilton–Jacobi equations
@@ -23,6 +24,10 @@ of solutions. Its Laplacian stays bounded near the contact, so multiplication
 by `εₙ` removes the viscous term even when the solution derivatives grow.
 Nearby smooth contacts then recover all locally `C¹` tests in our definition.
 The approximants need a joint first derivative and `C²` spatial slices.
+
+The estimate is proved for subsolutions. The statement for supersolutions is the same statement
+for `-uₙ` and the reflected Hamiltonian `(p, x) ↦ -H(-p, x)`, by the order duality
+`isSpatialViscositySupersolution_iff_neg`.
 
 This is the argument (5)-(15) with which Evans motivates the definition of viscosity solution in
 §10.1.1, for the regularized equation (2) of §10.1 and the locally uniform limit (3). Evans takes
@@ -83,7 +88,8 @@ theorem isSpatialViscositySubsolution_of_vanishing_viscosity {H : E → E → �
         simpa only [spatialJetOperator_fderiv hdv] using hresidual n w hw)
   simpa only [spatialJetOperator_fderiv hd] using h
 
-/-- The corresponding limit theorem for classical viscous supersolutions. -/
+/-- The corresponding limit theorem for classical viscous supersolutions. It is the subsolution
+theorem for the approximants `-vₙ` and the reflected Hamiltonian `(p, x) ↦ -H(-p, x)`. -/
 theorem isSpatialViscositySupersolution_of_vanishing_viscosity {H : E → E → ℝ} {U : Set (E × ℝ)}
     (hU : IsOpen U) {v : ℕ → E × ℝ → ℝ} {u : E × ℝ → ℝ} {ε : ℕ → ℝ}
     (hH : Continuous (fun q : E × E ↦ H q.1 q.2)) (hv : ∀ n, DifferentiableOn ℝ (v n) U)
@@ -93,31 +99,15 @@ theorem isSpatialViscositySupersolution_of_vanishing_viscosity {H : E → E → 
     (hresidual : ∀ n z, z ∈ U → ε n * Δ (fun x ↦ v n (x, z.2)) z.1 ≤
       fderiv ℝ (v n) z (0, 1) + H (∇ (fun x ↦ v n (x, z.2)) z.1) z.1) :
     IsSpatialViscositySupersolution H U u := by
-  have hu : ContinuousOn u U :=
-    hvu.continuousOn (Frequently.of_forall (fun n ↦ (hv n).continuousOn))
-  refine ⟨hU, fun z hz φ hφ hcontact ↦ ?_⟩
-  have hd := hφ.differentiableAt_one
-  have h := PDE.Analysis.zero_le_of_contDiff_lower_contacts
-    (Q := quadraticSize (E := E)) contDiff_quadraticSize
-    (by simp [quadraticSize]) norm_sq_le_quadraticSize
-    (B := 4) norm_fderiv_quadraticSize_le
-    hU hu.lowerSemicontinuousOn hz hd.hasFDerivAt hcontact
-    (continuous_spatialJetOperator hH).continuousAt
-    (fun y hy ψ hψ hlower ↦ by
-      apply PDE.Analysis.zero_le_of_vanishing_perturbation_at_lower_contacts
-        (Q := quadraticSize (E := E)) contDiff_quadraticSize
-        (by simp [quadraticSize]) norm_sq_le_quadraticSize hU
-        (fun n ↦ (hv n).continuousOn.lowerSemicontinuousOn) hvu hε hy hψ hlower
-        (continuous_spatialJetOperator hH).continuousAt (G := fun θ w ↦ Δ (fun x ↦ θ (x, w.2)) w.1)
-      · exact fun θ hθ ↦ (PDE.contDiff_laplacian_prod_firstSlice (m := 0)
-          (hθ.of_le (by simp))).continuous
-      · intro n w hw θ hθ hmin
-        have hdv := (hv n w hw).differentiableAt (hU.mem_nhds hw)
-        apply mul_laplacian_le_spatialJetOperator_of_lower_contact
-          (hεnonneg n) hdv (hspace n w hw) (hθ.contDiffAt.of_le (by simp))
-          (hmin.isLocalMin (hU.mem_nhds hw))
-        simpa only [spatialJetOperator_fderiv hdv] using hresidual n w hw)
-  simpa only [spatialJetOperator_fderiv hd] using h
+  refine isSpatialViscositySupersolution_iff_neg.2
+    (isSpatialViscositySubsolution_of_vanishing_viscosity (v := -v) hU
+      (hH.comp (continuous_fst.neg.prodMk continuous_snd)).neg (fun n ↦ (hv n).neg)
+      (fun n z hz ↦ (hspace n z hz).neg) hvu.neg hεnonneg hε fun n z hz ↦ ?_)
+  change fderiv ℝ (-v n) z (0, 1) + -H (-∇ (fun x ↦ (-v n) (x, z.2)) z.1) z.1 ≤
+    ε n * Δ (-(fun x ↦ v n (x, z.2))) z.1
+  rw [fderiv_neg, neg_apply, gradient_spaceSlice_neg, neg_neg, InnerProductSpace.laplacian_neg,
+    Pi.neg_apply, mul_neg]
+  linarith only [hresidual n z hz]
 
 /-- A locally uniform limit of classical solutions with vanishing nonnegative
 viscosity solves `u_t + H(∇u, x) = 0` in the viscosity sense. The conclusion

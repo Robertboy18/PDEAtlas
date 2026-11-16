@@ -7,22 +7,18 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.SmoothReaction
-public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.SmallData
-import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.Exponent
 
 /-!
-# Local and finite maximal quadratic power waves
+# Local quadratic power waves
 
 The smooth cutoff of `-z²` agrees with the original focusing reaction while the
-constructed displacement remains in `[-1,1]`. Thus the local existence input is
-proved for the quadratic power, in every positive dimension
-(`exists_solutionBefore_quadratic_zero`). This argument uses smoothness of the polynomial
-square.
+constructed displacement remains in `[-1,1]`. Thus local existence is proved for the
+quadratic power, in every positive dimension (`exists_solutionBefore_quadratic_zero`).
+This argument uses smoothness of the polynomial square.
 
-In three dimensions, compact velocity with positive integral gives a finite maximal classical
-solution (`exists_finite_maximalSolution_quadratic_three`). It is the exponent `p = 2` of
-`LocalPower.exists_finite_maximalSolution_abs_rpow_three`, which holds for `2 ≤ p < 1 + √2` and
-asks only for a `C²` velocity.
+In three dimensions the finite maximal classical solution for compact velocity with positive
+integral is the exponent `p = 2` of `LocalPower.exists_finite_maximalSolution_abs_rpow_three`,
+which holds for `2 ≤ p < 1 + √2` and asks only for a `C²` velocity.
 -/
 
 @[expose] public noncomputable section
@@ -63,16 +59,5 @@ theorem exists_solutionBefore_quadratic_zero {n : ℕ} [NeZero n] (h : ℝ^n →
   intro p hp
   rw [hu.equation p hp, heq]
   simpa only [timeSpaceCons_spatialPart] using hb (p 0) ⟨hp.1, hp.2.le⟩ (spatialPart p)
-
-/-- In three dimensions, smooth compact velocity of positive
-integral and zero displacement produce a finite maximal classical quadratic
-wave. Maximality is in the classical Cauchy solution class. This is the exponent `p = 2` of
-`LocalPower.exists_finite_maximalSolution_abs_rpow_three`. -/
-theorem exists_finite_maximalSolution_quadratic_three {h : ℝ^3 → ℝ} {R : ℝ}
-    (hh : ContDiff ℝ (⊤ : ℕ∞) h) (hhc : HasCompactSupport h) (hs : ∀ x, R < ‖x‖ → h x = 0)
-    (hR : 0 < R) (hpositive : 0 < ∫ x, h x) :
-    ∃ T : ℝ, ∃ u : ℝ^4 → ℝ, IsMaximalSolutionBefore (fun z ↦ -|z| ^ (2 : ℝ)) (fun _ ↦ 0) h T u :=
-  LocalPower.exists_finite_maximalSolution_abs_rpow_three le_rfl two_lt_one_add_sqrt_two
-    (hh.of_le (by simp)) hhc hs hR hpositive
 
 end WaveEquation.SmallData.Classical

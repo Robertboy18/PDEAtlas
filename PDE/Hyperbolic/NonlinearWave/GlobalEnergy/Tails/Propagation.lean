@@ -8,6 +8,7 @@ module
 
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.InitialCompactness
 import PDE.FDeriv.PartialDeriv.Transforms
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.SupportPropagation
 import PDE.Spaces.Sobolev.Extension.HalfSpace.Reflection.HigherOrder.ClassicalExtension
 
@@ -159,18 +160,11 @@ theorem exists_uniform_tail_on_Icc_of_forward_compact_slices_of_short_time {u : 
     ∃ R : ℝ, ∀ t ∈ Icc 0 T, ∀ x : ℝ^n, R < ‖x‖ → ‖u (timeSpaceCons t x)‖ < ε := by
   obtain ⟨U, hU, heq⟩ := PDE.Analysis.exists_contDiff_extension_halfSpace 0 4 hu
   have hw (t : ℝ) (ht : 0 < t) (x : ℝ^n) :
-      waveOperator U (timeSpaceCons t x) + f (U (timeSpaceCons t x)) = 0 := by
-    have hgerm := eventuallyEq_of_eqOn_forward heq
-      (show 0 < (timeSpaceCons t x) 0 by simpa only [timeSpaceCons_zero] using ht)
-    rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-    exact hwave t ht x
-  have hc (t : ℝ) (ht : 0 ≤ t) :
-      HasCompactSupport (fun x : ℝ^n ↦ U (timeSpaceCons t x)) := by
-    have hslice : (fun x : ℝ^n ↦ U (timeSpaceCons t x)) = fun x : ℝ^n ↦ u (timeSpaceCons t x) :=
-      funext fun x ↦ heq (show 0 ≤ (timeSpaceCons t x) 0 by
-        simpa only [timeSpaceCons_zero] using ht)
-    rw [hslice]
-    exact hs t ht
+      waveOperator U (timeSpaceCons t x) + f (U (timeSpaceCons t x)) = 0 :=
+    (waveOperator_add_congr_nhds f (eventuallyEq_of_eqOn_forward heq
+      (by simpa only [timeSpaceCons_zero] using ht))).trans (hwave t ht x)
+  have hc (t : ℝ) (ht : 0 ≤ t) : HasCompactSupport (fun x : ℝ^n ↦ U (timeSpaceCons t x)) :=
+    slice_eq_of_eqOn_forward heq ht ▸ hs t ht
   obtain ⟨R, hR⟩ := exists_uniform_tail_on_Icc_of_compact_slices_of_short_time
     hshort hU hf hw hc T hε
   refine ⟨R, fun t ht x hx ↦ ?_⟩

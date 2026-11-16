@@ -58,10 +58,10 @@ therefore keep Verso's own shell: the theme button, the section rail, the
 "Proof map" actions, the Introduction notebook, the learning features and the
 typeset figure labels are absent, and the proof panels stay inside the pages.
 `Tools/add-wordmark.py` puts the wordmark into the sidebar title and the top
-bar of every page that carries the title of the book; Verso's `find/` redirect
-page keeps its own title. The script does not download the Mathlib cache. Set
-`LEANPDE_LAKE` to run every Lake call, and the renderer, through a launcher of
-your own.
+bar of every page that carries the title of the book, and into the title page
+of the landing page; Verso's `find/` redirect page keeps its own title. The
+script does not download the Mathlib cache. Set `LEANPDE_LAKE` to run every
+Lake call, and the renderer, through a launcher of your own.
 
 ## Publishing on GitHub Pages
 

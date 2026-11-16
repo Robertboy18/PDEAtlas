@@ -7,8 +7,8 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Spaces.Sobolev.Approximation.Mollification.FiniteJets
+import PDE.Spaces.Sobolev.Approximation.Mollification.Reflection
 import PDE.Spaces.Sobolev.Approximation.Mollification.ScaleDerivative.Profiles
-import Mathlib.MeasureTheory.Measure.Haar.NormedSpace
 
 /-!
 # Uniform jet approximation by the standard mollifier
@@ -16,8 +16,8 @@ import Mathlib.MeasureTheory.Measure.Haar.NormedSpace
 For a compactly supported `C^m` function `G`, the mollifications `G_j` at the scales `1/(j+1)`
 by the standard mollifier eventually approximate every derivative word of length at most `m` to
 within any given `η`, uniformly on the whole space; they vanish outside the support radius of `G`
-plus two, and they are odd under a coordinate reflection when `G` is (the companion of
-`mollify_even_of_radial`).
+plus two, and they are odd under a coordinate reflection when `G` is (the odd companion of
+`mollify_even_of_ae`).
 
 ## Main results
 
@@ -41,30 +41,18 @@ namespace SobolevSpace.Approximation
 
 variable {n : ℕ}
 
-/-- Mollification by a radial kernel preserves oddness under each coordinate reflection. -/
+/-- Mollification by a radial kernel preserves oddness under each coordinate reflection: a radial
+kernel is even in every coordinate, so mollification commutes with the reflection
+(`mollify_comp_coordinateReflection`) and with negation. -/
 theorem mollify_odd_of_radial
     (μ : Mollifier n) (w : ℝ → ℝ) (hρ : ∀ x, μ.ρ x = w ‖x‖)
     {ε : ℝ} (hε : 0 < ε) (i : Fin n) {f : ℝ^n → ℝ}
     (hf : PDE.Common.IsOddUnderCoordinateReflection i f) :
     PDE.Common.IsOddUnderCoordinateReflection i (mollify μ ε f) := by
-  intro x
-  have hscaled : ∀ y, scaled μ ε (PDE.Common.coordinateReflection i y) = scaled μ ε y := by
-    intro y
-    simp only [scaled_of_pos μ hε, hρ, norm_smul, PDE.Common.norm_coordinateReflection]
-  calc
-    mollify μ ε f (PDE.Common.coordinateReflection i x) =
-        ∫ y, scaled μ ε (PDE.Common.coordinateReflection i y) *
-          f (PDE.Common.coordinateReflection i x - PDE.Common.coordinateReflection i y) := by
-      simpa only [mollify, convolution_lsmul, smul_eq_mul, PDE.Common.coordinateReflection] using
-        (MeasureTheory.integral_comp (PDE.Common.coordinateReflectionLinearIsometryEquiv i)
-          (fun y ↦ scaled μ ε y * f (PDE.Common.coordinateReflection i x - y))).symm
-    _ = ∫ y, -(scaled μ ε y * f (x - y)) := by
-      apply integral_congr_ae
-      filter_upwards [] with y
-      rw [hscaled, ← PDE.Common.coordinateReflection_sub, hf, mul_neg]
-    _ = -mollify μ ε f x := by
-      rw [integral_neg]
-      simp only [mollify, convolution_lsmul, smul_eq_mul]
+  have hcomm := mollify_comp_coordinateReflection μ i
+    (fun y ↦ by simp only [hρ, PDE.Common.norm_coordinateReflection]) hε f
+  rw [show f ∘ PDE.Common.coordinateReflection i = -f from funext hf, mollify_neg] at hcomm
+  exact fun x ↦ (congrFun hcomm x).symm
 
 /-- The mollification of a function vanishing outside the radius `ρ` by the standard mollifier at
 a scale at most one vanishes outside the radius `ρ + 2`. -/

@@ -10,6 +10,7 @@ public import PDE.Analysis.Scalar.OddPower
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.Lifespan
 import PDE.Analysis.Calculus.LocalExtension.ForwardBand
 import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.SmoothMaximalExistence
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.CompactData.GlobalObstruction
 import CAS.ExactTactic
 
@@ -257,21 +258,17 @@ theorem exists_isSolutionBefore_of_contDiffOn_forward (hf : Continuous f) (hT : 
     PDE.Analysis.exists_contDiffOn_extension_halfOpenBand (0 : Fin (n + 1)) (k := 2) hT hu
   have hv : ContDiffOn ℝ 2 v {p | p 0 < T} := hv
   have hvwave (t : ℝ) (ht : t ∈ Ioo 0 T) (x : ℝ^n) :
-      waveOperator v (timeSpaceCons t x) + f (v (timeSpaceCons t x)) = 0 := by
-    have hgerm : v =ᶠ[𝓝 (timeSpaceCons t x)] u :=
-      eventuallyEq_of_eqOn_forward hvu (by simpa using ht.1)
-    rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-    exact hwave t ht x
+      waveOperator v (timeSpaceCons t x) + f (v (timeSpaceCons t x)) = 0 :=
+    (waveOperator_add_congr_nhds f (eventuallyEq_of_eqOn_forward hvu
+      (by simpa using ht.1))).trans (hwave t ht x)
   -- The equation at time zero, through a `C²` function on the whole space-time.
   obtain ⟨w, hw, hwv⟩ :=
     WaveEquation.SmallData.Classical.exists_contDiff_eventuallyEq_before hv (half_lt_self hT)
   have hzero (x : ℝ^n) : waveOperator v (timeSpaceCons 0 x) + f (v (timeSpaceCons 0 x)) = 0 := by
-    have h0 := hwv (timeSpaceCons 0 x) (by simpa using (half_pos hT).le)
-    rw [← waveOperator_congr_nhds h0, ← h0.eq_of_nhds]
-    exact waveOperator_add_eq_zero_of_mem_Icc hf hw (half_pos hT) (fun t ht ↦ by
-      have ht' := hwv (timeSpaceCons t x) (by simpa using ht.2.le)
-      rw [waveOperator_congr_nhds ht', ht'.eq_of_nhds]
-      exact hvwave t ⟨ht.1, ht.2.trans (half_lt_self hT)⟩ x) ⟨le_rfl, (half_pos hT).le⟩
+    rw [← waveOperator_add_congr_nhds f (hwv (timeSpaceCons 0 x) (by simpa using (half_pos hT).le))]
+    exact waveOperator_add_eq_zero_of_mem_Icc hf hw (half_pos hT) (fun t ht ↦
+      (waveOperator_add_congr_nhds f (hwv (timeSpaceCons t x) (by simpa using ht.2.le))).trans
+        (hvwave t ⟨ht.1, ht.2.trans (half_lt_self hT)⟩ x)) ⟨le_rfl, (half_pos hT).le⟩
   refine ⟨v, ⟨hT, hv, fun p hp ↦ ?_, fun x ↦ ?_, fun x ↦ ?_⟩, fun p hp ↦ hvu hp⟩
   · rw [← timeSpaceCons_spatialPart p]
     rcases hp.1.eq_or_lt with h0 | h0

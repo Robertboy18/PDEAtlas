@@ -9,7 +9,7 @@ module
 public import PDE.Hyperbolic.NonlinearWave.FinitePropagation.ConeEnergyIdentity
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.ForwardBasic
 import PDE.Spaces.Sobolev.Extension.HalfSpace.Reflection.HigherOrder.ClassicalExtension
-import PDE.Hyperbolic.Classical.ForwardLocalization
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 
 /-!
 # Cone flux from forward smoothness
@@ -66,12 +66,9 @@ theorem normalized_integral_forwardSemilinearWaveConeDissipation [Fact (0 < n)] 
     obtain ⟨K, hK⟩ := exists_lipschitzWith_backwardConeGraph c T
     exact ((isCompact_closedBall c T).image hK.continuous).measurableSet
   have hwaveU (t : ℝ) (ht : t ∈ Ioo 0 T) (x : ℝ^n) (hx : x ∈ Metric.ball c (T - t)) :
-      semilinearWaveOperator V U (timeSpaceCons t x) = 0 := by
-    have hgerm := eventuallyEq_of_eqOn_forward heq
-      (show 0 < (timeSpaceCons t x) 0 by simpa only [timeSpaceCons_zero] using ht.1)
-    unfold semilinearWaveOperator
-    rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-    exact hwave t ht x hx
+      semilinearWaveOperator V U (timeSpaceCons t x) = 0 :=
+    (semilinearWaveOperator_congr_nhds V (eventuallyEq_of_eqOn_forward heq
+      (by simpa only [timeSpaceCons_zero] using ht.1))).trans (hwave t ht x hx)
   calc
     _ = (1 / Real.sqrt 2) * (∫ p in backwardConeLateralSurface c T,
           semilinearWaveConeDissipation V U c p ∂Measure.euclideanHausdorffMeasure n) := by

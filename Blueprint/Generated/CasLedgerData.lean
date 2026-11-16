@@ -20802,7 +20802,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Goursat.Localization",
       "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/FinitePower/Goursat/Localization.lean",
-      "line": 134,
+      "line": 135,
       "tactic": "cas",
       "form": "cas",
       "statement": "radialGoursatField W ε (timeSpaceCons t x) = 0 ∧ HasDerivAt (fun s : ℝ ↦ radialGoursatField W ε (timeSpaceCons s x)) (ε / ‖x‖) t",
@@ -20810,7 +20810,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "radialGoursatField_zero_characteristic_trace",
         "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Goursat.radialGoursatField_zero_characteristic_trace",
-        "line": 109,
+        "line": 110,
         "binders": "{W : Parameter → ℝ} (hW : ContDiff ℝ 1 W) {ε η t : ℝ} (hzero : ∀ b ∈ Ioo (-η) η, W (0, b, ε) = 0 ∧ HasDerivAt (fun a : ℝ ↦ W (a, b, ε)) ε 0) {x : ℝ^3} (hx : t + ‖x‖ - 1 = 0) (hb : t - ‖x‖ + 1 ∈ Ioo (-η) η)"
       }
     },
@@ -20819,7 +20819,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Goursat.Localization",
       "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/FinitePower/Goursat/Localization.lean",
-      "line": 137,
+      "line": 138,
       "tactic": "cas",
       "form": "cas",
       "statement": "radialGoursatField W ε (timeSpaceCons t x) = 0 ∧ HasDerivAt (fun s : ℝ ↦ radialGoursatField W ε (timeSpaceCons s x)) (ε / ‖x‖) t",
@@ -20827,7 +20827,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "radialGoursatField_zero_characteristic_trace",
         "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Goursat.radialGoursatField_zero_characteristic_trace",
-        "line": 109,
+        "line": 110,
         "binders": "{W : Parameter → ℝ} (hW : ContDiff ℝ 1 W) {ε η t : ℝ} (hzero : ∀ b ∈ Ioo (-η) η, W (0, b, ε) = 0 ∧ HasDerivAt (fun a : ℝ ↦ W (a, b, ε)) ε 0) {x : ℝ^3} (hx : t + ‖x‖ - 1 = 0) (hb : t - ‖x‖ + 1 ∈ Ioo (-η) η)"
       }
     },
@@ -21329,7 +21329,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.UnboundedWave",
       "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/Persistence/UnboundedWave.lean",
-      "line": 194,
+      "line": 195,
       "tactic": "cas using",
       "form": "cas using [hk']",
       "statement": "∃ T u, IsUnboundedWave (oddPowerPolynomial m c k) g h T u",
@@ -21337,7 +21337,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "exists_isUnboundedWave_oddPower",
         "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.exists_isUnboundedWave_oddPower",
-        "line": 184,
+        "line": 185,
         "binders": "{m c : ℝ} {k : ℕ} (hm : 0 ≤ m) (hk : 0 < k) {g h : ℝ^3 → ℝ} (hg : ContDiff ℝ (⊤ : ℕ∞) g) (hh : ContDiff ℝ (⊤ : ℕ∞) h) (hgc : HasCompactSupport g) (hhc : HasCompactSupport h) (hE : (∫ x : ℝ^3, (1 / 2 : ℝ) * ((h x) ^ 2 + ∑ i : Fin 3, ((∂[i] g) x) ^ 2) + oddPowerPotential m c k (g x)) < 0)"
       }
     },
@@ -21346,7 +21346,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Reaction",
       "path": "PDE/Hyperbolic/NonlinearWave/Cauchy/Regularity/Classical/Reaction.lean",
-      "line": 45,
+      "line": 52,
       "tactic": "cas using",
       "form": "cas using hden",
       "statement": "HasDerivAt saturatingReaction ((1 - s ^ 2) / (1 + s ^ 2) ^ 2) s",
@@ -21354,7 +21354,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "hasDerivAt_saturatingReaction",
         "fullName": "PDE.Hyperbolic.NonlinearWave.Cauchy.hasDerivAt_saturatingReaction",
-        "line": 42,
+        "line": 49,
         "binders": "(s : ℝ)"
       }
     },

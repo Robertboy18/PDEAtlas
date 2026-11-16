@@ -9,7 +9,8 @@
 #     the theme button, the section rail, the "Proof map" actions, the page
 #     descriptions, the Introduction notebook, the learning features and the
 #     typeset figure labels, and they load Marked from its CDN. Of that shell,
-#     `add-wordmark.py` supplies the wordmark in the sidebar title and the top bar;
+#     `add-wordmark.py` supplies the wordmark in the sidebar title, the top bar and
+#     the title page of the landing page;
 #   * `defer-heavy-blocks.mjs` does not run: the proof and hover payloads stay
 #     inside the pages, which are several megabytes each.
 # The libraries, the renderer and the pre-rendered dependency atlas are those of
@@ -112,7 +113,8 @@ mkdir -p "$site_dir/-verso-data/leanpde-brand"
 cp "$repo_root/Blueprint/Assets/Brand/"{logo-light.webp,logo-dark.webp,favicon.png} \
   "$site_dir/-verso-data/leanpde-brand/"
 
-# The wordmark in the two titles of every page: the sidebar title and the top bar.
+# The wordmark in the two titles of every page (the sidebar title and the top bar) and in
+# the title page of the landing page.
 python3 "$tools_root/add-wordmark.py" "$site_dir"
 
 printf 'Blueprint generated without the Node.js steps at %s\n' "$site_dir"

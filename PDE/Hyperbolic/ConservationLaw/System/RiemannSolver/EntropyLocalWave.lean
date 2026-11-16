@@ -30,8 +30,7 @@ inequalities exactly when its jump dissipates every convex entropy.
 inequalities of the constructed wave under that one hypothesis on the negative branch, at each
 strength and left state separately. `eventually_exists_bounded_entropy_elementary_wave` is the
 case where the hypothesis holds near the base point, for example by the convex-entropy
-production estimate of the Hugoniot branch. `eventually_exists_bounded_elementary_wave` in
-`RiemannSolver.LocalWave` is the statement without entropy.
+production estimate of the Hugoniot branch.
 
 The three cases are the waves that make up `T_k(z₀)` in Evans, §11.2.4: the `k`-shock wave
 (36)-(37) of §11.2.3 on `S_k^-(z₀)`, the centered rarefaction wave of §11.2.2, Theorem 1, on

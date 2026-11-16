@@ -8,6 +8,7 @@ module
 
 public import PDE.Analysis.Calculus.ContactStability
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.JetOperator
+import PDE.Hyperbolic.HamiltonJacobi.Viscosity.Duality
 import PDE.Hyperbolic.HamiltonJacobi.Viscosity.QuadraticBarrier
 import Mathlib.Analysis.Calculus.LocalExtr.Basic
 
@@ -71,23 +72,20 @@ theorem isSpatialViscositySubsolution_of_tendstoLocallyUniformlyOn {H : E → E 
   simpa only [spatialJetOperator_fderiv hφ.differentiableAt_one] using h
 
 /-- A locally uniform limit of lower semicontinuous supersolutions is a
-supersolution for a Hamiltonian continuous in both momentum and position. -/
+supersolution for a Hamiltonian continuous in both momentum and position. It is the subsolution
+theorem for `-vₙ` and the reflected Hamiltonian `(p, x) ↦ -H(-p, x)`. -/
 theorem isSpatialViscositySupersolution_of_tendstoLocallyUniformlyOn {H : E → E → ℝ}
     {U : Set (E × ℝ)} {v : ℕ → E × ℝ → ℝ} {u : E × ℝ → ℝ}
     (hH : Continuous (fun q : E × E ↦ H q.1 q.2)) (hv : ∀ n, LowerSemicontinuousOn (v n) U)
     (hsuper : ∀ n, IsSpatialViscositySupersolution H U (v n))
     (hvu : TendstoLocallyUniformlyOn v u atTop U) :
-    IsSpatialViscositySupersolution H U u := by
-  refine ⟨(hsuper 0).1, fun z hz φ hφ hcontact ↦ ?_⟩
-  have h := PDE.Analysis.zero_le_of_tendstoLocallyUniformlyOn_lower_contacts
-    (Q := quadraticSize (E := E)) contDiff_quadraticSize
-    (by simp [quadraticSize]) norm_sq_le_quadraticSize
-    (hsuper 0).1 hv hvu (ε := fun _ ↦ 0) tendsto_const_nhds hz hφ hcontact
-    (continuous_spatialJetOperator hH).continuousAt
-    (fun n y hy ψ hψ hmin ↦ by
-      rw [spatialJetOperator_fderiv hψ.differentiableAt_one]
-      simpa only [neg_zero] using (hsuper n).2 y hy ψ hψ hmin)
-  simpa only [spatialJetOperator_fderiv hφ.differentiableAt_one] using h
+    IsSpatialViscositySupersolution H U u :=
+  isSpatialViscositySupersolution_iff_neg.2
+    (isSpatialViscositySubsolution_of_tendstoLocallyUniformlyOn (v := -v)
+      (hH.comp (continuous_fst.neg.prodMk continuous_snd)).neg
+      (fun n ↦ (continuous_neg : Continuous fun t : ℝ ↦ -t).comp_lowerSemicontinuousOn_antitone
+        (hv n) fun _ _ hab ↦ neg_le_neg hab)
+      (fun n ↦ isSpatialViscositySupersolution_iff_neg.1 (hsuper n)) hvu.neg)
 
 /-- A locally uniform limit of continuous spatial viscosity solutions
 satisfies the same local `C¹` subsolution and supersolution predicates.

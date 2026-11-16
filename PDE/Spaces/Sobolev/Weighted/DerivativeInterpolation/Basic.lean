@@ -50,7 +50,7 @@ weighted integral of one Leibniz summand against a test function.
 The row estimates start from the identity `∫ u'² Φmid = -∫ u u'' Φmid - ∫ u u' Φmid'` of
 `PDE.Spaces.Sobolev.Weighted.IntegrationByParts` (`weightedInterpolation_integral_identity_real` and
 its half-line and half-plane versions), whose boundary terms vanish by compact support and, at
-`r = 0`, by `u 0 = 0`. `weightedInterpolation_row_base_integral_measure` then bounds the two terms
+`r = 0`, by `u 0 = 0`. `weightedInterpolation_row_base_integral_measure_of_ae` bounds the two terms
 on the right by the weighted Cauchy–Schwarz inequality
 `MeasureTheory.weightedInterpolation_integral_term_cauchy_measure_of_ae`, after splitting the
 weights by the comparison hypotheses. `weightedInterpolationYoung_first` and
@@ -260,43 +260,6 @@ theorem weightedInterpolation_row_base_integral_measure_of_ae
     (weightedInterpolation_integral_term_cauchy_measure_of_ae hA1 hprev_nonneg hmid_nonneg
       hcompare1 hprevLp (memLp_mul_sqrt_of_aestronglyMeasurable_of_integrable_weighted_sq
         hmid_meas hmid_nonneg hmid_int) hterm1_int)))
-
-/-- `weightedInterpolation_row_base_integral_measure_of_ae` with the weight comparisons holding
-everywhere. -/
-theorem weightedInterpolation_row_base_integral_measure
-    {α : Type*} [MeasurableSpace α] {μ : Measure α}
-    {u0 u1 u2 dΦ Φprev Φmid Φnext : α → ℝ} {A0 A1 : ℝ}
-    (hA0 : 0 ≤ A0) (hA1 : 0 ≤ A1)
-    (hprev_nonneg : ∀ x, 0 ≤ Φprev x)
-    (hmid_nonneg : ∀ x, 0 ≤ Φmid x)
-    (hnext_nonneg : ∀ x, 0 ≤ Φnext x)
-    (hcompare0 : ∀ x,
-      |Φmid x| ≤ A0 * √(Φprev x) * √(Φnext x))
-    (hcompare1 : ∀ x,
-      |dΦ x| ≤ A1 * √(Φprev x) * √(Φmid x))
-    (hprev_int : Integrable (fun x ↦ u0 x ^ 2 * Φprev x) μ)
-    (hmid_int : Integrable (fun x ↦ u1 x ^ 2 * Φmid x) μ)
-    (hnext_int : Integrable (fun x ↦ u2 x ^ 2 * Φnext x) μ)
-    (hterm0_int : Integrable (fun x ↦ u0 x * u2 x * Φmid x) μ)
-    (hterm1_int : Integrable (fun x ↦ u0 x * u1 x * dΦ x) μ)
-    (hprev_meas : AEStronglyMeasurable
-      (fun x ↦ u0 x * √(Φprev x)) μ)
-    (hmid_meas : AEStronglyMeasurable
-      (fun x ↦ u1 x * √(Φmid x)) μ)
-    (hnext_meas : AEStronglyMeasurable
-      (fun x ↦ u2 x * √(Φnext x)) μ)
-    (hid :
-      (∫ x, u1 x ^ 2 * Φmid x ∂μ) =
-        -(∫ x, u0 x * u2 x * Φmid x ∂μ) -
-          (∫ x, u0 x * u1 x * dΦ x ∂μ)) :
-    (∫ x, u1 x ^ 2 * Φmid x ∂μ) ≤
-      A0 * √(∫ x, u0 x ^ 2 * Φprev x ∂μ) *
-          √(∫ x, u2 x ^ 2 * Φnext x ∂μ) +
-        A1 * √(∫ x, u0 x ^ 2 * Φprev x ∂μ) *
-          √(∫ x, u1 x ^ 2 * Φmid x ∂μ) :=
-  weightedInterpolation_row_base_integral_measure_of_ae hA0 hA1 hprev_nonneg hmid_nonneg
-    hnext_nonneg (ae_of_all μ hcompare0) (ae_of_all μ hcompare1) hprev_int hmid_int hnext_int
-    hterm0_int hterm1_int hprev_meas hmid_meas hnext_meas hid
 
 /-- If `χ > 0`, `Φprev, Φnext ≥ 0`, `|w| ≤ A √Φprev √Φnext` and `a b w`, `a² Φprev` and `b² Φnext`
 are integrable on `ℝ`, then `|∫ a b w| ≤ χ ∫ b² Φnext + (A² / (4χ)) ∫ a² Φprev`. -/
@@ -526,8 +489,8 @@ theorem weightedInterpolation_row_base_integral_real
           √(∫ x : ℝ, deriv u x ^ 2 * Φmid x) := by
   have hdu : ContDiff ℝ 1 (deriv u) := by simpa using (hu.deriv' : ContDiff ℝ 1 (deriv u))
   obtain ⟨h₀, h₁, h₂, h₃, h₄⟩ := integrable_interpolation_terms hu hΦprev hΦmid hΦnext hcu
-  exact weightedInterpolation_row_base_integral_measure hA0 hA1 hprev_nonneg hmid_nonneg
-    hnext_nonneg hcompare0 hcompare1 h₀ h₁ h₂ h₃ h₄
+  exact weightedInterpolation_row_base_integral_measure_of_ae hA0 hA1 hprev_nonneg hmid_nonneg
+    hnext_nonneg (ae_of_all _ hcompare0) (ae_of_all _ hcompare1) h₀ h₁ h₂ h₃ h₄
     (hu.continuous.mul (Real.continuous_sqrt.comp hΦprev.continuous)).aestronglyMeasurable
     (hdu.continuous.mul (Real.continuous_sqrt.comp hΦmid.continuous)).aestronglyMeasurable
     ((hdu.continuous_deriv le_rfl).mul
@@ -559,9 +522,9 @@ theorem weightedInterpolation_row_base_integral_Ioi
           √(∫ x in Set.Ioi (0 : ℝ), deriv u x ^ 2 * Φmid x) := by
   have hdu : ContDiff ℝ 1 (deriv u) := by simpa using (hu.deriv' : ContDiff ℝ 1 (deriv u))
   obtain ⟨h₀, h₁, h₂, h₃, h₄⟩ := integrable_interpolation_terms hu hΦprev hΦmid hΦnext hcu
-  exact weightedInterpolation_row_base_integral_measure hA0 hA1 hprev_nonneg hmid_nonneg
-    hnext_nonneg hcompare0 hcompare1 h₀.integrableOn h₁.integrableOn h₂.integrableOn
-    h₃.integrableOn h₄.integrableOn
+  exact weightedInterpolation_row_base_integral_measure_of_ae hA0 hA1 hprev_nonneg hmid_nonneg
+    hnext_nonneg (ae_of_all _ hcompare0) (ae_of_all _ hcompare1) h₀.integrableOn h₁.integrableOn
+    h₂.integrableOn h₃.integrableOn h₄.integrableOn
     (hu.continuous.mul (Real.continuous_sqrt.comp hΦprev.continuous)).aestronglyMeasurable
     (hdu.continuous.mul (Real.continuous_sqrt.comp hΦmid.continuous)).aestronglyMeasurable
     ((hdu.continuous_deriv le_rfl).mul
@@ -632,10 +595,10 @@ theorem weightedInterpolation_row_base_integral_halfPlane_radial
         √(∫ p : ℝ × ℝ,
             deriv (fun r ↦ u r p.1) p.2 ^ 2 * Φmid p.2 p.1
               ∂(volume.prod (volume.restrict (Set.Ioi (0 : ℝ))))) := by
-  exact weightedInterpolation_row_base_integral_measure hA0 hA1 (fun p ↦ hprev_nonneg p.2 p.1)
-    (fun p ↦ hmid_nonneg p.2 p.1) (fun p ↦ hnext_nonneg p.2 p.1) (fun p ↦ hcompare0 p.2 p.1)
-    (fun p ↦ hcompare1 p.2 p.1) hprev_int hmid_int hnext_int hterm0_int hterm1_int hprev_meas
-    hmid_meas hnext_meas
+  exact weightedInterpolation_row_base_integral_measure_of_ae hA0 hA1
+    (fun p ↦ hprev_nonneg p.2 p.1) (fun p ↦ hmid_nonneg p.2 p.1) (fun p ↦ hnext_nonneg p.2 p.1)
+    (ae_of_all _ fun p ↦ hcompare0 p.2 p.1) (ae_of_all _ fun p ↦ hcompare1 p.2 p.1) hprev_int
+    hmid_int hnext_int hterm0_int hterm1_int hprev_meas hmid_meas hnext_meas
     (weightedInterpolation_integral_identity_halfPlane_radial hu hΦmid hcu hu0 hmid_int
       hterm0_int hterm1_int)
 
@@ -701,10 +664,10 @@ theorem weightedInterpolation_row_base_integral_halfPlane_radial_rz
         √(∫ p : ℝ × ℝ,
             deriv (fun r ↦ u r p.2) p.1 ^ 2 * Φmid p.1 p.2
               ∂((volume.restrict (Set.Ioi (0 : ℝ))).prod volume)) := by
-  exact weightedInterpolation_row_base_integral_measure hA0 hA1 (fun p ↦ hprev_nonneg p.1 p.2)
-    (fun p ↦ hmid_nonneg p.1 p.2) (fun p ↦ hnext_nonneg p.1 p.2) (fun p ↦ hcompare0 p.1 p.2)
-    (fun p ↦ hcompare1 p.1 p.2) hprev_int hmid_int hnext_int hterm0_int hterm1_int hprev_meas
-    hmid_meas hnext_meas
+  exact weightedInterpolation_row_base_integral_measure_of_ae hA0 hA1
+    (fun p ↦ hprev_nonneg p.1 p.2) (fun p ↦ hmid_nonneg p.1 p.2) (fun p ↦ hnext_nonneg p.1 p.2)
+    (ae_of_all _ fun p ↦ hcompare0 p.1 p.2) (ae_of_all _ fun p ↦ hcompare1 p.1 p.2) hprev_int
+    hmid_int hnext_int hterm0_int hterm1_int hprev_meas hmid_meas hnext_meas
     (weightedInterpolation_integral_identity_halfPlane_radial_rz hu hΦmid hcu hu0 hmid_int
       hterm0_int hterm1_int)
 
@@ -771,10 +734,10 @@ theorem weightedInterpolation_row_base_integral_halfPlane_axial
         √(∫ p : ℝ × ℝ,
             deriv (fun z ↦ u p.1 z) p.2 ^ 2 * Φmid p.1 p.2
               ∂((volume.restrict (Set.Ioi (0 : ℝ))).prod volume)) := by
-  exact weightedInterpolation_row_base_integral_measure hA0 hA1 (fun p ↦ hprev_nonneg p.1 p.2)
-    (fun p ↦ hmid_nonneg p.1 p.2) (fun p ↦ hnext_nonneg p.1 p.2) (fun p ↦ hcompare0 p.1 p.2)
-    (fun p ↦ hcompare1 p.1 p.2) hprev_int hmid_int hnext_int hterm0_int hterm1_int hprev_meas
-    hmid_meas hnext_meas
+  exact weightedInterpolation_row_base_integral_measure_of_ae hA0 hA1
+    (fun p ↦ hprev_nonneg p.1 p.2) (fun p ↦ hmid_nonneg p.1 p.2) (fun p ↦ hnext_nonneg p.1 p.2)
+    (ae_of_all _ fun p ↦ hcompare0 p.1 p.2) (ae_of_all _ fun p ↦ hcompare1 p.1 p.2) hprev_int
+    hmid_int hnext_int hterm0_int hterm1_int hprev_meas hmid_meas hnext_meas
     (weightedInterpolation_integral_identity_halfPlane_axial hu hΦmid hcu hmid_int hterm0_int
       hterm1_int)
 

@@ -9,6 +9,7 @@ public import PDE.Analysis.Calculus.LocalExtension.ForwardBand
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.ClassicalRepresentation.InteriorPower
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.IntegralLifespan
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FiniteForwardSupport
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 
 /-!
 # Classical and integral signed-power waves
@@ -64,9 +65,8 @@ theorem exists_integral_representative_of_interior_classical_power {p L S : ℝ}
       he.derivWithin_eq_of_mem (self_mem_Ici), hinitial]
   refine ⟨v, hv, heq, fun t ht x ↦ ?_⟩
   exact eq_free_add_duhamel_of_interior_classical_power hp hv hv₂ hg hh hvpos hvvel
-    (fun s hs y ↦ by
-      rw [waveOperator_congr_nhds (hlocal hs), (hlocal hs).eq_of_nhds]
-      exact hwave s ⟨hs.1, hs.2.trans hSL⟩ y) ht x
+    (fun s hs y ↦ (waveOperator_add_congr_nhds (Real.signedPower p) (hlocal hs)).trans
+      (hwave s ⟨hs.1, hs.2.trans hSL⟩ y)) ht x
 
 /-- Every interior C², initial C¹ solution with the same compact data agrees
 with the global C¹ integral trajectory. Amplitude bounds are derived from

@@ -7,21 +7,24 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.TimeDerivatives
+public import PDE.Spaces.Sobolev.Fractional.Integer.ClassicalRepresentation
+public import PDE.Spaces.Sobolev.Variational.Spaces.WholeSpaceHilbert
 
 /-!
 # Pointwise derivatives of Sobolev wave curves
 
-Evaluation of the canonical representative carries strong Sobolev time
-derivatives to derivatives at every spatial point. For the saturating
-reaction, the represented acceleration is the classical Laplacian minus the
-pointwise reaction. The joint regularity and existence arguments use these
-identifications in the subsequent modules.
+Evaluation of the canonical continuous representative carries a strong Sobolev time derivative
+to a derivative at every spatial point: if `r ↦ u r`, read at a lower Sobolev order `k`, has the
+derivative `v`, then `r ↦ (u r) x` has the derivative `v x` for every `x`
+(`hasDerivWithinAt_classicalRepresentative_lowerOrder` within a set,
+`hasDerivAt_classicalRepresentative_lowerOrder` at an interior time). Both orders lie above the
+classical Sobolev threshold `n < 2 (k - 1)`.
 -/
 
 @[expose] public noncomputable section
 
-open MeasureTheory Set SobolevSpace SobolevSpace.GraphSpace
-open scoped Sobolev SobolevSpace.WholeSpaceHilbert Laplacian
+open Set SobolevSpace SobolevSpace.GraphSpace
+open scoped Sobolev SobolevSpace.WholeSpaceHilbert
 
 namespace PDE.Hyperbolic.NonlinearWave.Cauchy
 
@@ -48,18 +51,5 @@ theorem hasDerivAt_classicalRepresentative_lowerOrder (hk : (n : ℝ) < 2 * ((k 
       (classicalRepresentativeCLM hk v x) t :=
   (hasDerivWithinAt_classicalRepresentative_lowerOrder hk hj hkj
     (s := univ) h.hasDerivWithinAt x).hasDerivAt Filter.univ_mem
-
-variable [NeZero n]
-
-/-- The higher acceleration is the classical Laplacian minus the
-pointwise reaction, with no exceptional spatial set. -/
-theorem classicalRepresentative_higherSaturatingAcceleration (hk : (n : ℝ) < 2 * ((k : ℝ) - 1))
-    (hq : (n : ℝ) < 2 * (((k + 2 : ℕ) : ℝ) - 1)) (q : W^{k + 2,2}(ℝ^n)) (x : ℝ^n) :
-    classicalRepresentativeCLM hk (higherSaturatingAcceleration hk q) x =
-      Δ (classicalRepresentativeCLM hq q : ℝ^n → ℝ) x -
-        saturatingReaction (classicalRepresentativeCLM hq q x) := by
-  rw [higherSaturatingAcceleration, map_sub, BoundedContinuousFunction.sub_apply,
-    classicalRepresentative_higherComposition, classicalRepresentativeCLM_lowerOrderCLM hk hq,
-    laplacian_classicalRepresentative hq hk le_rfl]
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy

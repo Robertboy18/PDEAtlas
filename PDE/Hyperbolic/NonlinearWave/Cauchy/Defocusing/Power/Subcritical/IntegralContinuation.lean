@@ -21,9 +21,10 @@ open overlap.
 
 `exists_signedPower_integral_extension` proves this once, for every finite
 order `m ≥ 1` and every exponent `r ≥ 1` such that the signed power is of
-class `C^m` and the cone construction is available at order `m`. The
-continuation theorem for C¹ integral trajectories, for every `r ≥ 1`, is the
-case `exists_signedPower_integral_extension_of_bounded`.
+class `C^m` and the cone construction is available at order `m`. The cone
+construction is proved at order one for every `r ≥ 1`
+(`exists_signedPower_cone_trajectory`) and at order two for every `r > 2`
+(`exists_c2_signedPower_cone_trajectory`).
 -/
 
 @[expose] public noncomputable section
@@ -189,32 +190,5 @@ theorem exists_signedPower_integral_extension {m : ℕ} (hm : 1 ≤ m) {r b L B 
         (G := fun q ↦ -Real.signedPower r (w (a + q.1, q.2))) (p.1 - a, p.2) hpa fun s hs x ↦ ?_
       rw [hwfuture (a + s, x) (by linarith [hs.1]), add_sub_cancel_left]
     rw [he, hhist, hfuture, add_assoc, ← hsplit]
-
-/-- A bounded C¹ signed-power integral trajectory before a finite time has a
-bounded C¹ integral extension beyond it, preserving the entire old trajectory.
-The new amplitude bound is supplied by the constructed future branch. The
-construction uses no bound on derivatives and no terminal trace. This is
-`exists_signedPower_integral_extension` at order one, with the cone construction
-`exists_signedPower_cone_trajectory`. -/
-theorem exists_signedPower_integral_extension_of_bounded {r b L B M : ℝ}
-    (hr : 1 ≤ r) (hb : 0 < b) (hL : 0 < L) (hB : 0 ≤ B) (hM : 0 ≤ M)
-    {u H : ℝ × ℝ^3 → ℝ}
-    (hu : ContDiffOn ℝ 1 u {p | -b < p.1 ∧ p.1 < L}) (hH : ContDiff ℝ 1 H)
-    (hHB : ∀ p : ℝ × ℝ^3, p.1 ∈ Icc 0 (L + 1) → |H p| ≤ B)
-    (huB : ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L → |u p| ≤ M)
-    (hue : ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L →
-      u p = H p + oddDuhamelSolution 0
-        (fun z : ℝ^4 ↦ -Real.signedPower r (u (timeSpaceContinuousLinearEquiv 3 z)))
-        (timeSpaceCons p.1 p.2)) :
-    ∃ L' M' : ℝ, L < L' ∧ 0 ≤ M' ∧ ∃ w : ℝ × ℝ^3 → ℝ,
-      ContDiffOn ℝ 1 w {p | -b < p.1 ∧ p.1 < L'} ∧
-      EqOn w u {p | -b < p.1 ∧ p.1 < L} ∧
-      (∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L' → |w p| ≤ M') ∧
-      ∀ p : ℝ × ℝ^3, p.1 ∈ Ico 0 L' →
-        w p = H p + oddDuhamelSolution 0
-          (fun z : ℝ^4 ↦ -Real.signedPower r (w (timeSpaceContinuousLinearEquiv 3 z)))
-          (timeSpaceCons p.1 p.2) :=
-  exists_signedPower_integral_extension (m := 1) le_rfl hr (Real.contDiff_one_signedPower hr)
-    (fun _ hA ↦ exists_signedPower_cone_trajectory hr hA) hb hL hB hM hu hH hHB huB hue
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical

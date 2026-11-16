@@ -7,6 +7,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.SmoothTests
+import PDE.Hyperbolic.HamiltonJacobi.Viscosity.Duality
 import Mathlib.Analysis.Calculus.Deriv.Comp
 import Mathlib.Analysis.Calculus.Deriv.Prod
 
@@ -61,23 +62,20 @@ theorem IsSpatialViscositySubsolution.le_zero_of_differentiableAt {H : E → E �
   simpa only [spatialJetOperator_fderiv hd] using h
 
 /-- A lower semicontinuous viscosity supersolution satisfies the classical
-inequality at each point of joint differentiability. -/
+inequality at each point of joint differentiability: the subsolution inequality for `-u` and the
+reflected Hamiltonian `(p, x) ↦ -H(-p, x)`. -/
 theorem IsSpatialViscositySupersolution.zero_le_of_differentiableAt {H : E → E → ℝ}
     {U : Set (E × ℝ)} {u : E × ℝ → ℝ} {z : E × ℝ} (hsuper : IsSpatialViscositySupersolution H U u)
     (hu : LowerSemicontinuousOn u U) (hH : Continuous (fun q : E × E ↦ H q.1 q.2)) (hz : z ∈ U)
     (hd : DifferentiableAt ℝ u z) :
     0 ≤ fderiv ℝ u z (0, 1) + H (∇ (fun x ↦ u (x, z.2)) z.1) z.1 := by
-  have hmin : IsLocalMinOn (fun y ↦ u y - u y) U z := by
-    simpa only [sub_self] using isLocalMinOn_const (s := U) (a := z) (b := (0 : ℝ))
-  have h := PDE.Analysis.zero_le_of_contDiff_lower_contacts
-    (Q := quadraticSize (E := E)) contDiff_quadraticSize
-    (by simp [quadraticSize]) norm_sq_le_quadraticSize
-    (B := 4) norm_fderiv_quadraticSize_le hsuper.1 hu hz
-    hd.hasFDerivAt hmin (continuous_spatialJetOperator hH).continuousAt
-    (fun y hy φ hφ hcontact ↦ by
-      rw [spatialJetOperator_fderiv ((hφ.differentiable (by simp)) y)]
-      exact hsuper.2 y hy φ (hφ.contDiffAt.of_le (by simp)) hcontact)
-  simpa only [spatialJetOperator_fderiv hd] using h
+  have h := (isSpatialViscositySupersolution_iff_neg.1 hsuper).le_zero_of_differentiableAt
+    ((continuous_neg : Continuous fun t : ℝ ↦ -t).comp_lowerSemicontinuousOn_antitone hu
+      fun _ _ hab ↦ neg_le_neg hab)
+    (hH.comp (continuous_fst.neg.prodMk continuous_snd)).neg hz hd.neg
+  beta_reduce at h
+  rw [fderiv_neg, neg_apply, gradient_spaceSlice_neg, neg_neg] at h
+  linarith only [h]
 
 /-- At a joint differentiability point, a continuous viscosity solution
 satisfies the PDE with its time derivative and spatial gradient. -/

@@ -12,12 +12,19 @@ import CAS.ExactTactic
 /-!
 # A smooth globally Lipschitz reaction on higher Sobolev spaces
 
-The reaction `s / (1 + s²)` fixes zero and is globally 1-Lipschitz. Above the
-classical Sobolev threshold its composition operator is smooth in the Sobolev
-norm. Bounded multiplication and smooth inversion of bounded operators prove
-this, using the weak chain rule to construct the inverse multiplier.
+The reaction `s / (1 + s²)` fixes zero, is smooth, and is globally 1-Lipschitz. These are the
+hypotheses on the reaction in the wave theory for smooth globally Lipschitz reactions
+(`PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.General`), so that theory applies to
+it.
 
-The result holds in every positive spatial dimension.
+Above the classical Sobolev threshold its composition operator has an explicit form: multiplication
+by `1 + u²` is a bounded linear isomorphism of the higher Sobolev space (`higherResolventEquiv`),
+with inverse the multiplication by `1 / (1 + u²)` that the weak chain rule constructs, and the
+composition operator sends `u` to that inverse applied to `u`
+(`higherComposition_saturatingReaction_eq_inverse`). Smoothness of the composition operator is
+`contDiff_higherComposition` of `Classical.General.SmoothOperator` for this reaction.
+
+The results hold in every positive spatial dimension.
 -/
 
 @[expose] public noncomputable section
@@ -131,21 +138,5 @@ theorem higherComposition_saturatingReaction_eq_inverse
   ext x
   exact (classicalRepresentative_higherComposition hk contDiff_saturatingReaction
     saturatingReaction_zero u x).trans (classicalRepresentative_higherReciprocalCLM hk u u x).symm
-
-/-- The rational reaction induces a smooth map on the entire higher Sobolev space. -/
-theorem contDiff_higherComposition_saturatingReaction (hk : (n : ℝ) < 2 * ((k : ℝ) - 1)) :
-    ContDiff ℝ (⊤ : ℕ∞)
-      (higherComposition hk contDiff_saturatingReaction saturatingReaction_zero) := by
-  have hM : ContDiff ℝ (⊤ : ℕ∞) (fun u : W^{k,2}(ℝ^n) ↦ higherProductCLM hk u) :=
-    ContinuousLinearMap.contDiff (𝕜 := ℝ) (n := (⊤ : ℕ∞))
-      (E := W^{k,2}(ℝ^n)) (F := W^{k,2}(ℝ^n) →L[ℝ] W^{k,2}(ℝ^n)) (higherProductCLM hk)
-  have hsq : ContDiff ℝ (⊤ : ℕ∞) (fun u : W^{k,2}(ℝ^n) ↦ higherProductCLM hk u u) :=
-    ContDiff.clm_apply (E := W^{k,2}(ℝ^n)) (F := W^{k,2}(ℝ^n)) (G := W^{k,2}(ℝ^n)) hM contDiff_id
-  have hA : ContDiff ℝ (⊤ : ℕ∞) (higherResolventCLM hk) := contDiff_const.add (hM.comp hsq)
-  rw [contDiff_iff_contDiffAt]
-  intro u
-  have hi := (contDiffAt_map_inverse (higherResolventEquiv hk u)).comp u hA.contDiffAt
-  simpa only [Function.comp_apply, id_eq, ← higherComposition_saturatingReaction_eq_inverse] using
-    hi.clm_apply (contDiffAt_id (x := u))
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy

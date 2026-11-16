@@ -8,7 +8,7 @@ module
 
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.CompactData
 import PDE.Analysis.Calculus.LocalExtension.ForwardBand
-import PDE.Hyperbolic.Classical.ForwardLocalization
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 
 /-!
 # Subcritical amplitude bounds on the forward lifespan
@@ -97,8 +97,8 @@ private theorem exists_classical_power_representative {p : ℝ} {u : ℝ^4 → �
       filter_upwards [hopen.mem_nhds
         (by simpa only [mem_ofPred_eq, timeSpaceCons_zero, mem_Ioo] using hs)] with q hq
       exact heq ⟨hq.1.le, hq.2.le⟩
-    rw [waveOperator_congr_nhds hlocal, hlocal.eq_of_nhds]
-    exact hwave s ⟨hs.1, hs.2.trans hSL⟩ y
+    exact (waveOperator_add_congr_nhds (Real.signedPower p) hlocal).trans
+      (hwave s ⟨hs.1, hs.2.trans hSL⟩ y)
   exact ⟨v, hv, heq, hpos, hvel, hw⟩
 
 /-- The forward C² power wave satisfies the retarded ball formula.

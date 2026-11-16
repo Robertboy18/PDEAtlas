@@ -8,7 +8,7 @@ module
 
 public import PDE.Hyperbolic.NonlinearWave.FinitePropagation.QuadraticLowerBound
 import PDE.Spaces.Sobolev.Extension.HalfSpace.Reflection.HigherOrder.ClassicalExtension
-import PDE.Hyperbolic.Classical.ForwardLocalization
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 
 /-!
 # Forward finite propagation for a nonnegative C¹ potential
@@ -46,12 +46,9 @@ theorem eq_zero_on_closed_cone_of_contDiffOn_forward_semilinear [Fact (0 < n)] {
     ∀ t ∈ Icc 0 T, ∀ x ∈ Metric.closedBall c (T - t), u (timeSpaceCons t x) = 0 := by
   obtain ⟨U, hU, heq⟩ := exists_contDiff_extension_halfSpace 0 2 hu
   have hwaveU (t : ℝ) (ht : t ∈ Ioo 0 T) (x : ℝ^n) (hx : x ∈ Metric.ball c (T - t)) :
-      semilinearWaveOperator V U (timeSpaceCons t x) = 0 := by
-    have hgerm := eventuallyEq_of_eqOn_forward heq
-      (show 0 < (timeSpaceCons t x) 0 by simpa only [timeSpaceCons_zero] using ht.1)
-    unfold semilinearWaveOperator
-    rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-    exact hwave t ht x hx
+      semilinearWaveOperator V U (timeSpaceCons t x) = 0 :=
+    (semilinearWaveOperator_congr_nhds V (eventuallyEq_of_eqOn_forward heq
+      (by simpa only [timeSpaceCons_zero] using ht.1))).trans (hwave t ht x hx)
   have hwaveClosed (t : ℝ) (ht : t ∈ Ico 0 T) (x : ℝ^n) (hx : x ∈ Metric.ball c (T - t)) :
       semilinearWaveOperator V U (timeSpaceCons t x) = 0 := by
     have hx' : dist x c < T - t := Metric.mem_ball.mp hx

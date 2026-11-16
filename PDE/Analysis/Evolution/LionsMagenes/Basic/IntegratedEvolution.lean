@@ -69,25 +69,6 @@ theorem gelfandWeakEvolution_integral_identity_timeDependent
   rw [hderiv.pairing_sub_eq_integral v hs ht]
   exact hsum
 
-/-- Two-time form of the weak evolution equation for a bilinear form `B` that does not depend
-on time: `u_t + B u = ell` integrates to the pivot-pairing identity. It is
-`gelfandWeakEvolution_integral_identity_timeDependent` at the constant family `fun _ ↦ B`. -/
-theorem gelfandWeakEvolution_integral_identity
-    (B : V →L[ℝ] StrongDual ℝ V) (ell g : ℝ → StrongDual ℝ V)
-    (u : ℝ → V) {a b s t : ℝ}
-    (hderiv : HasIntegratedDualDerivativeOn T
-      (fun r ↦ T.inclusion (u r)) g a b)
-    (hs : s ∈ uIcc a b) (ht : t ∈ uIcc a b)
-    (heq : ∀ r ∈ uIcc s t,
-      SatisfiesGelfandWeakEvolutionAt B (ell r) (u r) (g r))
-    (v : V)
-    (hB : IntervalIntegrable (fun r ↦ B (u r) v) volume s t) :
-    inner ℝ (T.inclusion (u t)) (T.inclusion v) -
-        inner ℝ (T.inclusion (u s)) (T.inclusion v) +
-        ∫ r in s..t, B (u r) v =
-      ∫ r in s..t, ell r v :=
-  gelfandWeakEvolution_integral_identity_timeDependent (fun _ ↦ B) ell g u hderiv hs ht heq v hB
-
 end IntegratedEvolution
 
 end PDE.Analysis.Evolution

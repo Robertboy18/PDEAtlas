@@ -7,7 +7,8 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.IntegralUniqueness
-public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Continuation
+public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.ConeTrajectory
+import PDE.Hyperbolic.NonlinearWave.Cauchy.Defocusing.Power.Subcritical.IntegralContinuation
 
 /-!
 # C² persistence along the bounded integral trajectory
@@ -59,7 +60,9 @@ theorem contDiffOn_two_of_initial_signedPower_integral_eq {r b L B M S : ℝ} (h
   by_contra hnot
   have hlt : T < L := lt_of_not_ge hnot
   obtain ⟨T', M', hTT', hM', w, hw, hwold, hwB, hwe⟩ :=
-    exists_c2_signedPower_integral_extension_of_bounded hr hb hT hB hM huT hH
+    exists_signedPower_integral_extension (m := 2) one_le_two (one_le_two.trans hr.le)
+      (contDiff_two_signedPower hr) (fun _ hA ↦ exists_c2_signedPower_cone_trajectory hr hA)
+      hb hT hB hM huT hH
       (fun p hp ↦ hHB p ⟨hp.1, hp.2.trans (by linarith)⟩)
       (fun p hp ↦ huB p ⟨hp.1, hp.2.trans_le hTL⟩) (fun p hp ↦ hue p ⟨hp.1, hp.2.trans_le hTL⟩)
   let D := min L T'

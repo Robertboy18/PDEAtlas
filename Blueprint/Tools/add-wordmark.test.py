@@ -2,8 +2,9 @@
 """Tests of `add-wordmark.py`: `python3 Blueprint/Tools/add-wordmark.test.py`.
 
 Each test writes a small site with the titles of Verso's page template (a
-landing page, a chapter one directory down, and the `find/` page with a title
-of its own) and two brand files with known sizes, and runs the script on it.
+landing page with its title page, a chapter one directory down, and the `find/`
+page with a title of its own) and two brand files with known sizes, and runs
+the script on it.
 """
 
 from __future__ import annotations
@@ -19,8 +20,20 @@ SCRIPT = os.path.join(TOOLS, "add-wordmark.py")
 BRAND = "-verso-data/leanpde-brand"
 
 
-def page(base: str, title: str) -> str:
-    """A page with the two titles as Verso's template writes them."""
+PERMALINK = ('<span class="permalink-widget inline">'
+             '<a href="find/?name=book" title="Permalink">🔗</a></span>')
+TITLE_PAGE = """<section id="book">
+        <div class="titlepage">
+          <h1>
+             \u00a0{title}{permalink}</h1>
+        </div></section>"""
+HEADING = "<h1>A heading of the text, with the 🔗 of its permalink</h1>"
+
+
+def page(base: str, title: str, landing: bool = False) -> str:
+    """A page with the two titles as Verso's template writes them, and for the landing page
+    the heading of its title page."""
+    text = TITLE_PAGE.format(title=title, permalink=PERMALINK) if landing else HEADING
     return f"""<!DOCTYPE html>
 <html>
   <head>
@@ -39,7 +52,7 @@ def page(base: str, title: str) -> str:
         <a href="" class="toc-title"><h1>
               {title}</h1>
             </a></nav>
-    <main><h1>A heading of the text, with the 🔗 of its permalink</h1></main>
+    <main>{text}</main>
   </body>
 </html>
 """
@@ -58,7 +71,7 @@ class WordmarkTest(unittest.TestCase):
         self.site = os.path.join(os.path.realpath(temporary.name), "html-multi")
         for directory in (BRAND, "Chapter", "find"):
             os.makedirs(os.path.join(self.site, directory))
-        self.write("index.html", page("./", "PDEAtlas"))
+        self.write("index.html", page("./", "PDEAtlas", landing=True))
         self.write("Chapter/index.html", page("./../", "PDEAtlas"))
         self.write("find/index.html", page("./../", "Cross-Reference Redirection"))
         self.write(f"{BRAND}/logo-light.webp", webp(1623, 318))
@@ -82,6 +95,7 @@ class WordmarkTest(unittest.TestCase):
         result = self.run_script()
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("of 2 pages; 0 had it already.", result.stdout)
+        self.assertIn("Wordmark placed in the title page of the landing page.", result.stdout)
         self.assertIn("Left with their own title: find/index.html.", result.stdout)
         mark = (
             '<span class="leanpde-brand-name">PDEAtlas</span>'
@@ -90,17 +104,24 @@ class WordmarkTest(unittest.TestCase):
             'width="1623" height="318" alt="" decoding="async">'
             f'<img class="leanpde-logo-dark" src="{BRAND}/logo-dark.webp" '
             'width="800" height="157" alt="" decoding="async"></span>')
-        for name, base in (("index.html", "./"), ("Chapter/index.html", "./../")):
-            # Only the two title headings change; the rest of the page is kept byte for byte.
-            expected = page(base, "PDEAtlas")
+        for name, base, landing in (("index.html", "./", True),
+                                    ("Chapter/index.html", "./../", False)):
+            # Only the title headings change; the rest of the page is kept byte for byte.
+            expected = page(base, "PDEAtlas", landing)
             for title in ("header-title", "toc-title"):
                 before = expected.count(f'class="{title}"><h1>')
                 self.assertEqual(before, 1)
             expected = expected.replace(
                 '<h1>\n            PDEAtlas</h1>', f"<h1>{mark}</h1>").replace(
                 '<h1>\n              PDEAtlas</h1>', f"<h1>{mark}</h1>")
+            if landing:
+                # The heading of the title page keeps what Verso appends to it.
+                plain = '<h1>\n             \u00a0PDEAtlas<span class="permalink-widget inline">'
+                self.assertEqual(expected.count(plain), 1)
+                expected = expected.replace(
+                    plain, f'<h1>{mark}<span class="permalink-widget inline">')
             self.assertEqual(self.read(name), expected)
-            self.assertEqual(self.read(name).count("leanpde-wordmark"), 2)
+            self.assertEqual(self.read(name).count("leanpde-wordmark"), 3 if landing else 2)
         self.assertEqual(self.read("find/index.html"), find_page)
 
         # A second run changes nothing.
@@ -108,9 +129,30 @@ class WordmarkTest(unittest.TestCase):
         result = self.run_script()
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("of 0 pages; 2 had it already.", result.stdout)
+        self.assertIn("The title page of the landing page had it already.", result.stdout)
         for name, text in pages.items():
             self.assertEqual(self.read(name), text)
         self.assertEqual(self.read("find/index.html"), find_page)
+
+    def test_landing_title_alone(self) -> None:
+        # A site whose two titles have the wordmark and whose title page does not (the state an
+        # earlier version of the script left) gets the missing one, and nothing else changes.
+        result = self.run_script()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        complete = self.read("index.html")
+        start = complete.index('<div class="titlepage">')
+        end = complete.index('<span class="permalink-widget inline">', start)
+        earlier = (complete[:start] + '<div class="titlepage">\n          <h1>PDEAtlas'
+                   + complete[end:])
+        self.assertNotEqual(earlier, complete)
+        self.write("index.html", earlier)
+        chapter = self.read("Chapter/index.html")
+        result = self.run_script()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("of 0 pages; 2 had it already.", result.stdout)
+        self.assertIn("Wordmark placed in the title page of the landing page.", result.stdout)
+        self.assertEqual(self.read("index.html"), complete)
+        self.assertEqual(self.read("Chapter/index.html"), chapter)
 
     def test_refusals(self) -> None:
         landing = self.read("index.html")
@@ -130,6 +172,21 @@ class WordmarkTest(unittest.TestCase):
         self.write("Chapter/index.html", chapter.replace('<base href="./../">', '<base href="./">'))
         refused('Chapter/index.html: its <base href="./"> does not lead to the site root')
         self.write("Chapter/index.html", chapter)
+
+        # A landing page without the heading of its title page, or with another name in it.
+        self.write("index.html", landing.replace('<div class="titlepage">', '<div class="front">'))
+        result = self.run_script()
+        self.assertEqual(result.returncode, 1, result.stdout)
+        self.assertIn("index.html: expected one heading in the title page, found 0", result.stderr)
+        self.assertEqual(self.read("Chapter/index.html"), chapter)
+        self.write("index.html", landing.replace("\u00a0PDEAtlas<span", "\u00a0Another book<span"))
+        result = self.run_script()
+        self.assertEqual(result.returncode, 1, result.stdout)
+        self.assertIn(
+            "index.html: the heading of its title page does not carry the name of the site.",
+            result.stderr)
+        self.assertEqual(self.read("Chapter/index.html"), chapter)
+        self.write("index.html", landing)
 
         # The brand files must be in the site, and be WebP images.
         dark = os.path.join(self.site, BRAND, "logo-dark.webp")

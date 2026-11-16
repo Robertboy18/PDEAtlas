@@ -3212,7 +3212,6 @@ public import PDE.Hyperbolic.ConservationLaw.System.Riemann.WeakSolution
 public import PDE.Hyperbolic.ConservationLaw.System.RiemannInvariant
 public import PDE.Hyperbolic.ConservationLaw.System.RiemannInvariant.LocalCoordinates
 public import PDE.Hyperbolic.ConservationLaw.System.RiemannSolver.EntropyInitialValue
-public import PDE.Hyperbolic.ConservationLaw.System.RiemannSolver.InitialValue
 public import PDE.Hyperbolic.ConservationLaw.System.ShockCurve
 public import PDE.Hyperbolic.ConservationLaw.System.ShockCurve.LinearlyDegenerate
 public import PDE.Hyperbolic.ConservationLaw.System.ShockCurve.Regularity
@@ -3478,6 +3477,7 @@ public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.Cauchy.Existence
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.Comparison
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.Consistency
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.DoublingMaximum
+public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.Duality
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.FiniteHorizon.HopfLax
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.FiniteHorizon.Smooth
 public import PDE.Hyperbolic.HamiltonJacobi.Viscosity.InitialComparison
@@ -3746,7 +3746,6 @@ public import PDE.Hyperbolic.NonlinearWave.Cauchy.Lipschitz
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.ObservedEvolution
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Bootstrap
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.ClassicalPrefix
-public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Continuation
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.FullInterval
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.GlobalExistence
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Goursat.Construction
@@ -3770,7 +3769,6 @@ public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePow
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Nodal.Increment
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Nodal.Retarded
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Persistence
-public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.RetardedRestart
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FiveDimensional.SmoothData
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FourDimensional.SmoothData
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.General.ClassicalContinuation
@@ -3786,6 +3784,7 @@ public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persisten
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.SmoothLocalExistence
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.SmoothMaximalExistence
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Persistence.UnboundedWave
+public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.Reaction
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.SmoothData
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Composition
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.EllipticDomain
@@ -3851,6 +3850,7 @@ public import PDE.Hyperbolic.NonlinearWave.FinitePropagation.TruncatedEnergy
 public import PDE.Hyperbolic.NonlinearWave.FinitePropagation.TruncatedEnergy.FiniteBand
 public import PDE.Hyperbolic.NonlinearWave.FinitePropagation.TruncatedEnergy.KineticBound
 public import PDE.Hyperbolic.NonlinearWave.FinitePropagation.Vanishing
+public import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.Annular.Estimate
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.Annular.Local
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.Basic
@@ -3938,7 +3938,6 @@ public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.LowerP
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.LocalPower.SmallData
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.NormBlowup.Classical.SmallData
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.NormBlowup.SmallData
-public import PDE.Hyperbolic.NonlinearWave.SmallData.Classical.SmallData
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Inequality
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Nonexistence
 public import PDE.Hyperbolic.NonlinearWave.SmallData.Strauss.Exponent

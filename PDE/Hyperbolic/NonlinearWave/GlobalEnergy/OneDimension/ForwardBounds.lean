@@ -7,7 +7,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.OneDimension.LocalBounds
-import PDE.Hyperbolic.Classical.ForwardLocalization
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 import PDE.Spaces.Sobolev.Extension.HalfSpace.Reflection.HigherOrder.ClassicalExtension
 
 /-!
@@ -38,19 +38,11 @@ theorem exists_uniform_forwardDifferential_bound_near_of_compact_slices {u : ℝ
       ‖PDE.Analysis.forwardDifferential u t x (EuclideanSpace.single i 1)‖ ≤ L := by
   obtain ⟨U, hU, heq⟩ := PDE.Analysis.exists_contDiff_extension_halfSpace 0 3 hu
   have hw (t : ℝ) (ht : 0 < t) (x : ℝ^1) :
-      waveOperator U (timeSpaceCons t x) + f (U (timeSpaceCons t x)) = 0 := by
-    have hgerm := eventuallyEq_of_eqOn_forward heq
-      (show 0 < (timeSpaceCons t x) 0 by simpa using ht)
-    rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-    exact hwave t ht x
-  have hc (t : ℝ) (ht : 0 ≤ t) :
-      HasCompactSupport (fun x : ℝ^1 ↦ U (timeSpaceCons t x)) := by
-    have hslic : (fun x : ℝ^1 ↦ U (timeSpaceCons t x)) =
-        (fun x : ℝ^1 ↦ u (timeSpaceCons t x)) := by
-      funext x
-      exact heq (show 0 ≤ (timeSpaceCons t x) 0 by simpa using ht)
-    rw [hslic]
-    exact hs t ht
+      waveOperator U (timeSpaceCons t x) + f (U (timeSpaceCons t x)) = 0 :=
+    (waveOperator_add_congr_nhds f (eventuallyEq_of_eqOn_forward heq
+      (by simpa only [timeSpaceCons_zero] using ht))).trans (hwave t ht x)
+  have hc (t : ℝ) (ht : 0 ≤ t) : HasCompactSupport (fun x : ℝ^1 ↦ U (timeSpaceCons t x)) :=
+    slice_eq_of_eqOn_forward heq ht ▸ hs t ht
   obtain ⟨δ, hδ, L, hL, hb⟩ := exists_uniform_partialDeriv_bound_near_of_compact_slices
     hU hf hw hc ha
   refine ⟨δ, hδ, L, hL, fun t ht x i ↦ ?_⟩

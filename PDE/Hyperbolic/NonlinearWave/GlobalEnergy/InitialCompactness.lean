@@ -10,6 +10,7 @@ public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.InitialGrowth
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.InitialSupport
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.IntegrableSlices
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.InitialData
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 import PDE.Hyperbolic.NonlinearWave.PositivePart
 import PDE.Spaces.Sobolev.Extension.HalfSpace.Reflection.HigherOrder.ClassicalExtension
 
@@ -186,20 +187,11 @@ theorem hasCompactSupport_initial_right_velocity_of_compact_slices {n : ℕ} [Fa
     (hs : ∀ t, 0 ≤ t → HasCompactSupport (fun x : ℝ^n ↦ u (timeSpaceCons t x))) :
     HasCompactSupport (fun x : ℝ^n ↦ derivWithin (fun t ↦ u (timeSpaceCons t x)) (Ici 0) 0) := by
   obtain ⟨U, hU, heq⟩ := PDE.Analysis.exists_contDiff_extension_halfSpace 0 3 hu
-  have hcompact : HasCompactSupport (fun x : ℝ^n ↦ (∂[0] U) (timeSpaceCons 0 x)) := by
-    apply hasCompactSupport_initial_velocity_of_compact_slices hf hU
-    · intro t ht x
-      have hgerm := eventuallyEq_of_eqOn_forward heq
-        (show 0 < (timeSpaceCons t x) 0 by simpa using ht)
-      rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-      exact hwave t ht x
-    · intro t ht
-      have hslice : (fun x : ℝ^n ↦ U (timeSpaceCons t x)) =
-          (fun x : ℝ^n ↦ u (timeSpaceCons t x)) := by
-        funext x
-        exact heq (show 0 ≤ (timeSpaceCons t x) 0 by simpa using ht)
-      rw [hslice]
-      exact hs t ht
+  have hcompact : HasCompactSupport (fun x : ℝ^n ↦ (∂[0] U) (timeSpaceCons 0 x)) :=
+    hasCompactSupport_initial_velocity_of_compact_slices hf hU
+      (fun t ht x ↦ (waveOperator_add_congr_nhds f (eventuallyEq_of_eqOn_forward heq
+        (by simpa only [timeSpaceCons_zero] using ht))).trans (hwave t ht x))
+      (fun t ht ↦ slice_eq_of_eqOn_forward heq ht ▸ hs t ht)
   have he : (fun x : ℝ^n ↦ derivWithin (fun t ↦ u (timeSpaceCons t x)) (Ici 0) 0) =
       (fun x : ℝ^n ↦ (∂[0] U) (timeSpaceCons 0 x)) :=
     funext fun x ↦ initial_right_velocity_eq_of_extension (hU.of_le (by norm_num)) heq x

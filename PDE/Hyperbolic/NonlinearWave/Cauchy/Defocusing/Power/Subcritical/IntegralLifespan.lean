@@ -267,7 +267,8 @@ theorem IsIntegralTrajectoryBefore.amplitude_unbounded_at_supremum {r b : ℝ} (
   let L := sSup (boundedIntegralExistenceTimes r b H)
   obtain ⟨B, hB, hHB'⟩ := hHB (L + 1) (by linarith [hu.time_pos])
   obtain ⟨L', M', hLL', hM', w, hw, _, hwB, hwe⟩ :=
-    exists_signedPower_integral_extension_of_bounded hr hb hu.time_pos hB
+    exists_signedPower_integral_extension (m := 1) le_rfl hr (Real.contDiff_one_signedPower hr)
+      (fun _ hA ↦ exists_signedPower_cone_trajectory hr hA) hb hu.time_pos hB
       (le_max_left 0 M) hu.regular hH hHB'
       (fun p hp ↦ (hM p hp).trans (le_max_right _ _)) hu.equation
   have hmem : L' ∈ boundedIntegralExistenceTimes r b H :=

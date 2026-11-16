@@ -9,7 +9,7 @@ module
 public import PDE.Hyperbolic.NonlinearWave.Morawetz.Nonconcentration.Quantitative
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.ForwardBasic
 import PDE.Analysis.Calculus.LocalExtension.ForwardBand
-import PDE.Hyperbolic.Classical.ForwardLocalization
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 
 /-!
 # Quintic nonconcentration up to the initial time
@@ -58,9 +58,8 @@ theorem integral_quinticSlice_le_initialEnergy_flux_rpow_of_contDiffOn_forward {
   have hwv : ∀ t ∈ Ioo 0 T, ∀ x ∈ Metric.ball c (T - t),
       waveOperator v (timeSpaceCons t x) + v (timeSpaceCons t x) ^ 5 = 0 := by
     intro t ht x hx
-    have he := hgerm (show 0 < (timeSpaceCons t x) 0 by simpa using ht.1)
-    rw [waveOperator_congr_nhds he, he.eq_of_nhds]
-    exact hwave t ht x hx
+    exact (waveOperator_add_congr_nhds (fun z ↦ z ^ 5)
+      (hgerm (show 0 < (timeSpaceCons t x) 0 by simpa using ht.1))).trans (hwave t ht x hx)
   have henergy (x : ℝ^3) :
       semilinearWaveEnergyDensity (Real.signedPowerPotential 5) v (timeSpaceCons 0 x) =
         forwardSemilinearWaveEnergyDensity (Real.signedPowerPotential 5) u 0 x := by

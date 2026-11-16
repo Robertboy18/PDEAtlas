@@ -9,7 +9,7 @@ module
 public import PDE.Hyperbolic.NonlinearWave.Morawetz.Nonconcentration.EnergyBound
 public import PDE.Hyperbolic.NonlinearWave.Morawetz.Nonconcentration.Flux
 import PDE.Analysis.Calculus.LocalExtension.HalfSpace
-import PDE.Hyperbolic.Classical.ForwardLocalization
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 import CAS.ExactTactic
 
 /-!
@@ -116,18 +116,16 @@ private theorem quintic_wave_on_closed_base {v : ℝ^4 → ℝ} {T : ℝ} (hT : 
         g (timeSpaceCons r x) ^ 5) (fun _ ↦ 0) (Ioo 0 ε) := by
       intro r hr
       have hrhalf : r < T / 2 := hr.2.trans_le (min_le_left _ _)
-      have hgerm := heq (timeSpaceCons r x) (by simpa using hrhalf.le)
-      dsimp only
-      rw [← waveOperator_congr_nhds hgerm, ← hgerm.eq_of_nhds]
-      exact hwave r ⟨hr.1, hrhalf.trans (half_lt_self hT)⟩ x
-        (Metric.mem_ball.mpr (by
-          have := hr.2.trans_le (min_le_right _ _)
-          linarith))
+      exact (waveOperator_add_congr_nhds (fun z ↦ z ^ 5)
+        (heq (timeSpaceCons r x) (by simpa using hrhalf.le))).symm.trans
+        (hwave r ⟨hr.1, hrhalf.trans (half_lt_self hT)⟩ x
+          (Metric.mem_ball.mpr (by
+            have := hr.2.trans_le (min_le_right _ _)
+            linarith)))
     have hz0 := hz.closure hc continuous_const
     rw [closure_Ioo hε.ne] at hz0
-    have hgerm := heq (timeSpaceCons 0 x) (by simpa using (half_pos hT).le)
-    rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-    exact hz0 ⟨le_rfl, hε.le⟩
+    exact (waveOperator_add_congr_nhds (fun z ↦ z ^ 5)
+      (heq (timeSpaceCons 0 x) (by simpa using (half_pos hT).le))).trans (hz0 ⟨le_rfl, hε.le⟩)
   · exact hwave t ⟨hpos, ht.2⟩ x hx
 
 /-- Integrable cone densities recover the complete initial ball

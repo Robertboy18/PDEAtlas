@@ -7,6 +7,7 @@ module
 
 public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Goursat.Radial
 import CAS.ExactTactic
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 
 /-!
 # Annular localization of a Goursat field
@@ -90,8 +91,8 @@ theorem annular_extension_signed_quadratic_on_cone {W : Parameter → ℝ} (hW :
   have hgerm := eventuallyEq_radialGoursatField_of_annular_eq heq
     (z := timeSpaceCons s y) (by simpa using (show (1 : ℝ) / 2 < ‖y‖ by linarith))
     (by simpa using (show ‖y‖ < (3 : ℝ) / 2 by linarith))
-  rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-  exact radialGoursatField_signed_quadratic_on_cone hW hzero hmixed hTη hTsmall hx hs hy
+  exact (waveOperator_add_congr_nhds (Real.signedPower 2) hgerm).trans
+    (radialGoursatField_signed_quadratic_on_cone hW hzero hmixed hTη hTsmall hx hs hy)
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower.Goursat
 

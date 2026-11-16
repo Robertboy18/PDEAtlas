@@ -10,6 +10,7 @@ public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.CompactData.ForwardEne
 public import PDE.Hyperbolic.NonlinearWave.FinitePropagation.ForwardUniqueness
 public import PDE.Hyperbolic.NonlinearWave.NegativeEnergy.GlobalObstruction
 import PDE.Analysis.Normed.Group.CompactSupport
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 
 /-!
 # Compact-data negative-energy obstruction
@@ -107,8 +108,7 @@ theorem not_global_forward_semilinearWave_of_compact_negative_energy [Fact (0 < 
       (show Ici t ⊆ Ioi (t / 2) from fun _ hr ↦ (half_lt_self ht).trans_le hr)) (hUE.symm ▸ hEt)
   intro r hr x
   have hp : t / 2 < (timeSpaceCons r x) 0 := by simp only [timeSpaceCons_zero]; linarith
-  unfold semilinearWaveOperator
-  rw [waveOperator_congr_nhds (eventuallyEq_of_eqOn_forward hUeq hp), hUeq hp.le]
-  exact hwave r (ht.trans_le hr) x
+  exact (semilinearWaveOperator_congr_nhds V (eventuallyEq_of_eqOn_forward hUeq hp)).trans
+    (hwave r (ht.trans_le hr) x)
 
 end WaveEquation.NegativeEnergy

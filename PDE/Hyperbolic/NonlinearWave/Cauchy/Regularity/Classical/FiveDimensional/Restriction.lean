@@ -14,8 +14,8 @@ public import PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FourDimen
 Restriction commutes with the constructed wave semigroup and Duhamel integral.
 Grönwall therefore controls the lower wave norm from affine growth of the
 restricted forcing, even if that forcing depends on the full higher state.
-A restricted forcing with a bound that does not depend on the state is a special case
-(`exists_norm_higherWaveRestriction_bound`). Both statements hold in every dimension.
+A restricted forcing with a bound that does not depend on the state is a special case.
+The statement holds in every dimension.
 -/
 
 @[expose] public noncomputable section
@@ -84,23 +84,5 @@ theorem exists_norm_higherWaveRestriction_bound_of_affine_source {n r k : ℕ} (
     Real.exp_le_exp.mpr (mul_le_mul_of_nonneg_left (t.property.2.trans hτ) (mul_nonneg hM hC))
   exact (by linarith : ‖L (u t)‖ ≤ 1 + ‖L (u t)‖).trans
     (hb.trans (mul_le_mul_of_nonneg_left heH (by positivity)))
-
-/-- A uniform H² bound for the velocity source bounds the H³ × H² restriction
-of every higher mild wave prefix on a fixed finite horizon. This is the case of
-`exists_norm_higherWaveRestriction_bound_of_affine_source` in which the bound of the
-restricted source does not depend on the state. -/
-theorem exists_norm_higherWaveRestriction_bound {n k : ℕ} (h2 : 2 ≤ k)
-    (x : W^{k + 1,2}(ℝ^n) × W^{k,2}(ℝ^n)) {H C : ℝ} (hH : 0 ≤ H) (hC : 0 ≤ C) :
-    ∃ R : ℝ, 0 ≤ R ∧
-      ∀ {F : C(W^{k + 1,2}(ℝ^n) × W^{k,2}(ℝ^n),
-        W^{k + 1,2}(ℝ^n) × W^{k,2}(ℝ^n))} {τ : ℝ≥0},
-      (τ : ℝ) ≤ H → ∀ {u : C(Icc (0 : ℝ) (τ : ℝ),
-        W^{k + 1,2}(ℝ^n) × W^{k,2}(ℝ^n))},
-      (higherLinearSemigroup n k).IsMildSolutionOn F x τ u →
-      (∀ t, ‖higherWaveRestrictionCLM n h2 (F (u t))‖ ≤ C) →
-      ∀ t, ‖higherWaveRestrictionCLM n h2 (u t)‖ ≤ R := by
-  obtain ⟨R, hR, hbound⟩ := exists_norm_higherWaveRestriction_bound_of_affine_source h2 x hH hC
-  exact ⟨R, hR, fun hτ _ hu hF ↦ hbound hτ hu fun t ↦ (hF t).trans
-    (le_mul_of_one_le_right hC (le_add_of_nonneg_right (norm_nonneg _)))⟩
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy

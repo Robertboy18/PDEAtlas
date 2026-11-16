@@ -7,6 +7,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Spaces.Sobolev.Boundary.Geometry.HalfSpace
+import PDE.Spaces.Sobolev.Calculus.Slicing.Coordinate
 import Mathlib.MeasureTheory.Measure.Haar.InnerProductSpace
 
 /-!
@@ -176,41 +177,11 @@ theorem tangentialNormalMeasurableEquiv_symm_apply (p : ℝ^n × ℝ) :
   (tangentialNormalMeasurableEquiv (n := n)).injective
     (by simp [tangentialNormalMeasurableEquiv_apply])
 
-/-- Tangential-normal coordinates send Euclidean volume to product volume. -/
+/-- Tangential-normal coordinates send Euclidean volume to product volume: the coordinate split
+`Slices.coordinateMeasurableEquiv` at the last index. -/
 theorem measurePreserving_tangentialNormalMeasurableEquiv :
-    MeasurePreserving (tangentialNormalMeasurableEquiv (n := n)) := by
-  let eRaw : (Fin (n + 1) → ℝ) ≃ᵐ ℝ × (Fin n → ℝ) :=
-    MeasurableEquiv.piFinSuccAbove (fun _ : Fin (n + 1) ↦ ℝ) (Fin.last n)
-  let eProd : ℝ × (Fin n → ℝ) ≃ᵐ ℝ × ℝ^n :=
-    MeasurableEquiv.prodCongr
-      (MeasurableEquiv.refl ℝ)
-      (MeasurableEquiv.toLp 2 (Fin n → ℝ))
-  have h₁ : MeasurePreserving
-      (MeasurableEquiv.toLp 2 (Fin (n + 1) → ℝ)).symm :=
-    PiLp.volume_preserving_ofLp (Fin (n + 1))
-  have h₂ : MeasurePreserving eRaw := by
-    simpa [eRaw] using
-      (volume_preserving_piFinSuccAbove
-        (fun _ : Fin (n + 1) ↦ ℝ) (Fin.last n))
-  have h₃ : MeasurePreserving
-      eProd
-      ((volume : Measure ℝ).prod (volume : Measure (Fin n → ℝ)))
-      ((volume : Measure ℝ).prod (volume : Measure (ℝ^n))) := by
-    apply (MeasurePreserving.prod
-      (MeasurePreserving.id (volume : Measure ℝ))
-      (PiLp.volume_preserving_toLp (Fin n))).congr
-    · exact eProd.measurable
-    · exact Filter.Eventually.of_forall fun _ ↦ rfl
-  have h₄ : MeasurePreserving
-      (MeasurableEquiv.prodComm : ℝ × ℝ^n ≃ᵐ ℝ^n × ℝ)
-      ((volume : Measure ℝ).prod (volume : Measure (ℝ^n)))
-      ((volume : Measure (ℝ^n)).prod (volume : Measure ℝ)) := by
-    apply (Measure.measurePreserving_swap
-      (μ := (volume : Measure ℝ)) (ν := (volume : Measure (ℝ^n)))).congr
-    · exact MeasurableEquiv.prodComm.measurable
-    · exact Filter.Eventually.of_forall fun _ ↦ rfl
-  rw [Measure.volume_eq_prod (ℝ^n) ℝ]
-  exact ((h₁.trans h₂).trans h₃).trans h₄
+    MeasurePreserving (tangentialNormalMeasurableEquiv (n := n)) :=
+  Slices.measurePreserving_coordinateMeasurableEquiv (Fin.last n)
 
 /-- Tangential-normal coordinates identify the open upper half-space with
 `ℝ^n × (0, ∞)`. -/

@@ -96,7 +96,7 @@ theorem eq_on_restart_overlap {r b L a T S M : ℝ} (hr : 1 ≤ r) (hb : 0 < b) 
     u (a + p.1, p.2) = v p := by
   let G : ℝ × ℝ^3 → ℝ := fun q ↦ H (a + q.1, q.2) + retardedHistory a F q
   have hG : ContDiff ℝ 1 G := (hH.comp ((contDiff_const.add contDiff_fst).prodMk contDiff_snd)).add
-      (contDiff_one_retardedHistory hF a)
+      (contDiff_retardedHistory (m := 1) hF a)
   have huS : ContinuousOn (fun q : ℝ × ℝ^3 ↦ u (a + q.1, q.2)) {q | |q.1| < S} := by
     apply hu.continuousOn.comp
       ((continuous_const.add continuous_fst).prodMk continuous_snd).continuousOn

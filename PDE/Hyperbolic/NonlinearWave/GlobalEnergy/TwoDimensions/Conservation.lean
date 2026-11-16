@@ -8,6 +8,7 @@ module
 
 import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.TwoDimensions.Stress
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.ForwardBasic
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.TwoDimensions.Tails
 
 /-!
@@ -106,12 +107,9 @@ private theorem forwardEnergy_eq_of_uniform_potential_tails_two {V : ℝ → ℝ
   have hslice (r : ℝ) (hr : 0 ≤ r) (x : ℝ^2) : U (timeSpaceCons r x) = u (timeSpaceCons r x) :=
     heq (by simpa only [mem_ofPred_eq, timeSpaceCons_zero] using hr)
   have hw (r : ℝ) (hr : 0 < r) (x : ℝ^2) :
-      semilinearWaveOperator V U (timeSpaceCons r x) = 0 := by
-    have hgerm := eventuallyEq_of_eqOn_forward heq
-      (show 0 < (timeSpaceCons r x) 0 by simpa only [timeSpaceCons_zero] using hr)
-    unfold semilinearWaveOperator
-    rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-    exact hwave r hr x
+      semilinearWaveOperator V U (timeSpaceCons r x) = 0 :=
+    (semilinearWaveOperator_congr_nhds V (eventuallyEq_of_eqOn_forward heq
+      (by simpa only [timeSpaceCons_zero] using hr))).trans (hwave r hr x)
   have hsc (r : ℝ) (hr : 0 ≤ r) :
       HasCompactSupport (fun x : ℝ^2 ↦ U (timeSpaceCons r x)) := by
     simpa only [hslice r hr] using hs r hr

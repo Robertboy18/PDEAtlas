@@ -28,8 +28,7 @@ a bilinear map, irrespective of the incoming speed variation. Its signed respons
 theorem and constructs both original fundamental solutions from continuous coefficients. All
 branch data and both propagators precede the signed target and correction. It keeps the
 injectivity of the orbit, the membership of its gate point in the state neighborhood and the
-basis at the gate. `exists_selected_retained_branch_responses` is the same statement without
-these three witnesses.
+basis at the gate.
 -/
 
 @[expose] public noncomputable section
@@ -208,72 +207,6 @@ theorem exists_selected_retained_branch_responses_with_isolation {δ A B H tAnch
       (hJinner (hisolate (hsupport (tsupport_fderiv_subset ℝ hp)))).2,
     retainedIncomingBranch_response_eq_zero he.1.le hJinner hisolate hsupport Sin L,
     hsmall, hhyper, hgn⟩
-
-/-- The selected correction on the two retained physical branches, without the three isolation
-witnesses: this is `exists_selected_retained_branch_responses_with_isolation` with the
-injectivity of the orbit, the gate membership and the gate basis dropped from the conclusion. -/
-theorem exists_selected_retained_branch_responses {δ A B H tAnchor tStar : ℝ} {c : Fin 3 → ℝ}
-    {b : (Fin 3 → ℝ) × ℝ → ℝ} {Ψ : ℝ × ((ℝ × (Fin 3 → ℝ)) × (ℝ × ℝ)) → ℝ^3}
-    {T : ((ℝ × (Fin 3 → ℝ)) × (ℝ × ℝ)) → ℝ} {N : Set ((ℝ × (Fin 3 → ℝ)) × (ℝ × ℝ))} (hδ : 0 < δ)
-    (hδsmall : δ < 1 / 4) (hAB : A ^ 2 < B ^ 2) (hb : ContDiff ℝ ∞ b)
-    (hbsupport : tsupport (fun y ↦ b (c, y)) ⊆ Ioo (205 : ℝ) (2051 / 10)) (hΨ : ContDiff ℝ ∞ Ψ)
-    (hselected : ((δ, c), (0, 0)) ∈ N) (hinitial : ∀ θ, Ψ (0, θ) = (!₂[0, θ.2.2, 1] : ℝ^3))
-    (hode : ∀ θ ∈ N, ∀ s ∈ Icc (0 : ℝ) H, HasDerivAt (fun u ↦ Ψ (u, θ))
-      (concreteGatedFlux θ.1.1 (clockFeedback A B) (fun y ↦ b (θ.1.2, y)) (Ψ (s, θ)) - θ.2.1 •
-      Ψ (s, θ)) s)
-    (hevent : ∀ θ ∈ N, T θ ∈ Ioo (0 : ℝ) H ∧ Ψ (T θ, θ) 1 = 0) (i j : Fin 3) (hij : i ≠ j) :
-    let θ0 := ((δ, c), ((0 : ℝ), (0 : ℝ)))
-    let e := T θ0
-    let b0 : ℝ → ℝ := fun y ↦ b (c, y)
-    let f := concreteGatedFlux δ (clockFeedback A B) b0
-    let γ : ℝ → ℝ^3 := fun t ↦ Ψ (t, θ0)
-    let W := prescribedClockFullVariation Ψ (δ, c) (1, 0)
-    let rStar := GatedFlux.rightEigenvector (fastLogCosh δ) MiddleClock.g cutoff
-      (clockFeedback A B) b0 (γ tStar)
-    tStar ∈ Ioo (0 : ℝ) e →
-    205 < γ tStar 1 → 2 < γ tStar 2 → (γ tStar 2) ^ 2 < A ^ 2 →
-    0 < γ e 2 → γ e 0 / γ e 2 = 1 →
-    Matrix.det ![⇑(deriv γ tStar), ⇑(rStar i), ⇑(W tStar)] ≠ 0 →
-    Matrix.det ![⇑(deriv γ tStar), ⇑(rStar j), ⇑(W tStar)] ≠ 0 →
-    (∃ a : Fin 3 → ℝ, (∀ k, a k ≠ 0) ∧ deriv γ tStar = ∑ k, a k • rStar k) →
-    ∀ (S : Evolution.FundamentalSolution
-      (fun t ↦ fderiv ℝ f (γ t)) tAnchor (Icc (0 : ℝ) e))
-      (L : (ℝ^3) →L[ℝ] (ℝ^2)),
-      LinearMap.ker L.toLinearMap = Submodule.span ℝ ({f (γ e)} : Set (ℝ^3)) →
-      ∃ (q : ℝ → ℝ^3) (J : Set ℝ) (U : Set (ℝ^3)),
-        IsViscousProfile f 0 0 0 q ∧ ContDiff ℝ ∞ q ∧
-        (∀ t, HasDerivAt q (f (q t)) t) ∧ EqOn q γ (Icc (0 : ℝ) H) ∧
-        EqOn (fun t ↦ retainedOutgoingBranch Ψ (δ, c) t 0) q (Icc (0 : ℝ) H) ∧
-        EqOn (fun t ↦ retainedIncomingBranch Ψ (δ, c) e t 0) q
-          (Icc (e + e - H) (e + e)) ∧
-        IsOpen J ∧ J ⊆ Ioo (0 : ℝ) e ∧ IsOpen U ∧ q ⁻¹' U ⊆ J ∧
-        ∃ (Sout : Evolution.FundamentalSolution
-          (fun t ↦ fderiv ℝ f (q t)) 0 (Icc (0 : ℝ) H))
-          (Sin : Evolution.FundamentalSolution
-            (fun t ↦ fderiv ℝ f (q t)) (e + e) (Icc (e + e - H) (e + e))),
-          (∀ t ∈ Icc (0 : ℝ) e, Sout.propagator e t = S.propagator e t) ∧
-          ∀ target : ℝ^2, ∀ η : ℝ, 0 < η → ∃ P : ℝ^3 → ℝ^3,
-            ContDiff ℝ ∞ P ∧ HasCompactSupport P ∧ tsupport P ⊆ U ∧
-            (∀ t, P (q t) = 0 ∧ fderiv ℝ P (q t) = 0) ∧
-            (∫ t in (0 : ℝ)..e, L (Sout.propagator e t
-              (fderiv ℝ (fderiv ℝ P) (q t)
-                (deriv (retainedOutgoingBranch Ψ (δ, c) t) 0)
-                (deriv (retainedOutgoingBranch Ψ (δ, c) t) 0)))) = target ∧
-            (∀ t ∈ Icc e (e + e), fderiv ℝ (fderiv ℝ P) (q t) = 0) ∧
-            (∫ t in (e + e)..e, L (Sin.propagator e t
-              (fderiv ℝ (fderiv ℝ P) (q t)
-                (deriv (retainedIncomingBranch Ψ (δ, c) e t) 0)
-                (deriv (retainedIncomingBranch Ψ (δ, c) e t) 0)))) = 0 ∧
-            (∀ x, ‖P x‖ < η ∧ ‖fderiv ℝ P x‖ < η) ∧
-            (∀ x, IsStrictlyHyperbolicAt (f + P) x) ∧
-            ∀ k, IsGenuinelyNonlinearFamily (f + P) k := by
-  intro θ0 e b0 f γ W rStar htStar hy hzInner hzOuter hz hρ hi hj hexp S L hL
-  obtain ⟨q, J, U, hprofile, hqSmooth, hqODE, hqγ, hout, hin, hJ, hJinner, hU, hisolate, -, -, -,
-    -, hresponses⟩ := exists_selected_retained_branch_responses_with_isolation hδ hδsmall hAB hb
-      hbsupport hΨ hselected hinitial hode hevent i j hij htStar hy hzInner hzOuter hz hρ hi hj
-      hexp S L hL
-  exact ⟨q, J, U, hprofile, hqSmooth, hqODE, hqγ, hout, hin, hJ, hJinner, hU, hisolate,
-    hresponses⟩
 
 end PrescribedClockLowerDescent
 end PDE.Hyperbolic.ConservationLaw.System.ViscousProfile.ReverseProfile

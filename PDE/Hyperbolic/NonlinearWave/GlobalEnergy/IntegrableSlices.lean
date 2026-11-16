@@ -10,7 +10,7 @@ public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.ZeroJet
 public import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.ForwardBasic
 import PDE.Hyperbolic.NonlinearWave.GlobalEnergy.LinearGrowth
 import PDE.Spaces.Sobolev.Extension.HalfSpace.Reflection.HigherOrder.ClassicalExtension
-import PDE.Hyperbolic.Classical.ForwardLocalization
+import PDE.Hyperbolic.NonlinearWave.ForwardLocalization
 
 /-!
 # Integrable energy slices for continuous reactions
@@ -100,21 +100,11 @@ theorem integrable_forwardSemilinearWaveEnergyDensity_of_compact_slices
     (hs : ∀ t, 0 ≤ t → HasCompactSupport (fun x : ℝ^n ↦ u (timeSpaceCons t x)))
     {t : ℝ} (ht : 0 < t) : Integrable (forwardSemilinearWaveEnergyDensity V u t) := by
   obtain ⟨U, hU, heq⟩ := PDE.Analysis.exists_contDiff_extension_halfSpace 0 3 hu
-  have hi : Integrable (semilinearWaveSpatialEnergyDensity V U t) := by
-    apply integrable_semilinearWaveSpatialEnergyDensity_of_compact_slices hV hVzero hU _ _ ht
-    · intro s hs' x
-      have hgerm := eventuallyEq_of_eqOn_forward heq
-        (show 0 < (timeSpaceCons s x) 0 by simpa only [timeSpaceCons_zero] using hs')
-      unfold semilinearWaveOperator
-      rw [waveOperator_congr_nhds hgerm, hgerm.eq_of_nhds]
-      exact hwave s hs' x
-    · intro s hs'
-      have he : (fun x : ℝ^n ↦ U (timeSpaceCons s x)) =
-          (fun x : ℝ^n ↦ u (timeSpaceCons s x)) := by
-        funext x
-        exact heq (by change 0 ≤ s; exact hs')
-      rw [he]
-      exact hs s hs'
+  have hi : Integrable (semilinearWaveSpatialEnergyDensity V U t) :=
+    integrable_semilinearWaveSpatialEnergyDensity_of_compact_slices hV hVzero hU
+      (fun s hs' x ↦ (semilinearWaveOperator_congr_nhds V (eventuallyEq_of_eqOn_forward heq
+        (by simpa only [timeSpaceCons_zero] using hs'))).trans (hwave s hs' x))
+      (fun s hs' ↦ slice_eq_of_eqOn_forward heq hs' ▸ hs s hs') ht
   apply hi.congr
   exact Eventually.of_forall fun x ↦ (forwardSemilinearWaveEnergyDensity_eq_of_extension V
       (hU.of_le (by norm_num)) heq ht.le x).symm

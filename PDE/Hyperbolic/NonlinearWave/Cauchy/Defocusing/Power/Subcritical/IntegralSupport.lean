@@ -75,7 +75,7 @@ theorem eq_zero_on_short_future_of_supported_past {r b L a D M R : ℝ} (hr : 1 
     rw [hUeq (s, x) hs]
   let G : ℝ × ℝ^3 → ℝ := fun q ↦ H (a + q.1, q.2) + retardedHistory a F q
   have hG : ContDiff ℝ 1 G := (hH.comp ((contDiff_const.add contDiff_fst).prodMk contDiff_snd)).add
-      (contDiff_one_retardedHistory hF a)
+      (contDiff_retardedHistory (m := 1) hF a)
   have hGs (q : ℝ × ℝ^3) (hq : 0 ≤ q.1) (hqx : R + a + q.1 < ‖q.2‖) :
       G q = 0 := by
     have hHz := hHs (a + q.1, q.2) (add_nonneg ha hq) (by

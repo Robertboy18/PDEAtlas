@@ -10,15 +10,16 @@ public import PDE.Analysis.Integration.ConvolutionDerivative
 public import PDE.Analysis.MeasureTheory.Lp.CommonSupportConvergence
 public import PDE.Spaces.Sobolev.Approximation.Mollification.Radial
 public import PDE.Spaces.Sobolev.Foundations.WeakDerivatives.Definitions
-import Mathlib.MeasureTheory.Measure.Haar.NormedSpace
+import PDE.Spaces.Sobolev.Approximation.Mollification.Reflection
 
 /-!
 # Mollification of finite differentiability jets
 
 Coordinate derivatives through the available finite order commute with convolution against a
 compact kernel. Applying the approximate-identity theorem to each continuous derivative gives
-uniform jet convergence on the whole space with one common compact support. Radial kernels
-preserve coordinate evenness, and a fixed even bump preserves a zero value at the origin.
+uniform jet convergence on the whole space with one common compact support. A radial kernel is
+even in every coordinate, so its mollifications of an even profile are even
+(`mollify_even_of_ae`), and a fixed even bump preserves a zero value at the origin.
 -/
 
 @[expose] public section
@@ -148,30 +149,6 @@ theorem iteratedPartialDeriv_mollify_tendstoUniformly
           indices (mollify μ (ε j) f) hmem))
     simpa only [hfzero, hjzero, dist_self] using hδ
 
-/-- Mollification by a radial kernel preserves evenness under each coordinate reflection.
-The equality follows by the measure-preserving reflection substitution. -/
-theorem mollify_even_of_radial
-    (μ : Mollifier n) (w : ℝ → ℝ) (hρ : ∀ x, μ.ρ x = w ‖x‖)
-    {ε : ℝ} (hε : 0 < ε) (i : Fin n) {f : ℝ^n → ℝ}
-    (hf : PDE.Common.IsEvenUnderCoordinateReflection i f) :
-    PDE.Common.IsEvenUnderCoordinateReflection i (mollify μ ε f) := by
-  intro x
-  have hscaled : ∀ y, scaled μ ε (PDE.Common.coordinateReflection i y) = scaled μ ε y := by
-    intro y
-    simp only [scaled_of_pos μ hε, hρ, norm_smul, PDE.Common.norm_coordinateReflection]
-  calc
-    mollify μ ε f (PDE.Common.coordinateReflection i x) =
-        ∫ y, scaled μ ε (PDE.Common.coordinateReflection i y) *
-          f (PDE.Common.coordinateReflection i x - PDE.Common.coordinateReflection i y) := by
-      simpa only [mollify, convolution_lsmul, smul_eq_mul, PDE.Common.coordinateReflection] using
-        (MeasureTheory.integral_comp (PDE.Common.coordinateReflectionLinearIsometryEquiv i)
-          (fun y ↦ scaled μ ε y * f (PDE.Common.coordinateReflection i x - y))).symm
-    _ = mollify μ ε f x := by
-      change (∫ y, _) = ∫ y, scaled μ ε y * f (x - y)
-      apply integral_congr_ae
-      filter_upwards [] with y
-      rw [hscaled, ← PDE.Common.coordinateReflection_sub, hf]
-
 /-- Every compactly supported `C^m` profile even in one coordinate has smooth even
 approximants whose supports lie in one compact set and whose jets through order `m` converge
 uniformly on the whole space. -/
@@ -198,8 +175,9 @@ theorem exists_even_smooth_compact_jet_approximation
   obtain ⟨K, hK, hfK, hgK⟩ := exists_common_compact_mollify_support μ hfc ε hεpos hεle
   refine ⟨K, fun j ↦ mollify μ (ε j) f, hK, hfK, ?_, ?_⟩
   · intro j
-    exact ⟨mollify_contDiff_of_pos μ (hεpos j) f hf.continuous.locallyIntegrable,
-      hgK j, mollify_even_of_radial μ w hρ (hεpos j) i heven⟩
+    exact ⟨mollify_contDiff_of_pos μ (hεpos j) f hf.continuous.locallyIntegrable, hgK j,
+      mollify_even_of_ae μ i (fun y ↦ by simp only [hρ, PDE.Common.norm_coordinateReflection])
+        (hεpos j) (Eventually.of_forall heven)⟩
   · intro indices hindices
     exact iteratedPartialDeriv_mollify_tendstoUniformly
       μ hf hfc ε hεpos hεle hε0 indices hindices
