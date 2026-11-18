@@ -202,7 +202,7 @@ theorem exists_velocity_deriv_bound (h : IsClassicalSolutionFrom w₀ T fields) 
   have hdiff : Differentiable ℝ (fun y ↦ fields.vorticity y t) :=
     (h.contDiff_one_vorticity htT).differentiable one_ne_zero
   have hK : LipschitzWith ⟨C, hC⟩ (fun y ↦ fields.vorticity y t) :=
-    lipschitzWith_of_nnnorm_deriv_le hdiff fun y ↦ by
+    lipschitzWith_of_nnNorm_deriv_le hdiff fun y ↦ by
       apply NNReal.coe_le_coe.mp
       change ‖deriv (fun y ↦ fields.vorticity y t) y‖ ≤ C
       rw [Real.norm_eq_abs]

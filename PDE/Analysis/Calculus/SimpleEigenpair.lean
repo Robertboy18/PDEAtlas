@@ -246,7 +246,7 @@ theorem exists_normalized_eigenpair (b : Module.Basis ι ℝ E) (A : E →L[ℝ]
           ψ z.1 = z.2) := by
   classical
   have : FiniteDimensional ℝ E := b.finiteDimensional_of_finite
-  have : CompleteSpace E := FiniteDimensional.complete ℝ E
+  have : CompleteSpace E := FiniteDimensional.completeSpace ℝ E
   have hbase : normalizedEquation b k (A, (b k, eig k)) = (0, 1) := by
     simp [normalizedEquation, hA]
   have hcd := (contDiff_normalizedEquation b k).contDiffAt

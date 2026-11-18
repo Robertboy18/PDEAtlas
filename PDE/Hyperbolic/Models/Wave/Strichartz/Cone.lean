@@ -85,16 +85,16 @@ theorem eLpNorm_classicalWave_cone_le {b T : ℝ} (hbT : b < T) (c : ℝ^3) (g h
         rw [hx, hl hxc, hFx]
         congr 1
       _ ≤ eLpNorm (fun t ↦ eLpNorm (v t) 12 volume) 4 (volume.restrict (Icc 0 b)) := by
-        apply eLpNorm_mono_enorm_ae
+        apply eLpNorm_mono_eNorm_ae
           (hm.eLpNorm_prod_right (by norm_num) (by norm_num)).aestronglyMeasurable
         filter_upwards with t
-        simp only [enorm_eq_self, hvnorm]
+        simp only [eNorm_eq_self, hvnorm]
         exact eLpNorm_mono_measure _ Measure.restrict_le_self
       _ ≤ _ := eLpNorm_mono_measure _ Measure.restrict_le_self
   have hfinite : eLpNorm (fun t ↦ eLpNorm (v t) 12 volume) 4 volume ≠ ∞ := by
     change eLpNorm (fun t ↦ eLpNorm (fun x ↦ _) 12 volume) 4 volume ≠ ∞
     rw [eLpNorm_fourierWave_add_duhamelL2_eq G H 0 b k hF hsection]
-    exact enorm_ne_top
+    exact eNorm_ne_top
   exact hnorm.trans ((ENNReal.ofReal_toReal hfinite).symm.trans_le (ENNReal.ofReal_le_ofReal
     (mixedNorm_fourierWave_add_duhamelL2_le G H 0 b k hF hsection)))
 

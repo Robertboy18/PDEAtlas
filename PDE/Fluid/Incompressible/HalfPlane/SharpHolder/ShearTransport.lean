@@ -133,12 +133,12 @@ theorem abs_setIntegral_mul_le_of_hasDerivAt (hcA : c < A) (hk : ContinuousOn k 
         rw [ENNReal.ofReal_mul (NNReal.coe_nonneg _), ENNReal.ofReal_coe_nnreal]
     _ ≤ C * ∫⁻ t in Ioc c A, ‖k t‖ₑ * ENNReal.ofReal (|t - T t| ^ (1 / 2 : ℝ)) := by
         gcongr
-        rw [← abs_of_nonneg hnn, ← Real.enorm_eq_ofReal_abs]
-        refine (enorm_integral_le_lintegral_enorm _).trans_eq ?_
+        rw [← abs_of_nonneg hnn, ← Real.eNorm_eq_ofReal_abs]
+        refine (eNorm_integral_le_lintegral_eNorm _).trans_eq ?_
         refine setLIntegral_congr_fun measurableSet_Ioc fun t _ ↦ ?_
-        rw [enorm_mul, Real.enorm_eq_ofReal_abs, Real.enorm_eq_ofReal_abs, abs_abs,
+        rw [eNorm_mul, Real.eNorm_eq_ofReal_abs, Real.eNorm_eq_ofReal_abs, abs_abs,
           abs_of_nonneg (by positivity : (0 : ℝ) ≤ |t - T t| ^ (1 / 2 : ℝ)),
-          Real.enorm_eq_ofReal_abs]
+          Real.eNorm_eq_ofReal_abs]
 
 /-- A function that is `1/2`-Hölder on `[-B, min(h, B)]` and odd about `h` on `(h, B]` is
 integrable on `[-B, B]`. -/
@@ -257,13 +257,13 @@ private theorem abs_integral_odd_le {B h : ℝ} (hh : 0 < h) {G : ℝ → ℝ} {
   · rw [min_eq_right hBh, intervalIntegral.integral_same, abs_zero, ENNReal.ofReal_zero]
     exact zero_le
   rw [min_eq_left hhB.le] at hG ⊢
-  rw [intervalIntegral.integral_of_le hhB.le, ← Real.enorm_eq_ofReal_abs]
-  refine (enorm_integral_le_lintegral_enorm _).trans ?_
+  rw [intervalIntegral.integral_of_le hhB.le, ← Real.eNorm_eq_ofReal_abs]
+  refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
   rw [← lintegral_const_mul' _ _ (by finiteness)]
   refine setLIntegral_mono' measurableSet_Ioc fun t ht ↦ ?_
-  rw [enorm_mul, mul_comm (C * _ : ℝ≥0∞)]
+  rw [eNorm_mul, mul_comm (C * _ : ℝ≥0∞)]
   gcongr
-  rw [hGodd t ht, Real.enorm_eq_ofReal_abs, ← ENNReal.ofReal_coe_nnreal,
+  rw [hGodd t ht, Real.eNorm_eq_ofReal_abs, ← ENNReal.ofReal_coe_nnreal,
     ← ENNReal.ofReal_mul (NNReal.coe_nonneg _), neg_add_eq_sub]
   refine ENNReal.ofReal_le_ofReal ?_
   have hd := hG.dist_le (x := -t) (y := 2 * h - t) ⟨by linarith [ht.2], by linarith [ht.1]⟩
@@ -487,11 +487,11 @@ theorem abs_integral_sub_mul_le_of_hasDerivAt {B h : ℝ} (hB : 0 < B) (hh : 0 <
   -- the three bounds
   have hlow : ENNReal.ofReal |∫ t in (0 : ℝ)..m, k t * G t| ≤
       2 * Cy * ∫⁻ t in Ioc 0 m, ‖k t‖ₑ * ENNReal.ofReal (t ^ (1 / 2 : ℝ)) := by
-    rw [intervalIntegral.integral_of_le hm0, ← Real.enorm_eq_ofReal_abs]
-    refine (enorm_integral_le_lintegral_enorm _).trans ?_
+    rw [intervalIntegral.integral_of_le hm0, ← Real.eNorm_eq_ofReal_abs]
+    refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
     rw [← lintegral_const_mul' _ _ (by finiteness)]
     refine setLIntegral_mono' measurableSet_Ioc fun t ht ↦ ?_
-    rw [enorm_mul, mul_left_comm, Real.enorm_eq_ofReal_abs (G t)]
+    rw [eNorm_mul, mul_left_comm, Real.eNorm_eq_ofReal_abs (G t)]
     gcongr
     rw [← ENNReal.ofReal_coe_nnreal, show (2 : ℝ≥0∞) * ENNReal.ofReal (Cy : ℝ) *
         ENNReal.ofReal (t ^ (1 / 2 : ℝ)) = ENNReal.ofReal (2 * Cy * t ^ (1 / 2 : ℝ)) by
@@ -813,7 +813,7 @@ theorem measurable_shearMass (B A : ℝ) : Measurable (shearMass B A) := by
 /-- The outer column integral `p ↦ ∫_h^B |Δ_B(p, t)| dt` is measurable. -/
 theorem measurable_lintegral_localShearDifference (B h : ℝ) :
     Measurable fun p ↦ ∫⁻ t in Ioc h B, ‖localShearDifference B p t‖ₑ :=
-  (measurable_localShearDifference B).enorm.lintegral_prod_right'
+  (measurable_localShearDifference B).eNorm.lintegral_prod_right'
 
 /-- The column mass vanishes for `|p| > B + 1`. -/
 theorem shearMass_of_lt {A p : ℝ} (hp : B + 1 < |p|) : shearMass B A p = 0 := by
@@ -941,25 +941,25 @@ theorem abs_integral_shearMass_mul_add_le (hB : 4 ≤ B) {A : ℝ} (hA : 0 < A) 
   -- the bounds
   have b₁ : ENNReal.ofReal |∫ p in Ioc 0 (1 / 9), M p * G p| ≤
       C * ∫⁻ p in Ioc 0 (1 / 9), ENNReal.ofReal (|M p| * (2 * p) ^ (1 / 2 : ℝ)) := by
-    rw [← Real.enorm_eq_ofReal_abs]
-    refine (enorm_integral_le_lintegral_enorm _).trans ?_
+    rw [← Real.eNorm_eq_ofReal_abs]
+    refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
     rw [← lintegral_const_mul' _ _ ENNReal.coe_ne_top]
     refine setLIntegral_mono' measurableSet_Ioc fun p hp ↦ ?_
     have hpI : p ∈ I := ⟨by linarith [hp.1], by linarith [hp.2]⟩
     have h := hu p hpI (-p) (hnegI p hpI)
     rw [show p - -p = 2 * p by ring, abs_of_pos (by linarith [hp.1] : (0 : ℝ) < 2 * p)] at h
-    rw [Real.enorm_eq_ofReal_abs, ← ENNReal.ofReal_coe_nnreal, ← ENNReal.ofReal_mul
+    rw [Real.eNorm_eq_ofReal_abs, ← ENNReal.ofReal_coe_nnreal, ← ENNReal.ofReal_mul
       (NNReal.coe_nonneg _)]
     refine ENNReal.ofReal_le_ofReal ?_
     rw [abs_mul]
     exact (mul_le_mul_of_nonneg_left h (abs_nonneg _)).trans_eq (by ring)
   have b₂ : ENNReal.ofReal |∫ p in Ioc (1 / 9) 9, M p * D p| ≤
       C * (2 * ∫⁻ p in Ioc (1 / 9) 9, ENNReal.ofReal (|M p| * |p - 1| ^ (1 / 2 : ℝ))) := by
-    rw [← Real.enorm_eq_ofReal_abs]
-    refine (enorm_integral_le_lintegral_enorm _).trans ?_
+    rw [← Real.eNorm_eq_ofReal_abs]
+    refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
     rw [← mul_assoc, ← lintegral_const_mul' _ _ (by finiteness)]
     refine setLIntegral_mono' measurableSet_Ioc fun p hp ↦ ?_
-    rw [Real.enorm_eq_ofReal_abs, show (C : ℝ≥0∞) * 2 = ENNReal.ofReal (2 * C) by
+    rw [Real.eNorm_eq_ofReal_abs, show (C : ℝ≥0∞) * 2 = ENNReal.ofReal (2 * C) by
       rw [ENNReal.ofReal_mul (by norm_num), ENNReal.ofReal_ofNat, ENNReal.ofReal_coe_nnreal,
         mul_comm], ← ENNReal.ofReal_mul (by positivity)]
     refine ENNReal.ofReal_le_ofReal ?_
@@ -1032,7 +1032,7 @@ theorem measurable_shearLowCost (B A : ℝ) : Measurable (shearLowCost B A) := b
       (measurableSet_le measurable_snd (he.comp measurable_fst))
   have hF : Measurable fun q : ℝ × ℝ ↦
       ‖localShearDifference B q.1 q.2‖ₑ * ENNReal.ofReal (q.2 ^ (1 / 2 : ℝ)) :=
-    (measurable_localShearDifference B).enorm.mul (measurable_snd.pow_const _).ennreal_ofReal
+    (measurable_localShearDifference B).eNorm.mul (measurable_snd.pow_const _).ennreal_ofReal
   have heq : shearLowCost B A = fun p ↦ ∫⁻ t, S.indicator (fun q : ℝ × ℝ ↦
       ‖localShearDifference B q.1 q.2‖ₑ * ENNReal.ofReal (q.2 ^ (1 / 2 : ℝ))) (p, t) := by
     ext p

@@ -67,7 +67,7 @@ theorem nonlinearClassicalSolution_constant (c : ℝ) {p : ℝ^2} (hp : 0 ≤ p 
   let T : NNReal := ⟨p 0, hp⟩
   rw [nonlinearClassicalSolution_eq_on_strip (LipschitzWith.const c) 0 0
     (T := T) ⟨hp, le_rfl⟩]
-  simp only [classicalStripExtension, BoundedContinuousFunction.coe_zero, Pi.zero_apply,
+  simp only [classicalStripExtension, FunLike.coe_zero, Pi.zero_apply,
     dAlembertFormula, add_zero, mul_zero, intervalIntegral.integral_zero,
     duhamel_constant, zero_sub]
   cas

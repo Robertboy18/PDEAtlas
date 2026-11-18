@@ -56,7 +56,7 @@ theorem GelfandGalerkin.exists (T : GelfandTriple (V := V) (H := H)) (S : Submod
     (hB_bound : ∀ t ∈ Set.Icc a b, ‖B t‖ ≤ MB) (q₀ p₀ : S) :
     Nonempty (SecondOrderSolutionOn (fun t ↦ gelfandGalerkinOperator T S (B t))
       (gelfandGalerkinForcing T S ell) a b q₀ p₀) := by
-  let : CompleteSpace S := FiniteDimensional.complete ℝ S
+  let : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
   let K : ℝ → S →L[ℝ] S := fun t ↦ gelfandGalerkinOperator T S (B t)
   let fS : ℝ → S := gelfandGalerkinForcing T S ell
   let MK := gelfandGalerkinLipschitzBound T S MB

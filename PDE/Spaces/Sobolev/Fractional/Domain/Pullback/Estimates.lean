@@ -75,7 +75,7 @@ theorem lintegral_diffQuot_comp_le
         (D : ℝ≥0∞) ^ 2 *
           ∫⁻ z, ‖diffQuot n s u z (p := p)‖ₑ ^ p.toReal
             ∂gagliardoProductMeasure n E.target := by
-  have hmeas := (aestronglyMeasurable_diffQuot (s := s) (p := p) hu).enorm
+  have hmeas := (aestronglyMeasurable_diffQuot (s := s) (p := p) hu).eNorm
   have hmem := ae_restrict_mem (μ := volume) E.open_source.measurableSet
   calc
     _ ≤ ∫⁻ z, ENNReal.ofReal ((L : ℝ) ^ ((n : ℝ) / p.toReal + s)) ^ p.toReal *
@@ -110,7 +110,7 @@ theorem gagliardoSq_comp_le
     gagliardoSq n s E.source (u ∘ E) ≤
       ENNReal.ofReal ((L : ℝ) ^ ((n : ℝ) / 2 + s)) ^ 2 *
         (D : ℝ≥0∞) ^ 2 * gagliardoSq n s E.target u := by
-  simpa only [gagliardoSq, ENNReal.toReal_ofNat, ENNReal.rpow_two, enorm_eq_nnnorm]
+  simpa only [gagliardoSq, ENNReal.toReal_ofNat, ENNReal.rpow_two, eNorm_eq_nnNorm]
     using lintegral_diffQuot_comp_le (p := 2) hs hE hL hD hu
 
 omit [NormedSpace ℝ F] in

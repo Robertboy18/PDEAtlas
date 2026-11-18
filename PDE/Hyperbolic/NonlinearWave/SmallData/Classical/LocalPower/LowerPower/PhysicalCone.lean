@@ -82,7 +82,7 @@ theorem physicalCone_eq_of_integral_eq {T : ℝ} {v : ℝ × ℝ^3 → ℝ}
   ext r
   have hr := heq (physicalPoint q.1 r) ((abs_physicalPoint_time_le q.1 r).trans_lt q.2)
   rw [physicalCone_apply, hr]
-  simp only [BoundedContinuousFunction.add_apply, BoundedContinuousFunction.smul_apply,
+  simp only [add_apply, smul_apply,
     freeField_apply, duhamelOperator_apply, composeCompact_apply, physicalCone_apply,
     physicalPoint_descend, smul_eq_mul]
   change (q.1.1 * coneTime r) * unitSphereAverage 3 g

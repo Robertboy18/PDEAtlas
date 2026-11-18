@@ -428,8 +428,8 @@ private theorem lintegral_fullKernel_left :
     hφ.aemeasurable]
   refine setLIntegral_congr_fun measurableSet_Ioi fun y hy ↦ ?_
   have hy0 : 0 < y := (strainThreshold_pos s₂).trans hy
-  simp only [fullKernel, ite_eq_left hy0, strainMap_strainMap hy0 hs₂.ne', enorm_neg,
-    Real.enorm_eq_ofReal_abs]
+  simp only [fullKernel, ite_eq_left hy0, strainMap_strainMap hy0 hs₂.ne', eNorm_neg,
+    Real.eNorm_eq_ofReal_abs]
   rw [← ENNReal.ofReal_mul (abs_nonneg _), abs_sub_comm y]
 
 end Full
@@ -546,10 +546,10 @@ private theorem lintegral_Iic_halfKernel {x : ℝ} (hx₀ : 0 ≤ x)
   have hk := integrable_localStrainDifference A hs₂.ne'
   rw [intervalIntegral.integral_of_le hx₀, ofReal_integral_eq_lintegral_ofReal hk.integrableOn]
   · rw [halfKernel_eq_indicator]
-    simp only [enorm_indicator_eq_indicator_enorm]
+    simp only [eNorm_indicator_eq_indicator_eNorm]
     rw [setLIntegral_indicator measurableSet_Ioi, Ioi_inter_Iic]
     refine setLIntegral_congr_fun measurableSet_Ioc fun t ht ↦ ?_
-    rw [enorm_neg, Real.enorm_eq_ofReal_abs,
+    rw [eNorm_neg, Real.eNorm_eq_ofReal_abs,
       abs_of_nonneg (localStrainDifference_nonneg hs₂ ht.1.le (ht.2.trans hxc))]
   · filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
     exact localStrainDifference_nonneg hs₂ ht.1.le (ht.2.trans hxc)
@@ -590,16 +590,16 @@ private theorem lintegral_Ici_halfKernel {y : ℝ} (hyc : localStrainThreshold A
     hk.neg.integrableOn
   rw [hsplit, ofReal_integral_eq_lintegral_ofReal hk',
     setLIntegral_congr (Ioi_ae_eq_Ici (μ := volume) (a := y)).symm, halfKernel_eq_indicator]
-  · simp only [enorm_indicator_eq_indicator_enorm]
+  · simp only [eNorm_indicator_eq_indicator_eNorm]
     rw [setLIntegral_indicator measurableSet_Ioi, inter_eq_right.2 (Ioi_subset_Ioi hy0.le),
       ← Ioc_union_Ioi_eq_Ioi hyA, lintegral_union measurableSet_Ioi (Ioc_disjoint_Ioi le_rfl),
       setLIntegral_congr_fun measurableSet_Ioi (g := fun _ ↦ (0 : ℝ≥0∞)) fun t ht ↦ ?_,
       lintegral_zero, add_zero]
     · refine setLIntegral_congr_fun measurableSet_Ioc fun t ht ↦ ?_
-      rw [Real.enorm_eq_ofReal_abs, abs_of_nonneg (neg_nonneg.2
+      rw [Real.eNorm_eq_ofReal_abs, abs_of_nonneg (neg_nonneg.2
         (localStrainDifference_neg hA hs₂ (hyc.trans_lt ht.1) ht.2).le)]
     · have h0 : A + 1 / 2 < |t| := by rw [abs_of_pos (by linarith [mem_Ioi.1 ht])]; exact ht
-      rw [localStrainDifference_eq_zero h0, neg_zero, enorm_zero]
+      rw [localStrainDifference_eq_zero h0, neg_zero, eNorm_zero]
   · filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
     exact neg_nonneg.2 (localStrainDifference_neg hA hs₂ (hyc.trans_lt ht.1) ht.2).le
 
@@ -715,7 +715,7 @@ theorem abs_setIntegral_localStrainDifference_mul_le {g : ℝ → ℝ} {C : ℝ�
         = ∫⁻ y in Ioi (localStrainThreshold A s₂),
             ‖halfKernel A s₂ y‖ₑ * ENNReal.ofReal (|y - TA y| ^ (1 / 2 : ℝ)) := by
           refine lintegral_congr fun y ↦ ?_
-          rw [ENNReal.ofReal_mul (abs_nonneg _), Real.enorm_eq_ofReal_abs]
+          rw [ENNReal.ofReal_mul (abs_nonneg _), Real.eNorm_eq_ofReal_abs]
       _ ≤ ∫⁻ y in Ioi (localStrainThreshold A s₂), ‖halfKernel A s₂ y‖ₑ *
             ENNReal.ofReal (|strainMap (TA y) s₂ - TA y| ^ (1 / 2 : ℝ)) := by
           refine lintegral_mono_ae ?_
@@ -751,8 +751,8 @@ theorem abs_setIntegral_localStrainDifference_mul_le {g : ℝ → ℝ} {C : ℝ�
             (Eventually.of_forall fun x hx ↦ ?_))
           gcongr
           by_cases h0 : 0 < x
-          · simp only [halfKernel, fullKernel, ite_eq_left h0, enorm_neg,
-              Real.enorm_eq_ofReal_abs]
+          · simp only [halfKernel, fullKernel, ite_eq_left h0, eNorm_neg,
+              Real.eNorm_eq_ofReal_abs]
             have hx' : x ≤ localStrainThreshold A s₂ := (mem_Iio.1 hx).le
             refine ENNReal.ofReal_le_ofReal ?_
             rw [abs_of_nonneg (localStrainDifference_nonneg hs₂ h0.le hx'),

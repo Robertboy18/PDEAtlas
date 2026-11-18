@@ -72,7 +72,7 @@ private theorem eLpNorm_fderiv_cutoff_smul_le (μ : Measure ℝ^n)
       rw [eLpNorm_norm _ (hf.continuous_fderiv (by simp)).aestronglyMeasurable]
       change _ + eLpNorm (K • (fun x ↦ ‖f x‖)) p μ = _
       rw [eLpNorm_const_smul, eLpNorm_norm _ hf.continuous.aestronglyMeasurable,
-        Real.enorm_eq_ofReal hK]
+        Real.eNorm_eq_ofReal hK]
 
 /-- A homogeneous first-derivative estimate for compactly supported `C¹` functions
 extends, with the same constant, to `C¹ ∩ Lᵖ`. No integrability assumption on the

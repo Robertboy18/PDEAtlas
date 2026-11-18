@@ -48,7 +48,7 @@ theorem lipschitzWith_intervalIntegral_of_memLp_top
   apply lipschitzWith_intervalIntegral_of_ae_bound (hf.locallyIntegrable (by simp)) _ a
   filter_upwards [ae_le_eLpNormEssSup (f := f) (μ := volume)] with x hx
   rw [← eLpNorm_exponent_top hf.aestronglyMeasurable] at hx
-  simpa only [toReal_enorm, ENNReal.coe_toNNReal_eq_toReal] using
+  simpa only [toReal_eNorm, ENNReal.coe_toNNReal_eq_toReal] using
     ENNReal.toReal_mono hf.eLpNorm_lt_top.ne hx
 
 /-- The actual primitive of an arbitrary `L∞` function is globally Lipschitz.

@@ -39,7 +39,7 @@ theorem toLp_tsum_ae (u : ι → W^{s,p}(Ω; F))
     Summable.of_nonneg_of_le (fun _ ↦ norm_nonneg _)
       (fun i ↦ B.le_opNorm (u i)) (hu.mul_left ‖B‖)
   have he : (∑' i, ‖B (u i)‖ₑ) ≠ ∞ :=
-    tsum_enorm_ne_top_iff_summable_norm.mpr hB
+    tsum_eNorm_ne_top_iff_summable_norm.mpr hB
   change (fun x ↦ B (∑' i, u i) x) =ᵐ[(volume : Measure (ℝ^n)).restrict Ω] _
   rw [B.map_tsum hu.of_norm]
   exact Lp.coeFn_tsum he

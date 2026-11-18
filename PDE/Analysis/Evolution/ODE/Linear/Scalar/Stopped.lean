@@ -443,7 +443,7 @@ theorem lintegral_enorm_stoppedDuhamel_le (hc : c < 0) (hT : 0 < T)
   calc ∫⁻ t in Ioi 0, ‖stoppedDuhamel c a₀ T J f t‖ₑ
       ≤ ∫⁻ t in Ioi 0, ENNReal.ofReal (b t) :=
         setLIntegral_mono' measurableSet_Ioi fun t ht ↦ by
-          rw [Real.enorm_eq_ofReal_abs]
+          rw [Real.eNorm_eq_ofReal_abs]
           exact ENNReal.ofReal_le_ofReal (abs_stoppedDuhamel_le hT.le (le_of_lt ht))
     _ = ENNReal.ofReal (∫ t in Ioi 0, b t) :=
         (ofReal_integral_eq_lintegral_ofReal hint

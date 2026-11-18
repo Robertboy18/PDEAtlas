@@ -266,7 +266,7 @@ theorem ext_of_eqOn {f g : CKGammaOn n k Ω γ}
   have hfields : ∀ m (a : MultiIndex n k), a.order = m → f.derivative a = g.derivative a := by
     intro m
     induction m using Nat.strong_induction_on with
-    | h m ih =>
+    | ind m ih =>
       intro a ham
       by_cases ha : a.order = 0
       · rw [MultiIndex.eq_zero_of_order_eq_zero ha]

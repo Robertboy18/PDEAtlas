@@ -168,7 +168,7 @@ theorem ancientLift_perturbedTransportForcing (a β : ℝ)
     (f : Iic a →ᵇ VectorH 3 0) (v : Iic a →ᵇ VectorH 3 1) (t : ℝ) :
     ancientLift β (f - perturbedTransportPath T a v) t =
       ancientLift β f t - T (ancientLift β v t) := by
-  simp only [ancientLift, ContinuousMap.coe_mk, BoundedContinuousFunction.sub_apply,
+  simp only [ancientLift, ContinuousMap.coe_mk, sub_apply,
     perturbedTransportPath_apply, smul_sub, map_smul]
 
 include hB in

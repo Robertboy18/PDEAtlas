@@ -100,7 +100,7 @@ theorem LowerPower.exists_cone_solution_with_remainder {k : ℕ} {f : ℝ → �
           have hN : restrictCone q (N (ψ (A p))) =
               N (restrictCone q (ψ (A p))) := by ext z; rfl
           ext z
-          simp only [BoundedContinuousFunction.smul_apply, restrictCone_apply,
+          simp only [smul_apply, restrictCone_apply,
             duhamelOperator_descend, hN, smul_eq_mul]
           change p.1 ^ 2 * (coneTime q ^ 2 * _) = (p.1 * coneTime q) ^ 2 * _
           cas
@@ -111,7 +111,7 @@ theorem LowerPower.exists_cone_solution_with_remainder {k : ℕ} {f : ℝ → �
     rw [hrestrict hp q, restrictCone_apply, descend_vertex_right]
   let a : ℝ × ℝ^3 → ℝ := fun p ↦ duhamelOperator (N (ψ (A p))) vertex
   have hAc : ContDiff ℝ (k + 1) A := contDiff_fst.prodMk (contDiff_freeField hh)
-  have hw := hψreg.comp hAc.contDiffOn (fun _ hp ↦ hA hp)
+  have hw := hψreg.comp (s := {p : ℝ × ℝ^3 | |p.1| < T}) hAc.contDiffOn (fun _ hp ↦ hA hp)
   have ha := duhamelOperator.contDiff.comp_contDiffOn
     ((contDiff_composeCompact hf).comp_contDiffOn hw)
   refine ⟨T, div_pos hδ (by positivity), v, a, ?_, ?_, ?_, ?_⟩

@@ -135,6 +135,6 @@ theorem continuousOn_mixedConvection (hm : (3 : ℝ) < 2 * m) {U : ℝ → Vecto
     ContinuousOn (fun p : ℝ × VectorH 3 (m + 1) ↦ mixedConvection m hm (U p.1) p.2)
       (S ×ˢ univ) :=
   ((mixedConvection m hm).continuous.comp_continuousOn
-    (hU.comp continuousOn_fst fun _ hp ↦ hp.1)).clm_apply continuousOn_snd
+    (hU.comp continuousOn_fst fun _ ↦ And.left)).clm_apply continuousOn_snd
 
 end NavierStokes.SobolevConvection

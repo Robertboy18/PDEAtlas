@@ -40,7 +40,7 @@ variable {n : ℕ} {N : General.Nonlinearity n}
 theorem lipschitzOnWith_displacement (hu : N.IsEnergySolution x u) {C : NNReal}
     (hv : ∀ t, 0 ≤ t → ‖(u t).2‖ ≤ C) :
     LipschitzOnWith C (fun t ↦ (energyTriple n).inclusion (u t).1) (Ici 0) := by
-  exact (convex_Ici (0 : ℝ)).lipschitzOnWith_of_nnnorm_hasDerivWithin_le
+  exact (convex_Ici (0 : ℝ)).lipschitzOnWith_of_nnNorm_hasDerivWithin_le
     (fun t ht ↦ hu.hasDerivWithinAt_displacement ht) (fun t ht ↦ hv t ht)
 
 /-- The full L² displacement grows at most linearly under a uniform velocity bound. -/

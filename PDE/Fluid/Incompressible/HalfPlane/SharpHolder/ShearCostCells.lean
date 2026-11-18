@@ -71,7 +71,7 @@ theorem measurable_shearColumnDensity :
     fun_prop
   have hF : Measurable fun x : ℝ × ℝ ↦ ‖shearDifference x.1 x.2‖ₑ *
       ENNReal.ofReal (|x.2 - shearMap x.1 x.2| ^ (1 / 2 : ℝ)) :=
-    measurable_shearDifference.enorm.mul
+    measurable_shearDifference.eNorm.mul
       ((continuous_abs.measurable.comp (measurable_snd.sub measurable_shearMap)).pow_const
         _).ennreal_ofReal
   have e : (fun x : ℝ × ℝ ↦ shearColumnDensity x.1 x.2) =
@@ -112,7 +112,7 @@ theorem shearColumnDensity_le {p t α β γ r : ℝ} (hp : 0 ≤ p) (ht : 0 < t)
   unfold shearColumnDensity
   refine (indicator_le_self _ _ _).trans ?_
   dsimp only
-  rw [Real.enorm_eq_ofReal hΔ, ← ENNReal.ofReal_mul hΔ]
+  rw [Real.eNorm_eq_ofReal hΔ, ← ENNReal.ofReal_mul hΔ]
   refine ENNReal.ofReal_le_ofReal (mul_le_mul_of_nonneg_left ?_ hΔ)
   rw [abs_of_nonneg (by linarith)]
   exact (sqrt_le_tangent (by linarith) hr).trans hW

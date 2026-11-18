@@ -156,7 +156,7 @@ theorem exists_two_derivative_chain_zeros_of_multiset {a b : ℝ} (n : ℕ) (Φ 
       Finset.mem_filter.mpr ⟨Finset.mem_univ _, le_antisymm
         ((hmono (Finset.mem_Icc.mp hk).2).trans heq.ge) (hmono (Finset.mem_Icc.mp hk).1)⟩
     have hc := Finset.card_le_card hsub
-    rw [Fin.card_Icc, Fin.card_filter_univ_eq_vector_get_eq_count] at hc
+    rw [Fin.card_Icc, ← List.Vector.count_toList] at hc
     have hcount : v.toList.count (v.get i) = s.count (v.get i) := by
       change (s.sort (· ≤ ·)).count _ = _
       rw [← Multiset.coe_count, Multiset.sort_eq]

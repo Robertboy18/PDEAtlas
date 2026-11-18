@@ -104,14 +104,14 @@ theorem StronglyMeasurable.exists_stronglyMeasurable_jointLpRepresentative {α �
   let A := {z : α × β | ∑' n : ℕ, ‖D n z‖ₑ ≠ ∞}
   have hA : MeasurableSet A :=
     (_root_.measurableSet_eq_fun (Measurable.tsum fun n ↦
-      ((hR (n + 1)).sub (hR n)).enorm) measurable_const).compl
+      ((hR (n + 1)).sub (hR n)).eNorm) measurable_const).compl
   let V (n : ℕ) := A.indicator (D n)
   have hV (n : ℕ) : StronglyMeasurable (V n) :=
     ((hR (n + 1)).sub (hR n)).indicator hA
   have hVs (z : α × β) : Summable (fun n ↦ V n z) := by
     by_cases hz : z ∈ A
     · simpa only [V, indicator_of_mem hz] using
-        (tsum_enorm_ne_top_iff_summable_norm.mp hz).of_norm
+        (tsum_eNorm_ne_top_iff_summable_norm.mp hz).of_norm
     · simp only [V, indicator_of_notMem hz]
       exact summable_zero
   have hsumV : StronglyMeasurable (fun z ↦ ∑' n, V n z) :=
@@ -125,12 +125,12 @@ theorem StronglyMeasurable.exists_stronglyMeasurable_jointLpRepresentative {α �
   have hAae : ∀ᵐ x ∂ν, (t, x) ∈ A := by
     have h := summable_norm_of_tsum_eLpNorm_ne_top (Fact.out : 1 ≤ p)
       (f := fun n ↦ (w (n + 1) t - w n t : Lp E p ν)) (by
-        simpa only [Lp.enorm_def] using
-          tsum_enorm_ne_top_iff_summable_norm.mpr (hnorm t))
+        simpa only [Lp.eNorm_def] using
+          tsum_eNorm_ne_top_iff_summable_norm.mpr (hnorm t))
     filter_upwards [h, hd] with x hx hxd
-    apply tsum_enorm_ne_top_iff_summable_norm.mpr
+    apply tsum_eNorm_ne_top_iff_summable_norm.mpr
     simpa only [D, R, ← hxd] using hx
-  filter_upwards [Lp.coeFn_tsum (tsum_enorm_ne_top_iff_summable_norm.mpr (hnorm t)),
+  filter_upwards [Lp.coeFn_tsum (tsum_eNorm_ne_top_iff_summable_norm.mpr (hnorm t)),
     Lp.coeFn_sub (u t) (w 0 t), hd, hAae] with x hxsum hxsub hxd hxA
   have heq : (∑' n : ℕ, (R (n + 1) (t, x) - R n (t, x))) = u t x - R 0 (t, x) := by
     calc

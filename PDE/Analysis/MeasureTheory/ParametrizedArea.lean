@@ -49,7 +49,7 @@ theorem euclideanHausdorffMeasure_image_le
     (volume : Measure (ℝ^d))
     (Measure.hausdorffMeasure (d : ℝ))
   simp only [Measure.euclideanHausdorffMeasure_def,
-    Measure.smul_apply, ENNReal.smul_def]
+    smul_apply, ENNReal.smul_def]
   calc
     a * Measure.hausdorffMeasure (d : ℝ) (f '' s) ≤
         a * ((K : ℝ≥0∞) ^ (d : ℝ) *

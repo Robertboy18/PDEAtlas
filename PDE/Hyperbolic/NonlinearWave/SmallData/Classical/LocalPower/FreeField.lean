@@ -49,9 +49,9 @@ def freeField (h : C(ℝ^3, ℝ)) (p : ℝ × ℝ^3) : Cone →ᵇ ℝ :=
 theorem freeField_apply (h : C(ℝ^3, ℝ)) (p : ℝ × ℝ^3) (q : Cone) :
     freeField h p q = (p.1 * coneTime q) *
       unitSphereAverage 3 h (p.2 + p.1 • coneSpace q) (p.1 * coneTime q) := by
-  simp only [freeField, BoundedContinuousFunction.smul_apply,
-    BoundedContinuousFunction.mul_apply, partialIntegralCLM_apply,
-    composeCompact_apply, BoundedContinuousFunction.add_apply, constCLM_apply,
+  simp only [freeField, smul_apply,
+    mul_apply, partialIntegralCLM_apply,
+    composeCompact_apply, add_apply, constCLM_apply,
     const_apply, initialDirection, timeWeight, mkOfCompact_apply, smul_eq_mul]
   change p.1 * (coneTime q * ((unitSphereArea 3)⁻¹ *
     ∫ ω : Direction, h (p.2 + p.1 • (coneSpace q + coneTime q • (ω : ℝ^3)))

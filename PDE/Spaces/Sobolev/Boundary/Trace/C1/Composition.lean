@@ -78,7 +78,7 @@ theorem vectorComposition_sub_mem_H10_of_sub_mem_H10 (P : InwardPartition Ω)
         (h10SubmoduleOn (n := n + 1) (Ω := Ω)).toSubmodule := by
   let Z : Fin m → H¹₀(Ω) := fun i ↦ ⟨U i - V i, hUV i⟩
   have hLip : LipschitzWith C G :=
-    lipschitzWith_of_nnnorm_fderiv_le (hG.differentiable one_ne_zero)
+    lipschitzWith_of_nnNorm_fderiv_le (hG.differentiable one_ne_zero)
       (fun z ↦ hbound z)
   apply mem_H10_of_abs_le_norm_values P C Z
   let GU := vectorCompositionOnOfExtension H.isOpen E (by norm_num) hG hbound U

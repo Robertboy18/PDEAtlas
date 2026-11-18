@@ -122,7 +122,9 @@ runs many of them in parallel.
 For Blueprint changes, run `bash Blueprint/Tools/build.sh`. It regenerates the computation
 ledger and the textbook map; the other files in `Blueprint/Generated/` have their own
 generators, listed in the [Blueprint guide](Blueprint/README.md). Edit their inputs, not the
-output.
+output. The Blueprint package still pins the Verso stack of Lean 4.35, since VersoBlueprint has no
+release for Lean 4.36 yet. Until it has one, the Blueprint does not build against the library at
+this commit, and the published site is the one rendered at the last Lean 4.35 commit, `4f9493e3`.
 
 ## Exposition and sources
 

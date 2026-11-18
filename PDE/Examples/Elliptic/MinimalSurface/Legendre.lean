@@ -39,7 +39,7 @@ def domain : Set (ℝ^2) := {x | Real.cos (x 0) ≠ 0 ∧ Real.cos (x 1) ≠ 0}
 
 /-- The domain is open. -/
 theorem isOpen_domain : IsOpen domain := by
-  apply IsOpen.inter
+  apply IsOpen.and
   · exact isOpen_ne.preimage (by fun_prop)
   · exact isOpen_ne.preimage (by fun_prop)
 

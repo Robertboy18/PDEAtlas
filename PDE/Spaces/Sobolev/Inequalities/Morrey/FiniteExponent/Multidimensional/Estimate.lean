@@ -77,7 +77,7 @@ theorem morreyGradientSeminorm_eq_eLpNorm
     (u : ℝ^n → ℝ) {p : ℝ} (hp : 0 < p) :
     morreyGradientSeminorm u p =
       eLpNorm (fderiv ℝ u) (ENNReal.ofReal p) volume := by
-  rw [morreyGradientSeminorm, eLpNorm_eq_lintegral_rpow_enorm_toReal]
+  rw [morreyGradientSeminorm, eLpNorm_eq_lintegral_rpow_eNorm_toReal]
   · rw [ENNReal.toReal_ofReal hp.le]
   · exact ENNReal.ofReal_ne_zero_iff.mpr hp
   · exact ENNReal.ofReal_ne_top
@@ -87,7 +87,7 @@ theorem morreyGradientSeminorm_eq_eLpNorm
 private theorem enorm_sub_le_two_mul_of_le {a b c : ℝ} {B : ℝ≥0∞} (ha : ‖a - c‖ₑ ≤ B)
     (hb : ‖b - c‖ₑ ≤ B) : ‖b - a‖ₑ ≤ 2 * B :=
   calc ‖b - a‖ₑ ≤ ‖b - c‖ₑ + ‖a - c‖ₑ := by
-        simpa only [edist_eq_enorm_sub] using edist_triangle_right b a c
+        simpa only [eDist_eq_eNorm_sub] using edist_triangle_right b a c
     _ ≤ 2 * B := (add_le_add hb ha).trans_eq (two_mul B).symm
 
 /-- **Multidimensional finite-exponent Morrey estimate** (Evans, PDE, §5.6.2, Theorem 4).
@@ -124,9 +124,9 @@ theorem enorm_sub_le_eLpNorm_fderiv_mul_rpow_of_ballPotential
           (K * ENNReal.ofReal R ^ morreyExponent n (ENNReal.ofReal p))) := by
     refine (hpotential hR ha).trans (mul_le_mul_right ?_ A)
     refine (ENNReal.lintegral_mul_le_Lp_mul_Lq _ hpq
-      (hu.continuous_fderiv one_ne_zero).enorm.aemeasurable
+      (hu.continuous_fderiv one_ne_zero).eNorm.aemeasurable
       (ENNReal.continuous_rpow_const.comp
-        (continuous_id.sub continuous_const).enorm).aemeasurable).trans ?_
+        (continuous_id.sub continuous_const).eNorm).aemeasurable).trans ?_
     gcongr
     · exact ENNReal.rpow_le_rpow (lintegral_mono' Measure.restrict_le_self le_rfl)
         (one_div_nonneg.mpr hp0.le)
@@ -203,9 +203,9 @@ theorem enorm_sub_le_eLpNorm_fderiv_mul_rpow
     refine (enorm_sub_ballAverage_le_morreyPotential u hu hn hR ha).trans
       (mul_le_mul_right ?_ _)
     refine (ENNReal.lintegral_mul_le_Lp_mul_Lq _ hpq
-      (hu.continuous_fderiv one_ne_zero).enorm.aemeasurable
+      (hu.continuous_fderiv one_ne_zero).eNorm.aemeasurable
       (ENNReal.continuous_rpow_const.comp
-        (continuous_id.sub continuous_const).enorm).aemeasurable).trans ?_
+        (continuous_id.sub continuous_const).eNorm).aemeasurable).trans ?_
     gcongr
     · exact ENNReal.rpow_le_rpow (lintegral_mono' Measure.restrict_le_self le_rfl)
         (one_div_nonneg.mpr hp0.le)

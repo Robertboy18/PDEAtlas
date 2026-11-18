@@ -159,7 +159,7 @@ theorem exists_smooth_cubic_h1_bound :
           (hasCompactSupport_iteratedPartialDeriv hc [i])
       simp_rw [hd]
       change lpNorm ((3 : ℝ) • fun x ↦ u x ^ 2 * iteratedPartialDeriv [i] u x) 2 volume ≤ _
-      rw [lpNorm_const_smul, coe_nnnorm, Real.norm_of_nonneg (by norm_num : (0 : ℝ) ≤ 3)]
+      rw [lpNorm_const_smul, coe_nnNorm, Real.norm_of_nonneg (by norm_num : (0 : ℝ) ≤ 3)]
       exact (mul_le_mul_of_nonneg_left (htriple hdm ((hest u hu hc).2 i))
         (by norm_num)).trans_eq (by ring)
   calc

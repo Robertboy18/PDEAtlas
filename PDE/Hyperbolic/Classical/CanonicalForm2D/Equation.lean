@@ -116,6 +116,6 @@ theorem exists_canonical_equation {A : ℝ^2 → PrincipalPart} {x : ℝ^2}
   obtain ⟨_, _, hm, hidentity⟩ := hform y hy
   refine ⟨hm, fun u f hu ↦ ?_⟩
   rw [hidentity u hu]
-  exact (div_left_inj' (mul_ne_zero (by norm_num) hm)).symm
+  exact (div_left_inj₀ (mul_ne_zero (by norm_num) hm)).symm
 
 end Hyperbolic.CanonicalForm2D

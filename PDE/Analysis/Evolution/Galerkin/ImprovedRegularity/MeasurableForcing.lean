@@ -222,7 +222,7 @@ private theorem exists_of_boundedContinuous_symmetric_principal
   let fLp : Lp H 2 μab := BoundedContinuousFunction.toLp 2 μab ℝ fCont
   have hellBound (t : ℝ) (_ : t ∈ Set.Icc a b) :
       ‖T.pivotToDual (fCont t)‖ ≤ (‖T.pivotToDual‖₊ * ‖fCont‖₊ : NNReal) := by
-    simpa only [NNReal.coe_mul, coe_nnnorm] using (T.pivotToDual.le_opNorm _).trans
+    simpa only [NNReal.coe_mul, coe_nnNorm] using (T.pivotToDual.le_opNorm _).trans
       (mul_le_mul_of_nonneg_left (fCont.norm_coe_le_norm t) (norm_nonneg _))
   obtain ⟨G⟩ := AEGelfandGalerkinApproximation.exists_sequence T S hfinite (fun t ↦ A t + R t)
     (fun t ↦ T.pivotToDual (fCont t)) hab.le hC (fun v ↦ hBmeas.apply_continuousLinearMap v)

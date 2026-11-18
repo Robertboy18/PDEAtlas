@@ -288,7 +288,7 @@ theorem shearOuterCost_le_mass_below {B h : ℝ} (hB : 4 ≤ B) (hh : 0 < h) :
     shearOuterCost B h ≤ ENNReal.ofReal (2 * (2 * h) ^ (1 / 2 : ℝ)) * shearOuterMassBelow h B := by
   have hswap := lintegral_lintegral_swap (μ := volume.restrict (Ioi (0 : ℝ)))
     (ν := volume.restrict (Ioc h B)) (f := fun p t ↦ ‖localShearDifference B p t‖ₑ)
-    (measurable_localShearDifference B).enorm.aemeasurable
+    (measurable_localShearDifference B).eNorm.aemeasurable
   rw [shearOuterCost, shearOuterMassBelow, hswap, ENNReal.ofReal_mul (by norm_num),
     ENNReal.ofReal_ofNat]
   gcongr _ * ?_

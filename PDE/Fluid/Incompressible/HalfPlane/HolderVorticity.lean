@@ -302,8 +302,8 @@ theorem IsHolderVorticity.isQuadrantFarDensity_farSource (hf : IsHolderVorticity
   eq_zero y _ hy := by simp [farSource, radialCutoff_eq_one hR hy.le]
   aestronglyMeasurable :=
     ((((continuous_const.sub (contDiff_radialCutoff (n := 2) R (k := 0)).continuous)).continuousOn
-      ).mul (hf.continuousOn.mono fun _ hy ↦ (le_of_lt hy.2 : (0 : ℝ) ≤ _))).aestronglyMeasurable
-      measurableSet_quadrant
+      ).mul (hf.continuousOn.mono fun _ hy ↦ (le_of_lt (And.right hy) : (0 : ℝ) ≤ _))
+      ).aestronglyMeasurable measurableSet_quadrant
   integrableOn := by
     obtain ⟨C, β, hβ, hdec⟩ := hf.decay
     have hint : Integrable (fun y : ℝ^2 ↦ (1 + ‖y‖) ^ (-(β + 2))) := by
@@ -313,7 +313,7 @@ theorem IsHolderVorticity.isQuadrantFarDensity_farSource (hf : IsHolderVorticity
     set K := C * ((1 + R) / R) ^ 2
     have hcont : ContinuousOn (fun y ↦ farSource R f y / ‖y‖ ^ 2) GreenFunction.quadrant :=
       ((((continuous_const.sub (contDiff_radialCutoff (n := 2) R (k := 0)).continuous)).continuousOn
-        ).mul (hf.continuousOn.mono fun _ hy ↦ (le_of_lt hy.2 : (0 : ℝ) ≤ _))).div
+        ).mul (hf.continuousOn.mono fun _ hy ↦ (le_of_lt (And.right hy) : (0 : ℝ) ≤ _))).div
         (continuous_norm.pow 2).continuousOn
         (fun y hy ↦ pow_ne_zero 2 (norm_ne_zero_iff.mpr (by rintro rfl; simpa using hy.1)))
     refine Integrable.mono' (hint.const_mul K).integrableOn

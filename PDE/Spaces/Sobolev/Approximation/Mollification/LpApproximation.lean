@@ -145,10 +145,10 @@ theorem eLpNorm_mollifyVector_le
         (withDensity_absolutelyContinuous _ _)
     rw [mollifyVector_eq_integral_ρMeasure μ hε]
     have hnorm : ‖∫ y, f (x - y) ∂ν‖ₑ ≤ eLpNorm (fun y ↦ f (x - y)) p ν :=
-      (enorm_integral_le_lintegral_enorm _).trans
-        (lintegral_enorm_le_eLpNorm_one.trans (eLpNorm_le_eLpNorm_of_exponent_le hp1))
+      (eNorm_integral_le_lintegral_eNorm _).trans
+        (lintegral_eNorm_le_eLpNorm_one.trans (eLpNorm_le_eLpNorm_of_exponent_le hp1))
     have hpow := ENNReal.rpow_le_rpow hnorm hp_pos.le
-    rwa [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hfν,
+    rwa [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hfν,
       ← ENNReal.rpow_mul, one_div, inv_mul_cancel₀ hp_pos.ne', ENNReal.rpow_one] at hpow
   -- Tonelli and translation invariance remove the probability average.
   have hlin : (∫⁻ x, ‖mollifyVector μ ε f x‖ₑ ^ p.toReal ∂volume) ≤
@@ -158,15 +158,15 @@ theorem eLpNorm_mollifyVector_le
       _ = ∫⁻ y, ∫⁻ x, ‖f (x - y)‖ₑ ^ p.toReal ∂volume ∂ν := by
         apply lintegral_lintegral_swap
         exact (hf.aestronglyMeasurable.comp_quasiMeasurePreserving
-          (quasiMeasurePreserving_sub (μ := volume) (ν := ν))).enorm.pow_const _
+          (quasiMeasurePreserving_sub (μ := volume) (ν := ν))).eNorm.pow_const _
       _ = ∫⁻ y, ∫⁻ x, ‖f x‖ₑ ^ p.toReal ∂volume ∂ν := by
         exact lintegral_congr fun y ↦ lintegral_sub_right_eq_self (fun x ↦ ‖f x‖ₑ ^ p.toReal) y
       _ = ∫⁻ x, ‖f x‖ₑ ^ p.toReal ∂volume := by simp
   have hmollMeas : AEStronglyMeasurable (mollifyVector μ ε f) volume :=
     (mollifyVector_contDiff_of_pos μ hε f
       (hf.locallyIntegrable hp1)).continuous.aestronglyMeasurable
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hmollMeas,
-    eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hf.aestronglyMeasurable]
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hmollMeas,
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hf.aestronglyMeasurable]
   exact ENNReal.rpow_le_rpow hlin (by positivity)
 
 /-- Scalar mollification is the real-valued specialization of the

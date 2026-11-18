@@ -32,7 +32,7 @@ theorem norm_apply_ae_le (f : Lp E ∞ μ) : ∀ᵐ x ∂μ, ‖f x‖ ≤ ‖f�
     simpa only [eLpNorm_exponent_top (Lp.aestronglyMeasurable f)] using Lp.eLpNorm_ne_top f
   filter_upwards [ae_le_eLpNormEssSup (f := f)] with x hx
   have h := ENNReal.toReal_mono hfinite hx
-  simpa only [enorm, ENNReal.coe_toReal, coe_nnnorm, Lp.norm_def,
+  simpa only [eNorm, ENNReal.coe_toReal, coe_nnNorm, Lp.norm_def,
     eLpNorm_exponent_top (Lp.aestronglyMeasurable f)] using h
 
 end EssentialBound

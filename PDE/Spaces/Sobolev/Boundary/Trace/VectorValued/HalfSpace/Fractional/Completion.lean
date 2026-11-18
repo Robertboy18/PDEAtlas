@@ -52,9 +52,9 @@ private theorem coordinate_enorm_rpow_eq_lintegral
   have hv := coordinate_ae_partialDeriv_of_contDiffOn U hf.contDiffOn hbase i
   have hnorm : ‖v‖ₑ ^ p =
       ∫⁻ x, ‖v x‖ₑ ^ p ∂(volume.restrict ℝ^(n + 1)₊) := by
-    rw [Lp.enorm_def, eLpNorm_eq_eLpNorm' (by positivity) ENNReal.ofReal_ne_top
+    rw [Lp.eNorm_def, eLpNorm_eq_eLpNorm' (by positivity) ENNReal.ofReal_ne_top
       (Lp.aestronglyMeasurable v), ENNReal.toReal_ofReal hp.le]
-    exact (lintegral_rpow_enorm_eq_rpow_eLpNorm' hp).symm
+    exact (lintegral_rpow_eNorm_eq_rpow_eLpNorm' hp).symm
   exact hnorm.trans (lintegral_congr_ae (hv.mono fun x hx ↦
     congrArg (fun t : F ↦ ‖t‖ₑ ^ p) hx))
 
@@ -117,7 +117,7 @@ theorem lintegral_traceLp_sub_rpow_div_le_of_smooth
     apply tendsto_finsetSum
     intro i _
     exact (((partialDerivCLM i).continuous.tendsto U).comp
-      (hVlim.comp hns.tendsto_atTop)).enorm.ennrpow_const p
+      (hVlim.comp hns.tendsto_atTop)).eNorm.ennrpow_const p
   calc
     energy (T U) ≤ atTop.liminf (fun j ↦ energy (T (V (ns j)))) :=
       SobolevSpace.Fractional.lintegral_enorm_sub_rpow_div_le_liminf n (zero_lt_one.trans hp)

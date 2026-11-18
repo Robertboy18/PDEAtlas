@@ -51,7 +51,8 @@ theorem exists_integral_representative_of_interior_classical_power {p L S : ℝ}
       with q hq
     exact heq ⟨hq.1.le, hq.2.le⟩
   have hv₂ : ContDiffOn ℝ 2 v {z | z 0 ∈ Ioo 0 S} :=
-    (hu.mono (fun _ hz ↦ ⟨hz.1, hz.2.trans hSL⟩)).congr (fun _ hz ↦ heq ⟨hz.1.le, hz.2.le⟩)
+    (hu.mono (fun _ hz ↦ ⟨And.left hz, (And.right hz).trans hSL⟩)).congr
+      (fun _ hz ↦ heq ⟨hz.1.le, hz.2.le⟩)
   have hvpos (x : ℝ^3) : v (timeSpaceCons 0 x) = g x := (heq ⟨le_rfl, hS.le⟩).trans (hposition x)
   have hvvel (x : ℝ^3) : (∂[0] v) (timeSpaceCons 0 x) = h x := by
     have hd := (hasDerivAt_timeSpaceCons v 0 x

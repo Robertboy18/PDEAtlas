@@ -76,7 +76,7 @@ theorem mollifyVector_translate_converges_Lp (μ : Mollifier n) (hp : p ≠ ∞)
       Lp.coeFn_compMeasurePreserving U (hpres 0)
   have hT0 : Tendsto T atTop (𝓝 U) := by
     simpa only [hzero, T, Function.comp_def] using hT
-  have herror := (hT0.sub (tendsto_const_nhds (x := U))).enorm
+  have herror := (hT0.sub (tendsto_const_nhds (x := U))).eNorm
   have hrep (m : ℕ) :
       ((T m - U : Lp F p volume) : ℝ^n → F) =ᵐ[volume]
         fun x ↦ mollifyVector μ (ε m) f (x + a m) - f x := by
@@ -88,6 +88,6 @@ theorem mollifyVector_translate_converges_Lp (μ : Mollifier n) (hp : p ≠ ∞)
     change T m x = M m (x + a m) at ht
     change M m (x + a m) = mollifyVector μ (ε m) f (x + a m) at hs
     exact hx.trans (congrArg₂ (· - ·) (ht.trans hs) hu)
-  simpa only [sub_self, enorm_zero, Lp.enorm_def, eLpNorm_congr_ae (hrep _)] using herror
+  simpa only [sub_self, eNorm_zero, Lp.eNorm_def, eLpNorm_congr_ae (hrep _)] using herror
 
 end SobolevSpace.VectorValued.UpToBoundary

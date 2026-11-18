@@ -74,8 +74,8 @@ theorem measure_image_comparison_of_locally
   rw [himage, hmeasure]
   constructor
   · rw [← ENNReal.tsum_mul_left]
-    exact ENNReal.tsum_le_tsum fun n ↦ (htcomp n).1
+    exact tsum_le_tsum fun n ↦ (htcomp n).1
   · rw [← ENNReal.tsum_mul_left]
-    exact ENNReal.tsum_le_tsum fun n ↦ (htcomp n).2
+    exact tsum_le_tsum fun n ↦ (htcomp n).2
 
 end MeasureTheory

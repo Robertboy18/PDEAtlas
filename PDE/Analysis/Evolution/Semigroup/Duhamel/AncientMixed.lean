@@ -66,7 +66,7 @@ theorem mixedDuhamelOperatorOfJoint_apply
       Real.exp (-(η * (t : ℝ))) •
         (ancientDuhamel Ks (ancientLift β u) t - backwardDuhamel Ku (ancientLift β u) a t) := by
   simp only [mixedDuhamelOperatorOfJoint, _root_.sub_apply,
-    BoundedContinuousFunction.sub_apply, ancientDuhamelOperatorOfJoint_apply,
+    sub_apply, ancientDuhamelOperatorOfJoint_apply,
     backwardDuhamelOperator_apply, smul_sub]
 
 /-- The mixed bound is the sum of the stable Gamma bound and the unstable bound. -/
@@ -128,7 +128,7 @@ theorem ancientLift_mixed_fixedPoint_of_joint
   rw [← ancientLift_mixedDuhamelOperatorOfJoint hα hgap hweight hβ hκ hMs hMu hKsjoint
     hKucont hKs hKu g ht]
   have hv := congrArg (fun w : Iic a →ᵇ E ↦ ancientLift η w t) hu
-  simpa only [ancientLift, ContinuousMap.coe_mk, BoundedContinuousFunction.add_apply,
+  simpa only [ancientLift, ContinuousMap.coe_mk, add_apply,
     smul_add] using hv
 
 variable [CompleteSpace E]
@@ -163,7 +163,7 @@ theorem mixed_fixedPoint_terminal_projection_of_joint
     (hu : u = b +
       mixedDuhamelOperatorOfJoint hα hgap hweight hβ hκ hMs hMu hKsjoint hKucont hKs hKu g) :
     P (u ⟨a, self_mem_Iic⟩) = P (b ⟨a, self_mem_Iic⟩) := by
-  rw [hu, BoundedContinuousFunction.add_apply, map_add,
+  rw [hu, add_apply, map_add,
     map_mixedDuhamelOperatorOfJoint_terminal _ _ _ _ _ _ _ _ _ _ _ P hP, add_zero]
 
 end PDE.Analysis.Evolution

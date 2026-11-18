@@ -39,7 +39,7 @@ theorem map_volume_le_of_lipschitz_inverse
     Measure.map e volume ≤ (K : ℝ≥0∞) • volume := by
   apply Measure.le_iff.mpr
   intro s hs
-  rw [Measure.map_apply e.continuous.measurable hs, Measure.smul_apply,
+  rw [Measure.map_apply e.continuous.measurable hs, smul_apply,
     smul_eq_mul]
   have hset : e ⁻¹' s = e.symm '' s := by
     ext x

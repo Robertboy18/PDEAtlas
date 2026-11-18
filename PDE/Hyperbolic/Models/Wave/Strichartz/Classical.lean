@@ -81,7 +81,7 @@ theorem eLpNorm_classicalWave_le {b : ℝ} (g h : 𝓢(ℝ^3, ℝ))
   have hfinite : eLpNorm (fun t ↦ eLpNorm (v t) 12 volume) 4 volume ≠ ∞ := by
     change eLpNorm (fun t ↦ eLpNorm (fun x ↦ _) 12 volume) 4 volume ≠ ∞
     rw [eLpNorm_fourierWave_add_duhamelL2_eq G H 0 b f hF hsection]
-    exact enorm_ne_top
+    exact eNorm_ne_top
   have hbnd := mixedNorm_fourierWave_add_duhamelL2_le G H 0 b f hF hsection
   exact hnorm.trans ((ENNReal.ofReal_toReal hfinite).symm.trans_le (ENNReal.ofReal_le_ofReal hbnd))
 

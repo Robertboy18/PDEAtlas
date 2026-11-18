@@ -60,11 +60,12 @@ theorem le_on_slab_of_initial_le_of_smooth_tests {H : E → ℝ} {u v : E × ℝ
   have hcont : Continuous (fun q : E × E ↦ H q.1) := hH.comp continuous_fst
   have hu := (isSpatialViscositySubsolution_iff_smooth_tests (H := fun p _ ↦ H p)
     (isOpen_openTimeSlab T)
-    (hub.2.continuousOn.mono (fun _ hz ↦ ⟨hz.1.le, hz.2.le⟩)).upperSemicontinuousOn hcont).mpr husub
+    (hub.2.continuousOn.mono
+      (fun _ hz ↦ ⟨(And.left hz).le, (And.right hz).le⟩)).upperSemicontinuousOn hcont).mpr husub
   have hv := (isSpatialViscositySupersolution_iff_smooth_tests (H := fun p _ ↦ H p)
     (isOpen_openTimeSlab T)
-    (hvb.2.continuousOn.mono (fun _ hz ↦ ⟨hz.1.le, hz.2.le⟩)).lowerSemicontinuousOn
-      hcont).mpr hvsuper
+    (hvb.2.continuousOn.mono
+      (fun _ hz ↦ ⟨(And.left hz).le, (And.right hz).le⟩)).lowerSemicontinuousOn hcont).mpr hvsuper
   exact hu.le_of_initial_le_on_slab hv Subset.rfl Subset.rfl hH hub hvb hinit hT hz
 
 /-- Comparison on the closed slab `0 ≤ t ≤ T` from smooth tests on the open slab, for a
@@ -85,10 +86,11 @@ theorem le_on_slab_of_initial_le_of_smooth_tests_of_lipschitz {H : E → E → �
     u z ≤ v z := by
   have hcont := continuous_hamiltonian_of_lipschitz hp hx
   have hu := (isSpatialViscositySubsolution_iff_smooth_tests (isOpen_openTimeSlab T)
-    (hub.2.continuousOn.mono (fun _ hz ↦ ⟨hz.1.le, hz.2.le⟩)).upperSemicontinuousOn hcont).mpr husub
+    (hub.2.continuousOn.mono
+      (fun _ hz ↦ ⟨(And.left hz).le, (And.right hz).le⟩)).upperSemicontinuousOn hcont).mpr husub
   have hv := (isSpatialViscositySupersolution_iff_smooth_tests (isOpen_openTimeSlab T)
-    (hvb.2.continuousOn.mono (fun _ hz ↦ ⟨hz.1.le, hz.2.le⟩)).lowerSemicontinuousOn
-      hcont).mpr hvsuper
+    (hvb.2.continuousOn.mono
+      (fun _ hz ↦ ⟨(And.left hz).le, (And.right hz).le⟩)).lowerSemicontinuousOn hcont).mpr hvsuper
   exact hu.le_of_initial_le_on_slab_of_lipschitz hv Subset.rfl Subset.rfl hp hx hub hvb hinit hT hz
 
 /-- Evans's finite-horizon uniqueness in the original smooth-test class.

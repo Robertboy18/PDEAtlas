@@ -190,7 +190,7 @@ theorem lintegral_enorm_translate_sub_sq
     filter_upwards [
       coeFn_fourier_translateL2_sub h u
     ] with ξ hξ
-    rw [hξ, enorm_smul, mul_pow]
+    rw [hξ, eNorm_smul, mul_pow]
   rw [← hphysical, ← hfrequency]
   exact lintegral_enorm_sq_congr
     (norm_translateL2_sub h u)
@@ -202,6 +202,7 @@ private theorem measurable_gagKernel_uncurry :
       (fun p : (ℝ^n) × (ℝ^n) ↦
         gagKernel n s p.1 p.2) := by
   unfold gagKernel fourierCharFn
+  simp only [Real.fourierChar_apply]
   fun_prop
 
 private theorem enorm_char_sub_one_sq_mul
@@ -289,13 +290,13 @@ theorem gagDouble_eq_lintegral_gagJ
     exact
       ((measurable_gagKernel_uncurry.comp measurable_swap)
         |>.ennreal_ofReal).mul
-        (((hg.comp measurable_snd).enorm).pow_const 2)
+        (((hg.comp measurable_snd).eNorm).pow_const 2)
   rw [gagDouble_eq_lintegral_shift hf]
   simp_rw [lintegral_shift_eq_lintegral_kernel hfu hgu]
   rw [lintegral_lintegral_swap hmeas.aemeasurable]
   refine lintegral_congr fun ξ ↦ ?_
   rw [lintegral_mul_const' _ _
-      (ENNReal.pow_ne_top enorm_ne_top),
+      (ENNReal.pow_ne_top eNorm_ne_top),
     lintegral_ofReal_gagKernel hn hs0 hs1]
 
 /-! ## The Gagliardo-Fourier identity -/
@@ -429,7 +430,7 @@ theorem gagliardoSq_univ_eq_gagDouble
           push_cast
           ring,
       Complex.norm_real, Real.norm_eq_abs, sq_abs]
-  rw [← enorm_eq_nnnorm, ← ofReal_norm,
+  rw [← eNorm_eq_nnNorm, ← ofReal_norm,
     ← ENNReal.ofReal_pow (norm_nonneg _), hnum]
   congr 1
   rw [diffQuot_apply_real, ENNReal.toReal_ofNat, Real.norm_eq_abs, sq_abs,

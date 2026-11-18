@@ -114,7 +114,7 @@ theorem integral_Ioi_mul_one_add_sq_rpow_neg (s : ℝ) (hs : 1 < s) :
     rw [show 1 - s = -(s - 1) by ring, Real.rpow_neg (by positivity)]
   have hg : Tendsto g atTop (nhds 0) := by
     convert (tendsto_const_nhds.mul hpowZero) using 1
-    all_goals simp
+    simp
   simpa [g, g'] using
     (integral_Ioi_of_hasDerivAt_of_nonneg' hderiv hpos hg)
 

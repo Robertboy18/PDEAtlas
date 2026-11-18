@@ -43,8 +43,8 @@ private theorem lintegral_enorm_mollify_rpow_le (μ : Mollifier n)
     (hg.locallyIntegrable (Fact.out : 1 ≤ p))).continuous.aestronglyMeasurable
   have hb := ENNReal.rpow_le_rpow
     (MollifyLp.eLpNorm_mollifyVector_le μ ht hp hg) hpr.le
-  simpa only [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hm,
-    eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hg.aestronglyMeasurable,
+  simpa only [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hm,
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hg.aestronglyMeasurable,
     ← ENNReal.rpow_mul, one_div, inv_mul_cancel₀ hpr.ne', ENNReal.rpow_one] using hb
 
 /-- A bounded height multiplier supported below `T` contributes at most `T Cᵖ`
@@ -72,7 +72,7 @@ theorem lintegral_enorm_height_mul_mollify_rpow_le (μ : Mollifier n)
           apply lintegral_mono
           intro x
           apply ENNReal.rpow_le_rpow _ hpr.le
-          rw [enorm_smul]
+          rw [eNorm_smul]
           exact mul_le_mul' (by exact_mod_cast hC t ht) le_rfl
         _ = (C : ℝ≥0∞) ^ p.toReal *
             ∫⁻ x, ‖mollifyVector μ t g x‖ₑ ^ p.toReal := by
@@ -133,8 +133,8 @@ theorem eLpNorm_height_smul_mollifyVector_le (μ : Mollifier n)
   have hpr : 0 < p.toReal := ENNReal.toReal_pos hp0 hp
   have hmeas := aestronglyMeasurable_height_mul_mollify μ
     (hg.locallyIntegrable (Fact.out : 1 ≤ p)) ha
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hmeas,
-    eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hg.aestronglyMeasurable]
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hmeas,
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hg.aestronglyMeasurable]
   have hb := ENNReal.rpow_le_rpow
     (lintegral_enorm_height_mul_mollify_rpow_le μ hp hg hC hT)
     (one_div_nonneg.mpr hpr.le)
@@ -178,9 +178,9 @@ theorem eLpNorm_mollifiedExtension_le (μ : Mollifier n)
     eLpNorm (mollifiedExtension μ g) p (volume.restrict ℝ^(n + 1)₊) ≤
       (2 : ℝ≥0∞) ^ (1 / p.toReal) * eLpNorm g p volume := by
   have hp0 : p ≠ 0 := ne_of_gt (lt_of_lt_of_le zero_lt_one (Fact.out : 1 ≤ p))
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp
     (aestronglyMeasurable_mollifiedExtension μ (hg.locallyIntegrable (Fact.out : 1 ≤ p))),
-    eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hg.aestronglyMeasurable]
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hg.aestronglyMeasurable]
   have hb := ENNReal.rpow_le_rpow (lintegral_enorm_mollifiedExtension_rpow_le μ hp hg)
     (one_div_nonneg.mpr (ENNReal.toReal_nonneg (a := p)))
   simpa only [ENNReal.mul_rpow_of_nonneg _ _

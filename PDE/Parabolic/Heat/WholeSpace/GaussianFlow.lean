@@ -214,7 +214,7 @@ theorem enorm_iteratedFDeriv_gaussianFlow_one_le
   rw [gaussianFlow_one_eq]
   refine (enorm_iteratedFDeriv_convolution_le _ _ hf k x).trans ?_
   have hL : ‖(ContinuousLinearMap.lsmul ℝ ℝ : ℝ →L[ℝ] E →L[ℝ] E)‖ₑ ≤ 1 := by
-    simpa only [enorm_eq_nnnorm, ENNReal.coe_le_one_iff, ← NNReal.coe_le_one, coe_nnnorm] using
+    simpa only [eNorm_eq_nnNorm, ENNReal.coe_le_one_iff, ← NNReal.coe_le_one, coe_nnNorm] using
       ContinuousLinearMap.opNorm_lsmul_le (𝕜 := ℝ) (R := ℝ) (E := E)
   calc
     _ ≤ 1 * ∫⁻ y, ‖iteratedFDeriv ℝ k (heatKernelSchwartz n) (x - y)‖ₑ * ‖f y‖ₑ := by gcongr
@@ -230,28 +230,28 @@ theorem eLpNorm_iteratedFDeriv_gaussianFlow_one_le {p q r : ℝ≥0∞} (hp : 1 
   set a : ℝ^n → ℝ≥0∞ := fun z ↦ ‖iteratedFDeriv ℝ k (heatKernelSchwartz n) z‖ₑ
   have hKcont : Continuous (iteratedFDeriv ℝ k (heatKernelSchwartz n)) :=
     ((heatKernelSchwartz n).smooth ⊤).continuous_iteratedFDeriv (by exact_mod_cast le_top)
-  have ha : Measurable a := hKcont.enorm.measurable
+  have ha : Measurable a := hKcont.eNorm.measurable
   set g := hf.aestronglyMeasurable.mk f
   have hg : Measurable fun y ↦ ‖g y‖ₑ :=
-    hf.aestronglyMeasurable.stronglyMeasurable_mk.enorm
+    hf.aestronglyMeasurable.stronglyMeasurable_mk.eNorm
   have hfg : f =ᵐ[volume] g := hf.aestronglyMeasurable.ae_eq_mk
   have hpoint (x : ℝ^n) : ‖iteratedFDeriv ℝ k (gaussianFlow 1 f) x‖ₑ ≤
       ‖∫⁻ y, a (x - y) * ‖g y‖ₑ‖ₑ := by
-    rw [enorm_eq_self]
+    rw [eNorm_eq_self]
     refine (enorm_iteratedFDeriv_gaussianFlow_one_le hw k x).trans (le_of_eq ?_)
     refine lintegral_congr_ae ?_
     filter_upwards [hfg] with y hy
     rw [hy]
   calc
     _ ≤ eLpNorm (fun x ↦ ∫⁻ y, a (x - y) * ‖g y‖ₑ) r volume :=
-      eLpNorm_mono_enorm ((hsmooth.continuous_iteratedFDeriv
+      eLpNorm_mono_eNorm ((hsmooth.continuous_iteratedFDeriv
         (by exact_mod_cast le_top)).aestronglyMeasurable) hpoint
     _ ≤ eLpNorm a q volume * eLpNorm (fun y ↦ ‖g y‖ₑ) p volume :=
       ENNReal.eLpNorm_lintegral_convolution_le_of_one_le volume hq hp
         (by rwa [add_comm]) ha hg
     _ = _ := by
-      rw [eLpNorm_enorm _ hKcont.aestronglyMeasurable,
-        eLpNorm_enorm _ hf.aestronglyMeasurable.stronglyMeasurable_mk.aestronglyMeasurable,
+      rw [eLpNorm_eNorm _ hKcont.aestronglyMeasurable,
+        eLpNorm_eNorm _ hf.aestronglyMeasurable.stronglyMeasurable_mk.aestronglyMeasurable,
         eLpNorm_congr_ae hfg.symm]
 
 /-- Young's inequality and parabolic scaling for the derivatives of the heat flow, with the
@@ -278,7 +278,7 @@ theorem eLpNorm_iteratedFDeriv_gaussianFlow_le_of_young {p q r : ℝ≥0∞} (hp
     rw [hrep, iteratedFDeriv_comp_const_smul s⁻¹ (hgs.of_le (by exact_mod_cast le_top))]
     refine le_of_eq ?_
     change eLpNorm ((s⁻¹ ^ k) • fun x ↦ iteratedFDeriv ℝ k g (s⁻¹ • x)) r volume = _
-    rw [eLpNorm_const_smul, Real.enorm_eq_ofReal (by positivity),
+    rw [eLpNorm_const_smul, Real.eNorm_eq_ofReal (by positivity),
       eLpNorm_comp_smul hDg.aestronglyMeasurable (inv_ne_zero hs.ne')]
   have hstep2 := eLpNorm_iteratedFDeriv_gaussianFlow_one_le hp hq hpqr hfs k
   rw [eLpNorm_comp_smul hf.aestronglyMeasurable hs.ne'] at hstep2

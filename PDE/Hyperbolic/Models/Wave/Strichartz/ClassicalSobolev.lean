@@ -71,7 +71,7 @@ theorem eLpNorm_classicalWave_six_le {b : ℝ} (g h : 𝓢(ℝ^3, ℝ))
     (by norm_num : 0 < 3) (by norm_num) (by norm_num) 0 b t f
   exact (eLpNorm_add_le (by norm_num : (1 : ℝ≥0∞) ≤ 6)).trans
     ((add_le_add hh hD).trans (sobolev_component_bound _ _ _ _ _
-      (WithLp.enorm_fst_le _ d) (WithLp.enorm_snd_le _ d)))
+      (WithLp.eNorm_fst_le _ d) (WithLp.eNorm_snd_le _ d)))
 
 
 end WaveEquation.Strichartz

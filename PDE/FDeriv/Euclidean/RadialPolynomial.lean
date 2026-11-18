@@ -19,7 +19,8 @@ import PDE.FDeriv.Laplacian.Product
 A polynomial `P` in `n` variables defines the smooth function `x ↦ P(x)` on `ℝ^n`; its coordinate
 derivatives and its Laplacian are the evaluations of the algebraic partial derivatives
 `MvPolynomial.pderiv i P` and of the polynomial Laplacian `∑ᵢ pderiv i (pderiv i P)`. A
-homogeneous polynomial of degree `m` satisfies `P(c x) = c^m P(x)`.
+homogeneous polynomial of degree `m` satisfies `P(c x) = c^m P(x)`
+(Mathlib's `MvPolynomial.IsHomogeneous.eval_smul`).
 
 For a function `F` of one variable and any `C²` function `q`, the product `F(‖x‖²) q(x)` has
 
@@ -61,19 +62,6 @@ theorem polynomialLaplacian_sum {ι : Type*} (s : Finset ι) (f : ι → MvPolyn
 theorem polynomialLaplacian_C_mul (a : ℝ) (P : MvPolynomial (Fin n) ℝ) :
     polynomialLaplacian (C a * P) = C a * polynomialLaplacian P := by
   simp only [polynomialLaplacian, pderiv_C_mul, Finset.mul_sum]
-
-/-- A homogeneous polynomial of degree `m` scales by `c ^ m`: `P(c x) = c ^ m P(x)`. -/
-theorem IsHomogeneous.eval_smul {σ : Type*} {P : MvPolynomial σ ℝ} {m : ℕ}
-    (hP : P.IsHomogeneous m) (c : ℝ) (x : σ → ℝ) :
-    eval (c • x) P = c ^ m * eval x P := by
-  rw [eval_eq, eval_eq, Finset.mul_sum]
-  refine Finset.sum_congr rfl fun d hd ↦ ?_
-  have hdeg : ∑ i ∈ d.support, d i = m := by
-    have h := hP (mem_support_iff.mp hd)
-    simpa [Finsupp.weight_apply, Finsupp.sum] using h
-  simp only [Pi.smul_apply, smul_eq_mul, mul_pow, Finset.prod_mul_distrib,
-    Finset.prod_pow_eq_pow_sum, hdeg]
-  ring
 
 end MvPolynomial
 

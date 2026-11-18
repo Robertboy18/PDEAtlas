@@ -164,7 +164,7 @@ theorem norm_smooth_finite_composition_le (hk : (n : ℝ) < 2 * (k : ℝ))
         lpNorm_mono_real (hm.norm.const_mul C) hpoint
       _ = C * lpNorm u 2 volume := by
         change lpNorm (C • (fun x ↦ ‖u x‖)) 2 volume = _
-        rw [lpNorm_const_smul, coe_nnnorm, Real.norm_eq_abs, abs_of_nonneg hC,
+        rw [lpNorm_const_smul, coe_nnNorm, Real.norm_eq_abs, abs_of_nonneg hC,
           lpNorm_norm hm.aestronglyMeasurable]
       _ ≤ _ := mul_le_mul_of_nonneg_left hbaseu hC
   let W : W^{k,2}(ℝ^n) := mkWkpSpaceOnOfContDiff (f ∘ u) (hf.comp hu) (hc.comp_left hf0)

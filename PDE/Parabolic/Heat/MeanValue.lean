@@ -236,7 +236,7 @@ theorem heatBall_meanValue
   have hcoord (j : Fin n) : Continuous fun q : ℝ × SpaceTime n ↦ spatialPart q.2 j :=
     (EuclideanSpace.proj (𝕜 := ℝ) j).continuous.comp hspace.continuous
   have htime' := htime.continuous
-  have hD : Continuous fun q : ℝ × SpaceTime n ↦ D q.1 q.2 := by fun_prop
+  have hD : Continuous fun q : ℝ × SpaceTime n ↦ D q.1 q.2 := by fun_prop [spatialPart]
   have hW := integrableOn_heatBallWeight hn (0 : ℝ^n) 0 zero_lt_one
   have hjoint : Integrable (fun q : ℝ × SpaceTime n ↦ heatBallWeight 0 0 q.2 * D q.1 q.2)
       ((volume.restrict (Set.uIoc 0 r)).prod (volume.restrict (heatBall (0 : ℝ^n) 0 1))) := by

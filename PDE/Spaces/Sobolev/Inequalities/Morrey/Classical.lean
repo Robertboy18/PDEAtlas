@@ -43,7 +43,7 @@ theorem eHolderNorm_le_finiteMorrey_of_contDiff
       change ‖f y - f x‖ₑ ≤ finiteMorreyHolderConstantE n p q f *
         ENNReal.ofReal ‖y - x‖ ^ morreyExponent n (ENNReal.ofReal p) at h
       simpa [finiteMorreyHolderConstant, edist_dist, Real.dist_eq,
-        Real.enorm_eq_ofReal_abs, abs_sub_comm, dist_eq_norm, norm_sub_rev,
+        Real.eNorm_eq_ofReal_abs, abs_sub_comm, dist_eq_norm, norm_sub_rev,
         ENNReal.coe_toNNReal htop,
         Real.coe_toNNReal _ (morreyExponent_ofReal_pos hn hp).le] using h
     simpa only [finiteMorreyHolderConstant, ENNReal.coe_toNNReal htop] using

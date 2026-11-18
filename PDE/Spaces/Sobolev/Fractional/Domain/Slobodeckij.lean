@@ -87,8 +87,8 @@ theorem gagliardoSq_eq_eLpNorm'_sq (u : ℝ^n → F) :
     gagliardoSq n s Ω u =
       eLpNorm' (diffQuot n s u) 2 (gagliardoProductMeasure n Ω) ^ 2 := by
   rw [gagliardoSq]
-  simpa [ENNReal.rpow_two, enorm_eq_nnnorm] using
-    (lintegral_rpow_enorm_eq_rpow_eLpNorm'
+  simpa [ENNReal.rpow_two, eNorm_eq_nnNorm] using
+    (lintegral_rpow_eNorm_eq_rpow_eLpNorm'
       (μ := gagliardoProductMeasure n Ω)
       (f := diffQuot n s u) (q := (2 : ℝ))
       (by norm_num))
@@ -231,7 +231,7 @@ theorem gagliardoSq_pos_of_isOpen (hΩ : IsOpen Ω) {v : ℝ^n → ℝ}
   have hmeas : AEMeasurable (fun p : ℝ^n × ℝ^n ↦ (‖diffQuot n s v p‖₊ : ℝ≥0∞) ^ 2)
       (gagliardoProductMeasure n Ω) :=
     ((aestronglyMeasurable_diffQuot (n := n) (s := s) (Ω := Ω) (p := 2)
-      hv.aestronglyMeasurable).nnnorm.aemeasurable.coe_nnreal_ennreal).pow_const 2
+      hv.aestronglyMeasurable).nnNorm.aemeasurable.coe_nnreal_ennreal).pow_const 2
   rw [gagliardoSq] at h0
   have hae : ∀ᵐ p ∂(gagliardoProductMeasure n Ω), diffQuot n s v p = 0 := by
     filter_upwards [(lintegral_eq_zero_iff' hmeas).mp h0] with p hp

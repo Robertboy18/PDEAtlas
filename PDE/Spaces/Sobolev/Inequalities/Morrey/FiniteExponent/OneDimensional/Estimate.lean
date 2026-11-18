@@ -59,7 +59,7 @@ theorem enorm_sub_le_eLpNorm_deriv_mul_rpow
         ENNReal.ofReal |y - x| ^ morreyExponent 1 p := by
   wlog hxy : x ≤ y generalizing x y with h
   · have hyx : y ≤ x := le_of_not_ge hxy
-    simpa only [enorm_sub_rev, abs_sub_comm] using h y x hyx
+    simpa only [eNorm_sub_rev, abs_sub_comm] using h y x hyx
   have hcontDeriv : Continuous (deriv u) := by
     simpa using hu.continuous_deriv
   have hmeasDeriv : AEStronglyMeasurable (deriv u)
@@ -79,10 +79,10 @@ theorem enorm_sub_le_eLpNorm_deriv_mul_rpow
   calc
     ‖u y - u x‖ₑ
         ≤ ∫⁻ z in Icc x y, ‖deriv u z‖ₑ :=
-      enorm_sub_le_lintegral_deriv_of_contDiffOn_Icc hu.contDiffOn hxy
+      eNorm_sub_le_lintegral_deriv_of_contDiffOn_Icc hu.contDiffOn hxy
     _ = eLpNorm (deriv u) 1 (volume.restrict (Icc x y)) := by
       symm
-      exact eLpNorm_one_eq_lintegral_enorm hmeasDeriv
+      exact eLpNorm_one_eq_lintegral_eNorm hmeasDeriv
     _ ≤ eLpNorm (deriv u) p (volume.restrict (Icc x y)) *
           (volume.restrict (Icc x y)) univ ^
             (1 / (1 : ℝ≥0∞).toReal - 1 / p.toReal) :=
@@ -129,7 +129,7 @@ theorem holderWith_morreyExponent_one
   have h := enorm_sub_le_eLpNorm_deriv_mul_rpow u hu hp x y
   have hgamma : 0 ≤ morreyExponent 1 p :=
     (morreyExponent_one_pos hp).le
-  rw [Real.enorm_eq_ofReal_abs] at h
+  rw [Real.eNorm_eq_ofReal_abs] at h
   simpa [edist_dist, Real.dist_eq, abs_sub_comm,
     ENNReal.coe_toNNReal hfinite, Real.coe_toNNReal _ hgamma] using h
 

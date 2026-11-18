@@ -235,7 +235,7 @@ theorem integral_quinticSlice_le_initialEnergy_flux_rpow_of_upper_band {v : ℝ^
       (morawetz_flux_absorption hφpos (hφbound s hs.le))
   have hzero : (∫ x in ball c T, v (timeSpaceCons 0 x) ^ 6) ≤ C * φ 0 ^ (1 / 3 : ℝ) := by
     have hslicelim := tendsto_ballIntegral_shrinking_initial hT
-      ((hv.continuousOn.mono (fun _ hp ↦ hp.2)).pow 6) c
+      ((hv.continuousOn.mono (fun _ ↦ And.right)).pow 6) c
     have hφlim : Tendsto φ (𝓝[>] 0) (𝓝 (φ 0)) := by
       have h := tendsto_integral_initial_ball hρ
       have he0 : φ 0 = ∫ x in ball c T, ρ x := by

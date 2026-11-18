@@ -79,7 +79,7 @@ def mass : ℝ := ∫ s : ℝ, weight s
 theorem mass_pos : 0 < mass := by
   have hmid : 0 < weight ((1 : ℝ) / 2) :=
     weight_pos ⟨half_pos zero_lt_one, half_lt_self zero_lt_one⟩
-  exact integral_pos_of_integrable_nonneg_nonzero contDiff_weight.continuous
+  exact integral_pos_of_integrable_nonneg_ne_zero contDiff_weight.continuous
     integrable_weight weight_nonneg hmid.ne'
 
 /-- The unit-mass pulse obtained by dividing the glue product by its Lebesgue mass. -/

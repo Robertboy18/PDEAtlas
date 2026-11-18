@@ -42,7 +42,7 @@ private theorem ae_norm_coordinate_le (U : W^{1,∞}(ℝ^n; F)) (a : DerivIndex 
   have hbound := ae_le_eLpNormEssSup (f := U.val a) (μ := domainMeasure n (⊤ : Opens ℝ^n))
   have h : ∀ᵐ x ∂domainMeasure n (⊤ : Opens ℝ^n), ‖U.val a x‖ ≤ ‖U.val a‖ := by
     filter_upwards [hbound] with x hx
-    simpa only [toReal_enorm, Lp.norm_def,
+    simpa only [toReal_eNorm, Lp.norm_def,
       eLpNorm_exponent_top (Lp.aestronglyMeasurable (U.val a))] using
       ENNReal.toReal_mono hfinite hx
   simpa only [domainMeasure, Opens.coe_top, Measure.restrict_univ] using h

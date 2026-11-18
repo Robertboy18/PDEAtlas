@@ -81,7 +81,7 @@ def gradientCLM (a : MultiIndex n k) (ha : a.order < k) :
 theorem gradientCLM_apply (a : MultiIndex n k) (ha : a.order < k)
     (f : JetData n k Ω γ) (x : closure Ω) :
     gradientCLM a ha f x = ∑ i : Fin n, f.1 (a.succ ha i) x • EuclideanSpace.proj i := by
-  simp [gradientCLM, BoundedContinuousFunction.coe_sum]
+  simp [gradientCLM]
 
 /-- Compatibility means that the fields are derivatives of each other.
 The top-order Hölder representatives must equal their continuous derivative fields. -/
@@ -97,7 +97,7 @@ theorem compatible_zero : Compatible (0 : JetData n k Ω γ) := by
   intro a ha x hx
   change HasFDerivAt (Function.extend Subtype.val (0 : closure Ω →ᵇ ℝ) 0) _ x
   rw [BoundedContinuousFunction.extend_zero_zero]
-  simpa only [map_zero, BoundedContinuousFunction.coe_zero, Pi.zero_apply] using
+  simpa only [map_zero, FunLike.coe_zero, Pi.zero_apply] using
     (hasFDerivAt_zero (𝕜 := ℝ) (F := ℝ) x)
 
 /-- Compatible derivative fields are closed under addition. -/

@@ -36,7 +36,7 @@ def supportedSubmodule (n : ℕ) (s : ℝ) (A S : Set (ℝ^n))
   zero_mem' := by
     filter_upwards [Lp.coeFn_zero F p (volume.restrict A)] with x hx
     intro _
-    simpa only [map_zero, Pi.zero_apply] using hx
+    simpa only [ContinuousLinearMap.map_zero, Pi.zero_apply] using hx
   add_mem' {u v} hu hv := by
     filter_upwards [hu, hv, Lp.coeFn_add (toLp n s A u) (toLp n s A v)]
       with x hu hv hadd

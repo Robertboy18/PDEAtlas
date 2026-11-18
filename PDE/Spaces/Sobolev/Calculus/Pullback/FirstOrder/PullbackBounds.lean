@@ -131,9 +131,9 @@ private theorem eLpNorm_comp_le_of_image_subset_compact (hp : p ≠ ∞)
     (E.symm.injOn.mono htarget) fun x ↦ ‖f (E x)‖ₑ ^ p.toReal
   rw [show (fun y ↦ E.symm y) '' (E '' s) = s from
     E.toPartialEquiv.symm_image_image_of_subset_source hsub] at hcv
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp
       (aestronglyMeasurable_comp_partialHomeomorph hEsymm hs hsub himage hf),
-    eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hf, ← ENNReal.mul_rpow_of_nonneg _ _ hz]
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hf, ← ENNReal.mul_rpow_of_nonneg _ _ hz]
   gcongr
   calc ∫⁻ x in s, ‖f (E x)‖ₑ ^ p.toReal
       = ∫⁻ y in E '' s, ENNReal.ofReal (J y) * ‖f y‖ₑ ^ p.toReal :=

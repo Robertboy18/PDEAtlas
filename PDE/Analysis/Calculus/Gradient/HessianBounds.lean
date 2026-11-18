@@ -46,7 +46,7 @@ theorem lipschitzWith_gradient_of_hessian_bound (hL : ContDiff ℝ 2 L)
   have hd : Differentiable ℝ (fderiv ℝ L) :=
     (hL.fderiv_right (m := 1) (by norm_num)).differentiable_one
   have hLip : LipschitzWith C (fderiv ℝ L) :=
-    lipschitzWith_of_nnnorm_fderiv_le hd hbound
+    lipschitzWith_of_nnNorm_fderiv_le hd hbound
   apply LipschitzWith.of_dist_le_mul
   intro x y
   rw [dist_eq_norm, dist_eq_norm]

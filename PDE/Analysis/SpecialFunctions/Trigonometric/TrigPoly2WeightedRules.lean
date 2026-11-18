@@ -6,6 +6,7 @@ Authors: LeanPDE Team
 
 module
 
+public import PDE.Analysis.SpecialFunctions.Trigonometric.TrigPoly2CosineRule
 public import PDE.Analysis.SpecialFunctions.Trigonometric.TrigPoly2QuotientParity
 
 /-!
@@ -20,8 +21,8 @@ A product that is odd about `β = π/2` is `cos β` times a product that is even
 `π/2`. Its integral over the quadrant follows from the sine rule after the substitution
 `β = π/2 - t`, which turns `cos β` into `sin t` and keeps the evenness, so the weights are the
 sine weights at the reversed nodes `π/2 - jπ/(2N) = (N - j)π/(2N)` of the same grid
-(`integral_mul_cos_eq_rule`, `integral_integral_mul_cos_sum_mul_mul_sin_eq_rule`). This rule
-needs `(Mβ + Nβ) / 2 ≤ N`.
+(`IsEvenCosineSeries.integral_mul_cos_eq_rule` of `TrigPoly2CosineRule` in one variable,
+`integral_integral_mul_cos_sum_mul_mul_sin_eq_rule` here). This rule needs `(Mβ + Nβ) / 2 ≤ N`.
 -/
 
 @[expose] public noncomputable section
@@ -30,30 +31,6 @@ namespace PDE.Analysis
 
 open CAS.Analysis
 open Finset
-
-/-- The cosine-weighted quarter rule: for an even cosine series `f` of degree `D ≤ N`,
-`∫₀^{π/2} cos β f(β) dβ = ∑_n w_n f(π/2 - nπ/(2N))` with the sine weights. -/
-theorem _root_.CAS.Analysis.IsEvenCosineSeries.integral_mul_cos_eq_rule {D : ℕ} {f : ℝ → ℝ}
-    (hf : IsEvenCosineSeries D f) {N : ℕ} (hN : 0 < N) (hDN : D ≤ N) :
-    ∫ β in (0 : ℝ)..(Real.pi / 2), f β * Real.cos β =
-      ∑ n : Fin (N + 1), quarterSinWeight N n * f (Real.pi / 2 - n * Real.pi / (2 * N)) := by
-  have hrefl : IsEvenCosineSeries D (fun t ↦ f (Real.pi / 2 - t)) := by
-    obtain ⟨a, ha⟩ := hf
-    refine ⟨fun k ↦ (-1) ^ k * a k, fun x ↦ ?_⟩
-    dsimp only
-    rw [ha (Real.pi / 2 - x)]
-    refine sum_congr rfl fun k _ ↦ ?_
-    have h : 2 * (k : ℝ) * (Real.pi / 2 - x) = (k : ℝ) * Real.pi - 2 * k * x := by ring
-    rw [h, Real.cos_sub, Real.cos_nat_mul_pi, Real.sin_nat_mul_pi]
-    ring
-  have hsub := intervalIntegral.integral_comp_sub_left (fun β ↦ f β * Real.cos β)
-    (a := 0) (b := Real.pi / 2) (Real.pi / 2)
-  simp only [sub_zero, sub_self] at hsub
-  rw [← hsub]
-  have hcos : ∀ t, f (Real.pi / 2 - t) * Real.cos (Real.pi / 2 - t) =
-      f (Real.pi / 2 - t) * Real.sin t := fun t ↦ by rw [Real.cos_pi_div_two_sub]
-  simp only [hcos]
-  exact hrefl.integral_mul_sin_eq_rule hN hDN
 
 /-- The quadrant integral against `sin θ` is additive in continuous integrands. -/
 theorem integral_integral_add_mul_sin {F G : ℝ → ℝ → ℝ} (hF : Continuous (Function.uncurry F))

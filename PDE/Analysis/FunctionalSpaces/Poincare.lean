@@ -155,15 +155,15 @@ theorem eLpNorm_le_eLpNorm_fderiv_real
   have hpoint (x : ℝ) : ‖u x‖ₑ ≤ eLpNorm (deriv u) 1 volume := by
     calc
       ‖u x‖ₑ ≤ ∫⁻ y in Iic x, ‖deriv u y‖ₑ :=
-        HasCompactSupport.enorm_le_lintegral_Ici_deriv hu hcompact x
+        HasCompactSupport.eNorm_le_lintegral_Ici_deriv hu hcompact x
       _ ≤ ∫⁻ y, ‖deriv u y‖ₑ :=
         lintegral_mono' Measure.restrict_le_self le_rfl
-      _ = eLpNorm (deriv u) 1 volume := (eLpNorm_one_eq_lintegral_enorm hdmeas).symm
+      _ = eLpNorm (deriv u) 1 volume := (eLpNorm_one_eq_lintegral_eNorm hdmeas).symm
   have huLp :
       eLpNorm u p μs ≤
         eLpNorm (deriv u) 1 volume * volume (closure s) ^ (1 / (p : ℝ)) := by
     simpa [μs, one_div, smul_eq_mul] using
-      (eLpNorm_le_of_ae_enorm_bound (p := (p : ℝ≥0∞)) (μ := μs)
+      (eLpNorm_le_of_ae_eNorm_bound (p := (p : ℝ≥0∞)) (μ := μs)
         humeas.restrict (Filter.Eventually.of_forall hpoint))
   have hdLp :
       eLpNorm (deriv u) 1 μs ≤

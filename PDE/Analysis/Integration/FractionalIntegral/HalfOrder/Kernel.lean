@@ -68,7 +68,6 @@ theorem fractionalIntegralHalf_eq_lintegral_ball {f : ℝ → ℝ≥0∞} (hf : 
     apply measure_congr
     filter_upwards [hnull] with y hy
     have hdist : 0 < dist y x := dist_pos.mpr hy
-    apply propext
     change (t < dist y x ^ (-1 / 2 : ℝ)) ↔ dist y x < t ^ (-2 : ℝ)
     convert Real.lt_rpow_inv_iff_of_neg ht hdist (by norm_num : (-2 : ℝ) < 0) using 2
     norm_num

@@ -749,7 +749,7 @@ theorem captureMatrix_dotProduct_eq (K : ℝ) (e : ι → ℝ) (S : _root_.Matri
     exact sum_congr rfl fun k _ ↦ sum_congr rfl fun l _ ↦ by ring
   rw [add_mulVec, sub_mulVec, dotProduct_add, dotProduct_sub, smul_mulVec, dotProduct_smul,
     lowRank_dotProduct_eq, smul_eq_mul, h1, h2]
-  simp only [mul_apply]
+  simp only [Matrix.mul_apply]
 
 omit [DecidableEq ι] in
 /-- The form of `Cᵀ A C - θ diag(μ)` as sums. -/
@@ -825,7 +825,7 @@ theorem gramMatrix_nonneg_of_center {A S M : _root_.Matrix ι ι ℝ} {C : _root
 theorem residualMatrix_apply (S : _root_.Matrix ι ι ℝ) (e : ι → ℝ) (C : _root_.Matrix ι κ ℝ)
     (μ : κ → ℝ) (k : ι) (j : κ) :
     (S * C - diagonal e * C * diagonal μ) k j = ∑ l, S k l * C l j - e k * C k j * μ j := by
-  rw [Matrix.sub_apply, mul_diagonal, diagonal_mul, mul_apply]
+  rw [Matrix.sub_apply, mul_diagonal, diagonal_mul, Matrix.mul_apply]
 
 /-- **Residual certificate, matrix form.** The hypotheses of `residual_form_le_of_center` for
 `σ S σ`, `σ² e` and `σ⁻¹ C` give the Loewner bound for `R = S C - diag(e) C diag(μ)`. -/

@@ -86,13 +86,13 @@ private theorem lintegral_enorm_spacetime_exteriorNewtonKernel_mul
       (∫⁻ y : ℝ^3, ‖exteriorNewtonKernel |t - s| (x - y)‖ₑ * ‖F (s, y)‖ₑ) *
         ‖G (t, x)‖ₑ := by
   have hm := measurable_spacetime_exteriorNewtonKernel_mul hF hG
-  rw [lintegral_prod_four hm.enorm]
+  rw [lintegral_prod_four hm.eNorm]
   refine lintegral_congr fun t ↦ ?_
   refine lintegral_congr fun s ↦ ?_
   refine lintegral_congr fun x ↦ ?_
-  simp only [enorm_mul]
+  simp only [eNorm_mul]
   exact lintegral_mul_const _ (((measurable_exteriorNewtonKernel |t - s|).comp
-      (measurable_const.sub measurable_id)).enorm.mul (hF.comp measurable_prodMk_left).enorm)
+      (measurable_const.sub measurable_id)).eNorm.mul (hF.comp measurable_prodMk_left).eNorm)
 
 /-- Finite mixed-norm data make the full spacetime kernel pairing absolutely integrable. -/
 theorem integrable_spacetime_exteriorNewtonKernel_mul
@@ -103,14 +103,14 @@ theorem integrable_spacetime_exteriorNewtonKernel_mul
       F (z.2.1, z.2.2.2) * G (z.1, z.2.2.1)) (volume.prod (volume.prod (volume.prod volume))) := by
   have hm := measurable_spacetime_exteriorNewtonKernel_mul hF hG
   refine ⟨hm.aestronglyMeasurable, ?_⟩
-  rw [hasFiniteIntegral_iff_enorm, lintegral_enorm_spacetime_exteriorNewtonKernel_mul hF hG]
-  have hbound := lintegral_spacetime_exteriorNewtonKernel_mul_le hF.enorm hG.enorm
+  rw [hasFiniteIntegral_iff_eNorm, lintegral_enorm_spacetime_exteriorNewtonKernel_mul hF hG]
+  have hbound := lintegral_spacetime_exteriorNewtonKernel_mul_le hF.eNorm hG.eNorm
   have hFnorm (s : ℝ) : eLpNorm (fun y ↦ ‖F (s, y)‖ₑ) (12 / 11) volume =
       eLpNorm (fun y ↦ F (s, y)) (12 / 11) volume :=
-    eLpNorm_enorm _ (hF.comp measurable_prodMk_left).aestronglyMeasurable
+    eLpNorm_eNorm _ (hF.comp measurable_prodMk_left).aestronglyMeasurable
   have hGnorm (t : ℝ) : eLpNorm (fun x ↦ ‖G (t, x)‖ₑ) (12 / 11) volume =
       eLpNorm (fun x ↦ G (t, x)) (12 / 11) volume :=
-    eLpNorm_enorm _ (hG.comp measurable_prodMk_left).aestronglyMeasurable
+    eLpNorm_eNorm _ (hG.comp measurable_prodMk_left).aestronglyMeasurable
   simp_rw [hFnorm, hGnorm] at hbound
   apply hbound.trans_lt
   apply ENNReal.mul_lt_top _ hGfin

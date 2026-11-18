@@ -187,12 +187,12 @@ theorem measurable_horizontalShearMap :
 theorem measurable_shearInnerRowCost : Measurable shearInnerRowCost := by
   have hF : Measurable fun x : ℝ × ℝ ↦ ‖shearDifference x.1 x.2‖ₑ *
       ENNReal.ofReal (|x.1 - horizontalShearMap x.1 x.2| ^ (1 / 2 : ℝ)) :=
-    measurable_shearDifference.enorm.mul
+    measurable_shearDifference.eNorm.mul
       ((continuous_abs.measurable.comp (measurable_fst.sub measurable_horizontalShearMap)).pow_const
         _).ennreal_ofReal
   have hG : Measurable fun x : ℝ × ℝ ↦ ‖shearDifference x.1 x.2‖ₑ *
       ENNReal.ofReal ((2 * x.1) ^ (1 / 2 : ℝ)) :=
-    measurable_shearDifference.enorm.mul
+    measurable_shearDifference.eNorm.mul
       ((measurable_fst.const_mul 2).pow_const _).ennreal_ofReal
   have hl : Measurable lowerShearThreshold := by
     have : Measurable fun q : ℝ ↦ q ^ 2 + 1 - 2 * q * Real.sqrt (q ^ 2 + 1) := by fun_prop
@@ -265,17 +265,17 @@ theorem ofReal_abs_integral_rows_le {m : ℝ} (hm : 1 ≤ m) {w : ℝ → ℝ �
   set r : ℝ → ℝ := fun q ↦ ∫ p in Icc (-m) m, shearDifference p q * w p q with hr
   set g : ℝ → ℝ≥0∞ := fun q ↦ C * (shearInnerRowCost q + shearMidRowCost m q) with hg
   have hrow : ∀ q, 0 < q → ‖S.indicator r q‖ₑ ≤ g q := fun q hq ↦ by
-    refine (enorm_indicator_le_enorm_self _ _).trans ?_
-    rw [Real.enorm_eq_ofReal_abs]
+    refine (eNorm_indicator_le_eNorm_self _ _).trans ?_
+    rw [Real.eNorm_eq_ofReal_abs]
     exact abs_integral_shearDifference_mul_le_row hm hq (hw q)
   have hrow' : ∀ q, 0 < q → ‖S.indicator r (-q)‖ₑ ≤ g q := fun q hq ↦ by
-    refine (enorm_indicator_le_enorm_self _ _).trans ?_
-    rw [Real.enorm_eq_ofReal_abs]
+    refine (eNorm_indicator_le_eNorm_self _ _).trans ?_
+    rw [Real.eNorm_eq_ofReal_abs]
     have := abs_integral_shearDifference_mul_le_row hm hq (hw (-q))
     simpa only [hr, shearDifference_neg_right] using this
   have hmeas : Measurable fun q ↦ shearInnerRowCost q := measurable_shearInnerRowCost
-  rw [← Real.enorm_eq_ofReal_abs]
-  refine (enorm_integral_le_lintegral_enorm _).trans ?_
+  rw [← Real.eNorm_eq_ofReal_abs]
+  refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
   rw [lintegral_eq_setLIntegral_Ioi_add_neg]
   calc (∫⁻ q in Ioi 0, ‖S.indicator r q‖ₑ) + ∫⁻ q in Ioi 0, ‖S.indicator r (-q)‖ₑ
       ≤ (∫⁻ q in Ioi 0, g q) + ∫⁻ q in Ioi 0, g q :=
@@ -299,15 +299,15 @@ theorem ofReal_abs_integral_columns_le {m : ℝ} (hm : 1 ≤ m) {w : ℝ → ℝ
     by_cases hpS : p ∈ S
     · have h1 : m < p := by simpa [abs_of_pos hp] using hS p hpS
       rw [indicator_of_mem hpS, hg, indicator_of_mem (show p ∈ Ioi m from h1),
-        Real.enorm_eq_ofReal_abs]
+        Real.eNorm_eq_ofReal_abs]
       exact abs_integral_shearDifference_mul_le_column (hm.trans_lt h1) (hw p)
-    · rw [indicator_of_notMem hpS, enorm_zero]
+    · rw [indicator_of_notMem hpS, eNorm_zero]
       exact zero_le
   have hcol' : ∀ p, 0 < p → ‖S.indicator k (-p)‖ₑ ≤ g p := fun p hp ↦ by
     by_cases hpS : -p ∈ S
     · have h1 : m < p := by simpa [abs_of_pos hp] using hS (-p) hpS
       rw [indicator_of_mem hpS, hg, indicator_of_mem (show p ∈ Ioi m from h1),
-        Real.enorm_eq_ofReal_abs]
+        Real.eNorm_eq_ofReal_abs]
       have := abs_integral_shearDifference_mul_le_column (hm.trans_lt h1) (hw (-p))
       have e : k (-p) = -∫ q, shearDifference p q * w (-p) q := by
         rw [hk, ← integral_neg]
@@ -315,10 +315,10 @@ theorem ofReal_abs_integral_columns_le {m : ℝ} (hm : 1 ≤ m) {w : ℝ → ℝ
         simp only [shearDifference_neg_left]
         ring
       rwa [e, abs_neg]
-    · rw [indicator_of_notMem hpS, enorm_zero]
+    · rw [indicator_of_notMem hpS, eNorm_zero]
       exact zero_le
-  rw [← Real.enorm_eq_ofReal_abs]
-  refine (enorm_integral_le_lintegral_enorm _).trans ?_
+  rw [← Real.eNorm_eq_ofReal_abs]
+  refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
   rw [lintegral_eq_setLIntegral_Ioi_add_neg]
   have hgI : ∫⁻ p in Ioi 0, g p = 2 * C * ∫⁻ p in Ioi m, shearColumnCost p := by
     rw [hg, setLIntegral_indicator measurableSet_Ioi,

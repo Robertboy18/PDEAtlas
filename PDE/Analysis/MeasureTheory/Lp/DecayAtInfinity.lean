@@ -83,7 +83,7 @@ theorem MemLp.tendsto_cocompact_zero_of_norm_fderiv_le (hf : MemLp f p μ) (hp�
     (hp : p ≠ ∞) (hd : Differentiable ℝ f) {C : ℝ} (hC : ∀ x, ‖fderiv ℝ f x‖ ≤ C) :
     Tendsto f (cocompact E) (𝓝 0) :=
   hf.tendsto_cocompact_zero_of_uniformContinuous hp₀ hp
-    (lipschitzWith_of_nnnorm_fderiv_le (C := ⟨max C 0, le_max_right C 0⟩) hd fun x ↦
+    (lipschitzWith_of_nnNorm_fderiv_le (C := ⟨max C 0, le_max_right C 0⟩) hd fun x ↦
       NNReal.coe_le_coe.mp ((hC x).trans (le_max_left C 0))).uniformContinuous
 
 end MeasureTheory

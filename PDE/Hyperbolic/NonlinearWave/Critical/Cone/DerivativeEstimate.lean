@@ -119,7 +119,7 @@ theorem exists_cone_tail_partialDeriv_bound {u : ℝ^4 → ℝ} {T b K : ℝ}
   have hf : Measurable f := ((measurable_movingConeField hu.continuousOn c).eLpNorm_prod_right
     (by norm_num) (by norm_num)).ennreal_toReal
   have hmem : MemLp f 4 (volume.restrict (Ico b T)) := (mixed_memLp_movingConeField_iff
-      (fun _ hr ↦ ⟨hb.trans_le hr.1, hr.2⟩) measurableSet_Ico 12 4).mpr hcritical
+      (fun _ hr ↦ ⟨hb.trans_le (And.left hr), And.right hr⟩) measurableSet_Ico 12 4).mpr hcritical
   have hlim := MeasureTheory.tendsto_lpNorm_restrict_tail_four hbT hf hmem
   have hlim' : Tendsto (fun s ↦ K * lpNorm f 4 (volume.restrict (Icc s T)) ^ 4)
       (𝓝[<] T) (𝓝 0) := by

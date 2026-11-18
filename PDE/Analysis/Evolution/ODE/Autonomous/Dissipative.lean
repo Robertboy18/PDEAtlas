@@ -87,7 +87,7 @@ theorem lipschitzOnWith_initial_speed_of_dissipative
     {F : H → H} (hF : ∀ x y, inner ℝ (F x - F y) (x - y) ≤ 0)
     {u : ℝ → H} (hu : IsIntegralCurveOn u (fun _ ↦ F) (Ici 0)) :
     LipschitzOnWith ‖F (u 0)‖₊ u (Ici 0) :=
-  (convex_Ici 0).lipschitzOnWith_of_nnnorm_hasDerivWithin_le hu
+  (convex_Ici 0).lipschitzOnWith_of_nnNorm_hasDerivWithin_le hu
     (fun _ ht ↦ norm_field_le_initial_of_dissipative hF hu ht)
 
 end PDE.Analysis.Evolution

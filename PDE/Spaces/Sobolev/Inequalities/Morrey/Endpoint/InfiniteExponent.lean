@@ -55,7 +55,7 @@ theorem enorm_fderiv_le_eLpNorm_top
     (volume : Measure (ℝ^n)).dense_of_ae hgoodAE
   have hgoodClosed : IsClosed good := by
     exact isClosed_le
-      ((hu.continuous_fderiv one_ne_zero).enorm)
+      ((hu.continuous_fderiv one_ne_zero).eNorm)
       continuous_const
   have hzClosure : z ∈ closure good := by
     rw [hgoodDense.closure_eq]

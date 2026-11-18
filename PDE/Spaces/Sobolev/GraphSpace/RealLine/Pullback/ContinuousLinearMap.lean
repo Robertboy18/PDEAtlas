@@ -50,7 +50,7 @@ theorem exists_h2PullbackCLM
     wkpBaseCoordinateCLM_injective isOpen_univ
       (oneDimensionalPushforwardL2.injective h)
   have heq : QuasiMeasurePreserving e volume volume :=
-    ⟨e.continuous.measurable,
+    ⟨e.continuous.aemeasurable,
       Measure.absolutelyContinuous_of_le_smul (map_volume_le_of_lipschitz_inverse e he)⟩
   have hrep (W : W^{2,2}(ℝ^1)) :
       (A W : ℝ → ℝ) =ᵐ[volume]

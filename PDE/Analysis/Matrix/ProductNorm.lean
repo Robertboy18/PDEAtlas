@@ -132,7 +132,7 @@ theorem productNorm_le [DecidableEq ι] {G H : _root_.Matrix ι ι ℝ} {g : ℝ
   set q : ι → EuclideanSpace ℝ ι := fun j ↦ WithLp.toLp 2 fun i ↦ S i j
   have hgram : gram ℝ q = G := by
     ext i j
-    rw [gram_apply, EuclideanSpace.inner_toLp_toLp, ← hSS, mul_apply]
+    rw [gram_apply, EuclideanSpace.inner_toLp_toLp, ← hSS, Matrix.mul_apply]
     simp only [dotProduct, star_trivial]
     refine sum_congr rfl fun k _ ↦ ?_
     have : S k i = S i k := by simpa using congrFun (congrFun hSt i) k

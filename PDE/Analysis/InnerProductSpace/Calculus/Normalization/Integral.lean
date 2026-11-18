@@ -83,7 +83,7 @@ theorem hasDerivAt_integral_normalized_energy
       hbound hLip (u x) (v x) (a x) (b x)
     apply h.weaken
     rw [← NNReal.coe_le_coe, Real.coe_nnabs, abs_of_nonneg (hBnonneg x)]
-    simp only [NNReal.coe_mul, NNReal.coe_add, NNReal.coe_pow, coe_nnnorm]
+    simp only [NNReal.coe_mul, NNReal.coe_add, NNReal.coe_pow, coe_nnNorm]
     dsimp [B]
     gcongr
   have hderiv : ∀ᵐ x ∂μ, HasDerivAt (fun t ↦ F t x)

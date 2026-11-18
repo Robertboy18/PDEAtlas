@@ -42,7 +42,7 @@ theorem eLpNorm_prod_eq_of_ae_eq_L2_sections {α β E : Type*} [MeasurableSpace 
       hsection] with t ht hut hst
     filter_upwards [ht, hst] with x htx hstx
     rw [htx, hstx, hut]
-  simpa only [ofReal_norm, Lp.enorm_toLp] using congrArg ENNReal.ofReal hnorm
+  simpa only [ofReal_norm, Lp.eNorm_toLp] using congrArg ENNReal.ofReal hnorm
 
 /-- Uniform convergence on a measurable full-measure set implies Lᵖ convergence
 for finite measures. Measurability is needed only for the differences. -/

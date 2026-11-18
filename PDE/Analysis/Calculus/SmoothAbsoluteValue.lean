@@ -125,10 +125,10 @@ theorem abs_smoothAbsSlope_le_one {ε : ℝ} (hε : 0 < ε) (x : ℝ) :
 /-- The smooth approximation is one-Lipschitz at positive scale. -/
 theorem lipschitzWith_smoothAbs {ε : ℝ} (hε : 0 < ε) :
     LipschitzWith 1 (smoothAbs ε) := by
-  apply lipschitzWith_of_nnnorm_deriv_le
+  apply lipschitzWith_of_nnNorm_deriv_le
     (differentiable_smoothAbs hε)
   intro x
-  rw [← NNReal.coe_le_coe, coe_nnnorm, NNReal.coe_one,
+  rw [← NNReal.coe_le_coe, coe_nnNorm, NNReal.coe_one,
     Real.norm_eq_abs, deriv_smoothAbs hε]
   exact abs_smoothAbsSlope_le_one hε x
 

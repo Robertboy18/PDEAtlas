@@ -277,7 +277,7 @@ theorem memLp_two_compactifiedFrameField (hs : 0 < s)
   refine (memLp_two_iff_integrable_sq_norm hm).mpr ⟨hm.norm.pow 2, ?_⟩
   have e : ∀ x, ‖‖compactifiedFrameField s T x‖ ^ 2‖ₑ =
       ENNReal.ofReal (‖compactifiedFrameField s T x‖ ^ 2) := fun x ↦
-    Real.enorm_of_nonneg (sq_nonneg _)
+    Real.eNorm_of_nonneg (sq_nonneg _)
   rw [HasFiniteIntegral, lintegral_congr e, lintegral_sq_compactifiedFrameField hs hT haxis hsym]
   exact ENNReal.ofReal_lt_top
 

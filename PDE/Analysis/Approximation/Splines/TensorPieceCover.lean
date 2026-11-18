@@ -102,14 +102,14 @@ theorem tensorPieceCoverCheck_mem_of_mem_closure {nx ny : ℕ}
       positive negative height)) : (positive, negative, height) ∈ retained := by
   have hpos : coordinate (x 0) ∈ closure (knotPiece kx nx positive) := by
     apply (show Continuous (fun y : ℝ^2 ↦ coordinate (y 0)) by fun_prop).closure_preimage_subset
-    exact closure_mono (fun y hy ↦ hy.1) hmem
+    exact closure_mono (fun _ ↦ And.left) hmem
   have hneg : -coordinate (x 0) ∈ closure (knotPiece kx nx negative) := by
     apply (show Continuous (fun y : ℝ^2 ↦ -coordinate (y 0)) by fun_prop).closure_preimage_subset
-    exact closure_mono (fun y hy ↦ hy.2.1) hmem
+    exact closure_mono (fun y hy ↦ (And.right hy).1) hmem
   have hheight : coordinate (x 1 + translation) ∈ closure (knotPiece ky ny height) := by
     apply (show Continuous (fun y : ℝ^2 ↦ coordinate (y 1 + translation)) by
       fun_prop).closure_preimage_subset
-    exact closure_mono (fun y hy ↦ hy.2.2) hmem
+    exact closure_mono (fun y hy ↦ (And.right hy).2) hmem
   rw [Interval.containsReal_some_iff] at hradial haxial
   have hp := knotPiecePossible_of_mem_closure qx kx hxknots nx _ _ _
     hradial.1 hradial.2 hpos

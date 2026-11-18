@@ -94,9 +94,9 @@ private theorem withDensityRoot_ne_zero_ae
 private theorem enorm_withDensityRoot_smul_rpow
     (a : ℝ≥0∞) (ha : a < ∞) {p : ℝ} (hp : 0 < p) (v : E) :
     ‖(a.toReal ^ (1 / p)) • v‖ₑ ^ p = a * ‖v‖ₑ ^ p := by
-  rw [enorm_smul, ENNReal.mul_rpow_of_nonneg _ _ hp.le]
+  rw [eNorm_smul, ENNReal.mul_rpow_of_nonneg _ _ hp.le]
   congr 1
-  rw [Real.enorm_eq_ofReal (Real.rpow_nonneg ENNReal.toReal_nonneg _)]
+  rw [Real.eNorm_eq_ofReal (Real.rpow_nonneg ENNReal.toReal_nonneg _)]
   rw [← ENNReal.ofReal_rpow_of_nonneg ENNReal.toReal_nonneg (by positivity)]
   rw [← ENNReal.rpow_mul, one_div_mul_cancel hp.ne', ENNReal.rpow_one]
   exact ENNReal.ofReal_toReal ha.ne
@@ -134,9 +134,9 @@ theorem eLpNorm_withDensityRoot_smul
           Real.zero_rpow (one_div_pos.mpr hp).ne', zero_smul]
       · rw [hx hx_zero]
   by_cases hf : AEStronglyMeasurable f (μ.withDensity w)
-  · rw [eLpNorm_eq_lintegral_rpow_enorm_toReal
+  · rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal
         (ENNReal.ofReal_ne_zero_iff.mpr hp) ENNReal.ofReal_ne_top (hmeas.mpr hf),
-      eLpNorm_eq_lintegral_rpow_enorm_toReal
+      eLpNorm_eq_lintegral_rpow_eNorm_toReal
         (ENNReal.ofReal_ne_zero_iff.mpr hp) ENNReal.ofReal_ne_top hf,
       ENNReal.toReal_ofReal hp.le,
       lintegral_withDensity_eq_lintegral_mul_non_measurable μ hw hw_top]

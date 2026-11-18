@@ -77,7 +77,7 @@ theorem hasDerivWithinAt_lp_of_ae_uniform_derivative
         (((hasDerivAt_id r).sub_const t).smul_const (fdot t x)).hasDerivWithinAt
     have hestimate :=
       (hS.inter (convex_ball t δ)).norm_image_sub_le_of_norm_hasDerivWithin_le
-        (fun r hr ↦ ((hdx r hr.1).mono inter_subset_left).sub (hlinear r))
+        (fun r hr ↦ ((hdx r (And.left hr)).mono inter_subset_left).sub (hlinear r))
         (fun r hr ↦ hmx r hr.1 hr.2)
         (show t ∈ S ∩ Metric.ball t δ from ⟨ht, Metric.mem_ball_self hδ⟩)
         (show s ∈ S ∩ Metric.ball t δ from ⟨hs, hsδ⟩)

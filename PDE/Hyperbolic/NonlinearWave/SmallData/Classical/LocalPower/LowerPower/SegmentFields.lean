@@ -55,9 +55,9 @@ def segmentCoefficient (a : C(ℝ, ℝ)) (p : ℝ × ℝ) : Cone →ᵇ ℝ :=
 theorem segmentFreeField_apply (h : C(ℝ, ℝ)) (p : ℝ × ℝ) (q : Cone) :
     segmentFreeField h p q = (p.1 * coneTime q) *
       ∫ a : I, h (p.2 + p.1 * (lineSpace q + coneTime q * (2 * (a : ℝ) - 1))) := by
-  simp only [segmentFreeField, BoundedContinuousFunction.smul_apply,
-    BoundedContinuousFunction.mul_apply, partialIntegralCLM_apply, composeCompact_apply,
-    BoundedContinuousFunction.add_apply, constCLM_apply, const_apply, timeWeight,
+  simp only [segmentFreeField, smul_apply,
+    mul_apply, partialIntegralCLM_apply, composeCompact_apply,
+    add_apply, constCLM_apply, const_apply, timeWeight,
     segmentInitialDirection, mkOfCompact_apply, ContinuousMap.coe_mk, smul_eq_mul, mul_assoc]
   rfl
 
@@ -132,7 +132,7 @@ theorem restrictCone_segmentCoefficient (a : C(ℝ, ℝ)) (p : ℝ × ℝ) (q : 
     coneTime q • restrictCone q (segmentCoefficient a p) =
       segmentCoefficient a (p.1 * coneTime q, p.2 + p.1 * lineSpace q) := by
   ext r
-  simp only [BoundedContinuousFunction.smul_apply, restrictCone_apply,
+  simp only [smul_apply, restrictCone_apply,
     segmentCoefficient_apply, lineSpace_descend, smul_eq_mul]
   have he : p.2 + p.1 * (lineSpace q + coneTime q * lineSpace r) =
       p.2 + p.1 * lineSpace q + (p.1 * coneTime q) * lineSpace r := by cas

@@ -61,7 +61,7 @@ theorem HkCharacteristics.exists_h1_pullbacks
       hasDerivAt_hkCurve_hilbert_flow_space hT f hchar.velocity_derivative
         hchar.flow_initial hchar.flow_derivative x t t.property
     have helip : LipschitzWith ⟨M, hM⟩ e.symm :=
-      lipschitzWith_of_nnnorm_deriv_le (fun x ↦ (hXderiv x).differentiableAt) fun x ↦
+      lipschitzWith_of_nnNorm_deriv_le (fun x ↦ (hXderiv x).differentiableAt) fun x ↦
         show ‖deriv e.symm x‖ ≤ M from (hXderiv x).deriv ▸ hJbound x
     obtain ⟨U, hU, hUnorm⟩ := exists_h1_comp_of_bounded_positive_jacobian e.symm
       (hchar.inverse_lipschitz t t.property) hJ (fun x ↦ Real.exp_nonneg _)

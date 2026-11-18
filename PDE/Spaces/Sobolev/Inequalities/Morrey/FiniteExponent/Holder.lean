@@ -135,7 +135,7 @@ theorem holderWith_finiteMorrey
       0 ≤ morreyExponent n (ENNReal.ofReal p) :=
     (morreyExponent_ofReal_pos hn hp).le
   simpa [finiteMorreyHolderConstant, edist_dist, Real.dist_eq,
-    Real.enorm_eq_ofReal_abs, abs_sub_comm, dist_eq_norm,
+    Real.eNorm_eq_ofReal_abs, abs_sub_comm, dist_eq_norm,
     norm_sub_rev, ENNReal.coe_toNNReal hconstantFinite,
     Real.coe_toNNReal _ hgamma] using h
 

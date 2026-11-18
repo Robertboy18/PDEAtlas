@@ -108,7 +108,7 @@ theorem eLpNorm_re_waveSolution_six_le (g h : 𝓢(ℝ^3, ℂ)) (t : ℝ) :
           (Filter.Eventually.of_forall fun x ↦ by
             simpa only [Real.norm_eq_abs] using Complex.abs_re_le_norm (v x))
         _ = eLpNorm m 2 volume := by
-          rw [← Lp.enorm_def, ← Lp.enorm_toLp (f := m) (hf := hm)]
+          rw [← Lp.eNorm_def, ← Lp.eNorm_toLp (f := m) (hf := hm)]
           have he : ‖v‖ = ‖hm.toLp m‖ := by
             simpa only [v, fourier_fourierInv_eq] using (Lp.norm_fourier_eq v).symm
           simpa only [ofReal_norm] using congrArg ENNReal.ofReal he
@@ -119,7 +119,7 @@ theorem eLpNorm_re_waveSolution_six_le (g h : 𝓢(ℝ^3, ℂ)) (t : ℝ) :
               eLpNorm_add_le (by norm_num)
             _ = _ := by
               rw [eLpNorm_norm U (Lp.aestronglyMeasurable U),
-                eLpNorm_norm V (Lp.aestronglyMeasurable V), ← Lp.enorm_def, ← Lp.enorm_def]
+                eLpNorm_norm V (Lp.aestronglyMeasurable V), ← Lp.eNorm_def, ← Lp.eNorm_def]
   choose v hv hb using hderiv
   apply le_trans (le_of_eq (eLpNorm_congr_ae (p := 6) (hphysical.fun_comp Complex.re)))
   have hs := SobolevSpace.Inequalities.eLpNorm_le_sum_eLpNorm_weakDeriv

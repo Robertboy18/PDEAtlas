@@ -31,7 +31,7 @@ theorem Measurable.eLpNorm_prod_right {α β E : Type*}
     Measurable (fun x ↦ eLpNorm (fun y ↦ f (x, y)) p ν) := by
   have heq (x : α) : eLpNorm (fun y ↦ f (x, y)) p ν =
       (∫⁻ y, ‖f (x, y)‖ₑ ^ p.toReal ∂ν) ^ (1 / p.toReal) :=
-    eLpNorm_eq_lintegral_rpow_enorm_toReal hp₀ hp_top
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal hp₀ hp_top
       (hf.comp measurable_prodMk_left).aestronglyMeasurable
   simp_rw [heq]
-  exact (hf.enorm.pow_const _).lintegral_prod_right.pow_const _
+  exact (hf.eNorm.pow_const _).lintegral_prod_right.pow_const _

@@ -30,6 +30,7 @@ essential bounds pull back along a null-set-preserving map, with constant `1`.
 
 * `quasiMeasurePreserving_partialHomeomorph`: `E` pulls null sets of `E.target` back to null
   sets of `E.source`; the proof uses the Jacobian inequality for `C¹` images of null sets.
+  `measurable_partialHomeomorph` is the measurability of `E`.
 * `hasWeakDerivativeOn_comp_partialHomeomorph_W1`,
   `hasWeakDerivativeOn_comp_partialHomeomorph_W1_of_memLp`: the first-order chain rule for
   every exponent `1 ≤ p ≤ ∞` on a finite-volume target, first for measurable representatives
@@ -163,15 +164,21 @@ private theorem preimage_inter_source_eq_symm_image_inter_target
     refine ⟨?_, hxsrc⟩
     simpa [E.right_inv hyT] using hy
 
+/-- The map of a `C¹` partial homeomorphism is measurable. -/
+theorem measurable_partialHomeomorph {E : OpenPartialHomeomorph (ℝ^n) (ℝ^n)}
+    (hE : ContDiff ℝ 1 (fun x ↦ E x)) : Measurable (fun x ↦ E x) :=
+  hE.continuous.measurable
+
 /-- A `C¹` partial homeomorphism whose inverse is also `C¹` preserves measure-zero sets in the
 direction needed for Sobolev pullback.  This is the common measure-theoretic foundation for all
-boundary-chart chain rules. -/
+boundary-chart chain rules. The map is measurable (`measurable_partialHomeomorph`); the structure
+records almost-everywhere measurability only. -/
 theorem quasiMeasurePreserving_partialHomeomorph
     {E : OpenPartialHomeomorph (ℝ^n) (ℝ^n)}
     (hE : ContDiff ℝ 1 (fun x ↦ E x)) (hEsymm : ContDiff ℝ 1 (fun x ↦ E.symm x)) :
     MeasureTheory.QuasiMeasurePreserving (fun x ↦ E x)
       (domainMeasure n E.source) (domainMeasure n E.target) := by
-  refine ⟨hE.continuous.measurable, ?_⟩
+  refine ⟨(measurable_partialHomeomorph hE).aemeasurable, ?_⟩
   intro s hs
   -- Reduce to the measurable hull of `s` for the map measure.
   have hs_meas : MeasurableSet (toMeasurable (domainMeasure n E.target) s) :=
@@ -191,7 +198,7 @@ theorem quasiMeasurePreserving_partialHomeomorph
           (toMeasurable (domainMeasure n E.target) s)) := by
     simpa using
       (Measure.map_apply (μ := domainMeasure n E.source) (f := fun x ↦ E x)
-        (hf := hE.continuous.measurable) (hs := hs_meas))
+        (hf := measurable_partialHomeomorph hE) (hs := hs_meas))
   have hs0_vol :
       (volume : Measure (ℝ^n)) (toMeasurable (domainMeasure n E.target) s ∩ E.target) = 0 := by
     -- The domain measure is Lebesgue measure restricted to the chart target.
@@ -301,14 +308,14 @@ theorem memLp_comp_partialHomeomorph_of_compact_support
   · -- Essential bounds pull back along every quasi-measure-preserving map.
     have hfBound : ∀ᵐ y ∂ domainMeasure n E.target,
         ‖f y‖ₑ ≤ MeasureTheory.eLpNormEssSup f (domainMeasure n E.target) :=
-      MeasureTheory.enorm_ae_le_eLpNormEssSup f (domainMeasure n E.target)
+      MeasureTheory.eNorm_ae_le_eLpNormEssSup f (domainMeasure n E.target)
     have hcompBound : ∀ᵐ x ∂ domainMeasure n E.source,
         ‖f (E x)‖ₑ ≤ MeasureTheory.eLpNormEssSup f (domainMeasure n E.target) :=
       hqmp.ae hfBound
     have hfEssTop : MeasureTheory.eLpNormEssSup f (domainMeasure n E.target) < ∞ := by
       simpa only [hpTop, MeasureTheory.eLpNorm_exponent_top hfLp.aestronglyMeasurable]
         using hfLp.eLpNorm_lt_top
-    have hle := MeasureTheory.eLpNormEssSup_le_of_ae_enorm_bound hcompBound
+    have hle := MeasureTheory.eLpNormEssSup_le_of_ae_eNorm_bound hcompBound
     simpa only [MeasureTheory.memLp_iff, hpTop,
       MeasureTheory.eLpNorm_exponent_top hcompMeas] using hle.trans_lt hfEssTop
   · -- For finite `p`, use a measurable representative and the compact Jacobian estimate.
@@ -638,7 +645,7 @@ private theorem norm_localizedPullbackLp_top_le
     quasiMeasurePreserving_partialHomeomorph (n := n) (E := E) hE hEsymm
   have hboundTarget : ∀ᵐ y ∂ domainMeasure n E.target,
       ‖f y‖ₑ ≤ MeasureTheory.eLpNormEssSup f (domainMeasure n E.target) :=
-    MeasureTheory.enorm_ae_le_eLpNormEssSup f (domainMeasure n E.target)
+    MeasureTheory.eNorm_ae_le_eLpNormEssSup f (domainMeasure n E.target)
   have hboundSource : ∀ᵐ x ∂ domainMeasure n E.source,
       ‖f (E x)‖ₑ ≤ MeasureTheory.eLpNormEssSup f (domainMeasure n E.target) :=
     hqmp.ae hboundTarget
@@ -655,7 +662,7 @@ private theorem norm_localizedPullbackLp_top_le
   have hess :
       MeasureTheory.eLpNormEssSup (fun x ↦ f (E x)) (domainMeasure n L) ≤
         MeasureTheory.eLpNormEssSup f (domainMeasure n E.target) :=
-    MeasureTheory.eLpNormEssSup_le_of_ae_enorm_bound hboundL
+    MeasureTheory.eLpNormEssSup_le_of_ae_eNorm_bound hboundL
   have hnorm :
       MeasureTheory.eLpNorm (fun x ↦ f (E x)) ∞ (domainMeasure n L) ≤
         MeasureTheory.eLpNorm (fun y ↦ u y) ∞ (domainMeasure n E.target) := by

@@ -38,9 +38,9 @@ theorem classicalRepresentative_higherProduct
     (hk : (n : ℝ) < 2 * ((k : ℝ) - 1)) (u v : W^{k,2}(ℝ^n)) (x : ℝ^n) :
     classicalRepresentativeCLM hk (higherProduct hk u v) x =
       classicalRepresentativeCLM hk u x * classicalRepresentativeCLM hk v x := by
-  simp only [higherProduct, map_smul, map_sub, BoundedContinuousFunction.smul_apply,
-    BoundedContinuousFunction.sub_apply, smul_eq_mul, classicalRepresentative_higherComposition,
-    map_add, BoundedContinuousFunction.add_apply, id_eq]
+  simp only [higherProduct, map_smul, map_sub, smul_apply,
+    sub_apply, smul_eq_mul, classicalRepresentative_higherComposition,
+    map_add, add_apply, id_eq]
   ring
 
 /-- The product distributes over addition in its second variable. -/
@@ -48,7 +48,7 @@ theorem higherProduct_add_right (hk : (n : ℝ) < 2 * ((k : ℝ) - 1)) (u v w : 
     higherProduct hk u (v + w) = higherProduct hk u v + higherProduct hk u w := by
   apply classicalRepresentativeCLM_injective hk
   ext x
-  simp only [map_add, BoundedContinuousFunction.add_apply, classicalRepresentative_higherProduct]
+  simp only [map_add, add_apply, classicalRepresentative_higherProduct]
   ring
 
 /-- The product respects scalar multiplication in its second variable. -/
@@ -56,7 +56,7 @@ theorem higherProduct_smul_right (hk : (n : ℝ) < 2 * ((k : ℝ) - 1)) (u v : W
     higherProduct hk u (c • v) = c • higherProduct hk u v := by
   apply classicalRepresentativeCLM_injective hk
   ext x
-  simp only [map_smul, BoundedContinuousFunction.smul_apply, smul_eq_mul,
+  simp only [map_smul, smul_apply, smul_eq_mul,
     classicalRepresentative_higherProduct]
   ring
 
@@ -105,7 +105,7 @@ def higherProductLM (hk : (n : ℝ) < 2 * ((k : ℝ) - 1)) :
     apply classicalRepresentativeCLM_injective hk
     ext x
     simp only [add_apply, map_add,
-      BoundedContinuousFunction.add_apply, classicalRepresentative_higherMultiplierCLM]
+      add_apply, classicalRepresentative_higherMultiplierCLM]
     ring
   map_smul' := by
     intro c u
@@ -113,7 +113,7 @@ def higherProductLM (hk : (n : ℝ) < 2 * ((k : ℝ) - 1)) :
     apply classicalRepresentativeCLM_injective hk
     ext x
     simp only [smul_apply, map_smul, RingHom.id_apply,
-      BoundedContinuousFunction.smul_apply, smul_eq_mul,
+      smul_apply, smul_eq_mul,
       classicalRepresentative_higherMultiplierCLM]
     ring
 

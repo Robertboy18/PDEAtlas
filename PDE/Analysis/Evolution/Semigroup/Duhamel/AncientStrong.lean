@@ -40,7 +40,7 @@ theorem continuousOn_ancientIntegrand_of_joint
   apply hK.comp
     (continuous_id.continuousOn.prodMk
       (hf.comp (continuous_const.sub continuous_id).continuousOn
-        (fun r hr ↦ sub_le_self t hr.le)))
+        (fun r hr ↦ sub_le_self t (le_of_lt hr))))
   exact fun r hr ↦ ⟨hr, mem_univ _⟩
 
 /-- Dominated convergence requires joint strong continuity, without an

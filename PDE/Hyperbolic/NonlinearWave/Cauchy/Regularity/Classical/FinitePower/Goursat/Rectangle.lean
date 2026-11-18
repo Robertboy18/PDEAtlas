@@ -75,7 +75,7 @@ def rectangularOperator : (Rectangle →ᵇ ℝ) →L[ℝ] (Rectangle →ᵇ ℝ
 theorem rectangularOperator_apply (f : Rectangle →ᵇ ℝ) (q : Rectangle) :
     rectangularOperator f q = (q.1 : ℝ) * (q.2 : ℝ) * ∫ s : I, ∫ t : I, f (descend q (s, t)) := by
   simp only [rectangularOperator, ContinuousLinearMap.comp_apply,
-    ContinuousLinearMap.mul_apply', BoundedContinuousFunction.mul_apply,
+    ContinuousLinearMap.mul_apply', mul_apply,
     partialIntegralCLM_apply, areaWeight, mkOfCompact_apply, ContinuousMap.coe_mk,
     rectangularPullback, compContinuousCLM_apply, compContinuous_apply]
 

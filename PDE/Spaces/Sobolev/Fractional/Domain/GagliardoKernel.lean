@@ -132,6 +132,7 @@ theorem gagKernel_nonneg (ξ h : ℝ^n) :
 private theorem measurable_gagKernel (ξ : ℝ^n) :
     Measurable (gagKernel n s ξ) := by
   unfold gagKernel fourierCharFn
+  simp only [Real.fourierChar_apply]
   fun_prop
 
 /-- `J ξ ≥ 0`, as the integral of a nonnegative kernel. -/

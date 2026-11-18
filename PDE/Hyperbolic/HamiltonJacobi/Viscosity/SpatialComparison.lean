@@ -57,7 +57,7 @@ theorem continuous_hamiltonian_of_lipschitz {H : E → E → ℝ} {Cp Cx : NNRea
     apply LipschitzWith.of_dist_le_mul
     intro x y
     simpa only [Real.dist_eq, dist_eq_norm, Real.norm_eq_abs, NNReal.coe_mul, NNReal.coe_add,
-      NNReal.coe_one, coe_nnnorm, mul_assoc, mul_comm, mul_left_comm] using hx p x y
+      NNReal.coe_one, coe_nnNorm, mul_assoc, mul_comm, mul_left_comm] using hx p x y
   exact hpx.continuous
 
 /-- Separate the two localization errors from the spatial variation of the

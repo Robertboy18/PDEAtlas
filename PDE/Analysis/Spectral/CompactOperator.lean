@@ -86,7 +86,7 @@ theorem distinct_eigenvalues_tendsto_zero_of_pow_approx [CompleteSpace 𝕜] (T 
   have hHclosed (n : ℕ) : IsClosed (H n : Set V) := by
     let : FiniteDimensional 𝕜 (H n) :=
       FiniteDimensional.span_of_finite 𝕜 ((Finset.range n).finite_toSet.image w)
-    exact (H n).closed_of_finiteDimensional
+    exact (H n).isClosed_of_finiteDimensional
   have hwnext (n : ℕ) : w n ∈ H (n + 1) := Submodule.subset_span ⟨n, by simp, rfl⟩
   have hwnot (n : ℕ) : w n ∉ H n := hwlin.notMem_span_image (by simp)
   obtain ⟨c : 𝕜, hc⟩ := NormedField.exists_one_lt_norm 𝕜

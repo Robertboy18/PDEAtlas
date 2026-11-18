@@ -147,7 +147,7 @@ theorem hasGeneratorAt_heatL2Semigroup {f g : Lp ℂ 2 (volume : Measure (ℝ^n)
         Complex.norm_real, Real.norm_of_nonneg hq.1, Real.norm_of_nonneg (by positivity)]
       gcongr
       exact hq.2
-    · exact (lintegral_rpow_enorm_lt_top_of_eLpNorm_lt_top (by norm_num) (by norm_num)
+    · exact (lintegral_rpow_eNorm_lt_top_of_eLpNorm_lt_top (by norm_num) (by norm_num)
         (Lp.memLp (𝓕 g)).eLpNorm_lt_top).ne
     · exact Eventually.of_forall fun ξ ↦ by
         simpa using ((Complex.continuous_ofReal.tendsto 0).comp

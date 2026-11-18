@@ -483,13 +483,13 @@ theorem enorm_inner_fourier_selfsimilarResolvent_le (hn : 2 ≤ n) {μ : ℝ} (h
         2⁻¹ * ∫⁻ η, ENNReal.ofReal (‖(𝓕 (baseL2 f) : Lp ℂ 2 (volume : Measure (ℝ^n))) η‖ ^ 2) := by
   set fh := (𝓕 (baseL2 f) : Lp ℂ 2 (volume : Measure (ℝ^n))) with hfh
   rw [inner_fourier_baseL2_selfsimilarResolvent]
-  refine (enorm_integral_le_lintegral_enorm _).trans ?_
+  refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
   refine le_trans ?_ (lintegral_resolventKernel_mul_le hn hμ (Lp.stronglyMeasurable fh).measurable
     (Lp.stronglyMeasurable g).measurable)
   apply setLIntegral_mono' measurableSet_Ioi
   intro s hs
   have hs0 : (0 : ℝ) ≤ s := le_of_lt hs
-  rw [enorm_mul, L2.inner_def]
+  rw [eNorm_mul, L2.inner_def]
   have hτ : ((s.toNNReal : ℝ≥0) : ℝ) = s := Real.coe_toNNReal _ hs0
   have hformula := fourier_baseL2_selfsimilarHeatSobolev_ae (n := n) s.toNNReal f
   rw [hτ] at hformula
@@ -500,10 +500,10 @@ theorem enorm_inner_fourier_selfsimilarResolvent_le (hn : 2 ≤ n) {μ : ℝ} (h
           ∫⁻ ξ, ‖inner ℂ (h ξ) ((𝓕 (baseL2 (selfsimilarHeatSobolev n 0 s.toNNReal f)) :
             Lp ℂ 2 (volume : Measure (ℝ^n))) ξ)‖ₑ := by
         gcongr
-        exact enorm_integral_le_lintegral_enorm _
+        exact eNorm_integral_le_lintegral_eNorm _
     _ = ∫⁻ ξ, ENNReal.ofReal (resolventKernel n μ s ξ *
           (‖g ξ‖ * ‖fh (Real.exp (-(s / 2)) • ξ)‖)) := by
-        rw [← lintegral_const_mul' _ _ enorm_ne_top]
+        rw [← lintegral_const_mul' _ _ eNorm_ne_top]
         apply lintegral_congr_ae
         filter_upwards [hformula, hgh] with ξ hξ hhξ
         rw [← ofReal_norm, ← ofReal_norm, ← ENNReal.ofReal_mul (norm_nonneg _)]
@@ -688,7 +688,7 @@ theorem eLpNorm_sq_norm_mul_fourier_selfsimilarResolvent_le (hn : 2 ≤ n) {μ :
     Nat.cast_ofNat] at hmain
   have hf : eLpNorm (𝓕 (baseL2 f) : Lp ℂ 2 (volume : Measure (ℝ^n))) 2 volume =
       ENNReal.ofReal ‖f‖ := by
-    rw [← Lp.enorm_def, ← ofReal_norm, Lp.norm_fourier_eq, ← norm_eq_norm_baseL2_of_order_zero]
+    rw [← Lp.eNorm_def, ← ofReal_norm, Lp.norm_fourier_eq, ← norm_eq_norm_baseL2_of_order_zero]
   rw [hf] at hmain
   calc ∫⁻ ξ, ENNReal.ofReal (‖((‖ξ‖ ^ 2 : ℝ) : ℂ) * z ξ‖ ^ 2) =
         ENNReal.ofReal ((4 * Real.pi ^ 2)⁻¹ ^ 2) *
@@ -723,7 +723,7 @@ theorem exists_wkpSpace_two_selfsimilarResolvent (hn : 2 ≤ n) {μ : ℝ} (hμ 
     push_cast
     ring
   have hzL : eLpNorm (z : ℝ^n → ℂ) 2 volume ≤ ENNReal.ofReal (μ⁻¹ * ‖f‖) := by
-    rw [← Lp.enorm_def, ← ofReal_norm, hz, Lp.norm_fourier_eq, ← norm_eq_norm_baseL2_of_order_zero]
+    rw [← Lp.eNorm_def, ← ofReal_norm, hz, Lp.norm_fourier_eq, ← norm_eq_norm_baseL2_of_order_zero]
     exact ENNReal.ofReal_le_ofReal (((selfsimilarResolvent n hn hμ0).le_opNorm f).trans
       (mul_le_mul_of_nonneg_right (norm_selfsimilarResolvent_le hn hμ0) (norm_nonneg _)))
   have hsum : eLpNorm (fun ξ ↦ besselSymbol n ((2 : ℕ) : ℝ) ξ * z ξ) 2 volume ≤

@@ -77,7 +77,7 @@ private theorem continuous_scalar_derivative {F F' : ℝ → ℝ}
 private theorem scalar_lipschitzWith_one {F F' : ℝ → ℝ}
     (hFderiv : ∀ x, HasDerivAt F (F' x) x)
     (hbound : ∀ x, |F' x| ≤ 1) : LipschitzWith 1 F := by
-  apply lipschitzWith_of_nnnorm_deriv_le (fun x ↦ (hFderiv x).differentiableAt)
+  apply lipschitzWith_of_nnNorm_deriv_le (fun x ↦ (hFderiv x).differentiableAt)
   intro x
   rw [(hFderiv x).deriv]
   exact_mod_cast (show ‖F' x‖ ≤ (1 : ℝ) by

@@ -89,7 +89,7 @@ private theorem lintegral_fderiv_rpow_le_coordinate_energy
     _ = _ := by
       rw [lintegral_const_mul' _ _ ENNReal.ofReal_ne_top]
       congr 1
-      exact lintegral_finsetSum _ (fun i _ ↦ ((hd i).enorm.measurable.pow_const p))
+      exact lintegral_finsetSum _ (fun i _ ↦ ((hd i).eNorm.measurable.pow_const p))
 
 /-- The full smooth fractional trace estimate in positive boundary dimension.
 The coefficient is `3^(p-1) Sₙ (2H+1)`, where `H = (p/(p-1))^p` and `Sₙ` is

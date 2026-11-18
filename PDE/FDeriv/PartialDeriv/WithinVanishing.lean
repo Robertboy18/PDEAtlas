@@ -74,7 +74,8 @@ theorem isBigO_sq_of_contDiffOn (hs : Convex ℝ s) (hu : UniqueDiffOn ℝ s) (h
   set r := ‖x - p‖
   set t' := t₀ ∩ Metric.closedBall p r
   have ht' : Convex ℝ t' := ht₀.inter (convex_closedBall p r)
-  have h := ht'.norm_image_sub_le_of_norm_hasFDerivWithin_le (f := f) (f' := g) (C := K * r)
+  have h := ht'.norm_image_sub_le_of_norm_hasFDerivWithin_le (s := t') (f := f) (f' := g)
+    (C := K * r)
     (fun z hz ↦ ((hfd z hz.1.2).hasFDerivWithinAt).mono
       (inter_subset_left.trans inter_subset_right))
     (fun z hz ↦ (hgt z hz.1).trans (mul_le_mul_of_nonneg_left

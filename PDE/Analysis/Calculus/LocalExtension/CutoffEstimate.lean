@@ -44,7 +44,7 @@ theorem LipschitzOnWith.smul_of_tsupport_subset_closedBall
     (hsupport : tsupport (fun x ↦ φ x • N x) ⊆ closedBall 0 R)
     (hN0 : N 0 = 0) (hR : 0 ≤ R) (hRδ : R < δ) :
     LipschitzWith (L + B * L * ⟨R, hR⟩) (fun x ↦ φ x • N x) := by
-  apply lipschitzWith_of_nnnorm_fderiv_le (hφd.smul hNd)
+  apply lipschitzWith_of_nnNorm_fderiv_le (hφd.smul hNd)
   intro x
   change ‖fderiv ℝ (fun y ↦ φ y • N y) x‖ ≤ (L : ℝ) + B * L * R
   by_cases hx : ‖x‖ ≤ R

@@ -46,7 +46,7 @@ theorem lintegral_weighted_displacement_eq
   have hg : AEStronglyMeasurable (toLp n s Set.univ g) volume :=
     (Lp.stronglyMeasurable _).aestronglyMeasurable
   rw [← lintegral_enorm_sub_div_eq_weighted_displacement hg hp]
-  rw [Lp.enorm_def]
+  rw [Lp.eNorm_def]
   have hpow := eLpNorm_nnreal_pow_eq_lintegral
     (p := p.toNNReal) (Real.toNNReal_pos.mpr hp).ne'
     (Lp.aestronglyMeasurable (differenceQuotient n s Set.univ g))
@@ -70,6 +70,6 @@ theorem lintegral_weighted_displacement_le
       ‖g‖ₑ ^ p := by
   rw [lintegral_weighted_displacement_eq]
   apply ENNReal.rpow_le_rpow _ pos_of_one_le_ofReal.le
-  exact WithLp.enorm_snd_le _ g.val
+  exact WithLp.eNorm_snd_le _ g.val
 
 end SobolevSpace.Fractional.GagliardoSpace

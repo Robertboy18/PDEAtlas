@@ -81,7 +81,7 @@ theorem fujitaCutoff_self (z : ℝ^n) (R : ℝ) : fujitaCutoff z R z = 1 := by
 /-- The test has a finite positive mass. -/
 theorem integral_fujitaCutoff_pos (z : ℝ^n) {R : ℝ} (hR : 0 < R) :
     0 < ∫ x, fujitaCutoff z R x :=
-  integral_pos_of_integrable_nonneg_nonzero (contDiff_fujitaCutoff z R).continuous
+  integral_pos_of_integrable_nonneg_ne_zero (contDiff_fujitaCutoff z R).continuous
     ((contDiff_fujitaCutoff z R).continuous.integrable_of_hasCompactSupport
       (hasCompactSupport_fujitaCutoff z hR)) (fujitaCutoff_nonneg z R)
     (by simp : fujitaCutoff z R z ≠ 0)

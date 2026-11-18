@@ -174,12 +174,12 @@ theorem shearLowCost_le_of_lt {B A p : ℝ} (hB : 2 ≤ B) (hA : 0 < A) (hp₁ :
       nlinarith
     · exact not_lt.1 h
   simp only [shearLowCost, localShearThreshold, localShearMap, abs_of_pos hp, not_le.2 hp₁,
-    ite_false, localShearDifference_of_lt (by linarith : (1 : ℝ) ≤ B) hp₁ hp₂, enorm_neg]
+    ite_false, localShearDifference_of_lt (by linarith : (1 : ℝ) ≤ B) hp₁ hp₂, eNorm_neg]
   exact lintegral_shearDensity_mul_sqrt_le he hc
 
 /-- Beyond the boxes, the column `p > B + 1` costs nothing. -/
 theorem shearLowCost_eq_zero_of_gt {B A p : ℝ} (hp : B + 1 < p) : shearLowCost B A p = 0 := by
-  simp only [shearLowCost, localShearDifference_of_gt hp, enorm_zero, zero_mul, lintegral_zero]
+  simp only [shearLowCost, localShearDifference_of_gt hp, eNorm_zero, zero_mul, lintegral_zero]
 
 /-- **The lower cost against the boxes of half-width `10`**:
 `S_low(B, A) ≤ S_low(10, A) + E(B)` for `B ≥ 4`. -/
@@ -307,7 +307,7 @@ theorem shearLowerCost_le_bottom {A : ℝ} (hA : 0 < A) :
     shearLowerCost 10 A ≤ ENNReal.ofReal (6 * Real.pi * Real.sqrt A) := by
   have hF : Measurable fun q : ℝ × ℝ ↦
       ‖shearDifference q.1 q.2‖ₑ * ENNReal.ofReal (q.2 ^ (1 / 2 : ℝ)) :=
-    measurable_shearDifference.enorm.mul (measurable_snd.pow_const _).ennreal_ofReal
+    measurable_shearDifference.eNorm.mul (measurable_snd.pow_const _).ennreal_ofReal
   have hpt : ∀ t ∈ Ioc (0 : ℝ) A, ∫⁻ p in Ioc (0 : ℝ) 9,
       ‖shearDifference p t‖ₑ * ENNReal.ofReal (t ^ (1 / 2 : ℝ)) ≤
         ENNReal.ofReal (3 * Real.pi / 4 * (1 / Real.sqrt t)) := by

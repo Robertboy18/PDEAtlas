@@ -72,7 +72,7 @@ theorem norm_pullbackFlux_sub_same_input_le
   have ha : ‖T.adjoint (A (T x))‖ ≤ C * ‖T‖ ^ 2 * ‖x‖ := by
     have h := (lipschitzWith_pullbackFlux A hA T 1).dist_le_mul x 0
     simpa only [dist_eq_norm, pullbackFlux, map_zero, hzero, smul_zero, sub_zero,
-      one_smul, NNReal.coe_mul, NNReal.coe_pow, coe_nnnorm, norm_one, one_mul,
+      one_smul, NNReal.coe_mul, NNReal.coe_pow, coe_nnNorm, norm_one, one_mul,
       mul_comm (‖T‖ ^ 2) (C : ℝ)] using h
   have heq : pullbackFlux A T J x - pullbackFlux A S K x =
       (J - K) • T.adjoint (A (T x)) +
@@ -139,7 +139,7 @@ theorem norm_pullbackFlux_joint_sub_le_of_parameter_bounds
       ‖pullbackFlux A (T y) (J y) w - pullbackFlux A (T y) (J y) z‖ ≤
         (B * M ^ 2 * C) * ‖w - z‖ := by
     have h := (lipschitzWith_pullbackFlux A hA (T y) (J y)).dist_le_mul w z
-    simp only [dist_eq_norm, NNReal.coe_mul, NNReal.coe_pow, coe_nnnorm,
+    simp only [dist_eq_norm, NNReal.coe_mul, NNReal.coe_pow, coe_nnNorm,
       Real.norm_eq_abs] at h
     apply h.trans
     have hsq : ‖T y‖ ^ 2 ≤ (M : ℝ) ^ 2 := by

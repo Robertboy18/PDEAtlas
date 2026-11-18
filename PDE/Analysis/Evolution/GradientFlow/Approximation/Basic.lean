@@ -87,10 +87,10 @@ theorem norm_yosidaFlow_velocity_le {x₀ v : H} (hv : v ∈ subdifferential I x
 Yosida curve. -/
 theorem lipschitzOnWith_yosidaFlow {x₀ v : H} (hv : v ∈ subdifferential I x₀) :
     LipschitzOnWith ‖v‖₊ (yosidaFlow I hproper hconvex hlsc lambda hlambda x₀) (Ici 0) := by
-  apply (convex_Ici 0).lipschitzOnWith_of_nnnorm_hasDerivWithin_le
+  apply (convex_Ici 0).lipschitzOnWith_of_nnNorm_hasDerivWithin_le
     (isIntegralCurveOn_yosidaFlow hproper hconvex hlsc hlambda x₀)
   intro t ht
-  simpa only [← NNReal.coe_le_coe, coe_nnnorm, norm_neg] using
+  simpa only [← NNReal.coe_le_coe, coe_nnNorm, norm_neg] using
     norm_yosidaFlow_velocity_le hproper hconvex hlsc hlambda hv ht
 
 end PDE.Analysis.Evolution

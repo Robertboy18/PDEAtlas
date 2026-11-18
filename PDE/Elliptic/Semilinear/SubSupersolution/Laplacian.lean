@@ -65,7 +65,7 @@ theorem exists_weak_laplacian_solution_between_H1_barriers
           ∫ x, g (baseCoordCLM u x) * baseCoordCLM v x ∂μ := by
   classical
   let K : ℝ≥0 := ⟨C, (abs_nonneg _).trans (hderiv 0)⟩
-  have hgLip : LipschitzWith K g := lipschitzWith_of_nnnorm_deriv_le hg fun s ↦ by
+  have hgLip : LipschitzWith K g := lipschitzWith_of_nnNorm_deriv_le hg fun s ↦ by
     exact_mod_cast hderiv s
   let a : Fin (m + 1) → Fin (m + 1) → DerivLp (m + 1) ∞ Ω :=
     fun i j ↦ (memLp_top_const (if i = j then (1 : ℝ) else 0)).toLp

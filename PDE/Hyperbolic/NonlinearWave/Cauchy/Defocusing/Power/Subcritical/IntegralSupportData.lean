@@ -38,7 +38,7 @@ theorem IsIntegralTrajectoryBefore.tsupport_subset_closedBall {r b L R S : ℝ} 
     tsupport (fun x : ℝ^3 ↦ u (t, x)) ⊆ Metric.closedBall 0 (R + S) := by
   apply closure_minimal _ Metric.isClosed_closedBall
   intro x hx
-  by_contra! hnot
+  by_contra hnot
   have hxR : R + S < ‖x‖ := by
     simpa only [Metric.mem_closedBall, dist_zero_right, not_le] using hnot
   apply hx
@@ -54,7 +54,7 @@ theorem IsGlobalIntegralTrajectory.tsupport_subset_closedBall {r b R S : ℝ} (h
     tsupport (fun x : ℝ^3 ↦ u (t, x)) ⊆ Metric.closedBall 0 (R + S) := by
   apply closure_minimal _ Metric.isClosed_closedBall
   intro x hx
-  by_contra! hnot
+  by_contra hnot
   have hxR : R + S < ‖x‖ := by
     simpa only [Metric.mem_closedBall, dist_zero_right, not_le] using hnot
   apply hx

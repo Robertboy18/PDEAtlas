@@ -40,7 +40,7 @@ theorem average_comp_ballHomeomorph_mul {F : Type*}
       Measure.map_apply (ballHomeomorph z ha).measurable MeasurableSet.univ,
       preimage_univ]
   rw [havg, map_ball_volume_mul]
-  simp only [average_eq, measureReal_def, Measure.smul_apply, smul_eq_mul,
+  simp only [average_eq, measureReal_def, smul_apply, smul_eq_mul,
     ENNReal.toReal_mul, integral_smul_measure, mul_inv_rev, smul_smul,
     ENNReal.toReal_ofReal (inv_nonneg.mpr (pow_nonneg ha.le n))]
   rw [mul_assoc, inv_mul_cancel₀ (inv_ne_zero (pow_ne_zero n ha.ne')), mul_one]

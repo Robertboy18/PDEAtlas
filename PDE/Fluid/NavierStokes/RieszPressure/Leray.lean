@@ -177,7 +177,7 @@ theorem advective_add_gradient_rieszPressure {u : ℝ^n → ℝ^n} (hu : ContDif
   have hfin : eLpNormEssSup u volume ≠ ⊤ :=
     eLpNorm_exponent_top hinf.aestronglyMeasurable ▸ hinf.eLpNorm_ne_top
   have hC : ∀ᵐ x ∂volume, ‖u x‖ ≤ C := by
-    filter_upwards [enorm_ae_le_eLpNormEssSup u volume] with x hx
+    filter_upwards [eNorm_ae_le_eLpNormEssSup u volume] with x hx
     exact (ENNReal.ofReal_le_iff_le_toReal hfin).1 (by rwa [ofReal_norm])
   choose F hF using exists_wkpSpace_one_velocityProduct hu hu4 hC hgrad
   obtain ⟨p, hp⟩ := exists_wkpSpace_rieszPressureL2 F hF

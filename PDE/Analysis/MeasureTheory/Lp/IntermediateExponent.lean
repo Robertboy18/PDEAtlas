@@ -86,7 +86,7 @@ theorem eLpNorm_le_eLpNorm_add_eLpNorm_top {p q : ℝ≥0∞} (hp : p ≠ 0) (hp
       _ ≤ M ^ (q.toReal - p.toReal) * ‖f x‖ₑ ^ p.toReal := by
         gcongr
   set a := eLpNorm f p μ
-  have ha : a = I ^ (1 / p.toReal) := eLpNorm_eq_lintegral_rpow_enorm_toReal hp hp' hf
+  have ha : a = I ^ (1 / p.toReal) := eLpNorm_eq_lintegral_rpow_eNorm_toReal hp hp' hf
   have hI : I = a ^ p.toReal := by
     rw [ha, ← ENNReal.rpow_mul, one_div_mul_cancel hP.ne', ENNReal.rpow_one]
   set θ := p.toReal / q.toReal
@@ -94,7 +94,7 @@ theorem eLpNorm_le_eLpNorm_add_eLpNorm_top {p q : ℝ≥0∞} (hp : p ≠ 0) (hp
   have hθ1 : 0 ≤ 1 - θ := sub_nonneg.mpr (div_le_one_of_le₀ hPQ hQ.le)
   calc
     eLpNorm f q μ = (∫⁻ x, ‖f x‖ₑ ^ q.toReal ∂μ) ^ (1 / q.toReal) :=
-      eLpNorm_eq_lintegral_rpow_enorm_toReal hq0 hq hf
+      eLpNorm_eq_lintegral_rpow_eNorm_toReal hq0 hq hf
     _ ≤ (M ^ (q.toReal - p.toReal) * I) ^ (1 / q.toReal) := by gcongr
     _ = M ^ (1 - θ) * a ^ θ := by
       rw [ENNReal.mul_rpow_of_nonneg _ _ (by positivity), hI, ← ENNReal.rpow_mul,
@@ -123,7 +123,7 @@ theorem lintegral_enorm_cube_le (hf : AEStronglyMeasurable f μ) :
     ∫⁻ x, ‖f x‖ₑ ^ 3 ∂μ ≤ eLpNorm f 2 μ ^ (3 / 2 : ℝ) * eLpNorm f 6 μ ^ (3 / 2 : ℝ) := by
   have hint (p : ℝ≥0∞) (hp0 : p ≠ 0) (hpt : p ≠ ⊤) :
       ∫⁻ x, ‖f x‖ₑ ^ p.toReal ∂μ = eLpNorm f p μ ^ p.toReal := by
-    rw [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hpt hf, ← ENNReal.rpow_mul, one_div,
+    rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hpt hf, ← ENNReal.rpow_mul, one_div,
       inv_mul_cancel₀ (ENNReal.toReal_pos hp0 hpt).ne', ENNReal.rpow_one]
   have h2 := hint 2 (by norm_num) (by norm_num)
   have h6 := hint 6 (by norm_num) (by norm_num)
@@ -136,7 +136,7 @@ theorem lintegral_enorm_cube_le (hf : AEStronglyMeasurable f μ) :
       = ∫⁻ x, (‖f x‖ₑ ^ (2 : ℝ)) ^ (3 / 4 : ℝ) * (‖f x‖ₑ ^ (6 : ℝ)) ^ (1 / 4 : ℝ) ∂μ := by
         simp_rw [hpow]
     _ ≤ (∫⁻ x, ‖f x‖ₑ ^ (2 : ℝ) ∂μ) ^ (3 / 4 : ℝ) * (∫⁻ x, ‖f x‖ₑ ^ (6 : ℝ) ∂μ) ^ (1 / 4 : ℝ) :=
-        ENNReal.lintegral_mul_norm_pow_le (hf.enorm.pow_const _) (hf.enorm.pow_const _)
+        ENNReal.lintegral_mul_norm_pow_le (hf.eNorm.pow_const _) (hf.eNorm.pow_const _)
           (by norm_num) (by norm_num) (by norm_num)
     _ = eLpNorm f 2 μ ^ (3 / 2 : ℝ) * eLpNorm f 6 μ ^ (3 / 2 : ℝ) := by
         rw [h2, h6, ← ENNReal.rpow_mul, ← ENNReal.rpow_mul]

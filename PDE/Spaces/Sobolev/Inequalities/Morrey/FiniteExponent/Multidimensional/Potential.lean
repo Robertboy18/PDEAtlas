@@ -98,7 +98,7 @@ private theorem lintegral_ball_eq_lintegral_sphere_prod
     ((volume : Measure (ℝ^n)).measurePreserving_homeomorphUnitSphereProd)
     e.measurableEmbedding
     (fun q ↦ (Metric.ball (0 : ℝ^n) S).indicator h
-      (((e.symm q : Subtype ((Set.singleton (0 : ℝ^n))ᶜ)) : ℝ^n)))
+      (((e.symm q : ↥((Set.singleton (0 : ℝ^n))ᶜ)) : ℝ^n)))
   simpa [e, homeomorphUnitSphereProd_symm_apply_coe] using hpolar
 
 /-- Translating a lower integral over `B(x, S)` to the centered ball `B(0, S)`. -/
@@ -133,7 +133,7 @@ private theorem enorm_sub_le_lintegral_fderiv_ray
     exact ((hu.differentiable one_ne_zero _).hasFDerivAt.comp_hasDerivAt s hline).deriv
   have hv : ContDiff ℝ 1 fun t : ℝ ↦ u (x + t • (θ : ℝ^n)) :=
     hu.comp (contDiff_const.add (contDiff_id.smul contDiff_const))
-  have h := enorm_sub_le_lintegral_deriv_of_contDiffOn_Icc hv.contDiffOn hr
+  have h := eNorm_sub_le_lintegral_deriv_of_contDiffOn_Icc hv.contDiffOn hr
   have hθ : ‖(θ : ℝ^n)‖ₑ ≤ 1 := by
     rw [← ofReal_norm, norm_eq_of_mem_sphere, ENNReal.ofReal_one]
   simp only [zero_smul, add_zero, hderiv] at h
@@ -160,12 +160,12 @@ private theorem lintegral_enorm_sub_center_le_radial_fderiv
       ∫⁻ s in Set.Ioo (0 : ℝ) S, ‖fderiv ℝ u (x + s • (θ : ℝ^n))‖ₑ ∂volume :=
     Measurable.lintegral_prod_right' (ν := volume.restrict (Set.Ioo (0 : ℝ) S))
       (f := fun q : Metric.sphere (0 : ℝ^n) 1 × ℝ ↦ ‖fderiv ℝ u (x + q.2 • (q.1 : ℝ^n))‖ₑ)
-      ((hu.continuous_fderiv one_ne_zero).comp (by fun_prop)).enorm.measurable
+      ((hu.continuous_fderiv one_ne_zero).comp (by fun_prop)).eNorm.measurable
   have hmass : Measure.volumeIoiPow (n - 1) (Set.Iio Sr) = ENNReal.ofReal (S ^ n / n) := by
     rw [Measure.volumeIoiPow_apply_Iio, ← Nat.cast_add_one, Nat.sub_add_cancel hn]
   rw [setLIntegral_ball_eq_ball_zero, lintegral_ball_eq_lintegral_sphere_prod hn S, lintegral_prod]
   swap
-  · exact ((((hu.continuous.comp (by fun_prop)).sub continuous_const).enorm.measurable
+  · exact ((((hu.continuous.comp (by fun_prop)).sub continuous_const).eNorm.measurable
       |>.indicator measurableSet_ball).comp (by fun_prop)).aemeasurable
   calc _ ≤ ∫⁻ θ : Metric.sphere (0 : ℝ^n) 1, ∫⁻ r : Set.Ioi (0 : ℝ),
           (Set.Iio Sr).indicator (fun _ ↦
@@ -207,7 +207,7 @@ private theorem lintegral_volumeIoiPow_mul_morreyKernel_ray
   have : Nonempty (Fin n) := ⟨⟨0, hn⟩⟩
   have hK : Measurable fun w : ℝ^n ↦ G ‖w‖ * morreyKernel (0 : ℝ^n) w :=
     (hG.comp continuous_norm.measurable).mul
-      (ENNReal.continuous_rpow_const.comp (continuous_id.sub continuous_const).enorm).measurable
+      (ENNReal.continuous_rpow_const.comp (continuous_id.sub continuous_const).eNorm).measurable
   have hexponent : (((n - 1 : ℕ) : ℝ) + (1 - (n : ℝ))) = 0 := by
     rw [Nat.cast_sub (Nat.one_le_iff_ne_zero.mpr hn.ne')]
     ring
@@ -249,14 +249,14 @@ private theorem lintegral_sphere_radial_fderiv_eq_morreyPotential
       ∫⁻ z in Metric.ball x S,
         ‖fderiv ℝ u z‖ₑ * morreyKernel x z := by
   have : Nonempty (Fin n) := ⟨⟨0, hn⟩⟩
-  have hDu := (hu.continuous_fderiv one_ne_zero).enorm
+  have hDu := (hu.continuous_fderiv one_ne_zero).eNorm
   have hkernel (w : ℝ^n) : morreyKernel x (x + w) = morreyKernel (0 : ℝ^n) w := by
     rw [morreyKernel, morreyKernel, add_sub_cancel_left, sub_zero]
   simp_rw [setLIntegral_ball_eq_ball_zero x S, hkernel]
   rw [lintegral_ball_eq_lintegral_sphere_prod hn S, lintegral_prod]
   swap
   · exact ((((hDu.comp (by fun_prop)).measurable.mul (ENNReal.continuous_rpow_const.comp
-      (continuous_id.sub continuous_const).enorm).measurable).indicator measurableSet_ball).comp
+      (continuous_id.sub continuous_const).eNorm).measurable).indicator measurableSet_ball).comp
       (by fun_prop)).aemeasurable
   refine lintegral_congr fun θ ↦ ?_
   rw [← lintegral_volumeIoiPow_mul_morreyKernel_ray hn θ
@@ -277,7 +277,7 @@ theorem lintegral_enorm_sub_center_le_morreyPotential
   rcases Nat.eq_zero_or_pos n with rfl | hn
   · have hpt (y : ℝ^0) : y = x := by ext i; exact i.elim0
     calc (∫⁻ y in Metric.ball x S, ‖u y - u x‖ₑ) = ∫⁻ _ in Metric.ball x S, 0 :=
-          lintegral_congr fun y ↦ by rw [hpt y, sub_self, enorm_zero]
+          lintegral_congr fun y ↦ by rw [hpt y, sub_self, eNorm_zero]
       _ = 0 := lintegral_zero
       _ ≤ _ := zero_le
   exact lintegral_sphere_radial_fderiv_eq_morreyPotential u hu hn x S ▸
@@ -301,10 +301,10 @@ private theorem enorm_sub_ballAverage_le_normalized_lintegral
     rw [integral_sub integrableOn_const huIntegrable, MeasureTheory.setAverage_eq]
     simp only [smul_eq_mul, integral_const, measureReal_restrict_apply_univ]
     field_simp
-  rw [hidentity, enorm_mul, Real.enorm_eq_ofReal_abs, abs_of_pos (inv_pos.mpr hvolumePos)]
-  simp_rw [enorm_sub_rev (u _) (u x)]
+  rw [hidentity, eNorm_mul, Real.eNorm_eq_ofReal_abs, abs_of_pos (inv_pos.mpr hvolumePos)]
+  simp_rw [eNorm_sub_rev (u _) (u x)]
   gcongr
-  exact enorm_integral_le_lintegral_enorm _
+  exact eNorm_integral_le_lintegral_eNorm _
 
 /-- Explicit constant in the enlarged-ball point-to-average estimate.
 

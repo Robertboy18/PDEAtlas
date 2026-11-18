@@ -152,7 +152,7 @@ theorem neg_log_potential_div_eq_log_moment {f : ℝ → ℝ} {L : ℝ}
       (∫ y in Ioi 0, (Real.log (L - y) - Real.log (L + y)) * f y) =
         ∫ y in Ioo 0 L, (Real.log (L - y) - Real.log (L + y)) * f y := by
     apply setIntegral_eq_of_subset_of_forall_sdiff_eq_zero measurableSet_Ioi
-      (fun _ hy ↦ hy.1)
+      (fun _ ↦ And.left)
     intro y hy
     have hyL : L ≤ y := not_lt.mp fun hyL ↦ hy.2 ⟨hy.1, hyL⟩
     simp only [hsupport y hyL, mul_zero]

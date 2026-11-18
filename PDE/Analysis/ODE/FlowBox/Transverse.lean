@@ -73,7 +73,7 @@ theorem exists_flow_box_of_transverse
   have hca₀ : a.symm q₀ = 0 := hX₀ ▸ a.left_inv ha₀
   have hc : ContDiffAt ℝ 1 a.symm q₀ := hX₀ ▸ hX.to_localInverse hDX one_ne_zero
   have hDc : HasFDerivAt a.symm (e.symm : E →L[ℝ] ℝ × F) q₀ :=
-    hX₀ ▸ (hX.hasStrictFDerivAt' hDX one_ne_zero).to_localInverse.hasFDerivAt
+    hX₀ ▸ (hX.hasStrictFDerivAt hDX one_ne_zero).to_localInverse.hasFDerivAt
   have hsolve : ∀ᶠ p : ℝ × F in 𝓝 0,
       HasDerivAt (fun t ↦ X (t, p.2)) (v (X p)) p.1 := by
     have ht : Tendsto j (𝓝 0) (𝓝 (0, q₀)) := by

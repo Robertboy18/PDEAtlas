@@ -101,7 +101,7 @@ private theorem differenceQuotient_traceValue_energy (hp : 1 < p)
           ‖traceLp n p hp.le u z.1 - traceLp n p hp.le u z.2‖ₑ ^ p /
             (ENNReal.ofReal ‖z.1 - z.2‖) ^ ((n : ℝ) + p - 1)
           ∂((volume : Measure (ℝ^n)).prod volume) := by
-    rw [Lp.enorm_def]
+    rw [Lp.eNorm_def]
     have hpow := eLpNorm_nnreal_pow_eq_lintegral
       (p := p.toNNReal) (Real.toNNReal_pos.mpr hp₀).ne'
       (Lp.aestronglyMeasurable
@@ -165,7 +165,7 @@ private theorem norm_traceValue_le_of_energy_bound (hp : 1 < p) (C : ℝ≥0)
       ‖GagliardoSpace.differenceQuotient n (1 - 1 / p) Set.univ v‖ ^ p ≤
         (C : ℝ) * ‖u‖ ^ p := by
     have h := ENNReal.toReal_mono (by finiteness) henergy_le
-    simpa only [ENNReal.toReal_mul, ← ENNReal.toReal_rpow, toReal_enorm,
+    simpa only [ENNReal.toReal_mul, ← ENNReal.toReal_rpow, toReal_eNorm,
       ENNReal.coe_toReal] using h
   have hbase_norm : ‖traceLp n p hp.le u‖ ^ p ≤ p * ‖u‖ ^ p := by
     calc
@@ -284,7 +284,7 @@ theorem traceGagliardo_eq_zero_iff (hp : 1 < p)
   · intro h
     apply Lp.ext
     have ha := toLp_traceGagliardo_apply_ae n p hp U
-    rw [h, map_zero] at ha
+    rw [h, ContinuousLinearMap.map_zero] at ha
     have hz := (Lp.coeFn_zero F (ENNReal.ofReal p)
       ((volume : Measure (ℝ^n)).restrict Set.univ)).filter_mono
         (ae_mono (show (volume : Measure (ℝ^n)) ≤ volume.restrict Set.univ by
@@ -292,6 +292,6 @@ theorem traceGagliardo_eq_zero_iff (hp : 1 < p)
     exact ha.symm.trans (hz.trans (Lp.coeFn_zero F (ENNReal.ofReal p) volume).symm)
   · intro h
     apply GagliardoSpace.toLp_injective
-    rw [toLp_traceGagliardo, h, map_zero, map_zero]
+    rw [toLp_traceGagliardo, h, map_zero, ContinuousLinearMap.map_zero]
 
 end SobolevSpace.VectorValued.Trace.HalfSpace

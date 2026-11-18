@@ -189,14 +189,14 @@ theorem ENNReal.eLpNorm_lintegral_le {α β : Type*}
   have heq (y : β) : eLpNorm (fun x ↦ f (x, y)) (ENNReal.ofReal p) μ =
       (∫⁻ x, f (x, y) ^ p ∂μ) ^ (1 / p) := by
     have hy : Measurable (fun x ↦ f (x, y)) := hf.comp measurable_prodMk_right
-    rw [eLpNorm_eq_lintegral_rpow_enorm_toReal
+    rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal
       (ne_of_gt (ENNReal.ofReal_pos.mpr hp₀)) ENNReal.ofReal_ne_top hy.aestronglyMeasurable]
-    simp only [ENNReal.toReal_ofReal hp₀.le, enorm_eq_self]
+    simp only [ENNReal.toReal_ofReal hp₀.le, eNorm_eq_self]
   simp_rw [heq]
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal
     (ne_of_gt (ENNReal.ofReal_pos.mpr hp₀)) ENNReal.ofReal_ne_top
     hf.lintegral_prod_right'.aestronglyMeasurable]
-  simpa only [ENNReal.toReal_ofReal hp₀.le, enorm_eq_self] using
+  simpa only [ENNReal.toReal_ofReal hp₀.le, eNorm_eq_self] using
     ENNReal.lintegral_Lp_lintegral_le hp hf
 
 namespace MeasureTheory
@@ -210,15 +210,15 @@ private theorem eLpNorm_integral_le_lintegral_eLpNorm_of_stronglyMeasurable {α 
       ∫⁻ y, eLpNorm (fun x ↦ f (x, y)) (ENNReal.ofReal p) μ ∂ν := by
   calc
     _ ≤ eLpNorm (fun x ↦ ∫⁻ y, ‖f (x, y)‖ₑ ∂ν) (ENNReal.ofReal p) μ := by
-      apply eLpNorm_mono_enorm hf.integral_prod_right'.aestronglyMeasurable
+      apply eLpNorm_mono_eNorm hf.integral_prod_right'.aestronglyMeasurable
       intro x
-      exact enorm_integral_le_lintegral_enorm _
+      exact eNorm_integral_le_lintegral_eNorm _
     _ ≤ ∫⁻ y, eLpNorm (fun x ↦ ‖f (x, y)‖ₑ) (ENNReal.ofReal p) μ ∂ν :=
-      ENNReal.eLpNorm_lintegral_le hp hf.enorm
+      ENNReal.eLpNorm_lintegral_le hp hf.eNorm
     _ = _ := by
       apply lintegral_congr
       intro y
-      exact eLpNorm_enorm _ (hf.comp_measurable measurable_prodMk_right).aestronglyMeasurable
+      exact eLpNorm_eNorm _ (hf.comp_measurable measurable_prodMk_right).aestronglyMeasurable
 
 /-- An integrable family of Lp norms gives integrable sections almost everywhere. -/
 private theorem ae_integrable_of_lintegral_eLpNorm_lt_top_of_stronglyMeasurable {α β E : Type*}
@@ -228,18 +228,18 @@ private theorem ae_integrable_of_lintegral_eLpNorm_lt_top_of_stronglyMeasurable 
     (hfin : (∫⁻ y, eLpNorm (fun x ↦ f (x, y)) (ENNReal.ofReal p) μ ∂ν) < ∞) :
     ∀ᵐ x ∂μ, Integrable (fun y ↦ f (x, y)) ν := by
   have hp₀ : 0 < p := zero_lt_one.trans_le hp
-  have hm := hf.enorm.lintegral_prod_right' (ν := ν)
-  have hbound := ENNReal.eLpNorm_lintegral_le (μ := μ) (ν := ν) hp hf.enorm
+  have hm := hf.eNorm.lintegral_prod_right' (ν := ν)
+  have hbound := ENNReal.eLpNorm_lintegral_le (μ := μ) (ν := ν) hp hf.eNorm
   have heq (y : β) : eLpNorm (fun x ↦ ‖f (x, y)‖ₑ) (ENNReal.ofReal p) μ =
       eLpNorm (fun x ↦ f (x, y)) (ENNReal.ofReal p) μ :=
-    eLpNorm_enorm _ (hf.comp_measurable measurable_prodMk_right).aestronglyMeasurable
+    eLpNorm_eNorm _ (hf.comp_measurable measurable_prodMk_right).aestronglyMeasurable
   simp_rw [heq] at hbound
-  have hpow := lintegral_rpow_enorm_lt_top_of_eLpNorm_lt_top
+  have hpow := lintegral_rpow_eNorm_lt_top_of_eLpNorm_lt_top
     (ne_of_gt (ENNReal.ofReal_pos.mpr hp₀)) ENNReal.ofReal_ne_top (hbound.trans_lt hfin)
-  simp only [ENNReal.toReal_ofReal hp₀.le, enorm_eq_self] at hpow
+  simp only [ENNReal.toReal_ofReal hp₀.le, eNorm_eq_self] at hpow
   filter_upwards [ae_lt_top (hm.pow_const p) hpow.ne] with x hx
   refine ⟨(hf.comp_measurable measurable_prodMk_left).aestronglyMeasurable, ?_⟩
-  rw [hasFiniteIntegral_iff_enorm]
+  rw [hasFiniteIntegral_iff_eNorm]
   by_contra h
   have heq : (∫⁻ y, ‖f (x, y)‖ₑ ∂ν) = ∞ := top_unique (not_lt.mp h)
   rw [heq, ENNReal.top_rpow_of_pos hp₀] at hx

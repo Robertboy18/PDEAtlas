@@ -39,7 +39,7 @@ theorem characteristicSlope_ne (A : PrincipalPart) (ha : A.a11 ≠ 0) (hD : 0 < 
     A.characteristicSlope 1 ≠ A.characteristicSlope (-1) := by
   have hs : 0 < Real.sqrt A.discriminant := Real.sqrt_pos.mpr hD
   intro h
-  have he := (div_left_inj' ha).mp h
+  have he := (div_left_inj₀ ha).mp h
   simp only [one_mul, neg_one_mul] at he
   linarith
 

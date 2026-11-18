@@ -398,9 +398,9 @@ theorem weightedSeminorm_le_of_directional {A₀ A₁ : ℝ≥0∞}
     · simp [w]
     · exact absurd rfl hj
   have hx₀ : edist (x 0) (w 0) = ‖(x - z) 0‖ₑ := by
-    simp [w, edist_eq_enorm_sub]
+    simp [w, eDist_eq_eNorm_sub]
   have hx₁ : edist (w 1) (z 1) = ‖(x - z) 1‖ₑ := by
-    simp [w, edist_eq_enorm_sub]
+    simp [w, eDist_eq_eNorm_sub]
   calc edist (f x) (f z) * ENNReal.ofReal (g (x - z))
       ≤ (directionalSeminorm 0 α D f * ‖(x - z) 0‖ₑ ^ (α : ℝ) +
           directionalSeminorm 1 α D f * ‖(x - z) 1‖ₑ ^ (α : ℝ)) *
@@ -461,10 +461,10 @@ section Product
 /-- The product difference `ab - cd = (a - c) b + c (b - d)` in extended form. -/
 theorem edist_mul_mul_le (a b c d : ℝ) :
     edist (a * b) (c * d) ≤ edist a c * ‖b‖ₑ + ‖c‖ₑ * edist b d := by
-  simp only [edist_eq_enorm_sub]
+  simp only [eDist_eq_eNorm_sub]
   calc ‖a * b - c * d‖ₑ = ‖(a - c) * b + c * (b - d)‖ₑ := by ring_nf
-    _ ≤ ‖(a - c) * b‖ₑ + ‖c * (b - d)‖ₑ := enorm_add_le _ _
-    _ = ‖a - c‖ₑ * ‖b‖ₑ + ‖c‖ₑ * ‖b - d‖ₑ := by rw [enorm_mul, enorm_mul]
+    _ ≤ ‖(a - c) * b‖ₑ + ‖c * (b - d)‖ₑ := eNorm_add_le _ _
+    _ = ‖a - c‖ₑ * ‖b‖ₑ + ‖c‖ₑ * ‖b - d‖ₑ := by rw [eNorm_mul, eNorm_mul]
 
 variable {n : ℕ} {i : Fin n} {α : ℝ≥0} {D : Set (ℝ^n)} {f g : ℝ^n → ℝ}
 

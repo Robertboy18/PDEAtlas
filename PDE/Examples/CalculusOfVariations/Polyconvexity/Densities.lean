@@ -57,7 +57,7 @@ theorem weightedDeterminantDensity_convex (x s : ℝ^2) :
       AffineMap.const ℝ _ (s 0)
   have hs : ConvexOn ℝ univ (fun R : Matrix (Fin 2) (Fin 2) ℝ × ℝ ↦
       (R.2 - s 0) ^ 2) := by
-    simpa only [a, Function.comp_def, preimage_univ, AffineMap.coe_sub, Pi.sub_apply,
+    simpa only [a, Function.comp_def, preimage_univ, FunLike.coe_sub, Pi.sub_apply,
       LinearMap.coe_toAffineMap, LinearMap.snd_apply, AffineMap.const_apply] using
       (Even.convexOn_pow (𝕜 := ℝ) (show Even 2 from ⟨1, rfl⟩)).comp_affineMap a
   change ConvexOn ℝ univ (fun R : Matrix (Fin 2) (Fin 2) ℝ × ℝ ↦

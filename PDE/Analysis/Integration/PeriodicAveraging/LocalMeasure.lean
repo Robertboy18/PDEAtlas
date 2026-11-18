@@ -62,14 +62,26 @@ theorem ae_comp_toTorus {n : ℕ} {p : UnitAddTorus (Fin n) → Prop}
       ((measurePreserving_toTorus a).quasiMeasurePreserving.ae hp)
   rwa [univ_subset_iff.mp hcover, Measure.restrict_univ] at h
 
-/-- The quotient map pulls null sets on the torus back to Euclidean null sets. -/
+/-- The quotient map onto the torus is measurable. -/
+theorem measurable_toTorus (n : ℕ) : Measurable (toTorus n) :=
+  (toTorus n).measurable
+
+/-- The quotient map pulls null sets on the torus back to Euclidean null sets. The map is
+measurable (`measurable_toTorus`); the structure records almost-everywhere measurability only. -/
 theorem quasiMeasurePreserving_toTorus (n : ℕ) :
     QuasiMeasurePreserving (toTorus n) volume (cellMeasure n) := by
-  refine ⟨(toTorus n).measurable, Measure.AbsolutelyContinuous.mk fun s hs hzero ↦ ?_⟩
-  rw [Measure.map_apply (toTorus n).measurable hs, measure_eq_zero_iff_ae_notMem]
+  refine ⟨(measurable_toTorus n).aemeasurable,
+    Measure.AbsolutelyContinuous.mk fun s hs hzero ↦ ?_⟩
+  rw [Measure.map_apply (measurable_toTorus n) hs, measure_eq_zero_iff_ae_notMem]
   exact ae_comp_toTorus (measure_eq_zero_iff_ae_notMem.mp hzero)
 
-/-- A nonzero dilation followed by periodic lifting preserves null-set identities. -/
+/-- A dilation followed by the quotient map onto the torus is measurable. -/
+theorem measurable_toTorus_smul (n : ℕ) (c : ℝ) :
+    Measurable fun x : ℝ^n ↦ toTorus n (c • x) :=
+  (measurable_toTorus n).comp (measurable_const_smul c)
+
+/-- A nonzero dilation followed by periodic lifting preserves null-set identities. The map is
+measurable (`measurable_toTorus_smul`). -/
 theorem quasiMeasurePreserving_toTorus_smul (n : ℕ) (c : ℝ) (hc : c ≠ 0) :
     QuasiMeasurePreserving (fun x : ℝ^n ↦ toTorus n (c • x))
       volume (cellMeasure n) :=

@@ -72,17 +72,17 @@ variable [Fact (1 ≤ q)]
 theorem eLpNorm_jointRepresentative (u : Lp (Lp E p ν) q μ) :
     eLpNorm (fun t ↦ eLpNorm (fun x ↦ (Lp.jointRepresentative u) (t, x)) p ν) q μ = ‖u‖ₑ := by
   have hsection (t : α) : eLpNorm (fun x ↦ (Lp.jointRepresentative u) (t, x)) p ν = ‖u t‖ₑ := by
-    rw [Lp.enorm_def]
+    rw [Lp.eNorm_def]
     exact eLpNorm_congr_ae ((Lp.jointRepresentative_section u) t)
   simp_rw [hsection]
-  rw [eLpNorm_enorm _ (Lp.aestronglyMeasurable u), Lp.enorm_def]
+  rw [eLpNorm_eNorm _ (Lp.aestronglyMeasurable u), Lp.eNorm_def]
 
 /-- The mixed norm of the joint representative is finite. -/
 theorem memLp_eLpNorm_jointRepresentative (u : Lp (Lp E p ν) q μ) :
     MemLp (fun t ↦ eLpNorm (fun x ↦ (Lp.jointRepresentative u) (t, x)) p ν) q μ := by
   change eLpNorm _ _ _ < ∞
   rw [eLpNorm_jointRepresentative]
-  exact enorm_lt_top
+  exact eNorm_lt_top
 
 end Norm
 

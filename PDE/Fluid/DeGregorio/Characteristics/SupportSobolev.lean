@@ -48,7 +48,7 @@ theorem SatisfiesBiotSavartOn.nnnorm_spatial_deriv_le_of_vorticity_norm_bound
   have hslice : ContDiff ℝ 1 (fun y ↦ fields.velocity y t) :=
     hu.comp (contDiff_id.prodMk contDiff_const)
   apply NNReal.coe_le_coe.mp
-  simpa only [coe_nnnorm] using ((hbiot ht).norm_le_eLpNorm_add_deriv
+  simpa only [coe_nnNorm] using ((hbiot ht).norm_le_eLpNorm_add_deriv
     (hslice.continuous_deriv le_rfl) (homega t ht) (hsupp t ht) x).trans (hH1 t ht)
 
 /-- Rescaled vorticity stays in `[-L,L]` under a uniform bound

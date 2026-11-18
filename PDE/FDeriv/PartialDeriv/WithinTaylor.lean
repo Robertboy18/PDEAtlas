@@ -67,7 +67,7 @@ theorem isBigO_pow_succ_of_partialDerivWithin (hs : Convex ℝ s) (hp : p ∈ s)
   set r := ‖x - p‖
   set t' := t₀ ∩ Metric.closedBall p r
   have ht' : Convex ℝ t' := ht₀.inter (convex_closedBall p r)
-  have h := ht'.norm_image_sub_le_of_norm_hasFDerivWithin_le (f := f)
+  have h := ht'.norm_image_sub_le_of_norm_hasFDerivWithin_le (s := t') (f := f)
     (f' := fderivWithin ℝ f s) (C := K * r ^ k)
     (fun z hz ↦ ((hf z hz.1.2).hasFDerivWithinAt).mono
       (inter_subset_left.trans inter_subset_right))

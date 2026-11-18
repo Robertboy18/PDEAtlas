@@ -270,8 +270,8 @@ theorem contDiff_convolution {F : Type uF} {G : Type uG} [NormedAddCommGroup F]
 
 private theorem enorm_eq_of_norm_eq {A B : Type*} [SeminormedAddCommGroup A]
     [SeminormedAddCommGroup B] {a : A} {b : B} (h : ‖a‖ = ‖b‖) : ‖a‖ₑ = ‖b‖ₑ := by
-  simp only [enorm_eq_nnnorm, ENNReal.coe_inj]
-  exact NNReal.eq (by simpa only [coe_nnnorm] using h)
+  simp only [eNorm_eq_nnNorm, ENNReal.coe_inj]
+  exact NNReal.eq (by simpa only [coe_nnNorm] using h)
 
 /-- Every derivative of the convolution is bounded at each point `x` by `‖L‖` times
 `∫ ‖Dᵐ K (x - y)‖ ‖f y‖ dy`. -/
@@ -286,10 +286,10 @@ theorem enorm_iteratedFDeriv_convolution_le {F : Type uF} {G : Type uG}
     rw [enorm_eq_of_norm_eq norm_iteratedFDeriv_zero, convolution_eq_swap]
     simp_rw [enorm_eq_of_norm_eq (norm_iteratedFDeriv_zero (f := ⇑K) (x := x - _))]
     calc
-      _ ≤ ∫⁻ y, ‖L (K (x - y)) (f y)‖ₑ := enorm_integral_le_lintegral_enorm _
+      _ ≤ ∫⁻ y, ‖L (K (x - y)) (f y)‖ₑ := eNorm_integral_le_lintegral_eNorm _
       _ ≤ ∫⁻ y, ‖L‖ₑ * (‖K (x - y)‖ₑ * ‖f y‖ₑ) :=
         lintegral_mono fun y ↦ by rw [← mul_assoc]; exact L.le_opENorm₂ _ _
-      _ = _ := lintegral_const_mul' _ _ enorm_ne_top
+      _ = _ := lintegral_const_mul' _ _ eNorm_ne_top
   | succ m ih =>
     rw [← enorm_eq_of_norm_eq (norm_iteratedFDeriv_fderiv (𝕜 := ℝ) (f := ⇑K ⋆[L] f)
       (x := x)), fderiv_convolution L K hf]
@@ -301,7 +301,7 @@ theorem enorm_iteratedFDeriv_convolution_le {F : Type uF} {G : Type uG}
       exact enorm_eq_of_norm_eq norm_iteratedFDeriv_fderiv
     simp_rw [hK]
     gcongr
-    simpa only [enorm_eq_nnnorm, ENNReal.coe_le_coe, ← NNReal.coe_le_coe, coe_nnnorm] using
+    simpa only [eNorm_eq_nnNorm, ENNReal.coe_le_coe, ← NNReal.coe_le_coe, coe_nnNorm] using
       ContinuousLinearMap.norm_precompL_le (ℝ^n) L
 
 /-- Every derivative of a Schwartz function lies in every `Lᵠ(ℝ^n)`. -/

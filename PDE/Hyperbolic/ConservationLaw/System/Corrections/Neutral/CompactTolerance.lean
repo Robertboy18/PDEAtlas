@@ -44,8 +44,8 @@ theorem exists_pos_tolerance_of_compact_neutral_family (ι : Type*) [Finite ι] 
       ‖a - A t‖ < ε → ‖h - (H t + θ • B t)‖ < ε → HasOrderedGenuinelyNonlinearEigenbasis ι a h := by
   let J : X × ℝ → (E →L[ℝ] E) × (E →L[ℝ] E →L[ℝ] E) := fun p ↦ (A p.1, H p.1 + p.2 • B p.1)
   have hJ : ContinuousOn J (K ×ˢ Icc (0 : ℝ) 1) :=
-    (hA.comp continuousOn_fst (fun _ hp ↦ hp.1)).prodMk
-      ((hH.comp continuousOn_fst (fun _ hp ↦ hp.1)).add
+    (hA.comp continuousOn_fst (fun _ ↦ And.left)).prodMk
+      ((hH.comp continuousOn_fst (fun _ ↦ And.left)).add
         (continuousOn_snd.smul (hB.comp continuousOn_fst (fun _ hp ↦ hp.1))))
   have hcompact : IsCompact (J '' (K ×ˢ Icc (0 : ℝ) 1)) :=
     (hK.prod isCompact_Icc).image_of_continuousOn hJ

@@ -476,7 +476,7 @@ theorem derivY_mixedDerivative_of_contDiff
     rw [List.perm_iff_count]
     intro i
     fin_cases i <;> simp [word, wordNext, b, List.count_replicate]
-    all_goals omega
+    omega
   have hwordlen : ((1 : Fin 2) :: word).length = n + 1 := by
     simp [word]
     omega

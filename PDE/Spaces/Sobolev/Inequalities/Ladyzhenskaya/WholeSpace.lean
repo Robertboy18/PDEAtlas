@@ -169,11 +169,11 @@ theorem lintegral_enorm_pow_four_le_H1 (U : H¹(ℝ^3)) :
   have hpt : ∀ᵐ x ∂volume, Tendsto (fun k ↦ ‖f (ns k) x‖ₑ ^ 4) atTop
       (𝓝 (‖baseRepresentative U x‖ₑ ^ 4)) := by
     filter_upwards [hns', hrep] with x hx hxr
-    have h := (((ENNReal.continuous_pow 4).comp continuous_enorm).tendsto _).comp hx
+    have h := (((ENNReal.continuous_pow 4).comp continuous_eNorm).tendsto _).comp hx
     simp only [Function.comp_def, hxr] at h
     exact h
   have hfm (m : ℕ) : AEMeasurable (fun x ↦ ‖f m x‖ₑ ^ 4) volume :=
-    ((hf m).continuous.measurable.enorm.pow_const 4).aemeasurable
+    ((hf m).continuous.measurable.eNorm.pow_const 4).aemeasurable
   calc ∫⁻ x, ‖baseRepresentative U x‖ₑ ^ 4
       = ∫⁻ x, liminf (fun k ↦ ‖f (ns k) x‖ₑ ^ 4) atTop := by
         refine lintegral_congr_ae ?_

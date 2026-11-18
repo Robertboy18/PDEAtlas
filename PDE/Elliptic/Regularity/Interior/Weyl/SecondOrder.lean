@@ -270,7 +270,7 @@ theorem ballGrowth_of_norm_le_add {G H K : ℝ^n → ℝ} {C D a : ℝ} (hG : Ba
         rw [← ENNReal.ofReal_add (norm_nonneg _) (norm_nonneg _)]
         exact ENNReal.ofReal_le_ofReal (hK y)
     _ = (∫⁻ y in Metric.ball x r, ‖G y‖ₑ) + ∫⁻ y in Metric.ball x r, ‖H y‖ₑ :=
-        lintegral_add_left' hGm.enorm.restrict _
+        lintegral_add_left' hGm.eNorm.restrict _
     _ ≤ ENNReal.ofReal (C * (1 + ‖x‖ + r) * r ^ a) +
         ENNReal.ofReal (D * (1 + ‖x‖ + r) * r ^ a) := add_le_add (hG x r hr) (hH x r hr)
     _ = ENNReal.ofReal ((C + D) * (1 + ‖x‖ + r) * r ^ a) := by
@@ -324,15 +324,15 @@ theorem BallGrowth.convolution {G g : ℝ^n → ℝ} {C a R : ℝ} (hG : BallGro
   have hr0 : 0 < r := lt_of_lt_of_le one_pos hr
   have hpoint (y : ℝ^n) : ‖(G ⋆[mul ℝ ℝ, volume] g) y‖ₑ ≤ ∫⁻ t, ‖G t‖ₑ * ‖g (y - t)‖ₑ := by
     rw [convolution_def]
-    simpa only [mul_apply', enorm_mul] using
-      enorm_integral_le_lintegral_enorm (μ := volume) (fun t ↦ G t * g (y - t))
+    simpa only [mul_apply', eNorm_mul] using
+      eNorm_integral_le_lintegral_eNorm (μ := volume) (fun t ↦ G t * g (y - t))
   have hmeas : AEMeasurable (Function.uncurry fun (y t : ℝ^n) ↦ ‖G t‖ₑ * ‖g (y - t)‖ₑ)
       ((volume.restrict (Metric.ball x r)).prod volume) :=
-    hGm.enorm.comp_snd.mul (hg.comp continuous_sub).measurable.enorm.aemeasurable
+    hGm.eNorm.comp_snd.mul (hg.comp continuous_sub).measurable.eNorm.aemeasurable
   have hinner (t : ℝ^n) : ∫⁻ y in Metric.ball x r, ‖G t‖ₑ * ‖g (y - t)‖ₑ ≤
       (Metric.ball x (r + R)).indicator (fun t ↦ ‖G t‖ₑ * K) t := by
     by_cases ht : t ∈ Metric.ball x (r + R)
-    · rw [Set.indicator_of_mem ht, lintegral_const_mul' _ _ enorm_ne_top]
+    · rw [Set.indicator_of_mem ht, lintegral_const_mul' _ _ eNorm_ne_top]
       gcongr
       calc ∫⁻ y in Metric.ball x r, ‖g (y - t)‖ₑ ≤ ∫⁻ y, ‖g (y - t)‖ₑ :=
             setLIntegral_le_lintegral _ _
@@ -340,7 +340,7 @@ theorem BallGrowth.convolution {G g : ℝ^n → ℝ} {C a R : ℝ} (hG : BallGro
     · have hgt (y : ℝ^n) (hy : y ∈ Metric.ball x r) : ‖G t‖ₑ * ‖g (y - t)‖ₑ = 0 := by
         have := not_lt.mp (Metric.mem_ball.not.mp ht)
         rw [hgs _ (by rw [← dist_eq_norm, dist_comm]; linarith [dist_triangle t y x,
-          Metric.mem_ball.mp hy]), enorm_zero, mul_zero]
+          Metric.mem_ball.mp hy]), eNorm_zero, mul_zero]
       rw [Set.indicator_of_notMem ht, setLIntegral_congr_fun measurableSet_ball hgt, lintegral_zero]
   calc ∫⁻ y in Metric.ball x r, ‖(G ⋆[mul ℝ ℝ, volume] g) y‖ₑ
       ≤ ∫⁻ y in Metric.ball x r, ∫⁻ t, ‖G t‖ₑ * ‖g (y - t)‖ₑ := lintegral_mono hpoint
@@ -398,7 +398,7 @@ theorem lintegral_ball_enorm_le_of_memLp [Fact (0 < n)] {G : ℝ^n → ℝ} {p :
       linarith
   have hHolder := eLpNorm_le_eLpNorm_mul_rpow_measure_univ
     (μ := volume.restrict (Metric.ball x r)) hp1 hG.aestronglyMeasurable.restrict
-  rw [eLpNorm_one_eq_lintegral_enorm hG.aestronglyMeasurable.restrict,
+  rw [eLpNorm_one_eq_lintegral_eNorm hG.aestronglyMeasurable.restrict,
     Measure.restrict_apply_univ, hvol] at hHolder
   simp only [ENNReal.toReal_one, div_one] at hHolder
   refine hHolder.trans ?_
@@ -549,7 +549,7 @@ theorem secondOrderPairing_eq_zero [Fact (0 < n)] {a c : ℝ^n → ℝ} {b : Fin
     have : 0 ≤ D := add_nonneg (add_nonneg hDA (Finset.sum_nonneg fun j _ ↦ hDB j)) hDC
     have hnn : 0 ≤ D * (1 + ‖x‖ + r) * r ^ e := by positivity
     simp only [← Real.norm_eq_abs]
-    rw [integral_norm_eq_lintegral_enorm hcont.aestronglyMeasurable.restrict]
+    rw [integral_norm_eq_lintegral_eNorm hcont.aestronglyMeasurable.restrict]
     exact ENNReal.toReal_le_of_le_ofReal hnn h
   have h0 := congrFun hzero 0
   rw [← secondOrderPairing_comp_const_sub a b c hρ 0] at h0

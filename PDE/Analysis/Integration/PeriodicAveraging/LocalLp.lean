@@ -33,7 +33,7 @@ variable {n : ℕ} {Ω : Set (ℝ^n)} (hΩ : Bornology.IsBounded Ω)
 def rescaleLp (ε : ℝ) (hε : 0 < ε) (hε1 : ε ≤ 1) :
     Lp E p (cellMeasure n) →L[ℝ] Lp E p (volume.restrict Ω) :=
   Lp.compMeasureLeSMul (fun x : ℝ^n ↦ toTorus n (ε⁻¹ • x))
-    ((toTorus n).measurable.comp (measurable_const_smul _))
+    (measurable_toTorus_smul n ε⁻¹)
     (exists_map_toTorus_rescale_le hΩ).choose_spec.1
     ((exists_map_toTorus_rescale_le hΩ).choose_spec.2 ε hε hε1)
 

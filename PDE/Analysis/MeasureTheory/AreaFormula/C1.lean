@@ -68,7 +68,7 @@ theorem euclideanHausdorffMeasure_image_eq_lintegral_normDet_of_contDiffOn
       ((continuousAt_const.eventually_lt (continuousAt_const.mul hJat) hJxlt).and
         (hJat.eventually_lt continuousAt_const hJxlt)).mono fun y hy ↦ ⟨hy.1.le, hy.2.le⟩
     obtain ⟨u, hu, harea⟩ :=
-      ((hf x hxV).contDiffAt (hV.mem_nhds hxV)).hasStrictFDerivAt one_ne_zero
+      ((hf x hxV).contDiffAt (hV.mem_nhds hxV)).hasStrictFDerivAt_fderiv one_ne_zero
         |>.exists_nhds_area_comparison (hderiv x hx) hc
     refine ⟨u ∩ {y | J x ≤ c * J y ∧ J y ≤ c * J x},
       inter_mem hu hbounds, fun t ht htmeas ↦ ?_⟩

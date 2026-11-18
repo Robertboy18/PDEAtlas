@@ -68,7 +68,7 @@ theorem hasFDerivAt_of_eval {f : E → (α →ᵇ F)} {D : E → E →L[ℝ] (α
       (by simpa only [dist_eq_norm] using (hbound hz).le)
   have hm := (convex_ball x δ).norm_image_sub_le_of_norm_hasFDerivWithin_le
     hd hb (Metric.mem_ball_self hδ) hy
-  simpa only [BoundedContinuousFunction.sub_apply, map_sub, evalCLM_apply,
+  simpa only [sub_apply, map_sub, evalCLM_apply,
     sub_sub_sub_comm] using hm
 
 variable [CompactSpace α]

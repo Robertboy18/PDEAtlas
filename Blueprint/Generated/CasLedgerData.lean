@@ -6726,7 +6726,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Fourier.HilbertTransform.Symmetries",
       "path": "PDE/Analysis/Fourier/HilbertTransform/Symmetries.lean",
-      "line": 73,
+      "line": 74,
       "tactic": "cas",
       "form": "cas",
       "statement": "hilbertTruncation (fun y ↦ f (-y)) x ε = -hilbertTruncation f (-x) ε",
@@ -6734,7 +6734,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "hilbertTruncation_reflect",
         "fullName": "PDE.Analysis.hilbertTruncation_reflect",
-        "line": 65,
+        "line": 66,
         "binders": "(f : ℝ → ℝ) (x ε : ℝ)"
       }
     },
@@ -6743,7 +6743,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Fourier.HilbertTransform.Symmetries",
       "path": "PDE/Analysis/Fourier/HilbertTransform/Symmetries.lean",
-      "line": 85,
+      "line": 86,
       "tactic": "cas",
       "form": "cas",
       "statement": "HasHilbertPV (fun y ↦ f (-y)) x (-h)",
@@ -6751,7 +6751,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "HasHilbertPV.reflect",
         "fullName": "PDE.Analysis.HasHilbertPV.reflect",
-        "line": 76,
+        "line": 77,
         "binders": "{f : ℝ → ℝ} {x h : ℝ} (hf : HasHilbertPV f (-x) h)"
       }
     },
@@ -7661,7 +7661,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Analysis.Integration.FractionalIntegral.HalfOrder.Kernel",
       "path": "PDE/Analysis/Integration/FractionalIntegral/HalfOrder/Kernel.lean",
-      "line": 89,
+      "line": 88,
       "tactic": "cas",
       "form": "cas",
       "statement": "(∫⁻ y in ball x R, f y) ≤ volume (ball x R) ^ (1 / 4 : ℝ) * (∫⁻ y, f y ^ (4 / 3 : ℝ)) ^ (3 / 4 : ℝ)",
@@ -7669,7 +7669,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "lintegral_ball_le_volume_quarter_mul",
         "fullName": "MeasureTheory.lintegral_ball_le_volume_quarter_mul",
-        "line": 83,
+        "line": 82,
         "binders": "{f : ℝ → ℝ≥0∞} (hf : Measurable f) (x R : ℝ)"
       }
     },
@@ -12455,7 +12455,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.SpacetimeReconstruction",
       "path": "PDE/Fluid/Axisymmetric/SpacetimeReconstruction.lean",
-      "line": 327,
+      "line": 328,
       "tactic": "cas",
       "form": "cas",
       "statement": "ContDiff ℝ n (spacetimeAxisymmetricVelocity U Ψ)",
@@ -12463,7 +12463,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "contDiff_spacetimeAxisymmetricVelocity",
         "fullName": "AxisymmetricFlow.contDiff_spacetimeAxisymmetricVelocity",
-        "line": 297,
+        "line": 298,
         "binders": "{n : ℕ∞} {U Ψ : SpaceTime 2 → ℝ} (hU : ContDiff ℝ n U) (hΨ : ContDiff ℝ (n + 1) Ψ)"
       }
     },
@@ -12472,7 +12472,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Fluid.Axisymmetric.SpacetimeReconstruction",
       "path": "PDE/Fluid/Axisymmetric/SpacetimeReconstruction.lean",
-      "line": 330,
+      "line": 331,
       "tactic": "cas",
       "form": "cas",
       "statement": "ContDiff ℝ n (spacetimeAxisymmetricVelocity U Ψ)",
@@ -12480,7 +12480,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "contDiff_spacetimeAxisymmetricVelocity",
         "fullName": "AxisymmetricFlow.contDiff_spacetimeAxisymmetricVelocity",
-        "line": 297,
+        "line": 298,
         "binders": "{n : ℕ∞} {U Ψ : SpaceTime 2 → ℝ} (hU : ContDiff ℝ n U) (hΨ : ContDiff ℝ (n + 1) Ψ)"
       }
     },
@@ -24457,7 +24457,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Parabolic.Heat.MeanValue.Normalization",
       "path": "PDE/Parabolic/Heat/MeanValue/Normalization.lean",
-      "line": 250,
+      "line": 251,
       "tactic": "cas",
       "form": "cas",
       "statement": "Real.sqrt τ ^ n = τ ^ ((n : ℝ) / 2)",
@@ -24465,7 +24465,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "sqrt_pow_eq_rpow_half",
         "fullName": null,
-        "line": 247,
+        "line": 248,
         "binders": "{τ : ℝ} (hτ : 0 < τ)"
       }
     },
@@ -24559,7 +24559,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Parabolic.Heat.Nonlinear.Absorption.Ball",
       "path": "PDE/Parabolic/Heat/Nonlinear/Absorption/Ball.lean",
-      "line": 190,
+      "line": 191,
       "tactic": "cas using",
       "form": "cas using hd.ne'",
       "statement": "-u t x ≤ 16 * (4 * (n : ℝ) + 40) ^ 2 * t / Metric.infDist x Ωᶜ ^ 4",
@@ -24567,7 +24567,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "neg_le_infDist_bound_of_square_equation",
         "fullName": "HeatEquation.Nonlinear.neg_le_infDist_bound_of_square_equation",
-        "line": 169,
+        "line": 170,
         "binders": "{n : ℕ} {Ω : Set (ℝ^n)} {T : ℝ} {u : ℝ → ℝ^n → ℝ} (hΩ : IsOpen Ω) (hne : Ωᶜ.Nonempty) (hc : ContinuousOn u.uncurry (Icc 0 T ×ˢ Ω)) (hs : ContDiffOn ℝ 2 u.uncurry (Ioi 0 ×ˢ Ω)) (heq : ∀ t > 0, ∀ x ∈ Ω, deriv (fun s ↦ u s x) t - laplacian (u t) x = u t x ^ 2) (hinit : ∀ x ∈ Ω, 0 ≤ u 0 x) {t : ℝ} (ht : t ∈ Icc 0 T) {x : ℝ^n} (hx : x ∈ Ω)"
       }
     },
@@ -28010,7 +28010,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Spaces.Sobolev.Inequalities.Poincare.WeightedRay",
       "path": "PDE/Spaces/Sobolev/Inequalities/Poincare/WeightedRay.lean",
-      "line": 93,
+      "line": 94,
       "tactic": "cas [lemmas]",
       "form": "cas [htne, htd, hden]",
       "statement": "IntervalIntegrable (fun t : ℝ ↦ (t ^ 4)⁻¹ * W (t⁻¹ • y)) volume 0 1 ∧ ‖y‖ ^ 2 * (∫ t in (0 : ℝ)..1, (t ^ 4)⁻¹ * W (t⁻¹ • y)) ≤ A / (3 * ‖y‖)",
@@ -28027,7 +28027,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Spaces.Sobolev.Inequalities.Poincare.WeightedRay",
       "path": "PDE/Spaces/Sobolev/Inequalities/Poincare/WeightedRay.lean",
-      "line": 128,
+      "line": 129,
       "tactic": "cas",
       "form": "cas",
       "statement": "IntervalIntegrable (fun t : ℝ ↦ (t ^ 4)⁻¹ * W (t⁻¹ • y)) volume 0 1 ∧ ‖y‖ ^ 2 * (∫ t in (0 : ℝ)..1, (t ^ 4)⁻¹ * W (t⁻¹ • y)) ≤ A / (3 * ‖y‖)",
@@ -28044,7 +28044,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Spaces.Sobolev.Inequalities.Poincare.WeightedRay",
       "path": "PDE/Spaces/Sobolev/Inequalities/Poincare/WeightedRay.lean",
-      "line": 140,
+      "line": 141,
       "tactic": "cas using",
       "form": "cas using ne_of_gt hd",
       "statement": "IntervalIntegrable (fun t : ℝ ↦ (t ^ 4)⁻¹ * W (t⁻¹ • y)) volume 0 1 ∧ ‖y‖ ^ 2 * (∫ t in (0 : ℝ)..1, (t ^ 4)⁻¹ * W (t⁻¹ • y)) ≤ A / (3 * ‖y‖)",
@@ -28061,7 +28061,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Spaces.Sobolev.Inequalities.Poincare.WeightedRay",
       "path": "PDE/Spaces/Sobolev/Inequalities/Poincare/WeightedRay.lean",
-      "line": 207,
+      "line": 208,
       "tactic": "cas",
       "form": "cas",
       "statement": "Integrable (fun p : ℝ × (ℝ^2) ↦ ‖p.2‖ ^ 2 * (((∂[0] u) (p.1 • p.2)) ^ 2 + ((∂[1] u) (p.1 • p.2)) ^ 2) * W p.2) ((volume.restrict (Set.Ioc (0 : ℝ) 1)).prod (volume.restrict H₊)) ∧ Integrable (fun p : ℝ × (ℝ^2) ↦ (p.1 ^ 4)⁻¹ * (‖p.2‖ ^ 2 * (((∂[0] u) p.2) ^ 2 + ((∂[1] u) p.2) ^ 2) * W (p.1⁻¹ • p.2))) ((volume.restrict (Set.Ioc (0 : ℝ) 1)).prod (volume.restrict H₊))",
@@ -28069,7 +28069,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "ray_work_integrable_of_weighted_energy",
         "fullName": null,
-        "line": 145,
+        "line": 146,
         "binders": "(u W Φr Φz : (ℝ^2 → ℝ)) (CP : ℝ) (hu : ContDiff ℝ 1 u) (hWmeas : Measurable W) (hW : ∀ x ∈ H₊, 0 ≤ W x) (hCP : 0 ≤ CP) (hkernel : ∀ y ∈ H₊, y ≠ (0 : (ℝ^2)) → IntervalIntegrable (fun t : ℝ ↦ (t ^ 4)⁻¹ * W (t⁻¹ • y)) volume 0 1) (hweight : ∀ y ∈ H₊, ‖y‖ ^ 2 * (∫ t in (0 : ℝ)..1, (t ^ 4)⁻¹ * W (t⁻¹ • y)) ≤ CP * min (Φr y) (Φz y)) (hr : Integrable (fun x ↦ ((∂[0] u) x) ^ 2 * Φr x) (volume.restrict H₊)) (hz : Integrable (fun x ↦ ((∂[1] u) x) ^ 2 * Φz x) (volume.restrict H₊))"
       }
     },
@@ -28078,7 +28078,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Spaces.Sobolev.Inequalities.Poincare.WeightedRay",
       "path": "PDE/Spaces/Sobolev/Inequalities/Poincare/WeightedRay.lean",
-      "line": 260,
+      "line": 261,
       "tactic": "cas using",
       "form": "cas using ht.1.ne'",
       "statement": "Integrable (fun p : ℝ × (ℝ^2) ↦ ‖p.2‖ ^ 2 * (((∂[0] u) (p.1 • p.2)) ^ 2 + ((∂[1] u) (p.1 • p.2)) ^ 2) * W p.2) ((volume.restrict (Set.Ioc (0 : ℝ) 1)).prod (volume.restrict H₊)) ∧ Integrable (fun p : ℝ × (ℝ^2) ↦ (p.1 ^ 4)⁻¹ * (‖p.2‖ ^ 2 * (((∂[0] u) p.2) ^ 2 + ((∂[1] u) p.2) ^ 2) * W (p.1⁻¹ • p.2))) ((volume.restrict (Set.Ioc (0 : ℝ) 1)).prod (volume.restrict H₊))",
@@ -28086,7 +28086,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "ray_work_integrable_of_weighted_energy",
         "fullName": null,
-        "line": 145,
+        "line": 146,
         "binders": "(u W Φr Φz : (ℝ^2 → ℝ)) (CP : ℝ) (hu : ContDiff ℝ 1 u) (hWmeas : Measurable W) (hW : ∀ x ∈ H₊, 0 ≤ W x) (hCP : 0 ≤ CP) (hkernel : ∀ y ∈ H₊, y ≠ (0 : (ℝ^2)) → IntervalIntegrable (fun t : ℝ ↦ (t ^ 4)⁻¹ * W (t⁻¹ • y)) volume 0 1) (hweight : ∀ y ∈ H₊, ‖y‖ ^ 2 * (∫ t in (0 : ℝ)..1, (t ^ 4)⁻¹ * W (t⁻¹ • y)) ≤ CP * min (Φr y) (Φz y)) (hr : Integrable (fun x ↦ ((∂[0] u) x) ^ 2 * Φr x) (volume.restrict H₊)) (hz : Integrable (fun x ↦ ((∂[1] u) x) ^ 2 * Φz x) (volume.restrict H₊))"
       }
     },
@@ -28095,7 +28095,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Spaces.Sobolev.Inequalities.Poincare.WeightedRay",
       "path": "PDE/Spaces/Sobolev/Inequalities/Poincare/WeightedRay.lean",
-      "line": 719,
+      "line": 720,
       "tactic": "cas using",
       "form": "cas using hyne",
       "statement": "IntegrableOn (weightedPoincareRayKernel W) (H₊ ∩ Metric.ball (0 : (ℝ^2)) R)",
@@ -28103,7 +28103,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "integrableOn_weightedPoincareRayKernel_of_decay",
         "fullName": "SobolevSpace.Weighted.integrableOn_weightedPoincareRayKernel_of_decay",
-        "line": 691,
+        "line": 692,
         "binders": "(W : (ℝ^2 → ℝ)) (A R : ℝ) (hWmeas : Measurable W) (hW : ∀ x ∈ H₊, 0 ≤ W x) (hdecay : ∀ x ∈ H₊, W x ≤ A / (1 + ‖x‖) ^ 4)"
       }
     },
@@ -28112,7 +28112,7 @@ def json : String := r####"
       "library": "PDE",
       "module": "PDE.Spaces.Sobolev.Inequalities.Poincare.WeightedRay",
       "path": "PDE/Spaces/Sobolev/Inequalities/Poincare/WeightedRay.lean",
-      "line": 888,
+      "line": 889,
       "tactic": "cas",
       "form": "cas",
       "statement": "weightedPoincareRayKernel W y ≤ CP * min (Φr y) (Φz y)",
@@ -28120,7 +28120,7 @@ def json : String := r####"
         "kind": "theorem",
         "name": "weightedPoincareRayKernel_le_of_exterior_floor",
         "fullName": "SobolevSpace.Weighted.weightedPoincareRayKernel_le_of_exterior_floor",
-        "line": 866,
+        "line": 867,
         "binders": "(W Φr Φz : (ℝ^2 → ℝ)) (A CP R c : ℝ) (hCP : 0 ≤ CP) (hR : 0 < R) (hc : 0 ≤ c) (hWmeas : Measurable W) (hW : ∀ x ∈ H₊, 0 ≤ W x) (hdecay : ∀ x ∈ H₊, W x ≤ A / (1 + ‖x‖) ^ 4) (hfloor : ∀ y ∈ H₊, R ≤ ‖y‖ → c ≤ min (Φr y) (Φz y)) (hbudget : A ≤ 3 * CP * R * c) (y : (ℝ^2)) (hy : y ∈ H₊) (hyR : R ≤ ‖y‖)"
       }
     },

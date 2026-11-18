@@ -111,15 +111,15 @@ theorem enorm_le_iSup_mul_of_odd (hD : ∀ x ∈ D, coordinateReflection i x ∈
     have hpos : ‖y i‖ₑ ^ (α : ℝ) ≠ 0 := by
       rcases eq_or_ne (α : ℝ) 0 with hα | hα
       · simp [hα]
-      · exact (ENNReal.rpow_pos (enorm_pos.2 hy.2.ne') enorm_ne_top).ne'
-    have htop : ‖y i‖ₑ ^ (α : ℝ) ≠ ∞ := ENNReal.rpow_ne_top_of_nonneg α.2 enorm_ne_top
+      · exact (ENNReal.rpow_pos (eNorm_pos.2 hy.2.ne') eNorm_ne_top).ne'
+    have htop : ‖y i‖ₑ ^ (α : ℝ) ≠ ∞ := ENNReal.rpow_ne_top_of_nonneg α.2 eNorm_ne_top
     exact (ENNReal.div_le_iff hpos htop).1
       (le_iSup₂ (f := fun y _ ↦ ‖f y‖ₑ / ‖y i‖ₑ ^ (α : ℝ)) y hy)
   rcases lt_trichotomy (x i) 0 with hneg | hzero | hpos
   · have hσ : coordinateReflection i x ∈ D ∩ {y | 0 < y i} :=
       ⟨hD x hx, by simpa using hneg⟩
     have := key _ hσ
-    rwa [hf x, enorm_neg, coordinateReflection_apply_same, enorm_neg] at this
+    rwa [hf x, eNorm_neg, coordinateReflection_apply_same, eNorm_neg] at this
   · simp [odd_apply_eq_zero hf hzero]
   · exact key x ⟨hx, hpos⟩
 
@@ -142,7 +142,7 @@ theorem directionalSeminorm_le_max_of_odd (hD : ∀ x ∈ D, coordinateReflectio
     intro x hx z hz hxi hzi
     have hsum : ‖x i‖ₑ ^ (α : ℝ) + ‖z i‖ₑ ^ (α : ℝ) ≤
         2 ^ (1 - (α : ℝ)) * edist (x i) (z i) ^ (α : ℝ) := by
-      rw [Real.enorm_eq_ofReal_abs, Real.enorm_eq_ofReal_abs, edist_dist, Real.dist_eq,
+      rw [Real.eNorm_eq_ofReal_abs, Real.eNorm_eq_ofReal_abs, edist_dist, Real.dist_eq,
         ENNReal.ofReal_rpow_of_nonneg (abs_nonneg _) (NNReal.coe_nonneg α),
         ENNReal.ofReal_rpow_of_nonneg (abs_nonneg _) (NNReal.coe_nonneg α),
         ENNReal.ofReal_rpow_of_nonneg (abs_nonneg _) (NNReal.coe_nonneg α),
@@ -156,8 +156,8 @@ theorem directionalSeminorm_le_max_of_odd (hD : ∀ x ∈ D, coordinateReflectio
       rw [habs]
       exact rpow_add_rpow_le_two_rpow_mul (abs_nonneg _) (abs_nonneg _) (NNReal.coe_nonneg α) hα₁
     calc edist (f x) (f z) ≤ ‖f x‖ₑ + ‖f z‖ₑ := by
-          rw [edist_eq_enorm_sub]
-          exact enorm_sub_le
+          rw [eDist_eq_eNorm_sub]
+          exact eNorm_sub_le
       _ ≤ M * ‖x i‖ₑ ^ (α : ℝ) + M * ‖z i‖ₑ ^ (α : ℝ) :=
           add_le_add (enorm_le_iSup_mul_of_odd hD hf hx) (enorm_le_iSup_mul_of_odd hD hf hz)
       _ = M * (‖x i‖ₑ ^ (α : ℝ) + ‖z i‖ₑ ^ (α : ℝ)) := by ring

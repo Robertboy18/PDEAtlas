@@ -36,7 +36,7 @@ theorem continuousOn_integral_sq_of_cylinder_closure
   apply continuousOn_setIntegral_of_compact_interval hΩ.measurableSet
     hbounded.isCompact_closure
     (measure_ne_top_of_subset subset_closure hbounded.isCompact_closure.measure_lt_top.ne)
-  exact (hv.comp continuous_swap.continuousOn (fun _ hp ↦ ⟨hp.2, hp.1⟩)).pow 2
+  exact (hv.comp continuous_swap.continuousOn (fun _ hp ↦ ⟨And.right hp, And.left hp⟩)).pow 2
 
 /-- Differentiate the square integral using only joint C¹ closure data
 and continuity of the prescribed values on the closed cylinder. -/

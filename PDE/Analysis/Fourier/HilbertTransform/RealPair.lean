@@ -141,7 +141,7 @@ theorem IsHilbertPair.integral_sq_Ioo_le_of_even_sq
       (.of_forall fun x ↦ sq_nonneg (v x)) (.of_forall fun _ hx ↦ hx.1)
   have htruncate : (∫ x in Ioi 0, f x ^ 2) = ∫ x in Ioo 0 L, f x ^ 2 := by
     apply setIntegral_eq_of_subset_of_forall_sdiff_eq_zero measurableSet_Ioi
-      (fun _ hx ↦ hx.1)
+      (fun _ ↦ And.left)
     intro x hx
     rw [hsupport x (not_lt.mp fun hlt ↦ hx.2 ⟨hx.1, hlt⟩), zero_pow (by decide : 2 ≠ 0)]
   rw [htruncate] at heq
@@ -171,12 +171,12 @@ theorem IsHilbertPair.eLpNorm_eq (h : IsHilbertPair omega v) :
   have hnorm {g : ℝ → ℝ} (hg : MemLp g 2 volume) (F : ComplexL2)
       (hF : (fun x ↦ (g x : ℂ)) =ᵐ[volume] F) :
       eLpNorm g 2 volume = ‖F‖ₑ := by
-    rw [Lp.enorm_def]
+    rw [Lp.eNorm_def]
     apply eLpNorm_congr_norm_ae hg.aestronglyMeasurable (Lp.aestronglyMeasurable F)
     filter_upwards [hF] with x hx
     rw [← hx]
     simp only [Complex.norm_real, Real.norm_eq_abs]
-  rw [hnorm hright _ hv, hnorm hleft _ homega, hilbertTransform.enorm_map]
+  rw [hnorm hright _ hv, hnorm hleft _ homega, hilbertTransform.eNorm_map]
 
 /-- Two real representatives of the Hilbert transform of the same input agree
 almost everywhere. -/

@@ -111,9 +111,9 @@ namespace IsC2FieldOn
 /-- The spatial derivative of a field with `‖D²v‖ ≤ K₂` is `K₂`-Lipschitz. -/
 theorem lipschitzWith_deriv (hv : IsC2FieldOn v Dv D2v a b K K₂) {t : ℝ} (ht : t ∈ Icc a b) :
     LipschitzWith K₂ (Dv t) :=
-  lipschitzWith_of_nnnorm_fderiv_le (fun x ↦ (hv.hasFDerivAt_deriv t ht x).differentiableAt)
+  lipschitzWith_of_nnNorm_fderiv_le (fun x ↦ (hv.hasFDerivAt_deriv t ht x).differentiableAt)
     fun x ↦ by
-      rw [(hv.hasFDerivAt_deriv t ht x).fderiv, ← NNReal.coe_le_coe, coe_nnnorm]
+      rw [(hv.hasFDerivAt_deriv t ht x).fderiv, ← NNReal.coe_le_coe, coe_nnNorm]
       exact hv.norm_deriv₂_le t ht x
 
 variable [FiniteDimensional ℝ E]
@@ -139,7 +139,7 @@ theorem isLipschitzFieldOn_secondVariation (hv : IsC2FieldOn v Dv D2v a b K K₂
   refine ⟨?_, fun r hr ↦ LipschitzWith.of_dist_le_mul fun H H' ↦ ?_⟩
   · have hA := (ContinuousLinearMap.compL ℝ E E E).continuous.comp_continuousOn
       (hv.continuousOn_deriv_flowOn ht x)
-    exact ((hA.comp continuousOn_fst fun _ hp ↦ hp.1).clm_comp continuousOn_snd).add
+    exact ((hA.comp continuousOn_fst fun _ ↦ And.left).clm_comp continuousOn_snd).add
       ((hv.continuousOn_forcing ht x).comp continuousOn_fst fun _ hp ↦ hp.1)
   · rw [dist_eq_norm, dist_eq_norm, add_sub_add_right_eq_sub, ← ContinuousLinearMap.comp_sub]
     exact (ContinuousLinearMap.opNorm_comp_le _ _).trans (mul_le_mul_of_nonneg_right

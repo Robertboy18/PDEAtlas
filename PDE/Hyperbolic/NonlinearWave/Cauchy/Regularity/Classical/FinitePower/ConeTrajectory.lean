@@ -79,7 +79,7 @@ theorem exists_c2_cone_trajectory_of_lipschitz {f : ℝ → ℝ} (hf : ContDiff 
           ext z
           rfl
         ext z
-        simp only [BoundedContinuousFunction.smul_apply, restrictCone_apply,
+        simp only [smul_apply, restrictCone_apply,
           duhamelOperator_descend, hN, smul_eq_mul]
         change p.1 ^ 2 * (coneTime q ^ 2 * _) = (p.1 * coneTime q) ^ 2 * _
         cas
@@ -90,7 +90,7 @@ theorem exists_c2_cone_trajectory_of_lipschitz {f : ℝ → ℝ} (hf : ContDiff 
     rw [hrestrict hp q, restrictCone_apply, descend_vertex_right]
   let a : ℝ × ℝ^3 → ℝ := fun p ↦ duhamelOperator (N (ψ (A p))) vertex
   have hAc : ContDiff ℝ 2 A := contDiff_fst.prodMk (contDiff_coneField hH)
-  have hw := hψreg.comp hAc.contDiffOn (fun _ hp ↦ hp)
+  have hw := hψreg.comp (s := {p | |p.1| < T}) hAc.contDiffOn (fun _ hp ↦ hp)
   have ha := duhamelOperator.contDiff.comp_contDiffOn
     ((contDiff_composeCompact hf).comp_contDiffOn hw)
   refine ⟨v, a, ?_, ?_, ?_, ?_, ?_⟩

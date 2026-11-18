@@ -44,13 +44,13 @@ theorem tendstoUniformlyOn_integral_of_tendsto_L1 {E ι : Type*} [NormedAddCommG
   have hGi : IntervalIntegrable G volume a t :=
     (intervalIntegrable_iff_integrableOn_Ioc_of_le ht.1).mpr
       (hG.mono_measure (Measure.restrict_mono_set volume hsub))
-  rw [edist_comm, edist_eq_enorm_sub, ← intervalIntegral.integral_sub hFi hGi,
+  rw [edist_comm, eDist_eq_eNorm_sub, ← intervalIntegral.integral_sub hFi hGi,
     intervalIntegral.integral_of_le ht.1]
   calc
-    _ ≤ ∫⁻ r in Ioc a t, ‖(F i - G) r‖ₑ := enorm_integral_le_lintegral_enorm _
+    _ ≤ ∫⁻ r in Ioc a t, ‖(F i - G) r‖ₑ := eNorm_integral_le_lintegral_eNorm _
     _ ≤ ∫⁻ r in Ioc a b, ‖(F i - G) r‖ₑ := lintegral_mono_set hsub
     _ = eLpNorm (F i - G) 1 (volume.restrict (Ioc a b)) :=
-      (eLpNorm_one_eq_lintegral_enorm ((hF i).sub hG).aestronglyMeasurable).symm
+      (eLpNorm_one_eq_lintegral_eNorm ((hF i).sub hG).aestronglyMeasurable).symm
     _ < ε := hi
 
 /-- The Cauchy velocity equation evaluated against a fixed H¹ test,

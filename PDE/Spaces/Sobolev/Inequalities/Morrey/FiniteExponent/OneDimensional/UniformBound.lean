@@ -41,9 +41,9 @@ theorem exists_Icc_enorm_le_eLpNorm {f : ℝ → ℝ} (hf : Continuous f)
     hf.aestronglyMeasurable
   obtain ⟨y, hy, hmean⟩ := exists_le_setLAverage
     (by rw [hvolume]; exact one_ne_zero)
-    (by rw [hvolume]; exact ENNReal.one_ne_top) hf.enorm.aemeasurable
+    (by rw [hvolume]; exact ENNReal.one_ne_top) hf.eNorm.aemeasurable
   refine ⟨y, hy, hmean.trans ?_⟩
-  rw [setLAverage_eq, ← eLpNorm_one_eq_lintegral_enorm hmeas, hvolume, div_one]
+  rw [setLAverage_eq, ← eLpNorm_one_eq_lintegral_eNorm hmeas, hvolume, div_one]
   have hcompare := eLpNorm_le_eLpNorm_mul_rpow_measure_univ hp hmeas
   rw [Measure.restrict_apply_univ, hvolume, ENNReal.one_rpow, mul_one] at hcompare
   exact hcompare.trans (eLpNorm_mono_measure _ Measure.restrict_le_self)
@@ -62,14 +62,14 @@ theorem enorm_apply_le_eLpNorm_add_eLpNorm_deriv {f : ℝ → ℝ}
     simpa using ENNReal.rpow_le_rpow (ENNReal.ofReal_le_one.mpr hdist)
       (morreyExponent_one_pos hp).le
   have hosc' : ‖f x - f y‖ₑ ≤ eLpNorm (deriv f) p volume := by
-    rw [enorm_sub_rev]
+    rw [eNorm_sub_rev]
     calc
       _ ≤ _ := hosc
       _ ≤ eLpNorm (deriv f) p volume * 1 := by gcongr
       _ = _ := mul_one _
   calc
     ‖f x‖ₑ = ‖f y + (f x - f y)‖ₑ := by rw [add_sub_cancel]
-    _ ≤ ‖f y‖ₑ + ‖f x - f y‖ₑ := enorm_add_le _ _
+    _ ≤ ‖f y‖ₑ + ‖f x - f y‖ₑ := eNorm_add_le _ _
     _ ≤ _ := add_le_add hbase hosc'
 
 /-- A `C¹` function and its derivative in `Lᵖ(ℝ)`, `p > 1`, control its value
@@ -82,6 +82,6 @@ theorem norm_apply_le_eLpNorm_toReal_add_deriv {f : ℝ → ℝ}
     (ENNReal.add_ne_top.mpr ⟨hbase.eLpNorm_ne_top, hderiv.eLpNorm_ne_top⟩)
     (enorm_apply_le_eLpNorm_add_eLpNorm_deriv hf hp x)
   simpa only [ENNReal.toReal_add hbase.eLpNorm_ne_top hderiv.eLpNorm_ne_top,
-    toReal_enorm] using h
+    toReal_eNorm] using h
 
 end SobolevSpace

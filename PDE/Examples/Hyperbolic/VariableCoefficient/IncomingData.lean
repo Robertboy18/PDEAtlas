@@ -78,7 +78,7 @@ theorem kirchhoffPotential_incomingData_pos :
   have he : 0 < incomingData ((3 : ℝ) • (e : ℝ^3)) := by
     apply incomingData_pos
     norm_num [e, PiLp.single_apply]
-  have hpos := integral_pos_of_integrable_nonneg_nonzero hc hi
+  have hpos := integral_pos_of_integrable_nonneg_ne_zero hc hi
     (fun w ↦ incomingData_nonneg _) he.ne'
   rw [kirchhoffPotential_timeSpaceCons, unitSphereAverage]
   simp only [zero_add]

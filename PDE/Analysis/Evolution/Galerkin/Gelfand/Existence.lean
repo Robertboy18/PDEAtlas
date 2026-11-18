@@ -70,7 +70,7 @@ private theorem exists_gelfandGalerkin_nonauto_on_Icc_of_bounds
       (∀ t ∈ Set.Icc a b, ∀ v : S,
         inner ℝ (T.inclusion (du t : V)) (T.inclusion (v : V)) +
           B t (u t : V) (v : V) = ell t (v : V)) := by
-  let : CompleteSpace S := FiniteDimensional.complete ℝ S
+  let : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
   have hPL : IsPicardLindelof (gelfandGalerkinVectorField T S B ell)
       (tmin := a) (tmax := b) ⟨a, le_rfl, hab⟩ u₀ R 0 L
       (gelfandGalerkinLipschitzBound T S MB) := by
@@ -151,7 +151,7 @@ theorem exists_gelfandGalerkin_nonauto_on_Icc
       (∀ t ∈ Set.Icc a b, ∀ v : S,
         inner ℝ (T.inclusion (du t : V)) (T.inclusion (v : V)) +
           B t (u t : V) (v : V) = ell t (v : V)) := by
-  let : CompleteSpace S := FiniteDimensional.complete ℝ S
+  let : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
   let q : ℝ := ‖(trialMassEquiv T S).symm.toContinuousLinearMap‖
   have hq : 0 ≤ q := norm_nonneg ((trialMassEquiv T S).symm.toContinuousLinearMap : S →L[ℝ] S)
   have hlen : 0 ≤ b - a := sub_nonneg.mpr hab
@@ -213,7 +213,7 @@ theorem exists_gelfandGalerkin_on_Icc
       (∀ t ∈ Set.Icc a b, ∀ v : S,
         inner ℝ (T.inclusion (du t : V)) (T.inclusion (v : V)) +
           B (u t : V) (v : V) = ell t (v : V)) := by
-  let : CompleteSpace S := FiniteDimensional.complete ℝ S
+  let : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
   obtain ⟨u, hu₀, hu⟩ := exists_affineLinearEvolution_on_Icc (gelfandGalerkinOperator T S B)
     (gelfandGalerkinForcing T S ell) hab
     ((trialMassEquiv T S).symm.continuous.comp_continuousOn

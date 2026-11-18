@@ -685,7 +685,7 @@ theorem abs_setIntegral_horizontalVelocityKernel_le {x : ℝ^2} (hx : 0 < x 0) {
   have hmain : ‖∫ s in coordinateRectangle a b (-L) L, f s‖ₑ ≤
       ENNReal.ofReal ((Mu + Md) * J) := by
     calc ‖∫ s in coordinateRectangle a b (-L) L, f s‖ₑ
-        ≤ ∫⁻ s in coordinateRectangle a b (-L) L, ‖f s‖ₑ := enorm_integral_le_lintegral_enorm _
+        ≤ ∫⁻ s in coordinateRectangle a b (-L) L, ‖f s‖ₑ := eNorm_integral_le_lintegral_eNorm _
       _ ≤ ∫⁻ s in Rp ∪ Rm, ‖f s‖ₑ := lintegral_mono_set hsub
       _ ≤ (∫⁻ s in Rp, ‖f s‖ₑ) + ∫⁻ s in Rm, ‖f s‖ₑ := lintegral_union_le _ _ _
       _ ≤ (∫⁻ s in Rp, ENNReal.ofReal Mu * ENNReal.ofReal (axisKernel s)) +
@@ -693,10 +693,10 @@ theorem abs_setIntegral_horizontalVelocityKernel_le {x : ℝ^2} (hx : 0 < x 0) {
           refine add_le_add (setLIntegral_mono' (measurableSet_coordinateRectangle _ _ _ _)
             fun s hs ↦ ?_) (setLIntegral_mono' (measurableSet_coordinateRectangle _ _ _ _)
             fun s hs ↦ ?_)
-          · rw [hf, Real.enorm_eq_ofReal_abs, ← ENNReal.ofReal_mul hMu, abs_mul, hKp s hs]
+          · rw [hf, Real.eNorm_eq_ofReal_abs, ← ENNReal.ofReal_mul hMu, abs_mul, hKp s hs]
             exact ENNReal.ofReal_le_ofReal ((mul_comm _ _).trans_le (mul_le_mul_of_nonneg_right
               (hu s hs) (axisKernel_nonneg (ha.trans hs.1.1) hs.2.1)))
-          · rw [hf, Real.enorm_eq_ofReal_abs, ← ENNReal.ofReal_mul hMd, abs_mul]
+          · rw [hf, Real.eNorm_eq_ofReal_abs, ← ENNReal.ofReal_mul hMd, abs_mul]
             exact ENNReal.ofReal_le_ofReal ((mul_comm _ _).trans_le
               (mul_le_mul_of_nonneg_right (hd s hs) (abs_nonneg _)))
       _ = ENNReal.ofReal ((Mu + Md) * J) := by
@@ -705,7 +705,7 @@ theorem abs_setIntegral_horizontalVelocityKernel_le {x : ℝ^2} (hx : 0 < x 0) {
             ← ENNReal.ofReal_mul hMu, ← ENNReal.ofReal_mul hMd,
             ← ENNReal.ofReal_add (mul_nonneg hMu hJ0) (mul_nonneg hMd hJ0)]
           ring_nf
-  rw [Real.enorm_eq_ofReal_abs] at hmain
+  rw [Real.eNorm_eq_ofReal_abs] at hmain
   rw [mul_assoc]
   exact mul_le_mul_of_nonneg_left ((ENNReal.ofReal_le_ofReal_iff (by positivity)).1 hmain) hx.le
 

@@ -57,7 +57,8 @@ private theorem continuousOn_similarity_coordinates (m : ℝ) :
     ContinuousOn (fun p : ℝ × ℝ^n ↦ (p.1, p.1 ^ similarityBeta n m • p.2))
       (Ioi 0 ×ˢ univ) := by
   exact continuousOn_fst.prodMk
-    ((continuousOn_fst.rpow_const (fun p hp ↦ Or.inl (ne_of_gt hp.1))).smul continuousOn_snd)
+    ((continuousOn_fst.rpow_const (fun p hp ↦ Or.inl (ne_of_gt (And.left hp)))).smul
+      continuousOn_snd)
 
 private theorem continuousOn_similarity_velocity (m : ℝ) :
     ContinuousOn
@@ -66,7 +67,7 @@ private theorem continuousOn_similarity_velocity (m : ℝ) :
       (Ioi 0 ×ˢ univ) := by
   exact continuousOn_const.prodMk
     ((continuousOn_const.mul
-      (continuousOn_fst.rpow_const (fun p hp ↦ Or.inl (ne_of_gt hp.1)))).smul
+      (continuousOn_fst.rpow_const (fun p hp ↦ Or.inl (ne_of_gt (And.left hp))))).smul
         continuousOn_snd)
 
 /-- Joint continuity of the integrand differentiated on the fixed profile domain. -/

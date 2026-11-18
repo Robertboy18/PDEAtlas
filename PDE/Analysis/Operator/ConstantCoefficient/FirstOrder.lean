@@ -52,7 +52,7 @@ theorem firstOrderPolynomialMatrix_apply
     (A : ι → Matrix κ κ R) (i j : κ) (u : M) :
     commutingPolynomialEval D hD (firstOrderPolynomialMatrix A i j) u =
       ∑ k, A k i j • D k u := by
-  simp [firstOrderPolynomialMatrix, map_sum, map_mul, Module.End.mul_apply]
+  simp [firstOrderPolynomialMatrix, map_sum, map_mul]
 
 /-- Every component of a constant first-order system satisfies its determinant
 operator equation. The entries act on arbitrary module elements. -/

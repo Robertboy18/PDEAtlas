@@ -52,16 +52,16 @@ theorem tendsto_eLpNorm_indicator_compl_closedBall
   have hlin : Filter.Tendsto (fun m ↦ ∫⁻ x, F m x) Filter.atTop (𝓝 0) := by
     simpa using tendsto_lintegral_filter_of_dominated_convergence' (F := F) (f := fun _ ↦ 0)
       (fun x ↦ ‖f x‖ₑ ^ p.toReal)
-      (.of_forall fun m ↦ ENNReal.continuous_rpow_const.measurable.comp_aemeasurable (hsf m).enorm)
+      (.of_forall fun m ↦ ENNReal.continuous_rpow_const.measurable.comp_aemeasurable (hsf m).eNorm)
       (.of_forall fun m ↦ .of_forall fun x ↦
-        ENNReal.rpow_le_rpow (enorm_indicator_le_enorm_self _ _) hp_pos.le)
-      (lintegral_rpow_enorm_lt_top_of_eLpNorm_lt_top hp0 hp hf.eLpNorm_lt_top).ne
+        ENNReal.rpow_le_rpow (eNorm_indicator_le_eNorm_self _ _) hp_pos.le)
+      (lintegral_rpow_eNorm_lt_top_of_eLpNorm_lt_top hp0 hp hf.eLpNorm_lt_top).ne
       (ae_of_all _ fun x ↦ tendsto_const_nhds.congr' <| by
         filter_upwards [(tendsto_natCast_atTop_atTop (R := ℝ)).eventually_ge_atTop ‖x‖]
           with m hm
         simp [F, s, hm, ENNReal.zero_rpow_of_pos hp_pos])
   have hnorm (m : ℕ) : eLpNorm ((s m).indicator f) p volume = (∫⁻ x, F m x) ^ p.toReal⁻¹ := by
-    simpa only [F, one_div] using eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp (hsf m)
+    simpa only [F, one_div] using eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp (hsf m)
   change Filter.Tendsto (fun m ↦ eLpNorm ((s m).indicator f) p volume) Filter.atTop (𝓝 0)
   simp_rw [hnorm]
   simpa only [ENNReal.zero_rpow_of_pos (inv_pos.2 hp_pos)] using

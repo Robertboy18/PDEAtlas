@@ -541,7 +541,7 @@ private theorem norm_iteratedFDeriv_sliceRightRemainderSupported_le
           (fiberIteratedFDeriv i Φ)
           (continuous_fiberIteratedFDeriv_uncurry i Φ) x h)
       ⟨y, hy⟩
-  simpa only [BoundedContinuousFunction.sub_apply,
+  simpa only [sub_apply,
     BoundedContinuousFunction.compactCurry_apply,
     BoundedContinuousFunction.compactCurryFDeriv_apply,
     fiberRemainderNorm] using heval

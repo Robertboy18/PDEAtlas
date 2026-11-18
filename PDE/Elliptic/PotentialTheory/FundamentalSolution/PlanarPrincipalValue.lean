@@ -213,7 +213,7 @@ theorem hasPrincipalValueAt_hessianKernel_of_holder (i j : Fin 2) {U : Set (ℝ^
     by_cases hyb : y ∈ ball x r
     · rw [indicator_of_mem hyb,
         indicator_of_mem (show y ∈ ball x r ∩ {y | ε < ‖x - y‖} from ⟨hyb, hε.2⟩)]
-    · rw [indicator_of_notMem hyb, indicator_of_notMem (fun h ↦ hyb h.1)]
+    · rw [indicator_of_notMem hyb, indicator_of_notMem (fun h ↦ hyb (And.left h))]
   have heq : ∀ᶠ ε in 𝓝[>] (0 : ℝ), PDE.Analysis.principalValueTruncation U
       (fun x y ↦ hessianKernel i j (x - y)) f x ε =
         (∫ y in ball x r ∩ {y | ε < ‖x - y‖}, k y * (f y - f x)) +

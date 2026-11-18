@@ -158,7 +158,7 @@ theorem lintegral_shearRowRemainder_eq :
   have hF : Measurable (Function.uncurry F) := by
     refine Measurable.indicator ?_ (measurableSet_lt
       (measurable_horizontalShearMap_zero.comp measurable_fst) measurable_snd)
-    exact (measurable_shearDifference.comp (measurable_snd.prodMk measurable_fst)).enorm.mul
+    exact (measurable_shearDifference.comp (measurable_snd.prodMk measurable_fst)).eNorm.mul
       ((measurable_snd.const_mul 2).pow_const _).ennreal_ofReal
   have hrow : ∀ q, shearRowRemainder q = ∫⁻ p in Ioo 0 1, F q p := by
     intro q

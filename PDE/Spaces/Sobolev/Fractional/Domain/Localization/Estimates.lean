@@ -57,7 +57,7 @@ theorem lintegral_sq_mul_cutoffKernel_le
       (fun p : ℝ^n × ℝ^n ↦
         (‖u p.2‖₊ : ℝ≥0∞) ^ 2 * ENNReal.ofReal (cutoffKernel n s (p.1 - p.2)))
       (gagliardoProductMeasure n Ω) :=
-    ((hu.comp_quasiMeasurePreserving Measure.quasiMeasurePreserving_snd).nnnorm.aemeasurable
+    ((hu.comp_quasiMeasurePreserving Measure.quasiMeasurePreserving_snd).nnNorm.aemeasurable
       |>.coe_nnreal_ennreal.pow_const 2).mul
         ((measurable_cutoffKernel.comp (by fun_prop)).ennreal_ofReal.aemeasurable)
   rw [gagliardoProductMeasure, lintegral_prod_symm _ hmeas]
@@ -72,7 +72,7 @@ theorem lintegral_sq_mul_cutoffKernel_le
       apply lintegral_mono
       intro y
       exact mul_le_mul_of_nonneg_left (lintegral_cutoffKernel_sub_le y) zero_le
-    _ = _ := lintegral_mul_const'' _ (hu.nnnorm.aemeasurable.coe_nnreal_ennreal.pow_const 2)
+    _ = _ := lintegral_mul_const'' _ (hu.nnNorm.aemeasurable.coe_nnreal_ennreal.pow_const 2)
 
 /-- A quantitative bound for the squared intrinsic seminorm of a cutoff product. -/
 theorem gagliardoSq_mul_le
@@ -82,7 +82,7 @@ theorem gagliardoSq_mul_le
       ENNReal.ofReal (2 * (M : ℝ) ^ 2) * gagliardoSq n s Ω u +
         ENNReal.ofReal (2 * ((L : ℝ) ^ 2 + 4 * (M : ℝ) ^ 2)) *
           ((∫⁻ y in Ω, (‖u y‖₊ : ℝ≥0∞) ^ 2) * cutoffMass n s) := by
-  have hdq := (aestronglyMeasurable_diffQuot (s := s) (p := 2) hu).nnnorm.aemeasurable
+  have hdq := (aestronglyMeasurable_diffQuot (s := s) (p := 2) hu).nnNorm.aemeasurable
     |>.coe_nnreal_ennreal.pow_const 2
   unfold gagliardoSq
   calc
@@ -99,7 +99,7 @@ theorem gagliardoSq_mul_le
         ENNReal.ofReal_mul (by positivity : 0 ≤ 2 * (M : ℝ) ^ 2),
         ENNReal.ofReal_mul (by positivity : 0 ≤ 2 * ((L : ℝ) ^ 2 + 4 * (M : ℝ) ^ 2)),
         ENNReal.ofReal_mul (sq_nonneg ‖u p.2‖)] at h
-      simpa only [ENNReal.ofReal_pow (norm_nonneg _), ofReal_norm, enorm_eq_nnnorm,
+      simpa only [ENNReal.ofReal_pow (norm_nonneg _), ofReal_norm, eNorm_eq_nnNorm,
         Prod.mk.eta] using h
     _ ≤ _ := by
       rw [lintegral_add_left' (hdq.const_mul _),
@@ -120,7 +120,7 @@ theorem lintegral_enorm_rpow_mul_cutoffKernel_le {F : Type*} [NormedAddCommGroup
       (fun z : ℝ^n × ℝ^n ↦
         ‖u z.2‖ₑ ^ p * ENNReal.ofReal (cutoffKernel n s (z.1 - z.2) (p := p)))
       (gagliardoProductMeasure n Ω) :=
-    ((hu.comp_quasiMeasurePreserving Measure.quasiMeasurePreserving_snd).enorm.pow_const p).mul
+    ((hu.comp_quasiMeasurePreserving Measure.quasiMeasurePreserving_snd).eNorm.pow_const p).mul
       (((measurable_cutoffKernel p).comp (by fun_prop)).ennreal_ofReal.aemeasurable)
   rw [gagliardoProductMeasure, lintegral_prod_symm _ hmeas]
   calc
@@ -134,7 +134,7 @@ theorem lintegral_enorm_rpow_mul_cutoffKernel_le {F : Type*} [NormedAddCommGroup
       apply lintegral_mono
       intro y
       exact mul_le_mul_of_nonneg_left (lintegral_cutoffKernel_sub_le y p) zero_le
-    _ = _ := lintegral_mul_const'' _ (hu.enorm.pow_const p)
+    _ = _ := lintegral_mul_const'' _ (hu.eNorm.pow_const p)
 
 /-- The fractional power integral of a scalar product has a uniform quantitative bound. -/
 theorem lintegral_enorm_diffQuot_smul_rpow_le {F : Type*}
@@ -150,7 +150,7 @@ theorem lintegral_enorm_diffQuot_smul_rpow_le {F : Type*}
               ∂gagliardoProductMeasure n Ω) +
           ENNReal.ofReal ((L : ℝ) ^ p.toReal + (2 * (M : ℝ)) ^ p.toReal) *
             ((∫⁻ y in Ω, ‖u y‖ₑ ^ p.toReal) * cutoffMass n s (p := p.toReal))) := by
-  have hdq := (aestronglyMeasurable_diffQuot (s := s) (p := p) hu).enorm.pow_const p.toReal
+  have hdq := (aestronglyMeasurable_diffQuot (s := s) (p := p) hu).eNorm.pow_const p.toReal
   calc
     _ ≤ ∫⁻ z, (2 : ℝ≥0∞) ^ p.toReal *
         (ENNReal.ofReal ((M : ℝ) ^ p.toReal) *
@@ -197,10 +197,10 @@ theorem memGagliardo_smul_cutoff {F : Type*} [NormedAddCommGroup F] [NormedSpace
   have hmeas := aestronglyMeasurable_diffQuot (s := s) (p := p) hb.aestronglyMeasurable
   refine ⟨hb, ?_⟩
   rw [memLp_iff]
-  apply (eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top hp0 hp hmeas).2
-  have hu0 := (eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top hp0 hp
+  apply (eLpNorm_lt_top_iff_lintegral_rpow_eNorm_lt_top hp0 hp hmeas).2
+  have hu0 := (eLpNorm_lt_top_iff_lintegral_rpow_eNorm_lt_top hp0 hp
     hu.1.aestronglyMeasurable).1 hu.1.eLpNorm_lt_top
-  have hu1 := (eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top hp0 hp
+  have hu1 := (eLpNorm_lt_top_iff_lintegral_rpow_eNorm_lt_top hp0 hp
     hu.2.aestronglyMeasurable).1 hu.2.eLpNorm_lt_top
   have hm := cutoffMass_lt_top (n := n) hs0 hs1 p.toReal hr
   apply (lintegral_enorm_diffQuot_smul_rpow_le hp0 hp (by positivity)

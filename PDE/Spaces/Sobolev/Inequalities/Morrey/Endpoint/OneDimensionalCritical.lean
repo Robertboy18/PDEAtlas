@@ -116,8 +116,8 @@ theorem norm_sub_le_eLpNorm_weakDerivative_one_toReal
           norm_nonneg (g ((PiLp.equivOfUnique 2 ℝ (fun _ : Fin 1 ↦ ℝ)).symm t)))
     _ = (eLpNorm (fun t ↦ g ((PiLp.equivOfUnique 2 ℝ (fun _ : Fin 1 ↦ ℝ)).symm t)) 1
           (volume : Measure ℝ)).toReal := by
-      rw [eLpNorm_one_eq_lintegral_enorm hgCoord.aestronglyMeasurable,
-        integral_norm_eq_lintegral_enorm hgCoord.aestronglyMeasurable]
+      rw [eLpNorm_one_eq_lintegral_eNorm hgCoord.aestronglyMeasurable,
+        integral_norm_eq_lintegral_eNorm hgCoord.aestronglyMeasurable]
     _ = (eLpNorm g 1 (volume : Measure (ℝ^1))).toReal := by
       rw [heLp]
 

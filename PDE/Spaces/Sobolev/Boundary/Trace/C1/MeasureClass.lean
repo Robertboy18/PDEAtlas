@@ -280,7 +280,7 @@ theorem surfaceMeasure_restrict_chartBoundaryPatch_absolutelyContinuous_referenc
           (m := m) (Ω := Ω) i)]
     congr 1
     ext x
-    simp [chartBoundaryPatch, and_left_comm, and_comm]
+    simp [chartBoundaryPatch]
   rw [hRestrict, Measure.restrict_apply hs]
   exact hPhysical
 

@@ -37,8 +37,8 @@ theorem lintegral_enorm_rpow_eq_of_ae (hp : p ≠ ∞) (v : Lp F p μ) {f : α �
       lintegral_congr_ae (hf.fun_comp (fun x : F ↦ ‖x‖ₑ ^ p.toReal)).symm
     _ = _ := by
       rw [← ENNReal.ofReal_rpow_of_nonneg (norm_nonneg _) hr.le,
-        ofReal_norm, Lp.enorm_def,
+        ofReal_norm, Lp.eNorm_def,
         eLpNorm_eq_eLpNorm' hp0 hp (Lp.aestronglyMeasurable v)]
-      exact lintegral_rpow_enorm_eq_rpow_eLpNorm' hr
+      exact lintegral_rpow_eNorm_eq_rpow_eLpNorm' hr
 
 end MeasureTheory.Lp

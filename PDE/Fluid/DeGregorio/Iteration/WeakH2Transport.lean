@@ -80,7 +80,7 @@ theorem exists_h2_hkCurve_eulerian_slice
     hasDerivAt_hkCurve_hilbert_flow_space hT f hchar.velocity_derivative hchar.flow_initial
       hchar.flow_derivative x t ht
   have helip : LipschitzWith ⟨M, hM⟩ e.symm :=
-    lipschitzWith_of_nnnorm_deriv_le (fun x ↦ (hXderiv x).differentiableAt) fun x ↦
+    lipschitzWith_of_nnNorm_deriv_le (fun x ↦ (hXderiv x).differentiableAt) fun x ↦
       show ‖deriv e.symm x‖ ≤ M from (hXderiv x).deriv ▸ hJbound x
   let I : ℝ → ℝ := fun y ↦ (J (e y))⁻¹
   let I' : ℝ → ℝ := fun y ↦ -(deriv J (e y)) * I y ^ 3

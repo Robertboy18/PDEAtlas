@@ -332,10 +332,11 @@ theorem integral_inter_strip_sub_eq (hK : ∀ y, K y = (y 0 ^ 2 - y 1 ^ 2) / (2 
       ((∫ y in Qz ∩ T, K (z - y) * W y) - ∫ y in Qx ∩ T, K (x - y) * W y) +
         (∫ y in Qz ∩ {y | |y 0 - x 0| < ε}, K (z - y) * W y) -
         ∫ y in Qx ∩ {y | |y 0 - z 0| < ε}, K (x - y) * W y := by
-    rw [hux, huz, setIntegral_union (disjoint_left.2 fun y h₁ h₂ ↦ (not_lt.2 h₁.2.2) h₂.2)
+    rw [hux, huz, setIntegral_union
+      (disjoint_left.2 fun y h₁ h₂ ↦ (not_lt.2 (And.right h₁).2) (And.right h₂))
       (hQxm.inter (hstrip' _ _)) hix (hbdd x (inter_subset_left.trans subset_union_left)
         (hQxm.inter (hstrip' _ _)) fun y hy ↦ hfarx y hy.2),
-      setIntegral_union (disjoint_left.2 fun y h₁ h₂ ↦ (not_lt.2 h₁.2.1) h₂.2)
+      setIntegral_union (disjoint_left.2 fun y h₁ h₂ ↦ (not_lt.2 (And.right h₁).1) (And.right h₂))
       (hQzm.inter (hstrip' _ _)) hiz (hbdd z (inter_subset_left.trans subset_union_right)
         (hQzm.inter (hstrip' _ _)) fun y hy ↦ hfarz y hy.2)]
     ring
@@ -607,12 +608,12 @@ theorem abs_sub_div_le_shear (hK : ∀ y, K y = (y 0 ^ 2 - y 1 ^ 2) / (2 * ‖y�
       simp only [hJc, mem_ofPred_eq, show -p - 1 = -(p + 1) by ring, neg_add_eq_sub, abs_neg,
         abs_sub_comm 1 p, and_comm]
     by_cases hJ : p ∈ Jc ε
-    · rw [indicator_of_mem hJ, indicator_of_mem (hJneg.2 hJ), Real.enorm_eq_ofReal_abs]
+    · rw [indicator_of_mem hJ, indicator_of_mem (hJneg.2 hJ), Real.eNorm_eq_ofReal_abs]
       by_cases hpB : p ≤ B + 1
       · exact hcol p hp hp1 hpB
       · simp only [hf, localShearDifference_neg_left, localShearDifference_of_gt (not_le.1 hpB),
           neg_zero, zero_mul, integral_zero, add_zero, abs_zero, ENNReal.ofReal_zero, zero_le]
-    · simp only [indicator_of_notMem hJ, indicator_of_notMem (mt hJneg.1 hJ), add_zero, enorm_zero,
+    · simp only [indicator_of_notMem hJ, indicator_of_notMem (mt hJneg.1 hJ), add_zero, eNorm_zero,
         zero_le]
   -- integrating the bound
   have hlint : ∫⁻ p in Ioi 0, bnd p =
@@ -635,8 +636,8 @@ theorem abs_sub_div_le_shear (hK : ∀ y, K y = (y 0 ^ 2 - y 1 ^ 2) / (2 * ‖y�
       (eventually_le_nhds hc)] with ε (hε : 0 < ε) hεc
     change ENNReal.ofReal |∫ p, (Jc ε).indicator f p| ≤ Bd
     rw [PDE.Analysis.integral_eq_integral_Ioi_add_reflection (hrep ε hε hεc),
-      ← Real.enorm_eq_ofReal_abs, ← hlint]
-    exact (enorm_integral_le_lintegral_enorm _).trans (lintegral_mono_ae (hae_bnd ε))
+      ← Real.eNorm_eq_ofReal_abs, ← hlint]
+    exact (eNorm_integral_le_lintegral_eNorm _).trans (lintegral_mono_ae (hae_bnd ε))
   -- dividing by `π |x - z|^{1/2}`
   rw [abs_sub_comm]
   refine ofReal_shear_quotient_le hc (hLbd.trans_eq ?_)
@@ -760,7 +761,7 @@ theorem abs_sub_div_le_shear_residual (hK : ∀ y, K y = (y 0 ^ 2 - y 1 ^ 2) / (
       simp only [hJc, mem_ofPred_eq, show -p - 1 = -(p + 1) by ring, neg_add_eq_sub, abs_neg,
         abs_sub_comm 1 p, and_comm]
     by_cases hJ : p ∈ Jc ε
-    · rw [indicator_of_mem hJ, indicator_of_mem (hJneg.2 hJ), Real.enorm_eq_ofReal_abs]
+    · rw [indicator_of_mem hJ, indicator_of_mem (hJneg.2 hJ), Real.eNorm_eq_ofReal_abs]
       by_cases hpB : p ≤ B + 1
       · by_cases hp9 : p ≤ 9
         · rw [indicator_of_mem (show p ∈ Ioc 0 9 from ⟨hp, hp9⟩), indicator_of_mem hJ]
@@ -781,7 +782,7 @@ theorem abs_sub_div_le_shear_residual (hK : ∀ y, K y = (y 0 ^ 2 - y 1 ^ 2) / (
     · have hG0 : (Ioc 0 9).indicator ((Jc ε).indicator G) p = 0 :=
         indicator_apply_eq_zero.2 fun _ ↦ indicator_of_notMem hJ _
       simp only [indicator_of_notMem hJ, indicator_of_notMem (mt hJneg.1 hJ), hG0, add_zero,
-        sub_zero, enorm_zero, zero_le]
+        sub_zero, eNorm_zero, zero_le]
   -- integrating the bound
   have hlint : ∫⁻ p in Ioi 0, bnd p = Cx' * shearInnerMassCost B A +
       Cy' * (shearUpperCost B A + shearLowerCost B A + shearOuterCost B h) := by
@@ -855,8 +856,8 @@ theorem abs_sub_div_le_shear_residual (hK : ∀ y, K y = (y 0 ^ 2 - y 1 ^ 2) / (
     change ENNReal.ofReal |E ε - R ε| ≤ Bd
     rw [e₁, e₂, ← integral_sub h₁
       ((integrable_indicator_iff measurableSet_Ioc).2 (hGi.indicator (hJm ε))).integrableOn,
-      ← Real.enorm_eq_ofReal_abs, ← hlint]
-    exact (enorm_integral_le_lintegral_enorm _).trans (lintegral_mono_ae (hae_bnd ε))
+      ← Real.eNorm_eq_ofReal_abs, ← hlint]
+    exact (eNorm_integral_le_lintegral_eNorm _).trans (lintegral_mono_ae (hae_bnd ε))
   -- the line term
   have hI0 : ENNReal.ofReal |(∫ p in Ioc 0 9, G p) + Real.pi * (u 1 - u (-1))| ≤
       Cx' * shearLineCost B A := by

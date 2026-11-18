@@ -237,7 +237,7 @@ theorem lintegral_pow_le_pow_sum_lintegral_partialDeriv
   have hleft : (∫⁻ y, ‖v y‖ₑ ^ q) = ∫⁻ x, ‖u x‖ₑ ^ q := by
     simpa only [v, Function.comp_apply] using
       hmp.lintegral_comp (f := fun x : ℝ^n ↦ ‖u x‖ₑ ^ q)
-        (hu.continuous.enorm.measurable.pow_const q)
+        (hu.continuous.eNorm.measurable.pow_const q)
   have hc (i : Fin n) : Continuous (∂[i] u) :=
     (hu.continuous_fderiv one_ne_zero).clm_apply continuous_const
   have hderiv (y : Fin n → ℝ) :
@@ -249,11 +249,11 @@ theorem lintegral_pow_le_pow_sum_lintegral_partialDeriv
     rw [hderiv] at h
     simp only [ContinuousLinearMap.comp_apply, ContinuousLinearEquiv.coe_coe] at h
     rw [hderiv]
-    simp only [enorm_eq_nnnorm, ← ENNReal.ofNNReal_finsetSum, ENNReal.coe_le_coe]
+    simp only [eNorm_eq_nnNorm, ← ENNReal.ofNNReal_finsetSum, ENNReal.coe_le_coe]
     apply NNReal.coe_le_coe.mp
     have hs : ∀ i : Fin n,
         e (Pi.single i (1 : ℝ)) = EuclideanSpace.single i 1 := fun _ ↦ rfl
-    simpa only [NNReal.coe_sum, coe_nnnorm, PDE.partialDeriv, hs] using h
+    simpa only [NNReal.coe_sum, coe_nnNorm, PDE.partialDeriv, hs] using h
   calc
     ∫⁻ x, ‖u x‖ₑ ^ q = ∫⁻ y, ‖v y‖ₑ ^ q := hleft.symm
     _ ≤ (∫⁻ y, ‖fderiv ℝ v y‖ₑ) ^ q := by
@@ -263,11 +263,11 @@ theorem lintegral_pow_le_pow_sum_lintegral_partialDeriv
       ENNReal.rpow_le_rpow (lintegral_mono hnorm) hq.symm.nonneg
     _ = (∑ i : Fin n, ∫⁻ y, ‖(∂[i] u) (e y)‖ₑ) ^ q := by
       rw [lintegral_finsetSum]
-      exact fun i _ ↦ ((hc i).comp e.continuous).enorm.measurable
+      exact fun i _ ↦ ((hc i).comp e.continuous).eNorm.measurable
     _ = (∑ i : Fin n, ∫⁻ x, ‖(∂[i] u) x‖ₑ) ^ q := by
       congr 1
       exact Finset.sum_congr rfl fun i _ ↦
-        hmp.lintegral_comp (f := fun x : ℝ^n ↦ ‖(∂[i] u) x‖ₑ) (hc i).enorm.measurable
+        hmp.lintegral_comp (f := fun x : ℝ^n ↦ ‖(∂[i] u) x‖ₑ) (hc i).eNorm.measurable
 
 /-- At the endpoint `q = n/(n-1)`, the sum of the `L¹` coordinate derivative
 norms bounds the `Lᑫ` norm with explicit constant one. No choice-dependent
@@ -281,7 +281,7 @@ theorem eLpNorm_le_sum_eLpNorm_partialDeriv_one
     (hu.continuous_fderiv one_ne_zero).clm_apply continuous_const
   rw [← ENNReal.rpow_le_rpow_iff hq.coe.symm.pos,
     eLpNorm_nnreal_pow_eq_lintegral hq.symm.pos.ne' hu.continuous.aestronglyMeasurable]
-  simp_rw [eLpNorm_one_eq_lintegral_enorm (hc _).aestronglyMeasurable]
+  simp_rw [eLpNorm_one_eq_lintegral_eNorm (hc _).aestronglyMeasurable]
   exact lintegral_pow_le_pow_sum_lintegral_partialDeriv hq.coe hu hcompact
 
 section EndpointLifting
@@ -353,7 +353,7 @@ theorem eLpNorm_le_eLpNorm_fderiv_of_endpoint
   · rw [eLpNorm_nnreal_eq_lintegral hp'0 hu.continuous.aestronglyMeasurable, h3u,
       ENNReal.zero_rpow_of_pos] <;> positivity
   have h4u : ∫⁻ x, ‖u x‖ₑ ^ (p' : ℝ) ∂μ ≠ ∞ := by
-    refine lintegral_rpow_enorm_lt_top_of_eLpNorm'_lt_top
+    refine lintegral_rpow_eNorm_lt_top_of_eLpNorm'_lt_top
       ((NNReal.coe_pos.trans pos_iff_ne_zero).mpr hp'0) ?_ |>.ne
     rw [← eLpNorm_nnreal_eq_eLpNorm' hp'0 hu.continuous.aestronglyMeasurable]
     exact hu.continuous.memLp_of_hasCompactSupport (μ := μ) h2u |>.eLpNorm_lt_top
@@ -368,16 +368,16 @@ theorem eLpNorm_le_eLpNorm_fderiv_of_endpoint
   have :=
   calc (∫⁻ x, ‖u x‖ₑ ^ (p' : ℝ) ∂μ) ^ (1 / (n' : ℝ)) = eLpNorm v n' μ := by
         rw [← h2γ, eLpNorm_nnreal_eq_lintegral hn.symm.pos.ne' hv.continuous.aestronglyMeasurable]
-        simp (discharger := positivity) [v, Real.enorm_rpow_of_nonneg, ENNReal.rpow_mul]
+        simp (discharger := positivity) [v, Real.eNorm_rpow_of_nonneg, ENNReal.rpow_mul]
     _ ≤ C * eLpNorm (fderiv ℝ v) 1 μ := hendpoint v hv h2v
     _ = C * ∫⁻ x, ‖fderiv ℝ v x‖ₑ ∂μ := by
-      rw [eLpNorm_one_eq_lintegral_enorm (hv.continuous_fderiv one_ne_zero).aestronglyMeasurable]
+      rw [eLpNorm_one_eq_lintegral_eNorm (hv.continuous_fderiv one_ne_zero).aestronglyMeasurable]
     _ ≤ C * γ * ∫⁻ x, ‖u x‖ₑ ^ ((γ : ℝ) - 1) * ‖fderiv ℝ u x‖ₑ ∂μ := by
       rw [mul_assoc, ← lintegral_const_mul γ]
       · gcongr
         simp_rw [← mul_assoc]
-        exact enorm_fderiv_norm_rpow_le (hu.differentiable one_ne_zero) h1γ
-      dsimp [enorm]
+        exact eNorm_fderiv_norm_rpow_le (hu.differentiable one_ne_zero) h1γ
+      dsimp [eNorm]
       fun_prop
     _ ≤ C * γ * ((∫⁻ x, ‖u x‖ₑ ^ (p' : ℝ) ∂μ) ^ (1 / q) *
         (∫⁻ x, ‖fderiv ℝ u x‖ₑ ^ (p : ℝ) ∂μ) ^ (1 / (p : ℝ))) := by

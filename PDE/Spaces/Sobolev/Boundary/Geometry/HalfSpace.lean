@@ -451,7 +451,6 @@ is the lower half-space. -/
 theorem compl_upper_ae_eq_lower :
     (upper n)ᶜ =ᵐ[volume] lower n := by
   filter_upwards [compl_mem_ae_iff.mpr (volume_boundary (n := n))] with x hx
-  apply propext
   change (¬0 < x (PDE.Common.lastIndex (n := n))) ↔
     x (PDE.Common.lastIndex (n := n)) < 0
   change x (PDE.Common.lastIndex (n := n)) ≠ 0 at hx

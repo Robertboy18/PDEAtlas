@@ -71,7 +71,7 @@ theorem iSup_enorm_fderiv_const_smul_comp_smul {E : Type*} [NormedAddCommGroup E
         L • fderiv ℝ g (L • x) := by
       ext v
       simp
-    rw [hcomp, smul_smul, enorm_smul, Real.enorm_eq_ofReal (mul_nonneg hc hL.le)]
+    rw [hcomp, smul_smul, eNorm_smul, Real.eNorm_eq_ofReal (mul_nonneg hc hL.le)]
   simp_rw [hpt, ENNReal.mul_iSup]
   exact iSup_upperHalfPlane_smul (fun x ↦ ENNReal.ofReal (c * L) * ‖fderiv ℝ g x‖ₑ) hL
 
@@ -81,7 +81,7 @@ theorem enorm_le_iSup_upperHalfPlane {E : Type*} [NormedAddCommGroup E] {F : ℝ
     (hF : Continuous F) {x : ℝ^2} (hx : 0 ≤ x 1) :
     ‖F x‖ₑ ≤ ⨆ y ∈ upperHalfPlane, ‖F y‖ₑ := by
   have hclosed : IsClosed {y : ℝ^2 | ‖F y‖ₑ ≤ ⨆ z ∈ upperHalfPlane, ‖F z‖ₑ} :=
-    isClosed_le (continuous_enorm.comp hF) continuous_const
+    isClosed_le (continuous_eNorm.comp hF) continuous_const
   have hsub : upperHalfPlane ⊆ {y : ℝ^2 | ‖F y‖ₑ ≤ ⨆ z ∈ upperHalfPlane, ‖F z‖ₑ} :=
     fun y hy ↦ show ‖F y‖ₑ ≤ _ from le_iSup₂_of_le y hy le_rfl
   have hcl := hclosed.closure_subset_iff.mpr hsub
@@ -301,7 +301,7 @@ theorem continuationIntegral_normalizedSolution_eq_top
         fun y ↦ vorticityStreamVelocity S y σ) 0 (EuclideanSpace.single (0 : Fin 2) (1 : ℝ)) = _
       rw [hcomp.fderiv]
       rfl
-    rw [heq, enorm_le_iff_norm_le]
+    rw [heq, eNorm_le_iff_norm_le]
     exact (PiLp.norm_apply_le _ _).trans
       ((ContinuousLinearMap.le_opNorm _ _).trans_eq (by simp))
   have hmeasT : MeasurableSet (lifeSpan T) :=
@@ -317,7 +317,7 @@ theorem continuationIntegral_normalizedSolution_eq_top
         (Eventually.of_forall fun _ ↦ abs_nonneg _)]
     refine (lintegral_mono_set (Ioc_subset_Icc_self.trans fun s hs ↦
       (hlife s).2 ⟨hIcc σ hσ hs, hs.1⟩)).trans (setLIntegral_mono' hmeasT fun s hs ↦ ?_)
-    rw [← Real.enorm_eq_ofReal_abs]
+    rw [← Real.eNorm_eq_ofReal_abs]
     exact (hux s ((hlife s).1 hs).1).trans le_self_add
   -- the bound of `log C_ω`
   set K := |cl₀| * τs / 2 + (continuationIntegral S T).toReal with hK

@@ -44,7 +44,7 @@ theorem existsUnique_coeff_eq_of_depend_lt
   intro v hv
   have hvu (n : ℕ) : ∀ j, coeff n (v j) = coeff n (u j) := by
     induction n using Nat.strong_induction_on with
-    | h n ih =>
+    | ind n ih =>
       intro j
       rw [hv, hu]
       exact congrFun (hF n v u fun i k hk ↦ ih k hk i) j

@@ -87,7 +87,7 @@ theorem enorm_fderivWithin_le_iSup (h : IsSolutionOn sol I) {t : ℝ} (ht : t �
     rw [fderivWithin_of_mem_nhds hnhds, ← hev.fderiv_eq]
     exact le_iSup₂ (f := fun y _ ↦ ‖fderiv ℝ (fun z ↦ vorticityStreamVelocity sol z t) y‖ₑ) y hy
   have hc : ContinuousOn (fun y ↦ ‖fderivWithin ℝ u H̄ y‖ₑ) H̄ :=
-    continuous_enorm.comp_continuousOn
+    continuous_eNorm.comp_continuousOn
       ((hω.contDiffOn_halfPlaneVelocity hα htab).continuousOn_fderivWithin
         uniqueDiffOn_closedUpper le_rfl)
   have hcl : x ∈ closure upperHalfPlane := by rw [closure_upperHalfPlane]; exact hx

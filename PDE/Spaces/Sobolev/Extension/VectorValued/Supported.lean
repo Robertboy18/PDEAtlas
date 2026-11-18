@@ -129,7 +129,6 @@ theorem supportedZeroExtendₗᵢ_coordinate_ae {C : Set ℝ^n}
   apply ae_of_ae_restrict_of_ae_restrict_compl (V : Set ℝ^n)
   · have hmeasure : (domainMeasure n Ω).restrict V = domainMeasure n (V ⊓ Ω) := by
       rw [domainMeasure, Measure.restrict_restrict V.isOpen.measurableSet]
-      rfl
     rw [hmeasure]
     filter_upwards [hinside, ae_restrict_mem (V ⊓ Ω).isOpen.measurableSet] with x hx hxV
     exact hx.symm.trans (Set.indicator_of_mem hxV.1 _).symm
@@ -149,7 +148,7 @@ theorem supportedZeroExtendₗᵢ_coordinate_ae_of_ae {C : Set ℝ^n}
       (V : Set ℝ^n).indicator f := by
   apply (supportedZeroExtendₗᵢ_coordinate_ae hC hCV U a).trans
   apply (ae_eq_restrict_iff_indicator_ae_eq V.isOpen.measurableSet).mp
-  simpa only [domainMeasure, Opens.coe_inf, Set.inf_eq_inter,
+  simpa only [domainMeasure, Opens.coe_inf,
     Measure.restrict_restrict V.isOpen.measurableSet] using hf
 
 /-- The physical base of supported extension is the zero extension of any supplied

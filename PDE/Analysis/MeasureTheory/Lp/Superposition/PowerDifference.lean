@@ -148,7 +148,7 @@ theorem norm_superposition_sub_le_of_twoPointGrowth_add_const
     have httop : p / ENNReal.ofReal (r - 1) ≠ ∞ :=
       ENNReal.div_ne_top hp (by positivity)
     rw [norm_toLp, eLpNorm_const' _ ht0 httop, ENNReal.toReal_mul,
-      ENNReal.toReal_rpow, toReal_enorm, Real.norm_of_nonneg hK,
+      ENNReal.toReal_rpow, toReal_eNorm, Real.norm_of_nonneg hK,
       ENNReal.toReal_div, ENNReal.toReal_ofReal hs.le, one_div_div]
   have hA_norm : ‖A‖ ≤ ‖u‖ + ‖v‖ :=
     (norm_add_le _ _).trans (add_le_add

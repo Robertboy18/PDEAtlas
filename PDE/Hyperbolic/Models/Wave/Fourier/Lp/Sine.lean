@@ -94,7 +94,7 @@ theorem lipschitzWith_sinePropagator_apply (hp : p ≠ ∞) {ω : α → ℝ}
     (hω : Measurable ω) (u : Lp E p μ) :
     LipschitzWith ‖u‖₊ (fun t ↦ sinePropagator hω t u) := by
   apply lipschitzOnWith_univ.mp
-  apply convex_univ.lipschitzOnWith_of_nnnorm_hasDerivWithin_le
+  apply convex_univ.lipschitzOnWith_of_nnNorm_hasDerivWithin_le
     (fun t _ ↦ (hasDerivAt_sinePropagator_apply hp hω u t).hasDerivWithinAt)
   intro t _
   exact_mod_cast Lp.norm_modulationCLM_apply_le Real.continuous_cos Real.abs_cos_le_one hω t u

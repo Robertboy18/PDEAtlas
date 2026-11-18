@@ -42,7 +42,7 @@ theorem exists_contDiffAt_square_root :
     ext x
     simp [d, two_smul]
   let r := hf.localInverse hd (by simp)
-  have hs := hf.hasStrictFDerivAt' hd (by simp)
+  have hs := hf.hasStrictFDerivAt hd (by simp)
   refine ⟨r, ?_, ?_, ?_, ?_⟩
   · simpa [r] using hf.localInverse_apply_image hd (by simp)
   · simpa [r] using hf.to_localInverse hd (by simp)

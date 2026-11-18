@@ -41,7 +41,7 @@ theorem HasFPowerSeriesAt.apply_eq_zero_of_isBigO_norm_pow
     ∀ y, p n (fun _ ↦ y) = 0 := by
   revert hn
   induction n using Nat.strong_induction_on with
-  | h n ih =>
+  | ind n ih =>
     intro hn
     have hsum : p.partialSum (n + 1) = fun y ↦ p n (fun _ ↦ y) := by
       funext y

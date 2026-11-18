@@ -29,7 +29,7 @@ variable {E ι : Type*} [AddCommGroup E] [Module ℝ E] [Fintype ι]
 /-- A nonzero symbol makes a contraction injective on the line of conormal
 tensors. -/
 theorem eq_zero_of_conormal_contraction_eq_zero
-    (A : MultilinearMap ℝ (fun _ : Fin m ↦ E) ℝ)
+    (A : MultilinearMap (RingHom.id ℝ) (fun _ : Fin m ↦ E) ℝ)
     (ℓ : E →ₗ[ℝ] ℝ) {c : ℝ}
     (hA : ∀ v, A v = (∏ i, ℓ (v i)) * c)
     (d : ι → Fin m → E) (a : ι → ℝ)
@@ -46,7 +46,7 @@ theorem eq_zero_of_conormal_contraction_eq_zero
 scalar factor is the sum of squares `∑ α, (∏ i, ℓ (d α i))²`, which is positive once
 one monomial is nonzero. -/
 theorem eq_zero_of_conormal_normal_sum_eq_zero
-    (A : MultilinearMap ℝ (fun _ : Fin m ↦ E) ℝ)
+    (A : MultilinearMap (RingHom.id ℝ) (fun _ : Fin m ↦ E) ℝ)
     (ℓ : E →ₗ[ℝ] ℝ) {c : ℝ}
     (hA : ∀ v, A v = (∏ i, ℓ (v i)) * c)
     (d : ι → Fin m → E)

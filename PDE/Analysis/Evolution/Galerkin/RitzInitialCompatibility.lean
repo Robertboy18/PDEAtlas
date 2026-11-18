@@ -55,7 +55,7 @@ variable
     {C : ℝ} (hC : 0 < C)
     (hcoercive : ∀ v : V, C * ‖v‖ ^ 2 ≤ B v v)
 
-local instance : CompleteSpace S := FiniteDimensional.complete ℝ S
+local instance : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
 
 /-- The restriction of a coercive form to any trial subspace is coercive. -/
 theorem restrictedForm_isCoercive

@@ -48,7 +48,7 @@ theorem exists_smooth_compact_data_no_global_classical_quadratic_wave :
     (hv.mono (fun _ hz ↦ hz.1)) (hv₀.mono (fun _ hz ↦ hz.1))
     (hg.of_le (by simp)) (hh.of_le (by simp)) hgs hhs hpos hvel (fun t ht x ↦ hw t ht.1 x)
   apply hnot
-  refine (hv.mono (fun _ hz ↦ hz.1)).congr fun z hz ↦ ?_
+  refine (hv.mono (fun _ ↦ And.left)).congr fun z hz ↦ ?_
   have hz' : timeSpaceCons (z 0) (spatialPartCLM 3 z) = z := timeSpaceCons_spatialPartCLM z
   have he' := (he (z 0) ⟨hz.1.le, hz.2⟩ (spatialPartCLM 3 z)).symm
   rw [hz'] at he'

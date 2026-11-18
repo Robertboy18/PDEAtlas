@@ -189,7 +189,7 @@ theorem memLp_and_lpNorm_iteratedFDeriv_comp_le {k : ℕ} (hk : 0 < k)
     _ = (k.factorial : ℝ) * C * lpNorm (fun x ↦ G x ^ k) 2 volume := by
       change lpNorm (((k.factorial : ℝ) * C) • (fun x ↦ G x ^ k)) 2 volume = _
       rw [lpNorm_const_smul]
-      simp only [coe_nnnorm, Real.norm_eq_abs]
+      simp only [coe_nnNorm, Real.norm_eq_abs]
       rw [abs_of_nonneg (mul_nonneg (Nat.cast_nonneg _) hC)]
     _ ≤ _ := by
       rw [hpower]

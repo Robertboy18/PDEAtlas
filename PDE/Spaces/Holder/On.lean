@@ -152,20 +152,20 @@ theorem holderWith (f : C0GammaOn Ω γ) :
 instance : Zero (C0GammaOn Ω γ) where
   zero :=
     ⟨0, by
-      simpa only [BoundedContinuousFunction.coe_zero] using
+      simpa only [FunLike.coe_zero] using
         (_root_.memHolder_zero :
           _root_.MemHolder (γ : ℝ≥0) (0 : Ω → ℝ))⟩
 
 instance : Add (C0GammaOn Ω γ) where
   add f g :=
     ⟨f.toBoundedContinuousFunction + g.toBoundedContinuousFunction, by
-      simpa only [BoundedContinuousFunction.coe_add] using
+      simpa only [FunLike.coe_add] using
         f.memHolder.add g.memHolder⟩
 
 instance : Neg (C0GammaOn Ω γ) where
   neg f :=
     ⟨-f.toBoundedContinuousFunction, by
-      simpa only [BoundedContinuousFunction.coe_neg, neg_one_smul] using
+      simpa only [FunLike.coe_neg, neg_one_smul] using
         f.memHolder.smul (c := (-1 : ℝ))⟩
 
 instance : Sub (C0GammaOn Ω γ) where
@@ -174,7 +174,7 @@ instance : Sub (C0GammaOn Ω γ) where
 instance : SMul ℝ (C0GammaOn Ω γ) where
   smul c f :=
     ⟨c • f.toBoundedContinuousFunction, by
-      rw [BoundedContinuousFunction.coe_smul]
+      rw [FunLike.coe_smul]
       change
         _root_.MemHolder (γ : ℝ≥0)
           (c • (f.toBoundedContinuousFunction : Ω → ℝ))
@@ -183,13 +183,13 @@ instance : SMul ℝ (C0GammaOn Ω γ) where
 instance : SMul ℕ (C0GammaOn Ω γ) where
   smul n f :=
     ⟨n • f.toBoundedContinuousFunction, by
-      simpa only [BoundedContinuousFunction.coe_nsmul] using
+      simpa only [FunLike.coe_smul] using
         f.memHolder.nsmul n⟩
 
 instance : SMul ℤ (C0GammaOn Ω γ) where
   smul z f :=
     ⟨z • f.toBoundedContinuousFunction, by
-      rw [BoundedContinuousFunction.coe_zsmul]
+      rw [FunLike.coe_smul]
       change
         _root_.MemHolder (γ : ℝ≥0)
           (z • (f.toBoundedContinuousFunction : Ω → ℝ))
@@ -278,12 +278,6 @@ theorem normedSpaceCore :
     have hseminorm :=
       f.memHolder.nnHolderNorm_smul c
     change
-      nnHolderNorm (γ : ℝ≥0)
-          (fun x ↦ c • f.toBoundedContinuousFunction x) =
-        ‖c‖₊ *
-          nnHolderNorm (γ : ℝ≥0) f.toBoundedContinuousFunction
-      at hseminorm
-    change
       ‖c‖ * ‖f.toBoundedContinuousFunction‖ +
           ((nnHolderNorm (γ : ℝ≥0)
             (c • f.toBoundedContinuousFunction) : ℝ≥0) : ℝ) =
@@ -291,8 +285,8 @@ theorem normedSpaceCore :
           (‖f.toBoundedContinuousFunction‖ +
             ((nnHolderNorm (γ : ℝ≥0)
               f.toBoundedContinuousFunction : ℝ≥0) : ℝ))
-    rw [BoundedContinuousFunction.coe_smul]
-    rw [hseminorm, NNReal.coe_mul, coe_nnnorm]
+    rw [FunLike.coe_smul]
+    rw [hseminorm, NNReal.coe_mul, coe_nnNorm]
     ring
   norm_triangle f g := by
     rw [norm_def, norm_def, norm_def, toBoundedContinuousFunction_add]
@@ -457,7 +451,7 @@ theorem holderSeminorm_sub_le_nndist (f g : C0GammaOn Ω γ) :
   calc
     holderSeminorm (f - g) ≤ ‖f - g‖₊ :=
       holderSeminorm_le_nnnorm (f - g)
-    _ = nndist f g := (nndist_eq_nnnorm_sub f g).symm
+    _ = nndist f g := (nnDist_eq_nnNorm_sub f g).symm
 
 /-- A difference is Hölder with constant bounded by its full-space distance. -/
 theorem holderWith_sub_nndist (f g : C0GammaOn Ω γ) :

@@ -48,11 +48,11 @@ theorem exists_L1_sections_indicator {α β E : Type*}
     funext x
     simp only [indicator_apply, mem_ofPred_eq]
   have hfin : MemLp (fun t ↦ eLpNorm (fun x ↦ S.indicator U (t, x)) p ν) 1 μ := by
-    apply (Lp.memLp f).of_le_enorm
+    apply (Lp.memLp f).of_le_eNorm
       (hV.eLpNorm_prod_right hp0 hptop).aestronglyMeasurable
     filter_upwards [hsection] with t ht
-    simp only [enorm_eq_self]
-    rw [heq t, Lp.enorm_def]
+    simp only [eNorm_eq_self]
+    rw [heq t, Lp.eNorm_def]
     exact (eLpNorm_indicator_le _ (hsec t).nullMeasurableSet).trans_eq (eLpNorm_congr_ae ht)
   obtain ⟨g, hg, _⟩ := exists_mixedLp_sections hptop (by norm_num) hV hfin
   refine ⟨g, hg, ?_⟩

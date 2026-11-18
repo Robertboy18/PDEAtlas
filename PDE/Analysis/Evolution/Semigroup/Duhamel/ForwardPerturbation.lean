@@ -278,8 +278,8 @@ theorem exists_eq_add_forwardDuhamel [CompleteSpace E]
     continuousOn_forwardDecode _ w, ⟨‖w‖, _, fun t ht ↦ norm_forwardDecode_le _ w ht⟩,
     fun t ht ↦ ?_⟩
   have hwt := congrArg (fun z : Ioi (0 : ℝ) →ᵇ E ↦ z ⟨t, ht⟩) hw
-  simp only [BoundedContinuousFunction.add_apply] at hwt
-  rw [neg_apply, BoundedContinuousFunction.neg_apply] at hwt
+  simp only [add_apply] at hwt
+  rw [neg_apply, neg_apply] at hwt
   have hwt' : w ⟨t, ht⟩ = forwardEncode ω' hωω' hgc hgb ⟨t, ht⟩ +
       forwardPerturbationOperator K A hω' hKc hK hAc hA w ⟨t, ht⟩ := by
     rw [← hwt]

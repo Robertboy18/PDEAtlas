@@ -111,7 +111,7 @@ def profileMass (n : ℕ) (m C : ℝ) : ℝ := ∫ y : ℝ^n, profile n m C y
 /-- Positive profile parameter gives strictly positive finite mass. -/
 theorem profileMass_pos {m C : ℝ} (hm : 1 < m) (hC : 0 < C) :
     0 < profileMass n m C := by
-  apply integral_pos_of_integrable_nonneg_nonzero
+  apply integral_pos_of_integrable_nonneg_ne_zero
     (continuous_profile hm C) (integrable_profile hm) (profile_nonneg m C)
   apply ne_of_gt ((profile_pos_iff hm C (0 : ℝ^n)).2 ?_)
   simpa using hC

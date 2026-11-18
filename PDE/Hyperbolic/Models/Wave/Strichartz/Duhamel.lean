@@ -216,7 +216,7 @@ theorem memLp_eLpNorm_duhamelL2 (a b : ℝ)
     MemLp (fun t ↦ eLpNorm (fun x ↦ (F (t, x)).re) 12 volume) 4 volume := by
   change eLpNorm _ _ _ < (∞ : ℝ≥0∞)
   rw [eLpNorm_duhamelL2_eq a b f hF hsection]
-  exact enorm_lt_top
+  exact eNorm_lt_top
 
 /-- The physical Duhamel field has the proved L1L2 to L4L12 estimate. -/
 theorem mixedNorm_duhamelL2_le (a b : ℝ)
@@ -225,7 +225,7 @@ theorem mixedNorm_duhamelL2_le (a b : ℝ)
     (hsection : ∀ t, (fun x ↦ F (t, x)) =ᵐ[volume] (Fourier.duhamelL2 a b t f : ℝ^3 → ℂ)) :
     (eLpNorm (fun t ↦ eLpNorm (fun x ↦ (F (t, x)).re) 12 volume) 4 volume).toReal ≤
       energyAdjointBound * ‖f‖ := by
-  rw [eLpNorm_duhamelL2_eq a b f hF hsection, toReal_enorm]
+  rw [eLpNorm_duhamelL2_eq a b f hF hsection, toReal_eNorm]
   exact ((retardedWaveOperator.le_opNorm _).trans
     (mul_le_mul_of_nonneg_right norm_retardedWaveOperator_le (norm_nonneg _))).trans_eq
     (congrArg (energyAdjointBound * ·) ((Lp.extendByZeroₗᵢ (𝕜 := ℝ) measurableSet_Icc).norm_map f))
@@ -272,7 +272,7 @@ theorem memLp_eLpNorm_fourierWave_add_duhamelL2 (g h : 𝓢(ℝ^3, ℂ)) (a b : 
       (t, x)).re + (F (t, x)).re) 12 volume) 4 volume := by
   change eLpNorm _ _ _ < (∞ : ℝ≥0∞)
   rw [eLpNorm_fourierWave_add_duhamelL2_eq g h a b f hF hsection]
-  exact enorm_lt_top
+  exact eNorm_lt_top
 
 /-- The physical homogeneous-plus-forcing construction satisfies the
 L4L12 estimate with precisely the initial energy norm and L1L2 forcing norm. -/
@@ -283,7 +283,7 @@ theorem mixedNorm_fourierWave_add_duhamelL2_le (g h : 𝓢(ℝ^3, ℂ)) (a b : �
     (eLpNorm (fun t ↦ eLpNorm (fun x ↦ (Fourier.waveSolution (𝓕 g : 𝓢(ℝ^3, ℂ)) (𝓕 h : 𝓢(ℝ^3, ℂ))
       (t, x)).re + (F (t, x)).re) 12 volume) 4 volume).toReal ≤
       energyAdjointBound * (‖initialEnergyDatum g h‖ + ‖f‖) := by
-  rw [eLpNorm_fourierWave_add_duhamelL2_eq g h a b f hF hsection, toReal_enorm]
+  rw [eLpNorm_fourierWave_add_duhamelL2_eq g h a b f hF hsection, toReal_eNorm]
   apply (norm_add_le (homogeneousWaveOperator (initialEnergyDatum g h))
     (retardedWaveOperator (Lp.extendByZeroₗᵢ (𝕜 := ℝ) measurableSet_Icc f))).trans
   refine (add_le_add ?_ ?_).trans_eq (mul_add energyAdjointBound _ _).symm

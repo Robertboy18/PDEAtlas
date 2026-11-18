@@ -81,7 +81,7 @@ theorem hasHilbertPV_odd_support_of_integrable {f : ℝ → ℝ} {L x : ℝ}
       (∫ y in Ioi 0, f y / (x - y) - f y / (x + y)) =
         ∫ y in Ioo 0 L, f y / (x - y) - f y / (x + y) := by
     apply setIntegral_eq_of_subset_of_forall_sdiff_eq_zero measurableSet_Ioi
-      (fun _ hy ↦ hy.1)
+      (fun _ ↦ And.left)
     intro y hy
     have hyL : L ≤ y := not_lt.mp fun hyL ↦ hy.2 ⟨hy.1, hyL⟩
     simp [hsupport y hyL]

@@ -284,7 +284,7 @@ theorem integrable_adjointFlow_pairing {μ : ℝ} (hμ : 1 / 2 < μ) (ψ : 𝓢(
       congr 2
       ring
     · exact Filter.Eventually.of_forall fun s ↦ by positivity
-  rw [HasFiniteIntegral, lintegral_prod _ hmeas.enorm]
+  rw [HasFiniteIntegral, lintegral_prod _ hmeas.eNorm]
   calc _ ≤ ∫⁻ s in Ioi (0 : ℝ), ENNReal.ofReal (2⁻¹ * Real.exp ((1 / 2 - μ) * s)) * (A + B) := by
         refine setLIntegral_mono' measurableSet_Ioi fun s (hs : 0 < s) ↦ ?_
         calc _ ≤ ∫⁻ η, ENNReal.ofReal (2⁻¹ * Real.exp ((1 / 2 - μ) * s)) *

@@ -41,13 +41,13 @@ theorem AnalyticAt.eventuallyEq_of_iteratedFDeriv_eq
       HasSum (fun k : ℕ ↦
         (k.factorial : 𝕜)⁻¹ • iteratedFDeriv 𝕜 k f x (fun _ ↦ y - x)) (f y) := by
     have hy : y - x ∈ Metric.eball 0 rp := by
-      simpa [edist_eq_enorm_sub] using hyp
+      simpa [eDist_eq_eNorm_sub] using hyp
     simpa only [add_sub_cancel] using hp.hasSum_iteratedFDeriv hy
   have hsumg :
       HasSum (fun k : ℕ ↦
         (k.factorial : 𝕜)⁻¹ • iteratedFDeriv 𝕜 k g x (fun _ ↦ y - x)) (g y) := by
     have hy : y - x ∈ Metric.eball 0 rq := by
-      simpa [edist_eq_enorm_sub] using hyq
+      simpa [eDist_eq_eNorm_sub] using hyq
     simpa only [add_sub_cancel] using hq.hasSum_iteratedFDeriv hy
   have hsum :
       HasSum (fun k : ℕ ↦

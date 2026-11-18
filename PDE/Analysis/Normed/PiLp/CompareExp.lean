@@ -88,8 +88,8 @@ theorem eLpNorm_coordinate_norm_count_eq_enorm
     (measurable_of_countable _).aestronglyMeasurable
   rcases p.dichotomy with rfl | hp
   · rw [eLpNorm_exponent_top hxMeas, eLpNormEssSup_count,
-      enorm_eq_nnnorm, PiLp.nnnorm_eq_ciSup]
-    simp only [enorm_eq_nnnorm, nnnorm_norm]
+      eNorm_eq_nnNorm, PiLp.nnNorm_eq_ciSup]
+    simp only [eNorm_eq_nnNorm, nnNorm_norm]
     exact
       (ENNReal.coe_iSup
         (Set.finite_range fun i ↦ ‖x i‖₊).bddAbove).symm
@@ -99,9 +99,9 @@ theorem eLpNorm_coordinate_norm_count_eq_enorm
       linarith
     have hpZero : p ≠ 0 :=
       ne_of_gt (lt_of_lt_of_le zero_lt_one Fact.out)
-    rw [eLpNorm_eq_eLpNorm' hpZero hpTop hxMeas, enorm_eq_nnnorm,
-      PiLp.nnnorm_eq_sum hpTop]
-    simp only [eLpNorm', lintegral_count, enorm_eq_nnnorm]
+    rw [eLpNorm_eq_eLpNorm' hpZero hpTop hxMeas, eNorm_eq_nnNorm,
+      PiLp.nnNorm_eq_sum hpTop]
+    simp only [eLpNorm', lintegral_count, eNorm_eq_nnNorm]
     rw [tsum_fintype,
       ENNReal.coe_rpow_of_nonneg _ (by positivity),
       ENNReal.ofNNReal_finsetSum]
@@ -149,7 +149,7 @@ theorem norm_le_card_rpow_mul_of_coordinate_norm_le
       eLpNorm (c • fun i ↦ ‖x i‖) q Measure.count =
         ENNReal.ofReal c *
           eLpNorm (fun i ↦ ‖x i‖) q Measure.count
-    simpa [Real.enorm_eq_ofReal hc] using
+    simpa [Real.eNorm_eq_ofReal hc] using
       (eLpNorm_const_smul c (fun i ↦ ‖x i‖) q Measure.count)
   have hraw :
       ‖y‖ₑ ≤
@@ -183,11 +183,11 @@ theorem norm_le_card_rpow_mul_of_coordinate_norm_le
             (Fintype.card ι : ℝ≥0∞) ^
               (1 / q.toReal - 1 / p.toReal)) ≠ ∞ := by
     exact ENNReal.mul_ne_top ENNReal.ofReal_ne_top
-      (ENNReal.mul_ne_top enorm_ne_top
+      (ENNReal.mul_ne_top eNorm_ne_top
         (ENNReal.rpow_ne_top_of_nonneg
           (exponentGap_nonneg hpq) ENNReal.coe_ne_top))
   have hreal := ENNReal.toReal_mono hfinite hraw
   simpa [ENNReal.toReal_mul, ENNReal.toReal_ofReal hc,
-    toReal_enorm, mul_assoc, mul_left_comm, mul_comm] using hreal
+    toReal_eNorm, mul_assoc, mul_left_comm, mul_comm] using hreal
 
 end PiLp

@@ -722,23 +722,23 @@ theorem physicalStreamFunction_isStreamfunctionForAzimuthalVorticity
 theorem zeroReducedFields_hasClassicalRegularityOn (times : Set ℝ) :
     HasClassicalReducedRegularityOn zeroReducedFields times := by
   refine
-    { swirl_contDiffOn := by fun_prop
-      vorticity_contDiffOn := by fun_prop
+    { swirl_contDiffOn := by fun_prop [zeroReducedFields]
+      vorticity_contDiffOn := by fun_prop [zeroReducedFields]
       swirl_differentiableAt_time := by
         intro x t ht
-        fun_prop
+        fun_prop [zeroReducedFields]
       vorticity_differentiableAt_time := by
         intro x t ht
-        fun_prop
+        fun_prop [zeroReducedFields]
       swirl_spatial_contDiff := by
         intro t ht
-        fun_prop
+        fun_prop [zeroReducedFields]
       vorticity_spatial_contDiff := by
         intro t ht
-        fun_prop
+        fun_prop [zeroReducedFields]
       streamFunction_spatial_contDiff := by
         intro t ht
-        fun_prop }
+        fun_prop [zeroReducedFields] }
 
 /-- The zero reduced fields solve the off-axis reduced system for every
 viscosity and every time set. -/

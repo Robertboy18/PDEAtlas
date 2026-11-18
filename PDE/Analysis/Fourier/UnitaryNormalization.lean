@@ -252,7 +252,7 @@ theorem eLpNorm_unitaryFourierIntegral {f : E → F} (h₁ : Integrable f)
     eLpNorm (unitaryFourierIntegral f) 2 volume = eLpNorm f 2 volume := by
   rw [eLpNorm_congr_ae
     (unitaryFourierIntegral_eq_L2_ae h₁ (h₂.toLp f) h₂.coeFn_toLp.symm),
-    ← Lp.enorm_def, ← ofReal_norm, norm_unitaryFourier, ofReal_norm, Lp.enorm_toLp]
+    ← Lp.eNorm_def, ← ofReal_norm, norm_unitaryFourier, ofReal_norm, Lp.eNorm_toLp]
 
 /-- Plancherel's identity for the normalized inverse integral of a function in `L¹ ∩ L²`. -/
 theorem eLpNorm_unitaryFourierInvIntegral {f : E → F} (h₁ : Integrable f)
@@ -260,7 +260,7 @@ theorem eLpNorm_unitaryFourierInvIntegral {f : E → F} (h₁ : Integrable f)
     eLpNorm (unitaryFourierInvIntegral f) 2 volume = eLpNorm f 2 volume := by
   rw [eLpNorm_congr_ae
     (unitaryFourierInvIntegral_eq_L2_ae h₁ (h₂.toLp f) h₂.coeFn_toLp.symm),
-    ← Lp.enorm_def, ← ofReal_norm, norm_unitaryFourierInv, ofReal_norm, Lp.enorm_toLp]
+    ← Lp.eNorm_def, ← ofReal_norm, norm_unitaryFourierInv, ofReal_norm, Lp.eNorm_toLp]
 
 omit [CompleteSpace F] in
 private theorem compSMul_complex_smul (a : ℝ) (ha : a ≠ 0) (z : ℂ)

@@ -53,7 +53,7 @@ private theorem norm_modulated_inverse_frequency_sub_le {m : ℝ → ℝ}
 theorem lipschitzWith_cosineEnergyDatum (F : 𝓢(ℝ^3, ℂ)) :
     LipschitzWith ‖F.toLp 2 volume‖₊ (cosineEnergyDatum F) := by
   refine LipschitzWith.of_dist_le_mul fun t s ↦ ?_
-  rw [dist_eq_norm, coe_nnnorm, mul_comm]
+  rw [dist_eq_norm, coe_nnNorm, mul_comm]
   apply Lp.norm_le_mul_norm_of_ae_le_mul
   filter_upwards [Lp.coeFn_sub (cosineEnergyDatum F t) (cosineEnergyDatum F s),
     cosineEnergyDatum_ae_eq F t, cosineEnergyDatum_ae_eq F s,
@@ -65,7 +65,7 @@ theorem lipschitzWith_cosineEnergyDatum (F : 𝓢(ℝ^3, ℂ)) :
 theorem lipschitzWith_sineEnergyDatum (F : 𝓢(ℝ^3, ℂ)) :
     LipschitzWith ‖F.toLp 2 volume‖₊ (sineEnergyDatum F) := by
   refine LipschitzWith.of_dist_le_mul fun t s ↦ ?_
-  rw [dist_eq_norm, coe_nnnorm, mul_comm]
+  rw [dist_eq_norm, coe_nnNorm, mul_comm]
   apply Lp.norm_le_mul_norm_of_ae_le_mul
   filter_upwards [Lp.coeFn_sub (sineEnergyDatum F t) (sineEnergyDatum F s),
     sineEnergyDatum_ae_eq F t, sineEnergyDatum_ae_eq F s,

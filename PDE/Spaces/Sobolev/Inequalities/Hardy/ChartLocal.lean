@@ -414,7 +414,7 @@ theorem eLpNorm_flattenedHeightQuotient_le_normalCoordinate
   have h := ENNReal.ofReal_le_ofReal hnorm
   rw [ENNReal.ofReal_mul hconst.le, ofReal_norm, ofReal_norm,
     show hd.toLp d = D from Lp.ext hd.coeFn_toLp] at h
-  rw [← Lp.enorm_toLp hq]
+  rw [← Lp.eNorm_toLp hq]
   exact h
 
 /--

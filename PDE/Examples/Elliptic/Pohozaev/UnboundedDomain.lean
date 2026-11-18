@@ -142,7 +142,7 @@ private theorem uniformContinuous_of_partial_bound {g : ℝ^4 → ℝ}
     (hg : Differentiable ℝ g) (hb : ∀ i x, |(∂[i] g) x| ≤ 3) :
     UniformContinuous g := by
   apply LipschitzWith.uniformContinuous (K := 12)
-  apply lipschitzWith_of_nnnorm_fderiv_le hg
+  apply lipschitzWith_of_nnNorm_fderiv_le hg
   intro x
   rw [← NNReal.coe_le_coe]
   change ‖fderiv ℝ g x‖ ≤ 12

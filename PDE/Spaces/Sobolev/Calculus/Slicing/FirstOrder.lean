@@ -108,15 +108,15 @@ theorem eLpNorm_one_integral_prod_right_le
     {f : α × β → E} (hf : Integrable f (μ.prod ν)) :
     eLpNorm (fun x ↦ ∫ y, f (x, y) ∂ν) 1 μ ≤
       eLpNorm f 1 (μ.prod ν) := by
-  rw [eLpNorm_one_eq_lintegral_enorm hf.integral_prod_left.aestronglyMeasurable,
-    eLpNorm_one_eq_lintegral_enorm hf.aestronglyMeasurable]
+  rw [eLpNorm_one_eq_lintegral_eNorm hf.integral_prod_left.aestronglyMeasurable,
+    eLpNorm_one_eq_lintegral_eNorm hf.aestronglyMeasurable]
   calc
     (∫⁻ x, ‖∫ y, f (x, y) ∂ν‖ₑ ∂μ) ≤
         ∫⁻ x, ∫⁻ y, ‖f (x, y)‖ₑ ∂ν ∂μ := by
-      exact lintegral_mono fun x ↦ enorm_integral_le_lintegral_enorm _
+      exact lintegral_mono fun x ↦ eNorm_integral_le_lintegral_eNorm _
     _ = ∫⁻ p, ‖f p‖ₑ ∂(μ.prod ν) := by
       rw [lintegral_prod]
-      exact hf.1.enorm
+      exact hf.1.eNorm
 
 omit [CompleteSpace E] [SFinite μ] in
 /-- If product-space functions converge to zero in `L¹`, a subsequence of

@@ -172,7 +172,7 @@ theorem eLpNorm_weakLeibnizExpansion_le
       (f := iteratedPartialDeriv (n := n) split.1 psi.toFun)
       (g := wkpWordRepresentative U split.2) p
       (fun x y : ℝ ↦ x * y) 1 continuous_mul
-      (Filter.Eventually.of_forall fun _ ↦ by simp [nnnorm_mul])
+      (Filter.Eventually.of_forall fun _ ↦ by simp [nnNorm_mul])
       (lt_of_lt_of_le zero_lt_one (Fact.out : 1 ≤ p))
 
 omit [Fact (1 ≤ p)] in

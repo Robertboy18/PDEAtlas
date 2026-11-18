@@ -81,7 +81,7 @@ theorem toReal_eLpNorm_fderiv_dilateField {X : ℝ^3 → ℝ^3} (hX : ContDiff �
   · exact (((hX.continuous_fderiv (by simp)).comp (continuous_const_smul a)).const_smul
       (a * a)).aestronglyMeasurable
   congr 1
-  rw [dilationFactor, finrank_euclideanSpace_fin, Real.enorm_eq_ofReal (by positivity),
+  rw [dilationFactor, finrank_euclideanSpace_fin, Real.eNorm_eq_ofReal (by positivity),
     ENNReal.toReal_ofReal (by positivity), ← ENNReal.toReal_rpow,
     ENNReal.toReal_ofReal (abs_nonneg _), abs_of_pos (by positivity)]
   have h2 : (1 / (2 : ℝ≥0∞)).toReal = 1 / 2 := by norm_num

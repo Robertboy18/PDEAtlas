@@ -61,16 +61,16 @@ theorem eLpNorm_integral_probability_le
       ∫⁻ t, ‖f (x, t)‖ₑ ^ p.toReal ∂ν := by
     filter_upwards [hf.prodMk_left] with x hx
     have hnorm : ‖∫ t, f (x, t) ∂ν‖ₑ ≤ eLpNorm (fun t ↦ f (x, t)) p ν :=
-      (enorm_integral_le_lintegral_enorm _).trans
-        (lintegral_enorm_le_eLpNorm_one.trans (eLpNorm_le_eLpNorm_of_exponent_le hp))
+      (eNorm_integral_le_lintegral_eNorm _).trans
+        (lintegral_eNorm_le_eLpNorm_one.trans (eLpNorm_le_eLpNorm_of_exponent_le hp))
     have hpow := ENNReal.rpow_le_rpow hnorm hpr.le
-    rwa [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hpt hx,
+    rwa [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hpt hx,
       ← ENNReal.rpow_mul, one_div, inv_mul_cancel₀ hpr.ne', ENNReal.rpow_one] at hpow
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hpt hf.integral_prod_right',
-    eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hpt hf]
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hpt hf.integral_prod_right',
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hpt hf]
   apply ENNReal.rpow_le_rpow _ (by positivity)
   exact (lintegral_mono_ae hpoint).trans_eq
-    (lintegral_prod _ (hf.enorm.pow_const _)).symm
+    (lintegral_prod _ (hf.eNorm.pow_const _)).symm
 
 /-- The Bochner average over positive heights at most ε. -/
 def heightAverage (ε : ℝ) (f : ℝ^(n + 1) → F) (x : ℝ^n) : F :=
@@ -83,7 +83,7 @@ theorem heightAverage_congr_ae (ε : ℝ) {f g : ℝ^(n + 1) → F}
   have hprod := measurePreserving_joinTangentialNormal_upper.quasiMeasurePreserving.ae_eq_comp hfg
   have hsmall : (volume : Measure (ℝ^n)).prod (volume.restrict (Ioc 0 ε)) ≤
       (volume : Measure (ℝ^n)).prod positiveNormalMeasure :=
-    Measure.prod_mono le_rfl (Measure.restrict_mono (fun _ h ↦ h.1) le_rfl)
+    Measure.prod_mono le_rfl (Measure.restrict_mono (fun _ ↦ And.left) le_rfl)
   filter_upwards [Measure.ae_ae_of_ae_prod (ae_mono hsmall hprod)] with x hx
   exact congrArg (ε⁻¹ • ·) (integral_congr_ae hx)
 
@@ -98,7 +98,7 @@ theorem ae_integrable_height (p : ℝ) (hp : 1 ≤ p) (ε : ℝ)
     ne_of_gt (ENNReal.ofReal_pos.mpr (lt_of_lt_of_le zero_lt_one hp))
   have hsmall : (volume : Measure (ℝ^n)).prod (volume.restrict (Ioc 0 ε)) ≤
       (volume : Measure (ℝ^n)).prod positiveNormalMeasure :=
-    Measure.prod_mono le_rfl (Measure.restrict_mono (fun _ h ↦ h.1) le_rfl)
+    Measure.prod_mono le_rfl (Measure.restrict_mono (fun _ ↦ And.left) le_rfl)
   have hprod := (hf.comp_measurePreserving
     measurePreserving_joinTangentialNormal_upper).mono_measure hsmall
   filter_upwards [hprod.aestronglyMeasurable.prodMk_left,
@@ -117,9 +117,9 @@ theorem eLpNorm_heightAverage_le (p : ℝ) (hp : 1 ≤ p) (ε : ℝ) (hε : 0 < 
   let η : Measure ℝ := (ENNReal.ofReal ε)⁻¹ • volume.restrict (Ioc 0 ε)
   have hε0 : ENNReal.ofReal ε ≠ 0 := ne_of_gt (ENNReal.ofReal_pos.mpr hε)
   have : IsProbabilityMeasure η := ⟨by
-    simp [η, Measure.smul_apply, Real.volume_Ioc, ENNReal.inv_mul_cancel hε0]⟩
+    simp [η, smul_apply, Real.volume_Ioc, ENNReal.inv_mul_cancel hε0]⟩
   have hsmall : μ.prod (volume.restrict (Ioc 0 ε)) ≤ μ.prod positiveNormalMeasure :=
-    Measure.prod_mono le_rfl (Measure.restrict_mono (fun _ h ↦ h.1) le_rfl)
+    Measure.prod_mono le_rfl (Measure.restrict_mono (fun _ ↦ And.left) le_rfl)
   have hprod := hf.comp_measurePreserving measurePreserving_joinTangentialNormal_upper
   have hscaled : MemLp (f ∘ joinTangentialNormal) (ENNReal.ofReal p) (μ.prod η) := by
     rw [show μ.prod η = (ENNReal.ofReal ε)⁻¹ •

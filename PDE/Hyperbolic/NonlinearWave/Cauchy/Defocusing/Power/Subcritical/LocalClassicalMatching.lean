@@ -148,8 +148,8 @@ theorem coneField_eq_of_local_classical_signedPower {r : ℝ} (hr : 0 < r)
       duhamelOperator (composeCompact f (coneField V p)) := by
   intro V g h H f
   ext q
-  simp only [coneField_apply, BoundedContinuousFunction.add_apply,
-    BoundedContinuousFunction.smul_apply, duhamelOperator_apply, composeCompact_apply,
+  simp only [coneField_apply, add_apply,
+    smul_apply, duhamelOperator_apply, composeCompact_apply,
     smul_eq_mul, physicalPoint_descend]
   change v (timeSpaceCons (physicalPoint p q).1 (physicalPoint p q).2) = _
   rw [eq_free_add_duhamel_waveOperator hv (physicalPoint_mem_backwardCone hp q).1.1,

@@ -103,7 +103,7 @@ library module imports.
 
 - Lean's kernel checks every proof. No proof uses `sorry`, and every declaration in the library
   rests only on Lean's three standard axioms, `propext`, `Classical.choice` and `Quot.sound`: we
-  checked all 100,382 of them, the examples included.
+  checked all 92,996 of them, the examples included.
 - The library builds with Mathlib's standard set of linters, and warnings are errors.
 - Every theorem states all of its hypotheses, regularity included. This matters in Lean, where
   `fderiv` is zero at points where a function is not differentiable, so an equation written with
@@ -116,10 +116,10 @@ library module imports.
 
 ## Using PDEAtlas
 
-PDEAtlas builds with Lean v4.35.0 and Mathlib v4.35.0. Add it to your `lakefile.lean`:
+PDEAtlas builds with Lean v4.36.0 and Mathlib v4.36.0. Add it to your `lakefile.lean`:
 
 ```lean
-require LeanPDE from git "https://github.com/Robertboy18/PDEAtlas.git" @ "main"
+require LeanPDE from git "https://github.com/Robertboy18/PDEAtlas.git" @ "v4.36.0"
 ```
 
 The package is still called `LeanPDE` and its modules live under `PDE`. Run `lake update LeanPDE`

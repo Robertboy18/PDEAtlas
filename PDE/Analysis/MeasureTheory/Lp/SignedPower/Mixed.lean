@@ -42,7 +42,7 @@ theorem norm_normScaledSignedPower {p q : ℝ≥0∞} {r s : ℝ}
   let J := superposition (fun _ ↦ Real.signedPower r) (memLp_signedPower hr hq) u
   change ‖‖u‖ ^ (s - r) • J‖ = _
   rw [Lp.norm_def, eLpNorm_congr_ae (Lp.coeFn_smul (‖u‖ ^ (s - r)) J),
-    eLpNorm_const_smul, ENNReal.toReal_mul, toReal_enorm]
+    eLpNorm_const_smul, ENNReal.toReal_mul, toReal_eNorm]
   change ‖‖u‖ ^ (s - r)‖ * ‖J‖ = _
   rw [norm_superposition_signedPower hr hq,
     Real.norm_of_nonneg (Real.rpow_nonneg hu0 _)]

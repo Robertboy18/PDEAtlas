@@ -45,7 +45,7 @@ theorem exists_ae_bound_weightedExtendLp (r : ℕ)
     have hq : QuasiMeasurePreserving
         (normalDilation (PDE.Common.lastIndex (n := n)) (reflectionNode k j))
         (domainMeasure n ℝ^n₋) (domainMeasure n ℝ^n₊) :=
-      ⟨(normalDilation _ _).continuous.measurable, by
+      ⟨(normalDilation _ _).continuous.aemeasurable, by
         rw [map_lower_normalDilation n _ (reflectionNode_neg k j)]
         exact Measure.smul_absolutelyContinuous⟩
     exact hq.tendsto_ae hb

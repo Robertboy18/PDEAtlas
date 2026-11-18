@@ -38,7 +38,7 @@ theorem integrable_and_integral_le_of_ae_limit_nonneg_of_tendsto_bound
   have hC : 0 ≤ C := ge_of_tendsto' hb fun k ↦
     (integral_nonneg_of_ae (hnonneg k)).trans (hbound k)
   have hlin (k : ℕ) : (∫⁻ x, ‖u k x‖ₑ ∂μ) ≤ ENNReal.ofReal (b k) := by
-    rw [← ofReal_integral_norm_eq_lintegral_enorm (hu k)]
+    rw [← ofReal_integral_norm_eq_lintegral_eNorm (hu k)]
     apply ENNReal.ofReal_le_ofReal
     calc
       (∫ x, ‖u k x‖ ∂μ) = ∫ x, u k x ∂μ := by
@@ -56,14 +56,14 @@ theorem integrable_and_integral_le_of_ae_limit_nonneg_of_tendsto_bound
       _ = ∫⁻ x, liminf (fun k ↦ ‖u k x‖ₑ) atTop ∂μ := by
         apply lintegral_congr_ae
         filter_upwards [hlim] with x hx
-        exact hx.enorm.liminf_eq.symm
+        exact hx.eNorm.liminf_eq.symm
       _ ≤ liminf (fun k ↦ ∫⁻ x, ‖u k x‖ₑ ∂μ) atTop :=
-        lintegral_liminf_le' fun k ↦ (hu k).aestronglyMeasurable.enorm
+        lintegral_liminf_le' fun k ↦ (hu k).aestronglyMeasurable.eNorm
       _ ≤ _ := hinf
   have hint : Integrable f μ :=
     ⟨aestronglyMeasurable_of_tendsto_ae _ (fun k ↦ (hu k).aestronglyMeasurable) hlim,
       lt_of_le_of_lt hfatou ENNReal.ofReal_lt_top⟩
-  rw [← ofReal_integral_norm_eq_lintegral_enorm hint] at hfatou
+  rw [← ofReal_integral_norm_eq_lintegral_eNorm hint] at hfatou
   have hnorm : (∫ x, ‖f x‖ ∂μ) ≤ C := by
     simpa only [ENNReal.toReal_ofReal (integral_nonneg fun _ ↦ norm_nonneg _),
       ENNReal.toReal_ofReal hC] using

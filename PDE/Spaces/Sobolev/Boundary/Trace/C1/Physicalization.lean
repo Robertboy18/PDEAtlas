@@ -94,7 +94,7 @@ theorem exists_chart_surface_pushforward_le
     congr 1
     simp only [A]
     ext x
-    simp [and_left_comm, and_comm]
+    simp
   have hset :
       (hΩ.chart i) ⁻¹' t ∩ A = (hΩ.chart i).symm '' (t ∩ B) := by
     ext x
@@ -134,7 +134,7 @@ theorem exists_chart_surface_pushforward_le
     exact ⟨hx.1, hBFlat hx.2⟩
   rw [Measure.map_apply hchartMeas ht, hrestrict,
     Measure.restrict_apply hpreMeas, hset]
-  simp only [Measure.smul_apply]
+  simp only [smul_apply]
   exact hdist.trans (mul_le_mul_right hflatMono c)
 
 /-- The physical portion of the boundary covered by one chart. -/

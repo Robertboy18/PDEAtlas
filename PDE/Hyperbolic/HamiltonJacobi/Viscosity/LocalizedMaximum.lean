@@ -113,8 +113,8 @@ theorem exists_isMaxOn_quadratic_barrier {u v : E × ℝ → ℝ} {ε α a T S R
   obtain ⟨z₀, hz₀K, hwitness⟩ := hwitness
   have hFcont : ContinuousOn F (K ×ˢ K) := by
     have := continuous_quadraticSize (E := E)
-    refine ((hu.comp continuous_fst.continuousOn fun _ hq ↦ hKslab hq.1).sub
-      (hv.comp continuous_snd.continuousOn fun _ hq ↦ hKslab hq.2)).sub ?_
+    refine ((hu.comp continuous_fst.continuousOn fun _ hq ↦ hKslab (And.left hq)).sub
+      (hv.comp continuous_snd.continuousOn fun _ hq ↦ hKslab (And.right hq))).sub ?_
     fun_prop (disch := intro q hq; first | exact (hden hq.1).ne' | exact (hden hq.2).ne')
   obtain ⟨⟨z, w⟩, ⟨hzK, hwK⟩, hmax⟩ := (hK.prod hK).exists_isMaxOn ⟨(z₀, z₀), hz₀K, hz₀K⟩ hFcont
   have hgap : η < F (z, w) :=

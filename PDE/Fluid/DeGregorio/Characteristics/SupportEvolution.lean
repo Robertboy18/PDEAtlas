@@ -40,10 +40,10 @@ theorem lipschitzWith_rescaled_velocity_of_deriv_bound
   have hd (x : ℝ) : HasDerivAt (fun y ↦ u y + cl * y) (deriv u x + cl) x := by
     convert! (hu x).hasDerivAt.add ((hasDerivAt_id x).const_mul cl) using 1
     simp
-  apply lipschitzWith_of_nnnorm_deriv_le (fun x ↦ (hd x).differentiableAt)
+  apply lipschitzWith_of_nnNorm_deriv_le (fun x ↦ (hd x).differentiableAt)
   intro x
   rw [(hd x).deriv]
-  exact (nnnorm_add_le _ _).trans (add_le_add (hbound x) le_rfl)
+  exact (nnNorm_add_le _ _).trans (add_le_add (hbound x) le_rfl)
 
 /-- A uniform velocity-derivative bound and a continuous rate give a uniform global
 Lipschitz constant for the transport velocity on each prescribed finite time interval. -/

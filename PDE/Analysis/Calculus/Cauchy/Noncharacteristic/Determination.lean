@@ -62,7 +62,7 @@ theorem iteratedFDeriv_eq_on_of_normal_data
   classical
   intro j
   induction j using Nat.strong_induction_on with
-  | h j ih =>
+  | ind j ih =>
     cases j with
     | zero =>
       intro x hx

@@ -48,7 +48,7 @@ theorem norm_exp_smul_le_sum_of_real_spectrum
       ∑ k ∈ Finset.range (Module.finrank ℂ E),
         (2 * ‖T‖) ^ k * t ^ k / k.factorial := by
   classical
-  have := FiniteDimensional.complete ℂ E
+  have := FiniteDimensional.completeSpace ℂ E
   let e : (E →ₗ[ℂ] E) ≃⋆ₐ[ℂ] (E →L[ℂ] E) :=
     { LinearMap.toContinuousLinearMap with
       map_mul' := fun _ _ ↦ rfl

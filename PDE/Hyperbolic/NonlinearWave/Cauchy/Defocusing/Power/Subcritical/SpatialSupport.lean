@@ -85,7 +85,7 @@ theorem eq_zero_of_supported_free_integral_eq {r T M R : ℝ} (hr : 1 ≤ r) (hM
     (physicalCone_eq_of_free_integral_eq hu H f heq q hp.1) hzeroeq
   have hvtx := congrArg (fun w : Cone →ᵇ ℝ ↦ w vertex) he
   simpa only [physicalCone_apply, physicalPoint, vertex, coneTime, coneSpace,
-    mul_one, smul_zero, add_zero, BoundedContinuousFunction.coe_zero, Pi.zero_apply] using hvtx
+    mul_one, smul_zero, add_zero, FunLike.coe_zero, Pi.zero_apply] using hvtx
 
 /-- Arbitrary compact C³ displacement and C² velocity construct a bounded C¹
 signed-power trajectory with both Cauchy traces, finite propagation, and the

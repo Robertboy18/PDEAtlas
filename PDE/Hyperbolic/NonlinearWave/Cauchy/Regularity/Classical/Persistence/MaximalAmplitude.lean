@@ -88,7 +88,7 @@ theorem higherSmooth_maximal_amplitude_unbounded_near_lifespan (hk : (n : ℝ) <
   by_contra! hbound
   have hc : ContinuousOn (fun t ↦ classicalRepresentativeCLM hq (u t).1) (Icc 0 (max 0 a)) :=
     (classicalRepresentativeCLM hq).continuous.comp_continuousOn
-      ((hu.continuousOn.mono fun t ht ↦ ⟨ht.1, ht.2.trans_lt hab⟩).fst)
+      ((hu.continuousOn.mono fun t ht ↦ ⟨And.left ht, (And.right ht).trans_lt hab⟩).fst)
   obtain ⟨R, hR⟩ := (isCompact_Icc.image_of_continuousOn hc).isBounded.exists_norm_le
   apply hfinite
   apply higherSmooth_mildLifespan_eq_top_of_amplitude hk hq hs hf0 x

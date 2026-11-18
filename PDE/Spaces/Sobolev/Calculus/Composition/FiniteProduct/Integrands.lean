@@ -50,7 +50,7 @@ theorem norm_valueIntegrand_le (hF : ContDiff ℝ 1 F) (hzero : F 0 = 0)
     (hbound : ∀ z, ‖fderiv ℝ F z‖ ≤ C) (s : Fin m → ℝ × ℝ^n) :
     ‖valueIntegrand F s‖ ≤ C * ‖valuesCLM (n := n) (m := m)‖ * ‖s‖ := by
   have hLip : LipschitzWith C F :=
-    lipschitzWith_of_nnnorm_fderiv_le (hF.differentiable one_ne_zero) hbound
+    lipschitzWith_of_nnNorm_fderiv_le (hF.differentiable one_ne_zero) hbound
   calc
     ‖valueIntegrand F s‖ ≤ C * ‖valuesCLM s‖ := by
       simpa [valueIntegrand, hzero] using hLip.norm_sub_le (valuesCLM s) 0

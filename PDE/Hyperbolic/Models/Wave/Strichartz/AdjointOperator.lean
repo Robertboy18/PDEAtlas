@@ -90,7 +90,7 @@ theorem norm_integral_frequencyEnergyDatum_finset_le {ι : Type*} (a : Finset ι
       (⇑(∑ i ∈ a, w i t • f i : 𝓢(ℝ^3, ℝ))) (12 / 11) volume) (4 / 3) volume ≠ ∞ := by
     simpa only [he] using hN.eLpNorm_ne_top
   have hC : ‖(4 * Real.pi)⁻¹‖ₑ * spacetimeNewtonBound ≠ ∞ :=
-    ENNReal.mul_ne_top enorm_ne_top spacetimeNewtonBound_lt_top.ne
+    ENNReal.mul_ne_top eNorm_ne_top spacetimeNewtonBound_lt_top.ne
   have h := ENNReal.toReal_mono (ENNReal.mul_ne_top hC (ENNReal.pow_ne_top hN'))
     (ofReal_norm_integral_frequencyEnergyDatum_finset_sq_le a w f hw hwc hfc)
   rw [ENNReal.toReal_ofReal (sq_nonneg _), ENNReal.toReal_mul, ENNReal.toReal_pow] at h

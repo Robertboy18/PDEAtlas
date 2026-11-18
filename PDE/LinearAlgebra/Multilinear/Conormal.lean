@@ -27,7 +27,7 @@ variable {𝕜 E F ι : Type*} [CommRing 𝕜]
 /-- Vanishing in each kernel direction determines a multilinear map from its
 value on a normalized transverse vector. The assertion includes the empty tuple. -/
 theorem apply_eq_prod_smul_of_vanishes_on_ker
-    (A : MultilinearMap 𝕜 (fun _ : ι ↦ E) F) (ℓ : E →ₗ[𝕜] 𝕜)
+    (A : MultilinearMap (RingHom.id 𝕜) (fun _ : ι ↦ E) F) (ℓ : E →ₗ[𝕜] 𝕜)
     {e : E} (he : ℓ e = 1)
     (hA : ∀ (v : ι → E) (i : ι), ℓ (v i) = 0 → A v = 0) (v : ι → E) :
     A v = (∏ i, ℓ (v i)) • A (fun _ ↦ e) := by

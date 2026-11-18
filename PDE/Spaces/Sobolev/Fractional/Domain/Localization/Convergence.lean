@@ -46,14 +46,14 @@ theorem tendsto_eLpNorm_smul_zero (hp0 : p ≠ 0) (hp : p ≠ ∞)
     (fun x ↦ ENNReal.ofReal ((M : ℝ) ^ p.toReal) * ‖u x‖ₑ ^ p.toReal)
     (hmeas.mono fun i hi ↦ hi.smul hu.aestronglyMeasurable)
   · exact hM.mono fun i hi ↦ ae_of_all _ fun x ↦ by
-      rw [Pi.smul_apply', enorm_smul, ENNReal.mul_rpow_of_nonneg _ _ hr.le]
+      rw [Pi.smul_apply', eNorm_smul, ENNReal.mul_rpow_of_nonneg _ _ hr.le]
       apply mul_le_mul_left
       rw [← ofReal_norm, ENNReal.ofReal_rpow_of_nonneg (norm_nonneg _) hr.le]
       exact ENNReal.ofReal_le_ofReal
         (Real.rpow_le_rpow (norm_nonneg _) (hi x) hr.le)
   · rw [lintegral_const_mul' _ _ ENNReal.ofReal_ne_top]
     exact ENNReal.mul_ne_top ENNReal.ofReal_ne_top
-      ((eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top hp0 hp
+      ((eLpNorm_lt_top_iff_lintegral_rpow_eNorm_lt_top hp0 hp
         hu.aestronglyMeasurable).1 hu.eLpNorm_lt_top).ne
   · exact hzero.mono fun x hx ↦ by
       simpa only [Pi.smul_apply', zero_smul] using hx.smul_const (u x)
@@ -76,9 +76,9 @@ theorem tendsto_eLpNorm_diffQuot_smul_zero (hs0 : 0 < s) (hs1 : s < 1)
         ENNReal.ofReal ((L : ℝ) ^ p.toReal + (2 * (M : ℝ)) ^ p.toReal) *
           (‖u z.2‖ₑ ^ p.toReal *
             ENNReal.ofReal (cutoffKernel n s (z.1 - z.2) (p := p.toReal))))
-  have hbase := (eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top hp0 hp
+  have hbase := (eLpNorm_lt_top_iff_lintegral_rpow_eNorm_lt_top hp0 hp
     hu.1.aestronglyMeasurable).1 hu.1.eLpNorm_lt_top
-  have hdiff := (eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top hp0 hp
+  have hdiff := (eLpNorm_lt_top_iff_lintegral_rpow_eNorm_lt_top hp0 hp
     hu.2.aestronglyMeasurable).1 hu.2.eLpNorm_lt_top
   have hkernel :
       (∫⁻ z, ‖u z.2‖ₑ ^ p.toReal *
@@ -89,7 +89,7 @@ theorem tendsto_eLpNorm_diffQuot_smul_zero (hs0 : 0 < s) (hs1 : s < 1)
   have hfinite : (∫⁻ z, bound z ∂gagliardoProductMeasure n Ω) ≠ ∞ := by
     dsimp only [bound]
     rw [lintegral_const_mul' _ _ (by finiteness),
-      lintegral_add_left' ((hu.2.aestronglyMeasurable.enorm.pow_const p.toReal).const_mul _),
+      lintegral_add_left' ((hu.2.aestronglyMeasurable.eNorm.pow_const p.toReal).const_mul _),
       lintegral_const_mul' _ _ ENNReal.ofReal_ne_top,
       lintegral_const_mul' _ _ ENNReal.ofReal_ne_top]
     exact ENNReal.mul_ne_top (by finiteness) (ENNReal.add_ne_top.mpr

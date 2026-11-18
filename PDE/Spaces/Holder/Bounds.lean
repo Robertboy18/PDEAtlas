@@ -59,7 +59,7 @@ theorem enorm_eq_iSup_enorm_add_eHolderNorm (f : C0GammaOn X γ) :
     ‖f‖ₑ = (⨆ x, ‖f x‖ₑ) + eHolderNorm (γ : ℝ≥0) (fun x ↦ f x) := by
   rw [← ofReal_norm, norm_def,
     ENNReal.ofReal_add (norm_nonneg _) (NNReal.coe_nonneg _),
-    ofReal_norm, BoundedContinuousFunction.enorm_eq_iSup_enorm,
+    ofReal_norm, BoundedContinuousFunction.eNorm_eq_iSup_eNorm,
     ENNReal.ofReal_coe_nnreal]
   exact congrArg ((⨆ x, ‖f x‖ₑ) + ·) f.memHolder.coe_nnHolderNorm_eq_eHolderNorm
 

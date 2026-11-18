@@ -160,8 +160,8 @@ theorem coeffN_mulTerm (i j : Fin 2) (k : Fin (Mβ + 1)) (l : Fin (Mθ + 1)) (i'
         (first | have e2 := eq_false h2 | have e2 := eq_true h2) <;>
         (first | have e3 := eq_false h3 | have e3 := eq_true h3) <;>
         (first | have e4 := eq_false h4 | have e4 := eq_true h4) <;>
-        (try simp only [e1, e2, e3, e4, and_self, and_true, and_false,
-          ↓reduceIte, add_zero, zero_add, mul_zero, zero_mul]) <;> ring
+        simp only [e1, e2, e3, e4, and_self, and_true, and_false,
+          ↓reduceIte, add_zero, zero_add, mul_zero, zero_mul] <;> ring
     · rcases not_and_or.mp hIJ with h | h <;> simp [h]
   · simp only [hKL, ↓reduceDIte]
     symm

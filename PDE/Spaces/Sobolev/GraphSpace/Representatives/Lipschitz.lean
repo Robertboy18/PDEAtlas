@@ -65,7 +65,7 @@ theorem WkpSpaceOn.exists_lipschitzWith_baseRepresentative
     have hreal := ENNReal.toReal_mono hfinite hx
     change ‖a x‖ ≤ ‖a‖
     simpa only [Lp.norm_def, eLpNorm_exponent_top (Lp.aestronglyMeasurable a),
-      toReal_enorm] using hreal
+      toReal_eNorm] using hreal
   exact SobolevSpace.exists_lipschitzWith_ae_eq_of_weak_derivative_bound hf g hg C hC
 
 end SobolevSpace.GraphSpace

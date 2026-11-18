@@ -55,7 +55,7 @@ theorem comp_ae_eq_zero_of_deriv_ae_eq_zero
     rw [abs_div, abs_of_pos hM]
     exact (div_le_one hM).mpr (hbound s)
   have hfLip : LipschitzWith 1 f := by
-    apply lipschitzWith_of_nnnorm_deriv_le (fun s ↦ (hdf s).differentiableAt)
+    apply lipschitzWith_of_nnNorm_deriv_le (fun s ↦ (hdf s).differentiableAt)
     intro s
     rw [(hdf s).deriv]
     exact_mod_cast hfbound s

@@ -86,7 +86,7 @@ theorem exists_h2_terminal_of_hasDerivAt
       Tendsto F (𝓝[<] T) (𝓝 (wkpBaseCoordinateCLM U)) ∧
       ∀ t ∈ Ioo a T, ‖F t - wkpBaseCoordinateCLM U‖ ≤ C * (T - t) := by
   apply exists_h2_terminal_of_lipschitzOnWith haT hbound
-  exact (convex_Ioo a T).lipschitzOnWith_of_nnnorm_hasDerivWithin_le
+  exact (convex_Ioo a T).lipschitzOnWith_of_nnNorm_hasDerivWithin_le
     (fun t ht ↦ (hderiv t ht).hasDerivWithinAt) (fun t ht ↦ hV t ht)
 
 /-- The a.e. support condition defining the real-line iteration ball also
@@ -207,7 +207,7 @@ theorem lipschitzOnWith_base_of_transport_majorant
         M x * ‖s - t‖ ≤ ‖M x‖ * ‖s - t‖ :=
           mul_le_mul_of_nonneg_right (le_abs_self _) (norm_nonneg _)
         _ = ‖s - t‖ * ‖M x‖ := mul_comm _ _)
-  simpa only [Real.norm_eq_abs, coe_nnnorm, mul_comm] using hnorm
+  simpa only [Real.norm_eq_abs, coe_nnNorm, mul_comm] using hnorm
 
 /-- A half-open coupled solution with uniformly supported H² slices and a
 common L² majorant for its transport production has a constructed supported

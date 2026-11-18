@@ -207,7 +207,7 @@ def thresholdOrthogonalProjection
   letI : FiniteDimensional ℝ (thresholdSpace R m) :=
     finiteDimensional_thresholdSpace R hRc m
   letI : CompleteSpace (thresholdSpace R m) :=
-    FiniteDimensional.complete ℝ _
+    FiniteDimensional.completeSpace ℝ _
   exact (thresholdSpace R m).orthogonalProjectionOnto
 
 /-- Energy-orthogonal projections onto the threshold spaces converge strongly
@@ -223,7 +223,7 @@ theorem thresholdProjection_tendsto
   let (m : ℕ) : FiniteDimensional ℝ (thresholdSpace R m) :=
     finiteDimensional_thresholdSpace R hRc m
   let (m : ℕ) : CompleteSpace (thresholdSpace R m) :=
-    FiniteDimensional.complete ℝ _
+    FiniteDimensional.completeSpace ℝ _
   simpa only [thresholdOrthogonalProjection,
     Submodule.coe_orthogonalProjectionOnto_apply] using
       Submodule.starProjection_tendsto_self
@@ -242,7 +242,7 @@ theorem eventually_approximable_thresholdSpace
   let (m : ℕ) : FiniteDimensional ℝ (thresholdSpace R m) :=
     finiteDimensional_thresholdSpace R hRc m
   let (m : ℕ) : CompleteSpace (thresholdSpace R m) :=
-    FiniteDimensional.complete ℝ _
+    FiniteDimensional.completeSpace ℝ _
   obtain ⟨N, hN⟩ :=
     Metric.tendsto_atTop.mp
       (thresholdProjection_tendsto R hRc hRs hRi v) ε hε
@@ -313,7 +313,7 @@ def stableTrialProjectionOfCompatibility
         (T.inclusion (v - S.starProjection v))
         (T.inclusion (w : V)) = 0) :
     StableTrialProjection T S 1 := by
-  letI : CompleteSpace S := FiniteDimensional.complete ℝ S
+  letI : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
   let J := T.inclusion
   let jS := includedTrial J S
   let W : Submodule ℝ H := pivotTrialSpace J S
@@ -323,9 +323,9 @@ def stableTrialProjectionOfCompatibility
     dsimp [W, pivotTrialSpace]
     exact LinearMap.finiteDimensional_range jS.toLinearMap
   letI : FiniteDimensional ℝ W := hWfd
-  letI : CompleteSpace W := FiniteDimensional.complete ℝ W
+  letI : CompleteSpace W := FiniteDimensional.completeSpace ℝ W
   let e : S ≃L[ℝ] W :=
-    jS.equivRange hjS W.closed_of_finiteDimensional
+    jS.equivRange hjS W.isClosed_of_finiteDimensional
   let P : H →L[ℝ] S :=
     e.symm.toContinuousLinearMap.comp W.orthogonalProjectionOnto
   have hPcoe (h : H) :
@@ -376,7 +376,7 @@ def stableTrialProjectionThreshold
       (gramOperator T.inclusion) hGramCompact m
   letI : CompleteSpace
       (thresholdSpace (gramOperator T.inclusion) m) :=
-    FiniteDimensional.complete ℝ _
+    FiniteDimensional.completeSpace ℝ _
   exact stableTrialProjectionOfCompatibility T
     (thresholdSpace (gramOperator T.inclusion) m)
     (threshold_residual_pivot_orthogonal T.inclusion m)

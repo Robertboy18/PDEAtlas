@@ -68,7 +68,7 @@ theorem weightedSeminorm_le_of_rpow_bounds {H : E → F} {S : Set E} (hS : Conve
     (Real.rpow_pos_of_pos (norm_pos_iff.mpr hy0) α)
   have hK : 0 ≤ K := nonneg_of_mul_nonneg_left ((norm_nonneg _).trans (hH' y hyS hy0))
     (Real.rpow_pos_of_pos (norm_pos_iff.mpr hy0) (α - 1))
-  rw [edist_eq_enorm_sub, ← ofReal_norm]
+  rw [eDist_eq_eNorm_sub, ← ofReal_norm]
   rcases le_or_gt (g (x - z)) 0 with hg0 | hg0
   · rw [ENNReal.ofReal_of_nonpos hg0, mul_zero]
     exact bot_le

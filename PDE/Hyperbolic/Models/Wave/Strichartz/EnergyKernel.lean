@@ -79,14 +79,14 @@ theorem enorm_re_inner_frequencyEnergyDatum_le
       (frequencyEnergyDatum (𝓕 (g.postcompCLM Complex.ofRealCLM)) s)).re‖ₑ ≤
       ‖(4 * Real.pi)⁻¹‖ₑ * ∫⁻ x, (∫⁻ y,
         ‖exteriorNewtonKernel |t - s| (x - y)‖ₑ * ‖g y‖ₑ) * ‖f x‖ₑ := by
-  rw [re_inner_frequencyEnergyDatum_eq_exteriorNewtonKernel f g hfc hgc hts, enorm_mul]
+  rw [re_inner_frequencyEnergyDatum_eq_exteriorNewtonKernel f g hfc hgc hts, eNorm_mul]
   refine mul_le_mul le_rfl ?_ bot_le bot_le
-  apply (enorm_integral_le_lintegral_enorm _).trans
+  apply (eNorm_integral_le_lintegral_eNorm _).trans
   refine lintegral_mono fun x ↦ ?_
   dsimp only
-  rw [enorm_mul, mul_comm]
+  rw [eNorm_mul, mul_comm]
   refine mul_le_mul ?_ le_rfl bot_le bot_le
-  simpa only [enorm_mul] using enorm_integral_le_lintegral_enorm
+  simpa only [eNorm_mul] using eNorm_integral_le_lintegral_eNorm
     (fun y ↦ exteriorNewtonKernel |t - s| (x - y) * g y)
 
 end WaveEquation.Strichartz

@@ -92,7 +92,7 @@ theorem exists_smooth_transverse_curve_chart
   have hnormal : ContDiff ℝ ∞ (fun p : ℝ × ell.ker ↦ (p.2 : E)) :=
     ell.ker.subtypeL.contDiff.comp contDiff_snd
   have hφ : ContDiffOn ℝ ∞ φ V :=
-    (hγ.comp contDiffOn_fst (fun p hp ↦ hp.1.1)).add hnormal.contDiffOn
+    (hγ.comp contDiffOn_fst (fun p hp ↦ (And.left hp).1)).add hnormal.contDiffOn
   have hφd (p : ℝ × ell.ker) (hp : p ∈ V) :
       ∃ D : (ℝ × ell.ker) ≃L[ℝ] E,
         HasFDerivAt φ (D : (ℝ × ell.ker) →L[ℝ] E) p := by

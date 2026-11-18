@@ -100,7 +100,7 @@ private theorem smooth_value_continuous :
 private theorem smooth_derivative_continuous :
     ContinuousOn smoothDerivativeWeight (Ioo 0 2) :=
   (continuousOn_const.div (continuousOn_id.pow 2)
-    (fun _ hx ↦ pow_ne_zero 2 (ne_of_gt hx.1))).add continuousOn_const
+    (fun _ hx ↦ pow_ne_zero 2 (ne_of_gt (And.left hx)))).add continuousOn_const
 
 /-- The output is smooth, compactly supported, odd and nonzero, with the prescribed origin
 slope. Its difference from the spline has arbitrarily small singular weighted `H¹` error. -/

@@ -38,7 +38,7 @@ theorem integral_eq_two_mul_integral_Ioo_of_even_support {g : ℝ → ℝ} {L : 
     _ = _ := by
       congr 1
       apply setIntegral_eq_of_subset_of_forall_sdiff_eq_zero measurableSet_Ioi
-        (fun _ hx ↦ hx.1)
+        (fun _ ↦ And.left)
       intro x hx
       exact hsupport x (not_lt.mp fun hlt ↦ hx.2 ⟨hx.1, hlt⟩)
 

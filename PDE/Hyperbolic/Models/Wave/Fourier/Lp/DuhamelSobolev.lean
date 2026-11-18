@@ -64,7 +64,7 @@ theorem eLpNorm_re_duhamelL2_le {n : ℕ} {q : NNReal} (hn : 0 < n)
         (SNormLESNormFDerivOfEqConst ℝ (volume : Measure (ℝ^n)) 2 : ℝ≥0∞) * n * ‖f s‖ₑ :=
       lintegral_mono fun s ↦ eLpNorm_re_sineEvolution_le hn hq (max (t - s) 0) (f s)
     _ = _ := by
-      rw [lintegral_const_mul'' _ (Lp.aestronglyMeasurable f).enorm,
-        ← eLpNorm_one_eq_lintegral_enorm (Lp.aestronglyMeasurable f), ← Lp.enorm_def]
+      rw [lintegral_const_mul'' _ (Lp.aestronglyMeasurable f).eNorm,
+        ← eLpNorm_one_eq_lintegral_eNorm (Lp.aestronglyMeasurable f), ← Lp.eNorm_def]
 
 end WaveEquation.Fourier

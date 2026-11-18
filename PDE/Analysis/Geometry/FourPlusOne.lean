@@ -106,8 +106,9 @@ theorem partialDeriv_comp_firstFourSliceFive
     have h := (firstFourEmbeddingFive.hasFDerivAt (x := y)).add_const
       (fourPlusOnePoint (0 : ℝ^4) z)
     convert h using 1
-    all_goals (funext v; ext j; fin_cases j <;>
-      simp [firstFourSliceFive, fourPlusOnePoint])
+    funext v
+    ext j
+    fin_cases j <;> simp [firstFourSliceFive, fourPlusOnePoint]
   have hc := hF.hasFDerivAt.comp y hslice
   change fderiv ℝ (F ∘ firstFourSliceFive z) y
       (EuclideanSpace.single i 1) =

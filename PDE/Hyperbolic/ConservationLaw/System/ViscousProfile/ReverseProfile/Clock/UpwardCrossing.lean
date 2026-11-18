@@ -40,9 +40,9 @@ private theorem fast_zero (δ : ℝ) : fastLogCosh δ 0 = 0 := by
 
 private theorem lipschitzWith_fast {δ : ℝ} (hδ : |δ| < 1 / 4) :
     LipschitzWith (9 / 4) (fastLogCosh δ) := by
-  refine lipschitzWith_of_nnnorm_deriv_le
+  refine lipschitzWith_of_nnNorm_deriv_le
     (fun s ↦ (hasDerivAt_fastLogCosh δ s).differentiableAt) fun s ↦ ?_
-  rw [← NNReal.coe_le_coe, coe_nnnorm, Real.norm_eq_abs]
+  rw [← NNReal.coe_le_coe, coe_nnNorm, Real.norm_eq_abs]
   change |deriv (fastLogCosh δ) s| ≤ (9 : ℝ) / 4
   exact abs_le.mpr ⟨by linarith [seven_fourths_lt_deriv_fastLogCosh hδ s],
     (deriv_fastLogCosh_lt_nine_fourths hδ s).le⟩

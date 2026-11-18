@@ -96,7 +96,7 @@ theorem IntervalIntegrable.absolutelyContinuousOnInterval_intervalIntegral_norme
   filter_upwards [hdisjoint] with I hI
   obtain ⟨hI_mem, hI_pairwise⟩ := Set.mem_ofPred_eq ▸ hI
   simp only [s]
-  rw [← integral_norm_eq_lintegral_enorm
+  rw [← integral_norm_eq_lintegral_eNorm
       (hf.aestronglyMeasurable_restrict_uIoc.restrict),
     integral_biUnion_finset _ (by simp +contextual [uIoc]) hI_pairwise]
   · refine Finset.sum_le_sum fun i hi ↦ ?_

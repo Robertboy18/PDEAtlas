@@ -127,8 +127,8 @@ theorem exists_logarithmic_tube_extension_radius
       (hcutSupport (subset_tsupport _ (left_ne_zero_of_smul hnonzero))))⟩, e.right_inv hxΩ.1⟩
   have hPsupportK : tsupport P ⊆ K := closure_minimal hsupport hK.isClosed
   have hPsupportΩ : tsupport P ⊆ Ω := hPsupportK.trans hKΩ
-  have hP : ContDiff ℝ ∞ P := ((hcut.fun_comp_contDiffOn (hz.mono fun _ hx ↦ hx.1)).fun_smul
-    (hQ.mono fun _ hx ↦ hx.1)).indicator_of_tsupport_subset hΩ hPsupportΩ
+  have hP : ContDiff ℝ ∞ P := ((hcut.fun_comp_contDiffOn (hz.mono fun _ ↦ And.left)).fun_smul
+    (hQ.mono fun _ ↦ And.left)).indicator_of_tsupport_subset hΩ hPsupportΩ
   have hproductGerm (x : E) (hx : x ∈ Ω) : P =ᶠ[𝓝 x] (fun y ↦ χ y • Q y) :=
     eventually_of_mem (hΩ.mem_nhds hx) fun _ hy ↦ indicator_of_mem hy _
   refine ⟨hP, hK.of_isClosed_subset (isClosed_tsupport P) hPsupportK, hPsupportK, hPsupportΩ,

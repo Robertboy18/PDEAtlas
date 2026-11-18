@@ -79,7 +79,7 @@ theorem eLpNorm_vectorDifference_le_of_restricted_bounds
     calc
       ∑ i : Fin n, ‖d i‖ ≤ ∑ _ : Fin n, C := Finset.sum_le_sum fun i _ ↦ hbound i
       _ = _ := by simp
-  rw [← eLpNorm_congr_ae hD, ← Lp.enorm_def, ← ofReal_norm]
+  rw [← eLpNorm_congr_ae hD, ← Lp.eNorm_def, ← ofReal_norm]
   exact ENNReal.ofReal_le_ofReal hnorm
 
 /-- For a compactly contained set and any collar inside the domain, vector quotients

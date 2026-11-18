@@ -118,7 +118,7 @@ theorem exists_gelfandGalerkin_quadratic_on_Icc_of_bounds
           A t (u t : V) (v : V) +
           N t (u t : V) (u t : V) (v : V) =
         ell t (v : V)) := by
-  let : CompleteSpace S := FiniteDimensional.complete ℝ S
+  let : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
   let K : NNReal := ⟨‖(trialMassEquiv T S).symm.toContinuousLinearMap‖ *
     ((MA : ℝ) + (MN : ℝ) * (2 * (‖u₀‖ + (R : ℝ)))), by positivity⟩
   have hPL : IsPicardLindelof (gelfandGalerkinQuadraticVectorField T S A N ell)
@@ -306,7 +306,7 @@ theorem exists_gelfandGalerkin_quadratic_on_Icc_of_energy_pairing
         (1 / 2 : ℝ) * ‖T.inclusion (u t : V)‖ ^ 2 ≤
           (1 / 2 : ℝ) * ‖T.inclusion (u₀ : V)‖ ^ 2 +
             K * (t - a) := by
-  let : CompleteSpace S := FiniteDimensional.complete ℝ S
+  let : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
   let energy : ℝ → S → ℝ := fun _ x ↦ (1 / 2 : ℝ) * ‖T.inclusion (x : V)‖ ^ 2
   let bound : ℝ → S → ℝ := fun t _ ↦ (1 / 2 : ℝ) * ‖T.inclusion (u₀ : V)‖ ^ 2 + K * (t - a)
   -- the coefficient bound `X` on the energy cap and the speed `L` on the ball of radius `X + 1`

@@ -170,7 +170,7 @@ theorem exists_principal_higherOrder_on_upper
               (baseIndex n 1) : DerivLp n 2 (HalfSpace.upper n)) x) := by
   classical
   induction k using Nat.strong_induction_on generalizing u with
-  | h k ih =>
+  | ind k ih =>
       rcases k with _ | k
       · simpa [baseRepresentative] using exists_flattened_h2 _ a C haLip haRep hA hA.1 _ u
           ((isWeakSolution_iff_isWeakDivergenceSolution (HalfSpace.isOpen_upper (n := n))

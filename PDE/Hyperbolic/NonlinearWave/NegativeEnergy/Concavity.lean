@@ -178,6 +178,6 @@ theorem waveSpatialQuadraticMomentum_concavity_inequality_on_of_conserved_energy
       (hwave t ht) hgrowth
   rw [henergyConserved t ht] at hpointwise
   convert hpointwise using 1
-  all_goals ring
+  ring
 
 end WaveEquation

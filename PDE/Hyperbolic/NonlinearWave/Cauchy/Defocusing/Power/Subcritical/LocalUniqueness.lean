@@ -43,7 +43,7 @@ theorem physicalCone_eq_of_free_integral_eq {T : ℝ} {v : ℝ × ℝ^3 → ℝ}
   have hq : (physicalPoint p.1 q).1 ∈ Ico 0 T := ⟨mul_nonneg hp (coneTime_mem q).1,
       (le_abs_self _).trans_lt ((abs_physicalPoint_time_le p.1 q).trans_lt p.2)⟩
   rw [physicalCone_apply, heq _ hq]
-  simp only [BoundedContinuousFunction.add_apply, BoundedContinuousFunction.smul_apply,
+  simp only [add_apply, smul_apply,
     coneField_apply, duhamelOperator_apply, composeCompact_apply, physicalCone_apply,
     physicalPoint_descend, smul_eq_mul]
   congr 1

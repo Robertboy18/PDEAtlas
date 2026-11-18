@@ -67,7 +67,7 @@ open scoped ENNReal Topology Sobolev
 /-- Every exponent at most the Sobolev conjugate of `1 ≤ q < 2` is available for the base
 representative of a `W¹²` function on a planar domain carrying `Boundary.C1ExtensionAtlas`. -/
 theorem H1SpaceOn.memLp_of_le_pStar_of_c1ExtensionAtlas
-    {Ω : Set (ℝ^2)} [Fact (0 < (2 : ℕ))] [Boundary.C1ExtensionAtlas 2 Ω]
+    {Ω : Set (ℝ^2)} [Boundary.C1ExtensionAtlas 2 Ω]
     {q : NNReal} (hq1 : (1 : NNReal) ≤ q) (hq2 : (q : ℝ) < 2)
     (V : H¹(Ω)) {p : ℝ≥0∞}
     (hp : p ≤ (SobolevSpace.Inequalities.pStar 2 q : ℝ≥0∞)) :
@@ -101,8 +101,7 @@ theorem norm_derivativeSlice_le {m : ℕ} {S : Set (ℝ^m)}
 
 section Assembly
 
-variable {Ω : Set (ℝ^2)} [Fact (0 < (2 : ℕ))]
-  [Boundary.C1ExtensionAtlas 2 Ω]
+variable {Ω : Set (ℝ^2)} [Boundary.C1ExtensionAtlas 2 Ω]
 
 /-- Every base or first-derivative coordinate of an `H²` function is in `Lᵖ`,
 provided `p` is at most the Sobolev conjugate of an auxiliary `1 ≤ q < 2`. -/

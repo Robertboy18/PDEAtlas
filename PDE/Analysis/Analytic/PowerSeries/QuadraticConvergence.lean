@@ -29,7 +29,7 @@ theorem norm_coeff_le_catalan_of_quadratic (w : PowerSeries ℝ) {a b c M Q : �
     ∀ n, ‖coeff n w‖ ≤ M * Q ^ n * (catalan n : ℝ) := by
   intro n
   induction n using Nat.strong_induction_on with
-  | h n ih =>
+  | ind n ih =>
     cases n with
     | zero =>
       have hz := congrArg constantCoeff hw

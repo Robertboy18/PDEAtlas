@@ -117,7 +117,7 @@ theorem exists_amplitude_bound_of_critical_tail {u : ℝ^4 → ℝ} {T R b K : �
     exact ENNReal.ofReal_le_ofReal (hM₀ t ⟨hs.1.le.trans ht.1, ht.2⟩)
   have hamp : ‖u (timeSpaceCons t x)‖ₑ ≤ B := (le_iSup (fun y ↦ ‖u (timeSpaceCons t y)‖ₑ) x).trans
       ((le_self_add.trans (hC _ hslice)).trans (mul_le_mul_right (add_le_add hval hderiv) _))
-  simpa only [toReal_enorm] using ENNReal.toReal_mono hB hamp
+  simpa only [toReal_eNorm] using ENNReal.toReal_mono hB hamp
 
 
 /-- Cone energy decay, enlargement and finite localization supply the

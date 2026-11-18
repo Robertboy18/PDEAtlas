@@ -66,13 +66,13 @@ theorem memLp_eLpNorm_compactTensorSchwartzSection :
   have he : eLpNorm
       (fun t ↦ eLpNorm (SchwartzMap.compactTensorSchwartzLinearMap a t) (12 / 11) volume)
       (4 / 3) volume = ‖u‖ₑ := by
-    rw [Lp.enorm_def, ← eLpNorm_enorm _ (Lp.aestronglyMeasurable u)]
+    rw [Lp.eNorm_def, ← eLpNorm_eNorm _ (Lp.aestronglyMeasurable u)]
     apply eLpNorm_congr_ae
     filter_upwards [compactTensorSchwartzSection_ae_eq a] with t ht
-    exact (eLpNorm_congr_ae ht).trans (Lp.enorm_def (u t)).symm
+    exact (eLpNorm_congr_ae ht).trans (Lp.eNorm_def (u t)).symm
   change eLpNorm _ _ _ < ∞
   rw [he]
-  exact enorm_lt_top
+  exact eNorm_lt_top
 
 /-- The Fourier energy integral of a compact tensor sum is Bochner integrable. -/
 theorem integrable_frequencyEnergyDatum_compactTensor :

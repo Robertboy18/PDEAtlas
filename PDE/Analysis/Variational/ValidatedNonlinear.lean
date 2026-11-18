@@ -181,7 +181,7 @@ theorem exists_solution_of_compact_embedding
         mul_le_mul_of_nonneg_left (Q.le_opNorm _) (norm_nonneg e)
       _ ≤ ‖e‖ * (‖Q‖ * (C * γ * ‖e (u - v)‖)) := by gcongr
       _ = (‖e‖₊ * ‖Q‖₊ * C * γ : NNReal) * ‖e (u - v)‖ := by
-        simp only [NNReal.coe_mul, coe_nnnorm]
+        simp only [NNReal.coe_mul, coe_nnNorm]
         ring
   obtain ⟨x, hx, hfix⟩ :=
     PDE.FixedPoint.exists_isFixedPt_of_compact_embedding e he hcompact T hr hmap hcontinuous

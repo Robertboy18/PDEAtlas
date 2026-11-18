@@ -87,6 +87,6 @@ theorem contDiffOn_neg_reflect_slab {f : ℝ → ℝ → ℝ} {a b : ℝ}
     (hf : ContDiffOn ℝ 1 (Function.uncurry f) (univ ×ˢ Ioo a b)) :
     ContDiffOn ℝ 1 (fun p : ℝ × ℝ ↦ -f (-p.1) p.2) (univ ×ˢ Ioo a b) :=
   (hf.comp (contDiffOn_fst.neg.prodMk contDiffOn_snd)
-    (fun _ hp ↦ ⟨mem_univ _, hp.2⟩)).neg
+    (fun _ hp ↦ ⟨mem_univ _, And.right hp⟩)).neg
 
 end PDE.Analysis

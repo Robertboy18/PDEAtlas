@@ -77,12 +77,12 @@ theorem lintegral_add_sum_smul_le {N : E → ℝ≥0∞} (h0 : N 0 = 0)
           (le_sum_enorm_mul h0 hadd hsmul u (fun l ↦ a l t) w))
     _ = (∫⁻ t in s, N (g t)) + ∑ l ∈ u, ∫⁻ t in s, ‖a l t‖ₑ * N (w l) := by
         rw [lintegral_add_right' _ (Finset.aemeasurable_fun_sum _ fun l hl ↦
-          ((ha l hl).enorm.mul_const _)), lintegral_finsetSum' _ fun l hl ↦
-            (ha l hl).enorm.mul_const _]
+          ((ha l hl).eNorm.mul_const _)), lintegral_finsetSum' _ fun l hl ↦
+            (ha l hl).eNorm.mul_const _]
     _ = _ := by
         congr 1
         refine Finset.sum_congr rfl fun l hl ↦ ?_
-        rw [lintegral_mul_const'' _ (ha l hl).enorm, mul_comm]
+        rw [lintegral_mul_const'' _ (ha l hl).eNorm, mul_comm]
 
 namespace BlockField
 
@@ -118,7 +118,7 @@ theorem lintegral_enorm_eval_localTime (hB : B.Sound) (hF : F.IsOrdered) {m : �
     ((B.continuous_eval j).comp (continuous_iff_continuousAt.2 fun t ↦
       (F.hasDerivAt_localTime m t).continuousAt)).abs
   have hle : F.start m ≤ F.start (m + 1) := (hF m hm).le
-  simp only [Real.enorm_eq_ofReal_abs]
+  simp only [Real.eNorm_eq_ofReal_abs]
   rw [← ofReal_integral_eq_lintegral_ofReal (hc.integrableOn_Icc.mono_set Ioo_subset_Icc_self)
     (Filter.Eventually.of_forall fun _ ↦ abs_nonneg _), ← integral_Ioc_eq_integral_Ioo,
     ← intervalIntegral.integral_of_le hle,
@@ -135,7 +135,7 @@ theorem lintegral_block_le (hB : B.Sound) (hF : F.IsOrdered) {m : ℕ} (hm : m <
   have hk := (scale_pos hB hF hm).le
   have hmeas₀ : ∀ j : Fin n, Measurable fun t ↦ ‖B.eval j (F.localTime m t)‖ₑ := fun j ↦
     ((B.continuous_eval j).comp (continuous_iff_continuousAt.2 fun t ↦
-      (F.hasDerivAt_localTime m t).continuousAt)).measurable.enorm
+      (F.hasDerivAt_localTime m t).continuousAt)).measurable.eNorm
   have hmeas : ∀ j : Fin n, Measurable fun t ↦ ‖B.eval j (F.localTime m t)‖ₑ * A j := fun j ↦
     (hmeas₀ j).mul_const _
   calc ∫⁻ t in Ioo (F.start m) (F.start (m + 1)), f t
@@ -257,7 +257,7 @@ theorem le_sum_supBound (hB : B.Sound) (hF : F.IsOrdered) {N : E → ℝ≥0∞}
   have hτ := localTime_mem_Icc hB hF hm ht
   refine (hN _ hτ).trans (Finset.sum_le_sum fun i _ ↦ ?_)
   gcongr
-  rw [Real.enorm_eq_ofReal_abs]
+  rw [Real.eNorm_eq_ofReal_abs]
   exact ENNReal.ofReal_le_ofReal (hB.abs_le_supBound i _ hτ)
 
 end BlockField

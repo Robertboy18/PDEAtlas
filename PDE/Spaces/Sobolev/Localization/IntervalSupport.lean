@@ -64,7 +64,7 @@ theorem setIntegral_Ioi_eq_Ioc_of_support_subset
     (hca : c ≤ a) (hsupp : support f ⊆ Ioo a b) :
     (∫ x in Ioi c, f x ∂μ) = ∫ x in Ioc a b, f x ∂μ := by
   apply setIntegral_eq_of_subset_of_forall_sdiff_eq_zero measurableSet_Ioi
-    (fun _ hx ↦ lt_of_le_of_lt hca hx.1)
+    (fun _ hx ↦ lt_of_le_of_lt hca (And.left hx))
   intro x hx
   exact notMem_support.mp fun hmem ↦ hx.2 (Ioo_subset_Ioc_self (hsupp hmem))
 

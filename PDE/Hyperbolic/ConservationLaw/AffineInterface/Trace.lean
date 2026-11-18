@@ -82,7 +82,7 @@ theorem exists_testFunction_nonneg_integral_interface_pos (s : ℝ) :
   have hnonzero : φ (interface s 0) ≠ 0 := by
     rw [hzero]
     norm_num
-  exact hcontinuous.integral_pos_of_hasCompactSupport_nonneg_nonzero
+  exact hcontinuous.integral_pos_of_hasCompactSupport_nonneg_ne_zero
       (hasCompactSupport_interface_trace φ s) (fun t ↦ hφ_nonneg (interface s t)) hnonzero
 
 end

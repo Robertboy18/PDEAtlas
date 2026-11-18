@@ -54,7 +54,7 @@ theorem norm_toLp_pullback_rpow_le (hp : p ≠ ∞)
     (u : W^{s,p}(E.target; F)) :
     ‖toLp n s E.source (pullback hs hE hL hD u)‖ ^ p.toReal ≤
       (D : ℝ) * ‖toLp n s E.target u‖ ^ p.toReal := by
-  have hmeas := (Lp.aestronglyMeasurable (toLp n s E.target u)).enorm
+  have hmeas := (Lp.aestronglyMeasurable (toLp n s E.target u)).eNorm
   have h := Pullback.lintegral_comp_le_of_map_le hE hD (hmeas.pow_const p.toReal)
   have hsource := Lp.lintegral_enorm_rpow_eq_of_ae hp _
     (toLp_pullback_apply_ae hs hE hL hD u)

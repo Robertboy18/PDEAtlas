@@ -46,7 +46,7 @@ theorem exists_global_smooth_approximation_of_extension
   refine ⟨restrictCLM (subset_univ Ω) V, f, hf, hc, ?_, ?_⟩
   · exact (toLp_restrictCLM_apply_ae (subset_univ Ω) V).trans
       (ae_restrict_of_ae hrep)
-  · rw [← hU, ← map_sub]
+  · rw [← hU, ← ContinuousLinearMap.map_sub]
     exact (norm_restrictCLM_apply_le (subset_univ Ω) (V - U)).trans_lt hnorm
 
 /-- If every element extends to the whole space, restrictions of globally smooth,

@@ -105,13 +105,13 @@ theorem lipschitzWith_initialValueSolution_time_of_second_bound
   have hB : 0 ≤ B := Finset.sum_nonneg fun i _hi ↦ hCi i
   have hpos :
       LipschitzOnWith (Real.nnabs B) P (Set.Ioi (0 : ℝ)) := by
-    apply Convex.lipschitzOnWith_of_nnnorm_deriv_le
+    apply Convex.lipschitzOnWith_of_nnNorm_deriv_le
     · intro r hr
       exact
         (hasDerivAt_initialValueSolution_time_sourceSecond
           (n := n) g hg2 hgc x r hr).differentiableAt
     · intro r hr
-      rw [← NNReal.coe_le_coe, coe_nnnorm, Real.coe_nnabs, abs_of_nonneg hB]
+      rw [← NNReal.coe_le_coe, coe_nnNorm, Real.coe_nnabs, abs_of_nonneg hB]
       exact norm_deriv_initialValueSolution_time_le g hg2 hgc C hC x r hr
     · exact convex_Ioi (𝕜 := ℝ) (0 : ℝ)
   obtain ⟨M, hM⟩ := hg2.continuous.bounded_above_of_compact_support hgc

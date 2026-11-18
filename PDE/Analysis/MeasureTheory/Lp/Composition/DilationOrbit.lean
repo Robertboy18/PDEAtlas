@@ -65,7 +65,7 @@ theorem tendsto_eLpNorm_comp_smul_sub_of_hasCompactSupport {g : E → F} (hg : C
   have hlim : Tendsto (fun a ↦ ∫⁻ x, G a x ∂μ) (𝓝 a₀) (𝓝 (∫⁻ _, 0 ∂μ)) := by
     refine tendsto_lintegral_filter_of_dominated_convergence' bound
       (Eventually.of_forall fun a ↦ ((hg.comp (continuous_const_smul a)).sub
-        (hg.comp (continuous_const_smul a₀))).aestronglyMeasurable.enorm.pow_const P)
+        (hg.comp (continuous_const_smul a₀))).aestronglyMeasurable.eNorm.pow_const P)
       ?_ ?_ (ae_of_all _ fun x ↦ ?_)
     · filter_upwards [hnear] with a ha
       refine ae_of_all _ fun x ↦ ?_
@@ -82,7 +82,7 @@ theorem tendsto_eLpNorm_comp_smul_sub_of_hasCompactSupport {g : E → F} (hg : C
         (isCompact_closedBall (0 : E) _).measure_ne_top
     · have hd : Continuous fun a : ℝ ↦ g (a • x) - g (a₀ • x) :=
         (hg.comp (continuous_id.smul continuous_const)).sub continuous_const
-      have hc : Continuous fun a : ℝ ↦ G a x := ENNReal.continuous_rpow_const.comp hd.enorm
+      have hc : Continuous fun a : ℝ ↦ G a x := ENNReal.continuous_rpow_const.comp hd.eNorm
       simpa [G, ENNReal.zero_rpow_of_pos hP] using hc.tendsto a₀
   rw [lintegral_zero] at hlim
   have hroot := ((ENNReal.continuous_rpow_const (y := 1 / P)).tendsto 0).comp hlim
@@ -91,7 +91,7 @@ theorem tendsto_eLpNorm_comp_smul_sub_of_hasCompactSupport {g : E → F} (hg : C
   have hm : AEStronglyMeasurable (fun x ↦ g (a • x) - g (a₀ • x)) μ :=
     ((hg.comp (continuous_const_smul a)).sub
       (hg.comp (continuous_const_smul a₀))).aestronglyMeasurable
-  rw [Function.comp_apply, eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hm]
+  rw [Function.comp_apply, eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hm]
 
 variable {f : E → F} {p : ℝ≥0∞}
 
@@ -163,7 +163,7 @@ theorem eLpNorm_dilate (hf : AEStronglyMeasurable f μ) (τ : ℝ) :
       ENNReal.ofReal (Real.exp (τ / 2 * (1 - finrank ℝ E * p⁻¹.toReal))) * eLpNorm f p μ := by
   change eLpNorm (Real.exp (τ / 2) • fun x ↦ f (Real.exp (τ / 2) • x)) p μ = _
   rw [eLpNorm_const_smul, eLpNorm_comp_smul hf (Real.exp_pos _).ne', ← mul_assoc,
-    Real.enorm_eq_ofReal (Real.exp_pos _).le, dilationFactor,
+    Real.eNorm_eq_ofReal (Real.exp_pos _).le, dilationFactor,
     abs_of_pos (by positivity), ENNReal.ofReal_rpow_of_nonneg (by positivity)
       ENNReal.toReal_nonneg, ← ENNReal.ofReal_mul (Real.exp_pos _).le]
   congr 2
@@ -209,9 +209,9 @@ theorem tendsto_eLpNorm_dilate_sub (hf : MemLp f p μ) (hp1 : 1 ≤ p) (hp : p �
     (Eventually.of_forall fun _ ↦ zero_le) hbound
   rw [show (0 : ℝ≥0∞) = 0 * M + ‖a τ₀‖ₑ * 0 by simp]
   refine Tendsto.add (ENNReal.Tendsto.mul_const ?_ (Or.inr hM))
-    (ENNReal.Tendsto.const_mul ?_ (Or.inr enorm_ne_top))
-  · have hc : Continuous fun τ ↦ ‖a τ - a τ₀‖ₑ := (ha.sub continuous_const).enorm
-    simpa only [sub_self, enorm_zero] using hc.tendsto τ₀
+    (ENNReal.Tendsto.const_mul ?_ (Or.inr eNorm_ne_top))
+  · have hc : Continuous fun τ ↦ ‖a τ - a τ₀‖ₑ := (ha.sub continuous_const).eNorm
+    simpa only [sub_self, eNorm_zero] using hc.tendsto τ₀
   · exact (tendsto_eLpNorm_comp_smul_sub hf hp1 hp ha₀.ne').comp (ha.tendsto τ₀)
 
 end Rescaling

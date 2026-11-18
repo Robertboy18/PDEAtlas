@@ -65,7 +65,7 @@ theorem tendsto_L1_weighted_integral_sections {α β ι : Type*} [MeasurableSpac
       C • eLpNorm (F i - G) 1 (μ.prod ν) := by
     apply eLpNorm_le_nnreal_smul_eLpNorm_of_ae_le_mul ((hFw i).sub hGw).aestronglyMeasurable _ 1
     filter_upwards with z
-    simp only [Pi.sub_apply, ← sub_mul, nnnorm_mul]
+    simp only [Pi.sub_apply, ← sub_mul, nnNorm_mul]
     have hc : ‖w z.2‖₊ ≤ C := by exact_mod_cast hbound z.2
     exact (mul_le_mul_right hc _).trans_eq (mul_comm _ _)
   have ht : Tendsto (fun i ↦ C • eLpNorm (F i - G) 1 (μ.prod ν)) l (𝓝 0) := by

@@ -42,7 +42,7 @@ private theorem eLpNorm_fourier_selfsimilarResolvent_le (hn : 2 ≤ n) {μ : ℝ
     (f : W^{0,2}(ℝ^n)) :
     eLpNorm ((𝓕 (baseL2 (selfsimilarResolvent n hn hμ0 f)) :
       Lp ℂ 2 (volume : Measure (ℝ^n))) : ℝ^n → ℂ) 2 volume ≤ ENNReal.ofReal (μ⁻¹ * ‖f‖) := by
-  rw [← Lp.enorm_def, ← ofReal_norm, Lp.norm_fourier_eq, ← norm_eq_norm_baseL2_of_order_zero]
+  rw [← Lp.eNorm_def, ← ofReal_norm, Lp.norm_fourier_eq, ← norm_eq_norm_baseL2_of_order_zero]
   exact ENNReal.ofReal_le_ofReal (((selfsimilarResolvent n hn hμ0).le_opNorm f).trans
     (mul_le_mul_of_nonneg_right (norm_selfsimilarResolvent_le hn hμ0) (norm_nonneg _)))
 

@@ -53,11 +53,11 @@ theorem ofReal_norm_integral_frequencyEnergyDatum_sq_le (F : ℝ → 𝓢(ℝ^3,
       filter_upwards [volume.ae_ne t] with s hs
       exact enorm_re_inner_frequencyEnergyDatum_le (F t) (F s) (hFc t) (hFc s) hs.symm
     _ = ‖(4 * Real.pi)⁻¹‖ₑ * ∫⁻ t, ∫⁻ s, K t s := by
-      simp_rw [lintegral_const_mul' _ _ enorm_ne_top]
+      simp_rw [lintegral_const_mul' _ _ eNorm_ne_top]
     _ ≤ _ := by
-      have h := lintegral_spacetime_exteriorNewtonKernel_mul_le hF.enorm hF.enorm
+      have h := lintegral_spacetime_exteriorNewtonKernel_mul_le hF.eNorm hF.eNorm
       have hn (t : ℝ) : eLpNorm (fun x ↦ ‖F t x‖ₑ) (12 / 11) volume =
-          eLpNorm (F t) (12 / 11) volume := eLpNorm_enorm _ (F t).continuous.aestronglyMeasurable
+          eLpNorm (F t) (12 / 11) volume := eLpNorm_eNorm _ (F t).continuous.aestronglyMeasurable
       simp_rw [hn] at h
       have h' := mul_le_mul (le_refl ‖(4 * Real.pi)⁻¹‖ₑ) h bot_le bot_le
       simpa only [K, spacetimeNewtonBound, pow_two, mul_assoc] using h'

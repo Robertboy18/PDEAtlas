@@ -78,7 +78,7 @@ theorem IsSmoothFamilyOn.comp_time {F : ℝ → P → Q} {g : ℝ → ℝ} (hF :
     (hg : ContinuousOn g I) (hgI : MapsTo g I J) :
     IsSmoothFamilyOn m (fun r ↦ F (g r)) I :=
   ⟨fun _ hr ↦ hF.contDiff (hgI hr), fun _ hj ↦ (hF.continuousOn_iteratedFDeriv hj).comp
-    ((hg.comp continuousOn_fst fun _ hq ↦ hq.1).prodMk continuousOn_snd)
+    ((hg.comp continuousOn_fst fun _ ↦ And.left).prodMk continuousOn_snd)
     fun _ hq ↦ ⟨hgI hq.1, mem_univ _⟩⟩
 
 /-- **Locality in time.** A family that is smooth on a neighbourhood within `I` of every time of

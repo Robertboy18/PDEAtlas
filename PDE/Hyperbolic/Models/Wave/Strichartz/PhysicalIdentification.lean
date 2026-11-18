@@ -115,13 +115,13 @@ theorem memLp_eLpNorm_fourierWave (g h : 𝓢(ℝ^3, ℂ)) :
       (𝓕 g : 𝓢(ℝ^3, ℂ)) (𝓕 h : 𝓢(ℝ^3, ℂ)) (t, x)).re) 12 volume) 4 volume := by
   change eLpNorm _ _ _ < (∞ : ℝ≥0∞)
   rw [eLpNorm_fourierWave_eq]
-  exact enorm_lt_top
+  exact eNorm_lt_top
 
 /-- The Fourier wave has the proved global L4-in-time L12-in-space bound. -/
 theorem mixedNorm_fourierWave_le (g h : 𝓢(ℝ^3, ℂ)) :
     (eLpNorm (fun t ↦ eLpNorm (fun x ↦ (Fourier.waveSolution (𝓕 g : 𝓢(ℝ^3, ℂ)) (𝓕 h : 𝓢(ℝ^3, ℂ))
       (t, x)).re) 12 volume) 4 volume).toReal ≤ energyAdjointBound * ‖initialEnergyDatum g h‖ := by
-  rw [eLpNorm_fourierWave_eq, toReal_enorm]
+  rw [eLpNorm_fourierWave_eq, toReal_eNorm]
   exact (homogeneousWaveOperator.le_opNorm _).trans
     (mul_le_mul_of_nonneg_right norm_homogeneousWaveOperator_le (norm_nonneg _))
 

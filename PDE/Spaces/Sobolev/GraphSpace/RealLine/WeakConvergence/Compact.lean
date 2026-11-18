@@ -40,7 +40,7 @@ theorem dist_realLineRepresentative_le_sqrt (U : W^{1,2}(ℝ^1)) (x y : ℝ) :
       (by norm_num) ENNReal.ofReal_ne_top)
   have hreal := ENNReal.toReal_mono hfinite h
   rw [ENNReal.toReal_mul, ← ENNReal.toReal_rpow] at hreal
-  simp only [toReal_enorm, Real.norm_eq_abs, ENNReal.toReal_ofReal (abs_nonneg _),
+  simp only [toReal_eNorm, Real.norm_eq_abs, ENNReal.toReal_ofReal (abs_nonneg _),
     ← Real.sqrt_eq_rpow, ← Lp.norm_def] at hreal
   exact hreal.trans (mul_le_mul_of_nonneg_right (norm_realLineCoordinateCLM_le _ U)
     (Real.sqrt_nonneg _))

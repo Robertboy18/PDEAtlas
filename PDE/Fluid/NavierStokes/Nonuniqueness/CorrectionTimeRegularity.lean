@@ -90,7 +90,7 @@ theorem continuousOn_physicalForcing (hR : D.ancientThreshold ≤ R) (hs : s ∈
   have hG := continuousOn_liftForcing D R (three_lt_two_mul_succ hm)
     (isCorrectionLift_correctionLift hR hs (m + 1) (three_lt_two_mul_succ hm)).1
   have h := (continuousOn_physicalMap (k := m + 1) subset_rfl hG).comp hlog hmaps
-  exact (continuousOn_inv₀.mono fun t ht ↦ ht.1.ne').smul h
+  exact (continuousOn_inv₀.mono fun t ht ↦ (And.left ht).ne').smul h
 
 /-! ### The time derivative -/
 

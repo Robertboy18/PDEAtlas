@@ -324,7 +324,7 @@ theorem evansNorm_smul (c : ℝ) (f : CKGammaOn n k Ω γ) :
       ((c • f.topDerivative a).holderSeminorm : ℝ) =
         ‖c‖ * (f.topDerivative a).holderSeminorm := by
     simpa only [C0GammaOn.holderSeminorm, C0GammaOn.toBoundedContinuousFunction_smul,
-      BoundedContinuousFunction.coe_smul, Pi.smul_def, NNReal.coe_mul, coe_nnnorm] using
+      FunLike.coe_smul, Pi.smul_def, NNReal.coe_mul, coe_nnNorm] using
       congrArg (fun r : NNReal ↦ (r : ℝ)) ((f.topDerivative a).memHolder.nnHolderNorm_smul c)
   simp only [evansNorm, derivative_smul, topDerivative_smul, norm_smul, hs,
     Finset.mul_sum, mul_add]

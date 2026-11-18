@@ -89,7 +89,7 @@ theorem IsCompactOperator.into_Lp_of_higher_exponent
   have hq_one : 1 ≤ q := by exact_mod_cast (Fact.out : 1 ≤ (q : ℝ≥0∞))
   have hbound {t : ℝ≥0∞} [Fact (1 ≤ t)] (J : X →L[ℝ] Lp E t μ)
       (u : X) (hu : ‖u‖ ≤ 1) : eLpNorm (J u : α → E) t μ ≤ ‖J‖₊ := by
-    rw [← Lp.enorm_def]
+    rw [← Lp.eNorm_def]
     exact_mod_cast (J.le_opNorm u).trans
       ((mul_le_mul_of_nonneg_left hu J.opNorm_nonneg).trans_eq (mul_one _))
   apply (isCompactOperator_iff_isCompact_closure_image_closedBall
@@ -117,7 +117,7 @@ theorem IsCompactOperator.into_Lp_of_higher_exponent
   have hUI : UnifIntegrable fseq (q : ℝ≥0∞) μ :=
     unifIntegrable_of_eLpNorm_bound hq_one hqr hmeas ‖Jr‖₊ hrBound
   have hUniform : UniformIntegrable fseq (q : ℝ≥0∞) μ :=
-    ⟨hUI, ⟨‖Jq‖₊, fun m ↦ hbound Jq _ (hUnorm _)⟩⟩
+    ⟨hUI, (iSup_le fun m ↦ hbound Jq _ (hUnorm _)).trans_lt ENNReal.coe_lt_top⟩
   have hvsMemQ : MemLp (vs : α → E) (q : ℝ≥0∞) μ :=
     hUniform.memLp_of_tendstoInMeasure hsMeasure
   have hTight : UnifTight fseq (q : ℝ≥0∞) μ := by

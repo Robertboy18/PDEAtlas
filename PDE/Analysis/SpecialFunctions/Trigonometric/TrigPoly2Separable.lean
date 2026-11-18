@@ -667,7 +667,7 @@ theorem dβ_monomial_zero (j : Fin 2) (k : Fin (Mβ + 1)) (l : Fin (Mθ + 1)) (c
   simp only [dβ, monomial]
   by_cases hi : i' = 0 <;> by_cases hj : j' = j <;> by_cases hk : k' = k <;>
     by_cases hl : l' = l <;> simp_all
-  all_goals omega
+  omega
 
 theorem dβ_monomial_one (j : Fin 2) (k : Fin (Mβ + 1)) (l : Fin (Mθ + 1)) (c : R) :
     (monomial 1 j k l c).dβ = monomial 0 j k l (((k : ℕ) : R) * c) := by
@@ -682,7 +682,7 @@ theorem dθ_monomial_zero (i : Fin 2) (k : Fin (Mβ + 1)) (l : Fin (Mθ + 1)) (c
   simp only [dθ, monomial]
   by_cases hi : i' = i <;> by_cases hj : j' = 0 <;> by_cases hk : k' = k <;>
     by_cases hl : l' = l <;> simp_all
-  all_goals omega
+  omega
 
 theorem dθ_monomial_one (i : Fin 2) (k : Fin (Mβ + 1)) (l : Fin (Mθ + 1)) (c : R) :
     (monomial i 1 k l c).dθ = monomial i 0 k l (((l : ℕ) : R) * c) := by

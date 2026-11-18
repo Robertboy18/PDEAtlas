@@ -36,9 +36,9 @@ theorem memLp_eLpNorm_of_continuous_hasCompactSupport {p q : ℝ≥0∞} [Fact (
   have h : MemLp (fun t ↦ L (f t)) p μ :=
     (L.continuous.comp hf).memLp_of_hasCompactSupport (hfc.comp_left L.map_zero)
   have he (t : α) : ‖L (f t)‖ₑ = eLpNorm (f t) q ν := by
-    rw [Lp.enorm_def]
+    rw [Lp.eNorm_def]
     exact eLpNorm_congr_ae ((f t).coeFn_toLp q ν)
-  simpa only [he] using h.enorm
+  simpa only [he] using h.eNorm
 
 /-- Finite time-weighted sums of Schwartz functions have finite mixed norm when
 the scalar weights are continuous and compactly supported. -/

@@ -103,7 +103,7 @@ theorem integrableOn_coordinateRectangle_of_nonneg {f : ℝ^2 → ℝ} {a b c d 
   have heq : ∫⁻ y in coordinateRectangle a b c d, ‖f y‖ₑ =
       ∫⁻ y in coordinateRectangle a b c d, ENNReal.ofReal (f y) := by
     refine setLIntegral_congr_fun (measurableSet_coordinateRectangle a b c d) fun y hy ↦ ?_
-    rw [Real.enorm_eq_ofReal (h0 y hy)]
+    rw [Real.eNorm_eq_ofReal (h0 y hy)]
   rw [heq, lintegral_coordinateRectangle_eq hab hcd hf h0 hin hout]
   exact ENNReal.ofReal_lt_top
 

@@ -289,8 +289,9 @@ theorem spacetimeAxisymmetricVelocity_timeSpaceCons_eq_cartesianVector
   rw [partialDeriv_profileSlice_eq hΨ (0 : Fin 2) t]
   ext i
   fin_cases i <;>
-    (simp [spacetimeSquaredCylindricalLift_timeSpaceCons,
-      cartesianVector]; try ring)
+    simp [spacetimeSquaredCylindricalLift_timeSpaceCons,
+      cartesianVector]
+  ring
 
 /-- A `C^n` swirl profile and a `C^(n+1)` streamfunction reconstruct a jointly `C^n`
 Cartesian velocity. The extra streamfunction derivative comes from the meridional velocity. -/

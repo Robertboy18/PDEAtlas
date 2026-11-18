@@ -119,10 +119,10 @@ theorem norm_compactTensorLpLinearMap
       (eLpNorm (fun t ↦ eLpNorm (compactTensorSchwartzLinearMap a t) q ν) p μ).toReal := by
   rw [Lp.norm_def]
   congr 1
-  rw [← eLpNorm_enorm _ (Lp.aestronglyMeasurable _)]
+  rw [← eLpNorm_eNorm _ (Lp.aestronglyMeasurable _)]
   apply eLpNorm_congr_ae
   filter_upwards [compactTensorLpLinearMap_ae_eq p q μ ν a] with t ht
-  rw [ht, Lp.enorm_def]
+  rw [ht, Lp.eNorm_def]
   exact eLpNorm_congr_ae ((compactTensorSchwartzLinearMap a t).coeFn_toLp q ν)
 
 end SchwartzMap

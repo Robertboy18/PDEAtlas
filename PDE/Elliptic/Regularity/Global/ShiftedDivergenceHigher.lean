@@ -220,7 +220,7 @@ theorem exists_of_weak_shifted_full_divergence_solution
             (baseIndex n 1) : DerivLp n 2 Omega) x) := by
   classical
   induction k using Nat.strong_induction_on generalizing u with
-  | h k ih =>
+  | ind k ih =>
       rcases k with _ | r
       · simpa using exists_global_h2_of_weak_shifted_full_divergence_solution hOmega A a haRep
           haContDiff _ _ lambda _ u hu alpha halpha hElliptic

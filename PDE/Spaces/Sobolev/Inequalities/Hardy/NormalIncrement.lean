@@ -147,7 +147,7 @@ theorem lintegral_normal_increment_le
       simp only [f, indicator_of_mem (show x ∈ Ioc (a N) (b N) from ⟨hN, hN'⟩)]
     · rw [indicator_of_notMem (show x ∉ Ioi (0 : ℝ) from hx)]
       have hz (N : ℕ) : f N x = 0 :=
-        indicator_of_notMem (fun h ↦ hx ((ha N).trans h.1)) _
+        indicator_of_notMem (fun h ↦ hx ((ha N).trans (And.left h))) _
       simpa only [hz] using (tendsto_const_nhds (x := (0 : ℝ≥0∞)))
   calc
     (∫⁻ x in Ioi (0 : ℝ), ENNReal.ofReal (‖u x - u 0‖ ^ p * x ^ (-p))) =

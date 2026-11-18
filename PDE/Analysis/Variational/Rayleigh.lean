@@ -132,7 +132,7 @@ theorem exists_first_weakEigenfunction [Nontrivial H]
   have hspectrum : (spectrum ℝ R).Nonempty :=
     ⟨μ, (hRcompact.hasEigenvalue_iff_mem_spectrum hμne).mp hμ⟩
   have hradius : (spectralRadius ℝ R).toReal = ‖R‖ := by
-    rw [R.spectralRadius_eq_nnnorm hRsymm.isSelfAdjoint]
+    rw [R.spectralRadius_eq_nnNorm hRsymm.isSelfAdjoint]
     simp
   have hnormEigen : Module.End.HasEigenvalue (R : Module.End ℝ H) ‖R‖ := by
     obtain hpos | hneg := Real.spectralRadius_mem_spectrum_or hspectrum

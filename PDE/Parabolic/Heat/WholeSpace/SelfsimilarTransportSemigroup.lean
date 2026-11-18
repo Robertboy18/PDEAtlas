@@ -167,7 +167,7 @@ theorem transportGain_add {t : ℝ} (ht : 0 < t) {s : ℝ≥0} (hs : 0 < (s : �
       intro r hr
       rw [uIoc_of_le hτ.le] at hr
       rw [transportGainPathShift, forwardDecode_forwardEncode _ _ _ _ hr.1]
-    rw [BoundedContinuousFunction.add_apply, transportGainPathShift_apply, transportVolterra_apply,
+    rw [add_apply, transportGainPathShift_apply, transportVolterra_apply,
       vectorSelfsimilarHeatGainPath_apply, ← smul_add,
       ← transportGain_add_forwardDuhamel T hτ hs u,
       forwardDuhamel, intervalIntegral.integral_congr_ae (Filter.Eventually.of_forall hdec)]

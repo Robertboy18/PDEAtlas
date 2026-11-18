@@ -76,7 +76,7 @@ theorem exists_solution_Icc_of_bounded_of_continuous_spatial_fderiv
     obtain ⟨C, hC⟩ := hcompact.exists_bound_of_continuousOn
       (hDcont.mono (prod_mono_right (subset_univ _)))
     let K : NNReal := ⟨max C 0, le_max_right _ _⟩
-    refine ⟨K, fun t ht ↦ (convex_closedBall x₀ R).lipschitzOnWith_of_nnnorm_hasFDerivWithin_le
+    refine ⟨K, fun t ht ↦ (convex_closedBall x₀ R).lipschitzOnWith_of_nnNorm_hasFDerivWithin_le
         (fun x _ ↦ (hD (t, x) ht).hasFDerivWithinAt) ?_⟩
     intro x hx
     exact (hC (t, x) ⟨ht, hx⟩).trans (le_max_left _ _)

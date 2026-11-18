@@ -5,7 +5,7 @@ Authors: LeanPDE Team
 -/
 module
 
-public import Mathlib.Analysis.Distribution.SchwartzSpace.Basic
+public import Mathlib.Analysis.Distribution.SchwartzSpace.CompactSupport
 public import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
 
 import Mathlib.Analysis.Calculus.ContDiff.Bounds
@@ -15,6 +15,10 @@ import Mathlib.Analysis.Calculus.ContDiff.Bounds
 
 Multiplying a Schwartz map by expanding smooth cutoffs gives convergence in every Schwartz
 seminorm. The approximants have compact support contained in the support of the original map.
+
+Density of the compactly supported maps in Schwartz space itself is Mathlib's
+`SchwartzMap.dense_hasCompactSupport`, which this module imports publicly. The results here add
+the rate of convergence in each seminorm and the control of the support.
 -/
 
 @[expose] public noncomputable section
@@ -208,10 +212,5 @@ theorem closure_hasCompactSupport_tsupport_subset (Ω : Set E) :
   · apply closure_minimal _ isClosed_closure
     intro f hf
     exact mem_closure_hasCompactSupport_tsupport_subset f hf
-
-/-- Compactly supported smooth maps are dense in Schwartz space in its own topology. -/
-theorem dense_hasCompactSupport : Dense {g : 𝓢(E, F) | HasCompactSupport (g : E → F)} := by
-  intro f
-  simpa using mem_closure_hasCompactSupport_tsupport_subset f (Ω := univ) (subset_univ _)
 
 end SchwartzMap

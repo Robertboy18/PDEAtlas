@@ -86,7 +86,7 @@ theorem lpNorm_iteratedFDeriv_comp_le_of_derivative_bounds {n j : ℕ} (hj : 0 <
     _ ≤ lpNorm (fun x ↦ (j.factorial : ℝ) * D * G x ^ j) 2 volume := lpNorm_mono_real hm hp
     _ = (j.factorial : ℝ) * D * lpNorm (fun x ↦ G x ^ j) 2 volume := by
       change lpNorm (((j.factorial : ℝ) * D) • (fun x ↦ G x ^ j)) 2 volume = _
-      rw [lpNorm_const_smul, coe_nnnorm, Real.norm_of_nonneg (mul_nonneg (Nat.cast_nonneg _) hD)]
+      rw [lpNorm_const_smul, coe_nnNorm, Real.norm_of_nonneg (mul_nonneg (Nat.cast_nonneg _) hD)]
     _ ≤ _ := by
       rw [hpower]
       exact mul_le_mul_of_nonneg_left
@@ -202,7 +202,7 @@ theorem exists_uniform_smooth_composition_bound (hk : (n : ℝ) < 2 * ((k : ℝ)
       have he :
           lpNorm (fun x ↦ (K : ℝ) * ‖u x‖) 2 volume = K * lpNorm u 2 volume := by
         change lpNorm ((K : ℝ) • fun x ↦ ‖u x‖) 2 volume = _
-        rw [lpNorm_const_smul, coe_nnnorm]
+        rw [lpNorm_const_smul, coe_nnNorm]
         erw [Real.norm_of_nonneg K.2, lpNorm_norm hum.aestronglyMeasurable]
         rfl
       rw [he] at hm

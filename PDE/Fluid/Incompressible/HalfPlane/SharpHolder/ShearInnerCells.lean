@@ -432,7 +432,7 @@ theorem lintegral_le_shearRowSlab {ρ q₀ q₁ : ℚ} {N : ℤ} (h : shearRowSl
         rw [Ioc_union_Ioi_eq_Ioi hab', Ioc_union_Ioi_eq_Ioi hpa', Iic_union_Ioi]
       have h0 : ∫⁻ p in Iic 0, shearRowDensity p q = 0 :=
         (setLIntegral_congr_fun measurableSet_Iic (g := fun _ ↦ 0) fun p hp ↦
-          indicator_of_notMem (fun hs ↦ absurd hs.1 (not_lt.2 hp)) _).trans lintegral_zero
+          indicator_of_notMem (fun hs ↦ absurd (And.left hs) (not_lt.2 hp)) _).trans lintegral_zero
       have h0' : ∫⁻ p in Ioi (pb : ℝ), shearRowDensity p q = 0 :=
         (setLIntegral_congr_fun measurableSet_Ioi (g := fun _ ↦ 0) fun p hp ↦
           shearRowDensity_eq_zero_of_le (hlow.trans hp.le)).trans lintegral_zero

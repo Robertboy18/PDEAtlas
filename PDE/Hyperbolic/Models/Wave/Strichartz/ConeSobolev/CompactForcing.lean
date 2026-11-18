@@ -67,8 +67,8 @@ theorem lpNorm_classicalWave_cone_six_le_of_compact_forcing {b T : ℝ} (hbT : b
     hbT c g h f k hu hU hU₂ hdu hdU hu₂ hpos hvel hforcing hmasked t ht
   have hreal := ENNReal.toReal_mono (by finiteness) he
   simp only [toReal_eLpNorm, ENNReal.toReal_mul, ENNReal.coe_toReal, ENNReal.toReal_ofNat] at hreal
-  rw [ENNReal.toReal_add (by finiteness) enorm_ne_top,
-    ENNReal.toReal_add enorm_ne_top enorm_ne_top] at hreal
-  simpa only [toReal_enorm, hn] using hreal
+  rw [ENNReal.toReal_add (by finiteness) eNorm_ne_top,
+    ENNReal.toReal_add eNorm_ne_top eNorm_ne_top] at hreal
+  simpa only [toReal_eNorm, hn] using hreal
 
 end WaveEquation.Strichartz

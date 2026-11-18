@@ -48,7 +48,7 @@ theorem enorm_partialDeriv_eq_wkpCoordinateCLM (i : Fin n) (u : W^{1,p}(Ω)) :
     ‖∂[i] u‖ₑ = ‖wkpCoordinateCLM (singleDerivIndex n i) u‖ₑ := by
   calc
     ‖∂[i] u‖ₑ = ‖wkpBaseCoordinateCLM (∂[i] u)‖ₑ :=
-      (lpEquivZeroOrder.symm.enorm_map (∂[i] u)).symm
-    _ = _ := congrArg enorm (wkpBaseCoordinateCLM_partialDeriv i u)
+      (lpEquivZeroOrder.symm.eNorm_map (∂[i] u)).symm
+    _ = _ := congrArg eNorm (wkpBaseCoordinateCLM_partialDeriv i u)
 
 end SobolevSpace.GraphSpace

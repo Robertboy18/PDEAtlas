@@ -213,8 +213,8 @@ theorem ae_eq_lineRepresentative_of_integral_abs_tendsto_zero
     convert (ENNReal.continuous_ofReal.tendsto 0).comp huconv using 1
     · funext m
       rw [Function.comp_apply,
-        eLpNorm_one_eq_lintegral_enorm ((hu_m m).sub hu).aestronglyMeasurable,
-        ← ofReal_integral_norm_eq_lintegral_enorm ((hu_m m).sub hu)]
+        eLpNorm_one_eq_lintegral_eNorm ((hu_m m).sub hu).aestronglyMeasurable,
+        ← ofReal_integral_norm_eq_lintegral_eNorm ((hu_m m).sub hu)]
       simp [Real.norm_eq_abs]
     · simp
   obtain ⟨ns, hns, hae⟩ :=

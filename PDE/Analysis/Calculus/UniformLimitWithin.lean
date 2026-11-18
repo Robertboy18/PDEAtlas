@@ -63,7 +63,7 @@ theorem hasFDerivWithinAt_of_tendstoUniformlyOn_of_convex {S : Set E} (hS : Conv
   have hbound : ∀ᶠ n in atTop, ‖g n y - g n x - G₀ x (y - x)‖ ≤ c * ‖y - x‖ := by
     filter_upwards [hev] with n hn
     refine Convex.norm_image_sub_le_of_norm_hasFDerivWithin_le' (f := g n) (f' := G n)
-      (φ := G₀ x) (C := c) (fun z hz ↦ (hd n z hz.1).mono inter_subset_left)
+      (φ := G₀ x) (C := c) (fun z hz ↦ (hd n z (And.left hz)).mono inter_subset_left)
       (fun z hz ↦ ?_) hs ⟨hx, mem_ball_self hδ⟩ hy
     calc ‖G n z - G₀ x‖ ≤ ‖G n z - G₀ z‖ + ‖G₀ z - G₀ x‖ :=
           norm_sub_le_norm_sub_add_norm_sub _ _ _

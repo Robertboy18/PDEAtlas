@@ -105,7 +105,7 @@ theorem exists_segment_solution {f : ℝ → ℝ} (hf : ContDiff ℝ 1 f) (hf0 :
         rw [show segmentPoint p q = (p.1 * coneTime q, p.2 + p.1 * lineSpace q) from rfl,
           ← restrictCone_segmentCoefficient]
         ext z
-        simp only [BoundedContinuousFunction.mul_apply, BoundedContinuousFunction.smul_apply,
+        simp only [mul_apply, smul_apply,
           restrictCone_apply, N, composeCompact_apply, smul_eq_mul]
         cas
       change restrictCone q (ψ (A p)) = segmentFreeField h.toContinuousMap
@@ -116,7 +116,7 @@ theorem exists_segment_solution {f : ℝ → ℝ} (hf : ContDiff ℝ 1 f) (hf0 :
       rw [map_add, map_smul, restrictCone_segmentFreeField, hc, map_smul]
       congr 1
       ext z
-      simp only [BoundedContinuousFunction.smul_apply, restrictCone_apply,
+      simp only [smul_apply, restrictCone_apply,
         segmentOperator_descend, smul_eq_mul]
       cas
   let v : ℝ × ℝ → ℝ := fun p ↦ ψ (A p) vertex
@@ -138,7 +138,7 @@ theorem exists_segment_solution {f : ℝ → ℝ} (hf : ContDiff ℝ 1 f) (hf0 :
     have hx : lineSpace vertex = 0 := rfl
     simp only [ht, hx, mul_one, zero_add, one_mul, one_pow, descend_vertex_left]
     congr 1
-    simp only [BoundedContinuousFunction.mul_apply, segmentCoefficient_apply,
+    simp only [mul_apply, segmentCoefficient_apply,
       N, composeCompact_apply]
     have hpoint (s b : I) : segmentPoint p (segmentRim s b) =
         (p.1 * (s : ℝ), p.2 + p.1 * ((1 - (s : ℝ)) * (2 * (b : ℝ) - 1))) := rfl

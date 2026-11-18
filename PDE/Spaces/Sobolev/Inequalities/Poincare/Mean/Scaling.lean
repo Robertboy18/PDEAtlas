@@ -117,11 +117,17 @@ theorem eLpNorm_comp_ballHomeomorph {F : Type*} [NormedAddCommGroup F]
     smul_eq_mul, ENNReal.toReal_mul]
   rfl
 
-/-- Null sets on the target ball pull back to null sets on the unit ball. -/
+/-- The ball homeomorphism is measurable. -/
+theorem measurable_ballHomeomorph (x : ℝ^n) {r : ℝ} (hr : 0 < r) :
+    Measurable (ballHomeomorph x hr) :=
+  (ballHomeomorph x hr).measurable
+
+/-- Null sets on the target ball pull back to null sets on the unit ball. The map is measurable
+(`measurable_ballHomeomorph`); the structure records almost-everywhere measurability only. -/
 theorem quasiMeasurePreserving_ballHomeomorph (x : ℝ^n) {r : ℝ} (hr : 0 < r) :
     QuasiMeasurePreserving (ballHomeomorph x hr)
       (volume.restrict (ball (0 : ℝ^n) 1)) (volume.restrict (ball x r)) := by
-  refine ⟨(ballHomeomorph x hr).measurable, ?_⟩
+  refine ⟨(measurable_ballHomeomorph x hr).aemeasurable, ?_⟩
   rw [map_ball_volume]
   exact Measure.smul_absolutelyContinuous
 
@@ -129,7 +135,7 @@ private theorem average_smul_measure {α F : Type*} [MeasurableSpace α]
     [NormedAddCommGroup F] [NormedSpace ℝ F]
     (μ : Measure α) (f : α → F) {c : ℝ≥0∞} (hc : c ≠ 0) (hc' : c ≠ ∞) :
     (⨍ y, f y ∂c • μ) = ⨍ y, f y ∂μ := by
-  simp only [average_eq, measureReal_def, Measure.smul_apply, smul_eq_mul,
+  simp only [average_eq, measureReal_def, smul_apply, smul_eq_mul,
     ENNReal.toReal_mul, integral_smul_measure, mul_inv_rev, smul_smul]
   rw [mul_assoc, inv_mul_cancel₀ (ENNReal.toReal_ne_zero.mpr ⟨hc, hc'⟩), mul_one]
 

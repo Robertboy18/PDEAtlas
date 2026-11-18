@@ -120,7 +120,9 @@ theorem hasFDerivAt_closure_parameter [NormedSpace ℝ E] [NormedSpace ℝ F]
       HasFDerivAt (Function.extend Subtype.val (f t) 0) (g t ⟨x, hUs hx⟩) x)
     {t : T} (ht : t ∈ closure S) {x : E} (hx : x ∈ U) :
     HasFDerivAt (Function.extend Subtype.val (f t) 0) (g t ⟨x, hUs hx⟩) x :=
-  closure_minimal hd
+  closure_minimal
+    (show S ⊆ {r | ∀ x (hx : x ∈ U),
+      HasFDerivAt (Function.extend Subtype.val (f r) 0) (g r ⟨x, hUs hx⟩) x} from hd)
     ((isClosed_setOf_hasFDerivAt hU hUs).preimage (hf.prodMk hg)) ht x hx
 
 /-- Uniform continuity of bounded continuous functions is preserved by a norm limit. -/

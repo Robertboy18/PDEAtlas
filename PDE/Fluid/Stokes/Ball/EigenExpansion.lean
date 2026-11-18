@@ -504,12 +504,12 @@ theorem eigen_mem_closure_modes {R μ : ℝ} (hR : 0 < R) (odd : Bool) {u : ℝ^
     have hae : S N - u =ᵐ[volume.restrict B] S N - w := by
       filter_upwards [huw] with x hx
       simp only [Pi.sub_apply, hx]
-    rw [eLpNorm_congr_ae hae, eLpNorm_eq_lintegral_rpow_enorm_toReal two_ne_zero
+    rw [eLpNorm_congr_ae hae, eLpNorm_eq_lintegral_rpow_eNorm_toReal two_ne_zero
       ENNReal.ofNat_ne_top (((hSC N).aestronglyMeasurable).sub hwm.aestronglyMeasurable),
       hg, MeasureTheory.lintegral_indicator Metric.isOpen_ball.measurableSet]
     congr 2
     funext x
-    rw [Pi.sub_apply, enorm_sub_rev, ← ofReal_norm, ENNReal.toReal_ofNat,
+    rw [Pi.sub_apply, eNorm_sub_rev, ← ofReal_norm, ENNReal.toReal_ofNat,
       ENNReal.ofReal_rpow_of_nonneg (norm_nonneg _) (by norm_num), Real.rpow_two]
   have hlim : Tendsto (fun N ↦ (hSm N).toLp (S N)) atTop (𝓝 (hu.toLp u)) := by
     rw [Lp.tendsto_Lp_iff_tendsto_eLpNorm'' S hSm u hu]

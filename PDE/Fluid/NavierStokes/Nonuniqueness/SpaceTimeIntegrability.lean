@@ -527,7 +527,7 @@ theorem physical_memLp_LsLq (hR : 0 < R) {q r : ℝ} (hq : 2 ≤ q) (hr : 1 ≤ 
   refine (((memLp_rpow_Ioc hr0 ha).const_mul A).add
     ((memLp_rpow_Ioc hr0 hb).const_mul B)).of_le
     (((continuousOn_toReal_eLpNorm_velocitySlice_physicalVelocity D s hR hQ).mono
-      fun t ht ↦ ht.1).aestronglyMeasurable measurableSet_Ioc)
+      fun _ ↦ And.left).aestronglyMeasurable measurableSet_Ioc)
     ((ae_restrict_iff' measurableSet_Ioc).mpr (ae_of_all _ fun t ht ↦ ?_))
   rw [Real.norm_of_nonneg ENNReal.toReal_nonneg]
   exact (hbound t ht).trans (Real.le_norm_self _)

@@ -39,8 +39,8 @@ theorem eLpNorm_comp_partialHomeomorph_top_le
   have hcomp : AEStronglyMeasurable (fun x ↦ f (E x)) (domainMeasure n E.source) :=
     hf.comp_quasiMeasurePreserving hq
   rw [eLpNorm_exponent_top hcomp, eLpNorm_exponent_top hf]
-  exact eLpNormEssSup_le_of_ae_enorm_bound
-    (hq.ae (enorm_ae_le_eLpNormEssSup f (domainMeasure n E.target)))
+  exact eLpNormEssSup_le_of_ae_eNorm_bound
+    (hq.ae (eNorm_ae_le_eLpNormEssSup f (domainMeasure n E.target)))
 
 /-- An essentially bounded representative stays essentially bounded after chart pullback. -/
 theorem memLp_top_comp_partialHomeomorph

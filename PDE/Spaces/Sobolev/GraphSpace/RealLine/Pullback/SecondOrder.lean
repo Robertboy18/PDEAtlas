@@ -133,7 +133,7 @@ theorem exists_h2_scaled_representative
     simp only [hs, Pi.smul_apply, smul_eq_mul, hp, e, Homeomorph.coe_mulLeft₀]
   · rw [norm_smul, Real.norm_eq_abs]
     apply mul_le_mul_of_nonneg_left ?_ (abs_nonneg A)
-    simpa only [coe_nnnorm, Real.norm_eq_abs, abs_of_pos (inv_pos.mpr hL), add_zero]
+    simpa only [coe_nnNorm, Real.norm_eq_abs, abs_of_pos (inv_pos.mpr hL), add_zero]
       using hnorm
 
 end SobolevSpace.GraphSpace

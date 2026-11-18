@@ -84,7 +84,7 @@ theorem HkCharacteristics.exists_h2_pullbacks
       hasDerivAt_hkCurve_hilbert_flow_space hT f hchar.velocity_derivative
         hchar.flow_initial hchar.flow_derivative x t t.property
     have helip : LipschitzWith ⟨M, hM⟩ e.symm :=
-      lipschitzWith_of_nnnorm_deriv_le (fun x ↦ (hXderiv x).differentiableAt) fun x ↦
+      lipschitzWith_of_nnNorm_deriv_le (fun x ↦ (hXderiv x).differentiableAt) fun x ↦
         show ‖deriv e.symm x‖ ≤ M from (hXderiv x).deriv ▸ hJbound x
     obtain ⟨P, hP, hPnorm⟩ := exists_h2PullbackCLM e.symm
       (hchar.inverse_lipschitz t t.property) hJ.continuous (hJ.continuous_deriv le_rfl)

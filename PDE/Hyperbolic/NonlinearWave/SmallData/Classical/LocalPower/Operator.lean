@@ -77,9 +77,9 @@ theorem duhamelOperator_apply (w : Cone →ᵇ ℝ) (q : Cone) :
     duhamelOperator w q = coneTime q ^ 2 * ∫ s : I, (1 - (s : ℝ)) * ((∫ ω : Direction,
       w (descend q (rim s ω)) ∂((volume : Measure (ℝ^3)).toSphere)) / unitSphereArea 3) := by
   simp only [duhamelOperator, ContinuousLinearMap.comp_apply,
-    ContinuousLinearMap.mul_apply', BoundedContinuousFunction.mul_apply,
+    ContinuousLinearMap.mul_apply', mul_apply,
     partialIntegralCLM_apply, retardedAverage, _root_.smul_apply,
-    BoundedContinuousFunction.smul_apply, smul_eq_mul]
+    smul_apply, smul_eq_mul]
   simp only [timeSquare, radiusWeight, mkOfCompact_apply, ContinuousMap.coe_mk,
     retardedBoundary, compContinuousCLM_apply, compContinuous_apply,
     ContinuousMap.coe_mk, div_eq_mul_inv, mul_comm]

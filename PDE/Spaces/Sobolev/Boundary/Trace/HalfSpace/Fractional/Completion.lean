@@ -47,9 +47,9 @@ private theorem coordinate_enorm_rpow_eq_lintegral
         (GraphSpace.singleDerivIndex (n + 1) i)
   have hnorm : ‖v‖ₑ ^ p =
       ∫⁻ x, ‖v x‖ₑ ^ p ∂domainMeasure (n + 1) (HalfSpace.upper (n + 1)) := by
-    rw [Lp.enorm_def, eLpNorm_eq_eLpNorm' (by positivity) ENNReal.ofReal_ne_top
+    rw [Lp.eNorm_def, eLpNorm_eq_eLpNorm' (by positivity) ENNReal.ofReal_ne_top
       (Lp.aestronglyMeasurable v), ENNReal.toReal_ofReal hp.le]
-    exact (lintegral_rpow_enorm_eq_rpow_eLpNorm' hp).symm
+    exact (lintegral_rpow_eNorm_eq_rpow_eLpNorm' hp).symm
   exact hnorm.trans (lintegral_congr_ae (hv.mono fun x hx ↦
     congrArg (fun t : ℝ ↦ ‖t‖ₑ ^ p) hx))
 
@@ -120,7 +120,7 @@ theorem lintegral_traceLp_sub_rpow_div_le_of_smooth
     let L := GraphSpace.wkpCoordinateCLM (p := ENNReal.ofReal p)
       (Ω := HalfSpace.upper (n + 1)) (GraphSpace.singleDerivIndex (n + 1) i)
     exact ((L.continuous.tendsto u).comp
-      (hcorelim.comp hns.tendsto_atTop)).enorm.ennrpow_const p
+      (hcorelim.comp hns.tendsto_atTop)).eNorm.ennrpow_const p
   calc
     energy (T u) ≤ atTop.liminf (fun j ↦ energy (T (core (φ (ns j))))) :=
       Fractional.lintegral_enorm_sub_rpow_div_le_liminf n (zero_lt_one.trans hp)

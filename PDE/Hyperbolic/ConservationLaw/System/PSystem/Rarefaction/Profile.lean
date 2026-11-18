@@ -187,7 +187,7 @@ theorem hasStrictDerivAt_rarefactionStrain {stress : ℝ → ℝ} (hstress : Con
   have hstrict : HasStrictDerivAt (rarefactionSpeed stress k)
         (deriv (rarefactionSpeed stress k) strain) strain :=
     (contDiff_rarefactionSpeed hstress hpositive k).contDiffAt
-      |>.hasStrictDerivAt one_ne_zero
+      |>.hasStrictDerivAt_deriv one_ne_zero
   have hleft : ∀ᶠ v in nhds strain, rarefactionStrain stress k (rarefactionSpeed stress k v) = v :=
     Filter.Eventually.of_forall fun v ↦ rarefactionStrain_rarefactionSpeed
         hstress hpositive hsecond k v
@@ -225,7 +225,7 @@ theorem contDiffAt_rarefactionStrain {stress : ℝ → ℝ} (hstress : ContDiff 
         rarefactionSpeed stress k (hspeedContDiff.localInverse hspeedDerivative
               (by norm_num) currentSpeed) =
           currentSpeed :=
-    (hspeedContDiff.hasStrictFDerivAt' hspeedDerivative (by norm_num)).eventually_right_inverse
+    (hspeedContDiff.hasStrictFDerivAt hspeedDerivative (by norm_num)).eventually_right_inverse
   have heq : rarefactionStrain stress k =ᶠ[nhds (rarefactionSpeed stress k strain)]
         hspeedContDiff.localInverse hspeedDerivative (by norm_num) := by
     filter_upwards [hright] with currentSpeed hcurrent

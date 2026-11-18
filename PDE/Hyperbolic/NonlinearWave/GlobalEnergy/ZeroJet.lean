@@ -36,7 +36,7 @@ of the outer function from differentiability of the composition. -/
 private theorem differentiableAt_of_comp_of_deriv_ne_zero {f g : ℝ → ℝ} {a : ℝ}
     (hg : ContDiffAt ℝ 1 g a) (hfg : DifferentiableAt ℝ (f ∘ g) a) (hg' : deriv g a ≠ 0) :
     DifferentiableAt ℝ f (g a) := by
-  have hs := hg.hasStrictDerivAt (by norm_num)
+  have hs := hg.hasStrictDerivAt_deriv (by norm_num)
   let v := hs.localInverse g (deriv g a) a hg'
   have hv : v (g a) = a := (hs.hasStrictFDerivAt_equiv hg').localInverse_apply_image
   have hfg' : DifferentiableAt ℝ (f ∘ g) (v (g a)) := by

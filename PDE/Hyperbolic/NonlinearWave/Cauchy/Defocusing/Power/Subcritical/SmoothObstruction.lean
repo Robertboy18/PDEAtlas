@@ -55,7 +55,7 @@ theorem not_contDiffAt_signedPower_two_comp {f : ℝ → ℝ} {a d : ℝ} (hf : 
   have hv : ContDiffAt ℝ 2 v (f a) := hf.to_localInverse hfd (by norm_num)
   have hva : v (f a) = a := hf.localInverse_apply_image hfd (by norm_num)
   have hright : ∀ᶠ y in 𝓝 (f a), f (v y) = y :=
-    (hf.hasStrictFDerivAt' hfd (by norm_num)).eventually_right_inverse
+    (hf.hasStrictFDerivAt hfd (by norm_num)).eventually_right_inverse
   have hh : ContDiffAt ℝ 2 (fun y ↦ Real.signedPower 2 (f (v y))) (f a) :=
     (hva.symm ▸ hcomp).comp (f a) hv
   have hc : ContDiffAt ℝ 2 (Real.signedPower 2) (f a) :=
@@ -110,7 +110,7 @@ theorem not_contDiff_four_quadratic_wave_of_coordinate_datum {g : ℝ^3 → ℝ}
 private theorem exists_positive_regular_zero {F : ℝ × ℝ → ℝ} {T : ℝ} (hT : 0 < T)
     (hF : ContDiffAt ℝ 1 F (0, 0)) (hzero : (fun r ↦ F (0, r)) =ᶠ[𝓝 0] id) :
     ∃ t ∈ Ioo 0 T, ∃ r d : ℝ, F (t, r) = 0 ∧ HasDerivAt (fun s ↦ F (t, s)) d r ∧ d ≠ 0 := by
-  have hdf := hF.hasStrictFDerivAt (by norm_num)
+  have hdf := hF.hasStrictFDerivAt_fderiv (by norm_num)
   have hcomp : fderiv ℝ F (0, 0) ∘L ContinuousLinearMap.inr ℝ ℝ ℝ =
       ContinuousLinearMap.id ℝ ℝ := by
     have hd := hdf.hasFDerivAt.comp 0 (hasFDerivAt_prodMk_right (𝕜 := ℝ) 0 0)

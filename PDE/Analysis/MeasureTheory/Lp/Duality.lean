@@ -93,7 +93,7 @@ theorem eq_integral_simpleFunc_of_indicator_eq
       exact hg.bdd_mul v.aestronglyMeasurable (Eventually.of_forall hC)
     have hLp : hf.toLp (f + k) = hf'.toLp f + hk'.toLp k := MemLp.toLp_add hf' hk'
     rw [hLp, map_add, ihf hf', ihk hk']
-    simpa only [SimpleFunc.coe_add, Pi.add_apply, add_mul] using
+    simpa only [FunLike.coe_add, Pi.add_apply, add_mul] using
       (integral_add (hint f) (hint k)).symm
 
 /-- An integrable density representing a bounded functional on indicators represents it on
@@ -226,7 +226,7 @@ theorem eLpNorm_le_opNorm_of_indicator_eq [ENNReal.HolderConjugate p q]
       (Eventually.of_forall hvmono) (Eventually.of_forall hvlim)) fun n ↦ by
       rw [← ofReal_integral_eq_lintegral_ofReal (hvint n) (Eventually.of_forall (hvnonneg n))]
       exact ENNReal.ofReal_le_ofReal (hYbound n)
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal
     (ENNReal.HolderConjugate.ne_zero q p) hq hg.aestronglyMeasurable]
   have hnormpower :
       (∫⁻ x, ‖g x‖ₑ ^ q.toReal ∂μ) = ∫⁻ x, ENNReal.ofReal (‖g x‖ ^ q.toReal) ∂μ := by

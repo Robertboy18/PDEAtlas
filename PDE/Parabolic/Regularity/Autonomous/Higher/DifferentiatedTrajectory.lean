@@ -247,7 +247,7 @@ theorem nonempty_differentiated_weak_trajectory_of_representative
   let trialFiniteDimensional (k : ℕ) : FiniteDimensional ℝ (trials.space k) :=
     trials.finiteDimensional k
   let trialCompleteSpace (k : ℕ) : CompleteSpace (trials.space k) :=
-    FiniteDimensional.complete ℝ (trials.space k)
+    FiniteDimensional.completeSpace ℝ (trials.space k)
   let ell : ℝ → StrongDual ℝ V := fun t ↦ T.pivotToDual (fRep t)
   let ellDot : ℝ → StrongDual ℝ V := fun t ↦ T.pivotToDual (ft t)
   have hellRep : ell =ᵐ[μ] fun t ↦ T.pivotToDual (f t) := by

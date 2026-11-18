@@ -83,7 +83,7 @@ theorem norm_composeCompact_abs_rpow_sub_linear_le {p : ℝ}
   have hf : ContDiff ℝ 1 (fun x : ℝ ↦ |x| ^ p) := by
     simpa only [Real.norm_eq_abs] using (contDiff_norm_rpow hp : ContDiff ℝ 1 (fun x : ℝ ↦ ‖x‖ ^ p))
   refine (BoundedContinuousFunction.norm_le (by positivity)).mpr fun a ↦ ?_
-  simp only [BoundedContinuousFunction.sub_apply, composeCompact_apply,
+  simp only [sub_apply, composeCompact_apply,
     ContinuousMap.coe_mk, fderiv_composeCompact_apply hf]
   exact (norm_abs_rpow_sub_linear_le hp hp₂ (u a) (v a)).trans (mul_le_mul_of_nonneg_left
       (Real.rpow_le_rpow (norm_nonneg _) ((v - u).norm_coe_le_norm a)

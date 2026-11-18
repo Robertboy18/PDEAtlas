@@ -72,7 +72,7 @@ theorem integral_log_mul_eq_sum_panels {n : ℕ}
   have htruncate :
       (∫ y in Ioi 0, g y) = ∫ y in Ioc 0 (mesh.knot (Fin.last n)), g y := by
     apply setIntegral_eq_of_subset_of_forall_sdiff_eq_zero measurableSet_Ioi
-      (fun _ hy ↦ hy.1)
+      (fun _ ↦ And.left)
     intro y hy
     have hyL : mesh.knot (Fin.last n) < y :=
       lt_of_not_ge fun h ↦ hy.2 ⟨hy.1, h⟩

@@ -57,7 +57,7 @@ theorem lintegral_reaction_product_le (hf : LipschitzWith K f) (hs : ∀ z, 0 �
   have hF := hf.comp_memLp (reaction_zero hf.continuous hs) hU
   have hprod : Integrable (fun z ↦ U z * f (U z))
       ((volume.restrict (Ioc 0 T)).prod (domainMeasure n univ)) := hU.integrable_mul hF
-  rw [← ofReal_integral_norm_eq_lintegral_enorm hprod]
+  rw [← ofReal_integral_norm_eq_lintegral_eNorm hprod]
   apply ENNReal.ofReal_le_ofReal
   have hnorm : (fun z ↦ ‖U z * f (U z)‖) = fun z ↦ U z * f (U z) := by
     funext z

@@ -40,7 +40,7 @@ theorem integrable_and_integral_le_of_nonnegative_limit
     exact Real.norm_of_nonneg hx
   have hb' : ∀ᶠ i in atTop, (∫⁻ x, ‖F i x‖ₑ ∂μ) ≤ ENNReal.ofReal C := by
     filter_upwards [hb] with i hi
-    rw [← ofReal_integral_norm_eq_lintegral_enorm (hF i), hnorm i]
+    rw [← ofReal_integral_norm_eq_lintegral_eNorm (hF i), hnorm i]
     exact ENNReal.ofReal_le_ofReal hi
   have hinf : liminf (fun i ↦ ∫⁻ x, ‖F i x‖ₑ ∂μ) atTop ≤ ENNReal.ofReal C :=
     liminf_le_of_frequently_le hb'.frequently
@@ -49,16 +49,16 @@ theorem integrable_and_integral_le_of_nonnegative_limit
       _ = ∫⁻ x, liminf (fun i ↦ ‖F i x‖ₑ) atTop ∂μ := by
         apply lintegral_congr_ae
         filter_upwards [hlim] with x hx
-        exact hx.enorm.liminf_eq.symm
+        exact hx.eNorm.liminf_eq.symm
       _ ≤ liminf (fun i ↦ ∫⁻ x, ‖F i x‖ₑ ∂μ) atTop :=
-        lintegral_liminf_le' (fun i ↦ (hF i).aestronglyMeasurable.enorm)
+        lintegral_liminf_le' (fun i ↦ (hF i).aestronglyMeasurable.eNorm)
       _ ≤ _ := hinf
   have hG : Integrable G μ :=
     ⟨aestronglyMeasurable_of_tendsto_ae _ (fun i ↦ (hF i).aestronglyMeasurable) hlim,
       hfatou.trans_lt ENNReal.ofReal_lt_top⟩
   obtain ⟨i, hi⟩ := hb.exists
   have hC : 0 ≤ C := (integral_nonneg_of_ae (hpos i)).trans hi
-  rw [← ofReal_integral_norm_eq_lintegral_enorm hG] at hfatou
+  rw [← ofReal_integral_norm_eq_lintegral_eNorm hG] at hfatou
   have hnormG : (∫ x, ‖G x‖ ∂μ) ≤ C := by
     simpa only [ENNReal.toReal_ofReal (integral_nonneg fun _ ↦ norm_nonneg _),
       ENNReal.toReal_ofReal hC] using
@@ -84,12 +84,12 @@ theorem integrable_and_integral_le_of_exhaustion
       setLIntegral_iUnion_of_directed _ hs.directed_le]
     apply iSup_le
     intro i
-    rw [← ofReal_integral_norm_eq_lintegral_enorm (hlocal i), hlocalnorm i]
+    rw [← ofReal_integral_norm_eq_lintegral_eNorm (hlocal i), hlocalnorm i]
     exact ENNReal.ofReal_le_ofReal (hb i)
   have hFi : Integrable F μ := ⟨hF, hlin.trans_lt ENNReal.ofReal_lt_top⟩
   have hC : 0 ≤ C :=
     (integral_nonneg_of_ae (hpos.filter_mono (ae_mono Measure.restrict_le_self))).trans (hb 0)
-  rw [← ofReal_integral_norm_eq_lintegral_enorm hFi] at hlin
+  rw [← ofReal_integral_norm_eq_lintegral_eNorm hFi] at hlin
   have hnorm : (∫ x, ‖F x‖ ∂μ) ≤ C := by
     simpa only [ENNReal.toReal_ofReal (integral_nonneg fun _ ↦ norm_nonneg _),
       ENNReal.toReal_ofReal hC] using

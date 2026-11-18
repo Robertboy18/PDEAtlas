@@ -55,7 +55,7 @@ theorem initialValueSolution_pos_of_nonneg_of_exists_pos (g : ℝ^n → ℝ)
     simp only [fundamentalSolutionHeat, ite_eq_right (not_le.mpr ht)]
     fun_prop
   -- A continuous nonnegative integrand that is positive somewhere has positive integral.
-  have hpos := MeasureTheory.integral_pos_of_integrable_nonneg_nonzero hcont hint
+  have hpos := MeasureTheory.integral_pos_of_integrable_nonneg_ne_zero hcont hint
     (fun y ↦ mul_nonneg (fundamentalSolutionHeat_pos (x - y) t ht).le (hg_nonneg y))
     (mul_pos (fundamentalSolutionHeat_pos (x - x₀) t ht) hx₀).ne'
   simpa only [initialValueSolution, ite_eq_right (not_le.mpr ht)] using hpos

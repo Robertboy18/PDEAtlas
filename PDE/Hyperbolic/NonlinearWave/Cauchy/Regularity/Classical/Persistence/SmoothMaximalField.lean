@@ -43,8 +43,9 @@ theorem contDiffOn_infty_higherSmoothMaximalField_of_smoothCompact (hn : n < 4)
   intro x
   have hprod := contDiffOn_infty_maximalHigherSmooth_of_smoothCompact
     hn hv hq hs hf0 g h hg hh hgc hhc
-  have hc := hprod.comp (timeSpaceContinuousLinearEquiv n).contDiff.contDiffOn
-    (fun _ hp ↦ ⟨hp, mem_univ _⟩)
+  have hc := hprod.comp (s := {p | 0 ≤ p 0 ∧ ENNReal.ofReal (p 0) <
+      (higherLinearSemigroup n (k + 1)).mildLifespan (higherSmoothMap hv hs hf0) x})
+    (timeSpaceContinuousLinearEquiv n).contDiff.contDiffOn (fun _ hp ↦ ⟨hp, mem_univ _⟩)
   simp only [Function.comp_def, timeSpaceContinuousLinearEquiv_apply, time_apply] at hc
   refine hc.congr fun p _ ↦ ?_
   rfl

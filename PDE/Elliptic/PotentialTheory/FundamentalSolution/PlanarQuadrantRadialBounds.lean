@@ -326,7 +326,7 @@ theorem lintegral_square_strainKernel_div_le {φ : ℝ^2 → ℝ} {q a b r : ℝ
           rw [Real.rpow_neg hn.le, Real.rpow_neg (by have := hy.1; positivity)]
           field_simp
   have hG0 : ∀ y : ℝ^2, ¬ (0 < y 0 ∧ 0 < y 1) → G y = 0 := fun y hy ↦
-    Set.indicator_of_notMem (fun h ↦ hy h.1) _
+    Set.indicator_of_notMem (fun h ↦ hy (And.left h)) _
   -- in polar coordinates
   have hpolar (ρ : ℝ) (hρ : ρ ∈ Ioi (0 : ℝ)) := lintegral_polar_indicator (I := Ioc 0 (√2 * r))
     (g := fun y ↦ q⁻¹ * ‖y‖ ^ (-a) * (y 0 * y 1 / ‖y‖ ^ 4) * (y 0 / ‖y‖) ^ (-b))
@@ -406,7 +406,7 @@ theorem lintegral_square_quarticKernel_div_le {φ : ℝ^2 → ℝ} {q a b r : �
             (le_mul_of_one_le_right (by positivity) hpow)
       _ = _ := by rw [Real.rpow_neg hn.le]; field_simp
   have hG0 : ∀ y : ℝ^2, ¬ (0 < y 0 ∧ 0 < y 1) → G y = 0 := fun y hy ↦
-    Set.indicator_of_notMem (fun h ↦ hy h.1) _
+    Set.indicator_of_notMem (fun h ↦ hy (And.left h)) _
   have hpolar (ρ : ℝ) (hρ : ρ ∈ Ioi (0 : ℝ)) := lintegral_polar_indicator (I := Ioc 0 (√2 * r))
     (g := fun y ↦ q⁻¹ * ‖y‖ ^ (-a) * (|y 0 * y 1 * (y 0 ^ 2 - y 1 ^ 2)| / ‖y‖ ^ 8))
     (h := fun ρ ↦ q⁻¹ * ρ ^ (-a - 3)) (k := fun θ ↦ |Real.sin (4 * θ)| / 4) hρ
@@ -510,7 +510,7 @@ theorem lintegral_far_div_le {k φ : ℝ^2 → ℝ} {q a b p R : ℝ} (hq : 0 < 
           rw [Real.rpow_sub hn, Real.rpow_neg hn.le, Real.rpow_neg (by positivity)]
           field_simp
   have hG0 : ∀ y : ℝ^2, ¬ (0 < y 0 ∧ 0 < y 1) → G y = 0 := fun y hy ↦
-    Set.indicator_of_notMem (fun h ↦ hy h.1) _
+    Set.indicator_of_notMem (fun h ↦ hy (And.left h)) _
   have hpolar (ρ : ℝ) (hρ : ρ ∈ Ioi (0 : ℝ)) := lintegral_polar_indicator (I := Ici R)
     (g := fun y ↦ q⁻¹ * ‖y‖ ^ (-p - a) * (y 0 / ‖y‖) ^ (-b))
     (h := fun ρ ↦ q⁻¹ * ρ ^ (1 - p - a)) (k := fun θ ↦ Real.cos θ ^ (-b)) hρ

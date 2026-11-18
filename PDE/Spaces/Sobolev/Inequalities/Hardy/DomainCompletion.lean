@@ -41,7 +41,7 @@ theorem memLp_domainDistanceQuotient (hp : 1 < p) (φ : TestFunctionOn n Ω) :
     MemLp (domainDistanceQuotient φ) (ENNReal.ofReal p) (domainMeasure n Ω) := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_eLpNorm_domainDistanceQuotient_le_graphNorm (n := n) (Ω := Ω) hp
-  exact (hbound φ).trans_lt (ENNReal.mul_lt_top hC.lt_top enorm_lt_top)
+  exact (hbound φ).trans_lt (ENNReal.mul_lt_top hC.lt_top eNorm_lt_top)
 
 /-- Literal division by boundary distance on the smooth core, as an `Lᵖ(Ω)` class. -/
 noncomputable def hardyDomainTestQuotient (hp : 1 < p) (φ : TestFunctionOn n Ω) :
@@ -92,8 +92,8 @@ theorem hardyDomainTestQuotientLinear_bound (hp : 1 < p) {C : ℝ≥0∞} (hC : 
   change ‖hardyDomainTestQuotient hp φ‖ ≤
     C.toReal * ‖testFunctionToWkp (k := 1) (p := ENNReal.ofReal p) φ‖
   rw [norm_hardyDomainTestQuotient]
-  simpa only [ENNReal.toReal_mul, toReal_enorm] using
-    ENNReal.toReal_mono (ENNReal.mul_ne_top hC enorm_ne_top) (hbound φ)
+  simpa only [ENNReal.toReal_mul, toReal_eNorm] using
+    ENNReal.toReal_mono (ENNReal.mul_ne_top hC eNorm_ne_top) (hbound φ)
 
 /-- The boundary-distance quotient on the completed zero-boundary Sobolev space. -/
 noncomputable def hardyDomainW1p0Quotient (hp : 1 < p) :
@@ -189,7 +189,7 @@ theorem eLpNorm_div_infDist_frontier_eq_enorm (hp : 1 < p)
         Metric.infDist x (frontier Ω))
       (ENNReal.ofReal p) (domainMeasure n Ω) =
         ‖hardyDomainW1p0Quotient hp u‖ₑ := by
-  rw [Lp.enorm_def]
+  rw [Lp.eNorm_def]
   exact eLpNorm_congr_ae (hardyDomainW1p0Quotient_apply_ae hp u).symm
 
 /-- The literal completed quotient satisfies the same graph-norm estimate as the

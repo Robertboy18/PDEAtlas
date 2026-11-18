@@ -63,7 +63,7 @@ theorem lipschitzWith_pullbackFlux
   apply LipschitzWith.of_dist_le_mul
   intro x y
   simp only [dist_eq_norm, pullbackFlux, ← smul_sub, ← map_sub, norm_smul,
-    NNReal.coe_mul, NNReal.coe_pow, coe_nnnorm]
+    NNReal.coe_mul, NNReal.coe_pow, coe_nnNorm]
   calc
     ‖J‖ * ‖T.adjoint (A (T x) - A (T y))‖ ≤
         ‖J‖ * (‖T‖ * ‖A (T x) - A (T y)‖) := by

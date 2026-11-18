@@ -63,7 +63,7 @@ theorem norm_fderiv_composeCompact_abs_rpow_sub_le {p : ℝ}
   have hC : 0 ≤ (2 * p) * ‖u - v‖ ^ (p - 1) := by positivity
   refine ContinuousLinearMap.opNorm_le_bound _ hC fun w ↦ ?_
   refine (BoundedContinuousFunction.norm_le (mul_nonneg hC (norm_nonneg w))).mpr fun a ↦ ?_
-  simp only [_root_.sub_apply, BoundedContinuousFunction.sub_apply]
+  simp only [_root_.sub_apply, sub_apply]
   rw [fderiv_composeCompact_apply hf, fderiv_composeCompact_apply hf, ← sub_mul, norm_mul]
   have hab : ‖u a - v a‖ ≤ ‖u - v‖ := (u - v).norm_coe_le_norm a
   have hder := norm_deriv_abs_rpow_sub_le hp hp₂ (u a) (v a)

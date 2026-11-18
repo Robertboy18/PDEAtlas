@@ -56,7 +56,7 @@ variable {n : ℕ}
 linear subspace of all functions. -/
 noncomputable def c1CompactSubmodule (n : ℕ) :
     Submodule ℝ (ℝ^(n + 1) → ℝ) where
-  carrier f := ContDiff ℝ 1 f ∧ HasCompactSupport f
+  carrier := {f | ContDiff ℝ 1 f ∧ HasCompactSupport f}
   zero_mem' := ⟨contDiff_const, HasCompactSupport.zero⟩
   add_mem' := by
     rintro f g ⟨hf, hfc⟩ ⟨hg, hgc⟩

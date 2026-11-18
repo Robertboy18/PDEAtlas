@@ -103,7 +103,7 @@ theorem exists_map_toTorus_rescale_le {n : ℕ} {Ω : Set (ℝ^n)}
         (volume.restrict ((fun x : ℝ^n ↦ r⁻¹ • x) ⁻¹'
           unitCell (fun _ ↦ -(1 / 2)))) :=
       Measure.map_mono (Measure.restrict_mono_set volume hsubset)
-        ((toTorus n).measurable.comp (measurable_const_smul _))
+        (measurable_toTorus_smul n ε⁻¹)
     _ = ENNReal.ofReal (|r| ^ n) • cellMeasure n := hp.map_eq
     _ ≤ ENNReal.ofReal ((2 * R + 1) ^ n) • cellMeasure n := by
       gcongr

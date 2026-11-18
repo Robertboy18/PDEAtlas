@@ -84,7 +84,8 @@ theorem exists_smooth_chart_of_injOn_compact
     exact ⟨a', ha', rfl⟩
   let chart : OpenPartialHomeomorph E F :=
     OpenPartialHomeomorph.ofContinuousOpenRestrict
-      ((hVinj.mono fun _ hx ↦ hx.1.1).toPartialEquiv f U) hf.continuous.continuousOn hopen hU
+      ((hVinj.mono fun _ hx ↦ (And.left hx).1).toPartialEquiv f U) hf.continuous.continuousOn
+      hopen hU
   refine ⟨chart, rfl, fun x hx ↦ ⟨⟨hSV hx, hSO hx⟩, himage hx⟩, fun y hy ↦ ?_, hf.contDiffOn,
     chart.open_target.contDiffOn_iff.mpr fun y hy ↦ ?_⟩
   · rw [← show f (chart.symm y) = y from chart.right_inv hy]

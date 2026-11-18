@@ -52,7 +52,7 @@ theorem integrable_jointRepresentative_of_finite_submeasures
     have hm : AEStronglyMeasurable (fun x ↦ jointRepresentative u (t, x)) ν' :=
       ((measurable_jointRepresentative u).comp
         (measurable_const.prodMk measurable_id)).stronglyMeasurable.aestronglyMeasurable
-    rw [← eLpNorm_one_eq_lintegral_enorm hm]
+    rw [← eLpNorm_one_eq_lintegral_eNorm hm]
     calc
       _ ≤ eLpNorm (fun x ↦ jointRepresentative u (t, x)) p ν' * C := by
         simpa only [ENNReal.toReal_one, div_one] using
@@ -60,17 +60,17 @@ theorem integrable_jointRepresentative_of_finite_submeasures
       _ ≤ eLpNorm (fun x ↦ jointRepresentative u (t, x)) p ν * C :=
         mul_le_mul (eLpNorm_mono_measure _ hν) le_rfl bot_le bot_le
       _ = _ := by
-        rw [eLpNorm_congr_ae (jointRepresentative_section u t), ← Lp.enorm_def]
+        rw [eLpNorm_congr_ae (jointRepresentative_section u t), ← Lp.eNorm_def]
   have hi : Integrable (fun t ↦ u t) μ' :=
     ((Lp.memLp u).mono_measure hμ).integrable (Fact.out : 1 ≤ q)
   refine ⟨hU, ?_⟩
-  rw [hasFiniteIntegral_iff_enorm, lintegral_prod _ hU.enorm]
+  rw [hasFiniteIntegral_iff_eNorm, lintegral_prod _ hU.eNorm]
   calc
     _ ≤ ∫⁻ t, ‖u t‖ₑ * C ∂μ' := lintegral_mono hslice
     _ = (∫⁻ t, ‖u t‖ₑ ∂μ') * C :=
-      lintegral_mul_const'' C hi.aestronglyMeasurable.enorm
+      lintegral_mul_const'' C hi.aestronglyMeasurable.eNorm
     _ < ∞ := ENNReal.mul_lt_top
-      (hasFiniteIntegral_iff_enorm.mp hi.hasFiniteIntegral) hC
+      (hasFiniteIntegral_iff_eNorm.mp hi.hasFiniteIntegral) hC
 
 /-- Finite measure rectangles give integrability of the joint representative. -/
 theorem integrableOn_jointRepresentative_prod [SFinite μ] [SFinite ν]

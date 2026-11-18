@@ -36,7 +36,7 @@ theorem det_gram_castSucc_eq_sum_sq_adjugate
     rw [← two_mul, pow_mul]
     simp
   simp only [Fin.val_last, Fin.succAbove_last, hsign, one_mul] at hminor
-  rw [← hminor, adjugate_mul_distrib, ← adjugate_transpose, mul_apply]
+  rw [← hminor, adjugate_mul_distrib, ← adjugate_transpose, Matrix.mul_apply]
   simp only [transpose_apply, sq]
 
 /-- The area factor of the first `m` columns equals the length of the final

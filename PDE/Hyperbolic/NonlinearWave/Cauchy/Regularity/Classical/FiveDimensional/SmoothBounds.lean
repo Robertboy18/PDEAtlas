@@ -136,7 +136,7 @@ theorem exists_smooth_h2_composition_affine_h3_bound_five {f : ℝ → ℝ} {K :
       have he :
           lpNorm (fun x ↦ (K : ℝ) * ‖u x‖) 2 volume = K * lpNorm u 2 volume := by
         change lpNorm ((K : ℝ) • fun x ↦ ‖u x‖) 2 volume = _
-        rw [lpNorm_const_smul, coe_nnnorm]
+        rw [lpNorm_const_smul, coe_nnNorm]
         erw [Real.norm_of_nonneg K.2, lpNorm_norm hum.aestronglyMeasurable]
         rfl
       rw [he] at hm

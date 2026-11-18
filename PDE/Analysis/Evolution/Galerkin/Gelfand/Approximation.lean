@@ -268,7 +268,7 @@ theorem integral_norm_dualDerivative_sq_le
     intervalIntegral.integral_const_mul] at hmono
   norm_num at hmono
   convert hmono using 1
-  all_goals ring
+  ring
 
 end GelfandGalerkinApproximation
 

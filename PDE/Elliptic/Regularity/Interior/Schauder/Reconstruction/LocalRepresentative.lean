@@ -95,7 +95,7 @@ theorem exists_lipschitz_representative_on_ball_of_weak_derivative_bound
         mollify (μ k) 1 (Ω.indicator (g i)) x at hcomm
       rw [hcomm]
       exact norm_mollify_le_of_ae_bound (μ k) zero_lt_one (hCi i) x
-    apply (convex_ball z (R / 2)).lipschitzOnWith_of_nnnorm_fderiv_le
+    apply (convex_ball z (R / 2)).lipschitzOnWith_of_nnNorm_fderiv_le
       (fun x _ ↦ hsmooth.differentiable (by simp) x)
     intro x hx
     apply NNReal.coe_le_coe.mp

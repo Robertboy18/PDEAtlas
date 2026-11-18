@@ -77,12 +77,12 @@ theorem eLpNorm_le_measure_mul_eLpNorm_deriv
       ENNReal.toReal_ofNat, div_one, show (1 - 1 / 2 : ℝ) = 1 / 2 by norm_num] using h
   have hpoint (x : ℝ) : ‖f x‖ₑ ≤
       eLpNorm (deriv f) 2 volume * volume (Icc a b) ^ (1 / 2 : ℝ) :=
-    (HasCompactSupport.enorm_le_lintegral_Ici_deriv hf hc x).trans <|
+    (HasCompactSupport.eNorm_le_lintegral_Ici_deriv hf hc x).trans <|
       (lintegral_mono' Measure.restrict_le_self le_rfl).trans <|
-        (eLpNorm_one_eq_lintegral_enorm hdcont.aestronglyMeasurable).symm.trans_le hcompare
+        (eLpNorm_one_eq_lintegral_eNorm hdcont.aestronglyMeasurable).symm.trans_le hcompare
   rw [← eLpNorm_restrict_eq_of_support_subset hf.continuous.aestronglyMeasurable
     ((subset_tsupport _).trans hs)]
-  have h := eLpNorm_le_of_ae_enorm_bound (p := 2) (μ := μ)
+  have h := eLpNorm_le_of_ae_eNorm_bound (p := 2) (μ := μ)
     hf.continuous.aestronglyMeasurable (Filter.Eventually.of_forall hpoint)
   have hsqrt : volume (Icc a b) ^ (1 / 2 : ℝ) *
       volume (Icc a b) ^ (1 / 2 : ℝ) = volume (Icc a b) := by
@@ -139,10 +139,10 @@ theorem lintegral_sq_le_measure_sq_mul_partialDeriv
       hmp.lintegral_comp_emb (coordinateMeasurableEquiv i).symm.measurableEmbedding g
   have hfprod : AEMeasurable (fun p : ℝ^n × ℝ ↦ ‖coordinateSlice i f p.1 p.2‖ₑ ^ 2)
       ((volume : Measure (ℝ^n)).prod volume) :=
-    ((coordinateSlice_product_continuous i hf.continuous).measurable.enorm.pow_const 2).aemeasurable
+    ((coordinateSlice_product_continuous i hf.continuous).measurable.eNorm.pow_const 2).aemeasurable
   have hdprod : AEMeasurable (fun p : ℝ^n × ℝ ↦ ‖coordinateDerivativeInSplit i f p‖ₑ ^ 2)
       ((volume : Measure (ℝ^n)).prod volume) :=
-    ((coordinateDerivativeInSplit_continuous i hf).measurable.enorm.pow_const 2).aemeasurable
+    ((coordinateDerivativeInSplit_continuous i hf).measurable.eNorm.pow_const 2).aemeasurable
   calc ∫⁻ x, ‖f x‖ₑ ^ 2
       = ∫⁻ p : ℝ^n × ℝ, ‖coordinateSlice i f p.1 p.2‖ₑ ^ 2
           ∂((volume : Measure (ℝ^n)).prod volume) := (hcoordinate fun x ↦ ‖f x‖ₑ ^ 2).symm
@@ -268,7 +268,7 @@ private theorem poincare_testFunction_one {Ω : Set (ℝ^1)}
           simp only [Function.comp_apply, t]
           rw [(PiLp.equivOfUnique 2 ℝ (fun _ : Fin 1 ↦ ℝ)).symm_apply_apply]
       _ ≤ ∫⁻ y in Set.Iic t, ‖deriv (u ∘ (PiLp.equivOfUnique 2 ℝ (fun _ : Fin 1 ↦ ℝ)).symm) y‖ₑ :=
-        HasCompactSupport.enorm_le_lintegral_Ici_deriv
+        HasCompactSupport.eNorm_le_lintegral_Ici_deriv
           (hu.comp (PiLp.equivOfUnique 2 ℝ (fun _ : Fin 1 ↦ ℝ)).symm.contDiff)
           (φΩ.1.hasCompactSupport.comp_homeomorph
             (PiLp.equivOfUnique 2 ℝ (fun _ : Fin 1 ↦ ℝ)).symm.toHomeomorph) t
@@ -276,7 +276,7 @@ private theorem poincare_testFunction_one {Ω : Set (ℝ^1)}
         lintegral_mono' Measure.restrict_le_self le_rfl
       _ = eLpNorm (d ∘ (PiLp.equivOfUnique 2 ℝ (fun _ : Fin 1 ↦ ℝ)).symm) 1 volume := by
         simp_rw [PDE.deriv_comp_equivOfUnique_symm u _ (hu.differentiable_one.differentiableAt)]
-        simp [eLpNorm_one_eq_lintegral_enorm
+        simp [eLpNorm_one_eq_lintegral_eNorm
           (f := d ∘ (PiLp.equivOfUnique 2 ℝ (fun _ : Fin 1 ↦ ℝ)).symm)
           (hdcont.aestronglyMeasurable.comp_measurePreserving he), d]
       _ = _ := eLpNorm_comp_measurePreserving hdcont.aestronglyMeasurable he
@@ -297,7 +297,7 @@ private theorem poincare_testFunction_one {Ω : Set (ℝ^1)}
     _ ≤ eLpNorm d 1 μΩ * M := by
         rw [← hrestrict hdcont hdsupp]
         gcongr
-        exact eLpNormEssSup_le_of_ae_enorm_bound (.of_forall hpoint)
+        exact eLpNormEssSup_le_of_ae_eNorm_bound (.of_forall hpoint)
     _ ≤ eLpNorm d 2 μΩ * M * M := by
         gcongr
         convert eLpNorm_le_eLpNorm_mul_rpow_measure_univ (μ := μΩ) (f := d) (p := 1) (q := 2)

@@ -54,8 +54,8 @@ theorem fourierSq_eq_eLpNorm_sq
   have hpow : (‖ξ‖ ^ s) ^ (2 : ℕ) = ‖ξ‖ ^ (2 * s) := by
     rw [← Real.rpow_natCast, ← Real.rpow_mul (norm_nonneg ξ), mul_comm]
     norm_num
-  simp only [homogeneousWeightedFourier, enorm_smul,
-    Real.enorm_eq_ofReal (Real.rpow_nonneg (norm_nonneg ξ) s), mul_pow]
+  simp only [homogeneousWeightedFourier, eNorm_smul,
+    Real.eNorm_eq_ofReal (Real.rpow_nonneg (norm_nonneg ξ) s), mul_pow]
   rw [← ENNReal.ofReal_pow (Real.rpow_nonneg (norm_nonneg ξ) s), hpow]
 
 /-- Finiteness of the homogeneous Fourier integral is precisely weighted `L²` membership. -/

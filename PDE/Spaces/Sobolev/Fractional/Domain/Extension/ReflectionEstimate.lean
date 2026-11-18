@@ -67,16 +67,16 @@ theorem lintegral_enorm_diffQuot_comp_foldUpper_le
       apply lintegral_mono
       intro z
       apply ENNReal.rpow_le_rpow _ ENNReal.toReal_nonneg
-      exact enorm_le_iff_norm_le.mpr (norm_diffQuot_comp_foldUpper_le hs u z)
+      exact eNorm_le_iff_norm_le.mpr (norm_diffQuot_comp_foldUpper_le hs u z)
     _ = _ := lintegral_comp_foldUpper_prod n _
-      ((aestronglyMeasurable_diffQuot (s := s) (p := p) hu).enorm.pow_const p.toReal)
+      ((aestronglyMeasurable_diffQuot (s := s) (p := p) hu).eNorm.pow_const p.toReal)
 
 omit [NormedSpace ℝ F] in
 /-- The base power integral of even reflection is exactly twice the intrinsic one. -/
 theorem lintegral_enorm_comp_foldUpper (u : ℝ^n → F)
     (hu : AEStronglyMeasurable u (volume.restrict ℝ^n₊)) (q : ℝ) :
     ∫⁻ x, ‖(u ∘ foldUpper n) x‖ₑ ^ q = 2 * ∫⁻ x in ℝ^n₊, ‖u x‖ₑ ^ q :=
-  lintegral_comp_foldUpper n _ (hu.enorm.pow_const q)
+  lintegral_comp_foldUpper n _ (hu.eNorm.pow_const q)
 
 omit [NormedSpace ℝ F] in
 /-- Even reflection preserves `Lᵖ` membership. -/
@@ -107,7 +107,7 @@ theorem gagliardoSq_comp_foldUpper_le (hs : 0 ≤ (n : ℝ) / 2 + s)
     {u : ℝ^n → ℝ}
     (hu : AEStronglyMeasurable u (volume.restrict ℝ^n₊)) :
     gagliardoSq n s Set.univ (u ∘ foldUpper n) ≤ 4 * gagliardoSq n s ℝ^n₊ u := by
-  simpa only [gagliardoSq, ENNReal.toReal_ofNat, ENNReal.rpow_two, enorm_eq_nnnorm]
+  simpa only [gagliardoSq, ENNReal.toReal_ofNat, ENNReal.rpow_two, eNorm_eq_nnNorm]
     using lintegral_enorm_diffQuot_comp_foldUpper_le (p := 2) hs hu
 
 /-- The squared `L²` integral of even reflection is exactly twice the intrinsic one. -/
@@ -115,7 +115,7 @@ theorem lintegral_norm_sq_comp_foldUpper {u : ℝ^n → ℝ}
     (hu : AEStronglyMeasurable u (volume.restrict ℝ^n₊)) :
     ∫⁻ x, (‖(u ∘ foldUpper n) x‖₊ : ℝ≥0∞) ^ 2 =
       2 * ∫⁻ x in ℝ^n₊, (‖u x‖₊ : ℝ≥0∞) ^ 2 := by
-  simpa only [ENNReal.rpow_two, enorm_eq_nnnorm] using
+  simpa only [ENNReal.rpow_two, eNorm_eq_nnNorm] using
     lintegral_enorm_comp_foldUpper u hu 2
 
 end SobolevSpace.Fractional.Extension

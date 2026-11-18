@@ -41,7 +41,6 @@ private theorem memLp_of_inter_support {f : ℝ^n → F}
     MemLp f p (domainMeasure n Ω) := by
   have hmeasure : (domainMeasure n Ω).restrict V = domainMeasure n (V ⊓ Ω) := by
     rw [domainMeasure, Measure.restrict_restrict V.isOpen.measurableSet]
-    rfl
   have hmem : MemLp ((V : Set ℝ^n).indicator f) p (domainMeasure n Ω) := by
     rw [memLp_indicator_iff_restrict V.isOpen.measurableSet.nullMeasurableSet, hmeasure]
     exact hf
@@ -185,7 +184,6 @@ theorem interMultiplier_base_ae
   apply ae_of_ae_restrict_of_ae_restrict_compl (V : Set ℝ^n)
   · have hmeasure : (domainMeasure n Ω).restrict V = domainMeasure n (V ⊓ Ω) := by
       rw [domainMeasure, Measure.restrict_restrict V.isOpen.measurableSet]
-      rfl
     rw [hmeasure]
     filter_upwards [hU] with x hx
     rw [hx]

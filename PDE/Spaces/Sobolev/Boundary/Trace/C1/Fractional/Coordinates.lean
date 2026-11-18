@@ -80,7 +80,7 @@ theorem exists_chartBoundaryReferenceMeasure_le (i : Fin hΩ.N) :
         surfaceMeasure Ω s := by
     rw [surfaceMeasure, Measure.restrict_apply hs]
     exact measure_mono (fun _ hx ↦ ⟨hx.1, hx.2.2⟩)
-  simpa only [Measure.smul_apply, ENNReal.coe_pow, ENNReal.rpow_natCast,
+  simpa only [smul_apply, ENNReal.coe_pow, ENNReal.rpow_natCast,
     smul_eq_mul, chartBoundaryPatch] using
     hdist.trans (mul_le_mul_right hmono ((C : ℝ≥0∞) ^ (m : ℝ)))
 

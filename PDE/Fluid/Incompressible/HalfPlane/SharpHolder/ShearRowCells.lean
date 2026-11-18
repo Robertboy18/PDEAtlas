@@ -59,7 +59,7 @@ theorem measurable_lowerShearThreshold : Measurable lowerShearThreshold := by
 theorem measurable_shearRowDensity : Measurable fun x : ℝ × ℝ ↦ shearRowDensity x.1 x.2 := by
   have hF : Measurable fun x : ℝ × ℝ ↦ ‖shearDifference x.1 x.2‖ₑ *
       ENNReal.ofReal (|x.1 - horizontalShearMap x.1 x.2| ^ (1 / 2 : ℝ)) :=
-    measurable_shearDifference.enorm.mul
+    measurable_shearDifference.eNorm.mul
       ((continuous_abs.measurable.comp (measurable_fst.sub measurable_horizontalShearMap)).pow_const
         _).ennreal_ofReal
   have e : (fun x : ℝ × ℝ ↦ shearRowDensity x.1 x.2) =
@@ -85,7 +85,7 @@ theorem shearInnerRowCost_eq (q : ℝ) :
 /-- The row density vanishes for `p ≥ h_c^-(q)`. -/
 theorem shearRowDensity_eq_zero_of_le {p q : ℝ} (h : lowerShearThreshold q ≤ p) :
     shearRowDensity p q = 0 :=
-  indicator_of_notMem (fun hp ↦ absurd h (not_le.2 hp.2)) _
+  indicator_of_notMem (fun hp ↦ absurd h (not_le.2 (And.right hp))) _
 
 /-- On the inner region `p < T_y`, and `3q² < 1`. -/
 theorem lt_horizontalShearMap_of_mem {p q : ℝ} (hq : 0 < q) (hp : 0 < p)

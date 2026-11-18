@@ -37,7 +37,7 @@ including exponent infinity and measures of infinite mass. -/
 theorem memLp_comp_of_bounded_fderiv (hΦ : ContDiff ℝ 1 Φ) (hzero : Φ 0 = 0)
     (hbound : ∀ z, ‖fderiv ℝ Φ z‖ ≤ C) {u : X → E} (hu : MemLp u p μ) :
     MemLp (Φ ∘ u) p μ :=
-  (lipschitzWith_of_nnnorm_fderiv_le (hΦ.differentiable one_ne_zero) hbound).comp_memLp
+  (lipschitzWith_of_nnNorm_fderiv_le (hΦ.differentiable one_ne_zero) hbound).comp_memLp
     hzero hu
 
 /-- Value superposition is continuous for finite normed exponents. -/
@@ -51,7 +51,7 @@ theorem continuous_valueSuperposition [Fact (1 ≤ p)] (hp : p ≠ ∞)
   apply Filter.Eventually.of_forall
   intro x z
   simpa only [Pi.zero_apply, zero_add, hzero, sub_zero] using
-    (lipschitzWith_of_nnnorm_fderiv_le (hΦ.differentiable one_ne_zero) hbound).norm_sub_le z 0
+    (lipschitzWith_of_nnNorm_fderiv_le (hΦ.differentiable one_ne_zero) hbound).norm_sub_le z 0
 
 /-- The derivative of the composing map applied to a value and tangent pair. -/
 def chainIntegrand (Φ : E → F) (s : E × E) : F :=

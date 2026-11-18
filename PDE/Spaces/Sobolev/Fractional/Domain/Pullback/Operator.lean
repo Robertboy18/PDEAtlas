@@ -48,7 +48,7 @@ def pullbackL (hp : p ≠ ∞) :
         apply Lp.ext
         have hq : QuasiMeasurePreserving E
             (volume.restrict E.source) (volume.restrict E.target) :=
-          ⟨hE, Measure.absolutelyContinuous_of_le_smul hD⟩
+          ⟨hE.aemeasurable, Measure.absolutelyContinuous_of_le_smul hD⟩
         have hadd := hq.ae (Lp.coeFn_add (toLp n s E.target u) (toLp n s E.target v))
         have hout := Lp.coeFn_add
           (toLp n s E.source (pullback hs hE hL hD u))
@@ -64,7 +64,7 @@ def pullbackL (hp : p ≠ ∞) :
         apply Lp.ext
         have hq : QuasiMeasurePreserving E
             (volume.restrict E.source) (volume.restrict E.target) :=
-          ⟨hE, Measure.absolutelyContinuous_of_le_smul hD⟩
+          ⟨hE.aemeasurable, Measure.absolutelyContinuous_of_le_smul hD⟩
         have hsmul := hq.ae (Lp.coeFn_smul c (toLp n s E.target u))
         have hout := Lp.coeFn_smul c (toLp n s E.source (pullback hs hE hL hD u))
         simp only [map_smul, RingHom.id_apply]
@@ -88,7 +88,7 @@ theorem toLp_pullbackL_apply_ae_of_ae_eq (hp : p ≠ ∞)
       f ∘ E := by
   have hq : QuasiMeasurePreserving E
       (volume.restrict E.source) (volume.restrict E.target) :=
-    ⟨hE, Measure.absolutelyContinuous_of_le_smul hD⟩
+    ⟨hE.aemeasurable, Measure.absolutelyContinuous_of_le_smul hD⟩
   exact (toLp_pullbackL_apply_ae hs hE hL hD hp u).trans (hq.ae hf)
 
 /-- On a function satisfying the intrinsic condition, pullback is ordinary composition. -/
@@ -136,7 +136,7 @@ theorem pullbackL_symm_pullbackL (hp : p ≠ ∞) (u : W^{s,p}(E.target; F)) :
   apply Lp.ext
   have hq : QuasiMeasurePreserving E.symm
       (volume.restrict E.target) (volume.restrict E.source) :=
-    ⟨hSymm, Measure.absolutelyContinuous_of_le_smul hJ⟩
+    ⟨hSymm.aemeasurable, Measure.absolutelyContinuous_of_le_smul hJ⟩
   filter_upwards [
     toLp_pullbackL_apply_ae hs hSymm hM hJ hp (pullbackL hs hE hL hD hp u),
     hq.ae (toLp_pullbackL_apply_ae hs hE hL hD hp u),

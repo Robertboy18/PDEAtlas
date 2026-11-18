@@ -85,10 +85,9 @@ theorem meridionalField_point {r : ℝ} (hr : 0 < r) (θ φ : ℝ) (F G S T : �
   ext i
   fin_cases i <;> simp [point, radialFrame, polarFrame]
   all_goals field_simp
-  all_goals
-    have htrig := congrArg (fun t ↦ G r * T (Real.cos θ) * t)
-      (Real.sin_sq_add_cos_sq θ)
-    nlinarith only [htrig]
+  have htrig := congrArg (fun t ↦ G r * T (Real.cos θ) * t)
+    (Real.sin_sq_add_cos_sq θ)
+  nlinarith only [htrig]
 
 /-- The Cartesian azimuthal formula gives the spherical azimuthal frame. -/
 theorem azimuthalField_point {r : ℝ} (hr : 0 < r) (θ φ : ℝ) (H A : ℝ → ℝ) :

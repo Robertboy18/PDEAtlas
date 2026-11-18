@@ -43,7 +43,7 @@ open scoped ContDiff
 namespace PDE.Examples.HarmonicUnboundedLevelSets
 
 /-- The exterior of the closed unit disk. -/
-def exterior : Set (ℝ^2) := (closedBall 0 1)ᶜ
+noncomputable def exterior : Set (ℝ^2) := (closedBall 0 1)ᶜ
 
 /-- The exterior is an open subset of the plane. -/
 theorem isOpen_exterior : IsOpen exterior := isClosed_closedBall.isOpen_compl

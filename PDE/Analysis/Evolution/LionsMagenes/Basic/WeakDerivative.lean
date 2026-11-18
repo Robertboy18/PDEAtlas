@@ -74,7 +74,7 @@ theorem absolutelyContinuousOnInterval_of_eq_add_integral
     filter_upwards [heventually] with ⟨n, I⟩ hE
     obtain ⟨hI, hdisj⟩ := Set.mem_ofPred_eq ▸ hE
     simp only [Function.comp_apply, s]
-    rw [← integral_norm_eq_lintegral_enorm (hdw.aestronglyMeasurable_restrict_uIoc.restrict),
+    rw [← integral_norm_eq_lintegral_eNorm (hdw.aestronglyMeasurable_restrict_uIoc.restrict),
       integral_biUnion_finset _ (by simp +contextual [uIoc]) hdisj]
     · refine Finset.sum_le_sum fun i hi ↦ ?_
       rw [dist_eq_norm,

@@ -88,7 +88,7 @@ theorem lintegral_norm_div_rpow_sq_le_of_gap
       rw [ENNReal.ofReal_mul (Real.rpow_nonneg (by positivity) _),
         ENNReal.ofReal_mul (sq_nonneg ‖a‖)] at h
       simpa only [ENNReal.ofReal_pow (norm_nonneg _), ofReal_norm,
-        enorm_eq_nnnorm] using h
+        eNorm_eq_nnNorm] using h
     _ = ENNReal.ofReal ((1 + δ⁻¹) ^ ((n : ℝ) + 2 * s)) *
         ((‖a‖₊ : ℝ≥0∞) ^ 2 *
           ∫⁻ y in C, ENNReal.ofReal (edgeKernel n s (x - y))) := by
@@ -103,7 +103,7 @@ variable [NormedSpace ℝ F]
 theorem nnnorm_diffQuot_swap (u : ℝ^n → F) (z : ℝ^n × ℝ^n) (p : ℝ≥0∞ := 2) :
     ‖diffQuot n s u z.swap (p := p)‖₊ = ‖diffQuot n s u z (p := p)‖₊ := by
   simp only [diffQuot, Prod.fst_swap, Prod.snd_swap]
-  rw [norm_sub_rev z.2 z.1, ← neg_sub (u z.1) (u z.2), smul_neg, nnnorm_neg]
+  rw [norm_sub_rev z.2 z.1, ← neg_sub (u z.1) (u z.2), smul_neg, nnNorm_neg]
 
 /-- Swapping the domains leaves the mixed p-energy unchanged. -/
 theorem lintegral_diffQuot_rpow_prod_swap (u : ℝ^n → F) :
@@ -111,7 +111,7 @@ theorem lintegral_diffQuot_rpow_prod_swap (u : ℝ^n → F) :
       ∂(volume.restrict C).prod (volume.restrict A)) =
     ∫⁻ z, ‖diffQuot n s u z (p := p)‖ₑ ^ p.toReal
       ∂(volume.restrict A).prod (volume.restrict C) := by
-  simpa only [enorm_eq_nnnorm, nnnorm_diffQuot_swap] using
+  simpa only [eNorm_eq_nnNorm, nnnorm_diffQuot_swap] using
     (lintegral_prod_swap
       (μ := volume.restrict A) (ν := volume.restrict C)
       (fun z ↦ ‖diffQuot n s u z (p := p)‖ₑ ^ p.toReal))
@@ -122,7 +122,7 @@ theorem lintegral_diffQuot_sq_prod_swap (u : ℝ^n → F) :
       ∂(volume.restrict C).prod (volume.restrict A)) =
     ∫⁻ z, (‖diffQuot n s u z‖₊ : ℝ≥0∞) ^ 2
       ∂(volume.restrict A).prod (volume.restrict C) := by
-  simpa only [ENNReal.toReal_ofNat, ENNReal.rpow_two, enorm_eq_nnnorm] using
+  simpa only [ENNReal.toReal_ofNat, ENNReal.rpow_two, eNorm_eq_nnNorm] using
     lintegral_diffQuot_rpow_prod_swap (s := s) (A := A) (C := C) (p := 2) u
 
 /-- One mixed-domain contribution of zero extension is controlled by Lᵖ.

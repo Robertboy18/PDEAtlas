@@ -62,7 +62,7 @@ theorem weighted_quadratic_absorption_le
     dsimp only [Y] at hr
     linarith
   have hYc : ContinuousOn (fun q : ℝ^n × ℝ ↦ Y q.1 q.2) (closedCylinder Ω T) :=
-    ((hpc.comp continuous_fst.continuousOn (fun _ hq ↦ hq.1)).mul hvc).sub
+    ((hpc.comp continuous_fst.continuousOn (fun _ ↦ And.left)).mul hvc).sub
       (continuous_const.mul continuous_snd).continuousOn
   have hop (M : ℝ) (hM : 0 < M) (x : ℝ^n) (hx : x ∈ Ω)
       (t : ℝ) (ht : t ∈ Ioc 0 T) :

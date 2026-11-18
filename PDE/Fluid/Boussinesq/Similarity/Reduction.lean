@@ -383,7 +383,8 @@ theorem IsClassicalSelfSimilarProfile.isSelfSimilarSolutionOn
 /-- The zero profile satisfies the reduced equations with classical regularity. -/
 theorem zeroSelfSimilarProfile_isClassicalSelfSimilarProfile :
     IsClassicalSelfSimilarProfile zeroSelfSimilarProfile := by
-  refine ⟨⟨by fun_prop, by fun_prop, by fun_prop⟩, ?_, ?_, ?_⟩
+  refine ⟨⟨by fun_prop [zeroSelfSimilarProfile], by fun_prop [zeroSelfSimilarProfile],
+    by fun_prop [zeroSelfSimilarProfile]⟩, ?_, ?_, ?_⟩
   · intro y
     simp [zeroSelfSimilarProfile, divergence, PDE.partialDeriv_const]
   · intro y

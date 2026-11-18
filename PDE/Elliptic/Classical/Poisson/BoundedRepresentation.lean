@@ -119,10 +119,10 @@ theorem exists_bound_fundamentalSolutionConvolution {n : ℕ} (hn : 3 ≤ n)
     change ‖convolution (fundamentalSolution n) (f : ℝ^n → ℝ) L volume x‖ₑ ≤ B
     rw [hsplit, ((ConvolutionExists.of_memLp_memLp L hnear hfTop) x).add_distrib
       ((ConvolutionExists.of_memLp_memLp L hfar hf₁) x)]
-    exact (enorm_add_le _ _).trans (add_le_add
-      (enorm_convolution_le L hnear.aestronglyMeasurable hfTop.aestronglyMeasurable x)
-      (enorm_convolution_le L hfar.aestronglyMeasurable hf₁.aestronglyMeasurable x))
-  simpa only [toReal_enorm, Real.norm_eq_abs] using ENNReal.toReal_mono hB hbound
+    exact (eNorm_add_le _ _).trans (add_le_add
+      (eNorm_convolution_le L hnear.aestronglyMeasurable hfTop.aestronglyMeasurable x)
+      (eNorm_convolution_le L hfar.aestronglyMeasurable hf₁.aestronglyMeasurable x))
+  simpa only [toReal_eNorm, Real.norm_eq_abs] using ENNReal.toReal_mono hB hbound
 
 /-- Every bounded classical solution of `-Δu = f` is the Newtonian potential plus
 a constant, for compactly supported `C²` data in dimension at least three. -/

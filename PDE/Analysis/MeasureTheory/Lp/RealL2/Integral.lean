@@ -42,10 +42,10 @@ theorem integral_jointRepresentative_ae_eq
     hU.comp_measurable measurable_swap
   have hnorm : (fun t ↦ eLpNorm (fun x ↦ U (t, x)) 2 ν) =ᵐ[μ] fun t ↦ ‖u t‖ₑ := by
     filter_upwards [hsec] with t ht
-    rw [eLpNorm_congr_ae ht, ← Lp.enorm_def]
+    rw [eLpNorm_congr_ae ht, ← Lp.eNorm_def]
   have hfin : (∫⁻ t, eLpNorm (fun x ↦ U (t, x)) 2 ν ∂μ) < ∞ := by
     rw [lintegral_congr_ae hnorm]
-    exact hasFiniteIntegral_iff_enorm.mp hu.hasFiniteIntegral
+    exact hasFiniteIntegral_iff_eNorm.mp hu.hasFiniteIntegral
   have hK : MemLp K 2 ν := by
     have hM := eLpNorm_integral_le_lintegral_eLpNorm (μ := ν) (ν := μ) (p := 2) (by norm_num)
       hswap.aestronglyMeasurable

@@ -53,7 +53,7 @@ theorem lintegral_nnnorm_indicator_sq (hA : MeasurableSet A) (hAB : A ⊆ B)
     (u : ℝ^n → F) :
     (∫⁻ x in B, (‖A.indicator u x‖₊ : ℝ≥0∞) ^ 2) =
       ∫⁻ x in A, (‖u x‖₊ : ℝ≥0∞) ^ 2 := by
-  simpa only [ENNReal.toReal_ofNat, ENNReal.rpow_two, enorm_eq_nnnorm] using
+  simpa only [ENNReal.toReal_ofNat, ENNReal.rpow_two, eNorm_eq_nnNorm] using
     lintegral_enorm_rpow_indicator (p := 2) hA hAB u (by norm_num)
 
 /-- Relative zero extension preserves Lᵖ membership, including the endpoints. -/
@@ -98,7 +98,7 @@ theorem lintegral_diffQuot_indicator_eq (hA : MeasurableSet A) (hB : MeasurableS
         ∂(volume.restrict (B \ A)).prod (volume.restrict (B \ A))) = 0 := by
     have h := lintegral_congr_ae ((diffQuot_congr_ae (s := s) (p := p) hOff).fun_comp
       (fun a : F ↦ ‖a‖ₑ ^ p.toReal))
-    simpa only [Function.comp_apply, diffQuot_zero, Pi.zero_apply, enorm_zero,
+    simpa only [Function.comp_apply, diffQuot_zero, Pi.zero_apply, eNorm_zero,
       ENNReal.zero_rpow_of_pos hp, lintegral_zero] using h
   have hCA := lintegral_diffQuot_rpow_prod_swap (n := n) (s := s) (p := p)
     (A := A) (C := B \ A) (A.indicator u)
@@ -114,7 +114,7 @@ theorem gagliardoSq_indicator_eq (hA : MeasurableSet A) (hB : MeasurableSet B)
     gagliardoSq n s B (A.indicator u) = gagliardoSq n s A u +
       2 * ∫⁻ z, (‖diffQuot n s (A.indicator u) z‖₊ : ℝ≥0∞) ^ 2
         ∂(volume.restrict A).prod (volume.restrict (B \ A)) := by
-  simpa only [gagliardoSq, ENNReal.toReal_ofNat, ENNReal.rpow_two, enorm_eq_nnnorm] using
+  simpa only [gagliardoSq, ENNReal.toReal_ofNat, ENNReal.rpow_two, eNorm_eq_nnNorm] using
     lintegral_diffQuot_indicator_eq (s := s) (p := 2) hA hB hAB u (by norm_num)
 
 /-- A positive support gap controls the p-energy of relative zero extension. -/
@@ -145,7 +145,7 @@ theorem gagliardoSq_indicator_le_of_gap
     gagliardoSq n s B (A.indicator u) ≤ gagliardoSq n s A u +
       2 * ENNReal.ofReal ((1 + δ⁻¹) ^ ((n : ℝ) + 2 * s)) *
         ((∫⁻ x in A, (‖u x‖₊ : ℝ≥0∞) ^ 2) * edgeMass n s) := by
-  simpa only [gagliardoSq, ENNReal.toReal_ofNat, ENNReal.rpow_two, enorm_eq_nnnorm] using
+  simpa only [gagliardoSq, ENNReal.toReal_ofNat, ENNReal.rpow_two, eNorm_eq_nnNorm] using
     lintegral_diffQuot_indicator_le_of_gap (p := 2) hs hδ hA hB hAB hgap
       (by norm_num) (by norm_num)
 
@@ -161,12 +161,12 @@ theorem memGagliardo_indicator_of_gap
     MemGagliardo n s B (A.indicator u) (p := p) := by
   have hbase := memLp_indicator_of_subset hA hAB hu.1
   refine ⟨hbase, ?_⟩
-  rw [memLp_iff, eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top hp0 hptop
+  rw [memLp_iff, eLpNorm_lt_top_iff_lintegral_rpow_eNorm_lt_top hp0 hptop
     (aestronglyMeasurable_diffQuot hbase.aestronglyMeasurable)]
   apply (lintegral_diffQuot_indicator_le_of_gap hs hδ hA hB hAB hgap hp0 hptop).trans_lt
-  have hbaseEnergy := lintegral_rpow_enorm_lt_top_of_eLpNorm_lt_top hp0 hptop
+  have hbaseEnergy := lintegral_rpow_eNorm_lt_top_of_eLpNorm_lt_top hp0 hptop
     hu.1.eLpNorm_lt_top
-  have hdiffEnergy := lintegral_rpow_enorm_lt_top_of_eLpNorm_lt_top hp0 hptop
+  have hdiffEnergy := lintegral_rpow_eNorm_lt_top_of_eLpNorm_lt_top hp0 hptop
     hu.2.eLpNorm_lt_top
   exact ENNReal.add_lt_top.mpr
     ⟨hdiffEnergy, ENNReal.mul_lt_top (by finiteness)

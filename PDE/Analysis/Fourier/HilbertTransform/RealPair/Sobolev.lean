@@ -67,7 +67,7 @@ theorem IsHilbertPair.nnnorm_deriv_le_eLpNorm_add_deriv {u : ℝ → ℝ}
     ‖deriv u x‖₊ ≤
       (eLpNorm omega 2 volume).toNNReal + (eLpNorm (deriv omega) 2 volume).toNNReal := by
   apply NNReal.coe_le_coe.mp
-  simpa only [NNReal.coe_add, ENNReal.coe_toNNReal_eq_toReal, coe_nnnorm] using
+  simpa only [NNReal.coe_add, ENNReal.coe_toNNReal_eq_toReal, coe_nnNorm] using
     h.norm_le_eLpNorm_add_deriv (hu.continuous_deriv le_rfl) homega hsupp x
 
 /-- Input `H¹` norms give a global Lipschitz constant for every `C¹` velocity
@@ -77,7 +77,7 @@ theorem IsHilbertPair.lipschitzWith_of_contDiff_two_compactSupport {u : ℝ → 
     (homega : ContDiff ℝ 2 omega) (hsupp : HasCompactSupport omega) :
     LipschitzWith
       ((eLpNorm omega 2 volume).toNNReal + (eLpNorm (deriv omega) 2 volume).toNNReal) u :=
-  lipschitzWith_of_nnnorm_deriv_le (hu.differentiable (by norm_num))
+  lipschitzWith_of_nnNorm_deriv_le (hu.differentiable (by norm_num))
     (h.nnnorm_deriv_le_eLpNorm_add_deriv hu homega hsupp)
 
 /-- The normalized velocity constructed by the integral primitive has

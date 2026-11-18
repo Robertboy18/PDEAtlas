@@ -49,7 +49,7 @@ theorem weightedExtendLp_compLpL (r : ℕ) (L : F →L[ℝ] G)
     have hq : QuasiMeasurePreserving
         (normalDilation (PDE.Common.lastIndex (n := n)) (reflectionNode k j))
         (domainMeasure n ℝ^n₋) (domainMeasure n ℝ^n₊) :=
-      ⟨(normalDilation _ _).continuous.measurable, by
+      ⟨(normalDilation _ _).continuous.aemeasurable, by
         rw [map_lower_normalDilation n _ (reflectionNode_neg k j)]
         exact Measure.smul_absolutelyContinuous⟩
     exact hq.ae_eq_comp (L.coeFn_compLpL u)

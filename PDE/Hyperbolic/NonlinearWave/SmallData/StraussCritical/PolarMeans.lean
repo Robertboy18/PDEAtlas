@@ -93,7 +93,7 @@ theorem integral_eq_sphericalMean_annulus {f : ℝ^3 → ℝ} {a b : ℝ} (hf : 
   rw [integral_eq_sphericalMean_integral hf, intervalIntegral.integral_of_le hab]
   congr 1
   apply setIntegral_eq_of_subset_of_forall_sdiff_eq_zero measurableSet_Ioi
-    (fun r hr ↦ ha.trans_lt hr.1)
+    (fun r hr ↦ ha.trans_lt (And.left hr))
   intro r hr
   rw [hs r hr.1 (by simpa only [mem_Ioc, not_and_or, not_lt, not_le] using hr.2), mul_zero]
 

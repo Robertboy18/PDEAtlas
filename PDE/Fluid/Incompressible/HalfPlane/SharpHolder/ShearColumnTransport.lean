@@ -318,12 +318,12 @@ theorem abs_integral_shearDifference_mul_le_column {p : ℝ} (hp : 1 < p) {g : �
         rw [ENNReal.ofReal_mul (NNReal.coe_nonneg _), ENNReal.ofReal_coe_nnreal]
     _ ≤ (2 * C : ℝ≥0) * shearColumnCost p := by
         gcongr
-        rw [← abs_of_nonneg hnn, ← Real.enorm_eq_ofReal_abs]
-        refine (enorm_integral_le_lintegral_enorm _).trans_eq ?_
+        rw [← abs_of_nonneg hnn, ← Real.eNorm_eq_ofReal_abs]
+        refine (eNorm_integral_le_lintegral_eNorm _).trans_eq ?_
         refine setLIntegral_congr_fun measurableSet_Ioi fun y _ ↦ ?_
-        rw [enorm_mul, Real.enorm_eq_ofReal_abs, Real.enorm_eq_ofReal_abs, abs_abs,
+        rw [eNorm_mul, Real.eNorm_eq_ofReal_abs, Real.eNorm_eq_ofReal_abs, abs_abs,
           abs_of_nonneg (by positivity : (0 : ℝ) ≤ |y - shearMap p y| ^ (1 / 2 : ℝ)),
-          Real.enorm_eq_ofReal_abs]
+          Real.eNorm_eq_ofReal_abs]
     _ = 2 * C * shearColumnCost p := by rw [ENNReal.coe_mul, ENNReal.coe_ofNat]
 
 end IncompressibleFlow.SharpHolder

@@ -765,7 +765,7 @@ theorem abs_sub_div_le_strainConstant (hK : ∀ y, K y = y 0 * y 1 / ‖y‖ ^ 4
     have hg := holderOnWith_rescaled_slice hxz hlt (by simpa [d] using ha) hC ht
     have hline := abs_integral_localStrainDifference_mul_le hA hσ hg
     change ‖Fx t - Fz t‖ₑ ≤ _
-    rw [show Fx t - Fz t = _ from heq, Real.enorm_eq_ofReal_abs, abs_mul,
+    rw [show Fx t - Fz t = _ from heq, Real.eNorm_eq_ofReal_abs, abs_mul,
       ENNReal.ofReal_mul (abs_nonneg _), abs_inv, abs_of_pos hd0]
     rw [abs_div, abs_of_pos hd0] at hline
     calc ENNReal.ofReal d⁻¹ * ENNReal.ofReal |∫ u, localStrainDifference A u ((h - t) / d) *
@@ -784,8 +784,8 @@ theorem abs_sub_div_le_strainConstant (hK : ∀ y, K y = y 0 * y 1 / ‖y‖ ^ 4
     lintegral_mono_set (Ioo_subset_Ioo_right (div_le_div_of_nonneg_right (le_max_right _ _) hd0.le))
   have hint : ENNReal.ofReal |∫ t in I, (Fx t - Fz t)| ≤
       2 * C * ENNReal.ofReal (d⁻¹ * d ^ (1 / 2 : ℝ)) * (ENNReal.ofReal d * (S + S)) := by
-    rw [← Real.enorm_eq_ofReal_abs]
-    refine (enorm_integral_le_lintegral_enorm _).trans ?_
+    rw [← Real.eNorm_eq_ofReal_abs]
+    refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
     have hne : ∀ᵐ t ∂volume.restrict I, t ≠ h :=
       ae_restrict_of_ae (measure_eq_zero_iff_ae_notMem.1 (measure_singleton h))
     calc ∫⁻ t in I, ‖Fx t - Fz t‖ₑ

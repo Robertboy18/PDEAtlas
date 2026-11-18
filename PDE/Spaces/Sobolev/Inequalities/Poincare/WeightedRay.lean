@@ -72,7 +72,8 @@ private theorem coefficient_ray_integrable_and_integral_le
   have hd : 0 < d := norm_pos_iff.mpr hy0
   have hmajorant : IntervalIntegrable (fun t : ℝ ↦ A / (t + d) ^ 4) volume 0 1 :=
     (continuousOn_const.div (by fun_prop) fun t ht ↦
-      (pow_pos (add_pos_of_nonneg_of_pos ht.1 hd) 4).ne').intervalIntegrable_of_Icc zero_le_one
+      (pow_pos (add_pos_of_nonneg_of_pos (And.left ht) hd) 4).ne').intervalIntegrable_of_Icc
+        zero_le_one
   have hpoint (t : ℝ) (ht : t ∈ Set.Ioc (0 : ℝ) 1) :
       (t ^ 4)⁻¹ * W (t⁻¹ • y) ≤ A / (t + d) ^ 4 := by
     have hty : t⁻¹ • y ∈ H₊ :=
@@ -758,7 +759,7 @@ theorem integrable_and_weightedPoincare_squared_halfPlane_of_core_kernel
   have hS : MeasurableSet S :=
     (measurableSet_coordinateClosedHalfSpace (0 : Fin 2)).inter measurableSet_ball
   have hQnonneg (x : (ℝ^2)) : 0 ≤ Q x :=
-    Set.indicator_nonneg (fun y hy ↦ weightedPoincareRayKernel_nonneg hW hy.1) x
+    Set.indicator_nonneg (fun y hy ↦ weightedPoincareRayKernel_nonneg hW (And.left hy)) x
   have hQint : Integrable Q (volume.restrict H₊) :=
     (hCoreKernel.integrable_indicator hS).mono_measure Measure.restrict_le_self
   have hd (i : Fin 2) : Continuous fun x ↦ ((∂[i] u) x) ^ 2 :=

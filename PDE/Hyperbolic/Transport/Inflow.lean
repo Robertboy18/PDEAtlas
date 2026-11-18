@@ -142,7 +142,7 @@ theorem of_hasFDerivWithinAt [NormedAddCommGroup X] [NormedSpace ℝ X] {D₀ : 
     have : (𝓝[Ioc r t] r).NeBot := by
       rw [← mem_closure_iff_nhdsWithin_neBot, closure_Ioc hrt.ne]
       exact left_mem_Icc.mpr hrt.le
-    exact ge_of_tendsto ((hgγ r hr).mono fun s hs ↦ ⟨hr.1.trans hs.1.le, hs.2⟩)
+    exact ge_of_tendsto ((hgγ r hr).mono fun s (hs : s ∈ Ioc r t) ↦ ⟨hr.1.trans hs.1.le, hs.2⟩)
       (eventually_nhdsWithin_of_forall fun s hs ↦ (h s hs).le)
   -- the last such time, or `t₀`
   obtain ⟨t₁, ht₁, hstart, hafter⟩ : ∃ t₁ ∈ Icc t₀ t, (t₁ = t₀ ∨ γ t₁ ∈ {x | x ∈ D₀ ∧ g x = c}) ∧

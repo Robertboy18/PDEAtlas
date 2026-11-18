@@ -63,8 +63,8 @@ private theorem boundary_eLpNorm_le
     (g : GagliardoSpace n (1 - 1 / p) univ (p := ENNReal.ofReal p) (F := F)) :
     eLpNorm (GagliardoSpace.toLp n (1 - 1 / p) univ g) (ENNReal.ofReal p) volume ≤ ‖g‖ₑ := by
   have h : ‖GagliardoSpace.toLp n (1 - 1 / p) univ g‖ₑ ≤ ‖g‖ₑ :=
-    WithLp.enorm_fst_le _ g.val
-  simpa only [Lp.enorm_def, Measure.restrict_univ] using h
+    WithLp.eNorm_fst_le _ g.val
+  simpa only [Lp.eNorm_def, Measure.restrict_univ] using h
 
 /-- Each first partial of the extension has a uniform bound in terms of the
 fractional boundary norm. This includes the normal derivative and dimension zero. -/

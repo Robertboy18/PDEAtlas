@@ -67,7 +67,7 @@ theorem eLpNorm_signedKernelField_le {R M : ℝ} (hp : 1 < p) (hR : 0 < R)
       (mul_le_mul' le_rfl hdisp)
   have hm := (stronglyMeasurable_signedKernelField hψ.measurable hgm).aestronglyMeasurable
     (μ := volume.restrict ℝ^(n + 1)₊)
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (ENNReal.ofReal_pos.mpr hp₀).ne'
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal (ENNReal.ofReal_pos.mpr hp₀).ne'
     ENNReal.ofReal_ne_top hm, ENNReal.toReal_ofReal hp₀.le]
   simp_rw [← ofReal_norm,
     ENNReal.ofReal_rpow_of_nonneg (norm_nonneg _) hp₀.le]
@@ -102,7 +102,7 @@ theorem exists_pos_signedKernelField_bound (hp : 1 < p) {ψ : ℝ^n → ℝ}
   have hb' : eLpNorm (signedKernelField ψ (GagliardoSpace.toLp n (1 - 1 / p) univ g))
       (ENNReal.ofReal p) (volume.restrict ℝ^(n + 1)₊) ≤ ENNReal.ofReal (C + 1) * ‖g‖ₑ :=
     hb.trans (mul_le_mul' (ENNReal.ofReal_le_ofReal (le_add_of_nonneg_right zero_le_one)) le_rfl)
-  exact ⟨hb'.trans_lt (ENNReal.mul_lt_top ENNReal.ofReal_lt_top enorm_lt_top), hb'⟩
+  exact ⟨hb'.trans_lt (ENNReal.mul_lt_top ENNReal.ofReal_lt_top eNorm_lt_top), hb'⟩
 
 /-- Fractional boundary data give an `Lᵖ` signed kernel field. -/
 theorem memLp_signedKernelField (hp : 1 < p) {ψ : ℝ^n → ℝ}
@@ -125,8 +125,8 @@ theorem exists_pos_norm_signedKernelField_bound (hp : 1 < p) {ψ : ℝ^n → ℝ
   refine ⟨C, hC, fun g ↦ ?_⟩
   rw [Lp.norm_toLp]
   have h := ENNReal.toReal_mono
-    (ENNReal.mul_ne_top ENNReal.ofReal_ne_top enorm_ne_top) (hb g).2
-  simpa only [ENNReal.toReal_mul, ENNReal.toReal_ofReal hC.le, toReal_enorm] using h
+    (ENNReal.mul_ne_top ENNReal.ofReal_ne_top eNorm_ne_top) (hb g).2
+  simpa only [ENNReal.toReal_mul, ENNReal.toReal_ofReal hC.le, toReal_eNorm] using h
 
 /-- The spatial derivative profile of any mollifier has the fractional norm bound. -/
 theorem exists_pos_spatialDerivativeProfile_bound (hp : 1 < p)

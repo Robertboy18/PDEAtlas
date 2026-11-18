@@ -175,7 +175,7 @@ theorem Lp.lintegral_nnnorm_sq_eq_norm_sq_of_ae_eq
     _ = ∫⁻ x, ‖u x‖ₑ ^ 2 ∂μ :=
       lintegral_congr_ae (hf.fun_comp (fun x : E ↦ ‖x‖ₑ ^ 2)).symm
     _ = _ := by
-      rw [ENNReal.ofReal_pow (norm_nonneg _), ofReal_norm, Lp.enorm_def]
+      rw [ENNReal.ofReal_pow (norm_nonneg _), ofReal_norm, Lp.eNorm_def]
       simpa [ENNReal.rpow_two] using
         (eLpNorm_nnreal_pow_eq_lintegral (p := (2 : NNReal)) (by norm_num)
           (Lp.aestronglyMeasurable u)).symm

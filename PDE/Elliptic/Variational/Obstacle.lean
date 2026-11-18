@@ -104,7 +104,7 @@ theorem existsUnique_dirichletObstacle_minimizer
       (loadFunctional (n := n) (Ω := Ω) f)
       (dirichletObstacleSet ψ)
       (convex_dirichletObstacleSet ψ) (isClosed_dirichletObstacleSet ψ) ⟨w, hw⟩ using 1
-  all_goals simp only [isMinOn_iff, PDE.Elliptic.Semilinear.variationalEnergy, add_zero,
+  simp only [isMinOn_iff, PDE.Elliptic.Semilinear.variationalEnergy, add_zero,
     dirichletEnergy, PDE.Analysis.Variational.energy]
 
 /-- For an admissible function, minimizing the Dirichlet energy is equivalent

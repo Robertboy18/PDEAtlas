@@ -164,7 +164,7 @@ theorem abs_setIntegral_hessianKernel_zero_one_mul_le_horizontal {a c d A : ℝ}
     have e : g y + g (coordinateReflection 0 y) =
         K y * (F (x + y) - F (x + coordinateReflection 0 y)) := by
       simp only [hg, hKR]; ring
-    rw [e, Real.enorm_eq_ofReal_abs, abs_mul]
+    rw [e, Real.eNorm_eq_ofReal_abs, abs_mul]
     simp only [hB]
     exact ENNReal.ofReal_le_ofReal ((mul_le_mul_of_nonneg_left (hF y hyD hy0)
       (abs_nonneg _)).trans_eq (by rw [Real.sqrt_mul (by norm_num)]; ring))
@@ -198,7 +198,7 @@ theorem abs_setIntegral_hessianKernel_zero_one_mul_le_horizontal {a c d A : ℝ}
     calc ‖∫ y in D, g y‖ₑ
         = ‖∫ y in D ∩ {y | 0 < y 0}, (g y + g (coordinateReflection 0 y))‖ₑ := by rw [hsym]
       _ ≤ ∫⁻ y in D ∩ {y | 0 < y 0}, ‖g y + g (coordinateReflection 0 y)‖ₑ :=
-          enorm_integral_le_lintegral_enorm _
+          eNorm_integral_le_lintegral_eNorm _
       _ ≤ ∫⁻ y in D ∩ {y | 0 < y 0}, ENNReal.ofReal (B y) :=
           setLIntegral_mono' (hD.inter (measurableSet_lt measurable_const
             (EuclideanSpace.proj (𝕜 := ℝ) 0).continuous.measurable)) hpt
@@ -210,7 +210,7 @@ theorem abs_setIntegral_hessianKernel_zero_one_mul_le_horizontal {a c d A : ℝ}
       _ = ENNReal.ofReal (2 * √2 * A * I) := by
           rw [hrefl, hRval, ← ENNReal.ofReal_add (by positivity) (by positivity)]
           ring_nf
-  rw [Real.enorm_eq_ofReal_abs] at hmain
+  rw [Real.eNorm_eq_ofReal_abs] at hmain
   exact (ENNReal.ofReal_le_ofReal_iff (by positivity)).1 hmain
 
 /-! ### The vertical estimate, by the coordinate swap -/
@@ -525,8 +525,8 @@ private theorem lintegral_wedge {δ m C : ℝ} (hδ : 0 < δ) (hm : 0 < m) (hC :
     rw [← intervalIntegral.integral_add_adjacent_intervals hint1 hint2, h1, zero_add, h2,
       intervalIntegral.integral_const_mul, intervalIntegral.integral_mul_const]
   have hgR : ∀ y ∈ R, 0 ≤ (wedge δ m).indicator g y := fun y _ ↦ Set.indicator_nonneg
-    (fun a ha ↦ mul_nonneg hC (mul_nonneg (hessianKernel_zero_one_nonneg ha.1.1.1 ha.1.2.1)
-      (Real.sqrt_nonneg _))) y
+    (fun a ha ↦ mul_nonneg hC (mul_nonneg (hessianKernel_zero_one_nonneg (And.left ha).1.1
+      (And.left ha).2.1) (Real.sqrt_nonneg _))) y
   have hmeas : Measurable ((wedge δ m).indicator g) :=
     (measurable_kernel_mul_sqrt.const_mul C).indicator (measurableSet_wedge δ m)
   have hout : IntervalIntegrable (fun p ↦ ∫ q in (0 : ℝ)..δ, (wedge δ m).indicator g !₂[p, q])
@@ -638,7 +638,7 @@ theorem abs_setIntegral_hessianKernel_zero_one_mul_le_interior {δ A₁ A₂ : �
         (F (x + y) - F (x + R1 y)) - (F (x + R0 y) - F (x + R0 (R1 y))) by ring]
       exact (abs_sub _ _).trans (by linarith)
     have hKy : 0 ≤ K y := hessianKernel_zero_one_nonneg hy0.le hy1.le
-    rw [e, Real.enorm_eq_ofReal_abs, abs_mul, abs_of_nonneg hKy]
+    rw [e, Real.eNorm_eq_ofReal_abs, abs_mul, abs_of_nonneg hKy]
     exact ENNReal.ofReal_le_ofReal ((mul_le_mul_of_nonneg_left hbr hKy).trans_eq (by ring))
   -- cover by two wedges
   have hcov : D ∩ {y : ℝ^2 | 0 < y 1} ⊆ wedge δ (1 / M) ∪ swap ⁻¹' wedge δ M := by
@@ -702,7 +702,7 @@ theorem abs_setIntegral_hessianKernel_zero_one_mul_le_interior {δ A₁ A₂ : �
   have hmain : ‖∫ y in D ∩ {y : ℝ^2 | 0 < y 1},
       (g y + g (R0 y) + (g (R1 y) + g (R0 (R1 y))))‖ₑ ≤ ENNReal.ofReal (X + Y) := by
     calc _ ≤ ∫⁻ y in D ∩ {y : ℝ^2 | 0 < y 1}, ‖g y + g (R0 y) + (g (R1 y) + g (R0 (R1 y)))‖ₑ :=
-          enorm_integral_le_lintegral_enorm _
+          eNorm_integral_le_lintegral_eNorm _
       _ ≤ ∫⁻ y in D ∩ {y : ℝ^2 | 0 < y 1}, ENNReal.ofReal (B y) :=
           setLIntegral_mono' (hD.inter (measurableSet_lt measurable_const
             (EuclideanSpace.proj (𝕜 := ℝ) 1).continuous.measurable)) hpt
@@ -717,7 +717,7 @@ theorem abs_setIntegral_hessianKernel_zero_one_mul_le_interior {δ A₁ A₂ : �
               hb2)
       _ = ENNReal.ofReal (X + Y) := by
           rw [hswapW, hW1, hW2, ← ENNReal.ofReal_add hX0 hY0]
-  rw [Real.enorm_eq_ofReal_abs, hval] at hmain
+  rw [Real.eNorm_eq_ofReal_abs, hval] at hmain
   exact (ENNReal.ofReal_le_ofReal_iff (hval ▸ add_nonneg hX0 hY0)).1 hmain
 
 /-! ### Principal values -/

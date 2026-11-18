@@ -58,7 +58,7 @@ theorem contDiffOn_joint_classicalRepresentative {n r k : ℕ} {s : Set ℝ} (hs
     apply contDiffOn_zero.mpr
     exact continuous_eval.comp_continuousOn
       (((classicalRepresentativeCLM hk).continuous.comp_continuousOn hu.continuousOn).comp
-        continuousOn_fst (fun _ hp ↦ hp.1) |>.prodMk continuousOn_snd)
+        continuousOn_fst (fun _ ↦ And.left) |>.prodMk continuousOn_snd)
   | succ r ih =>
     have hr0 := Nat.cast_nonneg (α := ℝ) r
     cases k with

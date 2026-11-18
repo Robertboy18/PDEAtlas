@@ -60,7 +60,7 @@ theorem exists_contDiffOn_scalarConjugacy_joint_inverse
   have hx : ((c0, (0 : ℝ)), (0 : ℝ)) ∈ U := ⟨⟨hC0, mem_univ _⟩, hzero⟩
   have hG : ContDiffOn ℝ ∞ G U :=
     (hjoint.comp (contDiff_fst.fst.prodMk contDiff_snd).contDiffOn
-      (fun _ hp ↦ ⟨hp.1.1, hp.2⟩)).sub contDiffOn_fst.snd
+      (fun _ (hp : _ ∈ U) ↦ ⟨hp.1.1, hp.2⟩)).sub contDiffOn_fst.snd
   have hslice : HasDerivAt (fun s : ℝ ↦ G ((c0, 0), s))
       (fderiv ℝ G ((c0, 0), 0) (0, 1)) 0 := by
     simpa only [Function.comp_def, id_eq] using

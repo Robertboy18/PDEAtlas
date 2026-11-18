@@ -50,7 +50,7 @@ theorem volume_biUnion_Ioc_backward_expansion
       ENNReal.ofReal (1 + k) * volume (⋃ p ∈ s, Ioc p.1 p.2) := by
   classical
   induction hn : s.card using Nat.strong_induction_on generalizing s with
-  | h n ih =>
+  | ind n ih =>
     by_cases hd : (s : Set (ℝ × ℝ)).PairwiseDisjoint (fun p ↦ Ioc p.1 p.2)
     · calc
         _ ≤ ∑ p ∈ s, volume (Ioc (p.1 - k * (p.2 - p.1)) p.2) :=

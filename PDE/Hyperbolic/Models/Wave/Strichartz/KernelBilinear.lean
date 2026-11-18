@@ -55,7 +55,7 @@ theorem lintegral_exteriorNewtonKernel_mul_le {R : ℝ} (hR : 0 < R)
         eLpNorm f (12 / 11) volume * eLpNorm g (12 / 11) volume := by
   let H := fun x ↦ ∫⁻ y, ‖exteriorNewtonKernel R (x - y)‖ₑ * f y
   have hkm : Measurable (fun z : ℝ^3 × ℝ^3 ↦ ‖exteriorNewtonKernel R (z.1 - z.2)‖ₑ * f z.2) :=
-    ((measurable_exteriorNewtonKernel R).comp (measurable_fst.sub measurable_snd)).enorm.mul
+    ((measurable_exteriorNewtonKernel R).comp (measurable_fst.sub measurable_snd)).eNorm.mul
       (hf.comp measurable_snd)
   have hm : Measurable H := hkm.lintegral_prod_right
   have hpq : (12 : ℝ).HolderConjugate (12 / 11) := by
@@ -64,17 +64,17 @@ theorem lintegral_exteriorNewtonKernel_mul_le {R : ℝ} (hR : 0 < R)
   have hholder : (∫⁻ x, H x * g x) ≤
       eLpNorm H 12 volume * eLpNorm g (12 / 11) volume := by
     have h := ENNReal.lintegral_mul_le_Lp_mul_Lq volume hpq hm.aemeasurable hg.aemeasurable
-    rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (by norm_num) (by norm_num) hm.aestronglyMeasurable,
-      eLpNorm_eq_lintegral_rpow_enorm_toReal (by norm_num)
+    rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal (by norm_num) (by norm_num) hm.aestronglyMeasurable,
+      eLpNorm_eq_lintegral_rpow_eNorm_toReal (by norm_num)
         (ENNReal.div_ne_top (by norm_num) (by norm_num)) hg.aestronglyMeasurable]
-    norm_num only [ENNReal.toReal_ofNat, ENNReal.toReal_div, enorm_eq_self]
+    norm_num only [ENNReal.toReal_ofNat, ENNReal.toReal_div, eNorm_eq_self]
     simpa only [Pi.mul_apply, one_div_div] using h
   have hYoung := ENNReal.eLpNorm_lintegral_convolution_le volume (p := 6) (q := 12 / 11) (r := 12)
     (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
-    (measurable_exteriorNewtonKernel R).enorm hf
+    (measurable_exteriorNewtonKernel R).eNorm hf
   norm_num only [ENNReal.ofReal_div_of_pos (by norm_num : (0 : ℝ) < 11),
     ENNReal.ofReal_ofNat] at hYoung
-  rw [eLpNorm_enorm _ (measurable_exteriorNewtonKernel R).aestronglyMeasurable,
+  rw [eLpNorm_eNorm _ (measurable_exteriorNewtonKernel R).aestronglyMeasurable,
     eLpNorm_exteriorNewtonKernel hR] at hYoung
   apply hholder.trans
   gcongr 1

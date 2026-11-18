@@ -138,15 +138,15 @@ theorem aestronglyMeasurable_sq_eLpNorm_fderiv_velocitySlice {T : ℝ}
       ((volume.restrict (Set.Ioo 0 T)).prod volume) := by
     rw [← Measure.restrict_univ (μ := (volume : Measure (ℝ^n))), Measure.prod_restrict]
     have := (hcont.aemeasurable (μ := (volume : Measure ℝ).prod (volume : Measure (ℝ^n)))
-      (measurableSet_Ioo.prod MeasurableSet.univ)).enorm.pow_const (2 : ℝ)
-    simpa only [enorm_norm] using this
+      (measurableSet_Ioo.prod MeasurableSet.univ)).eNorm.pow_const (2 : ℝ)
+    simpa only [eNorm_norm] using this
   refine (((hmeas.lintegral_prod_right'.pow_const (1 / 2 : ℝ)).ennreal_toReal.pow_const
     2).aestronglyMeasurable).congr ?_
   filter_upwards [ae_restrict_mem measurableSet_Ioo] with t ht
   have hCt : ContDiff ℝ 1 (velocitySlice u t) := contDiff_iff_contDiffAt.mpr fun x ↦
     (hu _ (by simpa [finiteTimeDomain] using ht)).comp x
       (contDiff_timeSpaceCons_spatial n t (m := 1)).contDiffAt
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal two_ne_zero ENNReal.ofNat_ne_top
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal two_ne_zero ENNReal.ofNat_ne_top
     (hCt.continuous_fderiv one_ne_zero).aestronglyMeasurable]
   norm_num
 

@@ -189,7 +189,7 @@ theorem exists_uniform_energy_bound_of_compact_inclusion
   let trials : StableTrialSystem T := gramSpectralGalerkinSystem T hcompact
   let Sseq : ℕ → Submodule ℝ V := trials.space
   let : ∀ m, FiniteDimensional ℝ (Sseq m) := trials.finiteDimensional
-  let : ∀ m, CompleteSpace (Sseq m) := fun m ↦ FiniteDimensional.complete ℝ (Sseq m)
+  let : ∀ m, CompleteSpace (Sseq m) := fun m ↦ FiniteDimensional.completeSpace ℝ (Sseq m)
   let P : ∀ m, StableTrialProjection T (Sseq m) trials.stabilityConstant := trials.projection
   let K : NNReal := trials.stabilityConstant
   let D : ℝ := 2 + (LR ^ 2 + LA) / c

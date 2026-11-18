@@ -59,8 +59,8 @@ theorem nnnorm_extensionSobolev_one_le :
   let B (i : Fin hΩ.N) : W^{1,∞}(Ω; F) →L[ℝ] W^{1,∞}(ℝ^n; F) :=
     boundaryExtensionSobolev (by decide) hΩ.chart_contDiff hΩ.chart_symm_contDiff i
   change ‖I + ∑ i, B i‖₊ ≤ ‖I‖₊ + ∑ i, ‖B i‖₊
-  have hsum : ‖∑ i, B i‖₊ ≤ ∑ i, ‖B i‖₊ := nnnorm_sum_le Finset.univ B
-  exact (nnnorm_add_le I (∑ i, B i)).trans (add_le_add le_rfl hsum)
+  have hsum : ‖∑ i, B i‖₊ ≤ ∑ i, ‖B i‖₊ := nnNorm_sum_le Finset.univ B
+  exact (nnNorm_add_le I (∑ i, B i)).trans (add_le_add le_rfl hsum)
 
 /-- Apply the C¹ atlas extension and restrict its Lipschitz representative to the
 closure. This is a continuous linear map on the Banach-valued Sobolev graph. -/

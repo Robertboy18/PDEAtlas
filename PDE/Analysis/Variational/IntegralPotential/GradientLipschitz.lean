@@ -103,7 +103,7 @@ theorem exists_lipschitzOnWith_gradient_energy
       add_le_add le_rfl (((dualLift J).le_opNorm _).trans
         (mul_le_mul_of_nonneg_left hN (norm_nonneg _)))
     _ = _ := by
-      simp only [NNReal.coe_add, NNReal.coe_mul, NNReal.coe_one, coe_nnnorm]
+      simp only [NNReal.coe_add, NNReal.coe_mul, NNReal.coe_one, coe_nnNorm]
       ring
 
 end PDE.Analysis.Variational.IntegralPotential

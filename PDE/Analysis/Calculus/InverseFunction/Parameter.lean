@@ -99,7 +99,7 @@ theorem localSpatialInverse_left_inverse
     (hΦ : ContDiffAt ℝ 2 (fun p : ℝ × E ↦ Φ p.1 p.2) (0, x))
     (hΦ₀ : Φ 0 =ᶠ[𝓝 x] id) :
     ∀ᶠ p : ℝ × E in 𝓝 (0, x), localSpatialInverse hΦ hΦ₀ p.1 (Φ p.1 p.2) = p.2 := by
-  have h := ((contDiffAt_fst.prodMk hΦ).hasStrictFDerivAt'
+  have h := ((contDiffAt_fst.prodMk hΦ).hasStrictFDerivAt
     (hasFDerivAt_parameterMap (hΦ.differentiableAt (by norm_num)) hΦ₀)
     (by norm_num)).eventually_left_inverse
   filter_upwards [h] with p hp
@@ -111,7 +111,7 @@ theorem localSpatialInverse_right_inverse
     (hΦ : ContDiffAt ℝ 2 (fun p : ℝ × E ↦ Φ p.1 p.2) (0, x))
     (hΦ₀ : Φ 0 =ᶠ[𝓝 x] id) :
     ∀ᶠ p : ℝ × E in 𝓝 (0, x), Φ p.1 (localSpatialInverse hΦ hΦ₀ p.1 p.2) = p.2 := by
-  have h := ((contDiffAt_fst.prodMk hΦ).hasStrictFDerivAt'
+  have h := ((contDiffAt_fst.prodMk hΦ).hasStrictFDerivAt
     (hasFDerivAt_parameterMap (hΦ.differentiableAt (by norm_num)) hΦ₀)
     (by norm_num)).eventually_right_inverse
   simp only [hΦ₀.eq_of_nhds, id_eq] at h

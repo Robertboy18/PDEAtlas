@@ -547,7 +547,8 @@ private theorem integrable_hessianKernel_mul_oddHalfSpaceExtension_farPart {R : 
       hD.contDiffOn.continuousOn
   have hW : AEStronglyMeasurable (oddHalfSpaceExtension (farPart R ω)) volume := by
     refine .sub ((aestronglyMeasurable_indicator_iff (HalfSpace.measurableSet_upper (n := 2))).mpr
-        ((hcont.mono fun y (hy : 0 < y 1) ↦ (le_of_lt hy : (0 : ℝ) ≤ y 1)).aestronglyMeasurable
+        ((hcont.mono (t := HalfSpace.upper 2)
+          fun y (hy : 0 < y 1) ↦ (le_of_lt hy : (0 : ℝ) ≤ y 1)).aestronglyMeasurable
           (HalfSpace.measurableSet_upper (n := 2))))
       ((aestronglyMeasurable_indicator_iff (HalfSpace.isOpen_lower 2).measurableSet).mpr ?_)
     refine ContinuousOn.aestronglyMeasurable ?_ (HalfSpace.isOpen_lower 2).measurableSet

@@ -32,7 +32,7 @@ omit [NormedSpace ℝ F] in
 private theorem eLpNorm_rpow_eq {α : Type*} [MeasurableSpace α] {ν : Measure α}
     {f : α → F} (hf : AEStronglyMeasurable f ν) (hp0 : p ≠ 0) (hp : p ≠ ∞) :
     eLpNorm f p ν ^ p.toReal = ∫⁻ x, ‖f x‖ₑ ^ p.toReal ∂ν := by
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hf, ← ENNReal.rpow_mul,
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hf, ← ENNReal.rpow_mul,
     one_div_mul_cancel (ENNReal.toReal_pos hp0 hp).ne', ENNReal.rpow_one]
 
 /-- The fractional energy is the weighted integral of the translation-increment
@@ -80,6 +80,6 @@ theorem aemeasurable_eLpNorm_sub_translate_rpow {u : ℝ^n → F}
     exact hshift.sub hu
   simp_rw [heq]
   have hshift := hu.comp_quasiMeasurePreserving (quasiMeasurePreserving_sub volume volume)
-  exact (hshift.sub hu.comp_fst).enorm.pow_const p.toReal |>.lintegral_prod_left'
+  exact (hshift.sub hu.comp_fst).eNorm.pow_const p.toReal |>.lintegral_prod_left'
 
 end SobolevSpace.Fractional

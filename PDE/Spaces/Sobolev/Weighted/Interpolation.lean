@@ -129,7 +129,7 @@ theorem coordinatePower_aemeasurable (q : ℝ)
       (domainMeasure n Ω) := by
   exact ((Lp.memLp
     ((U : GraphSpace.WkpAmbientOn n k p Ω) a :
-      GraphSpace.DerivLp n p Ω)).aemeasurable.enorm).pow_const q
+      GraphSpace.DerivLp n p Ω)).aemeasurable.eNorm).pow_const q
 
 /-- Weighted power energies of every Sobolev coordinate are log-convex in the density. -/
 theorem coordinatePowerEnergyWithDensity_geometricDensity_le

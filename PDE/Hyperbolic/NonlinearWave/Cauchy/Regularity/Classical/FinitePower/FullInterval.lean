@@ -81,7 +81,8 @@ theorem exists_c2_extension_of_bounded_signedPower_integral_eq {r b L B M : ℝ}
       (by positivity : 0 < S / 2) hw hw₂ hH hHB
       (fun p hp ↦ by rw [hwu p hp]; exact huB p hp) hwe
   refine ⟨⟨w, hwfull, hwu⟩, ?_⟩
-  refine (hwfull.mono (fun p hp ↦ ⟨by linarith [hp.1], hp.2⟩)).congr fun p hp ↦ ?_
+  refine (hwfull.mono (t := {p | 0 < p.1 ∧ p.1 < L})
+    (fun p hp ↦ ⟨by linarith [hp.1], hp.2⟩)).congr fun p hp ↦ ?_
   exact (hwu p ⟨hp.1.le, hp.2⟩).symm
 
 end PDE.Hyperbolic.NonlinearWave.Cauchy.Regularity.Classical.FinitePower

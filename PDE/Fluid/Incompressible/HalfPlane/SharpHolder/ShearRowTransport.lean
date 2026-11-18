@@ -122,12 +122,12 @@ theorem abs_setIntegral_Icc_mul_le_right (hsc : s ≤ c) (hct : c ≤ t)
         rw [ENNReal.ofReal_mul (NNReal.coe_nonneg _), ENNReal.ofReal_coe_nnreal]
     _ ≤ C * ∫⁻ y in Ioc c t, ‖k y‖ₑ * ENNReal.ofReal (|y - T y| ^ (1 / 2 : ℝ)) := by
         gcongr
-        rw [← abs_of_nonneg hnn, ← Real.enorm_eq_ofReal_abs]
-        refine (enorm_integral_le_lintegral_enorm _).trans_eq ?_
+        rw [← abs_of_nonneg hnn, ← Real.eNorm_eq_ofReal_abs]
+        refine (eNorm_integral_le_lintegral_eNorm _).trans_eq ?_
         refine setLIntegral_congr_fun measurableSet_Ioc fun y _ ↦ ?_
-        rw [enorm_mul, Real.enorm_eq_ofReal_abs, Real.enorm_eq_ofReal_abs, abs_abs,
+        rw [eNorm_mul, Real.eNorm_eq_ofReal_abs, Real.eNorm_eq_ofReal_abs, abs_abs,
           abs_of_nonneg (by positivity : (0 : ℝ) ≤ |y - T y| ^ (1 / 2 : ℝ)),
-          Real.enorm_eq_ofReal_abs]
+          Real.eNorm_eq_ofReal_abs]
 
 /-- **Transport on a balanced interval, cost on the left.** As
 `abs_setIntegral_Icc_mul_le_right`, with `T` mapping `[s, c)` into `(c, t]`:
@@ -174,7 +174,7 @@ theorem abs_setIntegral_Icc_mul_le_left (hsc : s ≤ c) (hct : c ≤ t)
     conv_rhs => rw [← hmp.setLIntegral_comp_preimage_emb (Homeomorph.neg ℝ).measurableEmbedding]
     rw [← hpre]
     refine setLIntegral_congr_fun ((measurableSet_Ico).preimage measurable_neg) fun y _ ↦ ?_
-    rw [enorm_neg, show y - -T (-y) = T (-y) - -y by ring]
+    rw [eNorm_neg, show y - -T (-y) = T (-y) - -y by ring]
   rwa [hl, abs_neg, hr] at h
 
 end Balanced
@@ -380,8 +380,8 @@ theorem abs_sub_neg_le {m : ℝ} {h : ℝ → ℝ} {C : ℝ≥0} (hh : HolderOnW
 /-- The bound of an integral by the lintegral of the norm of the integrand. -/
 theorem ofReal_abs_intervalIntegral_le {f : ℝ → ℝ} {a b : ℝ} (hab : a ≤ b) :
     ENNReal.ofReal |∫ x in a..b, f x| ≤ ∫⁻ x in Ioc a b, ‖f x‖ₑ := by
-  rw [intervalIntegral.integral_of_le hab, ← Real.enorm_eq_ofReal_abs]
-  exact enorm_integral_le_lintegral_enorm _
+  rw [intervalIntegral.integral_of_le hab, ← Real.eNorm_eq_ofReal_abs]
+  exact eNorm_integral_le_lintegral_eNorm _
 
 /-- The inner balanced interval `[0, T_y(0, q)]` of a row `q > 0`, `3q² < 1`. -/
 private theorem abs_integral_inner_le {q : ℝ} (hq : 0 < q) (h3 : 3 * q ^ 2 < 1) {G : ℝ → ℝ}
@@ -446,7 +446,7 @@ private theorem abs_integral_mid_le {m q : ℝ} (hq : 0 < q) (hm : upperShearThr
     (fun y hy ↦ by
       obtain ⟨hd, hr⟩ := upper_radicand hq hy.1
       rw [horizontalShearPotential_horizontalShearMap hq.ne' hd.ne' hr]) hG
-  simp only [neg_mul, integral_neg, abs_neg, enorm_neg] at h
+  simp only [neg_mul, integral_neg, abs_neg, eNorm_neg] at h
   exact h.trans_eq (congrArg _ (setLIntegral_congr (Ioo_ae_eq_Ioc (μ := volume) (a := c)
     (b := m)).symm))
 
@@ -528,9 +528,9 @@ theorem abs_integral_shearDifference_mul_le_row {m q : ℝ} (hm : 1 ≤ m) (hq :
     refine (ofReal_abs_intervalIntegral_le (hA1.trans hB1.1)).trans ?_
     have hpt : ∀ p ∈ Ioc A B, ‖shearDifference p q * G p‖ₑ ≤ C * f p := fun p hp ↦ by
       have hp' : p ∈ Icc 0 m := ⟨hA0.trans hp.1.le, hp.2.trans hB1.2⟩
-      rw [enorm_mul, mul_comm (C : ℝ≥0∞), mul_assoc]
+      rw [eNorm_mul, mul_comm (C : ℝ≥0∞), mul_assoc]
       gcongr
-      rw [Real.enorm_eq_ofReal_abs, mul_comm, ← ENNReal.ofReal_coe_nnreal,
+      rw [Real.eNorm_eq_ofReal_abs, mul_comm, ← ENNReal.ofReal_coe_nnreal,
         ← ENNReal.ofReal_mul (NNReal.coe_nonneg _)]
       exact ENNReal.ofReal_le_ofReal (abs_sub_neg_le hh hp')
     calc ∫⁻ p in Ioc A B, ‖shearDifference p q * G p‖ₑ ≤ ∫⁻ p in Ioc A B, C * f p :=

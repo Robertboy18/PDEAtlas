@@ -50,7 +50,7 @@ theorem absolutelyContinuousOnInterval_of_continuous_derivative
   have hbound (t : ℝ) (ht : t ∈ uIcc a b) : ‖v t‖₊ ≤ K := by
     change ‖v t‖ ≤ max M 0
     exact (hM t ht).trans (le_max_left M 0)
-  exact (Convex.lipschitzOnWith_of_nnnorm_hasDerivWithin_le (convex_uIcc a b)
+  exact (Convex.lipschitzOnWith_of_nnNorm_hasDerivWithin_le (convex_uIcc a b)
     (fun t ht ↦ (hu t ht).hasDerivWithinAt) hbound).absolutelyContinuousOnInterval
 
 end

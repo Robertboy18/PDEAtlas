@@ -66,7 +66,7 @@ theorem exists_gelfandGalerkinCaratheodory
       (AffineCaratheodorySolutionOn
         (fun t ↦ -(gelfandGalerkinOperator T S (B t)))
         (gelfandGalerkinForcing T S ell) a b u₀) := by
-  let : CompleteSpace S := FiniteDimensional.complete ℝ S
+  let : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
   let MA := gelfandGalerkinLipschitzBound T S MB
   let Mf := gelfandGalerkinLipschitzBound T S Mell
   obtain ⟨hAmeas, hfmeas⟩ :=
@@ -119,7 +119,7 @@ theorem exists_aeGelfandGalerkinApproximation
     Nonempty
       (AEGelfandGalerkinApproximation
         T S B ell a b C (Mell : ℝ) u₀) := by
-  let : CompleteSpace S := FiniteDimensional.complete ℝ S
+  let : CompleteSpace S := FiniteDimensional.completeSpace ℝ S
   obtain ⟨U⟩ :=
     exists_gelfandGalerkinCaratheodory
       T S B ell hab hB hell MB Mell hB_bound hell_bound u₀

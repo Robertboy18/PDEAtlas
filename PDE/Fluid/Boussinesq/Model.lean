@@ -198,15 +198,15 @@ theorem IsClassicalSolutionOn.satisfiesMomentumEquationWithCoefficient_one
 theorem zeroFields_isClassicalSolutionOn (times : Set ℝ) :
     IsClassicalSolutionOn zeroFields times := by
   refine
-    { velocity_contDiffOn := by fun_prop
-      temperature_contDiffOn := by fun_prop
-      pressure_contDiffOn := by fun_prop
+    { velocity_contDiffOn := by fun_prop [zeroFields]
+      temperature_contDiffOn := by fun_prop [zeroFields]
+      pressure_contDiffOn := by fun_prop [zeroFields]
       velocity_differentiableAt_time := by
         intro x t ht
-        fun_prop
+        fun_prop [zeroFields]
       temperature_differentiableAt_time := by
         intro x t ht
-        fun_prop
+        fun_prop [zeroFields]
       divergence_eq_zero := by
         intro x t ht
         simp [zeroFields, divergence, PDE.partialDeriv_const]

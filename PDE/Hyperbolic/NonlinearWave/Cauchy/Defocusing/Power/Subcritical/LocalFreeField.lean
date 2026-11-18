@@ -36,8 +36,8 @@ def coneField (H : C(ℝ × ℝ^3, ℝ)) (p : ℝ × ℝ^3) : Cone →ᵇ ℝ :=
 /-- The cone field is literal evaluation at the associated physical point. -/
 @[simp] theorem coneField_apply (H : C(ℝ × ℝ^3, ℝ)) (p : ℝ × ℝ^3) (q : Cone) :
     coneField H p q = H (physicalPoint p q) := by
-  simp only [coneField, composeCompact_apply, BoundedContinuousFunction.add_apply,
-    constCLM_apply, const_apply, BoundedContinuousFunction.smul_apply,
+  simp only [coneField, composeCompact_apply, add_apply,
+    constCLM_apply, const_apply, smul_apply,
     coneCoordinates, mkOfCompact_apply]
   congr 1
   ext <;> simp [physicalPoint, coneTime, coneSpace]

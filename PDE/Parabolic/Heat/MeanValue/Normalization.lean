@@ -120,6 +120,7 @@ private theorem measurable_unitHeatBallLagIntegrand :
     Measurable (unitHeatBallLagIntegrand n) := by
   unfold unitHeatBallLagIntegrand
   apply Measurable.indicator
+    (s := (fun q : ℝ × ℝ^n ↦ timeSpaceCons (-q.1) q.2) ⁻¹' heatBall (0 : ℝ^n) 0 1)
   · exact (measurable_heatBallWeight (n := n) (0 : ℝ^n) 0).comp
       measurable_timeSpaceCons_neg
   · exact (measurableSet_heatBall (n := n) (0 : ℝ^n) 0 1).preimage

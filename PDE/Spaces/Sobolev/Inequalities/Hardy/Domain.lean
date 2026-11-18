@@ -130,10 +130,10 @@ theorem exists_eLpNorm_interiorDistanceQuotient_le_graphNorm
           (ae_restrict_of_forall_mem hΩ.isOpen.measurableSet hpoint) p
     _ = ENNReal.ofReal (M / δ) *
         ‖(U : GraphSpace.WkpAmbientOn n 1 p Ω) (GraphSpace.baseIndex n 1)‖ₑ := by
-      rw [Lp.enorm_def, eLpNorm_congr_ae hbase]
+      rw [Lp.eNorm_def, eLpNorm_congr_ae hbase]
     _ ≤ ENNReal.ofReal (M / δ) * ‖U‖ₑ := by
       gcongr
-      exact PiLp.enorm_apply_le _ _
+      exact PiLp.eNorm_apply_le _ _
 
 /-- A smooth test function divided by physical boundary distance. -/
 noncomputable def domainDistanceQuotient

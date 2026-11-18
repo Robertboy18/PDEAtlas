@@ -140,9 +140,9 @@ theorem lintegral_enorm_pow_four_sq_le_of_contDiff {u : ℝ^3 → ℝ} (hu : Con
   let g : ℝ × ℝ × ℝ → ℝ≥0∞ := fun p ↦ ‖u (cartesianEquivThree p)‖ₑ
   let d : Fin 3 → ℝ × ℝ × ℝ → ℝ≥0∞ := fun j p ↦ ‖(∂[j] u) (cartesianEquivThree p)‖ₑ
   have hg : Measurable g :=
-    (hu.continuous.measurable.comp cartesianEquivThree.measurable).enorm
+    (hu.continuous.measurable.comp cartesianEquivThree.measurable).eNorm
   have hd (j : Fin 3) : Measurable (d j) :=
-    ((hcont j).measurable.comp cartesianEquivThree.measurable).enorm
+    ((hcont j).measurable.comp cartesianEquivThree.measurable).eNorm
   have h₀ : ∀ a q, g (a, q) ^ 2 ≤ ∫⁻ a', g (a', q) * d 0 (a', q) := by
     rintro a ⟨b, c⟩
     simpa only [g, d, coordinateLine_zero_cartesianEquivThree] using

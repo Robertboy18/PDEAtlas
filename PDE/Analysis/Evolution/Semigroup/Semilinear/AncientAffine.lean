@@ -220,7 +220,7 @@ theorem ancientLift_affinePathForcing {a : ℝ} (η : ℝ)
       ancientLift (2 * η) f t + ancientLift (2 * η) (T u) t +
         B (ancientLift η u t) (ancientLift η u t) := by
   simp only [ancientLift, ContinuousMap.coe_mk, affinePathForcing,
-    BoundedContinuousFunction.add_apply, quadraticPath_apply, smul_add, map_smul,
+    add_apply, quadraticPath_apply, smul_add, map_smul,
     _root_.smul_apply, smul_smul]
   have hexp : Real.exp ((2 * η) * t) = Real.exp (η * t) * Real.exp (η * t) := by
     rw [← Real.exp_add]

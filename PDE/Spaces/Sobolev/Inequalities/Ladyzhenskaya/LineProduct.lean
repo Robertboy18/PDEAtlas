@@ -44,7 +44,7 @@ namespace SobolevSpace.Inequalities
 theorem two_mul_enorm_le_lintegral_enorm_deriv {f : ℝ → ℝ} (hf : ContDiff ℝ 1 f)
     (hfc : HasCompactSupport f) (x : ℝ) :
     2 * ‖f x‖ₑ ≤ ∫⁻ y, ‖deriv f y‖ₑ := by
-  have hleft := hfc.enorm_le_lintegral_Ici_deriv hf x
+  have hleft := hfc.eNorm_le_lintegral_Ici_deriv hf x
   have hright : ‖f x‖ₑ ≤ ∫⁻ y in Ioi x, ‖deriv f y‖ₑ := by
     have hderiv : ∀ y ∈ Ioi x, HasDerivAt f (deriv f y) y := fun y _ ↦
       (hf.differentiable one_ne_zero y).hasDerivAt
@@ -56,8 +56,8 @@ theorem two_mul_enorm_le_lintegral_enorm_deriv {f : ℝ → ℝ} (hf : ContDiff 
       exact (h0.filter_mono atTop_le_cocompact).tendsto
     have h := integral_Ioi_of_hasDerivAt_of_tendsto hf.continuous.continuousWithinAt hderiv
       hint htend
-    calc ‖f x‖ₑ = ‖∫ y in Ioi x, deriv f y‖ₑ := by rw [h, zero_sub, enorm_neg]
-      _ ≤ ∫⁻ y in Ioi x, ‖deriv f y‖ₑ := enorm_integral_le_lintegral_enorm _
+    calc ‖f x‖ₑ = ‖∫ y in Ioi x, deriv f y‖ₑ := by rw [h, zero_sub, eNorm_neg]
+      _ ≤ ∫⁻ y in Ioi x, ‖deriv f y‖ₑ := eNorm_integral_le_lintegral_eNorm _
   calc 2 * ‖f x‖ₑ = ‖f x‖ₑ + ‖f x‖ₑ := two_mul _
     _ ≤ (∫⁻ y in Iic x, ‖deriv f y‖ₑ) + ∫⁻ y in Ioi x, ‖deriv f y‖ₑ := add_le_add hleft hright
     _ = ∫⁻ y, ‖deriv f y‖ₑ := by rw [← compl_Iic, lintegral_add_compl _ measurableSet_Iic]
@@ -80,11 +80,11 @@ theorem enorm_sq_le_lintegral_enorm_mul_enorm_deriv {φ : ℝ → ℝ} (hφ : Co
   have hint : ∫⁻ y, ‖2 * (φ y * deriv φ y)‖ₑ = 2 * ∫⁻ y, ‖φ y‖ₑ * ‖deriv φ y‖ₑ := by
     rw [← lintegral_const_mul' _ _ ENNReal.ofNat_ne_top]
     refine lintegral_congr fun y ↦ ?_
-    rw [enorm_mul, enorm_mul]
+    rw [eNorm_mul, eNorm_mul]
     congr 1
-    rw [Real.enorm_eq_ofReal_abs]
+    rw [Real.eNorm_eq_ofReal_abs]
     norm_num
-  rw [hint, enorm_mul, ← sq] at h
+  rw [hint, eNorm_mul, ← sq] at h
   exact (ENNReal.mul_le_mul_iff_right two_ne_zero ENNReal.ofNat_ne_top).mp h
 
 /-- Cauchy-Schwarz for lower Lebesgue integrals: `(∫ f g)² ≤ (∫ f²) (∫ g²)`. -/

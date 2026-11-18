@@ -619,7 +619,7 @@ theorem eLpNorm_localizationRemainder (hR : 0 < R)
   rw [hfun, eLpNorm_const_smul, eLpNorm_comp_smul
     (contDiff_localizationRemainder one_pos hu).continuous.aestronglyMeasurable
     (inv_ne_zero hR.ne'), dilationFactor, finrank_euclideanSpace_fin, inv_pow, inv_inv,
-    abs_of_pos (by positivity), Real.enorm_eq_ofReal (inv_nonneg.mpr hR.le), ← mul_assoc,
+    abs_of_pos (by positivity), Real.eNorm_eq_ofReal (inv_nonneg.mpr hR.le), ← mul_assoc,
     ENNReal.ofReal_rpow_of_nonneg (by positivity) (by positivity),
     ← ENNReal.ofReal_mul (inv_nonneg.mpr hR.le)]
   congr 2

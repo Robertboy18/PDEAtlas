@@ -286,7 +286,7 @@ def shearSlabMass (t₀ t₁ : ℚ) : Option ℤ :=
 /-- For a set `S`, `t ↦ ∫⁻ p in S, |Δ(p, t)|` is measurable. -/
 theorem measurable_lintegral_enorm_shearDifference (S : Set ℝ) :
     Measurable fun t ↦ ∫⁻ p in S, ‖shearDifference p t‖ₑ :=
-  (measurable_shearDifference.enorm.comp measurable_swap).lintegral_prod_right'
+  (measurable_shearDifference.eNorm.comp measurable_swap).lintegral_prod_right'
 
 /-- `Q(1, t) ≤ 0`. -/
 theorem shearQuartic_one_nonpos (t : ℝ) : shearQuartic 1 t ≤ 0 := by

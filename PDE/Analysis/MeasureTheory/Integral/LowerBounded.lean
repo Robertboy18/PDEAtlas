@@ -38,16 +38,16 @@ theorem lintegral_neg_part_lt_top_of_ae_lower_bound
     ∫⁻ x, ENNReal.ofReal (-f x) ∂μ < ∞ := by
   refine (lintegral_mono_ae (hlower.mono fun x hx ↦ ?_)).trans_lt hb.hasFiniteIntegral
   exact (ENNReal.ofReal_le_ofReal (by linarith : -f x ≤ b x)).trans
-    (Real.ofReal_le_enorm (b x))
+    (Real.ofReal_le_eNorm (b x))
 
 /-- On integrable real functions, the extended signed integral agrees with
 the ordinary Bochner integral. -/
 theorem lowerBoundedIntegral_eq_integral (hf : Integrable f μ) :
     lowerBoundedIntegral μ f = ((∫ x, f x ∂μ : ℝ) : EReal) := by
   have hp : ∫⁻ x, ENNReal.ofReal (f x) ∂μ < ∞ :=
-    (lintegral_mono fun x ↦ Real.ofReal_le_enorm (f x)).trans_lt hf.hasFiniteIntegral
+    (lintegral_mono fun x ↦ Real.ofReal_le_eNorm (f x)).trans_lt hf.hasFiniteIntegral
   have hn : ∫⁻ x, ENNReal.ofReal (-f x) ∂μ < ∞ :=
-    (lintegral_mono fun x ↦ Real.ofReal_le_enorm (-f x)).trans_lt hf.neg.hasFiniteIntegral
+    (lintegral_mono fun x ↦ Real.ofReal_le_eNorm (-f x)).trans_lt hf.neg.hasFiniteIntegral
   rw [lowerBoundedIntegral, integral_eq_lintegral_pos_part_sub_lintegral_neg_part hf,
     EReal.coe_sub, EReal.coe_ennreal_toReal hp.ne, EReal.coe_ennreal_toReal hn.ne]
 

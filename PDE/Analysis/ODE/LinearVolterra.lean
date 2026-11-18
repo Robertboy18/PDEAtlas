@@ -68,7 +68,7 @@ theorem volterraLinearMap_apply (K f : C(ℝ, A)) (t : ℝ) :
 theorem volterraLinearMap_pow_succ_apply (K f : C(ℝ, A)) (k : ℕ) (t : ℝ) :
     (volterraLinearMap K ^ (k + 1)) f t =
       ∫ s in 0..t, K s * (volterraLinearMap K ^ k) f s := by
-  rw [pow_succ', Module.End.mul_apply, volterraLinearMap_apply]
+  rw [pow_succ', mul_apply_eq_comp, volterraLinearMap_apply]
 
 /-- A uniform coefficient bound gives the factorial estimate for each ordered
 integral. Only the interval from zero to the evaluation time is used. -/
@@ -120,7 +120,7 @@ theorem norm_volterraLinearMap_pow_apply_le
     induction n with
     | zero => rfl
     | succ n ih =>
-        rw [pow_succ', Module.End.mul_apply, hR, ih, Function.iterate_succ_apply']
+        rw [pow_succ', mul_apply_eq_comp, hR, ih, Function.iterate_succ_apply']
   have h := PDE.Analysis.ODE.dist_iterate_volterra_apply_le
     ⟨0, le_rfl, ht⟩ P g 0 ⟨B, hB⟩ hg hP hLip (R f) (R 0) k ⟨t, ht, le_rfl⟩
   rw [← hiter k f, ← hiter k 0] at h
@@ -158,7 +158,7 @@ theorem eq_sum_volterraLinearMap_pow_of_eq_add
     exact sub_eq_iff_eq_add.mpr hf
   have hgeom := congrArg (fun P : Module.End ℝ C(ℝ, A) ↦ P f)
     (geom_sum_mul_neg L m)
-  rw [Module.End.mul_apply, hg, hnil] at hgeom
+  rw [mul_apply_eq_comp, hg, hnil] at hgeom
   change (∑ i ∈ Finset.range m, L ^ i) g = f - (0 : C(ℝ, A)) at hgeom
   rw [sub_zero] at hgeom
   simpa only [LinearMap.sum_apply] using hgeom.symm

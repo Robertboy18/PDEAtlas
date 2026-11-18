@@ -86,6 +86,6 @@ theorem restrict_mem_Wkp0_of_zero_on_lower (hp : p ≠ ∞)
     (SobolevSpace.HalfSpace.isOpen_lower (n + 1)).measurableSet).mp hU,
     SobolevSpace.HalfSpace.compl_upper_ae_eq_lower (n := n + 1)] with x hx hset hlast
   have hnot : x ∈ (ℝ^(n + 1)₊ : Set ℝ^(n + 1))ᶜ := not_lt_of_ge hlast
-  exact hx (hset ▸ hnot)
+  exact hx (hset.mp hnot)
 
 end SobolevSpace.VectorValued.HalfSpace

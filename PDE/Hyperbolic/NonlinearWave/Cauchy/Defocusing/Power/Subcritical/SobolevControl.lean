@@ -106,7 +106,7 @@ theorem exists_sobolev_bound_ball :
     rw [Lp.norm_def, eLpNorm_congr_ae hgrad]
     change (eLpNorm (r • (fun y ↦ ∇ U (MeanScaling.ballHomeomorph x hr y)))
       2 (domainMeasure 3 (ball 0 1))).toReal = _
-    rw [eLpNorm_const_smul, ENNReal.toReal_mul, toReal_enorm,
+    rw [eLpNorm_const_smul, ENNReal.toReal_mul, toReal_eNorm,
       Real.norm_of_nonneg hr.le, MeanScaling.eLpNorm_comp_ballHomeomorph x hr, ← Lp.norm_def]
     ring
   have hS' := hS V

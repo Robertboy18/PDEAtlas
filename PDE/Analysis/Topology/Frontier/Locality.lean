@@ -35,4 +35,4 @@ theorem IsOpen.mem_frontier_iff_of_local_eq
     x ∈ frontier s ↔ x ∈ frontier t := by
   apply Filter.EventuallyEqSet.mem_frontier_iff
   filter_upwards [hU.mem_nhds hx] with y hy
-  exact propext (h y hy)
+  exact h y hy

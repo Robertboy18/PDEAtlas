@@ -224,7 +224,7 @@ private theorem rightMeasure_singleton (y : ℝ) : rightMeasure k c {y} = 0 := b
 private theorem IsMassMatching.ae_rightMeasure (hT : IsMassMatching k c T) (hk : AEMeasurable k) :
     ∀ᵐ y ∂rightMeasure k c, c < y ∧ T y < c ∧
       ∫⁻ x in Iic (T y), ‖k x‖ₑ = ∫⁻ x in Ici y, ‖k x‖ₑ := by
-  rw [ae_withDensity_iff' hk.enorm.restrict]
+  rw [ae_withDensity_iff' hk.eNorm.restrict]
   filter_upwards [hT.lt, hT.mass_eq, ae_restrict_mem measurableSet_Ioi] with y hlt hmass hyc hw
   have hky : k y ≠ 0 := fun h ↦ hw (by simp [h])
   exact ⟨hyc, hlt hky, hmass hky⟩
@@ -369,7 +369,7 @@ private theorem IsBalancedKernel.aemeasurable (hk : IsBalancedKernel k c α) : A
 /-- The pointwise bound `|k x| ≤ |k x| |x - c|^α / d^α` when `|x - c| ≥ d > 0`. -/
 private theorem enorm_le_enorm_mul_rpow {x d : ℝ} (hd : 0 < d) (hx : d ≤ |x - c|) :
     ‖k x‖ₑ ≤ ‖k x * |x - c| ^ (α : ℝ)‖ₑ * ENNReal.ofReal (d ^ (-(α : ℝ))) := by
-  rw [Real.enorm_eq_ofReal_abs, Real.enorm_eq_ofReal_abs,
+  rw [Real.eNorm_eq_ofReal_abs, Real.eNorm_eq_ofReal_abs,
     ← ENNReal.ofReal_mul (abs_nonneg _)]
   refine ENNReal.ofReal_le_ofReal ?_
   rw [abs_mul, abs_of_nonneg (Real.rpow_nonneg (abs_nonneg _) _), mul_assoc]
@@ -419,7 +419,7 @@ theorem IsBalancedKernel.map_withDensity_eq (hk : IsBalancedKernel k c α)
 `|k| dx` on `(c, ∞)`. -/
 private theorem ae_rightMeasure {P : ℝ → Prop} (hk : AEMeasurable k)
     (h : ∀ᵐ x, k x ≠ 0 → P x) : ∀ᵐ x ∂rightMeasure k c, P x := by
-  rw [ae_withDensity_iff' hk.enorm.restrict]
+  rw [ae_withDensity_iff' hk.eNorm.restrict]
   filter_upwards [ae_restrict_of_ae h] with x hx hw
   exact hx fun h0 ↦ hw (by simp [h0])
 
@@ -427,33 +427,33 @@ private theorem ae_rightMeasure {P : ℝ → Prop} (hk : AEMeasurable k)
 `|k| dx` on `(-∞, c)`. -/
 private theorem ae_leftMeasure {P : ℝ → Prop} (hk : AEMeasurable k)
     (h : ∀ᵐ x, k x ≠ 0 → P x) : ∀ᵐ x ∂leftMeasure k c, P x := by
-  rw [ae_withDensity_iff' hk.enorm.restrict]
+  rw [ae_withDensity_iff' hk.eNorm.restrict]
   filter_upwards [ae_restrict_of_ae h] with x hx hw
   exact hx fun h0 ↦ hw (by simp [h0])
 
 /-- The integral of `φ` for the measure `|k| dx` on `(c, ∞)` is `∫_{y > c} |k(y)| φ(y) dy`. -/
 private theorem integral_rightMeasure (hk : AEMeasurable k) (φ : ℝ → ℝ) :
     ∫ y, φ y ∂rightMeasure k c = ∫ y in Ioi c, |k y| * φ y := by
-  rw [integral_withDensity_eq_integral_toReal_smul₀ hk.enorm.restrict
-    (Eventually.of_forall fun _ ↦ enorm_lt_top)]
-  simp only [toReal_enorm, Real.norm_eq_abs, smul_eq_mul]
+  rw [integral_withDensity_eq_integral_toReal_smul₀ hk.eNorm.restrict
+    (Eventually.of_forall fun _ ↦ eNorm_lt_top)]
+  simp only [toReal_eNorm, Real.norm_eq_abs, smul_eq_mul]
 
 /-- The integral of `φ` for the measure `|k| dx` on `(-∞, c)` is `∫_{x < c} |k(x)| φ(x) dx`. -/
 private theorem integral_leftMeasure (hk : AEMeasurable k) (φ : ℝ → ℝ) :
     ∫ x, φ x ∂leftMeasure k c = ∫ x in Iio c, |k x| * φ x := by
-  rw [integral_withDensity_eq_integral_toReal_smul₀ hk.enorm.restrict
-    (Eventually.of_forall fun _ ↦ enorm_lt_top)]
-  simp only [toReal_enorm, Real.norm_eq_abs, smul_eq_mul]
+  rw [integral_withDensity_eq_integral_toReal_smul₀ hk.eNorm.restrict
+    (Eventually.of_forall fun _ ↦ eNorm_lt_top)]
+  simp only [toReal_eNorm, Real.norm_eq_abs, smul_eq_mul]
 
 /-- For a balanced kernel the weight `|y - c|^α` is integrable for the measure `|k| dx` on `(c, ∞)`.
 -/
 private theorem integrable_rightMeasure_rpow (hk : IsBalancedKernel k c α) :
     Integrable (fun y ↦ |y - c| ^ (α : ℝ)) (rightMeasure k c) := by
   refine ⟨(continuous_rpow_abs_sub c α).aestronglyMeasurable, ?_⟩
-  rw [HasFiniteIntegral, lintegral_withDensity_eq_lintegral_mul₀ hk.aemeasurable.enorm.restrict
-    (continuous_rpow_abs_sub c α).enorm.aemeasurable]
+  rw [HasFiniteIntegral, lintegral_withDensity_eq_lintegral_mul₀ hk.aemeasurable.eNorm.restrict
+    (continuous_rpow_abs_sub c α).eNorm.aemeasurable]
   refine lt_of_le_of_lt ?_ hk.integrable.hasFiniteIntegral
-  simp only [Pi.mul_apply, ← enorm_mul]
+  simp only [Pi.mul_apply, ← eNorm_mul]
   exact setLIntegral_le_lintegral _ _
 
 /-- For a balanced kernel the weight `|x - c|^α` is integrable for the measure `|k| dx` on
@@ -461,10 +461,10 @@ private theorem integrable_rightMeasure_rpow (hk : IsBalancedKernel k c α) :
 private theorem integrable_leftMeasure_rpow (hk : IsBalancedKernel k c α) :
     Integrable (fun x ↦ |x - c| ^ (α : ℝ)) (leftMeasure k c) := by
   refine ⟨(continuous_rpow_abs_sub c α).aestronglyMeasurable, ?_⟩
-  rw [HasFiniteIntegral, lintegral_withDensity_eq_lintegral_mul₀ hk.aemeasurable.enorm.restrict
-    (continuous_rpow_abs_sub c α).enorm.aemeasurable]
+  rw [HasFiniteIntegral, lintegral_withDensity_eq_lintegral_mul₀ hk.aemeasurable.eNorm.restrict
+    (continuous_rpow_abs_sub c α).eNorm.aemeasurable]
   refine lt_of_le_of_lt ?_ hk.integrable.hasFiniteIntegral
-  simp only [Pi.mul_apply, ← enorm_mul]
+  simp only [Pi.mul_apply, ← eNorm_mul]
   exact setLIntegral_le_lintegral _ _
 
 end Kernel
@@ -483,9 +483,9 @@ private theorem map_rightMeasure (hk : IsBalancedKernel k c α) (hT : IsMassMatc
 `(c, ∞)`. -/
 private theorem integrable_rightMeasure_iff (hk : AEMeasurable k) {φ : ℝ → ℝ} :
     Integrable φ (rightMeasure k c) ↔ IntegrableOn (fun y ↦ |k y| * φ y) (Ioi c) := by
-  rw [integrable_withDensity_iff_integrable_smul₀' hk.enorm.restrict
-    (Eventually.of_forall fun _ ↦ enorm_lt_top)]
-  simp only [toReal_enorm, Real.norm_eq_abs, smul_eq_mul, IntegrableOn]
+  rw [integrable_withDensity_iff_integrable_smul₀' hk.eNorm.restrict
+    (Eventually.of_forall fun _ ↦ eNorm_lt_top)]
+  simp only [toReal_eNorm, Real.norm_eq_abs, smul_eq_mul, IntegrableOn]
 
 /-- A mass-matching map `T` is almost everywhere measurable for the measure `|k| dx` on `(c, ∞)`. -/
 private theorem aemeasurable_rightMeasure (hT : IsMassMatching k c T) :
@@ -515,9 +515,9 @@ theorem IsBalancedKernel.lintegral_comp_eq (hk : IsBalancedKernel k c α)
   have hφR : AEMeasurable (φ ∘ T) (rightMeasure k c) := by
     have h : AEMeasurable φ ((rightMeasure k c).map T) := by rwa [hmap]
     exact h.comp_aemeasurable hTm
-  have e₁ := lintegral_withDensity_eq_lintegral_mul₀' hk.aemeasurable.enorm.restrict hφ
+  have e₁ := lintegral_withDensity_eq_lintegral_mul₀' hk.aemeasurable.eNorm.restrict hφ
   have e₂ := lintegral_withDensity_eq_lintegral_mul₀' (μ := volume.restrict (Ioi c))
-    hk.aemeasurable.enorm.restrict hφR
+    hk.aemeasurable.eNorm.restrict hφR
   simp only [Pi.mul_apply, Function.comp_apply] at e₁ e₂
   rw [← e₁, ← e₂]
   change ∫⁻ x, φ x ∂leftMeasure k c = ∫⁻ y, φ (T y) ∂rightMeasure k c
@@ -686,7 +686,7 @@ theorem integrableOn_truncation (hint : Integrable fun x ↦ k x * |x - c| ^ (α
     (aestronglyMeasurable_of_integrable_mul_rpow hint).restrict ?_
   filter_upwards [ae_restrict_mem (measurableSet_truncation c ε)] with x hx
   have h := enorm_le_enorm_mul_rpow (k := k) (α := α) hε (le_of_lt hx)
-  rw [Real.enorm_eq_ofReal_abs, ← ofReal_norm, ← ENNReal.ofReal_mul (norm_nonneg _)] at h
+  rw [Real.eNorm_eq_ofReal_abs, ← ofReal_norm, ← ENNReal.ofReal_mul (norm_nonneg _)] at h
   rw [Real.norm_eq_abs, mul_comm]
   exact (ENNReal.ofReal_le_ofReal_iff (mul_nonneg (norm_nonneg _)
     (Real.rpow_nonneg hε.le _))).1 h
@@ -728,7 +728,7 @@ theorem tendsto_integral_mul_of_tendsto (hint : Integrable fun x ↦ k x * |x - 
 private theorem setIntegral_eq_toReal_of_nonneg {s : Set ℝ} (hs : MeasurableSet s)
     (hk : AEStronglyMeasurable k) (h : ∀ᵐ x, x ∈ s → 0 ≤ k x) :
     ∫ x in s, k x = (∫⁻ x in s, ‖k x‖ₑ).toReal := by
-  rw [← integral_norm_eq_lintegral_enorm hk.restrict]
+  rw [← integral_norm_eq_lintegral_eNorm hk.restrict]
   refine setIntegral_congr_ae hs (h.mono fun x hx hxs ↦ ?_)
   rw [Real.norm_eq_abs, abs_of_nonneg (hx hxs)]
 
@@ -736,7 +736,7 @@ private theorem setIntegral_eq_toReal_of_nonneg {s : Set ℝ} (hs : MeasurableSe
 private theorem setIntegral_eq_neg_toReal_of_nonpos {s : Set ℝ} (hs : MeasurableSet s)
     (hk : AEStronglyMeasurable k) (h : ∀ᵐ x, x ∈ s → k x ≤ 0) :
     ∫ x in s, k x = -(∫⁻ x in s, ‖k x‖ₑ).toReal := by
-  rw [← integral_norm_eq_lintegral_enorm hk.restrict, ← integral_neg]
+  rw [← integral_norm_eq_lintegral_eNorm hk.restrict, ← integral_neg]
   refine setIntegral_congr_ae hs (h.mono fun x hx hxs ↦ ?_)
   rw [Real.norm_eq_abs, abs_of_nonpos (hx hxs), neg_neg]
 
@@ -941,7 +941,7 @@ private theorem reflect_preimage_Ioi (c : ℝ) : (fun x : ℝ ↦ 2 * c - x) ⁻
 /-- The mass of the reflected kernel on a set is the mass of `k` on the reflected set. -/
 private theorem lintegral_reflect (s : Set ℝ) :
     ∫⁻ x in (fun x : ℝ ↦ 2 * c - x) ⁻¹' s, ‖-k (2 * c - x)‖ₑ = ∫⁻ y in s, ‖k y‖ₑ := by
-  simp only [enorm_neg]
+  simp only [eNorm_neg]
   exact (measurePreserving_reflect c).setLIntegral_comp_preimage_emb
     (measurableEmbedding_reflect c) (fun y ↦ ‖k y‖ₑ) s
 
@@ -1162,7 +1162,7 @@ theorem IsBalancedKernel.isMassMatching_transportMap (hk : IsBalancedKernel k c 
   have hspec : ∀ᵐ y ∂volume.restrict (Ioi c), k y ≠ 0 →
       transportMap k c y < c ∧
         ∫⁻ x in Iic (transportMap k c y), ‖k x‖ₑ = ∫⁻ t in Ici y, ‖k t‖ₑ := by
-    filter_upwards [(ae_withDensity_iff' hkm.enorm.restrict).1 hνR] with y hy hky
+    filter_upwards [(ae_withDensity_iff' hkm.eNorm.restrict).1 hνR] with y hy hky
     obtain ⟨-, hy₀, hyM⟩ := hy (by simpa using hky)
     exact lintegral_Iic_sSup_eq hL hy₀ hyM
   refine ⟨?_, hspec.mono fun y hy hky ↦ (hy hky).1, hspec.mono fun y hy hky ↦ (hy hky).2⟩
@@ -1229,7 +1229,7 @@ private theorem aemeasurable_shift_diff (hf : AEMeasurable f) {s : Set ℝ} (hs 
     hf.comp_quasiMeasurePreserving (measurePreserving_sub_right volume h).quasiMeasurePreserving
   have h₂ : AEMeasurable (fun x ↦ f (x + h)) :=
     hf.comp_quasiMeasurePreserving (measurePreserving_add_right volume h).quasiMeasurePreserving
-  exact ((h₁.sub h₂).enorm.restrict).mul (aemeasurable_restrict_of_monotoneOn hs hg)
+  exact ((h₁.sub h₂).eNorm.restrict).mul (aemeasurable_restrict_of_monotoneOn hs hg)
 
 /-- The triangle inequality `|f(x - h)| ≤ |f(x - h) - f(x + h)| + |f(x + h)|` under a weight. -/
 private theorem enorm_mul_le_add (x : ℝ) :
@@ -1237,7 +1237,7 @@ private theorem enorm_mul_le_add (x : ℝ) :
   rw [← add_mul]
   refine mul_le_mul' ?_ le_rfl
   calc ‖f (x - h)‖ₑ = ‖(f (x - h) - f (x + h)) + f (x + h)‖ₑ := by rw [sub_add_cancel]
-    _ ≤ _ := enorm_add_le _ _
+    _ ≤ _ := eNorm_add_le _ _
 
 /-- Lemma 3.10 of Chen and Hou (Part I) in `[0, ∞]`-valued form. For `h ≥ 0`, `b ≤ c`, `f`
 measurable and `g` nondecreasing on `[b - h, c + h]`,

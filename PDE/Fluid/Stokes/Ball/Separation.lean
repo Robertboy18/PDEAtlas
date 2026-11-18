@@ -83,7 +83,7 @@ private theorem lintegral_meridian_lt_top {R : ℝ} {W : ℝ^3 → ℝ^3} (hWm :
     ∫⁻ r in Ioi 0, ∫⁻ θ in Ioo 0 π, ENNReal.ofReal (r ^ 2 * sin θ) *
       (Metric.ball (0 : ℝ^3) R).indicator (fun x ↦ ‖W x‖ₑ) (point r θ 0) < ⊤ := by
   set f : ℝ^3 → ENNReal := (Metric.ball (0 : ℝ^3) R).indicator fun x ↦ ‖W x‖ₑ with hf
-  have hfm : Measurable f := (hWm.enorm).indicator Metric.isOpen_ball.measurableSet
+  have hfm : Measurable f := (hWm.eNorm).indicator Metric.isOpen_ball.measurableSet
   have hfinv : IsInvariantUnderAxisRotation f := by
     have h := (isInvariantUnderAxisRotation_comp_norm hW fun t ↦ ENNReal.ofReal t).indicator_ball R
     simp only [ofReal_norm] at h
@@ -131,14 +131,14 @@ theorem integrableOn_meridianCoefficient {R a b : ℝ} (ha : 0 < a) (hbR : b < R
       rw [Metric.mem_ball, dist_zero_right, norm_point hr0]
       exact hr.2.trans_lt hbR
     rw [hceq]
-    refine (enorm_integral_le_lintegral_enorm _).trans ?_
+    refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
     rw [Measure.restrict_congr_set Ioo_ae_eq_Ioc.symm,
       ← MeasureTheory.lintegral_const_mul' _ _ hMtop]
     refine setLIntegral_mono' measurableSet_Ioo fun θ hθ ↦ ?_
     have hsin : 0 ≤ sin θ := sin_nonneg_of_nonneg_of_le_pi hθ.1.le hθ.2.le
     rw [hf, Set.indicator_of_mem (hpball θ)]
     simp only [hG]
-    rw [enorm_mul, Real.enorm_eq_ofReal hsin]
+    rw [eNorm_mul, Real.eNorm_eq_ofReal hsin]
     calc ‖⟪W (point r θ 0), vectorHarmonic l k θ⟫‖ₑ * ENNReal.ofReal (sin θ)
         ≤ (‖W (point r θ 0)‖ₑ * ENNReal.ofReal (max C 0)) * ENNReal.ofReal (sin θ) := by
           gcongr
@@ -205,14 +205,14 @@ theorem integrableOn_sq_mul_meridianCoefficient {R : ℝ} {W : ℝ^3 → ℝ^3} 
       rw [Metric.mem_ball, dist_zero_right, norm_point hr0]
       exact hr.2
     rw [hceq, ← integral_const_mul]
-    refine (enorm_integral_le_lintegral_enorm _).trans ?_
+    refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
     rw [Measure.restrict_congr_set Ioo_ae_eq_Ioc.symm,
       ← MeasureTheory.lintegral_const_mul' _ _ hMtop]
     refine setLIntegral_mono' measurableSet_Ioo fun θ hθ ↦ ?_
     have hsin : 0 ≤ sin θ := sin_nonneg_of_nonneg_of_le_pi hθ.1.le hθ.2.le
     rw [hf, Set.indicator_of_mem (hpball θ)]
     simp only [hG]
-    rw [enorm_mul, enorm_mul, Real.enorm_eq_ofReal hsin, Real.enorm_eq_ofReal (by positivity)]
+    rw [eNorm_mul, eNorm_mul, Real.eNorm_eq_ofReal hsin, Real.eNorm_eq_ofReal (by positivity)]
     calc ENNReal.ofReal (r ^ 2) * (‖⟪W (point r θ 0), vectorHarmonic l k θ⟫‖ₑ *
           ENNReal.ofReal (sin θ))
         ≤ ENNReal.ofReal (r ^ 2) * ((‖W (point r θ 0)‖ₑ * ENNReal.ofReal (max C 0)) *
@@ -244,7 +244,7 @@ theorem ae_integrableOn_meridian {R : ℝ} {W : ℝ^3 → ℝ^3} (hWm : Measurab
   set f : ℝ^3 → ENNReal := (Metric.ball (0 : ℝ^3) R).indicator fun x ↦ ‖W x‖ₑ with hf
   have hX := lintegral_meridian_lt_top hWm hW hWint
   have hpt : Continuous fun p : ℝ × ℝ ↦ point p.1 p.2 0 := continuous_point_meridian
-  have hfm : Measurable f := (hWm.enorm).indicator Metric.isOpen_ball.measurableSet
+  have hfm : Measurable f := (hWm.eNorm).indicator Metric.isOpen_ball.measurableSet
   have hmeas : Measurable fun p : ℝ × ℝ ↦ ENNReal.ofReal (p.1 ^ 2 * sin p.2) *
       f (point p.1 p.2 0) := by
     refine Measurable.mul ?_ (hfm.comp hpt.measurable)
@@ -280,7 +280,7 @@ theorem ae_integrableOn_meridian {R : ℝ} {W : ℝ^3 → ℝ^3} (hWm : Measurab
     rw [HasFiniteIntegral]
     refine lt_of_le_of_lt (le_of_eq ?_) hfin
     refine setLIntegral_congr_fun measurableSet_Ioo fun θ hθ ↦ ?_
-    rw [enorm_mul, enorm_norm, Real.enorm_eq_ofReal (sin_nonneg_of_nonneg_of_le_pi hθ.1.le
+    rw [eNorm_mul, eNorm_norm, Real.eNorm_eq_ofReal (sin_nonneg_of_nonneg_of_le_pi hθ.1.le
       hθ.2.le), mul_comm]
   refine Integrable.mono' (hWr.mul_const (max C 0)) ?_ ?_
   · exact (((hWm.comp (hpt.measurable.comp measurable_prodMk_left)).inner

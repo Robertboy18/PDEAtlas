@@ -46,7 +46,7 @@ theorem exists_lipschitzOn_observed_composition (hk : (n : ℝ) < 2 * ((k : ℝ)
       ((A.le_opNorm w).trans (mul_le_mul_of_nonneg_left hw' A.opNorm_nonneg))
   rw [dist_eq_norm]
   refine (BoundedContinuousFunction.norm_le (by positivity)).mpr fun x ↦ ?_
-  simp only [BoundedContinuousFunction.sub_apply, classicalRepresentative_higherComposition]
+  simp only [sub_apply, classicalRepresentative_higherComposition]
   calc
     ‖f (A u x) - f (A v x)‖ ≤ K * ‖A u x - A v x‖ :=
       hK.dist_le_mul _ (hvalue u hu x) _ (hvalue v hv x)
@@ -56,7 +56,7 @@ theorem exists_lipschitzOn_observed_composition (hk : (n : ℝ) < 2 * ((k : ℝ)
       rw [he]
       exact ((A (u - v)).norm_coe_le_norm x).trans (A.le_opNorm (u - v))
     _ = ↑(K * ‖A‖₊) * dist u v := by
-      simp only [NNReal.coe_mul, coe_nnnorm, dist_eq_norm, mul_assoc]
+      simp only [NNReal.coe_mul, coe_nnNorm, dist_eq_norm, mul_assoc]
 
 /-- The observed composition is locally Lipschitz in the uniform norm. -/
 theorem locallyLipschitz_observed_composition (hk : (n : ℝ) < 2 * ((k : ℝ) - 1)) {f : ℝ → ℝ}

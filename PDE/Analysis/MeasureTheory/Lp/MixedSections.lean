@@ -47,8 +47,8 @@ namespace MeasureTheory
 theorem MemLp.ae_lt_top {α : Type*} [MeasurableSpace α]
     {μ : Measure α} {p : ℝ≥0∞} (hp₀ : p ≠ 0) (hptop : p ≠ ∞)
     {f : α → ℝ≥0∞} (hfin : MemLp f p μ) : ∀ᵐ x ∂μ, f x < ∞ := by
-  have hpow := lintegral_rpow_enorm_lt_top_of_eLpNorm_lt_top hp₀ hptop hfin
-  simp only [enorm_eq_self] at hpow
+  have hpow := lintegral_rpow_eNorm_lt_top_of_eLpNorm_lt_top hp₀ hptop hfin
+  simp only [eNorm_eq_self] at hpow
   have hm := hfin.aestronglyMeasurable.aemeasurable.pow_const p.toReal
   filter_upwards [ae_lt_top' hm hpow.ne] with x hx
   by_contra h
@@ -98,14 +98,14 @@ theorem exists_mixedLp_sections {α β E : Type*}
     rw [hsub, Pi.sub_apply, hx]
   have hvnorm : (fun t ↦ eLpNorm (fun x ↦ U (t, x)) p ν) =ᵐ[μ] fun t ↦ ‖v t‖ₑ := by
     filter_upwards [hvsec] with t ht
-    rw [Lp.enorm_def]
+    rw [Lp.eNorm_def]
     exact eLpNorm_congr_ae ht
-  have hv : MemLp v q μ := hfin.congr_enorm hvmeas hvnorm
+  have hv : MemLp v q μ := hfin.congr_eNorm hvmeas hvnorm
   refine ⟨hv.toLp v, ?_, ?_⟩
   · filter_upwards [hvsec, hv.coeFn_toLp] with t ht hvt
     rw [hvt]
     exact ht
-  · rw [Lp.enorm_toLp, ← eLpNorm_enorm _ hvmeas]
+  · rw [Lp.eNorm_toLp, ← eLpNorm_eNorm _ hvmeas]
     exact eLpNorm_congr_ae (EventuallyEq.symm hvnorm)
 
 end MeasureTheory

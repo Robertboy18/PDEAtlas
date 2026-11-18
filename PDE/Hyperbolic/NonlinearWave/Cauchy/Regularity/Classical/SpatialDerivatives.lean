@@ -90,7 +90,7 @@ theorem laplacian_classicalRepresentative (hk : (n : ℝ) < 2 * ((k : ℝ) - 1))
     (contDiff_classicalRepresentativeCLM hk hreg u).contDiffAt
   rw [← hc.coordinate_laplacian_eq_laplacian]
   simp only [PDE.laplacian, higherOrderLaplacianCLM, sum_apply, map_sum,
-    BoundedContinuousFunction.sum_apply]
+    sum_apply]
   refine Finset.sum_congr rfl fun i _ ↦ ?_
   exact congrFun (iteratedPartialDeriv_classicalRepresentative hk hr [i, i]
     (by simpa [Nat.add_comm] using h) u) x

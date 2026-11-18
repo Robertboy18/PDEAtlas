@@ -86,8 +86,8 @@ theorem exists_pos_norm_mollifiedExtensionSobolev_bound (μ : Mollifier n) (hp :
   · have hboundary : eLpNorm (GagliardoSpace.toLp n (1 - 1 / p) univ g)
         (ENNReal.ofReal p) volume ≤ ‖g‖ₑ := by
       have h : ‖GagliardoSpace.toLp n (1 - 1 / p) univ g‖ₑ ≤ ‖g‖ₑ :=
-        WithLp.enorm_fst_le _ g.val
-      simpa only [Lp.enorm_def, Measure.restrict_univ] using h
+        WithLp.eNorm_fst_le _ g.val
+      simpa only [Lp.eNorm_def, Measure.restrict_univ] using h
     have hbase :
         ‖coordinateCLM (baseIndex (n + 1) 1) (mollifiedExtensionSobolev μ hp g)‖ ≤
           (2 : ℝ) ^ (1 / p) * ‖g‖ := by
@@ -98,10 +98,10 @@ theorem exists_pos_norm_mollifiedExtensionSobolev_bound (μ : Mollifier n) (hp :
         (boundary_memLp g)).trans (mul_le_mul' le_rfl hboundary)
       have ht : (2 : ℝ≥0∞) ^ (1 / (ENNReal.ofReal p).toReal) * ‖g‖ₑ ≠ ∞ :=
         ENNReal.mul_ne_top
-          (ENNReal.rpow_ne_top_of_nonneg (by positivity) (by norm_num)) enorm_ne_top
+          (ENNReal.rpow_ne_top_of_nonneg (by positivity) (by norm_num)) eNorm_ne_top
       have h := ENNReal.toReal_mono ht hb
       simpa only [ENNReal.toReal_mul, ← ENNReal.toReal_rpow, ENNReal.toReal_ofNat,
-        ENNReal.toReal_ofReal hp₀.le, toReal_enorm] using h
+        ENNReal.toReal_ofReal hp₀.le, toReal_eNorm] using h
     have hrow (i : Fin (n + 1)) :
         ‖coordinateCLM (singleDerivIndex (n + 1) i)
           (mollifiedExtensionSobolev μ hp g)‖ ≤ D i * ‖g‖ := by
@@ -109,8 +109,8 @@ theorem exists_pos_norm_mollifiedExtensionSobolev_bound (μ : Mollifier n) (hp :
       change (eLpNorm _ _ (volume.restrict ℝ^(n + 1)₊)).toReal ≤ _
       rw [eLpNorm_congr_ae (mollifiedExtensionSobolev_partialDeriv_ae μ hp g i)]
       have h := ENNReal.toReal_mono
-        (ENNReal.mul_ne_top ENNReal.ofReal_ne_top enorm_ne_top) (hderiv g i).2
-      simpa only [ENNReal.toReal_mul, ENNReal.toReal_ofReal (hD i).le, toReal_enorm] using h
+        (ENNReal.mul_ne_top ENNReal.ofReal_ne_top eNorm_ne_top) (hderiv g i).2
+      simpa only [ENNReal.toReal_mul, ENNReal.toReal_ofReal (hD i).le, toReal_eNorm] using h
     calc
       ‖mollifiedExtensionSobolev μ hp g‖ ≤
           ‖coordinateCLM (baseIndex (n + 1) 1) (mollifiedExtensionSobolev μ hp g)‖ +

@@ -53,8 +53,8 @@ theorem uniformIntegrable_reaction_of_product_bound {α ι : Type*} [MeasurableS
   let C : NNReal := ⟨max B 0 + 1, by positivity⟩
   refine ⟨C, fun i ↦ ?_⟩
   have htail : AEStronglyMeasurable ({x | C ≤ ‖g i (u i x)‖₊}.indicator (fun x ↦ g i (u i x))) μ :=
-    (hmeas i).indicator₀ (nullMeasurableSet_le aemeasurable_const (hmeas i).nnnorm.aemeasurable)
-  rw [eLpNorm_one_eq_lintegral_enorm htail]
+    (hmeas i).indicator₀ (nullMeasurableSet_le aemeasurable_const (hmeas i).nnNorm.aemeasurable)
+  rw [eLpNorm_one_eq_lintegral_eNorm htail]
   have hpoint (x : α) : ‖{x | C ≤ ‖g i (u i x)‖₊}.indicator (fun x ↦ g i (u i x)) x‖ ≤
         (δ : ℝ) * ‖u i x * g i (u i x)‖ := by
     by_cases hx : C ≤ ‖g i (u i x)‖₊

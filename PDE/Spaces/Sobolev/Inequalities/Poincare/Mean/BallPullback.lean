@@ -147,7 +147,7 @@ theorem exists_ballPullback_scaling (x : ℝ^n) {r : ℝ} (hr : 0 < r)
   · rw [Lp.norm_def, eLpNorm_congr_ae hgrad]
     change (eLpNorm (r • (fun y ↦ ∇ U (ballHomeomorph x hr y)))
       p (domainMeasure n (ball 0 1))).toReal = _
-    rw [eLpNorm_const_smul, ENNReal.toReal_mul, toReal_enorm, Real.norm_of_nonneg hr.le,
+    rw [eLpNorm_const_smul, ENNReal.toReal_mul, toReal_eNorm, Real.norm_of_nonneg hr.le,
       eLpNorm_comp_ballHomeomorph x hr p, ← Lp.norm_def]
     ring
 

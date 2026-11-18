@@ -51,7 +51,7 @@ theorem tendsto_normalized_weighted_Ioo_integral
     Tendsto (fun h : ℝ ↦ h⁻¹ * ∫ r in Ioo 0 h, w (r / h) * f r)
       (𝓝[>] 0) (𝓝 ((∫ s in (0 : ℝ)..1, w s) * f 0)) := by
   have ht := (tendsto_normalized_weighted_intervalIntegral hf hw).mono_left
-    (nhdsWithin_mono (0 : ℝ) (by intro x hx; exact ne_of_gt hx))
+    (nhdsWithin_mono (0 : ℝ) (s := Ioi 0) (by intro x hx; exact ne_of_gt hx))
   apply ht.congr'
   filter_upwards [self_mem_nhdsWithin] with h hh
   rw [intervalIntegral.integral_of_le (le_of_lt hh), integral_Ioc_eq_integral_Ioo]

@@ -64,7 +64,7 @@ def ofCharacteristicFlows
   curve k strength state := flows k strength state
   curve_zero k state := (flows k).map_zero_apply state
   hasStrictFDerivAt_zero k state _hstate :=
-    (hcontDiff k state).hasStrictFDerivAt'
+    (hcontDiff k state).hasStrictFDerivAt
       (hasFDerivAt_waveStep_zero (flows k) state
         ((fields k).rightEigenvector state)
         (flows k).map_zero_apply

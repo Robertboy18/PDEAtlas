@@ -158,11 +158,11 @@ theorem abs_smoothIntervalTruncationSlope_le_one
 theorem lipschitzWith_smoothIntervalTruncation
     {ε : ℝ} (hε : 0 < ε) (a b : ℝ) :
     LipschitzWith 1 (smoothIntervalTruncation ε a b) := by
-  apply lipschitzWith_of_nnnorm_deriv_le
+  apply lipschitzWith_of_nnNorm_deriv_le
   · intro x
     exact (hasDerivAt_smoothIntervalTruncation hε a b x).differentiableAt
   · intro x
-    rw [← NNReal.coe_le_coe, coe_nnnorm, NNReal.coe_one,
+    rw [← NNReal.coe_le_coe, coe_nnNorm, NNReal.coe_one,
       Real.norm_eq_abs,
       (hasDerivAt_smoothIntervalTruncation hε a b x).deriv]
     exact abs_smoothIntervalTruncationSlope_le_one hε a b x

@@ -40,10 +40,10 @@ private theorem eLpNorm_integral_probability_le_of_slice_bound
   have hpoint : ∀ᵐ t ∂ν, (∫⁻ x, ‖f (x, t)‖ₑ ^ p.toReal ∂μ) ≤ C ^ p.toReal := by
     filter_upwards [hf.prodMk_right, hC] with t ht hCt
     have hpow := ENNReal.rpow_le_rpow hCt hpr.le
-    rwa [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hpt ht,
+    rwa [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hpt ht,
       ← ENNReal.rpow_mul, one_div, inv_mul_cancel₀ hpr.ne', ENNReal.rpow_one] at hpow
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hpt hf,
-    lintegral_prod_symm _ (hf.enorm.pow_const _)]
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hpt hf,
+    lintegral_prod_symm _ (hf.eNorm.pow_const _)]
   calc
     _ ≤ (∫⁻ _t, C ^ p.toReal ∂ν) ^ (1 / p.toReal) :=
       ENNReal.rpow_le_rpow (lintegral_mono_ae hpoint) (by positivity)
@@ -66,9 +66,9 @@ theorem eLpNorm_heightAverage_sub_le_of_bound
   let η : Measure ℝ := (ENNReal.ofReal ε)⁻¹ • volume.restrict (Ioc 0 ε)
   have hε0 : ENNReal.ofReal ε ≠ 0 := ne_of_gt (ENNReal.ofReal_pos.mpr hε)
   have : IsProbabilityMeasure η := ⟨by
-    simp [η, Measure.smul_apply, Real.volume_Ioc, ENNReal.inv_mul_cancel hε0]⟩
+    simp [η, smul_apply, Real.volume_Ioc, ENNReal.inv_mul_cancel hε0]⟩
   have hsmall : μ.prod (volume.restrict (Ioc 0 ε)) ≤ μ.prod positiveNormalMeasure :=
-    Measure.prod_mono le_rfl (Measure.restrict_mono (fun _ h ↦ h.1) le_rfl)
+    Measure.prod_mono le_rfl (Measure.restrict_mono (fun _ ↦ And.left) le_rfl)
   have hprod := hf.comp_measurePreserving measurePreserving_joinTangentialNormal_upper
   have hscaled : MemLp (f ∘ joinTangentialNormal) (ENNReal.ofReal p) (μ.prod η) := by
     rw [show μ.prod η = (ENNReal.ofReal ε)⁻¹ •

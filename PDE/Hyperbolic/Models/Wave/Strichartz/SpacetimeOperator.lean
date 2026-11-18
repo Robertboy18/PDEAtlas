@@ -64,7 +64,7 @@ theorem measurable_spacetimeNewtonMajorant {F : ℝ × ℝ^3 → ℝ≥0∞} (hF
     measurable_exteriorNewtonKernel_uncurry.comp ((continuous_abs.measurable.comp
         (measurable_fst.fst.fst.sub measurable_fst.snd)).prodMk
         (measurable_fst.fst.snd.sub measurable_snd))
-  have h := hK.enorm.mul (hF.comp (measurable_fst.snd.prodMk measurable_snd))
+  have h := hK.eNorm.mul (hF.comp (measurable_fst.snd.prodMk measurable_snd))
   exact h.lintegral_prod_right'.lintegral_prod_right'
 
 /-- At fixed output time, integral Minkowski and spatial Young give half-order time integration. -/
@@ -82,7 +82,7 @@ theorem eLpNorm_spacetimeNewtonMajorant_le {F : ℝ × ℝ^3 → ℝ≥0∞} (hF
         (measurable_fst.fst.sub measurable_snd))
   have hm : Measurable (fun z : ℝ^3 × ℝ ↦ ∫⁻ y : ℝ^3,
       ‖exteriorNewtonKernel |t - z.2| (z.1 - y)‖ₑ * F (z.2, y)) :=
-    (hK.enorm.mul (hF.comp (measurable_fst.snd.prodMk measurable_snd))).lintegral_prod_right'
+    (hK.eNorm.mul (hF.comp (measurable_fst.snd.prodMk measurable_snd))).lintegral_prod_right'
   calc
     _ ≤ ∫⁻ s : ℝ, eLpNorm
         (fun x : ℝ^3 ↦ ∫⁻ y : ℝ^3, ‖exteriorNewtonKernel |t - s| (x - y)‖ₑ * F (s, y))
@@ -98,10 +98,10 @@ theorem eLpNorm_spacetimeNewtonMajorant_le {F : ℝ × ℝ^3 → ℝ≥0∞} (hF
       have h := ENNReal.eLpNorm_lintegral_convolution_le volume
         (g := fun y ↦ F (s, y)) (p := 6) (q := 12 / 11) (r := 12)
         (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
-        (measurable_exteriorNewtonKernel |t - s|).enorm (hF.comp measurable_prodMk_left)
+        (measurable_exteriorNewtonKernel |t - s|).eNorm (hF.comp measurable_prodMk_left)
       norm_num only [ENNReal.ofReal_div_of_pos (by norm_num : (0 : ℝ) < 11),
         ENNReal.ofReal_ofNat] at h
-      rw [eLpNorm_enorm _ (measurable_exteriorNewtonKernel |t - s|).aestronglyMeasurable,
+      rw [eLpNorm_eNorm _ (measurable_exteriorNewtonKernel |t - s|).aestronglyMeasurable,
         eLpNorm_exteriorNewtonKernel hR] at h
       rw [Real.dist_eq, abs_sub_comm s t]
       simpa only [A, C, mul_assoc] using h
@@ -158,9 +158,9 @@ theorem measurable_spacetimeNewtonIntegral {F : ℝ × ℝ^3 → ℝ} (hF : Meas
 /-- The Bochner integral is bounded by its positive majorant. -/
 theorem enorm_spacetimeNewtonIntegral_le (F : ℝ × ℝ^3 → ℝ) (t : ℝ) (x : ℝ^3) :
     ‖spacetimeNewtonIntegral F t x‖ₑ ≤ spacetimeNewtonMajorant (fun z ↦ ‖F z‖ₑ) t x := by
-  apply (enorm_integral_le_lintegral_enorm _).trans
+  apply (eNorm_integral_le_lintegral_eNorm _).trans
   refine lintegral_mono fun s ↦ ?_
-  simpa only [enorm_mul] using enorm_integral_le_lintegral_enorm
+  simpa only [eNorm_mul] using eNorm_integral_le_lintegral_eNorm
     (fun y : ℝ^3 ↦ exteriorNewtonKernel |t - s| (x - y) * F (s, y))
 
 /-- The real kernel integral satisfies the dual mixed-norm estimate. -/
@@ -174,16 +174,16 @@ theorem mixed_eLpNorm_spacetimeNewtonIntegral_le {F : ℝ × ℝ^3 → ℝ} (hF 
   calc
     _ ≤ eLpNorm (fun t ↦ eLpNorm
         (spacetimeNewtonMajorant (fun z ↦ ‖F z‖ₑ) t) 12 volume) 4 volume := by
-      apply eLpNorm_mono_enorm
+      apply eLpNorm_mono_eNorm
         (hm.eLpNorm_prod_right (by norm_num) (by norm_num)).aestronglyMeasurable
       intro t
-      apply eLpNorm_mono_enorm (hm.comp measurable_prodMk_left).aestronglyMeasurable
+      apply eLpNorm_mono_eNorm (hm.comp measurable_prodMk_left).aestronglyMeasurable
       exact enorm_spacetimeNewtonIntegral_le F t
     _ ≤ _ := by
-      have h := mixed_eLpNorm_spacetimeNewtonMajorant_le hF.enorm
+      have h := mixed_eLpNorm_spacetimeNewtonMajorant_le hF.eNorm
       have heq (s : ℝ) : eLpNorm (fun y ↦ ‖F (s, y)‖ₑ) (12 / 11) volume =
           eLpNorm (fun y ↦ F (s, y)) (12 / 11) volume :=
-        eLpNorm_enorm _ (hF.comp measurable_prodMk_left).aestronglyMeasurable
+        eLpNorm_eNorm _ (hF.comp measurable_prodMk_left).aestronglyMeasurable
       simpa only [heq] using h
 
 /-- The real integral is independent of the input's product-measure representative. -/
@@ -216,10 +216,10 @@ theorem ae_integrable_spacetimeNewtonKernel {F : ℝ × ℝ^3 → ℝ} (hF : Mea
     (hFfin : MemLp (fun s ↦ eLpNorm (fun y ↦ F (s, y)) (12 / 11) volume) (4 / 3) volume) :
     ∀ᵐ t ∂volume, ∀ᵐ x ∂volume, Integrable (fun z : ℝ × ℝ^3 ↦
       exteriorNewtonKernel |t - z.1| (x - z.2) * F z) (volume.prod volume) := by
-  have hbound := mixed_eLpNorm_spacetimeNewtonMajorant_le hF.enorm
+  have hbound := mixed_eLpNorm_spacetimeNewtonMajorant_le hF.eNorm
   have hFnorm (s : ℝ) : eLpNorm (fun y ↦ ‖F (s, y)‖ₑ) (12 / 11) volume =
       eLpNorm (fun y ↦ F (s, y)) (12 / 11) volume :=
-    eLpNorm_enorm _ (hF.comp measurable_prodMk_left).aestronglyMeasurable
+    eLpNorm_eNorm _ (hF.comp measurable_prodMk_left).aestronglyMeasurable
   simp_rw [hFnorm] at hbound
   have hfin : MemLp (fun t ↦ eLpNorm
       (spacetimeNewtonMajorant (fun z ↦ ‖F z‖ₑ) t) 12 volume) 4 volume :=
@@ -234,8 +234,8 @@ theorem ae_integrable_spacetimeNewtonKernel {F : ℝ × ℝ^3 → ℝ} (hF : Mea
       ((continuous_abs.measurable.comp (measurable_const.sub measurable_fst)).prodMk
         (measurable_const.sub measurable_snd))
   refine ⟨hK.aestronglyMeasurable, ?_⟩
-  rw [hasFiniteIntegral_iff_enorm, lintegral_prod _ hK.enorm.aemeasurable]
-  simpa only [spacetimeNewtonMajorant, Function.comp_apply, enorm_mul] using hx
+  rw [hasFiniteIntegral_iff_eNorm, lintegral_prod _ hK.eNorm.aemeasurable]
+  simpa only [spacetimeNewtonMajorant, Function.comp_apply, eNorm_mul] using hx
 
 /-- Fubini identifies the iterated real operator with integration over input spacetime. -/
 theorem spacetimeNewtonIntegral_eq_integral_prod {F : ℝ × ℝ^3 → ℝ} (hF : Measurable F)

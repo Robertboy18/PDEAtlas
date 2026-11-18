@@ -244,7 +244,7 @@ theorem isCompact_closure_range_inclusionLp_of_bounds
     let _ : FiniteDimensional ℝ (trials.space n) :=
       trials.finiteDimensional n
     let _ : CompleteSpace (trials.space n) :=
-      FiniteDimensional.complete ℝ (trials.space n)
+      FiniteDimensional.completeSpace ℝ (trials.space n)
     let B : Set (Lp H 2 μ) :=
       range fun j ↦
         (trials.pivotProjection n).compLpL 2 μ

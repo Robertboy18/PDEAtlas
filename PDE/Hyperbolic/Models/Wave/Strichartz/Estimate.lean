@@ -77,17 +77,17 @@ theorem classicalWave_estimate {b : ℝ} (hb : 0 < b) (g h : 𝓢(ℝ^3, ℝ))
     have hfinit : (S : ℝ≥0∞) * 6 * (‖d‖ₑ + ‖fc‖ₑ) ≠ ∞ := by finiteness
     have hreal := ENNReal.toReal_mono hfinit h6
     simp only [toReal_eLpNorm, ENNReal.toReal_mul, ENNReal.coe_toReal,
-      ENNReal.toReal_ofNat, ENNReal.toReal_add enorm_ne_top enorm_ne_top, toReal_enorm] at hreal
+      ENNReal.toReal_ofNat, ENNReal.toReal_add eNorm_ne_top eNorm_ne_top, toReal_eNorm] at hreal
     exact hreal.trans (mul_le_mul_of_nonneg_left hdata (by positivity))
   have h4 := eLpNorm_classicalWave_le g h fc hu hU hU₂ hdu hdU hu₂ hpos hvel hrc
   have hM : MemLp (fun t ↦ eLpNorm (u t) 12 volume) 4 μ := lt_of_le_of_lt h4 ENNReal.ofReal_lt_top
   have hnorm : eLpNorm (fun t ↦ lpNorm (u t) 12 volume) 4 μ =
       eLpNorm (fun t ↦ eLpNorm (u t) 12 volume) 4 μ := by
-    apply eLpNorm_congr_enorm_ae
+    apply eLpNorm_congr_eNorm_ae
       hM.aestronglyMeasurable.aemeasurable.ennreal_toReal.aestronglyMeasurable
       hM.aestronglyMeasurable
     filter_upwards [hM.ae_lt_top (by norm_num) (by norm_num)] with t ht
-    exact (Real.enorm_toReal ht.ne).trans (enorm_eq_self _).symm
+    exact (Real.eNorm_toReal ht.ne).trans (eNorm_eq_self _).symm
   have hE : 0 ≤ energyAdjointBound := Real.sqrt_nonneg _
   have h4real : lpNorm (fun t ↦ lpNorm (u t) 12 volume) 4 μ ≤
       energyAdjointBound * B := by

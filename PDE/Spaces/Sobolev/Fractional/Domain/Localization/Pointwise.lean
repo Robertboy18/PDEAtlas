@@ -113,8 +113,8 @@ theorem norm_diffQuot_rpow {F : Type*} [NormedAddCommGroup F] [NormedSpace ℝ F
     ‖diffQuot n s u (x, y) (p := p)‖ ^ p.toReal =
       ‖u x - u y‖ ^ p.toReal / ‖x - y‖ ^ ((n : ℝ) + p.toReal * s) := by
   have h := congrArg ENNReal.toReal (enorm_diffQuot_rpow (s := s) u (x, y) hp0 hp)
-  simpa only [← ENNReal.toReal_rpow, ENNReal.toReal_div, enorm_eq_nnnorm,
-    ENNReal.coe_toReal, coe_nnnorm,
+  simpa only [← ENNReal.toReal_rpow, ENNReal.toReal_div, eNorm_eq_nnNorm,
+    ENNReal.coe_toReal, coe_nnNorm,
     ENNReal.toReal_ofReal (norm_nonneg _), mul_comm s p.toReal] using h
 
 /-- The Lipschitz bound controls small increments, and the uniform bound controls the tail. -/
@@ -193,9 +193,9 @@ theorem enorm_diffQuot_smul_rpow_le {F : Type*} [NormedAddCommGroup F] [NormedSp
   calc
     _ ≤ (‖φ x • diffQuot n s u (x, y) (p := p)‖ₑ +
           ‖diffQuot n s φ (x, y) (p := p) • u y‖ₑ) ^ p.toReal :=
-      ENNReal.rpow_le_rpow (enorm_add_le _ _) hp'
+      ENNReal.rpow_le_rpow (eNorm_add_le _ _) hp'
     _ ≤ _ := (ENNReal.add_rpow_le_two_rpow_mul_rpow_add_rpow _ _ hp').trans (by
-      simp only [enorm_smul, ENNReal.mul_rpow_of_nonneg _ _ hp']
+      simp only [eNorm_smul, ENNReal.mul_rpow_of_nonneg _ _ hp']
       calc
         _ ≤ (2 : ℝ≥0∞) ^ p.toReal *
             (ENNReal.ofReal ((M : ℝ) ^ p.toReal) *

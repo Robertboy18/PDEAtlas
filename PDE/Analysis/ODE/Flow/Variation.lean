@@ -92,9 +92,9 @@ namespace IsC1FieldOn
 /-- A field with spatial derivative bounded by `K` is `K`-Lipschitz in space. -/
 theorem lipschitzWith (hv : IsC1FieldOn v Dv a b K) {t : ℝ} (ht : t ∈ Icc a b) :
     LipschitzWith K (v t) :=
-  lipschitzWith_of_nnnorm_fderiv_le (fun x ↦ (hv.hasFDerivAt t ht x).differentiableAt)
+  lipschitzWith_of_nnNorm_fderiv_le (fun x ↦ (hv.hasFDerivAt t ht x).differentiableAt)
     fun x ↦ by
-      rw [(hv.hasFDerivAt t ht x).fderiv, ← NNReal.coe_le_coe, coe_nnnorm]
+      rw [(hv.hasFDerivAt t ht x).fderiv, ← NNReal.coe_le_coe, coe_nnNorm]
       exact hv.norm_le t ht x
 
 /-- A `C¹` field is a Lipschitz field. -/
@@ -114,7 +114,7 @@ theorem isLipschitzFieldOn_variation (hv : IsC1FieldOn v Dv a b K) {t : ℝ} (ht
     (x : E) :
     IsLipschitzFieldOn (fun r (M : E →L[ℝ] E) ↦ (Dv r (flowOn v a b r t x)).comp M) a b K := by
   refine ⟨?_, fun r hr ↦ LipschitzWith.of_dist_le_mul fun M N ↦ ?_⟩
-  · exact ((hv.continuousOn_deriv_flowOn ht x).comp continuousOn_fst fun _ hp ↦ hp.1).clm_comp
+  · exact ((hv.continuousOn_deriv_flowOn ht x).comp continuousOn_fst fun _ ↦ And.left).clm_comp
       continuousOn_snd
   · rw [dist_eq_norm, dist_eq_norm, ← ContinuousLinearMap.comp_sub]
     exact ((Dv r _).opNorm_comp_le _).trans
@@ -185,7 +185,7 @@ theorem hasFDerivAt_flowOn (hv : IsC1FieldOn v Dv a b K) {s t : ℝ} (hs : s ∈
     (Dy₀ := ContinuousLinearMap.id ℝ E) (ρ := 1) (C := Real.exp (K * (b - a))) (K := K)
     ht one_pos ?_ ?_ ?_ ?_ ?_ ?_ ?_ (hv.variationOn_self ht x) hs
   · exact (hv.continuousOn_deriv.comp (continuous_fst.prodMk continuous_snd.fst).continuousOn
-      fun q hq ↦ ⟨hq.1, mem_univ _⟩).clm_comp continuousOn_const
+      fun q hq ↦ ⟨And.left hq, mem_univ _⟩).clm_comp continuousOn_const
   · exact fun r hr z p ↦ (hv.hasFDerivAt r hr z).comp (z, p) hasFDerivAt_fst
   · intro r hr
     rw [ContinuousLinearMap.comp_assoc, ContinuousLinearMap.fst_comp_inl,

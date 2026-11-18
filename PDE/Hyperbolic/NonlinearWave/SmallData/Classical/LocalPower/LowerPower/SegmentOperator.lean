@@ -66,7 +66,7 @@ theorem segmentOperator_apply (w : Cone →ᵇ ℝ) (q : Cone) :
     segmentOperator w q = coneTime q ^ 2 *
       ∫ s : I, (1 - (s : ℝ)) * ∫ a : I, w (descend q (segmentRim s a)) := by
   simp only [segmentOperator, ContinuousLinearMap.comp_apply,
-    ContinuousLinearMap.mul_apply', BoundedContinuousFunction.mul_apply,
+    ContinuousLinearMap.mul_apply', mul_apply,
     partialIntegralCLM_apply, timeSquare, radiusWeight, mkOfCompact_apply,
     ContinuousMap.coe_mk, segmentBoundary, compContinuousCLM_apply, compContinuous_apply]
   rfl

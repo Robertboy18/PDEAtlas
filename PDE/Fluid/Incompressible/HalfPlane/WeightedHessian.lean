@@ -337,7 +337,7 @@ theorem integrableOn_hessianKernel_mul_of_le_min (hf : IsHolderVorticity α f) (
       funext hessianKernel_zero_one]
     fun_prop
   have hfm : AEStronglyMeasurable f (volume.restrict quadrant) :=
-    (hf.continuousOn.mono fun _ hy ↦ (le_of_lt hy.2 : (0 : ℝ) ≤ _)).aestronglyMeasurable
+    (hf.continuousOn.mono fun _ hy ↦ (le_of_lt (And.right hy) : (0 : ℝ) ≤ _)).aestronglyMeasurable
       measurableSet_quadrant
   exact integrableOn_of_abs_le_of_lintegral_le measurableSet_quadrant subset_rfl
     (hK.aestronglyMeasurable.mul hfm) (fun y hy ↦ abs_hessianKernel_mul_le_min hS hy)
@@ -350,7 +350,7 @@ theorem integrableOn_quarticKernel_mul_of_le_min (hf : IsHolderVorticity α f) (
   have hM := nonneg_of_abs_le_min hS
   have hK : Measurable quarticKernel := by unfold quarticKernel; fun_prop
   have hfm : AEStronglyMeasurable f (volume.restrict quadrant) :=
-    (hf.continuousOn.mono fun _ hy ↦ (le_of_lt hy.2 : (0 : ℝ) ≤ _)).aestronglyMeasurable
+    (hf.continuousOn.mono fun _ hy ↦ (le_of_lt (And.right hy) : (0 : ℝ) ≤ _)).aestronglyMeasurable
       measurableSet_quadrant
   exact integrableOn_of_abs_le_of_lintegral_le measurableSet_quadrant subset_rfl
     (hK.aestronglyMeasurable.mul hfm) (fun y hy ↦ abs_quarticKernel_mul_le_min hS hy)

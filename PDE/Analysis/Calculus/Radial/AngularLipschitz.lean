@@ -118,6 +118,6 @@ theorem lipschitzOnWith_radial_smul_normalize {A K : ℝ≥0} {R : ℝ} (hR : 0 
         (mul_nonneg A.coe_nonneg K.coe_nonneg)
       nlinarith only [h]
     _ = _ := by simp only [NNReal.coe_mul, NNReal.coe_add, NNReal.coe_ofNat,
-      coe_nnnorm, dist_eq_norm]; ring
+      coe_nnNorm, dist_eq_norm]; ring
 
 end PDE.Analysis.Radial

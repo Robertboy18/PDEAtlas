@@ -416,10 +416,10 @@ theorem exists_lipschitzOnWith_iteratedFDeriv_profileFromPolar_cutoff_rpow_mul {
       (hU.contDiffAt (hUo.mem_nhds (hsub (le_of_lt hx)))).congr_of_eventuallyEq hgerm
     exact hfx.differentiableAt_iteratedFDeriv (by exact_mod_cast Nat.lt_succ_self k)
   let K : NNReal := ⟨max C 0, le_max_right _ _⟩
-  refine ⟨K, Convex.lipschitzOnWith_of_nnnorm_hasFDerivWithin_le
+  refine ⟨K, Convex.lipschitzOnWith_of_nnNorm_hasFDerivWithin_le
     (f' := fun x ↦ fderiv ℝ (iteratedFDeriv ℝ k f) x) (fun x hx ↦
       (hdiff x hx).hasFDerivAt.hasFDerivWithinAt) (fun x hx ↦ ?_) ?_⟩
-  · rw [← NNReal.coe_le_coe, coe_nnnorm, norm_fderiv_iteratedFDeriv]
+  · rw [← NNReal.coe_le_coe, coe_nnNorm, norm_fderiv_iteratedFDeriv]
     have hs : m - ((k + 1 : ℕ) : ℝ) ≤ 0 := by push_cast; linarith
     have hle1 : (1 + ‖x‖) ^ (m - ((k + 1 : ℕ) : ℝ)) ≤ 1 :=
       Real.rpow_le_one_of_one_le_of_nonpos (by linarith [norm_nonneg x]) hs

@@ -74,7 +74,7 @@ private theorem exists_hilbert_slice_of_hkBaseBall
         (by norm_num) ENNReal.ofReal_ne_top)
     have hreal := ENNReal.toReal_mono hfinite hosc
     rw [ENNReal.toReal_mul, ← ENNReal.toReal_rpow] at hreal
-    simp only [toReal_enorm, Real.norm_eq_abs, ENNReal.toReal_ofReal (abs_nonneg _),
+    simp only [toReal_eNorm, Real.norm_eq_abs, ENNReal.toReal_ofReal (abs_nonneg _),
       ← Real.sqrt_eq_rpow, ← Lp.norm_def, norm_realHilbertTransformL2] at hreal
     exact hreal.trans (mul_le_mul_of_nonneg_right
       ((norm_realLineCoordinateCLM_le _ J).trans hJ) (Real.sqrt_nonneg _))

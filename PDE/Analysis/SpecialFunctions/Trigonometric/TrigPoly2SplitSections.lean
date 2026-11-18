@@ -7,7 +7,6 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Analysis.SpecialFunctions.Trigonometric.TrigPoly2WeightedRules
-import PDE.Analysis.SpecialFunctions.Trigonometric.TrigPoly2CosineRule
 
 /-!
 # The split rule in `β` at a fixed `θ`

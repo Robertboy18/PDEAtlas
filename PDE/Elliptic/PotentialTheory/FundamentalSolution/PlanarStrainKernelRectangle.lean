@@ -86,7 +86,7 @@ theorem setIntegral_coordinateRectangle_mul {A B : ℝ → ℝ} {x₀ x₁ y₀ 
   have hc : ContinuousOn (fun y : ℝ^2 ↦ A (y 0) * B (y 1)) (coordinateRectangle x₀ x₁ y₀ y₁) := by
     have h0 : Continuous fun y : ℝ^2 ↦ y 0 := (EuclideanSpace.proj (0 : Fin 2)).continuous
     have h1 : Continuous fun y : ℝ^2 ↦ y 1 := (EuclideanSpace.proj (1 : Fin 2)).continuous
-    exact (hA.comp h0.continuousOn fun y hy ↦ hy.1).mul (hB.comp h1.continuousOn fun y hy ↦ hy.2)
+    exact (hA.comp h0.continuousOn fun _ ↦ And.left).mul (hB.comp h1.continuousOn fun _ ↦ And.right)
   rw [setIntegral_coordinateRectangle hx hy hc]
   simp only [Matrix.cons_val_zero, Matrix.cons_val_one]
   rw [← intervalIntegral.integral_mul_const]

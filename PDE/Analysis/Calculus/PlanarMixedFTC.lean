@@ -49,7 +49,7 @@ private theorem hasCompactSupport_vertical {f : ℝ × ℝ → ℝ}
 private theorem enorm_le_lintegral_deriv {f : ℝ → ℝ}
     (hf : ContDiff ℝ 1 f) (hcompact : HasCompactSupport f) (x : ℝ) :
     ‖f x‖ₑ ≤ ∫⁻ y, ‖deriv f y‖ₑ :=
-  (HasCompactSupport.enorm_le_lintegral_Ici_deriv hf hcompact x).trans
+  (HasCompactSupport.eNorm_le_lintegral_Ici_deriv hf hcompact x).trans
     (lintegral_mono' Measure.restrict_le_self le_rfl)
 
 private theorem enorm_le_lintegral_mixed_fderiv {f : ℝ × ℝ → ℝ}
@@ -98,9 +98,9 @@ theorem norm_le_integral_norm_mixed_fderiv {f : ℝ × ℝ → ℝ}
   have hfrzInt : Integrable frz := hfrz.integrable_of_hasCompactSupport hfrzCompact
   apply (ENNReal.ofReal_le_ofReal_iff (integral_nonneg fun _ ↦ norm_nonneg _)).mp
   change ENNReal.ofReal ‖f x‖ ≤ ENNReal.ofReal (∫ p, ‖frz p‖)
-  rw [ofReal_integral_norm_eq_lintegral_enorm hfrzInt, ofReal_norm]
+  rw [ofReal_integral_norm_eq_lintegral_eNorm hfrzInt, ofReal_norm]
   change ‖f x‖ₑ ≤ ∫⁻ p, ‖frz p‖ₑ ∂(volume.prod volume)
-  rw [lintegral_prod _ hfrz.enorm.aemeasurable]
+  rw [lintegral_prod _ hfrz.eNorm.aemeasurable]
   exact enorm_le_lintegral_mixed_fderiv hf hcompact x.1 x.2
 
 end PDE.Analysis

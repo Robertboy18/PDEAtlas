@@ -97,7 +97,7 @@ theorem polynomial_weighted_memLp_and_lpNorm_le
       exact ENNReal.toReal_mono hscaled.eLpNorm_ne_top (eLpNorm_mono_ae hmeas hdom)
     change lpNorm (fun x ↦ (A * f x * H x) * √(Φ x)) 2 ν ≤
       lpNorm (K • (fun x ↦ H x * √(S x) ^ 3)) 2 ν at hn
-    simpa only [lpNorm_const_smul, coe_nnnorm, Real.norm_eq_abs, abs_of_nonneg hK] using hn
+    simpa only [lpNorm_const_smul, coe_nnNorm, Real.norm_eq_abs, abs_of_nonneg hK] using hn
   exact ⟨hsource, hnorm⟩
 
 /-- Transfer two square powers to the low factor, and pair the remaining

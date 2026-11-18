@@ -156,7 +156,8 @@ theorem neg_le_ball_bound_of_square_equation
     ((hjoint x hx s hs0).comp s ((contDiffAt_id (x := s)).prodMk contDiffAt_const)).differentiableAt
       (by norm_num)
   refine quadratic_absorption_ball_center_le hr hT (v := fun x s ↦ -u s x)
-    (hc.comp continuous_swap.continuousOn (fun q hq ↦ ⟨hq.2, hball (hbc ▸ hq.1)⟩)).neg
+    (hc.comp continuous_swap.continuousOn
+      (fun q hq ↦ ⟨And.right hq, hball (hbc ▸ And.left hq)⟩)).neg
     (fun x hx s hs ↦ (hspace x hx s hs.1).neg) (fun x hx s hs ↦ (htime x hx s hs.1).neg)
     (fun x hx s hs ↦ ?_) (fun x hx ↦ neg_nonpos.mpr (hinit x (hball hx))) ht
   unfold heatParabolicOperator

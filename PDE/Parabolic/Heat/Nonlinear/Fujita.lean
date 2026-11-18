@@ -85,7 +85,7 @@ theorem not_global_fujita_subcritical
   have him : Integrable (fun x ↦ fujitaCutoff z 1 x * g x) :=
     ((contDiff_fujitaCutoff z 1).continuous.mul hgc).integrable_of_hasCompactSupport
       (hasCompactSupport_fujitaCutoff z zero_lt_one).mul_right
-  have hm : 0 < m := integral_pos_of_integrable_nonneg_nonzero (x := z)
+  have hm : 0 < m := integral_pos_of_integrable_nonneg_ne_zero (x := z)
     ((contDiff_fujitaCutoff z 1).continuous.mul hgc) him
     (fun x ↦ mul_nonneg (fujitaCutoff_nonneg z 1 x) (hg x)) (by simpa using hz)
   have hC : 0 < ((n : ℝ) + 4) ^ 2 := sq_pos_of_pos (by positivity)

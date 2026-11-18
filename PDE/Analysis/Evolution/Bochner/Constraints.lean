@@ -71,7 +71,7 @@ theorem satisfiesBochnerConstraints_iff_compLpL_eq_zero
 
 /-- The weak-space set of Bochner trajectories satisfying every spatial
 linear constraint almost everywhere. -/
-def bochnerWeakConstraintSet {J : Type*}
+noncomputable def bochnerWeakConstraintSet {J : Type*}
     (A : J → E →L[ℝ] F) :
     Set (WeakSpace ℝ (Lp E 2 μ)) :=
   weakConstraintSet fun j ↦ (A j).compLpL 2 μ

@@ -79,7 +79,7 @@ instance instSecondCountableTopology [FiniteDimensional ℝ E] [SecondCountableT
       · exact f.iteratedFDeriv_zero_on_compl hx
       · rfl⟩
   let V : (∀ i, S i) → ∀ i, E →ᵇ (E [×i]→L[ℝ] F) := fun f i ↦ (f i).val
-  have hV : IsInducing V := IsInducing.piMap fun _ ↦ IsInducing.subtypeVal
+  have hV : IsInducing V := IsInducing.piMap fun _ ↦ IsEmbedding.subtypeVal.isInducing
   have hJ : IsInducing J := hV.of_comp_iff.mp
     (isUniformEmbedding_pi_structureMapCLM
       (E := E) (F := F) (K := K) (n := n) ℝ).isEmbedding.isInducing

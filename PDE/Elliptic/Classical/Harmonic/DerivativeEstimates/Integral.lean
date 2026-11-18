@@ -167,9 +167,9 @@ theorem IsHarmonicPDE.enorm_iteratedFDeriv_le_eLpNorm_one
         (show MemLp u 1 (volume.restrict (ball x r)) from lt_top_iff_ne_top.mpr htop)
     have hnorm : ENNReal.ofReal (∫ y in ball x r, |u y|) =
         eLpNorm u 1 (volume.restrict (ball x r)) := by
-      rw [eLpNorm_one_eq_lintegral_enorm hint.aestronglyMeasurable]
+      rw [eLpNorm_one_eq_lintegral_eNorm hint.aestronglyMeasurable]
       simpa only [Real.norm_eq_abs] using
-        ofReal_integral_norm_eq_lintegral_enorm hint
+        ofReal_integral_norm_eq_lintegral_eNorm hint
     rw [← hnorm, ← ENNReal.ofReal_mul hC.le]
     exact ENNReal.ofReal_le_ofReal
       (hu.norm_iteratedFDeriv_le_integral_abs hr hball hint)

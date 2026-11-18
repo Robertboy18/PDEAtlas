@@ -49,7 +49,7 @@ theorem tendsto_symmetric_increment_div_rpow {d : ℝ → ℝ} {a α : ℝ}
     have hc := hd.comp_of_eq (0 : ℝ) (hasDerivAt_neg (0 : ℝ)) (by simp)
     rw [mul_neg_one] at hc
     convert hc using 1
-    all_goals (funext h; rfl)
+    funext h; rfl
   have hp : Tendsto (fun h : ℝ ↦ (d h - d 0) / h) (𝓝[>] 0) (𝓝 a) := by
     simpa only [zero_add, smul_eq_mul, div_eq_inv_mul] using hd.tendsto_slope_zero_right
   have hn : Tendsto (fun h : ℝ ↦ (d (-h) - d 0) / h) (𝓝[>] 0) (𝓝 (-a)) := by
@@ -76,7 +76,7 @@ theorem tendsto_symmetric_abs_rpow_mul_increment {u v : ℝ → ℝ} {a α : ℝ
       have hc := hu.comp_of_eq (0 : ℝ) (hasDerivAt_neg (0 : ℝ)) (by simp)
       rw [mul_neg_one] at hc
       convert hc using 1
-      all_goals (funext h; rfl)
+      funext h; rfl
     have hp := (tendsto_abs_rpow_div_of_zero hu hu₀ hα.le).mul
       (hv.continuousAt.tendsto.mono_left nhdsWithin_le_nhds)
     have hn := (tendsto_abs_rpow_div_of_zero hm (by simpa using hu₀) hα.le).mul
@@ -118,7 +118,7 @@ theorem tendsto_symmetric_abs_rpow_mul_increment_of_zero {u v : ℝ → ℝ} {a 
     have hc := hu.comp_of_eq (0 : ℝ) (hasDerivAt_neg (0 : ℝ)) (by simp)
     rw [mul_neg_one] at hc
     convert hc using 1
-    all_goals (funext h; rfl)
+    funext h; rfl
   have hp := (tendsto_abs_rpow_div_of_zero hu hu₀ hα.le).mul
     (hv.tendsto.mono_left nhdsWithin_le_nhds)
   have hn := (tendsto_abs_rpow_div_of_zero hm (by simpa using hu₀) hα.le).mul ((hv.comp_of_eq

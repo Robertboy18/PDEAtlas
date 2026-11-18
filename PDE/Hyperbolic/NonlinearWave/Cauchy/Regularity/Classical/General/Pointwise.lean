@@ -33,7 +33,7 @@ theorem classicalRepresentative_higherSmoothAcceleration (hk : (n : ℝ) < 2 * (
     (q : W^{k + 2,2}(ℝ^n)) (x : ℝ^n) :
     classicalRepresentativeCLM hk (higherSmoothAcceleration hk hs hf0 q) x = Δ
       (classicalRepresentativeCLM hq q : ℝ^n → ℝ) x - f (classicalRepresentativeCLM hq q x) := by
-  rw [higherSmoothAcceleration, map_sub, BoundedContinuousFunction.sub_apply,
+  rw [higherSmoothAcceleration, map_sub, sub_apply,
     classicalRepresentative_higherComposition, classicalRepresentativeCLM_lowerOrderCLM hk hq,
     laplacian_classicalRepresentative hq hk le_rfl]
 

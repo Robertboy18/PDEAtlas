@@ -83,7 +83,7 @@ theorem exists_oscillation_contraction_on_half_ball
       have heq : {x | wkpBaseCoordinateCLM v x ≤ 0} =ᵐ[μ] {x | 0 ≤ wkpBaseCoordinateCLM u x} := by
         filter_upwards [hrep.filter_mono (ae_mono hμν)] with x hx
         rw [hx]
-        exact propext neg_nonpos
+        exact neg_nonpos
       rw [measureReal_congr heq]
       linarith [lt_of_not_ge hlow]
     have hd := hdrop a haΛ ha v (hu.smul_sub_constant (-1) 0) hvupper hvlow

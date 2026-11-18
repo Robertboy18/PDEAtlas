@@ -96,7 +96,7 @@ theorem lipschitzOnWith_descendingField {I : H → ℝ} (hI : Differentiable ℝ
         (‖(ε - δ)⁻¹‖ * (‖∇ I 0‖ + (K : ℝ) * R)) * ‖x - y‖ :=
       add_le_add (hN.norm_sub_le hx hy) (hρ.norm_sub_le hx hy)
     _ = _ := by simp only [NNReal.coe_add, NNReal.coe_mul, NNReal.coe_ofNat,
-      coe_nnnorm, add_mul]
+      coe_nnNorm, add_mul]
 
 /-- Raw Lipschitz bounds for the gradient on balls pass to the bounded cutoff field. -/
 theorem descendingField_lipschitzOn_balls {I : H → ℝ} (hI : Differentiable ℝ I)

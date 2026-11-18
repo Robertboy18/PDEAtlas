@@ -187,7 +187,8 @@ theorem sublinearBound_le_of_le_rate {c : ℝ → ℝ} {A δ c₀ y₀ T t : ℝ
   have hint : ∀ s ∈ Icc 0 t, c₀ * s ≤ ∫ r in (0)..s, c r := by
     intro s hs
     have hcs : IntervalIntegrable c MeasureTheory.volume 0 s :=
-      (hc.mono fun r hr ↦ hsub r ⟨hr.1, hr.2.trans hs.2⟩).intervalIntegrable_of_Icc hs.1
+      (hc.mono fun r (hr : r ∈ Icc 0 s) ↦
+        hsub r ⟨hr.1, hr.2.trans hs.2⟩).intervalIntegrable_of_Icc hs.1
     calc c₀ * s = ∫ _ in (0)..s, c₀ := by simp [mul_comm]
       _ ≤ ∫ r in (0)..s, c r :=
         intervalIntegral.integral_mono_on hs.1 intervalIntegrable_const hcs fun r hr ↦

@@ -49,7 +49,7 @@ theorem exists_tsupport_inward_translate_subset
     isClosed_le (hg.comp A.continuous.fst) A.continuous.snd
   have hclosure : ∀ x ∈ P ∩ closure Ω, g (A x).1 ≤ (A x).2 := by
     intro x hx
-    exact closure_minimal (fun y hy ↦ ((hside y hy.1).mp hy.2).le)
+    exact closure_minimal (s := P ∩ Ω) (fun y hy ↦ ((hside y hy.1).mp hy.2).le)
       hclosed (hP.inter_closure hx)
   refine ⟨r / (‖v‖ + 1), div_pos hr (by positivity), ?_⟩
   intro t ht y hy

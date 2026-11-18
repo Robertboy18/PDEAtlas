@@ -140,6 +140,6 @@ theorem HasC1Boundary.exists_inward_ball {Ω : Set (ℝ^n)}
       ∃ v : ℝ^n, ∃ δ > 0, ∀ ε ∈ Ioo 0 δ, ∀ z ∈ V ∩ Ω,
         closedBall (z + ε • v) ε ⊆ Ω := by
   obtain ⟨f, hf, _, hdf, hside⟩ := hΩ x hx
-  exact exists_inward_ball_of_hasStrictFDerivAt (hf.hasStrictFDerivAt one_ne_zero) hdf hside
+  exact exists_inward_ball_of_hasStrictFDerivAt (hf.hasStrictFDerivAt_fderiv one_ne_zero) hdf hside
 
 end SobolevSpace.Boundary

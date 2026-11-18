@@ -109,9 +109,9 @@ noncomputable def spacetimeNewtonOperator :
     spacetimeNewtonBound.toReal fun u ↦ by
       change ‖spacetimeNewtonLp u‖ ≤ spacetimeNewtonBound.toReal * ‖u‖
       have h := ENNReal.toReal_mono
-        (ENNReal.mul_ne_top spacetimeNewtonBound_lt_top.ne enorm_ne_top)
+        (ENNReal.mul_ne_top spacetimeNewtonBound_lt_top.ne eNorm_ne_top)
         (enorm_spacetimeNewtonLp_le u)
-      simpa only [ENNReal.toReal_mul, toReal_enorm] using h
+      simpa only [ENNReal.toReal_mul, toReal_eNorm] using h
 
 /-- The quotient-space operator is represented by the iterated kernel integral. -/
 theorem spacetimeNewtonOperator_section :

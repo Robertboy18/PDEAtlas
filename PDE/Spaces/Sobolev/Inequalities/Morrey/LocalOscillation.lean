@@ -134,7 +134,7 @@ theorem exists_oscillation_bound_ball
     rw [Lp.norm_def, eLpNorm_congr_ae hgrad]
     change (eLpNorm (r • (fun y ↦ ∇ U (e y)))
       p (domainMeasure n (ball 0 1))).toReal = _
-    rw [eLpNorm_const_smul, ENNReal.toReal_mul, toReal_enorm, Real.norm_of_nonneg hr.le,
+    rw [eLpNorm_const_smul, ENNReal.toReal_mul, toReal_eNorm, Real.norm_of_nonneg hr.le,
       MeanScaling.eLpNorm_comp_ballHomeomorph x hr p, ← Lp.norm_def]
     cas
   have ha' : e.symm a ∈ ball (0 : ℝ^n) 1 := by

@@ -34,9 +34,9 @@ theorem lipschitzOnWith_of_nnnorm_gradient_le {I : H → ℝ} {s : Set H} {K : N
     (hI : ∀ x ∈ s, DifferentiableAt ℝ I x)
     (hbound : ∀ x ∈ s, ‖∇ I x‖₊ ≤ K) (hs : Convex ℝ s) :
     LipschitzOnWith K I s := by
-  apply hs.lipschitzOnWith_of_nnnorm_fderiv_le hI
+  apply hs.lipschitzOnWith_of_nnNorm_fderiv_le hI
   intro x hx
-  simpa only [gradient, LinearIsometryEquiv.nnnorm_map] using hbound x hx
+  simpa only [gradient, LinearIsometryEquiv.nnNorm_map] using hbound x hx
 
 /-- A Lipschitz gradient on a ball gives a concrete energy Lipschitz constant on
 the same ball. The value of the gradient at the center is the only additional term. -/

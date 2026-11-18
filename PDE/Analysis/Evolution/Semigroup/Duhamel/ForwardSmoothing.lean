@@ -196,7 +196,7 @@ theorem integral_rpow_neg_one_half_mul_exp_le {t ω : ℝ} (ht : 0 ≤ t) (hω :
   apply setIntegral_mono_set (integrableOn_smoothingWeight (by norm_num) hω)
   · filter_upwards [ae_restrict_mem measurableSet_Ioi] with r hr
     exact mul_nonneg (Real.rpow_nonneg (le_of_lt hr) _) (Real.exp_pos _).le
-  · exact Ioc_subset_Ioi_self.eventuallyLE
+  · exact Ioc_subset_Ioi_self.eventuallySubset
 
 /-- The weighted convolution of two square-root singularities is uniformly small
 for a large exponential weight. -/
@@ -272,7 +272,7 @@ theorem continuousOn_forwardIntegrand
     (hfc : ContinuousOn f (Ioi 0)) (t : ℝ) :
     ContinuousOn (fun s ↦ K (t - s) (f s)) (Ioo 0 t) := by
   refine hKc.comp ((continuousOn_const.sub continuousOn_id).prodMk
-    (hfc.mono fun s hs ↦ hs.1)) ?_
+    (hfc.mono fun _ ↦ And.left)) ?_
   intro s hs
   exact ⟨sub_pos.mpr hs.2, mem_univ _⟩
 
@@ -317,7 +317,7 @@ theorem intervalIntegrable_forwardIntegrand_of_le {T : ℝ}
     exact IntervalIntegrable.refl
   have hcont : ContinuousOn (fun s ↦ K (t - s) (f s)) (Ioo 0 t) := by
     refine hKc.comp ((continuousOn_const.sub continuousOn_id).prodMk
-      (hfc.mono fun s hs ↦ ⟨hs.1, hs.2.le.trans htT⟩)) ?_
+      (hfc.mono fun s (hs : s ∈ Ioo 0 t) ↦ ⟨hs.1, hs.2.le.trans htT⟩)) ?_
     intro s hs
     exact ⟨sub_pos.mpr hs.2, mem_univ _⟩
   exact intervalIntegrable_of_continuousOn_Ioo ht hcont
@@ -468,7 +468,7 @@ theorem continuousOn_forwardDuhamel
       rw [uIoc_of_le zero_le_one, ← Measure.restrict_congr_set Ioo_ae_eq_Ioc]
       exact ContinuousOn.aestronglyMeasurable (hKc.comp ((continuousOn_const.sub
         (continuousOn_const.mul continuousOn_id)).prodMk (hfc.comp (continuousOn_const.mul
-          continuousOn_id) fun σ hσ ↦ mul_pos ht hσ.1)) fun σ hσ ↦
+          continuousOn_id) fun σ hσ ↦ mul_pos ht (And.left hσ))) fun σ hσ ↦
         ⟨(by nlinarith [hσ.2] : 0 < t - t * σ), mem_univ _⟩) measurableSet_Ioo
     · filter_upwards [Ioo_mem_nhds (half_lt_self ht₀') (by linarith : t₀ < 2 * t₀)] with t ht
       filter_upwards [Measure.ae_ne volume 1] with σ hσ1 hσ
@@ -561,7 +561,7 @@ theorem intervalIntegral_triangle_swap {G : ℝ → ℝ → E} {a b : ℝ}
       setIntegral_indicator measurableSet_Ici]
     apply setIntegral_congr_set
     rcases eq_or_lt_of_le hr.1 with rfl | h0
-    · rw [inter_eq_left.2 fun x hx ↦ hx.1.le]
+    · rw [inter_eq_left.2 fun x hx ↦ (And.left hx).le]
     · rw [show Ioc a b ∩ Ici r = Icc r b from
         Set.ext fun x ↦ ⟨fun hx ↦ ⟨hx.2, hx.1.2⟩, fun hx ↦ ⟨⟨h0.trans_le hx.1, hx.2⟩, hx.1⟩⟩]
       exact Ioc_ae_eq_Icc.symm
@@ -616,7 +616,7 @@ theorem forwardDecode_add (ω : ℝ) (w₁ w₂ : Ioi (0 : ℝ) →ᵇ E) :
     forwardDecode ω (w₁ + w₂) = forwardDecode ω w₁ + forwardDecode ω w₂ := by
   funext s
   by_cases hs : 0 < s
-  · simp only [forwardDecode_of_pos _ _ hs, Pi.add_apply, BoundedContinuousFunction.coe_add,
+  · simp only [forwardDecode_of_pos _ _ hs, Pi.add_apply, FunLike.coe_add,
       smul_add]
   · simp only [forwardDecode_of_nonpos _ _ (not_lt.mp hs), Pi.add_apply, add_zero]
 
@@ -624,7 +624,7 @@ theorem forwardDecode_smul (ω c : ℝ) (w : Ioi (0 : ℝ) →ᵇ E) :
     forwardDecode ω (c • w) = c • forwardDecode ω w := by
   funext s
   by_cases hs : 0 < s
-  · simp only [forwardDecode_of_pos _ _ hs, Pi.smul_apply, BoundedContinuousFunction.coe_smul,
+  · simp only [forwardDecode_of_pos _ _ hs, Pi.smul_apply, FunLike.coe_smul,
       smul_comm c]
   · simp only [forwardDecode_of_nonpos _ _ (not_lt.mp hs), Pi.smul_apply, smul_zero]
 
@@ -886,14 +886,14 @@ theorem eq_zero_of_add_forwardDuhamel_eq_zero
     have hint : forwardDuhamel K (forwardDecode ω' w) τ = forwardDuhamel K v τ :=
       intervalIntegral.integral_congr_ae (.of_forall fun r hr ↦ by
         rw [hdec r (uIoc_of_le hτ.le ▸ hr : r ∈ Ioc 0 (τ : ℝ)).1])
-    rw [BoundedContinuousFunction.add_apply, hV_def, forwardSmoothingOperator_apply, hint,
-      hw_apply, ← smul_add, hv τ hτ, smul_zero, BoundedContinuousFunction.coe_zero, Pi.zero_apply]
+    rw [add_apply, hV_def, forwardSmoothingOperator_apply, hint,
+      hw_apply, ← smul_add, hv τ hτ, smul_zero, FunLike.coe_zero, Pi.zero_apply]
   have hw0 : w = 0 := by
     have hle : ‖w‖ ≤ 1 / 2 * ‖w‖ := ((congrArg norm (eq_neg_of_add_eq_zero_left hw)).trans
       (norm_neg _)).trans_le (V.le_of_opNorm_le hV w)
     exact norm_le_zero_iff.mp (by linarith [norm_nonneg w])
   have h : (Real.sqrt t * Real.exp (-(ω' * t))) • v t = 0 := by
-    simpa only [hw0, BoundedContinuousFunction.coe_zero, Pi.zero_apply] using
+    simpa only [hw0, FunLike.coe_zero, Pi.zero_apply] using
       (hw_apply ⟨t, ht⟩).symm
   calc
     v t = (t ^ (-(1 / 2 : ℝ)) * Real.exp (ω' * t)) •

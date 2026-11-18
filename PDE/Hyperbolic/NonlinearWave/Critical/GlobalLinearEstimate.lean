@@ -108,8 +108,8 @@ private theorem lpNorm_partialDeriv_le_of_forward_support {u : ℝ^4 → ℝ} {T
   have hfinit : (S : ℝ≥0∞) * 6 * (‖d‖ₑ + ‖f‖ₑ) ≠ ⊤ := by finiteness
   have hreal := ENNReal.toReal_mono hfinit h6
   simp only [toReal_eLpNorm, ENNReal.toReal_mul, ENNReal.coe_toReal,
-    ENNReal.toReal_ofNat, ENNReal.toReal_add enorm_ne_top enorm_ne_top,
-    toReal_enorm, sub_add_cancel] at hreal
+    ENNReal.toReal_ofNat, ENNReal.toReal_add eNorm_ne_top eNorm_ne_top,
+    toReal_eNorm, sub_add_cancel] at hreal
   have hpre : (fun q : ℝ ↦ q + s) ⁻¹' Icc s t = Icc 0 (t - s) := by
     ext q
     simp only [mem_preimage, mem_Icc]

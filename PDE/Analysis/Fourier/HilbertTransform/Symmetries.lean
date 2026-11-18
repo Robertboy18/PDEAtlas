@@ -30,6 +30,7 @@ noncomputable section
 theorem integrableOn_hilbertCutoff_neg {g : ℝ → ℝ} {ε : ℝ}
     (hg : IntegrableOn g {t : ℝ | ε < |t|}) :
     IntegrableOn (fun t ↦ g (-t)) {t : ℝ | ε < |t|} := by
+  open scoped Pointwise in
   have hs : -{t : ℝ | ε < |t|} = {t : ℝ | ε < |t|} := by
     ext t
     simp

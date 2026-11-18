@@ -41,15 +41,15 @@ theorem tendsto_eLpNorm_zero_of_dominated_convergence
   have hr : 0 < p.toReal := ENNReal.toReal_pos hp0 hp
   have hint := tendsto_lintegral_filter_of_dominated_convergence'
     (f := fun _ : α ↦ (0 : ℝ≥0∞)) bound
-    (hmeas.mono fun i hi ↦ hi.enorm.pow_const p.toReal) hbound hfinite
+    (hmeas.mono fun i hi ↦ hi.eNorm.pow_const p.toReal) hbound hfinite
     (hzero.mono fun x hx ↦ by
-      simpa only [enorm_eq_nnnorm, nnnorm_zero, ENNReal.coe_zero,
+      simpa only [eNorm_eq_nnNorm, nnNorm_zero, ENNReal.coe_zero,
         ENNReal.zero_rpow_of_pos hr] using
-        hx.enorm.ennrpow_const p.toReal)
+        hx.eNorm.ennrpow_const p.toReal)
   have hroot := hint.ennrpow_const p.toReal⁻¹
   simp only [lintegral_zero, ENNReal.zero_rpow_of_pos (inv_pos.mpr hr)] at hroot
   apply hroot.congr'
   filter_upwards [hmeas] with i hi
-  simpa only [one_div] using (eLpNorm_eq_lintegral_rpow_enorm_toReal hp0 hp hi).symm
+  simpa only [one_div] using (eLpNorm_eq_lintegral_rpow_eNorm_toReal hp0 hp hi).symm
 
 end MeasureTheory

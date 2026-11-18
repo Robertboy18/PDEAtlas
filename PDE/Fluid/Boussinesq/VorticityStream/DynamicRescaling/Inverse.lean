@@ -488,8 +488,8 @@ theorem iSup_reconstructedFields_vorticity (data : DynamicRescalingData)
     ⨆ y ∈ upperHalfPlane, ‖(reconstructedFields data R).vorticity y t‖ₑ =
       ENNReal.ofReal (data.vorticityScale (data.rescaledTime t))⁻¹ *
         ⨆ x ∈ upperHalfPlane, ‖R.vorticity x (data.rescaledTime t)‖ₑ := by
-  simp only [reconstructedFields, enorm_mul]
-  rw [Real.enorm_eq_ofReal (inv_pos.2 hA).le, ENNReal.mul_iSup]
+  simp only [reconstructedFields, eNorm_mul]
+  rw [Real.eNorm_eq_ofReal (inv_pos.2 hA).le, ENNReal.mul_iSup]
   simp_rw [ENNReal.mul_iSup]
   exact iSup_upperHalfPlane_smul
     (fun x ↦ ENNReal.ofReal (data.vorticityScale (data.rescaledTime t))⁻¹ *

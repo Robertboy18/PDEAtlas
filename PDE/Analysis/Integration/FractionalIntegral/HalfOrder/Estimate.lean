@@ -243,11 +243,11 @@ theorem eLpNorm_fractionalIntegralHalf_le {f : ℝ → ℝ≥0∞} (hf : Measura
     eLpNorm (fractionalIntegralHalf f) 4 volume ≤
       ((2 * (2 : ℝ≥0∞) ^ (1 / 4 : ℝ) + 2) ^ (4 : ℝ) *
         ((2 : ℝ≥0∞) ^ (4 / 3 : ℝ) * 16)) ^ (1 / 4 : ℝ) * eLpNorm f (4 / 3) volume := by
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (by norm_num) (by norm_num)
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal (by norm_num) (by norm_num)
       (measurable_fractionalIntegralHalf hf).aestronglyMeasurable,
-    eLpNorm_eq_lintegral_rpow_enorm_toReal (by norm_num)
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal (by norm_num)
       (ENNReal.div_ne_top (by norm_num) (by norm_num)) hf.aestronglyMeasurable]
-  norm_num only [ENNReal.toReal_ofNat, ENNReal.toReal_div, enorm_eq_self]
+  norm_num only [ENNReal.toReal_ofNat, ENNReal.toReal_div, eNorm_eq_self]
   have h := ENNReal.rpow_le_rpow (lintegral_fractionalIntegralHalf_rpow_four_le hf)
     (by norm_num : (0 : ℝ) ≤ 1 / 4)
   simpa only [ENNReal.mul_rpow_of_nonneg _ _ (by norm_num : (0 : ℝ) ≤ 1 / 4),
@@ -267,11 +267,11 @@ theorem lintegral_fractionalIntegralHalf_mul_le {f g : ℝ → ℝ≥0∞}
     (measurable_fractionalIntegralHalf hf).aemeasurable hg.aemeasurable
   have hnorm : (∫⁻ x, fractionalIntegralHalf f x * g x) ≤
       eLpNorm (fractionalIntegralHalf f) 4 volume * eLpNorm g (4 / 3) volume := by
-    rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (by norm_num) (by norm_num)
+    rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal (by norm_num) (by norm_num)
         (measurable_fractionalIntegralHalf hf).aestronglyMeasurable,
-      eLpNorm_eq_lintegral_rpow_enorm_toReal (by norm_num)
+      eLpNorm_eq_lintegral_rpow_eNorm_toReal (by norm_num)
         (ENNReal.div_ne_top (by norm_num) (by norm_num)) hg.aestronglyMeasurable]
-    norm_num only [ENNReal.toReal_ofNat, ENNReal.toReal_div, enorm_eq_self]
+    norm_num only [ENNReal.toReal_ofNat, ENNReal.toReal_div, eNorm_eq_self]
     simpa only [Pi.mul_apply, one_div_div] using h
   apply hnorm.trans
   gcongr 1

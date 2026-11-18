@@ -81,7 +81,7 @@ theorem norm_equal_rate_transport_le_endpoint_envelope {g u : ℝ → ℝ} {a c 
       sq, mul_assoc, mul_comm x] using hb
   have hrightG : ‖g x‖ ≤ M * (L - x) := by
     have hb := (convex_Icc x (L : ℝ)).norm_image_sub_le_of_norm_deriv_le (fun y _ ↦ hgd y)
-      (fun y hy ↦ (hbound y ⟨hx.1.trans hy.1, hy.2⟩).1)
+      (fun y hy ↦ (hbound y ⟨hx.1.trans (And.left hy), And.right hy⟩).1)
       (left_mem_Icc.mpr hx.2) (right_mem_Icc.mpr hx.2)
     simpa only [hgL, zero_sub, norm_neg, Real.norm_eq_abs,
       abs_of_nonneg (sub_nonneg.mpr hx.2)] using hb

@@ -76,7 +76,7 @@ theorem iteratedFDeriv_eq_on_of_normal_data_contDiffOn
   have hvjets {y : ℝ^n} (hy : y ∈ s) : jetLT ℝ k v y = jetLT ℝ k V y :=
     funext fun i ↦ hvjet i hy
   have hsame := iteratedFDeriv_eq_on_of_normal_data d a b
-    (fun α y hy ↦ ha α y hy.1) (fun y hy ↦ hb y hy.1)
+    (fun α y hy ↦ ha α y (And.left hy)) (fun y hy ↦ hb y (And.left hy))
     (hΓ.inter_open hopen) e (fun y hy ↦ he y hy.1)
     (fun i hi hik y hy ↦ hdetect i hi hik y hy.1) hU hV
     (fun y hy ↦ ((hs hy.2).1.symm.trans (hvalue hy.1)).trans (hs hy.2).2)

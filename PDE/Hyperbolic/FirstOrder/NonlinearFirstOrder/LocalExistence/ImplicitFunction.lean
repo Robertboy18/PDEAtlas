@@ -191,7 +191,7 @@ theorem exists_local_inverse_coords_of_hasFDerivAt_equiv {xmap : (ℝ^k × ℝ) 
         s (xmap (y0, s0)) = s0 := by
   have hinv := hx.to_localInverse hx' one_ne_zero
   obtain ⟨V, hsub, hV, hxV⟩ :=
-    _root_.mem_nhds_iff.mp (hx.hasStrictFDerivAt' hx' one_ne_zero).eventually_right_inverse
+    _root_.mem_nhds_iff.mp (hx.hasStrictFDerivAt hx' one_ne_zero).eventually_right_inverse
   have h0 := hx.localInverse_apply_image hx' one_ne_zero
   exact ⟨V, hV, hxV, fun x ↦ (hx.localInverse hx' one_ne_zero x).1,
     fun x ↦ (hx.localInverse hx' one_ne_zero x).2, contDiffAt_fst.comp _ hinv,

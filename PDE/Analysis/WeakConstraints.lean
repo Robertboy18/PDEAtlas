@@ -75,7 +75,7 @@ theorem tendsto_weak_map
 
 /-- The weak-space set cut out by an arbitrary family of continuous linear
 constraints. -/
-def weakConstraintSet {J : Type*} (A : J → E →L[ℝ] F) :
+noncomputable def weakConstraintSet {J : Type*} (A : J → E →L[ℝ] F) :
     Set (WeakSpace ℝ E) :=
   ⋂ j, ((WeakSpace.map (A j)).ker : Set (WeakSpace ℝ E))
 

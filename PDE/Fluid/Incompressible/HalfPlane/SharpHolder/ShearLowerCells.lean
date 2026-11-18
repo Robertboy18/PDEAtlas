@@ -67,7 +67,7 @@ def shearLowerDensity (ℓ u p : ℝ) : ℝ≥0∞ :=
 theorem measurable_shearLowerIntegrand :
     Measurable fun q : ℝ × ℝ ↦
       ‖shearDifference q.1 q.2‖ₑ * ENNReal.ofReal (q.2 ^ (1 / 2 : ℝ)) :=
-  measurable_shearDifference.enorm.mul (measurable_snd.pow_const _).ennreal_ofReal
+  measurable_shearDifference.eNorm.mul (measurable_snd.pow_const _).ennreal_ofReal
 
 /-! ### Bounds over a column -/
 

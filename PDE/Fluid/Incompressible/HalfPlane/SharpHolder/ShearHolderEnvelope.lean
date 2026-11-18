@@ -148,14 +148,14 @@ theorem shearCost_le_lintegral_shearColumnDensity {B A p : ℝ} (hB : 4 ≤ B) (
             nlinarith [ht.1]
           refine mul_le_mul' ?_ (ENNReal.ofReal_le_ofReal (Real.rpow_le_rpow (abs_nonneg _) ?_
             (by norm_num)))
-          · rw [Real.enorm_eq_ofReal_abs, Real.enorm_eq_ofReal_abs]
+          · rw [Real.eNorm_eq_ofReal_abs, Real.eNorm_eq_ofReal_abs]
             refine ENNReal.ofReal_le_ofReal ?_
             rw [abs_of_nonneg (by linarith), abs_of_nonneg (by linarith)]
             exact hΔ
           · rw [abs_of_nonneg (by linarith), abs_of_nonneg (by linarith)]
             linarith
       _ ≤ _ := lintegral_mono_set (Ioc_subset_Ioc_left ha.le)
-  · simp only [shearCost, localShearDifference_of_gt h₂, enorm_zero, zero_mul, lintegral_const,
+  · simp only [shearCost, localShearDifference_of_gt h₂, eNorm_zero, zero_mul, lintegral_const,
       zero_le]
 
 /-- `S_up(B, A) ≤ U(A)` for `A ≤ B`. -/
@@ -278,8 +278,8 @@ theorem lintegral_enorm_localShearDifference_le {B t : ℝ} (hB : 1 ≤ B) (ht :
     rcases le_total 0 x with h | h
     · rw [Real.norm_eq_abs, abs_of_nonneg h, max_eq_left h]; ring
     · rw [Real.norm_eq_abs, abs_of_nonpos h, max_eq_right h]; ring
-  rw [← ofReal_integral_norm_eq_lintegral_enorm hfB.integrableOn,
-    ← ofReal_integral_norm_eq_lintegral_enorm hf.integrableOn]
+  rw [← ofReal_integral_norm_eq_lintegral_eNorm hfB.integrableOn,
+    ← ofReal_integral_norm_eq_lintegral_eNorm hf.integrableOn]
   refine ENNReal.ofReal_le_ofReal ?_
   simp only [habs]
   rw [integral_sub (hfB.pos_part.integrableOn.const_mul 2) hfB.integrableOn,
@@ -294,7 +294,7 @@ theorem shearOuterCost_le_envelope {B h : ℝ} (hB : 4 ≤ B) (hh : 0 < h) :
     shearOuterCost B h ≤ ENNReal.ofReal (2 * (2 * h) ^ (1 / 2 : ℝ)) * shearOuterMass h := by
   have hswap := lintegral_lintegral_swap (μ := volume.restrict (Ioi (0 : ℝ)))
     (ν := volume.restrict (Ioc h B)) (f := fun p t ↦ ‖localShearDifference B p t‖ₑ)
-    (measurable_localShearDifference B).enorm.aemeasurable
+    (measurable_localShearDifference B).eNorm.aemeasurable
   rw [shearOuterCost, shearOuterMass, hswap, ENNReal.ofReal_mul (by norm_num),
     ENNReal.ofReal_ofNat]
   gcongr _ * ?_

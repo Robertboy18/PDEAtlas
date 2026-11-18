@@ -144,7 +144,7 @@ theorem integral_div_sub_sq_eq_Ioo {f : ℝ → ℝ} {K : ℝ≥0} {L : ℝ}
     rw [hodd x, show -x - L = -(x + L) by cas, neg_div_neg_eq]
   simp_rw [heq]
   apply setIntegral_eq_of_subset_of_forall_sdiff_eq_zero measurableSet_Ioi
-    (fun _ hx ↦ hx.1)
+    (fun _ ↦ And.left)
   intro x hx
   simp only [hsupport x (not_lt.mp fun hlt ↦ hx.2 ⟨hx.1, hlt⟩), zero_div,
     zero_pow (by decide : 2 ≠ 0), add_zero]
@@ -183,7 +183,7 @@ theorem integral_right_divided_difference_sq_le {f u : ℝ → ℝ} {K : ℝ≥0
     apply setIntegral_mono_set
       (hq.integrable_sq.add hr.integrable_sq).integrableOn
       (Eventually.of_forall fun x ↦ add_nonneg (sq_nonneg _) (sq_nonneg _))
-      (Eventually.of_forall fun _ hx ↦ hx.1)
+      (Eventually.of_forall fun _ ↦ And.left)
   have hvint : IntegrableOn v (Ioo 0 L) :=
     ((IsHilbertPair.of_lipschitzWith_compactSupport hf hc).memLp_right.restrict _).integrable
       (by norm_num) |>.sub (integrable_const _)

@@ -118,7 +118,7 @@ theorem exists_joint_shock_rarefaction {m : ℕ} {flux : ℝ^m → ℝ^m} (hflux
     intro k
     obtain ⟨hS₀q, hspeed₀q, hdS, hhalf⟩ := hSq k
     obtain ⟨hR₀q, hdR⟩ := hRq k
-    exact ⟨hS₀q, hR₀q, hspeed₀q, hdS, hdR, (hTq k).hasStrictFDerivAt'
+    exact ⟨hS₀q, hR₀q, hspeed₀q, hdS, hdR, (hTq k).hasStrictFDerivAt
       (PDE.Analysis.hasFDerivAt_if_of_eq (fun p : ℝ × ℝ^m ↦ p.1 ≤ 0)
         hdS hdR (hS₀q.trans hR₀q.symm)) one_ne_zero, hhalf⟩
   · filter_upwards [hRH, eventually_all.mpr hflow] with p hp hflowp
@@ -230,7 +230,7 @@ theorem exists_local_elementary_wave_family_with_shock_speed_deriv {m : ℕ} {fl
     rw [waveStepDerivative, hrq k, add_comm]
     dsimp only [T]
     split_ifs
-    exacts [(hq k).2.2.2.2.2.1, (hRq k).hasStrictFDerivAt' (hq k).2.2.2.2.1 one_ne_zero]
+    exacts [(hq k).2.2.2.2.2.1, (hRq k).hasStrictFDerivAt (hq k).2.2.2.2.1 one_ne_zero]
   have hTelem (k : Fin m) : ∀ᶠ p in 𝓝 ((0 : ℝ), q₀),
       IsElementaryConnection fields k p.2 (T k p) := by
     by_cases hgn : IsGenuinelyNonlinearFamily flux k

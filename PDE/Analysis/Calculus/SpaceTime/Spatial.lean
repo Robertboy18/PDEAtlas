@@ -202,7 +202,7 @@ theorem exists_bounds (hf : IsSpatiallySmooth T f) (hs : HasBoundedSupport T f) 
     fun y hy ↦ ?_⟩⟩
   · have hdiff : Differentiable ℝ (deriv^[k] (fun y ↦ f y t)) :=
       ((hf.contDiff t t.property).iterate_deriv k).differentiable (by simp)
-    apply lipschitzWith_of_nnnorm_deriv_le hdiff
+    apply lipschitzWith_of_nnNorm_deriv_le hdiff
     intro y
     change ‖deriv (deriv^[k] (fun y ↦ f y t)) y‖ ≤ max K 0
     have := hbound (k + 1) K hK t y

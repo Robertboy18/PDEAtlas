@@ -194,7 +194,7 @@ theorem exists_uniform_nodal_majorant_on_zeros {α : ℝ} (hα : 0 < α) {U V : 
   have hterm (s : ℝ) (hs : ‖U s - U 0‖ ≤ L * |s| ∧ ‖V s‖ < N) :
       ‖|U s z| ^ α * V s z‖ ≤ (L ^ α * N) * |s| ^ α := by
     have hu : |U s z| ≤ L * |s| := by
-      simpa only [BoundedContinuousFunction.sub_apply, hz, sub_zero, Real.norm_eq_abs] using
+      simpa only [sub_apply, hz, sub_zero, Real.norm_eq_abs] using
         ((U s - U 0).norm_coe_le_norm z).trans hs.1
     rw [norm_mul, Real.norm_of_nonneg (Real.rpow_nonneg (abs_nonneg _) _)]
     calc

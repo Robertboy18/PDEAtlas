@@ -115,7 +115,7 @@ theorem le_inv_smul_withDensity_of_pos_le_ae
   calc
     μ = c⁻¹ • (c • μ) := by
       ext s hs
-      simp [Measure.smul_apply, ENNReal.inv_mul_cancel_left hc hc_top]
+      simp [smul_apply, ENNReal.inv_mul_cancel_left hc hc_top]
     _ ≤ c⁻¹ • μ.withDensity w := by
       gcongr
       exact smul_le_withDensity_of_ae_le μ w c hlower

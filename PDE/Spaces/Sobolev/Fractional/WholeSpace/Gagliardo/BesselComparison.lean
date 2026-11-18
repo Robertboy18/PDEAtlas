@@ -98,7 +98,7 @@ private theorem lintegral_one_add_mul_enorm_sq (w : Lp ℂ 2 (volume : Measure (
     ∫⁻ ξ, ENNReal.ofReal (1 + ‖ξ‖ ^ (2 * s)) * ‖(w : ℝ^n → ℂ) ξ‖ₑ ^ 2 =
       ENNReal.ofReal (‖w‖ ^ 2) + fourierSq n s w := by
   have hG : AEMeasurable (fun ξ ↦ ‖(w : ℝ^n → ℂ) ξ‖ₑ ^ 2) volume :=
-    (Lp.aestronglyMeasurable w).enorm.pow_const 2
+    (Lp.aestronglyMeasurable w).eNorm.pow_const 2
   calc ∫⁻ ξ, ENNReal.ofReal (1 + ‖ξ‖ ^ (2 * s)) * ‖(w : ℝ^n → ℂ) ξ‖ₑ ^ 2
       = ∫⁻ ξ, ‖(w : ℝ^n → ℂ) ξ‖ₑ ^ 2 +
           ENNReal.ofReal (‖ξ‖ ^ (2 * s)) * ‖(w : ℝ^n → ℂ) ξ‖ₑ ^ 2 := by
@@ -130,7 +130,7 @@ theorem norm_sq_eq_lintegral (hs : 0 ≤ s) (u : H^{s}(ℝ^n)) :
   rw [← norm_fourier_toLp_eq u, ← lintegral_enorm_sq_eq_ofReal_norm_sq]
   refine lintegral_congr_ae ?_
   filter_upwards [coeFn_fourier_toLp hs u] with ξ hξ
-  rw [hξ, enorm_mul, mul_pow, enorm_besselSymbol_sq]
+  rw [hξ, eNorm_mul, mul_pow, enorm_besselSymbol_sq]
 
 /-- For `0 ≤ s ≤ 1`, the squared Bessel norm is at most the squared `L²` norm of the
 representative plus its homogeneous Fourier integral `fourierSq`. -/

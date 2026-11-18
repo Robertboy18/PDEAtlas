@@ -31,8 +31,8 @@ private theorem enorm_inv_rpow_smul (v : F) {r : ℝ} (hr : 0 < r) (a q : ℝ)
     (hq : 0 ≤ q) :
     ‖(r ^ a)⁻¹ • v‖ₑ ^ q =
       ‖v‖ₑ ^ q / (ENNReal.ofReal r) ^ (a * q) := by
-  rw [enorm_smul, enorm_inv (Real.rpow_pos_of_pos hr a).ne',
-    Real.enorm_eq_ofReal_abs, abs_of_nonneg (Real.rpow_nonneg hr.le a),
+  rw [eNorm_smul, eNorm_inv (Real.rpow_pos_of_pos hr a).ne',
+    Real.eNorm_eq_ofReal_abs, abs_of_nonneg (Real.rpow_nonneg hr.le a),
     ← ENNReal.ofReal_rpow_of_pos hr, mul_comm, ← div_eq_mul_inv,
     ENNReal.div_rpow_of_nonneg _ _ hq, ← ENNReal.rpow_mul]
 
@@ -62,7 +62,7 @@ theorem memGagliardo_iff_lintegral_lt_top (u : ℝ^n → F)
           ∂gagliardoProductMeasure n Ω) < ∞ := by
   unfold MemGagliardo
   refine and_congr_right fun hu ↦ ?_
-  rw [memLp_iff, eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top hp0 hptop
+  rw [memLp_iff, eLpNorm_lt_top_iff_lintegral_rpow_eNorm_lt_top hp0 hptop
     (aestronglyMeasurable_diffQuot hu.aestronglyMeasurable)]
   simp_rw [enorm_diffQuot_rpow u _ hp0 hptop]
 

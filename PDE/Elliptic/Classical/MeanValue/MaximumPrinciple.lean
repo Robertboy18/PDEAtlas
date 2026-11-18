@@ -67,7 +67,7 @@ theorem eqOn_sphere_of_sphereAverage_eq_of_le {n : ℕ} [Fact (0 < n)]
     add_sub_cancel]
   refine le_antisymm (hu_le y hy) (le_of_not_gt fun hlt ↦ ?_)
   have hpos : 0 < ∫ z, M - u (p z) ∂μ :=
-    (continuous_const.sub hup_cont).integral_pos_of_hasCompactSupport_nonneg_nonzero (hcs _)
+    (continuous_const.sub hup_cont).integral_pos_of_hasCompactSupport_nonneg_ne_zero (hcs _)
       (fun ω ↦ sub_nonneg.mpr (hu_le _ (hp_sphere ω))) (x := ω) (by rw [hpω]; linarith)
   exact hpos.ne' hgap_integral
 

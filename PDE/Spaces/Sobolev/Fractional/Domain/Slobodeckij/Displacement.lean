@@ -55,7 +55,7 @@ theorem lintegral_enorm_sub_div_eq_displacement {g : ℝ^n → F}
       ∂((volume : Measure (ℝ^n)).prod volume)) =
       ∫⁻ h : ℝ^n, ∫⁻ x : ℝ^n,
         ‖g (x - h) - g x‖ₑ ^ p / (ENNReal.ofReal ‖h‖) ^ q := by
-  have hpair := (hg.comp_fst.sub hg.comp_snd).enorm
+  have hpair := (hg.comp_fst.sub hg.comp_snd).eNorm
   rw [lintegral_prod _ (by fun_prop)]
   calc
     _ = ∫⁻ x : ℝ^n, ∫⁻ h : ℝ^n,
@@ -65,11 +65,11 @@ theorem lintegral_enorm_sub_div_eq_displacement {g : ℝ^n → F}
       have h := lintegral_sub_left_eq_self (μ := volume)
         (fun y : ℝ^n ↦
           ‖g x - g y‖ₑ ^ p / (ENNReal.ofReal ‖x - y‖) ^ q) x
-      simpa only [sub_sub_cancel, enorm_sub_rev] using h.symm
+      simpa only [sub_sub_cancel, eNorm_sub_rev] using h.symm
     _ = _ := by
       have hshift := hg.comp_quasiMeasurePreserving
         (quasiMeasurePreserving_sub volume volume)
-      have hnorm := (hshift.sub hg.comp_fst).enorm
+      have hnorm := (hshift.sub hg.comp_fst).eNorm
       exact lintegral_lintegral_swap (by fun_prop)
 
 /-- The totalized real-power pair energy has the same displacement formula.

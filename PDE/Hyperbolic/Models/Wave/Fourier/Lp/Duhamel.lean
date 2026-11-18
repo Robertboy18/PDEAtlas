@@ -48,7 +48,7 @@ theorem lipschitzWith_sineEvolution :
   refine LipschitzWith.of_dist_le_mul fun t r ↦ ?_
   rw [dist_eq_norm, NNReal.coe_one, one_mul]
   refine ContinuousLinearMap.opNorm_le_bound _ (dist_nonneg : 0 ≤ dist t r) fun u ↦ ?_
-  simpa only [sub_apply, dist_eq_norm, coe_nnnorm,
+  simpa only [sub_apply, dist_eq_norm, coe_nnNorm,
     mul_comm] using (lipschitzWith_sineEvolution_apply u).dist_le_mul t r
 
 /-- Joint continuity of the Fourier sine evolution. -/
@@ -134,9 +134,9 @@ theorem lipschitzWith_duhamelL2 (a b : ℝ)
       ‖R s u‖ ≤ dist t r * ‖u‖ := by
     filter_upwards with s
     intro u
-    simpa only [R, sub_apply, dist_eq_norm, coe_nnnorm,
+    simpa only [R, sub_apply, dist_eq_norm, coe_nnNorm,
       mul_comm] using (lipschitzWith_causalSineEvolution_apply u s).dist_le_mul t r
-  simpa only [R, sub_apply, coe_nnnorm, mul_comm] using norm_integral_operatorFamily_le R hb f
+  simpa only [R, sub_apply, coe_nnNorm, mul_comm] using norm_integral_operatorFamily_le R hb f
 
 /-- Compact continuous dual tests may be interchanged with the causal
 Duhamel integral. The product integrability required by Fubini is derived from

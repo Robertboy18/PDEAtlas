@@ -66,7 +66,7 @@ theorem toLp_pullbackC1Equiv_symm_apply_ae (u : W^{s,p}(E.source; F))
     (WeakChangeOfVariables.isBounded_source_of_isBounded_target hSymm.continuous hTarget)
   have hq : QuasiMeasurePreserving E.symm
       (volume.restrict E.target) (volume.restrict E.source) :=
-    ⟨hSymm.continuous.measurable, Measure.absolutelyContinuous_of_le_smul hJ⟩
+    ⟨hSymm.continuous.measurable.aemeasurable, Measure.absolutelyContinuous_of_le_smul hJ⟩
   have h := toLp_pullbackC1Equiv_apply_ae hs hE hSymm hTarget
     ((pullbackC1Equiv hs hE hSymm hTarget hp).symm u) hp
   simp only [ContinuousLinearEquiv.apply_symm_apply] at h

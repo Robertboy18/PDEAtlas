@@ -56,11 +56,11 @@ theorem ofReal_abs_weighted_spatial_moment_le_spatial_sup_norm_mul_mass
       ENNReal.ofReal_le_ofReal abs_integral_le_integral_abs
     _ = ∫⁻ x, ‖weight x * u x t‖ₑ ∂μ := by
       simpa only [Real.norm_eq_abs] using
-        ofReal_integral_norm_eq_lintegral_enorm hfield_integrable
+        ofReal_integral_norm_eq_lintegral_eNorm hfield_integrable
     _ ≤ ∫⁻ x, spatialSupNorm u t * ENNReal.ofReal (weight x) ∂μ := by
       apply lintegral_mono_ae
       filter_upwards [hweight_nonneg] with x hx
-      rw [Real.enorm_eq_ofReal_abs, abs_mul, abs_of_nonneg hx,
+      rw [Real.eNorm_eq_ofReal_abs, abs_mul, abs_of_nonneg hx,
         ENNReal.ofReal_mul hx]
       calc
         ENNReal.ofReal (weight x) * ENNReal.ofReal |u x t|

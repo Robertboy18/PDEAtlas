@@ -95,7 +95,7 @@ theorem exists_nonvanishing_timeInterval {w : ℝ → ℝ} {τ : ℝ} {T : ℝ�
     lt_of_lt_of_le (by simpa using hδ) (le_iSup₂_of_le (δ / 2) hPδ le_rfl)
   have hP_of_lt {t : ℝ} (ht0 : 0 ≤ t) (ht : ENNReal.ofReal t < tEnd) :
       ∃ t', P t' ∧ t < t' := by
-    obtain ⟨t', hPt', hlt⟩ := lt_biSup_iff.mp ht
+    obtain ⟨t', hPt', hlt⟩ := (lt_biSup_iff (s := {t | P t})).mp ht
     exact ⟨t', hPt', (ENNReal.ofReal_lt_ofReal_iff'.mp hlt).1⟩
   refine ⟨δ, tEnd, hδ, min_le_right _ _, htEnd0, iSup₂_le fun t hPt ↦ hPt.2.1.2.le, ?_, ?_⟩
   · rintro t ⟨htδ, ht⟩

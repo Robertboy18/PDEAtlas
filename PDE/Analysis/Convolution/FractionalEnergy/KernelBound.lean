@@ -60,9 +60,9 @@ theorem ofReal_norm_integral_rpow_le
       rw [← ENNReal.ofReal_rpow_of_nonneg (norm_nonneg _) hp0,
         ofReal_norm]
     _ ≤ (∫⁻ z, ‖f z‖ₑ ∂μ) ^ p :=
-      ENNReal.rpow_le_rpow (enorm_integral_le_lintegral_enorm f) hp0
+      ENNReal.rpow_le_rpow (eNorm_integral_le_lintegral_eNorm f) hp0
     _ ≤ (μ univ) ^ (p - 1) * ∫⁻ z, ‖f z‖ₑ ^ p ∂μ :=
-      ENNReal.rpow_lintegral_le_mul_lintegral_rpow μ hp hf.enorm
+      ENNReal.rpow_lintegral_le_mul_lintegral_rpow μ hp hf.eNorm
     _ = _ := by
       simp_rw [← ofReal_norm,
         ← ENNReal.ofReal_rpow_of_nonneg (norm_nonneg _) hp0]

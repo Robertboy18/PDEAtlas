@@ -80,7 +80,7 @@ theorem lintegral_enorm_exteriorNewtonKernel {R : ℝ} (hR : 0 < R) :
   refine lintegral_congr fun x ↦ ?_
   by_cases hx : R < ‖x‖
   · simp only [exteriorNewtonKernel, indicator_apply, mem_ofPred_eq, hx, ↓reduceIte]
-    rw [Real.enorm_eq_ofReal_abs, abs_inv, abs_norm, ENNReal.ofReal_rpow_of_nonneg
+    rw [Real.eNorm_eq_ofReal_abs, abs_inv, abs_norm, ENNReal.ofReal_rpow_of_nonneg
       (inv_nonneg.mpr (norm_nonneg x)) (by norm_num : (0 : ℝ) ≤ 6)]
     congr 1
     rw [Real.inv_rpow (norm_nonneg x), ← Real.rpow_neg (norm_nonneg x)]
@@ -90,7 +90,7 @@ theorem lintegral_enorm_exteriorNewtonKernel {R : ℝ} (hR : 0 < R) :
 theorem memLp_exteriorNewtonKernel {R : ℝ} (hR : 0 < R) :
     MemLp (exteriorNewtonKernel R) 6 := by
   change eLpNorm (exteriorNewtonKernel R) 6 volume < ⊤
-  rw [eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top (by norm_num) (by norm_num)
+  rw [eLpNorm_lt_top_iff_lintegral_rpow_eNorm_lt_top (by norm_num) (by norm_num)
     (measurable_exteriorNewtonKernel R).aestronglyMeasurable]
   norm_num only [ENNReal.toReal_ofNat]
   rw [lintegral_enorm_exteriorNewtonKernel hR]
@@ -100,7 +100,7 @@ theorem memLp_exteriorNewtonKernel {R : ℝ} (hR : 0 < R) :
 theorem eLpNorm_exteriorNewtonKernel {R : ℝ} (hR : 0 < R) :
     eLpNorm (exteriorNewtonKernel R) 6 volume = ((volume : Measure (ℝ^3)).toSphere univ *
       ENNReal.ofReal (1 / 3 : ℝ)) ^ (1 / 6 : ℝ) * ENNReal.ofReal (R ^ (-1 / 2 : ℝ)) := by
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (by norm_num) (by norm_num)
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal (by norm_num) (by norm_num)
     (measurable_exteriorNewtonKernel R).aestronglyMeasurable]
   norm_num only [ENNReal.toReal_ofNat]
   rw [lintegral_enorm_exteriorNewtonKernel hR]

@@ -107,13 +107,13 @@ theorem exists_ball_one_enorm_le_eLpNorm
         eLpNorm u (ENNReal.ofReal p) volume *
           morreyUnitBallLpFactor n p := by
   have hmeas : AEMeasurable (fun z : ℝ^n ↦ ‖u z‖ₑ) (volume.restrict (Metric.ball x 1)) :=
-    hu.enorm.aemeasurable
+    hu.eNorm.aemeasurable
   obtain ⟨z, hzB, hz⟩ := exists_le_setLAverage (Metric.measure_ball_pos volume x zero_lt_one).ne'
     measure_ball_lt_top.ne hmeas
   refine ⟨z, hzB, hz.trans ?_⟩
   have hum := hu.aestronglyMeasurable.mono_measure
     (Measure.restrict_le_self (μ := volume) (s := Metric.ball x 1))
-  rw [setLAverage_eq, ← eLpNorm_one_eq_lintegral_enorm hum]
+  rw [setLAverage_eq, ← eLpNorm_one_eq_lintegral_eNorm hum]
   calc _ ≤ eLpNorm u (ENNReal.ofReal p) (volume.restrict (Metric.ball x 1)) *
           (volume.restrict (Metric.ball x 1)) Set.univ ^
             (1 / (1 : ENNReal).toReal - 1 / (ENNReal.ofReal p).toReal) /
@@ -153,7 +153,7 @@ theorem enorm_apply_le_eLpNorm_add_finiteMorrey
         ENNReal.ofReal ‖z - x‖ ^ morreyExponent n (ENNReal.ofReal p)).trans
       (mul_le_of_le_one_right' hdist)
   calc ‖u x‖ₑ = ‖(u x - u z) + u z‖ₑ := by rw [sub_add_cancel]
-    _ ≤ ‖u z - u x‖ₑ + ‖u z‖ₑ := by rw [enorm_sub_rev]; exact enorm_add_le _ _
+    _ ≤ ‖u z - u x‖ₑ + ‖u z‖ₑ := by rw [eNorm_sub_rev]; exact eNorm_add_le _ _
     _ ≤ _ := by rw [add_comm]; gcongr
 
 /-- The unit-ball volume factor is finite. -/

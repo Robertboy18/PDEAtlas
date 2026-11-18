@@ -53,7 +53,7 @@ theorem ContDiff.exists_compactSupport_small_lipschitz_of_one_le
   have hn' : (1 : ℕ∞ω) ≤ n := by exact_mod_cast hn
   have hN1 : ContDiffAt ℝ 1 N 0 := (hN.of_le hn').contDiffAt
   obtain ⟨U, hU, hNU⟩ :=
-    hN1.exists_lipschitzOnWith_of_nnnorm_lt L (by simpa [hDN0] using hL)
+    hN1.exists_lipschitzOnWith_of_nnNorm_lt L (by simpa [hDN0] using hL)
   obtain ⟨δ, hδ, hδU⟩ := Metric.mem_nhds_iff.mp hU
   let s : ℝ := min δ r / 4
   have hs : 0 < s := by dsimp [s]; positivity

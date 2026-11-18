@@ -244,7 +244,7 @@ theorem lintegral_enorm_sub_rpow_div_le_liminf {F : Type*} [NormedAddCommGroup F
       (Measure.quasiMeasurePreserving_fst (μ := volume) (ν := volume))).sub
         ((hf j).comp_quasiMeasurePreserving
           (Measure.quasiMeasurePreserving_snd (μ := volume) (ν := volume)))
-    exact (hd.enorm.pow_const p).div
+    exact (hd.eNorm.pow_const p).div
       (((measurable_fst.sub measurable_snd).norm.ennreal_ofReal).pow_const a).aemeasurable
   have hfst := (Measure.quasiMeasurePreserving_fst
     (μ := (volume : Measure (ℝ^n))) (ν := (volume : Measure (ℝ^n)))).ae hfg
@@ -256,7 +256,7 @@ theorem lintegral_enorm_sub_rpow_div_le_liminf {F : Type*} [NormedAddCommGroup F
     by_cases hz : z.1 = z.2
     · simp [E, hz, ENNReal.zero_rpow_of_pos hp]
     · apply ENNReal.Tendsto.div_const
-        ((ENNReal.continuous_rpow_const.tendsto _).comp (hz₁.sub hz₂).enorm)
+        ((ENNReal.continuous_rpow_const.tendsto _).comp (hz₁.sub hz₂).eNorm)
       exact Or.inr (ENNReal.rpow_pos
         (ENNReal.ofReal_pos.mpr (norm_pos_iff.mpr (sub_ne_zero.mpr hz)))
         ENNReal.ofReal_ne_top).ne'

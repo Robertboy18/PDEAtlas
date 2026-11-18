@@ -156,7 +156,7 @@ theorem intervalIntegrable_response {G : ℝ → F →L[ℝ] E} {a : ℝ → F} 
   have hsub : IntervalIntegrable (fun u ↦ G u (a (t - u))) volume 0 t := by
     rw [intervalIntegrable_iff_integrableOn_Icc_of_le ht]
     refine Integrable.of_bound ((ContinuousLinearMap.id ℝ (F →L[ℝ] E)).aestronglyMeasurable_comp₂
-      hG ((ha.comp (continuous_const.sub continuous_id).continuousOn fun u hu ↦
+      hG ((ha.comp (continuous_const.sub continuous_id).continuousOn fun u (hu : u ∈ Icc 0 t) ↦
         ⟨sub_nonneg.2 hu.2, sub_le_self t hu.1⟩).aestronglyMeasurable measurableSet_Icc))
       (M * C) ?_
     filter_upwards [ae_restrict_mem measurableSet_Icc] with u hu
@@ -195,7 +195,7 @@ theorem enorm_responseIntegral_le (G : ℝ → F →L[ℝ] E) {a : ℝ → F} {t
     (ha : ∀ s ∈ Icc 0 t, ‖a s‖ ≤ C) :
     ‖responseIntegral G a t‖ₑ ≤ ENNReal.ofReal C * ∫⁻ τ in Ioi 0, ‖G τ‖ₑ := by
   rw [responseIntegral_eq_integral_sub, intervalIntegral.integral_of_le ht]
-  refine (enorm_integral_le_lintegral_enorm _).trans ?_
+  refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
   calc ∫⁻ u in Ioc 0 t, ‖G u (a (t - u))‖ₑ
       ≤ ∫⁻ u in Ioc 0 t, ENNReal.ofReal C * ‖G u‖ₑ := by
         refine setLIntegral_mono' measurableSet_Ioc fun u hu ↦ ?_

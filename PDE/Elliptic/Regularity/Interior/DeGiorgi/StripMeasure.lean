@@ -66,7 +66,7 @@ theorem exists_upper_level_measure_sq_le_strip_measure
   let b := (1 + k) / 2
   let E := {x | k < wkpBaseCoordinateCLM u x ∧ wkpBaseCoordinateCLM u x < b}
   have hsets : {x | k < wkpBaseCoordinateCLM U x ∧ wkpBaseCoordinateCLM U x < b} =ᵐ[μ] E :=
-    hbase.fun_comp fun t : ℝ ↦ k < t ∧ t < b
+    hbase.preimage {t : ℝ | k < t ∧ t < b}
   have henergy (i : Fin n) :
       (∫ x in {x | k < wkpBaseCoordinateCLM U x ∧ wkpBaseCoordinateCLM U x < b},
         wkpCoordinateCLM (singleDerivIndex n i) U x ^ 2 ∂μ) =
@@ -78,7 +78,7 @@ theorem exists_upper_level_measure_sq_le_strip_measure
   change (b - k) ^ 2 * μ.real _ ^ 2 * μ.real _ ^ 2 ≤
     P * (∑ i, ∫ x in _, wkpCoordinateCLM (singleDerivIndex n i) U x ^ 2 ∂μ) * μ.real _ at hs
   have hlevel (p : ℝ → Prop) : μ.real {x | p (wkpBaseCoordinateCLM U x)} =
-      μ.real {x | p (wkpBaseCoordinateCLM u x)} := measureReal_congr (hbase.fun_comp p)
+      μ.real {x | p (wkpBaseCoordinateCLM u x)} := measureReal_congr (hbase.preimage {t | p t})
   rw [hlevel (· ≤ k), hlevel (b ≤ ·), measureReal_congr hsets] at hs
   simp_rw [henergy] at hs
   have htail : (∫ x, max (wkpBaseCoordinateCLM u x - k) 0 ^ 2 ∂ν) ≤

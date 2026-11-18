@@ -52,7 +52,7 @@ theorem exists_integral_norm_cube_le {H : Type*} [NormedAddCommGroup H]
   have hcube : ∀ x, ENNReal.ofReal (‖f x‖ ^ 3) = ‖f x‖ₑ ^ 3 := fun x ↦ by
     rw [ENNReal.ofReal_pow (norm_nonneg _), ofReal_norm]
   refine ⟨⟨hmeas, ?_⟩, ?_⟩
-  · simp only [HasFiniteIntegral, enorm_pow, enorm_norm]
+  · simp only [HasFiniteIntegral, eNorm_pow, eNorm_norm]
     exact hlin.trans_lt hfin.lt_top
   rw [integral_eq_lintegral_of_nonneg_ae (Filter.Eventually.of_forall fun x ↦ by positivity)
     hmeas]

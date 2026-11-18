@@ -85,9 +85,9 @@ theorem hasDerivAt_prescribedClockField (a b z y : ℝ) :
 /-- A uniform global state Lipschitz constant, independent of the fast path and thresholds. -/
 theorem lipschitzWith_prescribedClockField (a b z : ℝ) :
     LipschitzWith (361 / 4000) (prescribedClockField a b z) := by
-  refine lipschitzWith_of_nnnorm_deriv_le
+  refine lipschitzWith_of_nnNorm_deriv_le
     (fun y ↦ (hasDerivAt_prescribedClockField a b z y).differentiableAt) fun y ↦ ?_
-  rw [← NNReal.coe_le_coe, coe_nnnorm, Real.norm_eq_abs,
+  rw [← NNReal.coe_le_coe, coe_nnNorm, Real.norm_eq_abs,
     (hasDerivAt_prescribedClockField a b z y).deriv]
   change |deriv g y - 4 * deriv cutoff y * outerTransition a b z| ≤ (361 / 4000 : ℝ)
   have hg := abs_le.mp (abs_deriv_g_le y)

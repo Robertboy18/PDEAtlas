@@ -207,9 +207,9 @@ theorem IsCorrectionLift.succ {m : ℕ} {hm : (3 : ℝ) < 2 * m} {V : ℝ → Ve
       (A₀ := fun r ↦ correctionOperator D R m hm r (vectorLower 3 m (V r)))
       (A := fun r ↦ correctionOperator D R (m + 1) hm' r (V r))
       (f := fun r ↦ cutoffForcing D R (m + 1) r) (U := V)
-      ((hA₀op.comp continuousOn_fst fun _ hp ↦ hp.1).clm_apply continuousOn_snd)
+      ((hA₀op.comp continuousOn_fst fun _ ↦ And.left).clm_apply continuousOn_snd)
       (fun r hr ↦ (ha₀ r hr).trans (le_max_left _ _))
-      ((hAop.comp continuousOn_fst fun _ hp ↦ hp.1).clm_apply continuousOn_snd)
+      ((hAop.comp continuousOn_fst fun _ ↦ And.left).clm_apply continuousOn_snd)
       (fun r hr ↦ (ha₁ r hr).trans (le_max_right _ _))
       (fun r _ v ↦ vectorLower_correctionOperator D R hm hm' r (V r) v)
       (continuous_cutoffForcing D R (m + 1)).continuousOn hVc'

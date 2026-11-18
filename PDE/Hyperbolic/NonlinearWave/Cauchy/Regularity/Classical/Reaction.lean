@@ -53,7 +53,7 @@ theorem hasDerivAt_saturatingReaction (s : ℝ) :
 
 /-- The reaction is globally 1-Lipschitz, with no restriction on its argument. -/
 theorem lipschitzWith_saturatingReaction : LipschitzWith 1 saturatingReaction := by
-  apply lipschitzWith_of_nnnorm_deriv_le
+  apply lipschitzWith_of_nnNorm_deriv_le
     (fun s ↦ (hasDerivAt_saturatingReaction s).differentiableAt)
   intro s
   rw [(hasDerivAt_saturatingReaction s).deriv]
@@ -95,7 +95,7 @@ theorem classicalRepresentative_higherResolventCLM
     classicalRepresentativeCLM hk (higherResolventCLM hk u v) x =
       (1 + classicalRepresentativeCLM hk u x ^ 2) * classicalRepresentativeCLM hk v x := by
   simp only [higherResolventCLM, add_apply, ContinuousLinearMap.id_apply,
-    map_add, BoundedContinuousFunction.add_apply, classicalRepresentative_higherProductCLM]
+    map_add, add_apply, classicalRepresentative_higherProductCLM]
   ring
 
 /-- The reciprocal multiplier has its stated pointwise action. -/
@@ -104,7 +104,7 @@ theorem classicalRepresentative_higherReciprocalCLM
     classicalRepresentativeCLM hk (higherReciprocalCLM hk u v) x =
       classicalRepresentativeCLM hk v x / (1 + classicalRepresentativeCLM hk u x ^ 2) := by
   simp only [higherReciprocalCLM, add_apply, ContinuousLinearMap.id_apply,
-    map_add, BoundedContinuousFunction.add_apply, classicalRepresentative_higherProductCLM,
+    map_add, add_apply, classicalRepresentative_higherProductCLM,
     classicalRepresentative_higherComposition, reciprocalDefect]
   ring
 

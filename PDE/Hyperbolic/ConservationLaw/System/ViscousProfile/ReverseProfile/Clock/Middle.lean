@@ -138,7 +138,7 @@ private theorem integral_scaled_rho0_le {y : ℝ} (hy : 0 ≤ y) :
     rw [intervalIntegral.integral_of_le (div_nonneg hy (by norm_num))]
     exact (setIntegral_mono_set integrable_rho0.integrableOn
       (Filter.Eventually.of_forall fun s ↦ (rho0_pos s).le)
-      (Filter.Eventually.of_forall fun s hs ↦ hs.1)).trans integral_Ioi_zero_rho0_le
+      (Filter.Eventually.of_forall fun _ ↦ And.left)).trans integral_Ioi_zero_rho0_le
   have h := intervalIntegral.integral_comp_div (a := 0) (b := y) rho0 (c := 100) (by norm_num)
   simp only [zero_div, smul_eq_mul] at h
   linarith
@@ -198,8 +198,8 @@ theorem g_le_mul {y : ℝ} (hy : 0 ≤ y) : g y ≤ (201 / 4000 : ℝ) * y := by
 /-- The primitive is globally Lipschitz with the constant supplied by the pulse masses. -/
 theorem lipschitzWith_g :
     LipschitzWith (201 / 4000) g := by
-  refine lipschitzWith_of_nnnorm_deriv_le (fun s ↦ (hasDerivAt_g s).differentiableAt) fun s ↦ ?_
-  rw [← NNReal.coe_le_coe, coe_nnnorm, Real.norm_eq_abs]
+  refine lipschitzWith_of_nnNorm_deriv_le (fun s ↦ (hasDerivAt_g s).differentiableAt) fun s ↦ ?_
+  rw [← NNReal.coe_le_coe, coe_nnNorm, Real.norm_eq_abs]
   exact abs_deriv_g_le s
 
 /-- All pulse terms vanish on the central interval and the density is one there. -/

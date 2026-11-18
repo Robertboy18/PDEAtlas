@@ -52,8 +52,8 @@ theorem exists_lipschitzOn_higherComposition (hk : (n : ℝ) < 2 * ((k : ℝ) - 
   have hzexpr : z = fun t ↦ deriv f 0 • A w +
       A (higherComposition hk hr hr0 (U t)) * A w := by
     ext t x
-    simp only [z, W, A, P, map_add, map_smul, BoundedContinuousFunction.add_apply,
-      BoundedContinuousFunction.smul_apply, BoundedContinuousFunction.mul_apply,
+    simp only [z, W, A, P, map_add, map_smul, add_apply,
+      smul_apply, mul_apply,
       classicalRepresentative_higherProductCLM]
   have hz : Continuous z := by
     rw [hzexpr]
@@ -86,8 +86,8 @@ theorem exists_lipschitzOn_higherComposition (hk : (n : ℝ) < 2 * ((k : ℝ) - 
     simpa only [intervalIntegral.integral_of_le (by norm_num : (0 : ℝ) ≤ 1), μ] using hAe
   have hzpoint (t : ℝ) (x : ℝ^n) :
       z t x = deriv f (A v x + t * A w x) * A w x := by
-    simp only [z, W, A, P, map_add, map_smul, BoundedContinuousFunction.add_apply,
-      BoundedContinuousFunction.smul_apply, smul_eq_mul,
+    simp only [z, W, A, P, map_add, map_smul, add_apply,
+      smul_apply, smul_eq_mul,
       classicalRepresentative_higherProductCLM, classicalRepresentative_higherComposition, U, r]
     ring
   have heq : e = higherComposition hk hf hf0 u - higherComposition hk hf hf0 v := by
@@ -110,7 +110,7 @@ theorem exists_lipschitzOn_higherComposition (hk : (n : ℝ) < 2 * ((k : ℝ) - 
     have hi := (BoundedContinuousFunction.evalCLM ℝ x).intervalIntegral_comp_comm hzi
     change (∫ t in (0 : ℝ)..1, z t x) = (∫ t in (0 : ℝ)..1, z t) x at hi
     rw [← hi]
-    simp only [hzpoint, hscalar, map_sub, BoundedContinuousFunction.sub_apply,
+    simp only [hzpoint, hscalar, map_sub, sub_apply,
       classicalRepresentative_higherComposition, A]
   rw [dist_eq_norm, dist_eq_norm, ← heq]
   exact he

@@ -109,7 +109,7 @@ theorem ae_mem_chartBoundaryMeasure (i : Fin hΩ.N) :
       x ∈ (hΩ.chart i).source ∩ frontier Ω := by
   rw [chartBoundaryMeasure]
   refine
-    (MeasureTheory.ae_map_iff
+    (MeasureTheory.ae_map_iff (p := fun x ↦ x ∈ (hΩ.chart i).source ∩ frontier Ω)
       (contDiff_chartBoundaryParametrization
         (m := m) (Ω := Ω) i).continuous.measurable.aemeasurable
       ((hΩ.chart i).open_source.measurableSet.inter

@@ -33,7 +33,7 @@ theorem isBigO_right_of_comp_of_deriv_pos
     (hgpos : 0 < deriv g 0) (hfzero : f 0 = 0)
     (hfg : DifferentiableWithinAt ℝ (f ∘ g) (Ici 0) 0) :
     f =O[𝓝[≥] 0] (fun z : ℝ ↦ z) := by
-  have hs := hg.hasStrictDerivAt (by norm_num)
+  have hs := hg.hasStrictDerivAt_deriv (by norm_num)
   let v := hs.localInverse g (deriv g 0) 0 (ne_of_gt hgpos)
   have hvzero : v 0 = 0 := by
     simpa only [hgzero] using

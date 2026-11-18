@@ -82,7 +82,7 @@ theorem norm_Lp_le_base_add_firstDerivatives
     _ ≤ lpNorm (fun x ↦ C * (‖P (u x)‖ + ∑ i, ‖D i (u x)‖)) 2 μ :=
       lpNorm_mono_real (hb.const_mul C) (fun x ↦ norm_le_base_add_firstDerivatives hΩ (u x))
     _ = C * lpNorm (fun x ↦ ‖P (u x)‖ + ∑ i, ‖D i (u x)‖) 2 μ := by
-      simpa only [Pi.smul_def, smul_eq_mul, coe_nnnorm, Real.norm_of_nonneg hC] using
+      simpa only [Pi.smul_def, smul_eq_mul, coe_nnNorm, Real.norm_of_nonneg hC] using
         lpNorm_const_smul C (fun x ↦ ‖P (u x)‖ + ∑ i, ‖D i (u x)‖) μ (p := 2)
     _ ≤ C * (lpNorm (fun x ↦ ‖P (u x)‖) 2 μ +
         lpNorm (fun x ↦ ∑ i, ‖D i (u x)‖) 2 μ) :=

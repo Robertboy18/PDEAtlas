@@ -75,7 +75,7 @@ theorem lipschitzOnWith_base_of_time_derivative_majorant
         M x * ‖s - t‖ ≤ ‖M x‖ * ‖s - t‖ :=
           mul_le_mul_of_nonneg_right (le_abs_self _) (norm_nonneg _)
         _ = ‖s - t‖ * ‖M x‖ := mul_comm _ _)
-  simpa only [Real.norm_eq_abs, coe_nnnorm, mul_comm] using hnorm
+  simpa only [Real.norm_eq_abs, coe_nnNorm, mul_comm] using hnorm
 
 end DeGregorio.Iteration
 

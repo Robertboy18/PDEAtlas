@@ -42,7 +42,7 @@ theorem setAverage_norm_sub_average_sq_le
   · simp [setAverage_eq, measureReal_def, hsfin]
   let ν : Measure X := (μ s)⁻¹ • μ.restrict s
   have : IsProbabilityMeasure ν := ⟨by
-    simp only [ν, Measure.smul_apply, Measure.restrict_apply_univ, smul_eq_mul]
+    simp only [ν, smul_apply, Measure.restrict_apply_univ, smul_eq_mul]
     exact ENNReal.inv_mul_cancel hs0 hsfin⟩
   have hfn : MemLp f 2 ν := hf.smul_measure (ENNReal.inv_ne_top.mpr hs0)
   have hvar := ProbabilityTheory.variance_le_expectation_sq

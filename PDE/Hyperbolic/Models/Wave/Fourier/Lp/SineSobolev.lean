@@ -37,7 +37,7 @@ theorem eLpNorm_re_sineEvolution_le {n : ℕ} {q : NNReal} (hn : 0 < n)
       _ ≤ eLpNorm (v i) 2 volume := eLpNorm_mono_ae ((Lp.memLp (v i)).re.aestronglyMeasurable)
         (Filter.Eventually.of_forall fun x ↦ by
           simpa only [Real.norm_eq_abs, RCLike.re_to_complex] using Complex.abs_re_le_norm (v i x))
-      _ = ‖v i‖ₑ := (Lp.enorm_def _).symm
+      _ = ‖v i‖ₑ := (Lp.eNorm_def _).symm
       _ ≤ ‖u‖ₑ := by
         simpa only [ofReal_norm] using ENNReal.ofReal_le_ofReal (hnorm i)
   have h := SobolevSpace.Inequalities.eLpNorm_le_sum_eLpNorm_weakDeriv

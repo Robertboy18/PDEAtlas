@@ -125,7 +125,7 @@ theorem intervalIntegral_forward_comp_swap [CompleteSpace E] [CompleteSpace F]
     have hcont : ContinuousOn (fun p : ℝ × ℝ ↦ Ψ p.1 p.2) (T ∩ R) := by
       have hin : ContinuousOn (fun p : ℝ × ℝ ↦ K (p.1 - p.2) (f p.2)) (T ∩ R) :=
         hKc.comp ((continuous_fst.sub continuous_snd).continuousOn.prodMk
-          (hf.comp continuous_snd.continuousOn fun p hp ↦ Ioc_subset_Icc_self hp.2.2))
+          (hf.comp continuous_snd.continuousOn fun p hp ↦ Ioc_subset_Icc_self (And.right hp).2))
           fun p hp ↦ ⟨sub_pos.mpr hp.1, mem_univ _⟩
       exact hAc.comp (continuous_fst.continuousOn.prodMk hin)
         fun p hp ↦ ⟨Ioc_subset_Icc_self hp.2.1, mem_univ _⟩
@@ -161,7 +161,7 @@ theorem intervalIntegral_forward_comp_swap [CompleteSpace E] [CompleteSpace F]
     · rw [Set.indicator_of_notMem (show p ∉ T from hlt), norm_zero]
       have hφ0 : 0 ≤ φ p.2 := Set.indicator_nonneg (fun _ _ ↦ zero_le_one) _
       have hψ0 : 0 ≤ ψ (p.1 - p.2) :=
-        Set.indicator_nonneg (fun x hx ↦ Real.rpow_nonneg hx.1.le _) _
+        Set.indicator_nonneg (fun x hx ↦ Real.rpow_nonneg (And.left hx).le _) _
       positivity
   -- the diagonal is a null set, so the indicator of `r ≤ q` gives the same integrand
   have hdiag : (volume : Measure (ℝ × ℝ)) {p | p.2 = p.1} = 0 := by

@@ -139,10 +139,10 @@ theorem lintegral_localStrainDifference_le {B p : ℝ} (hB : 1 / 2 ≤ B) (hp : 
       lintegral_union measurableSet_Ioi (Ioc_disjoint_Ioi le_rfl),
       setLIntegral_congr_fun measurableSet_Ioi (g := fun _ ↦ (0 : ℝ≥0∞)) fun q hq ↦ by
         rw [localStrainDifference_eq_zero (by
-          rw [abs_of_pos (by linarith [mem_Ioi.1 hq])]; exact hq), enorm_zero],
+          rw [abs_of_pos (by linarith [mem_Ioi.1 hq])]; exact hq), eNorm_zero],
       lintegral_zero, add_zero]
     refine setLIntegral_congr_fun measurableSet_Ioc fun q hq ↦ ?_
-    rw [localStrainDifference_of_lt hB hq.1 hq.2, enorm_neg, mul_one]
+    rw [localStrainDifference_of_lt hB hq.1 hq.2, eNorm_neg, mul_one]
   have hshift := lintegral_shift_le_of_tail (f := fun u ↦ strainDensity u p)
     (g := fun _ ↦ (1 : ℝ≥0∞)) (b := B) (h := 1 / 2) hint.aemeasurable monotoneOn_const
     (by norm_num) (by
@@ -151,7 +151,7 @@ theorem lintegral_localStrainDifference_le {B p : ℝ} (hB : 1 / 2 ≤ B) (hp : 
   rw [e₁, e₂]
   refine add_le_add le_rfl (hshift.trans_eq (setLIntegral_congr_fun measurableSet_Ioi
     fun q _ ↦ ?_))
-  rw [mul_one, strainDifference, ← enorm_neg, neg_sub]
+  rw [mul_one, strainDifference, ← eNorm_neg, neg_sub]
 
 /-! ### The kernel difference on a vertical line -/
 
@@ -388,7 +388,7 @@ theorem lintegral_lower_le (hK : ∀ y, K y = y 0 * y 1 / ‖y‖ ^ 4) {x z : �
   have hk : ∀ q, ENNReal.ofReal |boxKernelDifference K a b b x z !₂[s, m + d * q]| =
       ENNReal.ofReal (1 / d ^ 2) * ‖localStrainDifference (b / d) q p‖ₑ := fun q ↦ by
     rw [boxKernelDifference_mk hK hxz hd, ite_eq_left hsa, one_mul, abs_neg, abs_div,
-      abs_of_pos (by positivity : (0 : ℝ) < d ^ 2), Real.enorm_eq_ofReal_abs,
+      abs_of_pos (by positivity : (0 : ℝ) < d ^ 2), Real.eNorm_eq_ofReal_abs,
       ← ENNReal.ofReal_mul (by positivity), one_div_mul_eq_div]
   simp only [hk]
   rw [lintegral_const_mul' _ _ ENNReal.ofReal_ne_top]
@@ -412,7 +412,7 @@ theorem lintegral_lower_le (hK : ∀ y, K y = y 0 * y 1 / ‖y‖ ^ 4) {x z : �
         exact mul_le_mul_right (mul_le_mul_right (lintegral_localStrainDifference_le hB hp.ne') _) _
     _ = ENNReal.ofReal (1 / d) * ∫⁻ q in Ioi 0, ENNReal.ofReal |strainDifference q p| := by
         rw [← mul_assoc, ← ENNReal.ofReal_mul hd0.le]
-        simp only [Real.enorm_eq_ofReal_abs]
+        simp only [Real.eNorm_eq_ofReal_abs]
         congr 2
         field_simp
 
@@ -564,7 +564,7 @@ theorem abs_sub_div_le_vertical (hK : ∀ y, K y = y 0 * y 1 / ‖y‖ ^ 4) {W :
       fun_prop
     have hpt : ∀ y ∈ H ∩ L, ‖D y‖ₑ ≤ F y := fun y hy ↦ by
       have hy0 : y 0 < x 0 := hy.1
-      simp only [D, F, enorm_mul, Real.enorm_eq_ofReal_abs]
+      simp only [D, F, eNorm_mul, Real.eNorm_eq_ofReal_abs]
       by_cases hyS : y ∈ box a b b x ∪ box a b b z
       · gcongr
         have hRy : verticalReflection (x 0) y ∈ box a b b x ∪ box a b b z :=
@@ -579,8 +579,8 @@ theorem abs_sub_div_le_vertical (hK : ∀ y, K y = y 0 * y 1 / ‖y‖ ^ 4) {W :
         setLIntegral_prod (fun q ↦ F (planeEquiv.symm q))
           (hFm.comp planeEquiv.symm.measurable).aemeasurable]
       simp only [planeEquiv_symm_apply]
-    rw [← Real.enorm_eq_ofReal_abs]
-    refine (enorm_integral_le_lintegral_enorm _).trans ?_
+    rw [← Real.eNorm_eq_ofReal_abs]
+    refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
     calc ∫⁻ y in H ∩ L, ‖D y‖ₑ
         ≤ ∫⁻ y in H ∩ L, F y := setLIntegral_mono' (hHm.inter hLm) hpt
       _ = ∫⁻ s in Iio (x 0), ∫⁻ t in Iio m, F !₂[s, t] := hprod
@@ -630,12 +630,12 @@ theorem abs_sub_div_le_vertical (hK : ∀ y, K y = y 0 * y 1 / ‖y‖ ^ 4) {W :
       rw [← hmp.setIntegral_preimage_emb hemb, hpreU, Measure.volume_eq_prod,
         setIntegral_prod _ (by rwa [← Measure.volume_eq_prod])]
       simp only [planeEquiv_symm_apply]
-    rw [hrepr, ← Real.enorm_eq_ofReal_abs]
-    refine (enorm_integral_le_lintegral_enorm _).trans ?_
+    rw [hrepr, ← Real.eNorm_eq_ofReal_abs]
+    refine (eNorm_integral_le_lintegral_eNorm _).trans ?_
     have hslice : ∀ s ∈ Iio (x 0), ‖∫ t in Ici m, D !₂[s, t]‖ₑ ≤
         (Icc (x 0 - a) (x 0 + a)).indicator (fun s ↦ 2 * Cy *
           ENNReal.ofReal (d ^ (-(1 / 2 : ℝ))) * strainCost ((x 0 - s) / d)) s := fun s hs ↦ by
-      rw [Real.enorm_eq_ofReal_abs]
+      rw [Real.eNorm_eq_ofReal_abs]
       have h := abs_integral_upper_le hK hxz hlt hb hCy (mem_Iio.1 hs) (W := W)
       simp only [D, verticalReflection_mk]
       exact h

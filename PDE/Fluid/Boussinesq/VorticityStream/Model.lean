@@ -288,17 +288,17 @@ theorem zeroVorticityStreamFields_isClassicalSolutionOn (times : Set ℝ) :
       streamFunction_equation := ?_
       zero_streamFunction_boundary := ?_ }
   · refine
-      { vorticity_contDiffOn := by fun_prop
-        temperature_contDiffOn := by fun_prop
+      { vorticity_contDiffOn := by fun_prop [zeroVorticityStreamFields]
+        temperature_contDiffOn := by fun_prop [zeroVorticityStreamFields]
         vorticity_differentiableAt_time := by
           intro x t ht
-          fun_prop
+          fun_prop [zeroVorticityStreamFields]
         temperature_differentiableAt_time := by
           intro x t ht
-          fun_prop
+          fun_prop [zeroVorticityStreamFields]
         streamFunction_spatial_contDiff := by
           intro t ht
-          fun_prop }
+          fun_prop [zeroVorticityStreamFields] }
   · intro x t hx ht
     simp [zeroVorticityStreamFields, vorticityStreamVelocity,
       planarStreamVelocity, advectiveDerivative, PDE.partialDeriv_const]

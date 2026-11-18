@@ -76,7 +76,7 @@ private theorem exists_norm_correctionTransport_le (J : H¹₀(Ω) →L[ℝ] Der
     _ ≤ (‖J‖ * (‖R‖ * ‖solenoidalL4Embedding J u‖) * ‖v‖) * ‖w‖ := by
       gcongr
       exact R.le_opNorm _
-    _ = _ := by simp only [NNReal.coe_mul, coe_nnnorm]; ring
+    _ = _ := by simp only [NNReal.coe_mul, coe_nnNorm]; ring
 
 /-- The quadratic transport load of the correction is Lipschitz in the weaker `L⁴` norm on
 the set where the mass and gradient norms are at most `r₀` and `r₁`. -/
@@ -110,7 +110,7 @@ private theorem exists_norm_correctionLoad_sub_le (J : H¹₀(Ω) →L[ℝ] Deri
         · exact R.le_opNorm u
         · exact S'.le_opNorm v
         · exact e.le_opNorm w
-      _ = _ := by simp only [q, NNReal.coe_mul, coe_nnnorm]; ring
+      _ = _ := by simp only [q, NNReal.coe_mul, coe_nnNorm]; ring
   have hbound (u : Vσ) (hu₀ : ‖ZeroBoundaryVectorSpace.toLp (u : H¹₀(Ω; ℝ^n))‖ ≤ r₀)
       (hu₁ : ‖ZeroBoundaryVectorSpace.gradient (u : H¹₀(Ω; ℝ^n))‖ ≤ r₁) :
       ‖u‖ ≤ r₀ + r₁ := by

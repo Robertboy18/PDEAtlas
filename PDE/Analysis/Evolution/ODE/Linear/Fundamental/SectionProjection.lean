@@ -42,7 +42,7 @@ theorem contDiffOn_propagator_right_Icc
       (Function.uncurry (fun (t : ℝ) (x : A) ↦ -(x * C t)))
       ((Icc a b) ×ˢ (univ : Set A)) := by
     exact (contDiffOn_snd.mul
-      (hC.comp contDiffOn_fst (fun _ hp ↦ hp.1))).neg
+      (hC.comp contDiffOn_fst (fun _ ↦ And.left))).neg
   have hbackward : ContDiffOn ℝ n S.backward (Icc a b) :=
     ODE.contDiffOn_enat_Icc_of_hasDerivWithinAt hfield
       S.backward_hasDerivWithinAt (fun _ _ ↦ mem_univ _)

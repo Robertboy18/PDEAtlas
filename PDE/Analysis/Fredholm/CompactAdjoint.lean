@@ -64,7 +64,7 @@ theorem IsCompactOperator.exists_finite_rank_approximation
   obtain ⟨N, _hNQ, hNfinite, hcover⟩ := hQ.finite_cover_balls hε
   let S : Submodule 𝕜 F := Submodule.span 𝕜 N
   let : FiniteDimensional 𝕜 S := FiniteDimensional.span_of_finite 𝕜 hNfinite
-  let : CompleteSpace S := FiniteDimensional.complete 𝕜 S
+  let : CompleteSpace S := FiniteDimensional.completeSpace 𝕜 S
   let P : F →L[𝕜] F := S.starProjection
   let A : E →L[𝕜] F := P.comp K
   have hArange : A.range ≤ S := by

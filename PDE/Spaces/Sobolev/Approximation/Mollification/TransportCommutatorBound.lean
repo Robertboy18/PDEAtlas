@@ -74,7 +74,7 @@ theorem norm_mollifierTransportCommutatorCLM_apply_le
   let M : ℝ := ∫ x, ‖x‖ * ‖(∂[j] μ.ρ) x‖
   have hK : (K : ℝ) =
       ∑ l : Fin n, ‖(A : WkpAmbientOn n 1 ∞ univ) (singleDerivIndex n l)‖ := by
-    simp only [K, NNReal.coe_sum, coe_nnnorm]
+    simp only [K, NNReal.coe_sum, coe_nnNorm]
   have hmp : MeasurePreserving (id : ℝ^n → ℝ^n)
       (volume : Measure (ℝ^n)) (domainMeasure n univ) := by
     simpa only [domainMeasure, Measure.restrict_univ] using

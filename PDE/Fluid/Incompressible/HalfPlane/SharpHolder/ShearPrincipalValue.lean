@@ -338,7 +338,8 @@ theorem tendsto_setIntegral_box_inter_strip (hK : ∀ y, K y = (y 0 ^ 2 - y 1 ^ 
         (union_subset hsub fun y h ↦ ⟨h.1.1, h.2⟩)
     have hKWb := hKW ε hε _ sdiff_subset (hQm.diff measurableSet_ball) fun y hy ↦ hfar ε y hy.2
     rw [hunion, setIntegral_union
-      (disjoint_left.2 fun y h₁ h₂ ↦ (h₂.1.2 : |y 0 - x 0| < ε).not_ge h₁.2) (hSm ε)
+      (disjoint_left.2 fun y h₁ h₂ ↦
+        ((And.left h₂).2 : |y 0 - x 0| < ε).not_ge (And.right h₁)) (hSm ε)
       (hKWb.mono_set (hunion ▸ subset_union_left)) (hKWb.mono_set (hunion ▸ subset_union_right))]
   -- the region between the strip and the disc
   have hval : ∀ ε, 0 < ε → ε ≤ a → ε ≤ b₁ → ε ≤ b₂ → ∫ y in S ε, K (x - y) =
@@ -390,7 +391,7 @@ theorem tendsto_setIntegral_box_inter_strip (hK : ∀ y, K y = (y 0 ^ 2 - y 1 ^ 
     refine tendsto_const_nhds.congr' ?_
     filter_upwards [eventually_nhdsWithin_of_eventually_nhds
       (eventually_lt_nhds (abs_pos.2 (sub_ne_zero.2 hy)))] with ε hε
-    rw [indicator_of_notMem fun h ↦ (not_lt.2 hε.le) h.1.2]
+    rw [indicator_of_notMem fun h ↦ (not_lt.2 hε.le) (And.left h).2]
   -- the strip integral of the regular part tends to zero
   set f : ℝ → ℝ := fun s ↦ b₂ / (2 * (s ^ 2 + b₂ ^ 2)) + b₁ / (2 * (s ^ 2 + b₁ ^ 2)) with hf
   have hI : Tendsto (fun ε ↦ ∫ s in (-ε)..ε, f s) (𝓝[>] 0) (𝓝 0) := by

@@ -81,7 +81,7 @@ theorem lipschitzWith_mollify_of_weak_derivative_bound
       simpa only [iteratedPartialDeriv] using congrFun hcomm x
     rw [hrow]
     exact norm_mollify_le_of_ae_bound μ hε (hC j) x
-  apply lipschitzWith_of_nnnorm_fderiv_le
+  apply lipschitzWith_of_nnNorm_fderiv_le
     ((mollify_contDiff_of_pos μ hε f hf).differentiable (by simp))
   intro x
   apply NNReal.coe_le_coe.mp

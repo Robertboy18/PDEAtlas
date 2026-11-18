@@ -162,13 +162,13 @@ theorem eLpNorm_lintegral_convolution_le {G : Type*} [MeasurableSpace G]
       eLpNorm f (ENNReal.ofReal p) μ * eLpNorm g (ENNReal.ofReal q) μ := by
   have hr : 0 < r := by linarith
   have hkernel : Measurable (fun z : G × G ↦ f (z.1 - z.2) * g z.2) := by fun_prop
-  rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (ne_of_gt (ofReal_pos.mpr hr)) ofReal_ne_top
+  rw [eLpNorm_eq_lintegral_rpow_eNorm_toReal (ne_of_gt (ofReal_pos.mpr hr)) ofReal_ne_top
       hkernel.lintegral_prod_right.aestronglyMeasurable,
-    eLpNorm_eq_lintegral_rpow_enorm_toReal (ne_of_gt (ofReal_pos.mpr hp)) ofReal_ne_top
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal (ne_of_gt (ofReal_pos.mpr hp)) ofReal_ne_top
       hf.aestronglyMeasurable,
-    eLpNorm_eq_lintegral_rpow_enorm_toReal (ne_of_gt (ofReal_pos.mpr hq)) ofReal_ne_top
+    eLpNorm_eq_lintegral_rpow_eNorm_toReal (ne_of_gt (ofReal_pos.mpr hq)) ofReal_ne_top
       hg.aestronglyMeasurable]
-  simp only [toReal_ofReal hp.le, toReal_ofReal hq.le, toReal_ofReal hr.le, enorm_eq_self]
+  simp only [toReal_ofReal hp.le, toReal_ofReal hq.le, toReal_ofReal hr.le, eNorm_eq_self]
   have h := rpow_le_rpow (lintegral_convolution_rpow_le μ hp hq hpr hqr hpqr hf hg)
     (by positivity : (0 : ℝ) ≤ 1 / r)
   have hpr' : r / p * (1 / r) = 1 / p := by cas using [hp, hq, hr]
@@ -203,15 +203,15 @@ theorem eLpNorm_lintegral_convolution_le_of_one_le {p q r : ℝ≥0∞} (hp : 1 
       have hshift : Measurable (fun y ↦ f (x - y)) := hf.comp (measurable_const.sub measurable_id)
       have hholder := eLpNorm_le_eLpNorm_mul_eLpNorm_ennreal (μ := μ) (p := p) (q := q) (r := 1)
         hshift.aestronglyMeasurable hg.aestronglyMeasurable
-      rw [eLpNorm_one_eq_lintegral_enorm ((hshift.mul hg).aestronglyMeasurable)] at hholder
+      rw [eLpNorm_one_eq_lintegral_eNorm ((hshift.mul hg).aestronglyMeasurable)] at hholder
       have htrans : eLpNorm (fun y ↦ f (x - y)) p μ = eLpNorm f p μ :=
         eLpNorm_comp_measurePreserving (g := f) (f := fun y ↦ x - y)
           hf.aestronglyMeasurable (Measure.measurePreserving_sub_left μ x)
-      simpa only [Pi.mul_apply, enorm_eq_self, htrans] using hholder
+      simpa only [Pi.mul_apply, eNorm_eq_self, htrans] using hholder
     have hkernel : Measurable (fun z : G × G ↦ f (z.1 - z.2) * g z.2) := by fun_prop
     rw [eLpNorm_exponent_top hkernel.lintegral_prod_right.aestronglyMeasurable]
-    exact eLpNormEssSup_le_of_ae_enorm_bound (Filter.Eventually.of_forall fun x ↦ by
-      simpa only [enorm_eq_self] using hpoint x)
+    exact eLpNormEssSup_le_of_ae_eNorm_bound (Filter.Eventually.of_forall fun x ↦ by
+      simpa only [eNorm_eq_self] using hpoint x)
   · have hp' : p ≠ ∞ := ne_top_of_le_ne_top hr hpr
     have hq' : q ≠ ∞ := ne_top_of_le_ne_top hr hqr
     have hp0 : 0 < p.toReal := ENNReal.toReal_pos (zero_lt_one.trans_le hp).ne' hp'
@@ -268,15 +268,15 @@ theorem eLpNorm_integral_convolution_le {G : Type*} [MeasurableSpace G]
   have hkernel : Measurable (fun z : G × G ↦ f (z.1 - z.2) * g z.2) := by fun_prop
   calc
     _ ≤ eLpNorm (fun x ↦ ∫⁻ y, ‖f (x - y)‖ₑ * ‖g y‖ₑ ∂μ) (ENNReal.ofReal r) μ := by
-      apply eLpNorm_mono_enorm hkernel.stronglyMeasurable.integral_prod_right.aestronglyMeasurable
+      apply eLpNorm_mono_eNorm hkernel.stronglyMeasurable.integral_prod_right.aestronglyMeasurable
       intro x
-      simpa only [enorm_eq_self, enorm_mul] using
-        enorm_integral_le_lintegral_enorm (μ := μ) (fun y ↦ f (x - y) * g y)
+      simpa only [eNorm_eq_self, eNorm_mul] using
+        eNorm_integral_le_lintegral_eNorm (μ := μ) (fun y ↦ f (x - y) * g y)
     _ ≤ eLpNorm (fun x ↦ ‖f x‖ₑ) (ENNReal.ofReal p) μ *
         eLpNorm (fun x ↦ ‖g x‖ₑ) (ENNReal.ofReal q) μ :=
-      ENNReal.eLpNorm_lintegral_convolution_le μ hp hq hpr hqr hpqr hf.enorm hg.enorm
+      ENNReal.eLpNorm_lintegral_convolution_le μ hp hq hpr hqr hpqr hf.eNorm hg.eNorm
     _ = _ := by
-      rw [eLpNorm_enorm f hf.aestronglyMeasurable, eLpNorm_enorm g hg.aestronglyMeasurable]
+      rw [eLpNorm_eNorm f hf.aestronglyMeasurable, eLpNorm_eNorm g hg.aestronglyMeasurable]
 
 /-- Finite Young data give an actual integrable convolution integrand almost everywhere. -/
 theorem ae_integrable_convolution_of_memLp {G : Type*} [MeasurableSpace G]
@@ -290,13 +290,13 @@ theorem ae_integrable_convolution_of_memLp {G : Type*} [MeasurableSpace G]
   have hr : 0 < r := by linarith
   have hfp' : (∫⁻ x, ‖f x‖ₑ ^ p ∂μ) < ⊤ := by
     simpa only [ENNReal.toReal_ofReal hp.le] using
-      lintegral_rpow_enorm_lt_top_of_eLpNorm_lt_top
+      lintegral_rpow_eNorm_lt_top_of_eLpNorm_lt_top
         (ne_of_gt (ENNReal.ofReal_pos.mpr hp)) ENNReal.ofReal_ne_top hfp
   have hgq' : (∫⁻ x, ‖g x‖ₑ ^ q ∂μ) < ⊤ := by
     simpa only [ENNReal.toReal_ofReal hq.le] using
-      lintegral_rpow_enorm_lt_top_of_eLpNorm_lt_top
+      lintegral_rpow_eNorm_lt_top_of_eLpNorm_lt_top
         (ne_of_gt (ENNReal.ofReal_pos.mpr hq)) ENNReal.ofReal_ne_top hgq
-  have hbound := ENNReal.lintegral_convolution_rpow_le μ hp hq hpr hqr hpqr hf.enorm hg.enorm
+  have hbound := ENNReal.lintegral_convolution_rpow_le μ hp hq hpr hqr hpqr hf.eNorm hg.eNorm
   have hfin : (∫⁻ x, (∫⁻ y, ‖f (x - y)‖ₑ * ‖g y‖ₑ ∂μ) ^ r ∂μ) < ⊤ :=
     hbound.trans_lt (ENNReal.mul_lt_top
       (ENNReal.rpow_lt_top_of_nonneg (div_nonneg hr.le hp.le) hfp'.ne)
@@ -304,8 +304,8 @@ theorem ae_integrable_convolution_of_memLp {G : Type*} [MeasurableSpace G]
   have hm : Measurable (fun z : G × G ↦ ‖f (z.1 - z.2)‖ₑ * ‖g z.2‖ₑ) := by fun_prop
   filter_upwards [ae_lt_top (hm.lintegral_prod_right.pow_const r) hfin.ne] with x hx
   refine ⟨((hf.comp (measurable_const.sub measurable_id)).mul hg).aestronglyMeasurable, ?_⟩
-  rw [hasFiniteIntegral_iff_enorm]
-  simp only [enorm_mul]
+  rw [hasFiniteIntegral_iff_eNorm]
+  simp only [eNorm_mul]
   by_contra h
   have heq : (∫⁻ y, ‖f (x - y)‖ₑ * ‖g y‖ₑ ∂μ) = ⊤ := top_unique (not_lt.mp h)
   rw [heq, ENNReal.top_rpow_of_pos hr] at hx

@@ -37,7 +37,7 @@ theorem map_restrict_le_of_det_le
   apply Measure.le_iff.mpr
   intro A hA
   rw [Measure.map_apply hE hA, Measure.restrict_apply (hA.preimage hE),
-    Measure.smul_apply, Measure.restrict_apply hA, smul_eq_mul]
+    smul_apply, Measure.restrict_apply hA, smul_eq_mul]
   have hset : E ⁻¹' A ∩ E.source = E.symm '' (A ∩ E.target) := by
     ext x
     constructor

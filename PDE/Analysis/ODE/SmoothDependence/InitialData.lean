@@ -81,7 +81,7 @@ theorem exists_local_contDiff_one_family_with_initialData
   let curve : Y × ℝ → E := fun yt ↦ flow (initial yt.1, yt.2)
   have hlift : ContDiffOn ℝ 1 (fun yt : Y × ℝ ↦ (initial yt.1, yt.2))
       (W ×ˢ Ioo (-T) T) :=
-    (hi.comp contDiffOn_fst (fun yt hyt ↦ hyt.1.1)).prodMk contDiffOn_snd
+    (hi.comp contDiffOn_fst (fun yt hyt ↦ (And.left hyt).1)).prodMk contDiffOn_snd
   have hc : ContDiffOn ℝ 1 curve (W ×ˢ Ioo (-T) T) :=
     hf.comp hlift (fun yt hyt ↦ ⟨hyt.1.2, hyt.2⟩)
   refine ⟨W, hW, hyW, inter_subset_left, T, hT, curve, hc, ?_⟩

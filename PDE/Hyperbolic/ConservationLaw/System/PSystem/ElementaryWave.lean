@@ -237,7 +237,7 @@ def elementaryWaveFamily
   curve_zero := elementaryWaveState_zero_strength stress
   hasStrictFDerivAt_zero k state _hstate :=
     (contDiff_elementaryWaveState hstress hpositive k).contDiffAt
-      |>.hasStrictFDerivAt'
+      |>.hasStrictFDerivAt
         (hasFDerivAt_elementaryWaveState_zero
           hstress hpositive k state)
         one_ne_zero

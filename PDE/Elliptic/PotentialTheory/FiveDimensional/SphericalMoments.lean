@@ -332,7 +332,7 @@ theorem fiveDimensionalHessianAngularRadial_integrable
   let K : ℝ := (C : ℝ) * M
   refine (((integrable_indicator_iff measurableSet_Ioc).2 (integrableOn_const (C := K)
     (s := Set.Ioc 0 R) measure_Ioc_lt_top.ne)).mono_measure Measure.restrict_le_self).mono
-    (((continuousOn_inv₀.mono fun r hr ↦ hr.ne').mul hAcont.continuousOn).aestronglyMeasurable
+    (((continuousOn_inv₀.mono fun r hr ↦ ne_of_gt hr).mul hAcont.continuousOn).aestronglyMeasurable
       measurableSet_Ioi) ?_
   filter_upwards [ae_restrict_mem measurableSet_Ioi] with r (hr : 0 < r)
   change |r⁻¹ * A r| ≤ |(Set.Ioc 0 R).indicator (fun _ ↦ K) r|
@@ -342,7 +342,7 @@ theorem fiveDimensionalHessianAngularRadial_integrable
     calc r⁻¹ * |A r| ≤ r⁻¹ * (C * r * M) :=
           mul_le_mul_of_nonneg_left (hA_bound r hr) (inv_nonneg.2 hr.le)
       _ = C * M := by field_simp
-  · rw [Set.indicator_of_notMem fun h ↦ hrR h.2]
+  · rw [Set.indicator_of_notMem fun h ↦ hrR (And.right h)]
     simp [hA_zero r (le_of_not_ge hrR)]
 
 /-- The radial form of the spherical principal value converges as the inner

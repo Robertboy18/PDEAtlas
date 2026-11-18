@@ -73,6 +73,7 @@ theorem integral_source_pairing (hu : N.IsEnergySolution x u) {T : ℝ} (hT : 0 
     fun_prop
   have hq : Continuous
       (fun t ↦ ‖(u t).2‖ ^ 2 - gradientForm n (u t).1 (u t).1) := by fun_prop
+  have hs : Continuous (fun t ↦ N.source (u t).1) := (map_continuous N.source).comp (by fun_prop)
   have hr : Continuous
       (fun t ↦ ⟪N.source (u t).1, (energyTriple n).inclusion (u t).1⟫_ℝ) := by fun_prop
   have h := intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le hT hp.continuousOn

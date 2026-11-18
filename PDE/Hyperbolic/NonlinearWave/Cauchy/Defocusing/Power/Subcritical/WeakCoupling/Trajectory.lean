@@ -78,8 +78,8 @@ theorem exists_weakCoupling_cone_trajectory_of_lipschitz {f : ℝ → ℝ}
       funext z
       ext q
       simp only [Function.comp_apply, coneField_apply, composeCompact_apply,
-        B, BoundedContinuousFunction.add_apply, constCLM_apply, const_apply,
-        BoundedContinuousFunction.smul_apply, coordinates, mkOfCompact_apply]
+        B, add_apply, constCLM_apply, const_apply,
+        smul_apply, coordinates, mkOfCompact_apply]
       change H (z.1, physicalPoint z.2 q) = H ((z.1, (0, z.2.2)) + z.2.1 • (0, q.val))
       congr 1
       ext <;> simp [physicalPoint, coneTime, coneSpace]
@@ -113,7 +113,7 @@ theorem exists_weakCoupling_cone_trajectory_of_lipschitz {f : ℝ → ℝ}
           ext z
           rfl
         ext z
-        simp only [BoundedContinuousFunction.smul_apply, restrictCone_apply,
+        simp only [smul_apply, restrictCone_apply,
           duhamelOperator_descend, hN, smul_eq_mul]
         change (κ * p.1) ^ 2 * (coneTime q ^ 2 * _) = (κ * (p.1 * coneTime q)) ^ 2 * _
         cas
@@ -125,7 +125,7 @@ theorem exists_weakCoupling_cone_trajectory_of_lipschitz {f : ℝ → ℝ}
   let a : ℝ → (ℝ × ℝ^3) → ℝ := fun κ p ↦ duhamelOperator (N (ψ (A (κ, p)))) vertex
   have hAc : ContDiff ℝ 1 A :=
     (contDiff_fst.mul contDiff_snd.fst).prodMk hcone
-  have hw := hψreg.comp hAc.contDiffOn (fun _ hp ↦ hp)
+  have hw := hψreg.comp (s := A ⁻¹' {p | |p.1| < T}) hAc.contDiffOn (fun _ hp ↦ hp)
   have ha := duhamelOperator.contDiff.comp_contDiffOn
     ((contDiff_composeCompact hf).comp_contDiffOn hw)
   have hvc : ContDiffOn ℝ 1 (Function.uncurry v) {z | |z.1 * z.2.1| < T} :=

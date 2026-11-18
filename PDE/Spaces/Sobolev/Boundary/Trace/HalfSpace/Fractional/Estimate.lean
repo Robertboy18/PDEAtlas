@@ -63,6 +63,6 @@ theorem lintegral_traceLp_sub_rpow_div_lt_top (n : ℕ) (p : ℝ)
   apply lt_of_le_of_lt (hC u)
   apply ENNReal.mul_lt_top ENNReal.coe_lt_top
   exact ENNReal.sum_lt_top.mpr fun i _ ↦
-    ENNReal.rpow_lt_top_of_nonneg (zero_lt_one.trans hp).le enorm_ne_top
+    ENNReal.rpow_lt_top_of_nonneg (zero_lt_one.trans hp).le eNorm_ne_top
 
 end SobolevSpace.Trace.HalfSpace

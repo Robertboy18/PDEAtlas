@@ -221,7 +221,7 @@ theorem fderiv_mechanicalEntropy_apply {potential : ℝ → ℝ} {state directio
     ring
   rw [hfun] at h'
   convert h' using 1
-  all_goals ring
+  ring
 
 /-- Differential of the p-system mechanical entropy flux. -/
 theorem fderiv_mechanicalEntropyFlux_apply {stress : ℝ → ℝ} {state direction : ℝ^2}
@@ -242,7 +242,7 @@ theorem fderiv_mechanicalEntropyFlux_apply {stress : ℝ → ℝ} {state directi
   change fderiv ℝ (fun y : ℝ^2 ↦ -stress (y 0) * y 1) state direction =
       -(deriv stress (state 0) * direction 0 * state 1) - stress (state 0) * direction 1
   convert h' using 1
-  all_goals ring
+  ring
 
 /-- The mechanical energy and energy flux form an entropy pair whenever
 `P' = p`. -/

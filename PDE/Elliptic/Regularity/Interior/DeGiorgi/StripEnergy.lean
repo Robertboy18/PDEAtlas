@@ -54,15 +54,15 @@ theorem exists_level_separation_sq_le_strip_energy (hconn : IsConnected Ω) :
   let E := {x | a < wkpBaseCoordinateCLM U x ∧ wkpBaseCoordinateCLM U x < b}
   have hlow : μ.real {x | wkpBaseCoordinateCLM V x ≤ a} =
       μ.real {x | wkpBaseCoordinateCLM U x ≤ a} :=
-    measureReal_congr (hbase.fun_comp (fun t : ℝ ↦ t ≤ a))
+    measureReal_congr (hbase.preimage {t : ℝ | t ≤ a})
   have hhigh : μ.real {x | b ≤ wkpBaseCoordinateCLM V x} =
       μ.real {x | b ≤ wkpBaseCoordinateCLM U x} :=
-    measureReal_congr (hbase.fun_comp (fun t : ℝ ↦ b ≤ t))
+    measureReal_congr (hbase.preimage {t : ℝ | b ≤ t})
   have hstrip (i : Fin n) :
       (∫ x in {x | a < wkpBaseCoordinateCLM V x ∧ wkpBaseCoordinateCLM V x < b},
         ‖wkpCoordinateCLM (singleDerivIndex n i) V x‖ ∂μ) =
       ∫ x in E, ‖wkpCoordinateCLM (singleDerivIndex n i) U x‖ ∂μ :=
-    (setIntegral_congr_set (hbase.fun_comp fun t : ℝ ↦ a < t ∧ t < b)).trans
+    (setIntegral_congr_set (hbase.preimage {t : ℝ | a < t ∧ t < b})).trans
       (integral_congr_ae (((hderiv i).filter_mono (ae_mono Measure.restrict_le_self)).fun_comp
         norm))
   have hs := hsep V a b hab

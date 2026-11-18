@@ -41,16 +41,16 @@ theorem integrable_and_integral_le_of_ae_limit_nonneg
     filter_upwards [hnonneg n] with x hx
     exact Real.norm_of_nonneg hx
   have hlin (n : ℕ) : (∫⁻ x, ‖u n x‖ₑ ∂μ) ≤ ENNReal.ofReal C := by
-    rw [← ofReal_integral_norm_eq_lintegral_enorm (hu n), hnorm n]
+    rw [← ofReal_integral_norm_eq_lintegral_eNorm (hu n), hnorm n]
     exact ENNReal.ofReal_le_ofReal (hbound n)
   have hinf : liminf (fun n ↦ ∫⁻ x, ‖u n x‖ₑ ∂μ) atTop ≤ ENNReal.ofReal C :=
     liminf_le_of_frequently_le (Eventually.of_forall hlin).frequently
   have hint : Integrable f μ :=
     integrable_of_tendsto hlim (fun n ↦ (hu n).aestronglyMeasurable)
       (ne_top_of_le_ne_top ENNReal.ofReal_ne_top hinf)
-  have hfatou := (lintegral_enorm_le_liminf_of_tendsto hlim
-    (fun n ↦ (hu n).aestronglyMeasurable.enorm)).trans hinf
-  rw [← ofReal_integral_norm_eq_lintegral_enorm hint] at hfatou
+  have hfatou := (lintegral_eNorm_le_liminf_of_tendsto hlim
+    (fun n ↦ (hu n).aestronglyMeasurable.eNorm)).trans hinf
+  rw [← ofReal_integral_norm_eq_lintegral_eNorm hint] at hfatou
   have hnormf : (∫ x, ‖f x‖ ∂μ) ≤ C := by
     simpa only [ENNReal.toReal_ofReal (integral_nonneg fun _ ↦ norm_nonneg _),
       ENNReal.toReal_ofReal hC] using

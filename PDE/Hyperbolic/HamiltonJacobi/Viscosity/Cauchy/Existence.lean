@@ -98,7 +98,7 @@ theorem exists_viscosityInitialSolution_of_bound {H g : E → ℝ} {K C : NNReal
       (fun z hz ↦ by change v z ≤ b z; rw [← huv hz]; exact (hub z hz).2)
       (isClosed_le hv.continuous hb)
   have hclosure : closure (positiveTimeDomain (E := E)) = {z : E × ℝ | 0 ≤ z.2} := by
-    rw [show positiveTimeDomain (E := E) = univ ×ˢ Ioi 0 from univ_prod.symm, closure_prod_eq,
+    rw [show positiveTimeDomain (E := E) = univ ×ˢ Ioi 0 from Eq.symm univ_prod, closure_prod_eq,
       closure_univ, closure_Ioi, univ_prod]
     rfl
   have htrace : ∀ z : E × ℝ, 0 ≤ z.2 → |v z - g z.1| ≤ (C : ℝ) * z.2 := by

@@ -39,9 +39,9 @@ theorem ofReal_norm_integral_sq_le_lintegral_lintegral_re_inner
     {f : α → E} (hf : Integrable f μ) :
     ENNReal.ofReal (‖∫ x, f x ∂μ‖ ^ 2) ≤
       ∫⁻ x, ∫⁻ y, ‖RCLike.re (inner 𝕜 (f x) (f y))‖ₑ ∂μ ∂μ := by
-  rw [← Real.enorm_of_nonneg (sq_nonneg _),
+  rw [← Real.eNorm_of_nonneg (sq_nonneg _),
     norm_integral_sq_eq_integral_integral_re_inner (𝕜 := 𝕜) hf]
-  apply (enorm_integral_le_lintegral_enorm _).trans
-  exact lintegral_mono fun x ↦ enorm_integral_le_lintegral_enorm _
+  apply (eNorm_integral_le_lintegral_eNorm _).trans
+  exact lintegral_mono fun x ↦ eNorm_integral_le_lintegral_eNorm _
 
 end MeasureTheory

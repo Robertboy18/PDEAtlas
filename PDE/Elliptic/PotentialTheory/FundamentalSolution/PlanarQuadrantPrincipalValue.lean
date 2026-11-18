@@ -188,8 +188,8 @@ theorem integral_rectangle_hessianKernel_zero_zero {s₀ s₁ t₀ t₁ : ℝ} (
     ∫ y in {y : ℝ^2 | y 0 ∈ Icc s₀ s₁ ∧ y 1 ∈ Icc t₀ t₁}, hessianKernel 0 0 y =
       (Real.arctan (s₁ / t₁) - Real.arctan (s₀ / t₁)) / 2 -
         (Real.arctan (s₁ / t₀) - Real.arctan (s₀ / t₀)) / 2 :=
-  setIntegral_rectangle_hessianKernel measurableSet_Icc subset_rfl EventuallyEq.rfl
-    measurableSet_Icc subset_rfl EventuallyEq.rfl hs₀ hs ht₀ ht ht₁ hpos
+  setIntegral_rectangle_hessianKernel measurableSet_Icc subset_rfl EventuallyEqSet.rfl
+    measurableSet_Icc subset_rfl EventuallyEqSet.rfl hs₀ hs ht₀ ht ht₁ hpos
 
 /-! ### The corner rectangle -/
 
@@ -457,7 +457,7 @@ private theorem integral_square (ha : 0 < a) (hb : 0 < b) (hε : 0 < ε) (hεa :
     (hint.mono_set subset_union_right),
     integral_rectangle_hessianKernel_zero_zero hε.le hεa le_rfl hb.le hb (Or.inl hε),
     setIntegral_rectangle_hessianKernel measurableSet_Ico Ico_subset_Icc_self Ico_ae_eq_Icc
-      measurableSet_Icc subset_rfl EventuallyEq.rfl le_rfl hε.le hε.le hεb hb (Or.inr hε),
+      measurableSet_Icc subset_rfl EventuallyEqSet.rfl le_rfl hε.le hε.le hεb hb (Or.inr hε),
     div_self hε.ne', Real.arctan_one]
   simp only [div_zero, Real.arctan_zero, zero_div, sub_zero]
   ring

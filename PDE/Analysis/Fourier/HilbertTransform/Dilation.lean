@@ -28,7 +28,9 @@ open scoped FourierTransform SchwartzMap
 
 noncomputable section
 
-/-- Dilation preserves null sets, so it acts on almost-everywhere representatives. -/
+/-- Dilation preserves null sets, so it acts on almost-everywhere representatives. The dilation
+is measurable by Mathlib's `measurable_const_mul`; the structure records almost-everywhere
+measurability only. -/
 theorem quasiMeasurePreserving_real_dilation {c : ℝ} (hc : c ≠ 0) :
     QuasiMeasurePreserving (fun x : ℝ ↦ c * x) volume volume :=
   Measure.quasiMeasurePreserving_smul volume hc

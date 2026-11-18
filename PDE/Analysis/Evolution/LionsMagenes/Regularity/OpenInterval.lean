@@ -74,7 +74,7 @@ variable {V H : Type*}
 
 /-- The standard countable exhaustion of `(a,b)` by intervals staying a
 distance `(b-a)/(n+2)` from each endpoint. -/
-def interiorIntervalExhaustion (a b : ℝ) (n : ℕ) : Set ℝ :=
+noncomputable def interiorIntervalExhaustion (a b : ℝ) (n : ℕ) : Set ℝ :=
   Set.Ioo (a + (b - a) / (n + 2 : ℝ))
     (b - (b - a) / (n + 2 : ℝ))
 

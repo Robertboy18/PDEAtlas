@@ -42,7 +42,7 @@ theorem baseRepresentative_tsum_ae {n k : ℕ} {p : ℝ≥0∞} [Fact (1 ≤ p)]
     Summable.of_nonneg_of_le (fun _ ↦ norm_nonneg _)
       (fun i ↦ wkpBaseCoordinateCLM_norm_le (E i)) hE
   have he : (∑' i, ‖B (E i)‖ₑ) ≠ ∞ :=
-    tsum_enorm_ne_top_iff_summable_norm.mpr hB
+    tsum_eNorm_ne_top_iff_summable_norm.mpr hB
   change (fun x ↦ B (∑' i, E i) x) =ᵐ[domainMeasure n Ω] _
   rw [B.map_tsum hE.of_norm]
   exact Lp.coeFn_tsum he

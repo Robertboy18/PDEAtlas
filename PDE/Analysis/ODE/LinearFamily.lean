@@ -56,7 +56,7 @@ theorem exists_local_linear_equation
       rw [Real.dist_eq, sub_zero, abs_lt]
       constructor <;> linarith only [ht.1, ht.2, hεd]
     have h := norm_le_norm_add_const_of_dist_le (hnear htd).le
-    simpa only [K, NNReal.coe_add, NNReal.coe_one, coe_nnnorm] using h
+    simpa only [K, NNReal.coe_add, NNReal.coe_one, coe_nnNorm] using h
   have hpl : IsPicardLindelof (fun (t : ℝ) (y : R) ↦ B t * y)
       (tmin := -ε) (tmax := ε) ⟨0, by constructor <;> linarith only [hε]⟩
       x0 1 0 L K := by
@@ -81,7 +81,7 @@ theorem exists_local_linear_equation
         _ ≤ (K : ℝ) * (‖x0‖ + 1) :=
           mul_le_mul (hnormB t ht) hy' (norm_nonneg _) K.coe_nonneg
         _ = L := by simp only [L, NNReal.coe_mul, NNReal.coe_add,
-          NNReal.coe_one, coe_nnnorm]
+          NNReal.coe_one, coe_nnNorm]
     · have hεL' : ε * ((L : ℝ) + 1) ≤ 1 :=
         (le_div_iff₀ (by positivity : 0 < (L : ℝ) + 1)).mp hεL
       simp only [sub_zero, zero_sub, neg_neg, max_self, NNReal.coe_one,
@@ -125,7 +125,7 @@ theorem exists_local_continuous_linear_family
   let J : X × ℝ → E →L[ℝ] E := fun xt ↦ γ xt.2 xt.1
   have hJ : ContinuousOn J (univ ×ˢ Icc (-ε) ε) :=
     continuous_eval.comp_continuousOn
-      ((hγcont.comp continuousOn_snd (fun _ h ↦ h.2)).prodMk continuousOn_fst)
+      ((hγcont.comp continuousOn_snd (fun _ ↦ And.right)).prodMk continuousOn_fst)
   refine ⟨ε, hε, hεT, J, hJ, ?_⟩
   intro x
   refine ⟨?_, ?_⟩

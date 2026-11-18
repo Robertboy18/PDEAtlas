@@ -131,7 +131,7 @@ theorem ancientLift_ancientMild_fixedPoint {a η : ℝ} (hη : 0 < η)
   have hv := congrArg (fun w : Iic a →ᵇ VectorH 3 3 ↦ ancientLift η w t) hu
   have hlift : ancientLift η u t = ancientLift η b t +
       ancientLift η (ancientMildOperator a η hη (mildForcing L f u)) t := by
-    simpa only [ancientLift, ContinuousMap.coe_mk, BoundedContinuousFunction.add_apply,
+    simpa only [ancientLift, ContinuousMap.coe_mk, add_apply,
       smul_add] using hv
   exact hlift.trans (congrArg (fun x : VectorH 3 3 ↦ ancientLift η b t + x) hdecode)
 
@@ -144,7 +144,7 @@ theorem leraySobolev_ancientMild_fixedPoint {a η : ℝ} (hη : 0 < η)
     (hb : ∀ t : Iic a, leraySobolev 3 3 (b t) = b t) (t : Iic a) :
     leraySobolev 3 3 (u t) = u t := by
   have hv := congrArg (fun w : Iic a →ᵇ VectorH 3 3 ↦ w t) hu
-  simp only [BoundedContinuousFunction.add_apply] at hv
+  simp only [add_apply] at hv
   rw [hv, map_add, hb, ancientMildOperator,
     leraySobolev_ancientSelfsimilarDuhamelOperator]
 
