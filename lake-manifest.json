@@ -19,7 +19,7 @@
       "type": "git",
       "subDir": null,
       "scope": "",
-      "rev": "0cb7f36901b1c80ea2b7dc01551947643a71b840",
+      "rev": "b5fada96bcc0c96866bdf863c28914957ecb880c",
       "name": "SymLean",
       "manifestFile": "lake-manifest.json",
       "inputRev": "v4.36.0",
