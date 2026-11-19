@@ -13,16 +13,18 @@ The source directory is the repository root so that `Blueprint.lean` remains
 the `Blueprint` module and continues to own the `Blueprint.Chapters.*` tree.
 -/
 
-def certificatesMode : String :=
+def certificatesMode : String := run_io do
   match (get_config? certificates).getD "kernel" with
-  | "kernel" => "kernel"
-  | "fast" | "native" => "fast"
-  | value => panic! s!"Unknown certificates profile '{value}'; use kernel or fast"
+  | "kernel" => return "kernel"
+  | "fast" | "native" => return "fast"
+  | value =>
+    throw <| .userError <|
+      s!"unknown certificates profile '{value}': use kernel, fast or native, with lake -R"
 
 package LeanPDEBlueprint where
   version := v!"1.0.0"
   buildDir := if certificatesMode == "fast" then ".lake/build-fast" else ".lake/build"
-  description := "Mathematical blueprint and dependency maps for LeanPDE"
+  description := "Mathematical blueprint and dependency maps for PDEAtlas"
   license := "Apache-2.0"
   leanOptions := #[
     ⟨`pp.unicode.fun, true⟩,

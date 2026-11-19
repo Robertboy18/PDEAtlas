@@ -3,28 +3,14 @@ version: 1.0.0
 project:
   name: PDEAtlas
   description: >-
-    PDEAtlas is a substantial formalization and exposition of Lawrence C. Evans’s Partial
-    Differential Equations, second edition, in Lean 4 and Mathlib. It develops classical,
-    weak, distributional, and variational PDE theory: fundamental solutions and representation
-    formulas; distributions and Fourier analysis; Sobolev calculus, approximation, extension,
-    traces, embeddings, and compactness; elliptic existence, maximum principles, spectra,
-    and regularity; heat and wave evolution; analytic Cauchy problems; Hamilton–Jacobi
-    equations and conservation laws; and the calculus of variations. The accompanying
-    Blueprint gives mathematical explanations, worked examples, and diagrams for graduate
-    students and undergraduates with a background in analysis. The library is intended as
-    reusable infrastructure for further work on Navier–Stokes, Euler, and singularity formation.
-    Its proof-producing computer algebra system, SymLean, is implemented in Lean and connects symbolic
-    normalization, differentiation, gradients, Laplacians, and supported integration to
-    Mathlib’s real functions and analytic operators. CEGA adds certified interval and Taylor
-    bounds, validated quadrature, matrix and root certificates, and ODE trajectory certificates,
-    using FloatLib’s numerical backends. Accepted calculations produce proofs of their stated
-    mathematical guarantees, with domain and regularity conditions preserved. The fluid
-    development includes Stokes minimizers, Euler potential-flow constructions, vorticity,
-    energy identities, exact flows, half-plane Biot–Savart estimates, axisymmetric Euler in a
-    cylinder, and well-posedness of the half-plane Boussinesq system. The De Gregorio blowup of Chen, Hou, and Huang and the
-    Navier–Stokes nonuniqueness of Hou, Wang, and Yang are formalized on top of PDEAtlas in the
-    companion repository BlowupZoo (https://github.com/Robertboy18/BlowupZoo). The theorem statements and
-    module docs record the precise coverage.
+    PDEAtlas formalizes selected results from the second edition of Lawrence C. Evans’s
+    Partial Differential Equations in Lean 4 and Mathlib. The Blueprint follows Evans’s
+    chapters and links its statements and worked examples to Lean. The library also develops
+    analytic tools for Stokes, Euler, Navier–Stokes and Boussinesq. It uses SymLean for
+    exact symbolic identities and FloatLib for checked numerical bounds. The companion
+    BlowupZoo repository (https://github.com/Robertboy18/BlowupZoo) builds on these tools
+    for results including the Chen–Hou–Huang De Gregorio blowup and the Hou–Wang–Yang
+    Navier–Stokes nonuniqueness theorem.
   authors:
     - Robert Joseph George
     - Anima Anandkumar

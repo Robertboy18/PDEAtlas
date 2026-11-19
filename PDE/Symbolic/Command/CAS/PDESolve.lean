@@ -28,11 +28,8 @@ coefficients, the derivatives written `u_t`, `u_x`, `u_tt`, `u_xx`:
   `∑ (a cos (c ω t) + b / (c ω) sin (c ω t)) sin (ω x)` (`ClassicalPDE.waveSum_solves`), again the
   only `C²` solution (`ClassicalPDE.waveSum_unique`);
 * wave on the line, without boundary values: d'Alembert's formula with a primitive `G` of `g`
-  from the checked integrator (`ClassicalPDE.dalembert_solves`).
-
-Mathematica's `DSolve` gives these formulas for the same problems; here each comes with the
-theorem that it solves the problem, and except for the wave equation on the line that it is the
-only solution in the stated class.
+  from the checked integrator (`ClassicalPDE.dalembert_solves`). This route verifies the solution
+  formula without a uniqueness claim.
 -/
 
 public meta section
@@ -186,13 +183,9 @@ def constantOf (x : TSyntax `ident) (stx : Syntax) : CommandElabM (ℚ × Nat) :
 
 /-- `![t, x, u t x, u_t, u_x, u_tt, u_xx]`. -/
 def envSyntax (u t x : TSyntax `term) : TermElabM (TSyntax `term) := do
-  let s := mkIdent `s
-  let r := mkIdent `r
-  let y := mkIdent `y
-  let z := mkIdent `z
-  `(![$t, $x, $u $t $x, deriv (fun $s:ident ↦ $u $s $x) $t, deriv (fun $y:ident ↦ $u $t $y) $x,
-    deriv (fun $s:ident ↦ deriv (fun $r:ident ↦ $u $r $x) $s) $t,
-    deriv (fun $y:ident ↦ deriv (fun $z:ident ↦ $u $t $z) $y) $x])
+  `(![$t, $x, $u $t $x, deriv (fun s ↦ $u s $x) $t, deriv (fun y ↦ $u $t y) $x,
+    deriv (fun s ↦ deriv (fun r ↦ $u r $x) s) $t,
+    deriv (fun y ↦ deriv (fun z ↦ $u $t z) y) $x])
 
 /-- The lemmas that restate the answer in ordinary notation. -/
 def pdeCleanLemmas : List Name :=
@@ -210,6 +203,8 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
   let named (suffix : String) : Name :=
     Name.mkSimple (uName.toString (escape := false) ++ suffix)
   let names := [t.getId, x.getId, uName, named "_t", named "_x", named "_tt", named "_xx"]
+  unless names.Nodup do
+    throwErrorAt ref "pdesolve: use distinct names for the function, coordinates and derivatives"
   let reified ← parseExact (← `($lhs - $rhs)) names
   let N := reified.names.length
   let E := reified.expr
@@ -234,7 +229,13 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
     let value := exactValue? (fun i : Fin N ↦ if i.val = 0 then point.1 else point.2) rest
     unless value == some 0 do
       throwErrorAt input "pdesolve: only homogeneous equations are treated"
-  -- Conditions.
+  let kind ←
+    if aTT = 0 && aXX = 0 && aT ≠ 0 then pure "transport"
+    else if aTT = 0 && aT ≠ 0 && aX = 0 && aU = 0 && aXX ≠ 0 && -aXX / aT > 0 then pure "heat"
+    else if aT = 0 && aX = 0 && aU = 0 && aTT ≠ 0 && -aXX / aTT > 0 then pure "wave"
+    else throwErrorAt input "pdesolve: the equation is not of transport, heat or wave type with \
+      the right signs"
+  -- Parse only the conditions this equation uses.
   let mut initial : Option (Verified.Expr (Fin 1)) := none
   let mut velocity : Option (Verified.Expr (Fin 1)) := none
   let mut boundary : List (ℚ × Nat) := []
@@ -244,14 +245,24 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
         let isX := b.raw.isIdent && b.raw.getId == x.getId
         let isT := a.raw.isIdent && a.raw.getId == t.getId
         if f.getId == uName && isX then
+          if initial.isSome then
+            throwErrorAt condition "pdesolve: give the initial value only once"
           unless (← parseRational "pdesolve" a) = 0 do
             throwErrorAt condition "pdesolve: initial values are given at t = 0"
           initial := some (← functionOf x v)
         else if f.getId == named "_t" && isX then
+          unless kind = "wave" do
+            throwErrorAt condition "pdesolve: initial velocity is supported only for the wave \
+              equation"
+          if velocity.isSome then
+            throwErrorAt condition "pdesolve: give the initial velocity only once"
           unless (← parseRational "pdesolve" a) = 0 do
             throwErrorAt condition "pdesolve: initial values are given at t = 0"
           velocity := some (← functionOf x v)
         else if f.getId == uName && isT then
+          if kind = "transport" then
+            throwErrorAt condition "pdesolve: transport is solved on the line without boundary \
+              values"
           unless (← parseRational "pdesolve" v) = 0 do
             throwErrorAt condition "pdesolve: only zero boundary values are treated"
           boundary := boundary ++ [← constantOf x b]
@@ -275,14 +286,6 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
   let uT : TSyntax `term := ⟨u.raw⟩
   let tT : TSyntax `term := ⟨t.raw⟩
   let xT : TSyntax `term := ⟨x.raw⟩
-  let kind : String :=
-    if aTT = 0 && aXX = 0 && aT ≠ 0 then "transport"
-    else if aTT = 0 && aT ≠ 0 && aX = 0 && aU = 0 && aXX ≠ 0 && -aXX / aT > 0 then "heat"
-    else if aT = 0 && aX = 0 && aU = 0 && aTT ≠ 0 && -aXX / aTT > 0 then "wave"
-    else "other"
-  if kind = "other" then
-    throwErrorAt input "pdesolve: the equation is not of transport, heat or wave type with the \
-      right signs"
   let proof ← liftTermElabM do
     let certified (prop : TSyntax `term) : TermElabM (TSyntax `term) := do
       let type ← elabType prop
@@ -293,38 +296,17 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
       exprToSyntax (← quoteVerifiedExpr source)
     let ET ← exprToSyntax (← quoteVerifiedExpr E)
     let env ← envSyntax uT tT xT
-    let equation ← `(∀ $t:ident $x:ident, Verified.Expr.eval $env $ET = 0)
+    let equationAt ← `(Verified.Expr.eval $env $ET = 0)
+    let equation ← `(∀ $t:ident $x:ident, $equationAt)
     let evalSimp ← `(tactic| simp only [Verified.Expr.eval, Matrix.cons_val, Matrix.cons_val_zero,
       Matrix.cons_val_one, Matrix.head_cons, Int.cast_ofNat, Int.cast_neg, Nat.cast_ofNat,
       Nat.cast_one, Nat.cast_zero, Int.cast_one, Int.cast_zero])
-    let s := mkIdent `s
-    let r := mkIdent `r
-    let y := mkIdent `y
-    let z := mkIdent `z
-    let bridgeOf (target : TSyntax `term) (lead : ℚ) : TermElabM (TSyntax `term) := do
-      let leadT ← real lead
-      let statement ← `(∀ $u:ident : ℝ → ℝ → ℝ, ($equation) ↔ $target)
-      let proofT ← `(by
-        intro $u:ident
-        apply forall_congr'
-        intro $t:ident
-        apply forall_congr'
-        intro $x:ident
-        $evalSimp:tactic
-        push_cast
-        constructor
-        · intro h
-          linear_combination (1 / $leadT) * h
-        · intro h
-          linear_combination ($leadT) * h)
-      exprToSyntax (← elabPDE statement proofT)
     let sumClose ← `(tactic| (
       simp only [List.map_cons, List.map_nil, List.sum_cons, List.sum_nil,
         Verified.Expr.univariateEval, Verified.Expr.euclideanSingle_eq_const]
       $evalSimp:tactic
       push_cast
       ring_nf))
-    let equationAt ← `(Verified.Expr.eval $env $ET = 0)
     let pointBridgeOf (target : TSyntax `term) (lead : ℚ) : TermElabM (TSyntax `term) := do
       let leadT ← real lead
       let statement ← `(∀ $u:ident : ℝ → ℝ → ℝ, ∀ $t:ident $x:ident, ($equationAt) ↔ $target)
@@ -338,6 +320,9 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
         · intro h
           linear_combination ($leadT) * h)
       exprToSyntax (← elabPDE statement proofT)
+    let bridgeOnLine (pointBridge : TSyntax `term) : TermElabM (TSyntax `term) :=
+      `(fun $u:ident : ℝ → ℝ → ℝ ↦ forall_congr' (fun $t:ident : ℝ ↦
+        forall_congr' (fun $x:ident : ℝ ↦ $pointBridge $uT $tT $xT)))
     -- `∑ b sin (ω x) = f x`, the initial data matched with the sine terms.
     let sumEq (terms : TSyntax `term) (pick : TSyntax `term) (fT : TSyntax `term) :
         TermElabM (TSyntax `term) := do
@@ -365,9 +350,9 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
       let d := aU / aT
       let cT ← real c
       let dT ← real d
-      let target ← `(∀ $t:ident $x:ident, deriv (fun $s:ident ↦ $uT $s $xT) $tT +
-        $cT * deriv (fun $y:ident ↦ $uT $tT $y) $xT + $dT * $uT $tT $xT = 0)
-      let bridge ← bridgeOf target aT
+      let targetAt ← `(deriv (fun s ↦ $uT s $xT) $tT +
+        $cT * deriv (fun y ↦ $uT $tT y) $xT + $dT * $uT $tT $xT = 0)
+      let bridge ← bridgeOnLine (← pointBridgeOf targetAt aT)
       let statement ← `(∀ $u:ident : ℝ → ℝ → ℝ, Differentiable ℝ (Function.uncurry $uT) →
         ((($equation) ∧ ∀ $x:ident, $uT 0 $xT = Verified.Expr.univariateEval $fT $xT) ↔
           ∀ $t:ident $x:ident, $uT $tT $xT =
@@ -394,11 +379,10 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
         sinProofs := sinProofs ++ [← sinProof ωT LT q k Lq Lk]
       let TERMS ← `([$entries,*])
       let hsin ← forallMemSyntax sinProofs
-      let targetAt ← `(deriv (fun $s:ident ↦ $uT $s $xT) $tT =
-        $κT * deriv (fun $y:ident ↦ deriv (fun $z:ident ↦ $uT $tT $z) $y) $xT)
-      let target ← `(∀ $t:ident $x:ident, $targetAt)
-      let bridge ← bridgeOf target aT
+      let targetAt ← `(deriv (fun s ↦ $uT s $xT) $tT =
+        $κT * deriv (fun y ↦ deriv (fun z ↦ $uT $tT z) y) $xT)
       let pbridge ← pointBridgeOf targetAt aT
+      let bridge ← bridgeOnLine pbridge
       let hfeq ← sumEq TERMS (← `(fun e ↦ e.1 * Real.sin (e.2 * $xT))) fT
       let statement ← `((∀ $u:ident : ℝ → ℝ → ℝ,
         (∀ $t:ident $x:ident, $uT $tT $xT = ClassicalPDE.heatSum $κT $TERMS $tT $xT) →
@@ -436,11 +420,10 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
           and cos"
       let gT ← quote g
       let hcfG ← certified (← `(Verified.Expr.conditionFree $gT = true))
-      let targetAt ← `(deriv (fun $s:ident ↦ deriv (fun $r:ident ↦ $uT $r $xT) $s) $tT =
-          $cT ^ 2 * deriv (fun $y:ident ↦ deriv (fun $z:ident ↦ $uT $tT $z) $y) $xT)
-      let target ← `(∀ $t:ident $x:ident, $targetAt)
-      let bridge ← bridgeOf target aTT
+      let targetAt ← `(deriv (fun s ↦ deriv (fun r ↦ $uT r $xT) s) $tT =
+          $cT ^ 2 * deriv (fun y ↦ deriv (fun z ↦ $uT $tT z) y) $xT)
       let pbridge ← pointBridgeOf targetAt aTT
+      let bridge ← bridgeOnLine pbridge
       match interval with
       | some (Lq, Lk) =>
           let some fs := sineTerms f
@@ -473,13 +456,13 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
             (∀ $t:ident $x:ident, $uT $tT $xT = ClassicalPDE.waveSum $cT $TERMS $tT $xT) →
               ($equation) ∧ (∀ $t:ident, $uT $tT 0 = 0) ∧ (∀ $t:ident, $uT $tT $LT = 0) ∧
                 (∀ $x:ident, $uT 0 $xT = Verified.Expr.univariateEval $fT $xT) ∧
-                ∀ $x:ident, deriv (fun $s:ident ↦ $uT $s $xT) 0 =
+                ∀ $x:ident, deriv (fun s ↦ $uT s $xT) 0 =
                   Verified.Expr.univariateEval $gT $xT) ∧
             ∀ $u:ident : ℝ → ℝ → ℝ, ContDiff ℝ 2 (Function.uncurry $uT) →
               (∀ $t:ident > 0, ∀ $x:ident ∈ Set.Ioo 0 $LT, $equationAt) →
               (∀ $t:ident ≥ 0, $uT $tT 0 = 0) → (∀ $t:ident ≥ 0, $uT $tT $LT = 0) →
               (∀ $x:ident ∈ Set.Icc 0 $LT, $uT 0 $xT = Verified.Expr.univariateEval $fT $xT) →
-              (∀ $x:ident ∈ Set.Icc 0 $LT, deriv (fun $s:ident ↦ $uT $s $xT) 0 =
+              (∀ $x:ident ∈ Set.Icc 0 $LT, deriv (fun s ↦ $uT s $xT) 0 =
                 Verified.Expr.univariateEval $gT $xT) →
               ∀ $t:ident ≥ 0, ∀ $x:ident ∈ Set.Icc 0 $LT,
                 $uT $tT $xT = ClassicalPDE.waveSum $cT $TERMS $tT $xT)
@@ -523,7 +506,7 @@ def logPDE (ref : Syntax) (u t x : TSyntax `ident) (conditions : Array (TSyntax 
           let statement ← `(∀ $u:ident : ℝ → ℝ → ℝ,
             (∀ $t:ident $x:ident, $uT $tT $xT = $formula) →
               ($equation) ∧ (∀ $x:ident, $uT 0 $xT = Verified.Expr.univariateEval $fT $xT) ∧
-                ∀ $x:ident, deriv (fun $s:ident ↦ $uT $s $xT) 0 =
+                ∀ $x:ident, deriv (fun s ↦ $uT s $xT) 0 =
                   Verified.Expr.univariateEval $gT $xT)
           let body ← `(fun $u:ident hu ↦ by
             obtain ⟨hpde, h0, h1⟩ := ClassicalPDE.dalembert_solves $cT (by norm_num)

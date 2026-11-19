@@ -85,8 +85,10 @@ test("published cells and local excerpts match the checkout, with proofs visible
     assert.match(manifest.examples[0].excerpts.at(-1).text, /Exact\.zeroFn Set\.univ := by\n  cas$/);
     assert.match(manifest.examples[0].supportingExcerpts.at(-1).text,
       /theorem separatedHeatMode1D_analytic_residual_eq_zero :/);
-    assert.match(manifest.examples[1].excerpts[0].text, /hx : x \^ 2 - 1 ≠ 0/);
-    assert.match(manifest.examples[2].excerpts[0].text, /Set\.Icc.*:= by\n  cega$/);
+    assert.equal(manifest.examples[1].excerpts[0].text,
+      "#cas [simplify] ((x ^ 4 - 1) / (x ^ 2 - 1))");
+    assert.equal(manifest.examples[2].excerpts[0].text,
+      "#cas [enclose x in [0, 1]] (x / (1 + x))");
   } finally {
     await rm(temporary, { recursive: true, force: true });
   }

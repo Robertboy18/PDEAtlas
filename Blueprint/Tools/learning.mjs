@@ -99,79 +99,13 @@ function readingRoutes() {
       "Introduction → Sobolev spaces → elliptic, parabolic, and hyperbolic equations", "Introduction/", "Start reading"],
     ["02", "Explore CAS and CEGA", "Follow a symbolic calculation into its analytic meaning. Keep the domain conditions, then use an exact identity or a certified bound in a proof.",
       "Symbolic calculus → interval bounds → integration → PDE residuals", "Verified-Symbolic-and-Continuous-Computation/", "Try the calculations"],
-    ["03", "Follow a blowup proof", "Begin with a numerical reference profile and see how estimates produce an exact solution with a finite-time singularity.",
-      "Reference profile → residual → stability → stationary limit → blowup", "De-Gregorio-Blowup/#study-the-proof", "Follow the argument"],
   ];
   return `<section class="leanpde-learning" aria-labelledby="reading-routes">
-    <p class="learning-eyebrow">Find a starting point</p><h2 id="reading-routes">Three ways into the book</h2>
+    <p class="learning-eyebrow">Find a starting point</p><h2 id="reading-routes">Where to start</h2>
     <div class="learning-routes">${routes.map(([number, title, text, topics, href, action]) =>
       `<div class="learning-route"><span aria-hidden="true">${number}</span><div>
         <h3><a href="${href}">${title}</a></h3><p>${text}</p><p class="learning-route-topics">${topics}</p>
       </div><a href="${href}">${action} <span aria-hidden="true">→</span></a></div>`).join("")}</div>
-  </section>`;
-}
-
-const walkSteps = [
-  {
-    label: "Reference", title: "Start with an exact reference, close to the computed profile",
-    text: "A numerical solver supplies values and slopes. The reference is defined by an exact Hermite system; checked row residuals control the error in the supplied slopes. Interpolation estimates carry that error across each whole panel.",
-    question: "The reference is piecewise polynomial. Where do the smooth initial data come from?",
-    answer: "A separate approximation argument constructs smooth odd compactly supported data near the reference, with the endpoint behavior needed by the weighted norm.",
-    links: [["blowup.de_gregorio.canonical_profile_certificate", "Reference certificates"], ["blowup.de_gregorio.certified_initialization", "Smooth initialization"]],
-  },
-  {
-    label: "Residual", title: "Measure how far the reference is from equilibrium",
-    text: "The reference is not an exact stationary solution. Its residual becomes the forcing in the perturbation equation. Logarithmic panel integrals and interval bounds give an upper bound for the forcing energy.",
-    math: String.raw`\mathcal E(F)^2\le\frac{29663}{12\cdot10^{12}}`,
-    question: "Would a sharper numerical calculation require a new analytic argument?",
-    answer: "A smaller proved bound can be supplied to the same scalar energy comparison. A different reference may require new weight and coercivity estimates as well.",
-    links: [["blowup.de_gregorio.canonical_forcing_budget", "Forcing bound"]],
-  },
-  {
-    label: "Stability", title: "Keep the exact evolution near the reference",
-    text: "Weighted estimates turn the transport, stretching, and nonlocal terms into a differential inequality for the perturbation energy. At the trapping radius, the damping exceeds the nonlinear and residual contributions. This bound also supplies the continuation argument.",
-    math: String.raw`E(t)\le\frac1{2000}\quad\text{in normalized time}`,
-    question: "Does bounded perturbation energy already give convergence?",
-    answer: "It gives stability and global continuation. The next step needs a separate estimate for the time derivative to show that the trajectory approaches a limit.",
-    links: [["blowup.de_gregorio.actual_energy_inequality", "Energy inequality"], ["blowup.de_gregorio.global_normalized_trajectory", "Global normalized evolution"]],
-  },
-  {
-    label: "Limit", title: "Obtain a stationary profile from the evolution",
-    text: "The weighted energy of the time derivative decays exponentially. Integrating the resulting speed bound makes the normalized perturbation a Cauchy curve. Its limit is one nonzero stationary profile, with compatible weighted and global interpretations.",
-    question: "Why not solve the stationary equation first?",
-    answer: "The construction obtains the exact profile as a limit of the global trajectory. The numerical reference centers the estimates; it is not asserted to be that stationary limit.",
-    links: [["blowup.de_gregorio.canonical_stationary_limit", "Stationary limit"]],
-  },
-  {
-    label: "Blowup", title: "Return to physical time",
-    text: "The normalization has a negative rate. As normalized time tends to infinity, the physical clock approaches a finite endpoint. Undoing the scales amplifies the nonzero profile and expands its spatial support, giving the finite-time singularity.",
-    math: String.raw`\|\omega(\cdot,t)\|_\infty\longrightarrow\infty\qquad(t\uparrow T)`,
-    question: "What does the final theorem actually construct?",
-    answer: "Smooth odd compact initial data, a positive finite lifetime, a classical positive-time solution with its initial trace, and convergence to a nonzero profile after dynamic rescaling.",
-    links: [["blowup.de_gregorio.physical_assembly", "Physical blowup theorem"]],
-  },
-];
-
-function blowupWalk(math, theoremLink) {
-  return `<section class="leanpde-learning" data-learning-walk aria-labelledby="study-the-proof">
-    <p class="learning-eyebrow">A computer-assisted argument</p>
-    <h2 id="study-the-proof">From a numerical profile to finite-time blowup</h2>
-    <p>Follow the real-line De Gregorio construction of Chen, Hou, and Huang.
-      Each step supplies something the next step needs.</p>
-    <div class="learning-walk-controls" data-walk-controls role="group" aria-label="Choose a stage of the proof" hidden>
-      ${walkSteps.map((step, i) => `<button type="button" data-walk-select aria-pressed="false" aria-controls="walk-${i}"><span>0${i + 1}</span>${step.label}</button>`).join("")}
-    </div>
-    ${walkSteps.map((step, i) => `<article class="learning-walk-panel" data-walk-panel id="walk-${i}">
-      <h3>${step.title}</h3><p>${step.text}</p>
-      ${step.math ? `<div class="learning-math">${math(step.math)}</div>` : ""}
-      <details><summary>${step.question}</summary><p>${step.answer}</p></details>
-      <div class="learning-proof-links">${step.links.map(([label, text]) =>
-        `<a href="${escape(theoremLink(label))}">${text} <span aria-hidden="true">↗</span></a>`).join("")}</div>
-    </article>`).join("")}
-    <div class="learning-walk-navigation" data-walk-navigation hidden>
-      <button type="button" data-walk-back>← Previous</button><output data-walk-count aria-live="polite">1 of 5</output>
-      <button type="button" data-walk-next>Next →</button>
-    </div>
   </section>`;
 }
 
@@ -191,7 +125,6 @@ export async function buildLearningFeatures(dataDir) {
   return {
     modes: modeExplorer(math, theoremLink("parabolic.energy_decay")),
     routes: readingRoutes(),
-    blowup: blowupWalk(math, theoremLink),
   };
 }
 

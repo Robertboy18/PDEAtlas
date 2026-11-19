@@ -41,13 +41,13 @@ test("heat loses energy and waves can reverse their displacement", () => {
 const marker = kind => `<div data-leanpde-learning="${kind}"></div>`;
 const page = content => `<html><head><title>Book</title></head><body>` +
   `<aside><a href="Chapter/#proof">Proof</a></aside><main>${content}</main></body></html>`;
-const features = { modes: "<section>Modes</section>", blowup: "<section>Blowup</section>" };
+const features = { modes: "<section>Modes</section>", routes: "<section>Routes</section>" };
 
 test("learning markers preserve surrounding prose, figures, scripts and source links", () => {
-  const fake = `<script>const s = '${marker("modes")}';</script><!-- ${marker("blowup")} -->`;
-  const content = fake + `<p>Before.</p>${marker("modes")}<svg></svg>${marker("blowup")}<p>After.</p>`;
+  const fake = `<script>const s = '${marker("modes")}';</script><!-- ${marker("routes")} -->`;
+  const content = fake + `<p>Before.</p>${marker("modes")}<svg></svg>${marker("routes")}<p>After.</p>`;
   const html = insertLearningFeatures(page(content), features);
-  assert.ok(html.includes(fake + "<p>Before.</p><section>Modes</section><svg></svg><section>Blowup</section><p>After.</p>"));
+  assert.ok(html.includes(fake + "<p>Before.</p><section>Modes</section><svg></svg><section>Routes</section><p>After.</p>"));
   assert.ok(html.includes('<a href="Chapter/#proof">Proof</a>'));
   assert.equal((html.match(/src="-verso-data\/leanpde-learning\/learning.js"/g) ?? []).length, 1);
   assert.equal(insertLearningFeatures(page("<p>No marker.</p>"), features), page("<p>No marker.</p>"));

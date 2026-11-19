@@ -7,7 +7,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Hyperbolic.ConservationLaw.Burgers.ColeHopf.Symbolic
-public import PDE.Symbolic.ClosedForm.Tactic.Residual
+public import PDE.Symbolic.ClosedForm.Differential.Equation
 public import CAS.ExactTactic
 public import PDE.Hyperbolic.ConservationLaw.Burgers.ColeHopf
 public import PDE.Parabolic.Symbolic.Heat.Equations
@@ -85,7 +85,7 @@ theorem coleHopfExp_transform_eval_eq_velocity (p : ℝ^2) :
 private theorem coleHopfExpHeat_analytic_side_condition (p : ℝ^2) (_hp : p ∈ Set.univ) :
     DiffExpr.AnalyticSideCondition (Scalar.ansatz coleHopfExpProfile) p
     heat1DEquation.residual := by
-  symbolic_residual
+  symbolic_assumptions
 
 /-- Analytic residual form of the heat check for `exp(t+x)`. -/
 theorem coleHopfExpHeat_analytic_residual_eq_zero :

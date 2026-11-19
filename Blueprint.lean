@@ -577,24 +577,6 @@ html[data-theme="dark"] #toc a:hover {
   white-space: nowrap;
 }
 
-/* Display the original emblem between LeanP and E without changing the asset. */
-.leanpde-brand-symbol {
-  display: block;
-  flex: none;
-  width: 1.28em;
-  aspect-ratio: 440 / 318;
-  margin: 0 -0.035em;
-  overflow: hidden;
-  letter-spacing: normal;
-}
-
-.leanpde-brand-symbol img {
-  display: block;
-  width: 307.272727%;
-  max-width: none;
-  height: auto;
-}
-
 html .leanpde-wordmark .leanpde-logo-dark,
 html[data-theme="dark"] .leanpde-wordmark .leanpde-logo-light {
   display: none;

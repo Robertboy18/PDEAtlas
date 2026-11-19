@@ -106,34 +106,6 @@ function initializeModes(root) {
   render();
 }
 
-function initializeWalk(root) {
-  const buttons = [...root.querySelectorAll("[data-walk-select]")];
-  const panels = [...root.querySelectorAll("[data-walk-panel]")];
-  function select(index) {
-    panels.forEach((panel, i) => { panel.hidden = i !== index; });
-    buttons.forEach((button, i) => button.setAttribute("aria-pressed", String(i === index)));
-    root.querySelector("[data-walk-count]").textContent = `${index + 1} of ${panels.length}`;
-    root.querySelector("[data-walk-next]").disabled = index === panels.length - 1;
-    root.querySelector("[data-walk-back]").disabled = index === 0;
-    root.dataset.walkIndex = index;
-  }
-  function selectFragment() {
-    const index = panels.findIndex(panel => `#${panel.id}` === location.hash);
-    if (index >= 0) select(index);
-  }
-  buttons.forEach((button, index) => button.addEventListener("click", () => select(index)));
-  root.querySelector("[data-walk-next]").addEventListener("click", () => select(Number(root.dataset.walkIndex) + 1));
-  root.querySelector("[data-walk-back]").addEventListener("click", () => select(Number(root.dataset.walkIndex) - 1));
-  select(0);
-  selectFragment();
-  window.addEventListener("hashchange", selectFragment);
-  root.querySelector("[data-walk-controls]").hidden = false;
-  root.querySelector("[data-walk-navigation]").hidden = false;
-  window.addEventListener("beforeprint", () => panels.forEach(panel => { panel.hidden = false; }));
-  window.addEventListener("afterprint", () => select(Number(root.dataset.walkIndex)));
-}
-
 if (typeof document !== "undefined") {
   for (const root of document.querySelectorAll("[data-learning-modes]")) initializeModes(root);
-  for (const root of document.querySelectorAll("[data-learning-walk]")) initializeWalk(root);
 }

@@ -7,7 +7,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Hyperbolic.ConservationLaw.Burgers.ColeHopf.Symbolic
-public import PDE.Symbolic.ClosedForm.Tactic.Residual
+public import PDE.Symbolic.ClosedForm.Differential.Equation
 public import CAS.ExactTactic
 public import PDE.Hyperbolic.ConservationLaw.Burgers.ColeHopf
 public import PDE.Parabolic.Symbolic.Heat.Equations
@@ -86,7 +86,7 @@ theorem coleHopfTwoExpProfile_closed_residual_eq_zero :
 private theorem coleHopfTwoExpHeat_analytic_side_condition (p : ℝ^2) (_hp : p ∈ Set.univ) :
     DiffExpr.AnalyticSideCondition (Scalar.ansatz coleHopfTwoExpProfile) p
     heat1DEquation.residual := by
-  symbolic_residual
+  symbolic_assumptions
 
 /-- The interpreted profile satisfies the ordinary analytic heat residual everywhere. -/
 theorem coleHopfTwoExpHeat_analytic_residual_eq_zero :

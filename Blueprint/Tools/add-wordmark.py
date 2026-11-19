@@ -4,9 +4,8 @@
 Verso's page template names the book twice on every page: in the title at the
 top of the sidebar, which a wide window shows, and in the title of the top bar,
 which replaces it in a narrow one. The landing page names it a third time, in
-the heading of its title page. A site rendered without Node.js
-(`build-no-node.sh`) keeps all of these as text, and this script puts the
-wordmark there.
+the heading of its title page. Both build modes use this script to add the
+wordmark to those titles.
 
 In each title the `<h1>` keeps the name as text, in a `leanpde-brand-name` span
 that the site stylesheet hides from the eye and not from a screen reader, and
@@ -41,10 +40,12 @@ import sys
 BRAND_DIRECTORY = "-verso-data/leanpde-brand"
 THEMES = ("light", "dark")
 # The two titles of Verso's page template, with the heading they wrap.
-TITLE = re.compile(rb'(<a href="[^"]*" class="(toc-title|header-title)">\s*<h1>)(.*?)(</h1>)', re.S)
+TITLE = re.compile(
+    rb'(<a href="[^"]*" class="(toc-title|header-title)">\s*<h1\b[^>]*>)(.*?)(</h1>)', re.S
+)
 # The heading of the title page, which only the landing page has: the name, then what Verso
 # appends to a heading (its permalink).
-LANDING = re.compile(rb'(<div class="titlepage">\s*<h1>)([^<]*)(.*?</h1>)', re.S)
+LANDING = re.compile(rb'(<div class="titlepage">\s*<h1\b[^>]*>)([^<]*)(.*?</h1>)', re.S)
 NO_BREAK_SPACE = "\u00a0".encode()
 BASE = re.compile(rb'<base href="([^"]*)"')
 NAME = re.compile(rb'<span class="leanpde-brand-name">(.*?)</span>', re.S)

@@ -384,5 +384,5 @@ error: dsolve: the checked integrator found no primitive of e ^ P times the righ
 error: pdesolve: the initial value must be a finite sum of terms b sin (ω x)
 -/
 #guard_msgs in
-#cas [pdesolve u t x, u 0 x = x ^ 2, u t 0 = 0, u t pi = 0] (u_t = u_xx)
+#cas [pdesolve u t x, u 0 x = sin (sin x), u t 0 = 0, u t pi = 0] (u_t = u_xx)
 

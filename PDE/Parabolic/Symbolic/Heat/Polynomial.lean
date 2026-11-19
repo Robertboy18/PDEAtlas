@@ -9,7 +9,7 @@ module
 public import PDE.Parabolic.Symbolic.Heat.Equations
 public import PDE.Parabolic.Symbolic.Heat.SpatialSlice
 public import PDE.Symbolic.Calculus.WeakFormIntegrands
-public import PDE.Symbolic.ClosedForm.Tactic.Residual
+public import PDE.Symbolic.ClosedForm.Differential.Equation
 public import CAS.ExactTactic
 public import PDE.Parabolic.Heat.Equation
 
@@ -224,7 +224,7 @@ theorem polynomialHeat2D_analyticResidual_zero :
     simpa [polynomialHeat2DResidual, Exact.exprFn, Exact.zeroFn] using
       polynomialHeat2D_residual_eq_zero trivial
   exact DiffExpr.Equation.analyticResidual_eq_zero_of_closedResidualVanishesAt
-    hclosed (by symbolic_residual)
+    hclosed (by symbolic_assumptions)
 
 /--
 The polynomial `u(t,x,y)=x²+y²+4t` solves the heat equation on all of spacetime.

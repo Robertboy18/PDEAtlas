@@ -101,14 +101,6 @@
 .leanpde-learning .learning-route p { margin: .3rem 0; font-size: .94rem; }
 .leanpde-learning .learning-route > a { align-self: center; font-size: .86rem; white-space: nowrap; }
 .leanpde-learning .learning-route-topics { color: var(--leanpde-ink-soft); font-size: .82rem !important; }
-.leanpde-learning .learning-walk-controls { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-block: 1.25rem; gap: .35rem; }
-.leanpde-learning .learning-walk-controls button { text-align: left; padding: .65rem .5rem; border: 0; border-bottom: 2px solid var(--leanpde-rule); border-radius: 0; background: transparent; font-size: .87rem; }
-.leanpde-learning .learning-walk-controls button span { display: block; font-size: .73rem; color: var(--leanpde-ink-soft); margin-bottom: .3rem; }
-.leanpde-learning .learning-walk-controls button[aria-pressed="true"] { border-color: var(--leanpde-accent); background: var(--leanpde-accent-wash); }
-.leanpde-learning .learning-walk-panel { border-left: 2px solid var(--leanpde-accent); padding: .45rem 0 .45rem 1.2rem; margin-block: 1rem; }
-.leanpde-learning .learning-walk-panel h3 { font-size: 1.2rem; }
-.leanpde-learning .learning-walk-panel p { margin-block: .65rem; }
-.leanpde-learning .learning-walk-navigation { display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; font-size: .83rem; }
 @media (max-width: 600px) {
   .leanpde-learning .learning-controls { grid-template-columns: 1fr 1fr; gap: .6rem; }
   .leanpde-learning .learning-buttons { grid-column: 1 / -1; }
@@ -120,10 +112,7 @@
   .leanpde-learning .learning-energy .learning-axis { stroke-width: 2; }
   .leanpde-learning .learning-route { grid-template-columns: 1.8rem minmax(0, 1fr); gap: .6rem; }
   .leanpde-learning .learning-route > a { grid-column: 2; justify-self: start; }
-  .leanpde-learning .learning-walk-controls { display: flex; overflow-x: auto; padding-bottom: .4rem; }
-  .leanpde-learning .learning-walk-controls button { flex: 0 0 6.5rem; }
 }
 @media print {
-  .leanpde-learning :is(.learning-controls, .learning-walk-controls, .learning-walk-navigation) { display: none !important; }
-  .leanpde-learning .learning-walk-panel { break-inside: avoid; }
+  .leanpde-learning .learning-controls { display: none !important; }
 }

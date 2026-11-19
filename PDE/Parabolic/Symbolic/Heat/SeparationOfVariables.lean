@@ -7,7 +7,7 @@ Authors: LeanPDE Team
 module
 
 public import PDE.Parabolic.Symbolic.Heat.Equations
-public import PDE.Symbolic.ClosedForm.Tactic.Residual
+public import PDE.Symbolic.ClosedForm.Differential.Equation
 public import CAS.ExactTactic
 
 /-!
@@ -66,7 +66,7 @@ private theorem separatedHeatMode1D_analytic_side_condition
       (Scalar.ansatz separatedHeatMode1DAnsatz)
       p
       HeatEquation.Symbolic.Space1.heat1DEquation.residual := by
-  symbolic_residual
+  symbolic_assumptions
 
 /-- Analytic Euclidean residual version of the separated heat check. -/
 theorem separatedHeatMode1D_analytic_residual_eq_zero :

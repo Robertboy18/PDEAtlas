@@ -9,7 +9,7 @@ module
 public import PDE.Parabolic.Heat.Gaussian
 public import PDE.Parabolic.Symbolic.Heat.Equations
 public import PDE.Parabolic.Symbolic.Heat.SpatialSlice
-public import PDE.Symbolic.ClosedForm.Tactic.Residual
+public import PDE.Symbolic.ClosedForm.Differential.Equation
 public import CAS.ExactTactic
 
 /-!
@@ -144,7 +144,7 @@ theorem heatKernel2D_analyticRequirements_holds_of_time_pos
     (p : ℝ^3) (ht : 0 < p 0) :
     (Scalar.CheckedResidual.analyticRequirements
       heat2DEquation heatKernel2DAnsatz).Holds p := by
-  symbolic_residual
+  symbolic_assumptions
 
 /-- Analytic side condition obtained from the checked Gaussian requirements. -/
 theorem heatKernel2D_analyticSideCondition_of_time_pos

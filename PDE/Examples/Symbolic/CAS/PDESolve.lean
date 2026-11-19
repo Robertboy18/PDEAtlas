@@ -35,9 +35,8 @@ and the third is the conjunction of `∀ (u : ℝ → ℝ → ℝ), (∀ (t x : 
 and of the uniqueness `∀ (u : ℝ → ℝ → ℝ), ContDiff ℝ 2 (Function.uncurry u) → (∀ t > 0,`
 `∀ x ∈ Set.Ioo 0 Real.pi, …) → (∀ t ≥ 0, u t 0 = 0) → (∀ t ≥ 0, u t Real.pi = 0) →`
 `(∀ x ∈ Set.Icc 0 Real.pi, u 0 x = …) → ∀ t ≥ 0, ∀ x ∈ Set.Icc 0 Real.pi, u t x = …`, from the
-energy method. The eight
-commands take 3 s. Initial data that are not finite sine sums, such as `x ^ 2` on `[0, π]`, are
-refused, since their solution is an infinite series.
+energy method. For the heat equation on `[0, π]`, the command refuses `sin (sin x)` even though
+the data vanish at both endpoints. This route requires a finite sine sum.
 -/
 
 /-! ## Executed checks -/
@@ -150,4 +149,51 @@ Output (d'Alembert's formula): u(t, x) = (Real.exp (-(x + 3 * t) ^ 2) + Real.exp
 -/
 #guard_msgs (info, substring := true) in
 #cas [pdesolve u t x, u 0 x = exp (-x ^ 2), u_t 0 x = x] (u_tt = 9 * u_xx)
+
+/-! ## Coordinate names and rejected conditions -/
+
+/--
+info: #cas [pdesolve u y s, u 0 s = sin s]
+Domain: y, s ∈ ℝ
+Input (transport equation): (u_t + 2 * u_x = 0)
+Output (characteristics): u(y, s) = Real.sin (s - 2 * y)
+
+[CAS.Command.details] More details
+  [CAS.explanation] Proof evidence
+    [CAS.explanation.checkedEvidence] Checked proof steps
+      [CAS.explanation.checkedStep] The solution, and every differentiable solution has this form
+        Proposition: ∀ (u : ℝ → ℝ → ℝ),
+          Differentiable ℝ (Function.uncurry u) →
+            (((∀ (y s : ℝ), deriv (fun s_1 ↦ u s_1 s) y + 2 * deriv (fun y_1 ↦ u y y_1) s = 0) ∧
+                ∀ (s : ℝ), u 0 s = Real.sin s) ↔
+              ∀ (y s : ℝ), u y s = Real.sin (s - 2 * y))
+        Validation: proof term checked by the kernel against this proposition
+    [CAS.explanation.plannerMetadata] Planner metadata (not proof)
+-/
+#guard_msgs in
+#cas [pdesolve u y s, u 0 s = sin s] (u_t + 2 * u_x = 0)
+
+/-- error: pdesolve: give the initial value only once -/
+#guard_msgs in
+#cas [pdesolve u t x, u 0 x = 0, u 0 x = 1] (u_t + 2 * u_x = 0)
+
+/-- error: pdesolve: transport is solved on the line without boundary values -/
+#guard_msgs in
+#cas [pdesolve u t x, u 0 x = 1, u t 0 = 0, u t pi = 0] (u_t + 2 * u_x = 0)
+
+/-- error: pdesolve: initial velocity is supported only for the wave equation -/
+#guard_msgs in
+#cas [pdesolve u t x, u 0 x = 1, u_t 0 x = 100] (u_t + 2 * u_x = 0)
+
+/-- error: pdesolve: initial velocity is supported only for the wave equation -/
+#guard_msgs in
+#cas [pdesolve u t x, u 0 x = sin x, u_t 0 x = 100, u t 0 = 0, u t pi = 0] (u_t = u_xx)
+
+/-- error: pdesolve: give the initial velocity only once -/
+#guard_msgs in
+#cas [pdesolve u t x, u 0 x = cos x, u_t 0 x = 0, u_t 0 x = 1] (u_tt = u_xx)
+
+/-- error: pdesolve: use distinct names for the function, coordinates and derivatives -/
+#guard_msgs in
+#cas [pdesolve u t u_t, u 0 u_t = 0] (u_t + 2 * u_x = 0)
 

@@ -7,11 +7,13 @@ open Lake DSL
 evaluates them with compiled code, which additionally trusts Lean's compiler, and builds into
 `.lake/build-fast`; select it with `lake build -R -Kcertificates=fast`. The profile is forwarded
 to SymLean. -/
-def certificatesMode : String :=
+def certificatesMode : String := run_io do
   match (get_config? certificates).getD "kernel" with
-  | "kernel" => "kernel"
-  | "fast" | "native" => "fast"
-  | value => panic! s!"Unknown certificates profile '{value}'; use kernel or fast"
+  | "kernel" => return "kernel"
+  | "fast" | "native" => return "fast"
+  | value =>
+    throw <| .userError <|
+      s!"unknown certificates profile '{value}': use kernel, fast or native, with lake -R"
 
 /-- Lean arguments used throughout the PDE library. Each compiler runs on one thread (`-j1`): Lake
 already runs one compiler per hardware thread, and a compiler with several threads keeps the

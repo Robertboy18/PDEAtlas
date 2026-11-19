@@ -45,8 +45,8 @@ const examples = [
     explanation:
       "The nonzero denominator is part of the theorem. " +
       "The cancellation is justified under that hypothesis.",
-    file: "PDE/Examples/Symbolic/CAS/Basic.lean",
-    declarations: ["example (x : ℝ) (hx : x ^ 2 - 1 ≠ 0) :"],
+    file: "PDE/Examples/Symbolic/CAS/BasicReports.lean",
+    declarations: ["#cas [simplify] ((x ^ 4 - 1) / (x ^ 2 - 1))"],
   },
   {
     id: "enclosure",
@@ -57,10 +57,8 @@ const examples = [
     explanation:
       "CEGA proves that every value on the stated interval lies in [0, ½]. " +
       "The conclusion is an exact bound.",
-    file: "PDE/Examples/Symbolic/CEGA/BoxInequalities.lean",
-    declarations: [
-      "example (x : ℝ) (h0 : x ≥ 0) (h1 : x ≤ 1) : x / (1 + x) ∈ Set.Icc (0 : ℝ) (1 / 2) := by",
-    ],
+    file: "PDE/Examples/Symbolic/CAS/BasicReports.lean",
+    declarations: ["#cas [enclose x in [0, 1]] (x / (1 + x))"],
   },
 ];
 
@@ -121,7 +119,7 @@ function exampleHtml(example, excerpts, renderMath) {
     `<div class="leanpde-notebook-math">${renderMath(example.equation)}</div>` +
     '<div class="leanpde-notebook-cell leanpde-notebook-input">' +
     '<p class="leanpde-notebook-label">Lean input</p>' +
-    codeCell(proof.text, `${example.label}: Lean proof`) +
+    codeCell(proof.text, `${example.label}: Lean input`) +
     definitions + "</div>" +
     '<div class="leanpde-notebook-cell leanpde-notebook-result">' +
     '<p class="leanpde-notebook-label">Proved result</p>' +
@@ -153,7 +151,7 @@ export async function buildOpeningNotebook(dataDir, revision, renderMath) {
   await mkdir(destination, { recursive: true });
   for (const { example, excerpts, supportingExcerpts, sourceSha256 } of records) {
     const text = [
-      "LeanPDE opening notebook — source excerpt",
+      "PDEAtlas opening notebook — source excerpt",
       `Module: ${example.file}`,
       `Build revision: ${revision}`,
       `Source SHA-256: ${sourceSha256}`,

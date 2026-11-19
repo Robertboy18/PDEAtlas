@@ -119,12 +119,11 @@ fast profile into `.lake/build-fast`, and `lake build -R` returns to the kernel 
 every certificate module under 60 s and 8 GB in the kernel profile, since a plain `lake build`
 runs many of them in parallel.
 
-For Blueprint changes, run `bash Blueprint/Tools/build.sh`. It regenerates the computation
-ledger and the textbook map; the other files in `Blueprint/Generated/` have their own
-generators, listed in the [Blueprint guide](Blueprint/README.md). Edit their inputs, not the
-output. The Blueprint package still pins the Verso stack of Lean 4.35, since VersoBlueprint has no
-release for Lean 4.36 yet. Until it has one, the Blueprint does not build against the library at
-this commit, and the published site is the one rendered at the last Lean 4.35 commit, `4f9493e3`.
+The Blueprint still uses the Lean 4.35 release of VersoBlueprint. To render the published
+edition at `4f9493e3`, follow the [Blueprint guide](Blueprint/README.md). When the Lean
+toolchains agree, `bash Blueprint/Tools/build.sh` regenerates the computation ledger and
+textbook map. The guide lists the generators and source inputs for the other files under
+`Blueprint/Generated/`.
 
 ## Exposition and sources
 

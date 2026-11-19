@@ -21,39 +21,24 @@ has about 1.08 million lines of Lean and 36,000 theorems.
   theorems for fluid equations, built on PDEAtlas
 * [SymLean](https://github.com/Robertboy18/SymLean): the computer algebra system PDEAtlas computes with
 
-I wanted PDE work in Lean to start from the theorems a graduate course proves, each stated with all
-of its hypotheses, and not from general analysis alone. So we built PDEAtlas. We contacted Evans
-about following his book, and he was excited about the project.
+I wanted to open Evans and be able to use the theorems from a graduate PDE course in a Lean proof,
+with all their hypotheses in view. We contacted Evans about following his book, and he was
+excited about the project.
 
-## What we focus on
+## Three examples from Evans
 
-1. **Formalization that can go upstream.** We hold every result to the standard of
-   [Mathlib](https://leanprover-community.github.io/contribute/index.html), so that the general ones
-   can move there or to [Tau Ceti](https://github.com/TauCetiProject/TauCeti), a library downstream
-   of Mathlib incubated by the Lean FRO and the Mathlib Initiative. We coordinate with Tau Ceti's
-   [PDE roadmap](https://github.com/TauCetiProject/TauCetiRoadmap/blob/main/TauCetiRoadmap/PDE/README.md).
-   The [standards](#standards) are listed below.
-2. **Graduate courses.** The library follows Evans chapter by chapter, so a student can read a
-   section of the book next to its Lean statements, and the module docs cite the theorems they
-   formalize. We state theorems as faithfully as we can, and where the proof allows, more generally
-   than the book. Three examples:
-   - smooth functions are dense in every Sobolev space W^{k,p}(U), 1 ≤ p < ∞, on every open set U
-     (Meyers and Serrin; Evans §5.3.2, Theorem 2, proves it for bounded U), in
-     [`OpenDomain.lean`](PDE/Spaces/Sobolev/Approximation/Density/OpenDomain.lean);
-   - weak solutions of second-order parabolic equations exist (§7.1.2, Theorems 3 and 4) without the
-     symmetry aⁱʲ = aʲⁱ that Evans assumes, in
-     [`MeasurableExistence.lean`](PDE/Parabolic/Heat/Variational/MeasurableExistence.lean);
-   - Kaplan's lifespan bound for u_t − Δu = u² (§9.4.1, Theorem 1) holds in every bounded open set,
-     with nothing assumed about its boundary, in
-     [`DirichletBlowup.lean`](PDE/Parabolic/Heat/Nonlinear/DirichletBlowup.lean).
-3. **Computation with SymLean.** Calculations run through [SymLean](https://github.com/Robertboy18/SymLean),
-   our verified computer algebra system for Lean, which works like Mathematica or SymPy but returns
-   proofs. PDEAtlas extends its `cas` and `cega` tactics to its PDE operators and adds a `#cas` PDE
-   solver. Every answer comes with a theorem the kernel has checked.
-4. **Research and exposition.** We want the library to help mathematicians: as foundations for new
-   results, and as an account of the theory they can read. The blowup and nonuniqueness theorems in
-   [BlowupZoo](https://github.com/Robertboy18/BlowupZoo) are built on PDEAtlas, and the Blueprint
-   explains the mathematics behind each part of the library.
+- Smooth functions are dense in every Sobolev space W^{k,p}(U), 1 ≤ p < ∞, on every open set U.
+  Evans §5.3.2, Theorem 2, proves the result for bounded U.
+  [`OpenDomain.lean`](PDE/Spaces/Sobolev/Approximation/Density/OpenDomain.lean)
+- Weak solutions of second-order parabolic equations exist under the assumptions of §7.1.2,
+  Theorems 3 and 4, with the symmetry assumption aⁱʲ = aʲⁱ dropped.
+  [`MeasurableExistence.lean`](PDE/Parabolic/Heat/Variational/MeasurableExistence.lean)
+- Kaplan's lifespan bound for u_t − Δu = u² (§9.4.1, Theorem 1) holds on every bounded open set
+  without a boundary regularity assumption.
+  [`DirichletBlowup.lean`](PDE/Parabolic/Heat/Nonlinear/DirichletBlowup.lean)
+
+We coordinate work on general PDE lemmas with the
+[Tau Ceti PDE roadmap](https://github.com/TauCetiProject/TauCetiRoadmap/blob/main/TauCetiRoadmap/PDE/README.md).
 
 ## Example
 
@@ -65,10 +50,12 @@ import PDE
 ```
 
 This is the heat equation u_t = 2 u_xx on [0, π], with u = 0 at both ends and u = sin x + 3 sin 2x
-at time 0. Under "More details" the report prints the theorem behind the answer, which the kernel
-has checked: the formula solves the problem, and by the energy method every C² solution equals it
-for t ≥ 0. The same command solves transport and wave equations. It refuses data that are not
-finite sine sums, such as x² on [0, π], because their solution is an infinite series.
+at time 0. Under "More details" the report shows the checked theorem that the formula solves the
+problem and that every C² solution equals it for t ≥ 0. The uniqueness proof uses the energy
+method. This heat solver takes initial data given as a finite sum of sine modes. It refuses
+`sin (sin x)` on [0, π] even though the datum satisfies both boundary values. The command also
+has routes for transport and wave equations, and PDEAtlas extends SymLean's `cas` and `cega` to
+PDE operators.
 
 In a proof, the `cas` tactic does the same calculations:
 

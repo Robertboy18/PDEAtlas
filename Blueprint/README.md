@@ -7,22 +7,42 @@ mechanics and verified computation.
 
 ## Build and preview
 
-Install the pinned Lean toolchain, Node.js 22 or newer, Graphviz, Python 3
-with the `regex` package, and GNU `realpath`. From the repository root:
+The published Blueprint is built from `4f9493e3`, the last edition on Lean
+4.35. PDEAtlas now uses Lean 4.36. The Blueprint's VersoBlueprint dependency
+still targets 4.35, so use the published source revision to render that
+edition locally.
+
+From the repository root, with Graphviz, Python 3 with the `regex` package,
+and GNU `realpath` installed:
 
 ```bash
+git worktree add --detach ../PDEAtlas-blueprint 4f9493e3d4decb8f362436f2dade1d887c4b5ccb
+cd ../PDEAtlas-blueprint
 lake exe cache get
-bash Blueprint/Tools/build.sh
-python3 -m http.server 8000 --bind 127.0.0.1 --directory _out/site/html-multi
+(cd Blueprint && lake exe cache get)
+bash Blueprint/Tools/build-no-node.sh
+python3 -m http.server 8000 --bind 127.0.0.1 --directory _out/site-no-node/html-multi
 ```
 
-Open `http://127.0.0.1:8000/`. The build script compiles `PDE`, regenerates the
-computation ledger and textbook map, builds the nested Blueprint package, and
-renders the static site. The library and documentation package have separate
-Lake caches. The script prepares VersoBlueprint's shared library; Lake resolves
-the pinned documentation dependencies.
+Open `http://127.0.0.1:8000/`. The library and the nested Blueprint package
+have separate Lake caches.
 
-The finite certificates are checked in the kernel. For the faster native evaluation:
+### Build scripts
+
+When the library and Blueprint use the same toolchain, run
+`bash Blueprint/Tools/build.sh` with Node.js 22 or newer. It builds `PDE`,
+regenerates the computation ledger and textbook map, and renders the site
+to `_out/site/html-multi`. `bash Blueprint/Tools/build-no-node.sh` uses the
+same compiler and renderer and writes `_out/site-no-node/html-multi`. It
+uses the committed textbook map and Verso's layout. Prepare the nested
+Mathlib cache before using this mode.
+
+Both modes add the wordmark to the sidebar, top bar and title page. The
+Node.js build also adds the section rail, proof map actions, notebook and
+typeset figure labels. Set `LEANPDE_LAKE` to use a custom Lake launcher.
+
+The default kernel profile checks the finite certificates in Lean's kernel.
+For native evaluation with a separate cache:
 
 ```bash
 LEANPDE_CERTIFICATES=fast bash Blueprint/Tools/build.sh
@@ -32,36 +52,12 @@ This writes `_out/site-fast/html-multi` and uses the separate fast cache.
 SymLean's README explains the two profiles under
 [Kernel checking and the fast profile](https://github.com/Robertboy18/SymLean#kernel-checking-and-the-fast-profile).
 
-An optional first argument selects another output directory under `_out/`.
+Pass an output directory under `_out/` as the first argument to either script.
 To make source references link to a public checkout, set
 `LEANPDE_PUBLIC_REPOSITORY_URL` before building. The build records the current
 commit unless `LEANPDE_SOURCE_REVISION` is supplied explicitly. The links from
 declarations to their sources are fixed earlier, when the chapters are compiled
 (see [Publishing on GitHub Pages](#publishing-on-github-pages)).
-
-`Tools/optimize-site.mjs`, the post-processor of this build, was written for
-the former title of the book: it looks for the heading text `LeanPDE` on every
-page, stops when a page does not have it, and composes the former logo. Until
-it follows the new title, render the site with the script below.
-
-On a machine without Node.js:
-
-```bash
-bash Blueprint/Tools/build-no-node.sh
-```
-
-This writes `_out/site-no-node/html-multi` with the same libraries, renderer and
-dependency atlas, and leaves out the three Node.js steps. It compiles the
-committed textbook map without regenerating it, and it does not run the two
-post-processors described [below](#generated-data-and-assets). The pages
-therefore keep Verso's own shell: the theme button, the section rail, the
-"Proof map" actions, the Introduction notebook, the learning features and the
-typeset figure labels are absent, and the proof panels stay inside the pages.
-`Tools/add-wordmark.py` puts the wordmark into the sidebar title and the top
-bar of every page that carries the title of the book, and into the title page
-of the landing page; Verso's `find/` redirect page keeps its own title. The
-script does not download the Mathlib cache. Set `LEANPDE_LAKE` to run every
-Lake call, and the renderer, through a launcher of your own.
 
 ## Publishing on GitHub Pages
 

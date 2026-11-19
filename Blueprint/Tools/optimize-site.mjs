@@ -29,7 +29,6 @@
 
 import { copyFile, mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { buildOpeningNotebook, insertOpeningNotebook } from "./opening-notebook.mjs";
 import { buildLearningFeatures, insertLearningFeatures } from "./learning.mjs";
 import { figureMathRenderer } from "./figure-math.mjs";
@@ -60,22 +59,10 @@ const publicRepositoryUrl = (process.env.LEANPDE_PUBLIC_REPOSITORY_URL ?? "")
 const landingEntryName = "Overview";
 // The same short description accompanies the name in the sidebar and overview.
 const siteSubtitle = "Partial differential equations in Lean";
-const brandSource = fileURLToPath(new URL("../Assets/Brand/", import.meta.url));
-const brandFiles = ["logo-light.webp", "logo-dark.webp", "favicon.png"];
-// The heading supplies the accessible name; both image variants are decorative.
-const wordmark =
-  '<span class="leanpde-wordmark" aria-hidden="true">' +
-  '<span>LeanP</span><span class="leanpde-brand-symbol">' +
-  ["light", "dark"].map((theme) =>
-    `<img class="leanpde-logo-${theme}" src="-verso-data/leanpde-brand/logo-${theme}.webp" ` +
-    'width="1352" height="318" alt="" decoding="async">',
-  ).join("") +
-  '</span><span>E</span></span>';
 // The meta description of the landing page.
 const landingDescription =
-  "LeanPDE develops partial differential equations in Lean 4. Its CAS and CEGA tactics " +
-  "produce proofs of symbolic identities and numerical bounds. Explore worked examples " +
-  "and the classical, weak, and variational theory behind them.";
+  "PDEAtlas follows selected results from Evans's Partial Differential Equations, " +
+  "with Lean statements, worked examples and proofs of symbolic and numerical calculations.";
 
 const markedCdnTag =
   '<script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" integrity="sha384-zbcZAIxlvJtNE3Dp5nxLXdXtXyxwOdnILY1TDPVmKFhl4r4nSUG1r8bcFXGVa4Te" crossorigin="anonymous"></script>';
@@ -509,13 +496,11 @@ function buildSiteShell(html, relativePath, footer) {
     return result;
   };
   if (isLanding) {
-    // Keep the generated heading and its permalink, including the stable tag.
     html = replaceOnce(
       html,
-      /(<div class="titlepage">\s*<h1\b[^>]*>)\s*LeanPDE([\s\S]*?<\/h1>)/,
-      `$1<span class="leanpde-brand-name">LeanPDE</span>${wordmark}$2` +
-        `<p class="leanpde-title-subtitle">${escapeHtml(siteSubtitle)}</p>`,
-      "overview logo and subtitle",
+      /(<div class="titlepage">\s*<h1\b[^>]*>[\s\S]*?<\/h1>)/,
+      `$1<p class="leanpde-title-subtitle">${escapeHtml(siteSubtitle)}</p>`,
+      "overview subtitle",
     );
     html = replaceOnce(
       html,
@@ -523,17 +508,6 @@ function buildSiteShell(html, relativePath, footer) {
       '$1<p class="leanpde-affiliation">California Institute of Technology (Caltech)</p>',
       "authors' affiliation",
     );
-  }
-  // Verso's find page is a redirect utility with its own title.
-  if (relativePath !== "find/index.html") {
-    for (const titleClass of ["toc-title", "header-title"]) {
-      html = replaceOnce(
-        html,
-        new RegExp(`(<a href="[^"]*" class="${titleClass}"><h1>)\\s*LeanPDE(</h1>)`),
-        `$1<span class="leanpde-brand-name">LeanPDE</span>${wordmark}$2`,
-        `${titleClass} logo`,
-      );
-    }
   }
   html = replaceOnce(
     html,
@@ -686,10 +660,6 @@ function anchorLocalFragments(html, routePrefix) {
 
 await mkdir(dataDir, { recursive: true });
 await copyFile(markedSource, markedDestination);
-await mkdir(path.join(dataDir, "leanpde-brand"), { recursive: true });
-for (const filename of brandFiles) {
-  await copyFile(path.join(brandSource, filename), path.join(dataDir, "leanpde-brand", filename));
-}
 
 const cardIndex = JSON.parse(await readFile(path.join(dataDir, "leanpde-cards.json"), "utf8"));
 const groupOfCard = new Map(

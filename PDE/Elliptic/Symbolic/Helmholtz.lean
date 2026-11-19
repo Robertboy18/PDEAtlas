@@ -6,7 +6,8 @@ Authors: LeanPDE Team
 
 module
 
-public import PDE.Symbolic.ClosedForm.Tactic.Residual
+public import CAS.ClosedForm.Scalar.Models
+public import PDE.Symbolic.ClosedForm.Differential.Equation
 public import CAS.ExactTactic
 
 /-!
@@ -63,7 +64,7 @@ private theorem helmholtzSine_analytic_side_condition
     (p : ℝ^2) (_hp : p ∈ Set.univ) :
     DiffExpr.AnalyticSideCondition
       (Scalar.ansatz helmholtzSineAnsatz) p helmholtzSineEquation.residual := by
-  symbolic_residual
+  symbolic_assumptions
 
 /-- The analytic Helmholtz residual of the sine mode vanishes. -/
 theorem helmholtzSine_analytic_residual_zero :
