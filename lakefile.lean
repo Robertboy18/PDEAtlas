@@ -37,8 +37,7 @@ package LeanPDE where
 -- `cega`; LeanPDE adds the PDE routes of `PDE/Symbolic` and the PDE engines of `PDE/Numerics`.
 -- FloatLib, with its executable floats and outward-rounded intervals, comes through SymLean at the
 -- revision SymLean pins; two spline modules of LeanPDE import it directly.
-require SymLean from git "https://github.com/Robertboy18/SymLean.git" @
-  "6f8d0e87665b60b4ab0c8ee8e3854d189601563d"
+require SymLean from git "https://github.com/Robertboy18/SymLean.git" @ "v4.36.0"
   with NameMap.empty.insert `certificates certificatesMode
 
 -- Mathlib stays last so its release pins govern the shared support packages.
