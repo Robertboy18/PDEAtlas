@@ -1,0 +1,56 @@
+PDEAtlas
+Copyright 2026 PDEAtlas Team
+
+PDEAtlas is distributed under the Apache License, Version 2.0 (the LICENSE file), except the 42
+modules listed below. Those are included with the permission of their authors. Their repository
+states no license, and this file grants none for them. No other module of the library imports
+one of them, except the root module PDE.lean, which collects the library.
+
+General lemmas from the Lean package of Alpöge and Buckmaster
+
+Forty-two modules of PDE/Analysis hold general lemmas, with their proofs, from the Lean package of
+Levent Alpöge and Tristan Buckmaster for their paper "Finite-time blow-up for the Navier–Stokes
+equations" (https://github.com/tristanbuckmaster/navier-stokes, folder lean/, commit ad53419). That
+repository has no license file; the modules are included with the permission of the authors. The
+lemmas came here from BlowupZoo (https://github.com/lean-dojo/BlowupZoo), which includes the
+package with the permission of the authors (20 November 2026) and held these lemmas in its folder
+AtlasCandidates/ until they moved here. Each of these modules names the authors in its header. The
+statement of each lemma names only objects of Mathlib and nine definitions of the same modules: no
+profile, no certificate and no other object of the paper's construction. The proofs come from the
+authors' proofs as they stood in BlowupZoo, with the changes that the rest of this paragraph
+lists. BlowupZoo ported them to Lean v4.36.0 and proved some in one line from a theorem of
+Mathlib, of this library or of the same module; its NavierStokes/Unforced/PORTING.md records each
+step. The move changed proofs where the options and linters of this library required it, and it
+changed statements and names. Against BlowupZoo:
+166 lemmas have another name (162 got a name that says what they state, 4 had a name that was
+taken); 22 hypotheses that no proof needs left 18 statements; 7 lemmas take weaker instance
+arguments; 27 lemmas were removed (25 because another lemma of these modules states the same
+or more, two because a theorem of this library does: one of the two, hasDerivAt_sq, was a
+private lemma of this library, with its proof, before these modules came, and is public now in
+PDE/Analysis/Calculus/Deriv/Square.lean); 59 lemmas are now proved
+in a few lines from another statement (50 from a lemma of these modules, 2 from an older theorem
+of this library, 7 from a theorem of Mathlib); 5 lemmas were stated more generally; two general
+lemmas, hasDerivAt_eval_mvPolynomial and setIntegral_mul_comp_eq_sum_triPoly, were added, each
+with the authors' proof of a pair of its cases; and one lemma,
+aestronglyMeasurable_pi_pi_of_forall, is new and not from the package. The layout of the
+statements and the lambda arrow follow this library, and each module opens its namespaces once,
+after the imports. The names of the lemmas that were proved next to one use, the docstrings and
+the module documentation were written for BlowupZoo and for this repository.
+
+The modules are, under PDE/Analysis/:
+
+  Scalar/Definitions.lean, Discrete.lean, Inequalities.lean, Inequalities/Basic.lean,
+    Inequalities/Composite.lean, Powers.lean, Powers/Basic.lean, Sums.lean,
+    TriangularPolynomials.lean
+  ENNReal/Basic.lean
+  Order/MinMax.lean
+  LinearAlgebra/InnerProduct.lean, LinearMap.lean, Matrix.lean
+  Complex/Coef.lean, Definitions.lean, Exponential.lean, NormSq.lean, Numbers.lean
+  Calculus/Clamp.lean, ContDiff.lean, Deriv.lean, FDeriv.lean, Gluing.lean,
+    VariationOfConstants.lean
+  Topology/Compactness.lean, Continuity.lean, Limits.lean, Series.lean
+  MeasureTheory/AlmostEverywhere.lean, Integrability.lean, Integral.lean, IntervalIntegral.lean,
+    Lintegral.lean, Measurability.lean, Product.lean, Product/IteratedIntegral.lean
+  Lp/Curves.lean, Functions.lean
+  Fourier/AngularWave.lean, Series.lean
+  ODE/DifferentialInequalities.lean

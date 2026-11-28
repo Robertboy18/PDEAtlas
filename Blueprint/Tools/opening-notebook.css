@@ -1,0 +1,168 @@
+/* Scoped to the opening notebook; the surrounding book owns its theme. */
+.leanpde-notebook {
+  --notebook-rule: var(--leanpde-rule, #c7c4bc);
+  --notebook-accent: var(--leanpde-accent, #a44a2d);
+  margin-block: 2rem 2.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--leanpde-ink, #34312d);
+  overflow-wrap: anywhere;
+}
+.leanpde-notebook > header {
+  display: block;
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0 0 1rem;
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+.leanpde-notebook .leanpde-notebook-kicker {
+  margin: 0 0 .5rem;
+  color: var(--notebook-accent);
+  font: 600 .73rem/1.4 var(--verso-code-font-family, monospace);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.leanpde-notebook h2 {
+  margin: 0 0 .5rem;
+  padding: 0;
+  border: 0;
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+.leanpde-notebook > header > p:last-child {
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+.leanpde-notebook .leanpde-notebook-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  padding: .55rem 0;
+  border-block: 1px solid var(--notebook-rule);
+  background: transparent;
+}
+.leanpde-notebook .leanpde-notebook-controls[hidden],
+.leanpde-notebook .leanpde-notebook-example[hidden] {
+  display: none;
+}
+.leanpde-notebook .leanpde-notebook-controls button {
+  appearance: none;
+  cursor: pointer;
+  min-height: 2.75rem;
+  padding: .45rem .8rem;
+  border: 1px solid transparent;
+  border-radius: .2rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .9rem;
+}
+.leanpde-notebook .leanpde-notebook-controls button[aria-pressed="true"] {
+  border-color: var(--notebook-accent);
+  background: var(--leanpde-panel, #fffefa);
+  color: var(--leanpde-ink-strong, #24211e);
+  box-shadow: inset 0 -2px var(--notebook-accent);
+  font-weight: 600;
+}
+.leanpde-notebook :is(button, a, summary, pre):focus-visible {
+  outline: 2px solid var(--notebook-accent);
+  outline-offset: 3px;
+}
+.leanpde-notebook .leanpde-notebook-example {
+  padding: 1rem 0 1.25rem;
+  scroll-margin-top: 2rem;
+}
+.leanpde-notebook .leanpde-notebook-example + .leanpde-notebook-example {
+  border-top: 1px solid var(--notebook-rule);
+}
+.leanpde-notebook h3 {
+  margin: .25rem 0 .75rem;
+  font-size: 1.15rem;
+}
+.leanpde-notebook .leanpde-notebook-math {
+  overflow-x: auto;
+  padding: .2rem 0;
+}
+.leanpde-notebook .katex-display {
+  margin: .5rem 0;
+  text-align: left;
+}
+.leanpde-notebook .katex-display > .katex {
+  text-align: left;
+}
+.leanpde-notebook .leanpde-notebook-cell {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--notebook-rule);
+}
+.leanpde-notebook .leanpde-notebook-result {
+  border-color: var(--notebook-accent);
+}
+.leanpde-notebook .leanpde-notebook-label {
+  margin: 0 0 .5rem;
+  color: var(--leanpde-ink-soft, #625a52);
+  font: .75rem/1.4 var(--verso-code-font-family, monospace);
+}
+.leanpde-notebook pre {
+  max-width: 100%;
+  margin: 0;
+  padding: .65rem .75rem;
+  overflow-x: auto;
+  border: 0;
+  border-radius: .2rem;
+  background: var(--leanpde-page, #f8f6f1);
+  color: inherit;
+  font-size: .78rem;
+  line-height: 1.6;
+  white-space: pre;
+}
+.leanpde-notebook pre code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-family: var(--verso-code-font-family, monospace);
+}
+.leanpde-notebook .leanpde-notebook-result > p:last-child {
+  margin: .5rem 0 0;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+.leanpde-notebook .leanpde-notebook-definitions {
+  margin-top: .75rem;
+  font-size: .85rem;
+}
+.leanpde-notebook .leanpde-notebook-definitions summary {
+  cursor: pointer;
+  width: fit-content;
+}
+.leanpde-notebook .leanpde-notebook-source {
+  margin: 1rem 0 0;
+  font-size: .8rem;
+  line-height: 1.6;
+}
+.leanpde-notebook .leanpde-notebook-bridge {
+  font-size: .85rem;
+  line-height: 1.5;
+}
+.leanpde-notebook .leanpde-notebook-source-path {
+  display: block;
+  font-family: var(--verso-code-font-family, monospace);
+  font-size: .7rem;
+}
+@media (max-width: 40rem) {
+  .leanpde-notebook .leanpde-notebook-cell {
+    padding-left: .6rem;
+  }
+}
+@media print {
+  .leanpde-notebook .leanpde-notebook-controls { display: none; }
+  .leanpde-notebook .leanpde-notebook-example[hidden] { display: block; }
+  .leanpde-notebook .leanpde-notebook-example { break-inside: avoid; }
+  .leanpde-notebook pre { white-space: pre-wrap; }
+}

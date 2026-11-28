@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If PDEAtlas is useful in your work, please cite the software version you used."
+title: "PDEAtlas: Partial Differential Equations in Lean"
+abstract: >-
+  PDEAtlas is a library of partial differential equations in Lean 4 and Mathlib. It follows Lawrence C.
+  Evans's Partial Differential Equations, second edition, and formalizes selected results from every
+  section of chapters 2 to 12: the four linear equations, first-order equations, Sobolev spaces,
+  elliptic and evolution equations, the calculus of variations, Hamilton-Jacobi equations,
+  conservation laws and nonlinear waves. Beyond the book it covers incompressible fluid mechanics.
+authors:
+  - family-names: "George"
+    given-names: "Robert Joseph"
+    affiliation: "California Institute of Technology"
+  - family-names: "Yang"
+    given-names: "Changhe"
+    affiliation: "California Institute of Technology"
+  - family-names: "Song"
+    given-names: "Peicong"
+    affiliation: "California Institute of Technology"
+  - family-names: "Hou"
+    given-names: "Thomas Y."
+    affiliation: "California Institute of Technology"
+  - family-names: "Anandkumar"
+    given-names: "Anima"
+    affiliation: "California Institute of Technology"
+version: "1.0.0"
+url: "https://lean-dojo.github.io/PDEAtlas/"
+repository-code: "https://github.com/lean-dojo/PDEAtlas"
+license: "Apache-2.0"
+keywords:
+  - "Lean 4"
+  - "Mathlib"
+  - "partial differential equations"
+  - "calculus of variations"
+  - "fluid mechanics"
+  - "formal verification"

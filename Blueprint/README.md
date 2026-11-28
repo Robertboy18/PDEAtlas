@@ -1,0 +1,199 @@
+# PDEAtlas Blueprint
+
+The Blueprint contains the mathematical exposition, theorem statements, proof
+ideas, and references for PDEAtlas. The chapters follow selected material from
+Evans's *Partial Differential Equations*, second edition, with additional fluid
+mechanics and verified computation.
+
+## Published site
+
+The published site is rendered on Lean 4.36, the Lean version of the library.
+VersoBlueprint's port to Lean 4.36 is still an open pull request
+([leanprover/verso-blueprint#504](https://github.com/leanprover/verso-blueprint/pull/504)),
+so `lakefile.lean` pins the head commit of that pull request. We'll move the pin
+to the release branch when the port lands.
+
+## Build scripts
+
+The build needs Graphviz, Python 3 with the `regex` package, and GNU `realpath`.
+The library and the Blueprint have separate Lake caches and pin the same
+toolchain. Both scripts stop before building if the two `lean-toolchain` files
+differ.
+
+Run `bash Blueprint/Tools/build.sh` with Node.js 22 or newer. It builds `PDE`,
+regenerates the computation ledger and textbook map, and renders the site
+to `_out/site/html-multi`. `bash Blueprint/Tools/build-no-node.sh` uses the
+same compiler and renderer and writes `_out/site-no-node/html-multi`. It
+uses the committed textbook map and Verso's layout. Prepare the nested
+Mathlib cache before using this mode.
+
+`Tools/build-cas-ledger.test.py` launches its subprocesses with `python3 -I`;
+install `regex` where isolated Python can import it, not only in the user site.
+
+Both modes add the wordmark to the sidebar, top bar and title page. The
+Node.js build also adds the section rail, proof map actions, notebook and
+typeset figure labels. Set `LEANPDE_LAKE` to use a custom Lake launcher.
+
+The default kernel profile checks the finite certificates in Lean's kernel.
+For native evaluation with a separate cache:
+
+```bash
+LEANPDE_CERTIFICATES=fast bash Blueprint/Tools/build.sh
+```
+
+This writes `_out/site-fast/html-multi` and uses the separate fast cache.
+SymLean's site explains the two profiles under
+[Native certificates are opt-in](https://lean-dojo.github.io/SymLean/docs/tutorial/trust.html#native).
+
+Pass an output directory under `_out/` as the first argument to either script.
+To make source references link to a public checkout, set
+`LEANPDE_PUBLIC_REPOSITORY_URL` before building. The build records the current
+commit unless `LEANPDE_SOURCE_REVISION` is supplied explicitly. The links from
+declarations to their sources are fixed earlier, when the chapters are compiled
+(see [Publishing on GitHub Pages](#publishing-on-github-pages)).
+
+## Publishing on GitHub Pages
+
+A rendered site cannot be pushed to a `gh-pages` branch as it is. Its manifest
+is larger than the 100 MB that GitHub accepts for one file, and the renderer
+records absolute source paths of the machine that built it. To make the tree
+to push:
+
+```bash
+python3 Blueprint/Tools/build-pages-tree.py _out/site/html-multi _out/pages
+```
+
+The copy in `_out/pages` has `codeData: null` in every entry of the manifest
+(the page runtime does not read that field; the rendered code is in the pages
+and in the HTML cache), names every source by its path in the repository, and
+has an empty `.nojekyll`. The script stops if a file over 100 MB, or an
+absolute path of the checkout, of a dependency or of your home directory, is
+left. Pass `_out/site-no-node/html-multi` for a site built without Node.js.
+
+The link from a declaration to its source is fixed when its chapter is
+compiled, not when the site is rendered. VersoBlueprint takes the repository
+from the `origin` remote of the checkout and the revision from its current
+commit, and it finds the source file through `LEAN_SRC_PATH`, which the build
+scripts set for the chapter build. A chapter that was compiled earlier, by a
+plain `lake build Blueprint`, or in a checkout whose `origin` is another
+repository may have missing or incorrect source links. Lake does not recompile
+it for that. For correct links, compile the chapters afresh in the public
+checkout you plan to publish. `LEANPDE_PUBLIC_REPOSITORY_URL` and
+`LEANPDE_SOURCE_REVISION` do not change these compiled links. They set the
+links of the tables that the Blueprint commands render themselves (the
+computation ledger, the textbook map and the certified plots) and, in the
+build with Node.js, the repository link of the site shell.
+
+## Chapters
+
+| Chapter | Source | Mathematical focus |
+| --- | --- | --- |
+| 1. Introduction | [Overview](Chapters/Overview.lean) | Heat-equation calculation, conventions, and scope |
+| 2. Related Work | [RelatedWork](Chapters/RelatedWork.lean) | PDE formalizations and verified computation |
+| 3. Foundations | [Foundations](Chapters/Foundations.lean) | Coordinates, operators, PDE problems, and distributions |
+| 4. Sobolev Spaces | [Sobolev](Chapters/Sobolev.lean) | Weak calculus, approximation, traces, embeddings, and compactness |
+| 5. Elliptic Equations | [Elliptic](Chapters/Elliptic.lean) | Classical solutions, variational theory, spectra, and regularity |
+| 6. Parabolic Equations | [Parabolic](Chapters/Parabolic.lean) | Heat equations, weak evolution, regularity, and finite-time mechanisms |
+| 7. Hyperbolic Equations | [Hyperbolic](Chapters/Hyperbolic.lean) | Transport, waves, Hamilton–Jacobi equations, and conservation laws |
+| 8. Fluid Mechanics | [Fluid](Chapters/Fluid.lean) | Euler, Navier–Stokes, Stokes, axisymmetric flow, and Boussinesq |
+| 9. Variational Methods | [Variational](Chapters/Variational.lean) | Minimization, variations, regularity of minimizers, semilinear energies, and fixed points |
+| 10. CAS and Certified Bounds | [Symbolic](Chapters/Symbolic.lean) | Exact calculations, analytic bridges, validated numerics, and certified plots |
+| 11. Dependency Atlas | [DependencyAtlas](Chapters/DependencyAtlas.lean) | Dependencies across the curated statements |
+| 12. Bibliography | [Bibliography command](Commands/Bibliography.lean) | Cited entries registered in [Bibliography.lean](Bibliography.lean) |
+
+[`Blueprint.lean`](../Blueprint.lean) assembles the chapters and contains the
+site stylesheet and interaction code. The nested [Lake configuration](lakefile.lean)
+uses the repository root as its source directory. The mathematical library
+itself does not depend on Verso.
+
+## Writing a statement
+
+Start with the mathematical question or a concrete example. State the domain,
+hypotheses, and conclusion, then explain the construction or estimate used in
+the proof. Avoid chapter tours, lists of implementation names, and narration
+of tactic calls. Use descriptive links in prose:
+
+```text
+{bpref "symbolic.first_order_jet_semantics"}[first-order jet semantics]
+```
+
+Put exact Lean names in the card's `lean` metadata. Keep each principal result
+in one canonical card; group several declarations only when they express one
+mathematical theorem family. Auxiliary implementation lemmas stay in the source.
+The owning chapter imports the modules defining its linked declarations.
+
+Verso mathematical markup is:
+
+```text
+$`inline formula`
+$$`display formula`
+```
+
+Every theorem card has one matching proof block:
+
+```text
+:::theorem "subject.result" (lean := "Namespace.theorem_name")
+The mathematical statement, with its hypotheses and quantified conclusion.
+:::
+
+:::proof "subject.result"
+The construction, estimate, or reduction used in the proof.
+:::
+```
+
+Use dot-separated identifiers with snake_case segments. Put dependencies visible
+in the statement in its `uses` field; put proof-only prerequisites in the proof
+block's `uses` field. General analysis retains its mathematical owner prefix
+when used in another subject's chapter.
+
+Cite the source in structured metadata and record any specialization beside
+the statement. Check edition and page numbers against the
+[source records](Sources/README.md). Explain the actual formal argument in your
+own words. An illustrative diagram should say what it draws; a certified bound
+should identify the theorem that justifies it. Compare the displayed formulas
+and proof idea with the linked Lean declarations before submitting.
+
+## Generated data and assets
+
+Edit generator inputs, then regenerate the committed output:
+
+| Output | Generator or input |
+| --- | --- |
+| `Generated/CasLedgerData.lean` | `python3 Blueprint/Tools/build-cas-ledger.py` scans the `PDE/` call sites |
+| `Generated/TextbookMapData.lean` | `node Blueprint/Tools/build-textbook-map.mjs` reads chapter citations |
+| `Generated/FiguresData.lean` | `python3 Blueprint/Tools/build-figures.py` computes explanatory diagrams |
+| `Generated/CertifiedPlots.lean` and its drawing data | `python3 Blueprint/Tools/build-certified-plots.py` generates enclosures and Lean proofs |
+| `Assets/Brand/` | `python3 Blueprint/Tools/build-logo.py` derives the wordmark variants from `logo.png` |
+
+The ledger generator runs on every site build, and the textbook-map generator on
+every build with Node.js. Their `--check` options detect stale output. Certified
+plots require a built PDE library; their Lean containment theorems compile with
+the Blueprint. Brand regeneration needs Pillow and NumPy; ordinary site builds
+use the committed images. The figures need Python 3.12 or newer, whose `sum`
+adds floats with compensation; earlier versions compute slightly different
+paths.
+
+The textbook map indexes citations, not complete coverage of the textbook.
+Section-only citations remain unplaced until their page locations are verified.
+The dependency atlas records the dependencies attached to statement and proof
+cards. `Tools/build-dependency-atlas.py` renders its views with Graphviz.
+
+`Tools/optimize-site.mjs` prepares navigation, search, source links, and assets.
+`Tools/defer-heavy-blocks.mjs` moves large proof and hover payloads into files
+loaded when opened. The Introduction notebook uses source excerpts through
+`Tools/opening-notebook.mjs`; it does not run Lean in the browser.
+
+The commands `{leanpde_mode_explorer}` and `{leanpde_reading_routes}` place the
+interactive examples and reading routes. Edit their explanations in
+`Tools/learning.mjs`, their controls in `Tools/learning.js`, and their appearance
+in `Tools/learning.css`. The heat and wave plots sample the displayed explicit
+solutions. Formulas remain readable with JavaScript disabled or when printed.
+
+For an optional GIF export of an existing animated figure:
+
+```bash
+node Blueprint/Tools/export-figure-gif.mjs PAGE_URL FIGURE_ID _out/figure-exports
+```
+
+The exporter needs Chrome, Node with WebSocket support, and Python with Pillow.
+It captures the existing SVG timeline rather than computing another solution.
