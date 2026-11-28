@@ -1,0 +1,96 @@
+<svg data-node-count="5" data-edge-count="6" data-cluster-count="1" data-variant-key="parent:«methods.minimizer_regularity»" width="382pt" height="314pt"
+ viewBox="0.00 0.00 382.00 313.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 309.79)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-309.79 378,-309.79 378,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 354,-8 354,-8 360,-8 366,-14 366,-20 366,-20 366,-285.79 366,-285.79 366,-291.79 360,-297.79 354,-297.79 354,-297.79 20,-297.79 20,-297.79 14,-297.79 8,-291.79 8,-285.79 8,-285.79 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="187" y="-282.59" font-family="Helvetica" font-size="14.00">Regularity of local minimizers of gradient energies</text>
+</g>
+<!-- «methods.minimizer_regularity.local_minimizer» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Elocal&#45;005Fminimizer&#45;00BB" class="node">
+<title>«methods.minimizer_regularity.local_minimizer»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Elocal&#45;005Fminimizer&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Minimization-and-Variations/#--informal-preview-_FLQQ_methods___minimizer_regularity___local_minimizer_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<polygon fill="#166534" stroke="#16a34a" stroke-width="2.2" points="310.5,-266.79 211.5,-266.79 211.5,-230.79 310.5,-230.79 310.5,-266.79"/>
+<text text-anchor="middle" x="261" y="-251.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimizer_regularity</text>
+<text text-anchor="middle" x="261" y="-240.79" font-family="Helvetica" font-size="10.00" fill="#ffffff">local_minimizer</text>
+</a>
+</g>
+</g>
+<!-- «methods.minimizer_regularity.analytic» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Eanalytic&#45;00BB" class="node">
+<title>«methods.minimizer_regularity.analytic»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Eanalytic&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Minimization-and-Variations/#--informal-preview-_FLQQ_methods___minimizer_regularity___analytic_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="182" cy="-35.8" rx="70.01" ry="19.6"/>
+<text text-anchor="middle" x="182" y="-38.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimizer_regularity</text>
+<text text-anchor="middle" x="182" y="-27.8" font-family="Helvetica" font-size="10.00" fill="#ffffff">analytic</text>
+</a>
+</g>
+</g>
+<!-- «methods.minimizer_regularity.local_minimizer»&#45;&gt;«methods.minimizer_regularity.analytic» -->
+<g id="edge1" class="edge">
+<title>«methods.minimizer_regularity.local_minimizer»&#45;&gt;«methods.minimizer_regularity.analytic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M213.6,-230.65C199.63,-223.12 185.96,-212.74 178,-198.79 165.06,-176.12 172.98,-101.2 178.32,-61.69"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="179.15,-55.66 181.01,-61.98 178.84,-58.65 178.43,-61.62 178.33,-61.61 178.23,-61.59 178.64,-58.62 175.66,-61.24 179.15,-55.66 179.15,-55.66"/>
+</g>
+<!-- «methods.minimizer_regularity.holder_gradient» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Eholder&#45;005Fgradient&#45;00BB" class="node">
+<title>«methods.minimizer_regularity.holder_gradient»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Eholder&#45;005Fgradient&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Minimization-and-Variations/#--informal-preview-_FLQQ_methods___minimizer_regularity___holder_gradient_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="261" cy="-178.99" rx="70.01" ry="19.6"/>
+<text text-anchor="middle" x="261" y="-181.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimizer_regularity</text>
+<text text-anchor="middle" x="261" y="-170.99" font-family="Helvetica" font-size="10.00" fill="#ffffff">holder_gradient</text>
+</a>
+</g>
+</g>
+<!-- «methods.minimizer_regularity.local_minimizer»&#45;&gt;«methods.minimizer_regularity.holder_gradient» -->
+<g id="edge4" class="edge">
+<title>«methods.minimizer_regularity.local_minimizer»&#45;&gt;«methods.minimizer_regularity.holder_gradient»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M261,-230.69C261,-223.06 261,-213.91 261,-205.5"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="261,-199.25 263.7,-205.25 261.1,-202.25 261.1,-205.25 261,-205.25 260.9,-205.25 260.9,-202.25 258.3,-205.25 261,-199.25 261,-199.25"/>
+</g>
+<!-- «methods.minimizer_regularity.smooth» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Esmooth&#45;00BB" class="node">
+<title>«methods.minimizer_regularity.smooth»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Esmooth&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Minimization-and-Variations/#--informal-preview-_FLQQ_methods___minimizer_regularity___smooth_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="283" cy="-107.4" rx="75.38" ry="18"/>
+<text text-anchor="middle" x="283" y="-104.9" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimizer_regularity.smooth</text>
+</a>
+</g>
+</g>
+<!-- «methods.minimizer_regularity.local_minimizer»&#45;&gt;«methods.minimizer_regularity.smooth» -->
+<g id="edge5" class="edge">
+<title>«methods.minimizer_regularity.local_minimizer»&#45;&gt;«methods.minimizer_regularity.smooth»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="5,2" d="M308.4,-230.65C322.37,-223.12 336.04,-212.74 344,-198.79 352.73,-183.51 351.47,-175.13 344,-159.2 338.07,-146.53 327.25,-135.93 316.36,-127.74"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="311.37,-124.15 317.82,-125.46 313.86,-125.82 316.3,-127.57 316.24,-127.65 316.18,-127.73 313.75,-125.98 314.66,-129.84 311.37,-124.15 311.37,-124.15"/>
+</g>
+<!-- «methods.minimizer_regularity.analytic_solutions» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Eanalytic&#45;005Fsolutions&#45;00BB" class="node">
+<title>«methods.minimizer_regularity.analytic_solutions»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Eminimizer&#45;005Fregularity&#45;002Eanalytic&#45;005Fsolutions&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Minimization-and-Variations/#--informal-preview-_FLQQ_methods___minimizer_regularity___analytic_solutions_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="86" cy="-107.4" rx="70.01" ry="19.6"/>
+<text text-anchor="middle" x="86" y="-110.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">minimizer_regularity</text>
+<text text-anchor="middle" x="86" y="-99.4" font-family="Helvetica" font-size="10.00" fill="#ffffff">analytic_solutions</text>
+</a>
+</g>
+</g>
+<!-- «methods.minimizer_regularity.analytic_solutions»&#45;&gt;«methods.minimizer_regularity.analytic» -->
+<g id="edge3" class="edge">
+<title>«methods.minimizer_regularity.analytic_solutions»&#45;&gt;«methods.minimizer_regularity.analytic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M110.47,-88.65C123.34,-79.33 139.2,-67.83 152.71,-58.03"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="157.57,-54.51 154.3,-60.22 155.2,-56.35 152.77,-58.11 152.71,-58.03 152.66,-57.95 155.08,-56.19 151.13,-55.84 157.57,-54.51 157.57,-54.51"/>
+</g>
+<!-- «methods.minimizer_regularity.holder_gradient»&#45;&gt;«methods.minimizer_regularity.smooth» -->
+<g id="edge6" class="edge">
+<title>«methods.minimizer_regularity.holder_gradient»&#45;&gt;«methods.minimizer_regularity.smooth»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M267.01,-158.98C269.7,-150.47 272.89,-140.38 275.71,-131.45"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="277.6,-125.49 278.36,-132.02 276.79,-128.38 275.88,-131.24 275.79,-131.21 275.69,-131.18 276.6,-128.32 273.21,-130.4 277.6,-125.49 277.6,-125.49"/>
+</g>
+<!-- «methods.minimizer_regularity.smooth»&#45;&gt;«methods.minimizer_regularity.analytic» -->
+<g id="edge2" class="edge">
+<title>«methods.minimizer_regularity.smooth»&#45;&gt;«methods.minimizer_regularity.analytic»</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="1,5" d="M259.57,-90.25C245.54,-80.59 227.55,-68.19 212.43,-57.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.2" points="207.42,-54.32 213.89,-55.5 209.95,-55.94 212.42,-57.64 212.36,-57.72 212.31,-57.8 209.83,-56.1 210.83,-59.94 207.42,-54.32 207.42,-54.32"/>
+</g>
+</g>
+</svg>

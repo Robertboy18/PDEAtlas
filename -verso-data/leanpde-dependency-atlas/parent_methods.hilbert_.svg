@@ -1,0 +1,107 @@
+<svg data-node-count="8" data-edge-count="4" data-cluster-count="1" data-variant-key="parent:«methods.hilbert»" width="598pt" height="167pt"
+ viewBox="0.00 0.00 598.00 167.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 163)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-163 594,-163 594,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<path fill="white" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="5,2" d="M20,-8C20,-8 570,-8 570,-8 576,-8 582,-14 582,-20 582,-20 582,-139 582,-139 582,-145 576,-151 570,-151 570,-151 20,-151 20,-151 14,-151 8,-145 8,-139 8,-139 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="295" y="-135.8" font-family="Helvetica" font-size="14.00">Hilbert&#39;s problems on the calculus of variations</text>
+</g>
+<!-- «methods.hilbert.weierstrass» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eweierstrass&#45;00BB" class="node">
+<title>«methods.hilbert.weierstrass»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eweierstrass&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Hilbert___s-Problems/#--informal-preview-_FLQQ_methods___hilbert___weierstrass_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="74" cy="-34" rx="52.37" ry="18"/>
+<text text-anchor="middle" x="74" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert.weierstrass</text>
+</a>
+</g>
+</g>
+<!-- «methods.hilbert.existence» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eexistence&#45;00BB" class="node">
+<title>«methods.hilbert.existence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eexistence&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Hilbert___s-Problems/#--informal-preview-_FLQQ_methods___hilbert___existence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="526" cy="-102" rx="47.79" ry="18"/>
+<text text-anchor="middle" x="526" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert.existence</text>
+</a>
+</g>
+</g>
+<!-- «methods.hilbert.analytic_boundary» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eanalytic&#45;005Fboundary&#45;00BB" class="node">
+<title>«methods.hilbert.analytic_boundary»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eanalytic&#45;005Fboundary&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Hilbert___s-Problems/#--informal-preview-_FLQQ_methods___hilbert___analytic_boundary_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="336" cy="-34" rx="68.77" ry="18"/>
+<text text-anchor="middle" x="336" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert.analytic_boundary</text>
+</a>
+</g>
+</g>
+<!-- «methods.hilbert.existence»&#45;&gt;«methods.hilbert.analytic_boundary» -->
+<g id="edge3" class="edge">
+<title>«methods.hilbert.existence»&#45;&gt;«methods.hilbert.analytic_boundary»</title>
+<path fill="none" stroke="#6b7280" d="M492.03,-89.2C461.16,-78.48 415.36,-62.57 381.37,-50.76"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="375.59,-48.75 382.14,-48.17 378.42,-49.74 381.26,-50.72 381.26,-50.72 381.26,-50.72 378.42,-49.74 380.37,-53.27 375.59,-48.75 375.59,-48.75"/>
+</g>
+<!-- «methods.hilbert.euler_lagrange» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eeuler&#45;005Flagrange&#45;00BB" class="node">
+<title>«methods.hilbert.euler_lagrange»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eeuler&#45;005Flagrange&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Hilbert___s-Problems/#--informal-preview-_FLQQ_methods___hilbert___euler_lagrange_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="514" cy="-34" rx="59.62" ry="18"/>
+<text text-anchor="middle" x="514" y="-31.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert.euler_lagrange</text>
+</a>
+</g>
+</g>
+<!-- «methods.hilbert.existence»&#45;&gt;«methods.hilbert.euler_lagrange» -->
+<g id="edge4" class="edge">
+<title>«methods.hilbert.existence»&#45;&gt;«methods.hilbert.euler_lagrange»</title>
+<path fill="none" stroke="#6b7280" d="M522.91,-84C521.49,-76.21 519.79,-66.85 518.26,-58.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="517.12,-52.17 520.85,-57.59 517.66,-55.12 518.19,-58.07 518.19,-58.07 518.19,-58.07 517.66,-55.12 515.54,-58.55 517.12,-52.17 517.12,-52.17"/>
+</g>
+<!-- «methods.hilbert.linear» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Elinear&#45;00BB" class="node">
+<title>«methods.hilbert.linear»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Elinear&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Hilbert___s-Problems/#--informal-preview-_FLQQ_methods___hilbert___linear_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="416" cy="-102" rx="36.74" ry="18"/>
+<text text-anchor="middle" x="416" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert.linear</text>
+</a>
+</g>
+</g>
+<!-- «methods.hilbert.independence» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eindependence&#45;00BB" class="node">
+<title>«methods.hilbert.independence»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eindependence&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Hilbert___s-Problems/#--informal-preview-_FLQQ_methods___hilbert___independence_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="74" cy="-102" rx="57.71" ry="18"/>
+<text text-anchor="middle" x="74" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert.independence</text>
+</a>
+</g>
+</g>
+<!-- «methods.hilbert.independence»&#45;&gt;«methods.hilbert.weierstrass» -->
+<g id="edge1" class="edge">
+<title>«methods.hilbert.independence»&#45;&gt;«methods.hilbert.weierstrass»</title>
+<path fill="none" stroke="#6b7280" d="M74,-83.66C74,-75.99 74,-66.85 74,-58.58"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="74,-52.45 76.7,-58.45 74,-55.45 74,-58.45 74,-58.45 74,-58.45 74,-55.45 71.3,-58.45 74,-52.45 74,-52.45"/>
+</g>
+<!-- «methods.hilbert.multiple» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Emultiple&#45;00BB" class="node">
+<title>«methods.hilbert.multiple»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Emultiple&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Hilbert___s-Problems/#--informal-preview-_FLQQ_methods___hilbert___multiple_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="200" cy="-102" rx="43.22" ry="18"/>
+<text text-anchor="middle" x="200" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert.multiple</text>
+</a>
+</g>
+</g>
+<!-- «methods.hilbert.analytic» -->
+<g id="bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eanalytic&#45;00BB" class="node">
+<title>«methods.hilbert.analytic»</title>
+<g id="a_bp&#45;node&#45;&#45;00ABmethods&#45;002Ehilbert&#45;002Eanalytic&#45;00BB"><a xlink:href="Representation-Formulas___-Variational-Principles___-and-Fixed-Points/Hilbert___s-Problems/#--informal-preview-_FLQQ_methods___hilbert___analytic_FLQQ_--statement" xlink:title="Statement: formalized | Proof: locally formalized + dependencies complete" target="_self">
+<ellipse fill="#166534" stroke="#16a34a" stroke-width="2.2" cx="311" cy="-102" rx="43.22" ry="18"/>
+<text text-anchor="middle" x="311" y="-99.5" font-family="Helvetica" font-size="10.00" fill="#ffffff">hilbert.analytic</text>
+</a>
+</g>
+</g>
+<!-- «methods.hilbert.analytic»&#45;&gt;«methods.hilbert.analytic_boundary» -->
+<g id="edge2" class="edge">
+<title>«methods.hilbert.analytic»&#45;&gt;«methods.hilbert.analytic_boundary»</title>
+<path fill="none" stroke="#6b7280" d="M317.44,-84C320.45,-76.06 324.08,-66.48 327.32,-57.91"/>
+<polygon fill="#6b7280" stroke="#6b7280" points="329.5,-52.17 329.9,-58.74 328.43,-54.97 327.37,-57.78 327.37,-57.78 327.37,-57.78 328.43,-54.97 324.85,-56.82 329.5,-52.17 329.5,-52.17"/>
+</g>
+</g>
+</svg>

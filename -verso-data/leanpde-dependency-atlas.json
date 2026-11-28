@@ -1,0 +1,643 @@
+{
+  "variants": [
+    {
+      "key": "full",
+      "label": "Full Graph",
+      "file": "leanpde-dependency-atlas.svg",
+      "nodes": 1599,
+      "edges": 2527,
+      "clusters": 69,
+      "bytes": 3349222
+    },
+    {
+      "key": "group",
+      "label": "Group View",
+      "file": "leanpde-dependency-atlas/group.svg",
+      "nodes": 69,
+      "edges": 124,
+      "clusters": 0,
+      "bytes": 118838
+    },
+    {
+      "key": "parent:«fluid.axisymmetric»",
+      "label": "Axisymmetric coordinates and streamfunctions",
+      "file": "leanpde-dependency-atlas/parent_fluid.axisymmetric_.svg",
+      "nodes": 4,
+      "edges": 3,
+      "clusters": 1,
+      "bytes": 6399
+    },
+    {
+      "key": "parent:«fluid.axisymmetric_swirl»",
+      "label": "Axisymmetric flow with swirl",
+      "file": "leanpde-dependency-atlas/parent_fluid.axisymmetric_swirl_.svg",
+      "nodes": 8,
+      "edges": 8,
+      "clusters": 1,
+      "bytes": 13908
+    },
+    {
+      "key": "parent:«foundations.boundary_calculus»",
+      "label": "Boundary integration and operational boundary geometry",
+      "file": "leanpde-dependency-atlas/parent_foundations.boundary_calculus_.svg",
+      "nodes": 89,
+      "edges": 126,
+      "clusters": 1,
+      "bytes": 185810
+    },
+    {
+      "key": "parent:«hyperbolic.canonical_form_2d»",
+      "label": "Canonical form in two dimensions",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.canonical_form_2d_.svg",
+      "nodes": 5,
+      "edges": 5,
+      "clusters": 1,
+      "bytes": 9129
+    },
+    {
+      "key": "parent:«foundations.cauchy»",
+      "label": "Cauchy problems and the Cauchy–Kovalevskaya theorem",
+      "file": "leanpde-dependency-atlas/parent_foundations.cauchy_.svg",
+      "nodes": 12,
+      "edges": 15,
+      "clusters": 1,
+      "bytes": 20463
+    },
+    {
+      "key": "parent:«symbolic.cega»",
+      "label": "Certified continuous computation",
+      "file": "leanpde-dependency-atlas/parent_symbolic.cega_.svg",
+      "nodes": 106,
+      "edges": 166,
+      "clusters": 1,
+      "bytes": 199889
+    },
+    {
+      "key": "parent:«parabolic.classical»",
+      "label": "Classical heat equation",
+      "file": "leanpde-dependency-atlas/parent_parabolic.classical_.svg",
+      "nodes": 34,
+      "edges": 51,
+      "clusters": 1,
+      "bytes": 61563
+    },
+    {
+      "key": "parent:«hyperbolic.classical_wave»",
+      "label": "Classical wave equations",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.classical_wave_.svg",
+      "nodes": 25,
+      "edges": 31,
+      "clusters": 1,
+      "bytes": 41726
+    },
+    {
+      "key": "parent:«foundations.coordinates»",
+      "label": "Coordinate systems",
+      "file": "leanpde-dependency-atlas/parent_foundations.coordinates_.svg",
+      "nodes": 17,
+      "edges": 13,
+      "clusters": 1,
+      "bytes": 24524
+    },
+    {
+      "key": "parent:«sobolev.difference_quotients»",
+      "label": "Difference quotients",
+      "file": "leanpde-dependency-atlas/parent_sobolev.difference_quotients_.svg",
+      "nodes": 12,
+      "edges": 12,
+      "clusters": 1,
+      "bytes": 20444
+    },
+    {
+      "key": "parent:«foundations.derivatives»",
+      "label": "Differential operators",
+      "file": "leanpde-dependency-atlas/parent_foundations.derivatives_.svg",
+      "nodes": 26,
+      "edges": 35,
+      "clusters": 1,
+      "bytes": 45473
+    },
+    {
+      "key": "parent:«methods.direct_method»",
+      "label": "Direct variational methods",
+      "file": "leanpde-dependency-atlas/parent_methods.direct_method_.svg",
+      "nodes": 31,
+      "edges": 31,
+      "clusters": 1,
+      "bytes": 48223
+    },
+    {
+      "key": "parent:«foundations.distributions»",
+      "label": "Distributions",
+      "file": "leanpde-dependency-atlas/parent_foundations.distributions_.svg",
+      "nodes": 96,
+      "edges": 161,
+      "clusters": 1,
+      "bytes": 211373
+    },
+    {
+      "key": "parent:«elliptic.regularity»",
+      "label": "Elliptic regularity",
+      "file": "leanpde-dependency-atlas/parent_elliptic.regularity_.svg",
+      "nodes": 22,
+      "edges": 21,
+      "clusters": 1,
+      "bytes": 33286
+    },
+    {
+      "key": "parent:«elliptic.solution_operators»",
+      "label": "Elliptic solution operators",
+      "file": "leanpde-dependency-atlas/parent_elliptic.solution_operators_.svg",
+      "nodes": 8,
+      "edges": 7,
+      "clusters": 1,
+      "bytes": 12963
+    },
+    {
+      "key": "parent:«foundations.euclidean_space»",
+      "label": "Euclidean and spacetime foundations",
+      "file": "leanpde-dependency-atlas/parent_foundations.euclidean_space_.svg",
+      "nodes": 5,
+      "edges": 4,
+      "clusters": 1,
+      "bytes": 7661
+    },
+    {
+      "key": "parent:«symbolic.exact»",
+      "label": "Exact symbolic computation",
+      "file": "leanpde-dependency-atlas/parent_symbolic.exact_.svg",
+      "nodes": 17,
+      "edges": 20,
+      "clusters": 1,
+      "bytes": 26838
+    },
+    {
+      "key": "parent:«parabolic.blowup»",
+      "label": "Finite-time blow-up models",
+      "file": "leanpde-dependency-atlas/parent_parabolic.blowup_.svg",
+      "nodes": 58,
+      "edges": 57,
+      "clusters": 1,
+      "bytes": 92931
+    },
+    {
+      "key": "parent:«symbolic.autodiff»",
+      "label": "Formal jets and residual losses",
+      "file": "leanpde-dependency-atlas/parent_symbolic.autodiff_.svg",
+      "nodes": 6,
+      "edges": 6,
+      "clusters": 1,
+      "bytes": 9028
+    },
+    {
+      "key": "parent:«sobolev.fourier»",
+      "label": "Fourier and fractional Sobolev spaces",
+      "file": "leanpde-dependency-atlas/parent_sobolev.fourier_.svg",
+      "nodes": 62,
+      "edges": 94,
+      "clusters": 1,
+      "bytes": 115379
+    },
+    {
+      "key": "parent:«elliptic.fredholm»",
+      "label": "Fredholm alternative and spectrum",
+      "file": "leanpde-dependency-atlas/parent_elliptic.fredholm_.svg",
+      "nodes": 18,
+      "edges": 23,
+      "clusters": 1,
+      "bytes": 29412
+    },
+    {
+      "key": "parent:«elliptic.representation»",
+      "label": "Fundamental solutions and mean values",
+      "file": "leanpde-dependency-atlas/parent_elliptic.representation_.svg",
+      "nodes": 58,
+      "edges": 78,
+      "clusters": 1,
+      "bytes": 104094
+    },
+    {
+      "key": "parent:«elliptic.green_kernels»",
+      "label": "Green and Poisson kernels",
+      "file": "leanpde-dependency-atlas/parent_elliptic.green_kernels_.svg",
+      "nodes": 40,
+      "edges": 48,
+      "clusters": 1,
+      "bytes": 65216
+    },
+    {
+      "key": "parent:«elliptic.energy_methods»",
+      "label": "Green identities and energy methods",
+      "file": "leanpde-dependency-atlas/parent_elliptic.energy_methods_.svg",
+      "nodes": 5,
+      "edges": 3,
+      "clusters": 1,
+      "bytes": 7131
+    },
+    {
+      "key": "parent:«hyperbolic.hamilton_jacobi»",
+      "label": "Hamilton–Jacobi and Hopf–Lax",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.hamilton_jacobi_.svg",
+      "nodes": 24,
+      "edges": 33,
+      "clusters": 1,
+      "bytes": 42313
+    },
+    {
+      "key": "parent:«hyperbolic.higher_regularity»",
+      "label": "Higher wave regularity",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.higher_regularity_.svg",
+      "nodes": 13,
+      "edges": 15,
+      "clusters": 1,
+      "bytes": 22517
+    },
+    {
+      "key": "parent:«methods.hilbert»",
+      "label": "Hilbert's problems on the calculus of variations",
+      "file": "leanpde-dependency-atlas/parent_methods.hilbert_.svg",
+      "nodes": 8,
+      "edges": 4,
+      "clusters": 1,
+      "bytes": 9291
+    },
+    {
+      "key": "parent:«sobolev.holder»",
+      "label": "Hölder spaces",
+      "file": "leanpde-dependency-atlas/parent_sobolev.holder_.svg",
+      "nodes": 7,
+      "edges": 8,
+      "clusters": 1,
+      "bytes": 10784
+    },
+    {
+      "key": "parent:«fluid.euler»",
+      "label": "Incompressible Euler flow",
+      "file": "leanpde-dependency-atlas/parent_fluid.euler_.svg",
+      "nodes": 20,
+      "edges": 26,
+      "clusters": 1,
+      "bytes": 32699
+    },
+    {
+      "key": "parent:«fluid.equations»",
+      "label": "Incompressible fluid equations",
+      "file": "leanpde-dependency-atlas/parent_fluid.equations_.svg",
+      "nodes": 14,
+      "edges": 17,
+      "clusters": 1,
+      "bytes": 22818
+    },
+    {
+      "key": "parent:«elliptic.modified_helmholtz»",
+      "label": "Modified Helmholtz equation",
+      "file": "leanpde-dependency-atlas/parent_elliptic.modified_helmholtz_.svg",
+      "nodes": 12,
+      "edges": 18,
+      "clusters": 1,
+      "bytes": 23775
+    },
+    {
+      "key": "parent:«fluid.navier_stokes»",
+      "label": "Navier–Stokes",
+      "file": "leanpde-dependency-atlas/parent_fluid.navier_stokes_.svg",
+      "nodes": 22,
+      "edges": 24,
+      "clusters": 1,
+      "bytes": 35311
+    },
+    {
+      "key": "parent:«fluid.millennium»",
+      "label": "Navier–Stokes global regularity",
+      "file": "leanpde-dependency-atlas/parent_fluid.millennium_.svg",
+      "nodes": 3,
+      "edges": 1,
+      "clusters": 1,
+      "bytes": 4086
+    },
+    {
+      "key": "parent:«hyperbolic.first_order»",
+      "label": "Nonlinear first-order equations",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.first_order_.svg",
+      "nodes": 23,
+      "edges": 33,
+      "clusters": 1,
+      "bytes": 44863
+    },
+    {
+      "key": "parent:«methods.constraints»",
+      "label": "Null Lagrangians, polyconvexity, and constrained minimization",
+      "file": "leanpde-dependency-atlas/parent_methods.constraints_.svg",
+      "nodes": 10,
+      "edges": 7,
+      "clusters": 1,
+      "bytes": 13555
+    },
+    {
+      "key": "parent:«foundations.pde_problems»",
+      "label": "PDE problem interfaces",
+      "file": "leanpde-dependency-atlas/parent_foundations.pde_problems_.svg",
+      "nodes": 10,
+      "edges": 10,
+      "clusters": 1,
+      "bytes": 15895
+    },
+    {
+      "key": "parent:«parabolic.maximum_principles»",
+      "label": "Parabolic maximum principles",
+      "file": "leanpde-dependency-atlas/parent_parabolic.maximum_principles_.svg",
+      "nodes": 18,
+      "edges": 30,
+      "clusters": 1,
+      "bytes": 34859
+    },
+    {
+      "key": "parent:«parabolic.regularity»",
+      "label": "Parabolic regularity",
+      "file": "leanpde-dependency-atlas/parent_parabolic.regularity_.svg",
+      "nodes": 13,
+      "edges": 17,
+      "clusters": 1,
+      "bytes": 22882
+    },
+    {
+      "key": "parent:«methods.minimizer_regularity»",
+      "label": "Regularity of local minimizers of gradient energies",
+      "file": "leanpde-dependency-atlas/parent_methods.minimizer_regularity_.svg",
+      "nodes": 5,
+      "edges": 6,
+      "clusters": 1,
+      "bytes": 9851
+    },
+    {
+      "key": "parent:«methods.representations»",
+      "label": "Representation methods",
+      "file": "leanpde-dependency-atlas/parent_methods.representations_.svg",
+      "nodes": 79,
+      "edges": 72,
+      "clusters": 1,
+      "bytes": 115770
+    },
+    {
+      "key": "parent:«hyperbolic.conservation»",
+      "label": "Scalar and system conservation laws",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.conservation_.svg",
+      "nodes": 64,
+      "edges": 102,
+      "clusters": 1,
+      "bytes": 132236
+    },
+    {
+      "key": "parent:«methods.second_variation»",
+      "label": "Second variations and necessary positivity",
+      "file": "leanpde-dependency-atlas/parent_methods.second_variation_.svg",
+      "nodes": 11,
+      "edges": 10,
+      "clusters": 1,
+      "bytes": 20967
+    },
+    {
+      "key": "parent:«methods.semilinear_convex_regularization»",
+      "label": "Semilinear convex regularization",
+      "file": "leanpde-dependency-atlas/parent_methods.semilinear_convex_regularization_.svg",
+      "nodes": 8,
+      "edges": 7,
+      "clusters": 1,
+      "bytes": 12642
+    },
+    {
+      "key": "parent:«methods.semilinear_nonvariational»",
+      "label": "Semilinear fixed-point methods",
+      "file": "leanpde-dependency-atlas/parent_methods.semilinear_nonvariational_.svg",
+      "nodes": 11,
+      "edges": 7,
+      "clusters": 1,
+      "bytes": 15578
+    },
+    {
+      "key": "parent:«methods.semilinear_variational»",
+      "label": "Semilinear variational methods",
+      "file": "leanpde-dependency-atlas/parent_methods.semilinear_variational_.svg",
+      "nodes": 15,
+      "edges": 23,
+      "clusters": 1,
+      "bytes": 29123
+    },
+    {
+      "key": "parent:«hyperbolic.nonlinear_wave»",
+      "label": "Semilinear wave equations",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.nonlinear_wave_.svg",
+      "nodes": 22,
+      "edges": 23,
+      "clusters": 1,
+      "bytes": 35454
+    },
+    {
+      "key": "parent:«sobolev.approximation»",
+      "label": "Sobolev approximation",
+      "file": "leanpde-dependency-atlas/parent_sobolev.approximation_.svg",
+      "nodes": 26,
+      "edges": 33,
+      "clusters": 1,
+      "bytes": 42796
+    },
+    {
+      "key": "parent:«sobolev.compactness»",
+      "label": "Sobolev compactness",
+      "file": "leanpde-dependency-atlas/parent_sobolev.compactness_.svg",
+      "nodes": 19,
+      "edges": 22,
+      "clusters": 1,
+      "bytes": 31105
+    },
+    {
+      "key": "parent:«sobolev.extension»",
+      "label": "Sobolev extension",
+      "file": "leanpde-dependency-atlas/parent_sobolev.extension_.svg",
+      "nodes": 11,
+      "edges": 14,
+      "clusters": 1,
+      "bytes": 18286
+    },
+    {
+      "key": "parent:«sobolev.inequalities»",
+      "label": "Sobolev inequalities",
+      "file": "leanpde-dependency-atlas/parent_sobolev.inequalities_.svg",
+      "nodes": 45,
+      "edges": 61,
+      "clusters": 1,
+      "bytes": 79358
+    },
+    {
+      "key": "parent:«sobolev.trace»",
+      "label": "Sobolev traces",
+      "file": "leanpde-dependency-atlas/parent_sobolev.trace_.svg",
+      "nodes": 43,
+      "edges": 60,
+      "clusters": 1,
+      "bytes": 77126
+    },
+    {
+      "key": "parent:«fluid.solenoidal»",
+      "label": "Solenoidal spaces and weak pressure",
+      "file": "leanpde-dependency-atlas/parent_fluid.solenoidal_.svg",
+      "nodes": 5,
+      "edges": 4,
+      "clusters": 1,
+      "bytes": 7571
+    },
+    {
+      "key": "parent:«elliptic.compact_spectrum»",
+      "label": "Spectrum of a compact operator",
+      "file": "leanpde-dependency-atlas/parent_elliptic.compact_spectrum_.svg",
+      "nodes": 3,
+      "edges": 2,
+      "clusters": 1,
+      "bytes": 4878
+    },
+    {
+      "key": "parent:«methods.splines»",
+      "label": "Spline approximation",
+      "file": "leanpde-dependency-atlas/parent_methods.splines_.svg",
+      "nodes": 8,
+      "edges": 10,
+      "clusters": 1,
+      "bytes": 14315
+    },
+    {
+      "key": "parent:«evolution.semigroups»",
+      "label": "Strongly continuous semigroups",
+      "file": "leanpde-dependency-atlas/parent_evolution.semigroups_.svg",
+      "nodes": 15,
+      "edges": 15,
+      "clusters": 1,
+      "bytes": 23600
+    },
+    {
+      "key": "parent:«symbolic.theorem_api»",
+      "label": "Symbolic PDE proofs",
+      "file": "leanpde-dependency-atlas/parent_symbolic.theorem_api_.svg",
+      "nodes": 5,
+      "edges": 0,
+      "clusters": 1,
+      "bytes": 5722
+    },
+    {
+      "key": "parent:«symbolic.calculus»",
+      "label": "Symbolic calculus",
+      "file": "leanpde-dependency-atlas/parent_symbolic.calculus_.svg",
+      "nodes": 7,
+      "edges": 7,
+      "clusters": 1,
+      "bytes": 10994
+    },
+    {
+      "key": "parent:«hyperbolic.symmetric_systems»",
+      "label": "Symmetric first-order systems",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.symmetric_systems_.svg",
+      "nodes": 13,
+      "edges": 14,
+      "clusters": 1,
+      "bytes": 21795
+    },
+    {
+      "key": "parent:«fluid.steady_stokes»",
+      "label": "The steady Stokes problem",
+      "file": "leanpde-dependency-atlas/parent_fluid.steady_stokes_.svg",
+      "nodes": 4,
+      "edges": 3,
+      "clusters": 1,
+      "bytes": 5551
+    },
+    {
+      "key": "parent:«hyperbolic.transport»",
+      "label": "Transport and characteristics",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.transport_.svg",
+      "nodes": 12,
+      "edges": 15,
+      "clusters": 1,
+      "bytes": 19873
+    },
+    {
+      "key": "parent:«fluid.boussinesq»",
+      "label": "Two-dimensional inviscid Boussinesq flow",
+      "file": "leanpde-dependency-atlas/parent_fluid.boussinesq_.svg",
+      "nodes": 26,
+      "edges": 27,
+      "clusters": 1,
+      "bytes": 41917
+    },
+    {
+      "key": "parent:«hyperbolic.viscosity»",
+      "label": "Viscosity solutions",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.viscosity_.svg",
+      "nodes": 8,
+      "edges": 6,
+      "clusters": 1,
+      "bytes": 11645
+    },
+    {
+      "key": "parent:«hyperbolic.energy_uniqueness»",
+      "label": "Wave energy and uniqueness",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.energy_uniqueness_.svg",
+      "nodes": 4,
+      "edges": 3,
+      "clusters": 1,
+      "bytes": 6373
+    },
+    {
+      "key": "parent:«sobolev.calculus»",
+      "label": "Weak Sobolev calculus",
+      "file": "leanpde-dependency-atlas/parent_sobolev.calculus_.svg",
+      "nodes": 35,
+      "edges": 36,
+      "clusters": 1,
+      "bytes": 55308
+    },
+    {
+      "key": "parent:«sobolev.weak»",
+      "label": "Weak derivatives and Sobolev spaces",
+      "file": "leanpde-dependency-atlas/parent_sobolev.weak_.svg",
+      "nodes": 15,
+      "edges": 30,
+      "clusters": 1,
+      "bytes": 31745
+    },
+    {
+      "key": "parent:«elliptic.weak_theory»",
+      "label": "Weak elliptic problems",
+      "file": "leanpde-dependency-atlas/parent_elliptic.weak_theory_.svg",
+      "nodes": 34,
+      "edges": 56,
+      "clusters": 1,
+      "bytes": 66030
+    },
+    {
+      "key": "parent:«parabolic.variational»",
+      "label": "Weak parabolic evolution",
+      "file": "leanpde-dependency-atlas/parent_parabolic.variational_.svg",
+      "nodes": 72,
+      "edges": 123,
+      "clusters": 1,
+      "bytes": 144388
+    },
+    {
+      "key": "parent:«hyperbolic.weak_wave»",
+      "label": "Weak wave equations",
+      "file": "leanpde-dependency-atlas/parent_hyperbolic.weak_wave_.svg",
+      "nodes": 10,
+      "edges": 12,
+      "clusters": 1,
+      "bytes": 17719
+    },
+    {
+      "key": "parent:«foundations.well_posedness»",
+      "label": "Well-posedness",
+      "file": "leanpde-dependency-atlas/parent_foundations.well_posedness_.svg",
+      "nodes": 3,
+      "edges": 2,
+      "clusters": 1,
+      "bytes": 4641
+    }
+  ]
+}
